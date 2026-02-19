@@ -3,7 +3,8 @@
 *Draft — timestamped February 19, 2026 — internal working document*
 
 > **This document establishes the information-theoretic foundation**
-> **for the DDFG framework. Existing component theories**
+> **for the D
+> FG framework. Existing component theories**
 > **(Vector Storm, Network Architecture, Governance Rules)**
 > **will be rewritten on this foundation in a future revision.**
 
@@ -36,7 +37,7 @@ These are not the same question. Shannon's framework is not wrong here. It is si
 8. [Data Classification as Discretization](#8-data-classification-as-discretization)
 9. [Relationship to Existing Information Theory](#9-relationship-to-existing-information-theory)
 10. [Open Problems](#10-open-problems)
-11. [Relationship to DDFG Component Theories](#11-relationship-to-ddfg-component-theories)
+11. [Relationship to DFG Component Theories](#11-relationship-to-dfg-component-theories)
 
 ---
 
@@ -52,74 +53,120 @@ A layer with low resolution cannot hold many distinct vectors at once. When high
 
 A layer with high resolution can receive diverse vectors, maintain their distinctness, and process them without collapse.
 
-### 1.1.1 Resolution Measurement
+### 1.1.1 Resolution Is a Three-Tier Hierarchy
 
-Resolution is measured by the accuracy with which a layer separates vectors from noise.
-
-> **Resolution = the layer's ability to correctly classify**
-> **incoming data as vector or noise.**
-> **Higher resolution = lower classification loss.**
+Resolution is not a single capacity. It has three distinct tiers, each requiring the previous one as a prerequisite.
 
 ```
-Incoming data
-  Mixed: vectors + noise
+Tier 1  Vector-Noise Separation
+        "Is this a signal or not?"
+        Basic classification capacity
+        → Lower layer minimum requirement
 
-Classification result
-  Correctly identified vectors  → absorbed
-  Correctly identified noise    → discarded or buffered
+Tier 2  Inter-Vector Differentiation
+        "Are these vectors distinct from each other?"
+        Positional separation capacity
+        → Mid-layer capability
 
+Tier 3  Full Map Design              ← upper layer only
+        "Where should each vector be placed
+         to minimize friction across the whole system?"
+        → Identifies opposing vector pairs
+        → Maximizes buffer layer thickness
+        → Detects latent vectors in noise
+        → Actively cultivates latent vectors into full vectors
+        → System evolves, not just maintains
+```
+
+Only the upper layer has Tier 3 resolution. This is why contamination is a relative concept — it is always judged against the upper layer's map, not an absolute standard.
+
+### 1.1.2 Buffer Layer Thickness as Independent Resolution Measurement
+
+The buffer layer solves the circularity problem in resolution measurement.
+
+Previous definition risk:
+```
+Contamination defined by resolution
+Resolution measured by contamination detection
+→ Circular
+```
+
+Resolution can now be measured independently:
+
+> **Buffer layer thickness is the observable proxy for upper layer resolution.**
+> **Thicker buffer = higher resolution. No reference to contamination needed.**
+
+```
+Upper layer resolution high
+  Opposing vector pairs precisely identified
+  → Placed far apart
+  → Buffer layer inserted between them
+  → Buffer layer thick
+  → Friction minimized
+  → System stable
+
+Upper layer resolution low
+  Opposing pairs not identified
+  → Vectors placed without friction analysis
+  → Buffer layer thin or absent
+  → Direct collision risk
+  → Vector Storm precondition
+
+Buffer layer thickness measurement
+  = upper layer resolution measurement
+  = independent of contamination state
+  = observable at any time
+```
+
+The buffer layer is composed of noise — directionless material that does not reinforce either opposing vector. Its thickness is therefore a direct measure of how accurately the upper layer has mapped opposing relationships.
+
+### 1.1.3 Resolution-Proxy for Operational Use
+
+For operational detection and restoration, resolution is measured by classification boundary performance:
+
+> **Resolution-proxy = 1 - (Type1 loss + Type2 loss) / Total input**
+
+```
 Loss Type 1  False Restoration / Over-disruption
              Healthy vector classified as contaminated
              → Unnecessary isolation or loop severance
-             → Disruption exceeds what contamination required
              → Healthy search space damaged
 
 Loss Type 2  Missed Contamination / Under-detection
              Contaminated vector classified as healthy
              → Loop maintained or continues spreading
              → Contamination undetected
-             → Restoration incomplete
 
-Resolution-proxy = 1 - (Type1 loss + Type2 loss) / Total input
+Optimal sensitivity: Type1 = Type2
+→ Maximum classification resolution at current layer maturity
 ```
 
-The optimal sensitivity point is where Type1 = Type2. This is the point of maximum classification resolution for a given layer maturity.
-
 **Connection to Distracting (Step 1)**
-
-Type1 and Type2 directly define the two failure modes of loop severance:
 
 ```
 Over-disruption  Type1 ↑   healthy vectors cut with the loop
 Under-disruption Type2 ↑   loop survives, contamination spreads
 
-Minimum disruption is therefore an optimization problem:
+Minimum disruption optimization:
   Minimize Type1
   Subject to: Type2 ≤ threshold
 
-Loop boundary definition = the severance policy that solves this.
-Upper layer resolution determines how precisely this boundary can be drawn.
-Higher resolution → tighter boundary → lower combined loss.
+Higher upper layer resolution
+→ tighter loop boundary identification
+→ lower combined loss
+→ more precise Distracting
 ```
 
-**Why this is measurable**
+**Resolution gap between layers**
 
 ```
-Same input dataset applied to layer at time T1 and T2
-  → Classification accuracy compared
-  → Resolution change quantified
-  → Layer maturity progression tracked
-
-Resolution gap between layers
-  Upper layer resolution - Lower layer resolution
-  → Positive: upper can read lower correctly
-  → Zero: upper at exact lower capacity
-  → Negative: system ceiling violated
-               upper cannot read lower
-               seed handover must not proceed
+Gap = upper layer resolution - lower layer resolution
+  Positive: upper reads lower correctly → normal operation
+  Zero: upper at exact lower capacity → upscaling imminent
+  Negative: system ceiling violated
+            upper cannot read lower
+            seed handover must not proceed
 ```
-
-This operationalizes the resolution gap as a measurable quantity rather than a conceptual variable.
 
 ```
 Low resolution layer
