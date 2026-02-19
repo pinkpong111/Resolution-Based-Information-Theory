@@ -1,8 +1,9 @@
 # Resolution-Based Information Theory
 ### Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems
+*Draft — timestamped February 19, 2026 — internal working document*
 
 > **This document establishes the information-theoretic foundation**
-> **for the deficit-fractal-governance framework. Existing component theories**
+> **for the DDFG framework. Existing component theories**
 > **(Vector Storm, Network Architecture, Governance Rules)**
 > **will be rewritten on this foundation in a future revision.**
 
@@ -35,7 +36,7 @@ These are not the same question. Shannon's framework is not wrong here. It is si
 8. [Data Classification as Discretization](#8-data-classification-as-discretization)
 9. [Relationship to Existing Information Theory](#9-relationship-to-existing-information-theory)
 10. [Open Problems](#10-open-problems)
-11. [Relationship to deficit-fractal-governance Component Theories](#11-relationship-to-deficit-fractal-governance-component-theories)
+11. [Relationship to DDFG Component Theories](#11-relationship-to-ddfg-component-theories)
 
 ---
 
@@ -50,6 +51,75 @@ These are not the same question. Shannon's framework is not wrong here. It is si
 A layer with low resolution cannot hold many distinct vectors at once. When high-resolution information enters a low-resolution space, the space forces compression — and the compression criteria are determined by the receiving layer, not the sender. Original intent is lost.
 
 A layer with high resolution can receive diverse vectors, maintain their distinctness, and process them without collapse.
+
+### 1.1.1 Resolution Measurement
+
+Resolution is measured by the accuracy with which a layer separates vectors from noise.
+
+> **Resolution = the layer's ability to correctly classify**
+> **incoming data as vector or noise.**
+> **Higher resolution = lower classification loss.**
+
+```
+Incoming data
+  Mixed: vectors + noise
+
+Classification result
+  Correctly identified vectors  → absorbed
+  Correctly identified noise    → discarded or buffered
+
+Loss Type 1  False Restoration / Over-disruption
+             Healthy vector classified as contaminated
+             → Unnecessary isolation or loop severance
+             → Disruption exceeds what contamination required
+             → Healthy search space damaged
+
+Loss Type 2  Missed Contamination / Under-detection
+             Contaminated vector classified as healthy
+             → Loop maintained or continues spreading
+             → Contamination undetected
+             → Restoration incomplete
+
+Resolution-proxy = 1 - (Type1 loss + Type2 loss) / Total input
+```
+
+The optimal sensitivity point is where Type1 = Type2. This is the point of maximum classification resolution for a given layer maturity.
+
+**Connection to Distracting (Step 1)**
+
+Type1 and Type2 directly define the two failure modes of loop severance:
+
+```
+Over-disruption  Type1 ↑   healthy vectors cut with the loop
+Under-disruption Type2 ↑   loop survives, contamination spreads
+
+Minimum disruption is therefore an optimization problem:
+  Minimize Type1
+  Subject to: Type2 ≤ threshold
+
+Loop boundary definition = the severance policy that solves this.
+Upper layer resolution determines how precisely this boundary can be drawn.
+Higher resolution → tighter boundary → lower combined loss.
+```
+
+**Why this is measurable**
+
+```
+Same input dataset applied to layer at time T1 and T2
+  → Classification accuracy compared
+  → Resolution change quantified
+  → Layer maturity progression tracked
+
+Resolution gap between layers
+  Upper layer resolution - Lower layer resolution
+  → Positive: upper can read lower correctly
+  → Zero: upper at exact lower capacity
+  → Negative: system ceiling violated
+               upper cannot read lower
+               seed handover must not proceed
+```
+
+This operationalizes the resolution gap as a measurable quantity rather than a conceptual variable.
 
 ```
 Low resolution layer
@@ -753,11 +823,15 @@ This suggests a generalization: **dynamic minimum sufficient description** — t
 ## 10. Open Problems
 
 ```
-1. Resolution measurement
-   How is a layer's current resolution quantified?
-   What unit captures vector space capacity?
-   Is there a formal mapping to existing
-   information-theoretic quantities?
+1. Resolution measurement  ✓ RESOLVED (operational proxy)
+   Resolution-proxy = 1 - (Type1 loss + Type2 loss) / total input
+   Type1 = False Restoration: healthy vector mistaken for contaminated
+   Type2 = Missed Contamination: contaminated vector mistaken for healthy
+   Resolution gap = upper proxy - lower proxy
+   Measurable, comparable across layers, trackable over time
+   Note: operationalizes resolution as classification boundary performance.
+   Full structural resolution (decomposition capacity, context width)
+   pending R(c) curve formalization.
 
 2. Resolution gap calibration
    How does a sender determine appropriate
@@ -795,9 +869,9 @@ This suggests a generalization: **dynamic minimum sufficient description** — t
 
 ---
 
-## 11. Relationship to deficit-fractal-governance Component Theories
+## 11. Relationship to DDFG Component Theories
 
-This document provides the information-theoretic foundation from which the deficit-fractal-governance component theories derive.
+This document provides the information-theoretic foundation from which the DDFG component theories derive.
 
 ```
 Vector Storm Theory
@@ -841,7 +915,7 @@ Emotion Module Theory
 ```
 
 > **The resolution gap is the unifying variable.**
-> Every mechanism in the deficit-fractal-governance framework is a response to
+> Every mechanism in the DDFG framework is a response to
 > the resolution gap between information and receiving layer —
 > managing it, signaling it, reducing it over time,
 > or designing for its irreducible remainder.
@@ -849,7 +923,7 @@ Emotion Module Theory
 ---
 
 *This document establishes a theoretical foundation.*
-*The component theories of deficit-fractal-governance remain valid as standalone frameworks*
+*The component theories of DDFG remain valid as standalone frameworks*
 *but will gain additional coherence when rewritten on this basis.*
 
 *Timestamped: February 19, 2026*
