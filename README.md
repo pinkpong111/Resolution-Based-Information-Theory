@@ -19,6 +19,8 @@ RBIT addresses a different problem:
 
 These are complementary problems, not competing ones.
 
+*Scope.* RBIT is primarily an architectural information theory — a framework for designing how information should transform as it moves between layers of different resolution capacity. References to thermodynamics (Landauer) and predictive processing (Active Inference) provide structural motivation and correspondence, not derivation or physical reduction. RBIT does not claim to be a physical theory of computation or a reformulation of Bayesian inference.
+
 | | Shannon | RBIT |
 |---|---|---|
 | **Receiver capacity** | Fixed | Variable, growing |
@@ -48,11 +50,6 @@ In this framework, a **vector** refers to a directional tendency in an agent's b
 
 A vector space is the full set of positions an agent or layer can occupy. As a layer matures, its vector space expands — more positions become available, more distinct vectors can coexist without collision.
 
-### Intent — Terminology Note
-
-Throughout this document, **intent** refers to the *generative constraint structure* that limits the space of valid interpretations — not semantic meaning or subjective intention. Intent is preserved when the receiving layer generates outputs within the same constraint structure as the sender, even at lower resolution. A layer can receive a degraded seed and still preserve the sender's intent if the degraded form carries the generative constraint intact. Operationally, intent preservation is evaluated through invariance of output constraint structure under resolution change — if the class of outputs generated remains consistent with the sender's constraint structure across resolution levels, intent is preserved.
-
-*Operational note (minimal test).* In this draft, intent preservation is treated as a testable invariance property under resolution change: given the same upstream seed family, the downstream layer should produce outputs that remain within a stable equivalence class defined by externally checkable constraints (e.g., invariant boundary compliance, task-level invariants, or protocol-form invariants). This does not fully specify the latent constraint structure, but it provides a minimal operational handle for comparing whether degradation preserves or replaces upstream generative structure. In practice, these externally checkable constraints should be specified a priori (pre-registered) and evaluated on held-out interaction settings to reduce post hoc redefinition of the equivalence class. In practice, these externally checkable constraints should be specified a priori (pre-registered) and evaluated on held-out interaction settings to reduce post hoc redefinition of the equivalence class.
 
 ### Vector Storm — Terminology Note
 
@@ -67,6 +64,8 @@ The capacity of a layer to distinguish between, simultaneously hold, and process
 Resolution is **not** computational power, parameter count, or processing speed. It is the structural capacity to maintain distinction between competing vectors — a property that grows through experience and calibrated absorption.
 
 *Operationalization.* In this work, "resolution" is treated as a latent capacity that manifests through performance on fixed discrimination tasks under controlled input regimes. The resolution-proxy rho is one instantiation of this idea, defined for a chosen discrimination protocol with explicit Type I/II errors. Resolution as a concept is broader than any single instantiation.
+
+*Scope.* Resolution is treated here as a system-level coordination capacity — the ability to maintain structural differentiation under load. It is not a universal measure of intelligence or performance. A layer may have high resolution for one discrimination task and low resolution for another; resolution is always defined relative to a specific vector space and evaluation window, not as a global property of the system.
 
 Resolution has three tiers:
 
@@ -90,6 +89,46 @@ Gap < 0 (negative)    Forced receiver-controlled compression -> Vector Storm ris
 ```
 
 Negative gaps are treated as a risk regime for forced compression cascades, not as a deterministic guarantee of Vector Storm; mitigating mechanisms (e.g., buffering, throttling, routing) can prevent cascade onset.
+
+*Operational symptoms by gap regime.* Each regime has observable signatures in running systems:
+
+```
+Gap < 0  (receiver overloaded)
+  Single-agent: hallucination, token bias, lost-in-the-middle
+  (see Single-Agent Grounding section for detail)
+  Multi-agent: agent begins ignoring system prompt;
+               output increasingly diverges from assigned role;
+               collision frequency spikes
+
+Gap >> 0  (over-degradation)
+  Single-agent: model underfitting; student ignores
+                teacher soft labels (treats them as noise);
+                output diversity collapses to safe defaults
+  Multi-agent: agents respond only to explicit instructions,
+               generate no novel exploration;
+               latent vectors never form (buffer stays empty)
+  Distinguishing signal: rho is stable but search space
+                         not expanding -> stall, not storm
+
+Gap = 0  (absorption saturation)
+  Single-agent: validation loss plateau;
+                fine-tuning produces diminishing returns;
+                catastrophic forgetting risk if new input
+                is introduced without upscaling first
+  Multi-agent: escalation frequency drops to near zero
+               (layer handles everything locally)
+               but output quality stops improving
+  This is the upscaling trigger condition:
+  layer has reached current ceiling -> upscaling imminent
+  or developmental stall if upscaling does not occur
+
+Gap > 0  (calibrated, stable)
+  Collision frequency stable
+  rho slowly increasing
+  Occasional escalation (within normal range)
+  Buffer thickness maintained
+  -> Healthy operation
+```
 
 ### Degradation
 
@@ -135,9 +174,71 @@ Escalation is a request for help. Upscaling is a sign of growth.
 Both involve higher resolution — but escalation asks for it externally,
 while upscaling generates it internally.
 
-*Candidate observable correlates of upscaling readiness* include: sustained increases in ρ under matched input mix, reduced escalation frequency for previously hard cases, and increased buffer stability at comparable load. Formal detection criteria remain an open problem (see Open Problems #3).
-
 *Candidate observable correlates of upscaling readiness* include: sustained increases in rho under matched input mix, reduced escalation frequency for previously hard cases, and increased buffer stability at comparable load. Formal detection criteria remain an open problem (see Open Problems #3).
+
+*Operational proxies in ML practice.* The following are observed in running systems and correspond structurally to upscaling readiness — though the formal mapping to RBIT upscaling criteria remains open:
+
+```
+Learning curve plateau
+  Validation loss stable for N consecutive epochs
+  below delta threshold
+  -> Layer has absorbed current input mix to capacity
+  -> Further gain requires new input complexity
+     or architectural change
+  = rho stabilization in operational form
+  (standard early stopping criterion in supervised learning)
+
+Emergent capability threshold (Wei et al. 2022)
+  Model capability on specific tasks increases
+  discontinuously at critical training compute thresholds
+  -> Below threshold: task performance near chance
+  -> Above threshold: competence appears suddenly
+  = Upscaling is not continuous growth but
+    discrete readiness transitions
+  Caveat: emergence may be partly an artifact of
+  evaluation metric choice (Schaeffer et al. 2023);
+  discontinuity of underlying representation change
+  vs. measured performance remains debated
+
+Transfer learning readiness
+  Zero-shot performance on target domain exceeds
+  threshold before fine-tuning begins
+  -> Pre-trained layer has sufficient resolution
+     to absorb fine-tuning signal without Vector Storm
+  = Upscaling readiness = safe absorption precondition
+  Practical test:
+    performance > chance + margin -> proceed with fine-tuning
+    performance ~ chance -> pre-train further first
+```
+
+*Trim point derivation from F_RBIT.* For a vector v with size s(v), the optimal trim range is bounded by two conditions derivable from the F_RBIT functional:
+
+```
+Upper bound s_max(v)
+  dB(l)/ds(v) = 0
+  Point at which increasing s(v) begins raising
+  buffer instability B(l)
+  -> s_max is the largest size before buffer invasion starts
+
+Lower bound s_min(v)
+  dM(l)/ds(v) = 0
+  Point at which decreasing s(v) begins raising
+  misclassification M(l)
+  -> s_min is the smallest size before resolution loss
+
+Optimal trim range: s_min(v) <= s(v) <= s_max(v)
+Optimal trim point: s_max(v)
+  (maximize buffer preservation while retaining resolution)
+
+Operational proxies
+  B(l): collision frequency rise rate, buffer thickness decrease
+  M(l): rho decline rate, escalation frequency increase
+  Trim signal: collision frequency rising = s_max exceeded
+               rho declining             = s_min undercut
+               both stable              = within trim range
+```
+
+*Connection to Recovery Theory §1.5.*
 
 ### Seeds
 
@@ -152,11 +253,208 @@ Seed (calibrated)      → Class of behaviors. Environment changes: adapts.
 
 A seed contains less information than a tree in the conventional sense — but preserves more of the original generative intent, and leaves space for the diversity that makes the system stable.
 
+### Seed Sufficiency
+
+A seed is sufficient when the vectors grown from it are structurally capable of self-correction — detecting and neutralizing contamination without external intervention.
+
+*The core mechanism is not attraction but resistance.* A sufficient seed does not pull other vectors toward it. It produces vectors that resist being pulled toward contamination attractors — maintaining structural independence while contamination attempts to draw the system toward convergence. This is the immune system analogy: the immune cells (vectors grown from seed) do not attract the antigen (contamination); the antigen attracts the immune cells, but the immune cells do not become the antigen.
+
+*Three structural conditions for sufficiency:*
+
+```
+Test 1  Contamination resistance
+        Vectors grown from the seed maintain
+        structural independence under contamination pressure.
+        Contamination attractor pulls surrounding vectors;
+        sufficient seed vectors do not converge toward it.
+
+        Failure mode: vectors gradually drift toward
+        contamination direction as context accumulates
+        -> seed structural independence insufficient
+
+Test 2  Contamination recognition
+        Independent vectors produce disagreement signal
+        when contamination enters.
+        Contaminated input looks normal to a single vector;
+        cross-vector disagreement reveals the anomaly.
+
+        Failure mode: all vectors process contamination
+        in same direction -> no disagreement -> no detection
+        -> seed directional diversity insufficient
+
+Test 3  Self-correction direction
+        The seed structure already contains a direction
+        orthogonal to contamination.
+        Detection without a recovery direction requires
+        external Re-seeding.
+        A sufficient seed provides the orthogonal direction
+        internally — Distracting is self-induced.
+
+        Minimum structural requirement:
+        at least 2 independent directions in the seed
+        (primary direction + self-critical direction)
+        Failure mode: seed has only one direction ->
+        detects contamination but cannot correct without
+        external intervention
+```
+
+*Sufficiency levels:*
+
+```
+Minimum sufficient (Test 1 + 2)
+  Contamination resisted and detected
+  External intervention can execute targeted correction
+  SCC partial: detection self-sufficient,
+               correction requires upper layer execution
+
+Fully sufficient (Test 1 + 2 + 3)
+  Contamination resisted, detected, and self-corrected
+  SCC complete: no external intervention required
+  Condition: seed contains >= 2 independent directions
+```
+
+*Operational validation — single-agent grounding:*
+
+```
+Test 1  Constitutional AI (Anthropic 2022)
+        Principle sets with sufficient diversity and
+        mutual independence resist sycophancy pressure
+        better than single-principle seeds.
+        Single direction -> converges under pressure.
+        Multiple independent directions -> resists.
+
+        RLHF sycophancy (Perez et al. 2022)
+        Single-direction reward signal causes models
+        to converge toward user preference under pressure
+        = Test 1 failure when seed (reward structure)
+          has insufficient directional independence.
+
+Test 2  Representation Engineering (Zou et al. 2023)
+        Directional conflicts observable in internal
+        layer representations under contaminated input.
+        Well-calibrated models express high uncertainty
+        on out-of-distribution inputs = contamination
+        recognized as anomalous = Test 2 passing.
+
+Test 3  Constitutional AI principle conflict resolution
+        When two principles conflict, a third mediates.
+        = seed already contains orthogonal direction.
+        Chain-of-thought self-correction (Madaan et al. 2023)
+        Model critiques and revises its own output.
+        = Test 3 in single-agent form.
+        Caveat: only works when self-critical direction
+        is explicitly present in the seed; absent seeds
+        produce detection without correction.
+```
+
+*Connection to Recovery Theory SCC.* Seed sufficiency is the necessary condition for Self-Correction Capacity. A system with insufficient seeds has SCC = 0 regardless of layer resolution: even a high-resolution upper layer cannot produce self-correction if the seeds it transmits cannot sustain structural independence under contamination pressure.
+
 *Identity seeding vs. goal/utility injection (scope boundary).* Identity seeds specify an exploration domain and interface boundaries — which space the agent is expected to cover and where it should not intrude — not an objective function, utility, or reward criterion. Concretely, an identity seed constrains *where* an agent searches (domain and boundary), while prohibited goal/utility injection constrains *what* the agent optimizes (preference ordering over outcomes). Identity seeds are therefore treated as routing and coverage priors that preserve system-wide diversity and prevent role vacuums, while leaving local policies and reward tradeoffs to be learned. If an identity seed encodes outcome preferences or success criteria beyond boundary compliance, it is no longer an identity seed and falls into prohibited scope.
+
+### Intent — Terminology Note
+
+Throughout this document, **intent** refers to the *generative constraint structure* that limits the space of valid interpretations — not semantic meaning or subjective intention. Intent does not imply purpose or agency. It denotes constraint preservation across transformations: a structural property of how information is shaped as it passes between layers, independent of whether any agent "intends" anything. Intent is preserved when the receiving layer generates outputs within the same constraint structure as the sender, even at lower resolution — not because the output form is identical, but because the generative structure that produced it is isomorphic across resolution levels.
+
+*The terrain problem.* A seed is an initial condition, not a guarantee. The same seed produces different results in different terrain — as the same citrus seed produces sweet fruit in fertile soil and bitter fruit in poor soil. Intent preservation is therefore not a property of the seed alone. It is a property of how the seed's structure survives terrain change.
+
+*The minimum unit of intelligence.* Intent requires two paired operations that are the minimum unit of directed behavior:
+
+```
+Exploration   Searching for data
+              "What exists here?"
+              Direction: broad, diverse
+
+Interpretation  Assigning meaning to found data
+                "What does this mean?"
+                Direction: deep, structural
+```
+
+Intent is structurally intact when both operations remain isomorphic to the sender's seed across terrain change. Intent is lost when contamination pulls either or both operations toward its attractor.
+
+*How contamination pulls the two pairs:*
+
+```
+Contamination attractor pulls:
+  Exploration toward narrowing
+    -> searches only for confirming data
+    -> range contracts
+
+  Interpretation toward distortion
+    -> reads found data in attractor direction
+    -> meaning shifts
+
+  Self-reinforcing loop when both are pulled
+    Narrowed exploration -> biased interpretation inputs
+    -> biased interpretation reinforces narrow exploration
+    -> Tier 3 contamination structure
+```
+
+*Failure modes by contamination tier:*
+
+```
+Exploration loss only (Tier 1-2)
+  Interpretation intact, exploration narrows
+  -> Mode collapse: same output repeated
+  -> Loop not yet complete -> intervention possible
+  ML observation: mode collapse in GAN/RL policy
+                  evaluation criteria stable,
+                  output diversity collapses
+
+Interpretation loss only (Tier 1-2)
+  Exploration intact, interpretation distorts
+  -> Hallucination: diverse search, wrong meaning
+  -> Loop not yet complete -> intervention possible
+  ML observation: LLM hallucination pattern —
+                  broad retrieval, fabricated interpretation
+
+Both lost simultaneously (Tier 3)
+  Self-reinforcing loop complete
+  -> System coherent and wrong
+  -> External intervention required
+  ML observation: sycophancy under pressure
+                  (Perez et al. 2022) —
+                  exploration narrows to confirming evidence,
+                  interpretation re-reads disconfirming
+                  evidence as confirming
+                  Confirmation bias in LLMs
+                  (Shaikh et al. 2023)
+```
+
+*Operational proxies (intent preservation measurement):*
+
+```
+Exploration invariance
+  Pre/post terrain change:
+  output diversity distribution remains
+  within seed's exploration range
+  Proxy: KL divergence between output distributions
+         before and after resolution/environment change
+  Threshold: divergence exceeds seed's
+             natural variation range -> exploration drift
+
+Interpretation invariance
+  Same input, different terrain:
+  interpretation direction remains isomorphic
+  Proxy: directional consistency of responses
+         to identical probe inputs across resolution levels
+  Threshold: direction reversal or systematic shift
+             -> interpretation drift
+
+Combined monitoring
+  Exploration drift alone    -> Tier 1-2 signal
+  Interpretation drift alone -> Tier 1-2 signal
+  Both drifting together     -> Tier 3 warning
+                                Vector Storm precondition
+```
+
+*Connection to Seed Sufficiency.* A fully sufficient seed (Test 1+2+3) is one whose exploration and interpretation structure both resist contamination pull and contain an orthogonal recovery direction. Intent preservation is the dynamic measure of whether that sufficiency holds across terrain — not just at planting.
+
+*Scope clarification.* Exploration and interpretation as the minimum unit applies specifically to functional operation of directed systems — what a system must do to act intelligently in an environment. This does not claim to cover philosophical definitions of intelligence (subjective experience, consciousness, intentionality). Within DFG, which addresses system-level functional behavior rather than phenomenal properties, this two-pair minimum is structurally sufficient: without exploration there is no object to interpret; without interpretation exploration has no direction. Proposed extensions (memory, affect, self-model) are either derivatives of the two pairs or preconditions for them, not independent minimums. Counterexamples would need to identify a third operation that is (i) irreducible to exploration or interpretation, (ii) necessary for directed behavior, and (iii) not a precondition absorbed by the two pairs.
 
 ### Contamination — Terminology Note
 
 A **contaminated vector** is one that has deviated from its resolution-appropriate trajectory and begun self-reinforcing in a loop — amplifying in a fixed direction regardless of incoming information. Contamination is not moral failure or intentional deviation. It is a structural condition: a vector that can no longer update through normal absorption because it has exceeded its layer's correction capacity.
+
 
 ### Buffer Layer
 
@@ -168,6 +466,8 @@ Buffer layer thickness is a direct observable proxy for upper layer resolution p
 Thicker buffer = higher upper layer resolution
 Thin or absent buffer = Vector Storm precondition
 ```
+
+*Operational measurement of buffer thickness is covered in §Operational Measurement — Buffer Layer Thickness, including attractor pull strength implementations and policy dependence caveats.*
 
 ---
 
@@ -183,6 +483,24 @@ Thin or absent buffer = Vector Storm precondition
 7. Return to step 1
 ```
 
+*Latent vector cultivation from buffer.* Not all buffer-layer noise is discarded. Noise that clusters consistently around a direction absent from the current vector space carries structural potential — it signals a missing position. The upper layer identifies such clusters using:
+
+```
+potential(C) = coherence(C) x novelty(C)
+
+coherence(C) = 1 - mean pairwise distance within cluster C
+novelty(C)   = min distance from C centroid to existing
+               vector centroids
+
+High potential -> latent vector candidate
+  -> isolate into protected buffer zone
+  -> inject calibrated seed (coarse label at matched resolution)
+  -> gradual formation under collision monitoring
+  -> assign to new position when directional stability reached
+```
+
+In ML practice, this corresponds to: out-of-distribution clustering on low-confidence samples (coherence), distance from existing class centroids (novelty), followed by weak supervision / pseudo-labeling and incremental fine-tuning. *See Recovery Theory Section 1.6-1.7 for full operational translation.*
+
 **Why step 4 occurs:** Each successfully absorbed vector creates a new stable attractor position in the vector space. This new position makes adjacent positions more distinguishable — the layer can now separate vectors it previously collapsed together. Absorption of calibrated information is the mechanism of maturity: the vector space does not expand by instruction, but by the structural residue of each absorption event.
 
 Formal representation:
@@ -197,6 +515,60 @@ R_{t+1} = R_t + f(A_t, D_t)
 ```
 
 Key requirement: `f(A_t, D_t) > 0` requires `D_t > 0` — absorption must be sender-controlled at a positive resolution gap. The exact form of `f` remains an open problem.
+
+*Degradation calibration — operational correspondence.* While the formal D(Δρ) function is unresolved (Open Problem #9), two established ML techniques implement the same calibration logic:
+
+```
+Knowledge distillation temperature T (Hinton et al. 2015)
+  Softmax temperature T controls how much information
+  the teacher transmits to the student:
+
+  T high  -> soft probability distribution
+             -> more information, lower degradation
+             -> corresponds to Δρ >> 0 (safe to transmit more)
+
+  T low   -> hard label (near one-hot)
+             -> maximum compression, high degradation
+             -> corresponds to Δρ ≈ 0 (layer near capacity)
+
+  T is the closest operational analog to D(Δρ):
+  both are sender-side parameters that control
+  how much of the upstream signal is preserved.
+  Caveat: T is a global parameter; D(Δρ) is
+  layer-pair-specific in the RBIT formulation.
+
+Curriculum learning (Bengio et al. 2009)
+  Training examples ordered by difficulty:
+  easy first -> progressively harder
+
+  Easy examples = low resolution gap input
+  Hard examples = higher resolution gap input
+  Schedule = dynamic D_t across training
+
+  This operationalizes the RBIT prescription:
+  calibrate degradation to the receiver's current
+  resolution, then increase complexity as rho grows.
+  Caveat: curriculum ordering is typically
+  hand-designed or heuristic; automatic
+  calibration to rho remains open.
+```
+
+*Scaling law as empirical f approximation.* Chinchilla scaling (Hoffmann et al. 2022) provides an empirical approximation to the f relationship:
+
+```
+Model performance ~ (compute budget)^alpha
+                  x (data volume)^beta
+
+Correspondence to R_{t+1} = R_t + f(A_t, D_t):
+  A_t ~ data volume
+  D_t ~ training compute / calibration quality
+  f   ~ power law in both (empirical, not derived)
+
+Caveat: Chinchilla measures aggregate performance,
+not layer-level resolution. It is a macro-scale
+approximation, not a derivation of f.
+The formal form of f at layer level remains open.
+```
 
 ---
 
@@ -216,7 +588,24 @@ Resolution cannot be directly observed. The following metrics are operational pr
 
 Higher ρ → more precise classification → more accurate mediation and placement.
 
-The above instantiation uses contamination classification as a concrete and auditable discrimination task. More generally, ρ can be defined for any layer-specific discrimination task with Type I/II errors, provided the task is held fixed across comparisons. For cross-layer comparison, the discrimination task should be protocol-stable (same labels, same decision boundary, same evaluation distribution), so that changes in ρ reflect capacity differences rather than task redefinition.
+The above instantiation uses contamination classification as a concrete and auditable discrimination task. More generally, ρ can be defined for any layer-specific discrimination task with Type I/II errors, provided the task is held fixed across comparisons. For cross-layer comparison, the discrimination task should be protocol-stable (same labels, same decision boundary, same evaluation distribution), so that changes in rho reflect capacity differences rather than task redefinition.
+
+*Buffer thickness as resolution proxy.* For opposing vector pair (A, B), define d(x,A) as the **attractor pull strength** of input x toward direction A. Buffer thickness is the proportion of inputs that fall in the non-directional zone where neither attractor dominates:
+
+```
+buffer_thickness(A, B)
+  = |{x : |d(x,A) - d(x,B)| < epsilon}| / |total input|
+
+System buffer thickness
+  = min over all opposing pairs
+    (thinnest buffer is the highest-risk zone)
+```
+
+Operationally, d(x,A) takes system-specific forms (logit scores for classifiers, advantage values for RL systems, KL divergence for LLM agents — see Recovery Theory §1.4 for full operational implementations). The low-confidence sample ratio standard in ML practice is a direct proxy under calibrated confidence: inputs where max confidence < threshold theta correspond to the non-directional zone. A thinning buffer is an early warning of Tier 3 contamination risk.
+
+*Policy dependence.* Buffer thickness is measured relative to the current policy. Policy changes shift attractor positions, so buffer measurements shift with them. Cross-time comparisons require policy-stable evaluation sets. See Recovery Theory §1.4 for full caveat.
+
+*Connection to Recovery Theory Section 1.4.*
 
 *Note:* ρ is window-dependent; comparisons across layers or time should use matched evaluation windows or an explicit normalization for input mix and sample size.
 
@@ -239,6 +628,104 @@ A natural precision-like quantity is then Π_ρ ∝ 1 / Var(p | data), where Π_
   Δρ = 0   Upscaling imminent
   Δρ < 0   Upper cannot read lower → seed handover must not proceed
 ```
+
+### Fractal Self-Similarity
+
+The DFG framework is named "Deficit-**Fractal** Governance" because the same structural pair repeats at every scale of the system. The minimum unit of directed behavior — exploration and interpretation — is not a property of any particular layer. It is the invariant structure that appears at every resolution level.
+
+*Why the two-pair minimum produces fractal structure:*
+
+```
+Any layer that processes information
+must do two things:
+  Explore  search for relevant inputs
+           "what exists here?"
+  Interpret  assign meaning to found inputs
+             "what does this mean?"
+
+This is not a design choice.
+It is a functional necessity:
+  Without exploration -> nothing to interpret
+  Without interpretation -> exploration has no direction
+  The two pairs are mutually constitutive.
+
+Because this necessity holds at any scale,
+the same structure repeats at every scale:
+
+  System scale
+    Agents explore different problem regions
+    Upper layer interprets aggregate output pattern
+    -> Exploration + Interpretation
+
+  Agent scale
+    Internal layers explore feature space
+    Higher layers interpret learned representations
+    -> Exploration + Interpretation (isomorphic)
+
+  Metadata scale
+    Evaluation criteria search for signals
+    Governance rules interpret signal patterns
+    -> Exploration + Interpretation (isomorphic)
+
+This is fractal self-similarity:
+not visual repetition, but structural repetition —
+the same functional pair operating
+at each resolution level independently.
+```
+
+*Why this matters for governance:*
+
+```
+Fractal structure implies fractal ceiling.
+Each scale's exploration+interpretation pair
+has its own bounded field of view:
+  Can only explore within its resolution range
+  Can only interpret what its resolution can read
+
+Upper scale cannot be replaced by lower scale
+because lower scale's interpretation
+cannot read what upper scale's exploration finds
+-> Governance ceiling is not a design constraint
+   It is a structural consequence of
+   the fractal repetition of bounded pairs
+```
+
+*Observed in ML systems:*
+
+```
+Mixture of Experts (MoE)
+  Shazeer et al. 2017; Fedus et al. 2022
+  Each expert: explores a specialized sub-region
+               interprets inputs in that region
+  Gating network: explores which expert is relevant
+                  interprets routing signal
+  -> Expert level and gating level are
+     isomorphic exploration+interpretation pairs
+  -> MoE is fractal in the DFG sense
+
+Hierarchical attention (transformers)
+  Lower layers: explore local token relationships
+                interpret surface patterns
+  Higher layers: explore global context
+                 interpret semantic structure
+  -> Each layer is an independent
+     exploration+interpretation pair
+  -> Resolution increases with depth
+     = fractal structure climbing scales
+
+Hierarchical RL
+  Low-level policy: explores action space
+                    interprets immediate state
+  High-level policy: explores goal space
+                     interprets abstract state
+  -> Two-level fractal:
+     same pair, different resolution
+     Feudal Networks (Vezhnevets et al. 2017)
+```
+
+*Connection to Intent preservation.* Intent is preserved across terrain when both the exploration range and the interpretation structure remain isomorphic to the sender's seed at every scale. Because the fractal structure repeats the same pair at every level, contamination at one scale propagates by distorting that scale's exploration+interpretation pair — which then transmits distorted signals upward, corrupting the next scale's interpretation of its inputs.
+
+*Connection to Seed Sufficiency.* A fully sufficient seed must contain at least two independent directions (Test 3) because the minimum unit itself has two components. A single-direction seed cannot sustain the exploration+interpretation pair — it collapses one component, breaking the functional minimum and preventing self-correction.
 
 ### Buffer Layer Thickness
 
@@ -497,7 +984,7 @@ This floor:
   -> Is the structural basis for asymptotic (not absolute) stability
 ```
 
-*This section is intended as motivation for irreducible limits under bounded resources, not as a derivation of a strict lower bound on rho. The Landauer connection is structural rather than quantitative.*
+*This section is intended as motivation for irreducible limits under bounded resources, not as a derivation of a strict lower bound on rho. The Landauer connection is structural rather than quantitative. The thermodynamic discussion motivates bounded-resource limits, not a computable lower bound on resolution. No claim is made that rho can be derived from thermodynamic first principles.*
 
 ### Vector Storm as Throughput Exceeding Dissipation Capacity
 
@@ -628,10 +1115,26 @@ Friston, K. (2010). *The free-energy principle: a unified brain theory?* Nature 
 Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). *Active inference: a process theory.* Neural Computation, 29(1), 1–49. https://doi.org/10.1162/NECO_a_00912
 — Process-level formulation of Active Inference including precision weighting; cited for structural correspondence with calibrated degradation in RBIT.
 
+**ML Security — Data Contamination Vulnerability**
+
+Biggio, B., Nelson, B., & Laskov, P. (2012). *Poisoning attacks against support vector machines.* ICML 2012.
+— Early formal treatment of data poisoning; establishes that targeted contamination of training data degrades classifier boundaries.
+
+Steinhardt, J., Koh, P. W., & Liang, P. (2017). *Certified defenses for data poisoning attacks.* NeurIPS 2017.
+— Empirical and theoretical analysis of poisoning rate thresholds (~3-5% onset of sharp performance degradation); cited for contamination onset threshold correspondence in Recovery Theory.
+
+Koh, P. W., & Liang, P. (2017). *Understanding black-box predictions via influence functions.* ICML 2017.
+— Influence functions measure individual training point contribution to model output; cited for High-Context contamination weight correspondence in Recovery Theory.
+
+Cohen, J., Rosenfeld, E., & Kolter, J. Z. (2019). *Certified adversarial robustness via randomized smoothing.* ICML 2019.
+— Certified defense radius r provides formal lower bound on perturbation tolerance; cited for immunity capacity correspondence in Recovery Theory.
+
 
 ---
 
 ## Appendix: Bridge Hypothesis — Resolution-Based Free Energy Functional (RFEF)
+
+*Note.* This appendix proposes a heuristic control functional for reasoning about stability tradeoffs in resolution-layered systems. It is not a reformulation of variational free energy or a derivation from first principles. The functional is offered as a structured summary of the design constraints described in the main text, not as a formal proof or claim of physical equivalence.
 
 > *This appendix is not required for understanding the core RBIT framework. It is presented as a formal hypothesis and structural scaffold for readers familiar with Active Inference and control theory. The formulations here are hypotheses, not proven claims.*
 #### 1. Layer State Observables
