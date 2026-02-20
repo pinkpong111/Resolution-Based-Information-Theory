@@ -3,8 +3,7 @@
 *Draft — timestamped February 19, 2026 — internal working document*
 
 > **This document establishes the information-theoretic foundation**
-> **for the D
-> FG framework. Existing component theories**
+> **for the DFG framework. Existing component theories**
 > **(Vector Storm, Network Architecture, Governance Rules)**
 > **will be rewritten on this foundation in a future revision.**
 
@@ -21,7 +20,17 @@ In multi-agent systems, the question is not how to transmit information without 
 > **Shannon asked: how much information can be sent?**
 > **This framework asks: how should information change as it moves through the system?**
 
-These are not the same question. Shannon's framework is not wrong here. It is simply not about this.
+These are not the same question.
+
+Shannon's framework optimizes transmission between systems of fixed capacity.
+The present framework addresses transformation between systems whose processing resolution evolves over time.
+
+These are complementary problems, not competing ones.
+
+> **Terminological note:** In this framework, "intent" refers to the generative constraint
+> structure that limits the space of valid interpretations — not semantic meaning or
+> subjective intention. Intent is preserved when the receiving layer generates outputs
+> within the same constraint structure as the sender, even at lower resolution.
 
 ---
 
@@ -37,7 +46,7 @@ These are not the same question. Shannon's framework is not wrong here. It is si
 8. [Data Classification as Discretization](#8-data-classification-as-discretization)
 9. [Relationship to Existing Information Theory](#9-relationship-to-existing-information-theory)
 10. [Open Problems](#10-open-problems)
-11. [Relationship to DFG Component Theories](#11-relationship-to-dfg-component-theories)
+11. [Relationship to DFG Component Theories](#11-relationship-to-ddfg-component-theories)
 
 ---
 
@@ -48,6 +57,11 @@ These are not the same question. Shannon's framework is not wrong here. It is si
 > **Resolution** is the capacity of a layer to distinguish between,
 > simultaneously hold, and process vectors of different directions
 > without one dominating the others.
+
+> **Clarification:** Resolution does not refer to computational power, parameter count,
+> or processing speed. It refers specifically to the structural capacity to maintain
+> distinction between competing vectors — a property that grows through experience
+> and calibrated absorption, not through hardware scaling.
 
 A layer with low resolution cannot hold many distinct vectors at once. When high-resolution information enters a low-resolution space, the space forces compression — and the compression criteria are determined by the receiving layer, not the sender. Original intent is lost.
 
@@ -484,6 +498,18 @@ Degradation → Absorption → Maturation → Upscaling → Higher Resolution
                     Self-reinforcing growth cycle
 ```
 
+**Formal representation of the cycle:**
+
+$$R_{t+1} = R_t + f(A_t, D_t)$$
+
+where:
+- $R_t$ = layer resolution at time $t$
+- $A_t$ = volume of calibrated information absorbed at time $t$
+- $D_t$ = degradation calibration quality at time $t$ (proximity to optimal resolution gap)
+- $f$ = assumed to be monotone increasing in both arguments
+
+The key design requirement: $f(A_t, D_t) > 0$ requires $D_t > 0$ — meaning absorption must be sender-controlled at a positive resolution gap. Uncalibrated absorption ($D_t = 0$) is assumed to contribute no resolution growth regardless of volume. The exact form of $f$ remains an open problem (see Section 10).
+
 ### 5.2 Why the Cycle Is Self-Reinforcing
 
 ```
@@ -655,6 +681,40 @@ This is the information-theoretic basis for seed handover in Governance Rules Th
 
 ## 7. Fractal Resolution Structure
 
+**Figure 1: The Degradation-Upscaling Loop Across Fractal Layers**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    UPPER LAYER (N)                       │
+│   Resolution: R_N (highest)   ← Full map / Tier 3       │
+│   Vector space: widest                                   │
+└───────────┬─────────────────────────┬───────────────────┘
+            │ Seed (degraded)         │ Escalation (upscaled)
+            │ ↓ calibrated to R_{N-1} │ ↑ abstracted pattern
+            │                         │
+┌───────────▼─────────────────────────┴───────────────────┐
+│                   MIDDLE LAYER (N-1)                     │
+│   Resolution: R_{N-1}   R_{t+1} = R_t + f(A_t, D_t)    │
+│   Absorbs → Matures → Upscales                           │
+└───────────┬─────────────────────────┬───────────────────┘
+            │ Seed (further degraded) │ Pattern (abstracted)
+            │ ↓                       │ ↑
+┌───────────▼─────────────────────────┴───────────────────┐
+│                    LOWER LAYER (N-2)                     │
+│   Resolution: R_{N-2} (lowest)   ← Tier 1 / Tier 2 only │
+│   Highest degradation requirement                        │
+│   Residual noise floor irreducible                       │
+└─────────────────────────────────────────────────────────┘
+
+↕ Each layer: resolution transformer in both directions simultaneously
+↕ Each cycle: R grows → vector space expands → diversity increases
+```
+
+*The same loop repeats at every scale. This is why the structure is fractal.*
+*For the formal representation of the cycle, see Section 5.1 ($R_{t+1} = R_t + f(A_t, D_t)$).*
+
+---
+
 ### 7.1 Resolution Increases with Layer Height
 
 In a fractal architecture, resolution is not uniform across layers:
@@ -771,9 +831,11 @@ Tacit Knowledge
   → Escalate only on performance degradation
 
 Noise
-  Resolution requirement: none
-  No structure at any resolution
-  → Discard: nothing to preserve
+  Resolution requirement: none at current resolution
+  No structure detectable at current layer resolution
+  → Buffer or discard (policy-defined)
+  → Upper layer may identify latent vectors within noise
+     that are invisible at current resolution
 ```
 
 ### 8.3 Classification as Resolution Matching
@@ -820,9 +882,9 @@ This framework
   Loss: design deliberately to match receiver resolution
 ```
 
-### 9.3 Why Shannon Is Not Sufficient Here
+### 9.3 Why a Different Framework Is Needed Here
 
-Shannon treats all information loss as cost. This framework finds that deliberate, calibrated loss is necessary for intent preservation.
+Shannon treats all information loss as cost. This framework finds that deliberate, calibrated loss is necessary for intent preservation in adaptive systems.
 
 ```
 Shannon's assumption
@@ -835,7 +897,13 @@ This framework's finding
   Intent preservation ≠ information quantity maximization
 ```
 
-This is not a contradiction of Shannon. It is a different problem domain. Shannon applies to transmission between fixed-capacity systems. This applies to transmission between growing, adaptive systems where the resolution of the receiver is itself a variable.
+This is not a contradiction of Shannon. It is an extension into a different problem domain.
+Shannon optimizes transmission between fixed-capacity systems.
+This framework optimizes transformation between growing, adaptive systems
+where receiver resolution is itself a variable.
+
+> **Scope:** Shannon is the right tool when receiver capacity is fixed and known.
+> This framework is the right tool when receiver capacity grows and must be matched.
 
 ### 9.4 Relationship to Kolmogorov Complexity
 
@@ -870,15 +938,14 @@ This suggests a generalization: **dynamic minimum sufficient description** — t
 ## 10. Open Problems
 
 ```
-1. Resolution measurement  ✓ RESOLVED (operational proxy)
+1. Resolution measurement  PARTIALLY RESOLVED (operational proxy)
+   This proxy measures boundary performance, not full structural resolution.
    Resolution-proxy = 1 - (Type1 loss + Type2 loss) / total input
    Type1 = False Restoration: healthy vector mistaken for contaminated
    Type2 = Missed Contamination: contaminated vector mistaken for healthy
    Resolution gap = upper proxy - lower proxy
    Measurable, comparable across layers, trackable over time
-   Note: operationalizes resolution as classification boundary performance.
-   Full structural resolution (decomposition capacity, context width)
-   pending R(c) curve formalization.
+   Full structural resolution (R(c) curve) remains a Layer 2 problem.
 
 2. Resolution gap calibration
    How does a sender determine appropriate
@@ -916,9 +983,9 @@ This suggests a generalization: **dynamic minimum sufficient description** — t
 
 ---
 
-## 11. Relationship to DDFG Component Theories
+## 11. Relationship to DFG Component Theories
 
-This document provides the information-theoretic foundation from which the DDFG component theories derive.
+This document provides the information-theoretic foundation from which the DFG component theories derive.
 
 ```
 Vector Storm Theory
@@ -962,7 +1029,7 @@ Emotion Module Theory
 ```
 
 > **The resolution gap is the unifying variable.**
-> Every mechanism in the DDFG framework is a response to
+> Every mechanism in the DFG framework is a response to
 > the resolution gap between information and receiving layer —
 > managing it, signaling it, reducing it over time,
 > or designing for its irreducible remainder.
@@ -970,7 +1037,7 @@ Emotion Module Theory
 ---
 
 *This document establishes a theoretical foundation.*
-*The component theories of DDFG remain valid as standalone frameworks*
+*The component theories of DFG remain valid as standalone frameworks*
 *but will gain additional coherence when rewritten on this basis.*
 
 *Timestamped: February 19, 2026*
