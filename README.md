@@ -52,7 +52,7 @@ A vector space is the full set of positions an agent or layer can occupy. As a l
 
 Throughout this document, **intent** refers to the *generative constraint structure* that limits the space of valid interpretations — not semantic meaning or subjective intention. Intent is preserved when the receiving layer generates outputs within the same constraint structure as the sender, even at lower resolution. A layer can receive a degraded seed and still preserve the sender's intent if the degraded form carries the generative constraint intact. Operationally, intent preservation is evaluated through invariance of output constraint structure under resolution change — if the class of outputs generated remains consistent with the sender's constraint structure across resolution levels, intent is preserved.
 
-*Operational note (minimal test).* In this draft, intent preservation is treated as a testable invariance property under resolution change: given the same upstream seed family, the downstream layer should produce outputs that remain within a stable equivalence class defined by externally checkable constraints (e.g., invariant boundary compliance, task-level invariants, or protocol-form invariants). This does not fully specify the latent constraint structure, but it provides a minimal operational handle for comparing whether degradation preserves or replaces upstream generative structure.
+*Operational note (minimal test).* In this draft, intent preservation is treated as a testable invariance property under resolution change: given the same upstream seed family, the downstream layer should produce outputs that remain within a stable equivalence class defined by externally checkable constraints (e.g., invariant boundary compliance, task-level invariants, or protocol-form invariants). This does not fully specify the latent constraint structure, but it provides a minimal operational handle for comparing whether degradation preserves or replaces upstream generative structure. In practice, these externally checkable constraints should be specified a priori (pre-registered) and evaluated on held-out interaction settings to reduce post hoc redefinition of the equivalence class. In practice, these externally checkable constraints should be specified a priori (pre-registered) and evaluated on held-out interaction settings to reduce post hoc redefinition of the equivalence class.
 
 ### Vector Storm — Terminology Note
 
@@ -65,6 +65,8 @@ Throughout this document, **intent** refers to the *generative constraint struct
 The capacity of a layer to distinguish between, simultaneously hold, and process vectors of different directions without one dominating the others.
 
 Resolution is **not** computational power, parameter count, or processing speed. It is the structural capacity to maintain distinction between competing vectors — a property that grows through experience and calibrated absorption.
+
+*Operationalization.* In this work, "resolution" is treated as a latent capacity that manifests through performance on fixed discrimination tasks under controlled input regimes. The resolution-proxy rho is one instantiation of this idea, defined for a chosen discrimination protocol with explicit Type I/II errors. Resolution as a concept is broader than any single instantiation.
 
 Resolution has three tiers:
 
@@ -84,8 +86,10 @@ The difference between the resolution of incoming information and the current re
 Gap = 0               Direct absorption, upscaling imminent
 Gap > 0 (calibrated)  Stable operation, diversity possible
 Gap >> 0              Over-degradation risk, generative structure threatened
-Gap < 0 (negative)    Forced receiver-controlled compression → Vector Storm risk
+Gap < 0 (negative)    Forced receiver-controlled compression -> Vector Storm risk
 ```
+
+Negative gaps are treated as a risk regime for forced compression cascades, not as a deterministic guarantee of Vector Storm; mitigating mechanisms (e.g., buffering, throttling, routing) can prevent cascade onset.
 
 ### Degradation
 
@@ -94,6 +98,8 @@ Deliberate reduction of information resolution before delivery to a lower layer.
 **Standard view:** degradation = necessary loss, minimize wherever possible.
 
 **RBIT hypothesis:** calibrated degradation can, in some regimes, preserve upstream intent more robustly than full delivery, because it keeps compression under sender control rather than inducing receiver-controlled collapse.
+
+*System-wide resolution growth is hypothesized to be enabled not by eliminating mixture, but by maintaining discriminable diversity: calibrated degradation preserves separable directions (as in a paint-mixing analogy — colors that remain distinct can later be refined, while collapsed blends cannot be un-mixed) that later upscaling can refine into higher-resolution distinctions, preventing collapse into undifferentiated states.*
 
 ```
 Full delivery to immature layer
@@ -128,6 +134,10 @@ Upscaling   → previously absorbed structure is re-interpreted
 Escalation is a request for help. Upscaling is a sign of growth.
 Both involve higher resolution — but escalation asks for it externally,
 while upscaling generates it internally.
+
+*Candidate observable correlates of upscaling readiness* include: sustained increases in ρ under matched input mix, reduced escalation frequency for previously hard cases, and increased buffer stability at comparable load. Formal detection criteria remain an open problem (see Open Problems #3).
+
+*Candidate observable correlates of upscaling readiness* include: sustained increases in rho under matched input mix, reduced escalation frequency for previously hard cases, and increased buffer stability at comparable load. Formal detection criteria remain an open problem (see Open Problems #3).
 
 ### Seeds
 
@@ -206,7 +216,7 @@ Resolution cannot be directly observed. The following metrics are operational pr
 
 Higher ρ → more precise classification → more accurate mediation and placement.
 
-The above instantiation uses contamination classification as a concrete and auditable discrimination task. More generally, ρ can be defined for any layer-specific discrimination task with Type I/II errors, provided the task is held fixed across comparisons.
+The above instantiation uses contamination classification as a concrete and auditable discrimination task. More generally, ρ can be defined for any layer-specific discrimination task with Type I/II errors, provided the task is held fixed across comparisons. For cross-layer comparison, the discrimination task should be protocol-stable (same labels, same decision boundary, same evaluation distribution), so that changes in ρ reflect capacity differences rather than task redefinition.
 
 *Note:* ρ is window-dependent; comparisons across layers or time should use matched evaluation windows or an explicit normalization for input mix and sample size.
 
@@ -242,7 +252,7 @@ RBIT's core claims — resolution stratification, degradation, and the resolutio
 
 ### Resolution Stratification Inside a Transformer
 
-A large language model's internal structure already exhibits the resolution hierarchy RBIT describes:
+A large language model's internal structure can be interpreted as exhibiting a resolution hierarchy consistent with RBIT's definitions:
 
 | Layer region | Processing role | Resolution characteristic |
 |-------------|-----------------|--------------------------|
@@ -252,7 +262,7 @@ A large language model's internal structure already exhibits the resolution hier
 
 The upper layers of a transformer correspond structurally to the upper layer of the DFG three-layer architecture: they hold the most abstract, highest-resolution map of the input space. Early layers correspond to lower agents processing at Tier 1–2 resolution.
 
-The resolution gradient across transformer layers has been empirically observed in representation analysis studies — lower layers encode syntactic and local structure, higher layers encode semantic and abstract relationships (Tenney et al., 2019; Elhage et al., 2021; Rogers et al., 2020). This gradient is structurally consistent with the RBIT resolution hierarchy. The correspondence motivates the Externalization Principle below.
+Representation analysis studies have empirically observed that lower transformer layers encode syntactic and local structure while higher layers encode semantic and abstract relationships (Tenney et al., 2019; Elhage et al., 2021; Rogers et al., 2020). This pattern supports an interpretation of transformer layers as exhibiting a resolution gradient consistent with RBIT's hierarchy — though this remains an interpretive framing rather than a derivation. The correspondence motivates the Externalization Principle below.
 
 ### Attention as Dynamic Resolution Allocation
 
@@ -473,20 +483,21 @@ This is not an engineering limitation to be overcome with better hardware. It is
 
 ### The Residual Floor as Irreducible Entropy
 
-RBIT's residual resolution floor — the minimum below which the lowest layer cannot further discriminate — is therefore not a design choice. It is the thermodynamic floor:
+RBIT's residual resolution floor — the minimum below which the lowest layer cannot further discriminate — is therefore not a design choice. It is a resource-bounded irreducibility floor (thermodynamically motivated):
 
 ```
 Residual degradation floor
-  = minimum irreducible entropy of the processing system
-  = the point at which further state discrimination
+  = point at which further state discrimination
     costs more than the system's energy budget allows
 
 This floor:
-  → Cannot be reduced to zero
-  → Persists regardless of system maturity
-  → Generates irreducible residual noise at every scale
-  → Is the structural basis for asymptotic (not absolute) stability
+  -> Cannot be reduced to zero
+  -> Persists regardless of system maturity
+  -> Generates irreducible residual noise at every scale
+  -> Is the structural basis for asymptotic (not absolute) stability
 ```
+
+*This section is intended as motivation for irreducible limits under bounded resources, not as a derivation of a strict lower bound on rho. The Landauer connection is structural rather than quantitative.*
 
 ### Vector Storm as Throughput Exceeding Dissipation Capacity
 
