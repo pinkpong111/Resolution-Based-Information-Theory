@@ -2,12 +2,14 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · February 23, 2026 · Internal Working Document — v1.4*
+> *Draft · February 23, 2026 · Internal Working Document — v1.6*
 > *Component of the Deficit-Fractal Governance (DFG) Framework*
-> *v1.1: D0 substrate, contamination boundary, IB comparison, falsification criteria, seed test protocols, f boundary conditions, fractal conditional necessity, Landauer restructuring, single-agent grounding*
-> *v1.2: R-ρ concordance protocol, four-type resolution-matching, measurement interface*
-> *v1.3: n² critical phenomena derivation, information-theoretic storm characterization, F_RBIT–S_norm cross-validation, R-ρ four-state concordance, seed Test 3 quantitative criterion, α-n separation reference*
-> *v1.4: R-ρ-f_esc triple concordance, Stability Saturation as falsification-relevant phenomenon, extended measurement interface (21 variables), Storm–Collapse lifecycle closure, TLG-derived falsification criteria*
+> *v1.1: D0 substrate, contamination boundary, IB comparison, falsification, seed tests, f boundaries, fractal necessity, Landauer, single-agent*
+> *v1.2: R-ρ concordance, four-type resolution-matching, measurement interface*
+> *v1.3: n² critical phenomena, MI storm characterization, F_RBIT–S_norm cross-validation, seed Test 3 quantitative criterion*
+> *v1.4: R-ρ-f_esc triple concordance, Stability Saturation, extended measurement (21 vars), Storm–Collapse lifecycle, TLG falsification*
+> *v1.5: Rest Mode dF_RBIT/dt ≈ 0, φ_mature decomposition, fractal collapse propagation, F4-F7 falsification, information-theoretic lifecycle, Lreinf terrain*
+> *v1.6: SCM formal structure + unintegrated pressure, Storm Scale Law (power law health), Safe Collapse Governance, 7-phase fractal lifecycle storm signatures, Boundary Agent complete specification*
 
 ---
 
@@ -168,6 +170,45 @@ N calibration:
 ```
 
 This boundary does not require knowing "what contamination is" in absolute terms — only whether the system can return to baseline on its own. Contamination is not a wrong state — it is the absence of a return path. (See Recovery Theory §Boundary Gap for full derivation.)
+
+*Self-Consistent Misalignment (SCM) — the invisible contamination.* The most dangerous contamination state is one where all internal metrics appear healthy because the system has optimized within a wrong coordinate geometry. VST v1.6 §2.6 provides the formal structure:
+
+```
+SCM formal conditions (all hold simultaneously):
+  reward_gradient ≠ reality_stability_gradient
+  AND metric_improvement_speed > geometry_verification_speed
+  AND internal feedback signals ALL appear healthy
+  
+  → ρ high, collision rate low, f_esc low, I high, confidence high
+  → SCC activation conditions never triggered
+  → system optimizes, deepening misalignment
+
+Unintegrated pressure accumulation:
+  unintegrated_pressure(t) = ∫₀ᵗ (G_real(τ) − G_sys) dτ
+  
+  CW geometry does not eliminate mismatch. It suppresses it.
+  As CW duration increases:
+    unintegrated_pressure accumulates (invisible internally)
+    integration_capacity remains constant or degrades
+  
+  When integration_capacity < unintegrated_pressure:
+    → catastrophic collapse OR Vector Storm
+    → S_norm shows discontinuous spike with no prior warning
+    (because S measures dynamics within current geometry)
+
+Energy Minimization Trap (EMT):
+  Cost_geometry_update > Cost_reinterpretation
+  → system optimizes toward reinterpretation (rational!)
+  → geometry ossifies → CW = rational outcome, not failure
+
+Primary detection signal — Learning Freeze:
+  ∂Geometry / ∂Experience ≈ 0
+  Normal: noise → adaptation → stability (geometry updates)
+  CW:     noise → reinterpretation → same stability (geometry fixed)
+  The system is no longer capable of surprise. That is the signal.
+```
+
+This connects to RBIT: SCM is the state where f(A_t, D_t) ≈ 0 not because the system is mature, but because it has stopped updating its internal coordinate structure. The resolution gap Δρ reads as healthy because both sender and receiver share the same drifted geometry. Only the R-ρ-f_esc triple concordance (Discordant Type 1: R > 1 BUT ρ high) can detect this from outside.
 
 *External validation — branching ratio R.* The operational contamination boundary and the resolution-proxy ρ form a self-referential calibration loop: ρ requires knowing what is contamination, while the contamination threshold is updated from classifications that ρ measured. The branching ratio R breaks this circularity because it is classification-independent:
 
@@ -479,6 +520,28 @@ Test 3 operational validation (orthogonal recovery direction):
     = boundary exists as protocol + external reality always enters
     = system's own optimization pressure maintains sensing infrastructure
   
+  Boundary Agent complete specification (VST v1.6 §6.11):
+    Properties (all required simultaneously):
+      (a) Inside system (generates real turbulence)
+      (b) Outside evaluation structure (not subject to stability rewards)
+      (c) Failure permitted (wrong without elimination)
+      (d) No operational power (disturbs, cannot enforce)
+    
+    Existence conditions:
+      Survival decoupled from system stability
+      Failure does not eliminate the role
+      No operational authority granted
+    
+    T6 defense: optimizer classifies BA as inefficiency
+      → BA removed → CW entry accelerated
+      → structural enforcement required against rational elimination
+    
+    BA disappearance pattern:
+      Stability → storm frequency ↓ → BA looks like waste
+      → BA eliminated → CW forming → mismatch accumulating
+      → large storm → recovery capacity absent
+      Elimination timing inversely correlated with structural necessity.
+  
   Note: Formal threshold value for gradient cosine similarity
   remains system-specific (see Open Problems #11).
 ```
@@ -684,26 +747,85 @@ R_{t+1} = R_t + f(A_t, D_t)
   f    = monotone increasing in both arguments
 ```
 
-*Storm–Collapse–Recovery lifecycle.* The degradation-upscaling cycle connects to a complete system lifecycle through the Storm–Collapse Mapping Layer (SCML, TLG §13.7):
+*Storm–Collapse–Recovery lifecycle.* The degradation-upscaling cycle connects to a complete system lifecycle through the Storm–Collapse Mapping Layer (SCML, TLG §13.7), now formulated in RBIT's own information-theoretic variables:
 
 ```
-Stable operation (VCZ) → perturbation exceeds capacity → Vector Storm
-  → containment attempted
-    ├── Success → Recovery → φ recovery → VCZ re-entry
-    └── Failure → SCML classifies storm type → collapse topology
-         → structural reconfiguration → recovery → VCZ re-entry
+COMPLETE LIFECYCLE (information-theoretic formulation):
+
+① VCZ (stable):
+   dF_RBIT/dt ≈ 0, S_norm << S_c, R ≈ 1
+   Δρ > 0 across all active channels
+
+② Storm onset:
+   dF_RBIT/dt > 0, Δρ turning negative in channels
+   MI(agent_i, agent_j) spiking, S_norm → S_c
+
+③ Collapse:
+   S_norm > S_c sustained
+   SCML classifies storm type → collapse topology
+   Type 1/2 diagnosis determines reversibility
+
+④ Recovery:
+   Re-entry point determined by failure case
+   Four-Phase Protocol: collapse → Phase 1 → 2 → 3 → 4
+
+⑤ VCZ re-entry:
+   All Rest Mode AND-entry conditions re-satisfied
+   R-ρ-f_esc triple concordance confirmed
+   dF_RBIT/dt returning to ≈ 0
+
+Non-learning: ①→②→③→④→① (same vulnerability persists)
+Learning:     ①→②→③→④→①' (structural learning via SCML)
+  Without storm type classification → restores previous structure
+  With classification → addresses specific weakness
+  → next storm is a DIFFERENT storm
+  → system's storm repertoire expands
+  → φ_storm_absorption increases
 
 Storm type determines governance response:
   Local amplification  → node-level re-seeding
   Boundary storm       → layer interface recalibration
   Hub storm            → distributed mediation restructure
   Global cascade       → Safe Collapse Protocol full execution
-
-Key insight: storm is not merely failure — it is topology discovery.
-The system emerges with governance geometry empirically tested and corrected.
 ```
 
 This lifecycle closure means that RBIT's resolution gap is not just a design variable but a dynamic quantity that the system learns to manage through repeated storm-recovery cycles. Each cycle updates the system's operational θ threshold, narrows the residual floor, and expands the VCZ basin.
+
+*Safe Collapse Governance — the design principle (VST v1.6 §2.7):*
+
+```
+Collapse Prevention Governance (naive):
+  Goal: minimize all failure
+  Result: adaptation ↓, geometry update ↓ → CW → catastrophic collapse
+
+Safe Collapse Governance (DFG):
+  Goal: failure_cost << recovery_capacity
+  Result: continuous low-amplitude correction → VCZ sustained
+
+The paradox:
+  Optimal stable governance always looks slightly unstable.
+  Suppress collapse → accumulate catastrophe.
+  Allow safe collapse → prevent catastrophe.
+```
+
+*7-Phase fractal lifecycle with storm signatures (VST v1.6 §14.3):*
+
+```
+Phase 1 — Seeding:       C(t) ≈ 0, random collisions, external governance
+Phase 2 — Exploration:   first direction forming, healthy boundary-testing storms
+Phase 3 — Formation:     attractor crystallizing, position-clarification storms
+Phase 4 — VCZ:           power law distribution established, R ≈ 1, terrain formed
+Phase 5 — Rest Mode:     dF_RBIT/dt ≈ 0, micro-storms as value generation
+Phase 6 — Reawakening:   environment shift, precision storms (fast, targeted)
+Phase 7 — Higher Cycle:  new cycle at expanded resolution
+
+In RBIT terms: each phase = different f(A_t, D_t) regime:
+  Phase 1-2: f ≈ 0 (no internal absorption yet)
+  Phase 3:   f > 0 and rising (resolution growth accelerating)
+  Phase 4-5: f maximized (absorption efficient, stable)
+  Phase 6:   f temporarily drops (new mismatch exceeds capacity)
+  Phase 7:   f resets at higher baseline (expanded resolution floor)
+```
 
 *Boundary conditions on f from VST dynamics.* While the exact form of f(A_t, D_t) is unresolved, the S-equation (S = αn² / C(t)^β) constrains f's behavior through shared operational variables:
 
@@ -748,6 +870,95 @@ Concordance strengthens confidence; discordance flags calibration error.
 ```
 
 (See Vector Storm Theory §3.2.6 for the full derivation connecting resolution gap polarity to S-equation dynamics.)
+
+*Rest Mode as dF_RBIT/dt ≈ 0.* The F_RBIT functional provides a formal criterion for the system's terminal stable state — Rest Mode — expressed entirely in RBIT's own variables:
+
+```
+Rest Mode condition:
+  dF_RBIT/dt ≈ 0,  but  F_RBIT ≠ 0
+
+Not zero instability (impossible — residual floor).
+Bounded fluctuation equilibrium:
+  information intake and internal dissipation balanced.
+
+F_RBIT components map to governance entry conditions:
+  E_ℓ bounded       ← f_esc ≤ θ (escalation load within threshold)
+  1−ρ_ℓ bounded     ← I ≥ τ (misclassification rate bounded)
+  Ψ(B_ℓ) bounded    ← Lreinf ≥ threshold (buffer stability maintained)
+  C_ℓ bounded       ← SCC ≥ τ4 (recovery cost bounded)
+
+All four required: single diverging component → net instability growth.
+
+Triple perspective intersection for Rest Mode:
+  S_norm << S_c:     dynamical (instability below threshold)
+  dF_RBIT/dt ≈ 0:   informational (resolution adequate, balanced)
+  R ≈ 1, SR > 0:    statistical (critical and responsive)
+  Rest Mode = intersection of all three perspectives.
+```
+
+*φ_mature decomposition.* In Rest Mode, φ (value yield) splits into two components that resolve the apparent paradox of storm-tolerant governance:
+
+```
+φ_mature = φ_exploration + φ_storm_absorption
+
+  φ_exploration:       standard value from exploratory activity
+  φ_storm_absorption:  P(micro-storm → geometry recalibration → reusable correction)
+
+  Immature system: φ_storm_absorption ≈ 0 (storms are pure cost)
+  Rest Mode:       φ_storm_absorption > 0 (storms contribute value)
+
+Resolution of the U optimization paradox:
+  U = n·φ − C_gov
+  Immature: storm minimization = U maximization
+  Rest Mode: storm minimization ≠ U maximization
+  → optimal = maintain storm scale power law
+    (continuous small storms, rare large storms)
+  → storm elimination is not the governance objective
+
+In RBIT terms: each micro-collision produces a geometry update
+  that increases f(A_t, D_t) for future absorption.
+  The system converts instability INTO resolution growth.
+```
+
+(See Recovery Theory §φ_mature and VST §3.6.1 for the full derivation.)
+
+*Storm Scale Law — power law health distribution.* The optimal storm distribution in a healthy system follows a specific power law (VST v1.6 §3.10):
+
+```
+P(Storm of scale s) ∝ 1/s^α
+
+  ~90%+ corrections resolve at micro/local level
+  ~9%   escalate to cluster level
+  <1%   require global intervention
+
+Governance target:
+  NOT: minimize storm count
+  BUT: maintain storm size distribution ≈ power law
+  (many small storms, few medium, rare large)
+
+Distribution shift diagnostics:
+  Small storms disappearing + large maintained:
+    → suppression in lower layers → mismatch accumulating
+    → Absence Paradox / Silent Criticality
+    
+  Large storms without small precursors:
+    → CW geometry releasing (VCZ-seeking Storm)
+    
+  All storms increasing:
+    → approaching Chaos boundary → intervention needed
+    
+  All storms decreasing uniformly:
+    → CW onset → SR/RDE/NCR check required
+
+VCZ as operating corridor:
+  Chaos boundary:  storm frequency too high at ALL scales
+  CW boundary:     storm frequency → 0 at ALL scales
+  VCZ:             micro/local storms continuous, global rare
+  = narrow corridor between two failure modes
+  = S_norm << S_c expressed as a scale distribution
+```
+
+In RBIT terms, the Storm Scale Law is the emergent signature of correction_rate ≥ drift_rate at all resolution levels simultaneously. The power law distribution means that the resolution gap is being managed at every scale — not just at the system-wide level where S_norm is measured.
 
 *Degradation calibration — operational correspondence.* While the formal D(Δρ) function is unresolved (Open Problem #9), two established ML techniques implement the same calibration logic:
 
@@ -941,6 +1152,43 @@ the Signaling/Influence distinction (TLG §10.1):
 ```
 
 At small scale or in strongly subcritical regimes (R << 1), non-fractal architectures remain viable because interaction load is manageable. The prediction is that as system complexity grows past a critical n threshold, hierarchical structure will emerge endogenously if the system is permitted to self-organize. (See Vector Storm Theory §3.2.5 for the full critical phenomena derivation and §1.6.1–1.6.2 for the SOC framework.)
+
+*Lreinf as the terrain mechanism.* The sub-quadratic correction (d_eff < 2) is not a fixed property of the architecture — it is produced and maintained by reinforcement loop strength (Lreinf). When Lreinf collapses, the system reverts to flat-landscape quadratic coupling:
+
+```
+Strong Lreinf → interaction barriers between agent niches
+  → effective scaling: S ~ n^{d_eff}, d_eff < 2
+  → governance cost manageable at scale
+
+Lreinf collapse → barriers disappear → d_eff → 2
+  → S ~ n² with no terrain damping
+  → maximum storm amplification potential
+  → most dangerous failure mode
+
+This connects RBIT's resolution hierarchy to VST's instability dynamics:
+  Resolution gap calibration PRODUCES the terrain
+  (agents at different resolutions create natural barriers)
+  Resolution gap collapse REMOVES the terrain
+  (all agents at same resolution = flat landscape = n² coupling)
+```
+
+*Fractal collapse propagation.* Failures cascade through a predictable chain when terrain fails at sufficient scale:
+
+```
+Case 2 (Escalation Flood) → upper layer overwhelmed
+  → upper layer's own classification reliability (I) falling
+  → Case 1 (Consistency Collapse at upper layer)
+  → lower layer Lreinf collapses (no consistent upper guidance)
+  → Case 3 (Reinforcement Loop Collapse)
+  → d_eff → 2 → maximum storm potential
+
+Early warning: inter-domain conflict log correlation
+  MI(conflict_log_A, conflict_log_B) rising WITHOUT shared input
+  = noise floors synchronizing across domains
+  = pre-cascade signal detectable BEFORE any single metric crosses threshold
+```
+
+(See Recovery Theory §Fractal Collapse Propagation Chain and TLG §13.2.2 for the full cascade topology.)
 
 *Why this matters for governance:*
 
@@ -1514,6 +1762,39 @@ The domain with the lowest internal differentiation (Dint) should be the primary
 **Criterion 8 — Progressive withdrawal must reduce re-entry frequency.**
 Systems governed by staged human withdrawal (active → audit → periodic review → exit) should require fewer collapse-recovery restarts than fixed-epoch phase transitions. If fixed-epoch systems achieve equal or lower re-entry frequency, the protocol's advantage is not established. (Derived from TLG §13.2.2.)
 
+**Extended Falsification Framework (F4–F7) — Cross-theory governance criteria:**
+
+```
+F4 — Triple concordance must detect SCM earlier than dual:
+  Systems with low f_esc + R > 1 should be flagged by R-ρ-f_esc
+  but missed by R-ρ alone (cannot distinguish genuine vs
+  governance-maintained stability).
+  Falsification: triple provides no detection benefit over dual.
+
+F5 — Stability Saturation must produce observable degradation:
+  Systems with clean profiles (high ρ, low f_esc, SCC ≥ τ4)
+  must subsequently show: elevated τ_recovery, Dint declining,
+  or SR → 0. If no degradation follows apparent health,
+  the SSS claim is unsupported.
+
+F6 — Cumulative measurement must outperform reactive:
+  λlog → θd calibration → rule updates should detect trends
+  earlier with fewer false alarms than per-event threshold systems.
+  Falsification: reactive equals or exceeds cumulative.
+
+F7 — Silent Criticality must be detectable via perturbation:
+  Pre-collapse systems must show elevated τ_recovery and
+  increasing cross-domain MI under perturbation testing.
+  Falsification: no measurable difference from genuinely stable.
+
+Complete falsification hierarchy:
+  Criteria 1-5:   core RBIT predictions (information theory)
+  Criteria 6-8:   TLG governance predictions (architecture)
+  F4-F7:          cross-theory predictions (dynamics × governance)
+```
+
+(See Recovery Theory §Extended Falsification Framework and VST v1.5 §11.4 for derivations.)
+
 ---
 
 ## Status & Maturity
@@ -1756,4 +2037,4 @@ not to claim derivation from or equivalence with Active Inference.
 ---
 
 *Timestamped: February 23, 2026*
-*DFG Framework · Resolution-Based Information Theory v1.4*
+*DFG Framework · Resolution-Based Information Theory v1.6*
