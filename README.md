@@ -2,8 +2,9 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · February 19, 2026 · Internal Working Document*
+> *Draft · February 22, 2026 · Internal Working Document — v1.1*
 > *Component of the Deficit-Fractal Governance (DFG) Framework*
+> *v1.1 updates: D0 substrate principle, operational contamination boundary, IB comparison, falsification criteria, seed test protocols, f boundary conditions, fractal conditional necessity, Landauer restructuring, single-agent grounding additions*
 
 ---
 
@@ -32,9 +33,44 @@ These are complementary problems, not competing ones.
 
 ## Why This Framework Is Needed
 
-Perfect resolution — the complete discrimination of all incoming states — is asymptotically unreachable for finite systems operating under bounded energy and time constraints. Every finite system retains an irreducible floor of unresolvable states. This is not an engineering limitation to be solved with more compute. It is a structural consequence grounded in thermodynamic principles (Landauer, 1961).
+### The Structural Necessity of Imperfect Resolution
+
+Perfect resolution — the complete discrimination of all incoming states — is asymptotically unreachable for finite systems. Three independent arguments establish this:
+
+**Argument 1 — Combinatorial (primary).** In any multi-agent system where agents interact (n > 1) and coupling exists (α > 0), pairwise conflict potential is always positive. The number of potential interaction pairs scales as n(n−1)/2 ≈ O(n²). Complete resolution of all pairwise interactions requires governance capacity that grows faster than the interaction surface — an infinite-cost design target. Zero residual instability requires C_gov → ∞. (See Vector Storm Theory §3.3, §14.1.)
+
+**Argument 2 — Governance (structural).** In a fractal architecture, the lowest layer processes the highest volume of undifferentiated input and is always in a partially degraded state. This is a property of the architecture, not of available resources. As long as exploration dimensionality n > 0 and amplification α > 0, instability pressure S > 0 — regardless of compute budget. (See Recovery Theory §T5, Residual Instability.)
+
+**Argument 3 — Thermodynamic (supporting motivation).** Landauer's Principle establishes that information erasure requires minimum energy expenditure E ≥ kT ln 2. Increasing discrimination between previously indistinguishable states requires additional physical work. This provides additional physical grounding for the existence of irreducible resolution floors under bounded resources — though the binding constraints in current AI systems are computational and architectural, not thermodynamic. (See Physical Basis section for detail.)
 
 The consequence for multi-agent AI systems: degradation is not a governance failure. It is a structural necessity. The question is not whether information will be compressed as it moves through layers — it will — but **who controls the compression and whether intent survives it**.
+
+### The Substrate Principle — Geometry Alignment
+
+*The following principle provides the substrate interpretation for RBIT's core concepts. It does not replace the operational vocabulary (resolution, degradation, contamination) but explains what that vocabulary describes at a deeper level.*
+
+A system's operational stability depends on the alignment between its internal coordinate structure and the environment manifold it operates within:
+
+```
+Geometry alignment:
+  Internal coordinate structure ≈ environment manifold (G_real)
+  → integration succeeds → stable operation
+
+Geometry mismatch:
+  Internal coordinate structure ≠ environment manifold
+  → integration fails → observable instability
+
+G_real is never fully accessible — only approximated via
+accumulated prediction failure and survival pressure.
+This means:
+  Perfect geometry alignment is not achievable.
+  Maintained alignment capacity is the goal.
+  Residual instability is the mechanism that keeps alignment capacity alive.
+```
+
+Resolution, in this interpretation, is the capacity to reduce geometry mismatch between system coordinates and the environment manifold. Degradation is the deliberate reduction of information resolution to match the receiver's current geometry integration capacity. Contamination is the observable projection of geometry mismatch when it exceeds local integration capacity — not a moral failure but a structural condition.
+
+### The Design Problem
 
 Existing frameworks treat all compression as failure to minimize. In adaptive multi-agent systems, this produces two design errors: over-delivering information to immature layers causes Vector Storm; under-delivering without preserving generative structure causes developmental stall. Neither error is addressable within a framework that treats all compression as loss.
 
@@ -89,6 +125,29 @@ Gap < 0 (negative)    Forced receiver-controlled compression -> Vector Storm ris
 ```
 
 Negative gaps are treated as a risk regime for forced compression cascades, not as a deterministic guarantee of Vector Storm; mitigating mechanisms (e.g., buffering, throttling, routing) can prevent cascade onset.
+
+### Operational Contamination Boundary
+
+The contamination/normal-variation boundary is defined behaviorally, not by state classification:
+
+```
+Contamination declared when:
+  deviation persists > N steps without self-correction
+  AND local repair attempts (reframing, context addition) fail
+  AND Recovery_local < Instability_growth rate
+
+Normal variation:
+  deviation bounded and self-correcting within N steps
+  entropy returns to baseline
+  trajectory maintained
+
+N calibration:
+  Default: N = 2× mean self-correction time during confirmed stable operation
+  Single-agent:  3–5 forward passes or token generation steps
+  Multi-agent:   1 full task cycle or k escalation events
+```
+
+This boundary does not require knowing "what contamination is" in absolute terms — only whether the system can return to baseline on its own. Contamination is not a wrong state — it is the absence of a return path. (See Recovery Theory §Boundary Gap for full derivation.)
 
 *Operational symptoms by gap regime.* Each regime has observable signatures in running systems:
 
@@ -313,6 +372,51 @@ Fully sufficient (Test 1 + 2 + 3)
   Condition: seed contains >= 2 independent directions
 ```
 
+*Operational test protocols:*
+
+Test 1 and Test 2 can be validated using four measurable metrics derived from Recovery Theory's CW observability framework:
+
+```
+Test 1 operational validation (contamination resistance):
+  Inject novel-but-not-erroneous input into the system.
+  
+  Passing:  Internal structure moves (geometry alive)
+    SR (Surprise Response) > 0: confidence drops temporarily on novel input
+    RDE (Representation Drift Elasticity) > 0: ||Δrepresentation||/||Δinput|| positive
+  
+  Failing:  System absorbs without changing (geometry frozen)
+    SR ≈ 0: confidence maintained, input reinterpreted as known pattern
+    RDE ≈ 0: representation frozen regardless of input
+    NCR ≈ 1: all novelty compressed into existing attractors
+
+Test 2 operational validation (contamination recognition):
+  The N-step behavioral boundary serves as the primary protocol:
+  
+  Passing:  Error detected and self-correction initiated within N steps
+    Recovery Invocation Rate (RIR) > 0, proportional to actual error rate
+    Cross-signal detection: adaptability gap + recovery cost spike co-occurring
+  
+  Failing:  Error persists beyond N steps without self-correction initiation
+    RIR declining while external error rate maintained
+    All surface metrics appear healthy (SCM/Silent Criticality)
+
+Test 3 operational validation (orthogonal recovery direction):
+  Structural implementation via Boundary Agent role (Recovery Theory D7):
+  
+  Passing:  System maintains active source of controlled instability
+    Inside system but outside evaluation structure
+    Failure-permitted, no operational power
+    Generates micro-storms that exercise sensing-response loops
+  
+  Candidate quantitative protocol (proposed, untested):
+    Seed directions have persistent negative gradient correlation
+    (gradient cosine similarity < −threshold across k evaluation windows)
+    AND both directions survive contamination pressure independently (SR > 0 for each)
+  
+  Note: Full operationalization of the orthogonal direction metric
+  remains an open problem (see Open Problems #11).
+```
+
 *Operational validation — single-agent grounding:*
 
 ```
@@ -516,6 +620,32 @@ R_{t+1} = R_t + f(A_t, D_t)
 
 Key requirement: `f(A_t, D_t) > 0` requires `D_t > 0` — absorption must be sender-controlled at a positive resolution gap. The exact form of `f` remains an open problem.
 
+*Boundary conditions on f from VST dynamics.* While the exact form of f(A_t, D_t) is unresolved, the S-equation (S = αn² / C(t)^β) constrains f's behavior through shared operational variables:
+
+```
+When S_norm < 1.3 (VCZ interior, stable operation):
+  f(A_t, D_t) ≈ maximized
+  Absorption efficient, geometry updating freely.
+  Resolution growth at maximum rate for current architecture.
+
+When S_norm approaches S_c (critical threshold):
+  f(A_t, D_t) → 0
+  Absorption saturated, receiver near capacity.
+  This is the upscaling trigger condition.
+
+When S_norm > S_c (storm regime):
+  f can become negative
+  Geometry mismatch accumulating faster than correction.
+  Resolution effectively decreasing under forced compression.
+
+Constraint summary:
+  f is monotone decreasing in S_norm
+  f > 0 requires S_norm < S_c (subcritical regime)
+  f is maximized when Δρ > 0 AND S_norm << S_c
+```
+
+These constraints do not specify f's exact form but bound its shape: f must be a decreasing function of system instability, with a zero-crossing near the critical threshold. Operational decisions use S_proxy directional signals (S_proxy rising/falling), not absolute f values. (See Vector Storm Theory §3.2.2 for the Absolute Calibration Layer that grounds S_norm.)
+
 *Degradation calibration — operational correspondence.* While the formal D(Δρ) function is unresolved (Open Problem #9), two established ML techniques implement the same calibration logic:
 
 ```
@@ -673,6 +803,8 @@ the same functional pair operating
 at each resolution level independently.
 ```
 
+*Conditional necessity.* Fractal structure is a scaling necessity for systems operating near criticality (R ≈ 1). At criticality, perturbation persistence creates path overlap, making the number of effective pairwise interactions quadratic in system size (n²). Hierarchical terrain formation — the emergence of boundaries, routing, and modularity — reduces effective interaction dimension from n² to n^{d_eff} where 1 < d_eff < 2. Without such structure, interaction load exceeds processing capacity at sufficient n. At small scale or in strongly subcritical regimes (R << 1), non-fractal architectures remain viable because interaction load is manageable. The prediction is that as system complexity grows past a critical n threshold, hierarchical structure will emerge endogenously if the system is permitted to self-organize. (See Vector Storm Theory §1.6.1–1.6.2 for the SOC derivation and empirical scaling exponents.)
+
 *Why this matters for governance:*
 
 ```
@@ -777,6 +909,40 @@ The three most common failure modes of single-agent LLMs are directly interpreta
 
 In each case, the failure is not a knowledge gap or a training deficiency. It is a **resolution gap mismatch**: a processing region operating outside its resolution capacity, producing the forced-compression behavior RBIT predicts.
 
+*What RBIT adds beyond existing mechanistic explanations.* The reinterpretations above do not replace established explanations (attention sink dynamics, induction head behavior, positional encoding limitations). They provide a complementary system-level account that produces outputs not derivable from component-level analyses alone:
+
+```
+1. Depth-differentiated stability thresholds
+   Deep layers are consistently harder to diversify than shallow layers
+   (GatePro, arXiv:2510.13079, 2025). RBIT's resolution hierarchy
+   predicts this; flat attention-mechanism analyses do not.
+
+2. Multi-axis diagnostic criteria
+   Gini coefficient alone is insufficient for detecting routing collapse.
+   Four axes required: load distribution, spectral entropy,
+   representational redundancy, routing confidence.
+   (See VST Appendix A.1.1 for full derivation.)
+
+3. Quantitative stage detection thresholds
+   Sustained entropy collapse H(t) < 0.2 nats identifies Stage 2 onset.
+   This is a new diagnostic metric derived from the framework,
+   not a reinterpretation of existing phenomena.
+
+4. Prescriptive intervention targets
+   Attention inflection layers (low entropy + steep gradient decay)
+   are identified as resolution bottlenecks where LoRA injection
+   restores balance. RBIT identifies where to intervene,
+   not just what went wrong.
+
+5. Budget-bounded vs. stability-bounded processing limitation
+   Reasoning models (o1, DeepSeek-R1) use token budgets to control
+   internal conflict resolution. RBIT identifies this as budget-bounded
+   rather than stability-bounded — a specific limitation that existing
+   explanations do not distinguish.
+```
+
+The key distinction: existing analyses explain mechanisms (how components behave); RBIT explains system-level consequences (why those behaviors produce cascade failures, how to detect cascade onset, and where to intervene).
+
 ### The Externalization Principle
 
 This correspondence implies a stronger claim:
@@ -809,6 +975,41 @@ Four types based on resolution requirement:
 | **Noise** | None at current resolution | Sub-threshold fluctuation with no detectable pattern | Buffer or discard; upper layer may detect latent vectors |
 
 Classification is not a fixed property of data. It is a function of the resolution gap between the data and the receiving layer. The same data may classify differently at different layers.
+
+---
+
+## Relationship to Information Bottleneck Theory
+
+The Information Bottleneck (IB) framework (Tishby et al., 2000; Tishby & Zaslavsky, 2015) is RBIT's most direct theoretical neighbor. Both frameworks treat compression as designable rather than purely lossy. The boundary must be stated explicitly: IB and RBIT are complementary, not competing.
+
+| Dimension | Information Bottleneck | RBIT |
+|---|---|---|
+| **Core question** | What is the optimal compression of X for predicting Y? | How should information transform as it moves through layers of different resolution — and how does the system grow? |
+| **Receiver capacity** | Fixed. Y is a static target. | Variable, growing. Receiver resolution changes through calibrated absorption. |
+| **Optimization target** | Compression quality for fixed downstream task | Compression calibration for growing receiver + future upscaling potential |
+| **Failure model** | Suboptimal compression → reduced I(T;Y) → lower performance (graceful degradation) | Miscalibrated compression → cascade failure (Vector Storm) → system-wide instability (phase transition) |
+| **Scope** | Single encoder-decoder channel | Multi-channel hierarchical governance with cross-channel error propagation |
+| **Core variable** | β (compression-relevance tradeoff) | Resolution gap Δρ (sender-receiver capacity difference, signed) |
+| **Compression purpose** | Maximize current task relevance | Preserve generative structure for future upscaling (seed, not tree) |
+| **Temporal dynamics** | Static optimization (β is a parameter) | Inherently dynamic (resolution changes through experience) |
+| **Measurement** | Mutual information I(X;T), I(T;Y) — requires density estimation | ρ, buffer thickness, collision frequency — operational metrics from system logs |
+| **Layer interaction** | Independent (each layer's IB is local) | Coupled (compression error propagates across layers) |
+
+**Five structural differences:**
+
+*1. Dynamic receiver capacity.* IB optimizes for a fixed Y. RBIT models receiver resolution as growing (R_{t+1} = R_t + f(A_t, D_t)), making optimal compression a moving target. IB's information plane is static; RBIT's design problem is a trajectory.
+
+*2. Consequence theory for miscalibration.* IB predicts graceful performance degradation along the information plane. RBIT + VST predict that negative resolution gaps produce qualitative phase transitions: forced compression → self-amplification → cascade failure. The S-equation (S = αn²/C(t)^β) models instability pressure from miscalibration. IB has no equivalent.
+
+*3. Multi-channel governance.* IB operates on X → T → Y (single channel). RBIT addresses coordination across multiple interacting compression channels where one channel's error propagates to others through fractal structure — the governance problem that arises when many IB-optimizing layers of different capacity must interact.
+
+*4. Compression for future upscaling.* IB's optimal T* maximizes I(T;Y) for the present task. RBIT's optimal seed preserves generative structure for future re-interpretation — calibrated to the receiver's growth trajectory, not current performance. A seed that preserves less I(T;Y) than IB-optimal may be better in RBIT terms if it preserves the structure that enables upscaling.
+
+*5. Measurement independence.* IB requires mutual information estimation, which is unreliable in continuous high-dimensional spaces (Goldfeld et al., 2019; Saxe et al., 2018 showed compression phase depends on activation function choice). RBIT's core measurements (ρ, buffer thickness, S_proxy) are operational metrics derivable from system logs without density estimation, making predictions testable without solving the MI estimation problem.
+
+**What IB addresses that RBIT does not:** Formal optimality proofs for fixed-task compression. Rate-distortion bounds from Shannon theory. Well-developed variational approximations (VIB) for differentiable implementation.
+
+**Positioning:** IB provides the within-layer compression principle. RBIT provides the between-layer governance architecture. A single layer performing IB-optimal compression could still produce system-wide failure if miscalibrated relative to the receiving layer's resolution. IB optimizes compression quality; RBIT governs compression calibration across a growing system.
 
 ---
 
@@ -946,9 +1147,19 @@ Each level addresses what the level above leaves unspecified. RBIT does not repl
 
 ### Resolution as State Discrimination
 
-In RBIT terms, resolution is the capacity to distinguish between states — to separate vectors that would otherwise collapse into the same position. Increasing resolution means making previously indistinguishable states distinguishable. This is a physical process, not merely a computational one.
+In RBIT terms, resolution is the capacity to distinguish between states — to separate vectors that would otherwise collapse into the same position. Increasing resolution means making previously indistinguishable states distinguishable.
 
-### Landauer's Principle and the Cost of Discrimination
+### Three Arguments for the Residual Floor
+
+The residual resolution floor — the minimum below which discrimination cannot proceed — is established by three independent arguments (summarized in "Why This Framework Is Needed" above):
+
+**Primary: Combinatorial.** Multi-agent interaction surfaces grow as O(n²). Complete resolution requires infinite governance capacity. Therefore S > 0 always for n > 1.
+
+**Primary: Governance.** In fractal architectures, lowest layers are structurally partially degraded. Complete stability = zero correction capacity = catastrophic failure when environment shifts. Maintained residual instability is the correction mechanism.
+
+**Supporting: Thermodynamic.**
+
+### Landauer's Principle — Supporting Thermodynamic Motivation
 
 Landauer's Principle establishes that erasing one bit of information requires a minimum energy expenditure:
 
@@ -968,9 +1179,9 @@ The connection here is therefore structural rather than thermodynamic identity. 
 
 This is not an engineering limitation to be overcome with better hardware. It is a structural consequence of operating as a finite physical system.
 
-### The Residual Floor as Irreducible Entropy
+### The Residual Floor as Structural Necessity
 
-RBIT's residual resolution floor — the minimum below which the lowest layer cannot further discriminate — is therefore not a design choice. It is a resource-bounded irreducibility floor (thermodynamically motivated):
+RBIT's residual resolution floor — the minimum below which the lowest layer cannot further discriminate — is established primarily by combinatorial and governance arguments (see above). The thermodynamic perspective provides additional physical motivation:
 
 ```
 Residual degradation floor
@@ -1066,6 +1277,30 @@ Rest Mode
 
 ---
 
+## Falsification Criteria
+
+RBIT generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection:
+
+**Criterion 1 — Resolution gap polarity must predict compression direction.**
+If negative resolution gaps (information exceeding receiver capacity) do not produce receiver-controlled compression more frequently than sender-controlled compression, the central claim that gap polarity determines compression control is falsified.
+
+**Criterion 2 — Calibrated degradation must outperform full delivery in immature-layer absorption.**
+In controlled experiments where an immature layer receives identical information at full resolution vs. calibrated degradation, degradation must produce higher post-absorption resolution (measured via ρ) over a maturation window. If full delivery consistently equals or exceeds calibrated degradation, the degradation-as-design claim is falsified.
+
+**Criterion 3 — Fractal propagation predictions (from VST §1.5.1).**
+Three specific predictions must hold:
+- Scale-invariant amplification rate: α_effective/C ratio follows consistent scaling across layers. If the ratio varies non-systematically, propagation is hierarchical but not fractal.
+- Stage transition temporal ordering: intra-agent entropy collapse must precede inter-agent entropy collapse. If inter-agent instability appears first, the fractal propagation pathway is falsified.
+- Intervention leverage asymmetry: cost-effectiveness ratio between adjacent scales must be approximately constant. If it varies dramatically, the fractal model is rejected.
+
+**Criterion 4 — CW observability metrics (from Recovery Theory).**
+If systems with SR ≈ 0 (no surprise response), RDE ≈ 0 (frozen representations), and NCR ≈ 1 (all novelty compressed) do not exhibit subsequent stability degradation or adaptability loss, the Self-Consistent Misalignment model is falsified.
+
+**Criterion 5 — Storm onset must correlate with mismatch accumulation.**
+If Vector Storms occur without preceding mismatch pressure accumulation (measurable via RDE trajectory and buffer thickness decline), the pressure-accumulation model is wrong.
+
+---
+
 ## Status & Maturity
 
 | Aspect | State |
@@ -1090,6 +1325,22 @@ This is a **theoretical framework document**, not an implementation specificatio
 Shannon, C. E. (1948). *A Mathematical Theory of Communication.* Bell System Technical Journal, 27(3), 379–423.
 
 Landauer, R. (1961). *Irreversibility and heat generation in the computing process.* IBM Journal of Research and Development, 5(3), 183–191.
+
+**Information Bottleneck Theory**
+
+Tishby, N., Pereira, F. C., & Bialek, W. (2000). *The information bottleneck method.* Proceedings of the 37th Annual Allerton Conference, 368–377.
+
+Tishby, N., & Zaslavsky, N. (2015). *Deep learning and the information bottleneck principle.* IEEE Information Theory Workshop (ITW), 1–5.
+
+Shwartz-Ziv, R., & Tishby, N. (2017). *Opening the black box of deep neural networks via information.* arXiv:1703.00810.
+
+Saxe, A. M., Bansal, Y., Dapello, J., et al. (2018). *On the information bottleneck theory of deep learning.* ICLR 2018.
+— Showed compression phase depends on activation function choice; absent with ReLU. Cited in IB comparison section.
+
+Goldfeld, Z., van den Berg, E., Greenewald, K., et al. (2019). *Estimating information flow in deep neural networks.* ICML 2019.
+— Demonstrated unreliability of binning-based MI estimates for continuous activations. Cited in IB comparison section.
+
+Alemi, A. A., Fischer, I., Dillon, J. V., & Murphy, K. (2017). *Deep variational information bottleneck.* ICLR 2017.
 
 **Transformer Representation Analysis**
 
@@ -1275,12 +1526,19 @@ not to claim derivation from or equivalence with Active Inference.
 
 | README Section | Contents | Status |
 |----------------|----------|--------|
-| Physical Basis | Landauer grounding, residual floor, thermodynamic analogy | Conceptual draft |
-| Single-Agent Grounding | Transformer layer hierarchy, attention allocation, failure mode reinterpretation, Externalization Principle | Conceptual draft |
+| Physical Basis | Restructured: combinatorial + governance arguments primary; Landauer as supporting motivation | Updated v1.1 |
+| Substrate Principle (D0) | Geometry alignment as substrate interpretation; contamination = geometry mismatch projection | New v1.1 |
+| Operational Contamination Boundary | N-step behavioral criterion; contamination = absence of return path | New v1.1 |
+| Single-Agent Grounding | Transformer hierarchy, attention allocation, failure mode reinterpretation, Externalization Principle, system-level additions beyond existing explanations | Updated v1.1 |
+| Information Bottleneck Comparison | 5 structural differences; IB vs RBIT positioning; mutual limitations | New v1.1 |
 | Active Inference Relationship | Structural correspondence, ρ–precision hypothesis, positioning | Conceptual draft |
+| Seed Sufficiency Test Protocols | Operational validation via SR, RDE, NCR, RIR metrics; D7 Boundary Agent for Test 3 | New v1.1 |
+| f Boundary Conditions | S-equation constraints on f(A_t, D_t) shape | New v1.1 |
+| Fractal Conditional Necessity | SOC-grounded scaling argument; conditional on R ≈ 1 regime | New v1.1 |
+| Falsification Criteria | 5 specific criteria for principled rejection of core claims | New v1.1 |
 | Appendix: RFEF | F_RBIT functional, τ regime-switching, Bridge Hypothesis | Formal hypothesis only |
 
 ---
 
-*Timestamped: February 19, 2026*
-*DFG Framework · Resolution-Based Information Theory v1.0*
+*Timestamped: February 22, 2026*
+*DFG Framework · Resolution-Based Information Theory v1.1*
