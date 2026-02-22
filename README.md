@@ -2,9 +2,12 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · February 22, 2026 · Internal Working Document — v1.1*
+> *Draft · February 23, 2026 · Internal Working Document — v1.4*
 > *Component of the Deficit-Fractal Governance (DFG) Framework*
-> *v1.1 updates: D0 substrate principle, operational contamination boundary, IB comparison, falsification criteria, seed test protocols, f boundary conditions, fractal conditional necessity, Landauer restructuring, single-agent grounding additions*
+> *v1.1: D0 substrate, contamination boundary, IB comparison, falsification criteria, seed test protocols, f boundary conditions, fractal conditional necessity, Landauer restructuring, single-agent grounding*
+> *v1.2: R-ρ concordance protocol, four-type resolution-matching, measurement interface*
+> *v1.3: n² critical phenomena derivation, information-theoretic storm characterization, F_RBIT–S_norm cross-validation, R-ρ four-state concordance, seed Test 3 quantitative criterion, α-n separation reference*
+> *v1.4: R-ρ-f_esc triple concordance, Stability Saturation as falsification-relevant phenomenon, extended measurement interface (21 variables), Storm–Collapse lifecycle closure, TLG-derived falsification criteria*
 
 ---
 
@@ -126,6 +129,23 @@ Gap < 0 (negative)    Forced receiver-controlled compression -> Vector Storm ris
 
 Negative gaps are treated as a risk regime for forced compression cascades, not as a deterministic guarantee of Vector Storm; mitigating mechanisms (e.g., buffering, throttling, routing) can prevent cascade onset.
 
+*Resolution gap as routing function.* The resolution gap maps directly to data classification and escalation decisions. Network Architecture Theory (NAT §4.4) operationalizes this through a four-type classification where each type corresponds to a distinct gap regime:
+
+```
+Mathematical data:    Δρ ≈ 0 or Δρ > 0  → process locally
+High-Context data:    Δρ < 0             → escalate to higher-resolution layer
+Tacit Knowledge:      Δρ mixed           → operate locally; escalate on degradation
+Noise:                Δρ undefined        → buffer or discard
+
+Misclassification consequences (RBIT failure prediction):
+  HC treated as Mathematical (Δρ < 0 misread as ≈ 0):
+    → forced receiver-controlled compression → Vector Storm risk
+  Mathematical escalated as HC (Δρ ≈ 0 misread as < 0):
+    → governance overhead only (safe failure mode)
+```
+
+This connects the abstract resolution gap variable to concrete operational routing, where classification error in the dangerous direction (under-escalation) produces the cascade failure RBIT predicts, while error in the safe direction (over-escalation) produces only cost overhead.
+
 ### Operational Contamination Boundary
 
 The contamination/normal-variation boundary is defined behaviorally, not by state classification:
@@ -148,6 +168,42 @@ N calibration:
 ```
 
 This boundary does not require knowing "what contamination is" in absolute terms — only whether the system can return to baseline on its own. Contamination is not a wrong state — it is the absence of a return path. (See Recovery Theory §Boundary Gap for full derivation.)
+
+*External validation — branching ratio R.* The operational contamination boundary and the resolution-proxy ρ form a self-referential calibration loop: ρ requires knowing what is contamination, while the contamination threshold is updated from classifications that ρ measured. The branching ratio R breaks this circularity because it is classification-independent:
+
+```
+R = activated_{t+1} / activated_t
+
+R counts cascade propagation events — how many agents (or components)
+are affected at t+1 given that k were affected at t.
+R does NOT require knowing whether propagation is "contamination"
+or "exploration" — it counts propagation regardless of classification.
+
+  R < 1   → perturbations die out (subcritical)
+  R ≈ 1   → perturbations persist, do not explode (critical)
+  R > 1   → perturbations amplify (supercritical — storm regime)
+
+Concordance protocol (R-ρ-f_esc triple validation, four states):
+  Concordant:   R ≈ 1 AND ρ stable AND f_esc ≤ θ      → healthy VCZ
+  Discordant Type 1: R > 1 BUT ρ high AND f_esc low    → SCM warning
+    Internal metrics healthy within drifted reference frame;
+    actual dynamics unstable. Self-Consistent Misalignment detected.
+    → trigger SCM Recovery Protocol (VST §6.7)
+  Discordant Type 2: R << 1 AND ρ high                 → over-damping warning
+    Silent Criticality risk — system too stable.
+    Defect layer potentially suppressed.
+    → trigger perturbation response test
+  Discordant Type 3: R ≈ 1 BUT ρ declining             → recalibration needed
+    Dynamics healthy but classification degrading.
+    → θ calibration cycle indicated
+
+R is not a replacement for ρ or the N-step boundary.
+It is the external validation that breaks the self-referential loop.
+Internal metrics measure consistency within the current geometry.
+R measures whether that consistency corresponds to actual stability.
+```
+
+(See Network Architecture Theory §7.2 and Three-Layer Governance §0.5 for the full R-ρ-f_esc concordance protocol, bootstrap procedure, and θ dual-anchor validation.)
 
 *Operational symptoms by gap regime.* Each regime has observable signatures in running systems:
 
@@ -408,13 +464,23 @@ Test 3 operational validation (orthogonal recovery direction):
     Failure-permitted, no operational power
     Generates micro-storms that exercise sensing-response loops
   
-  Candidate quantitative protocol (proposed, untested):
+  Quantitative criterion (VST v1.3 §6.6):
     Seed directions have persistent negative gradient correlation
     (gradient cosine similarity < −threshold across k evaluation windows)
     AND both directions survive contamination pressure independently (SR > 0 for each)
+    
+    Without Test 3: detection without correction
+    → external Re-seeding required for every event
+    → SCC partial (detection only, correction external)
+    → Rest Mode unachievable
   
-  Note: Full operationalization of the orthogonal direction metric
-  remains an open problem (see Open Problems #11).
+  Boundary protection via 6 T6-resistant patterns (VST v1.3 §6.8):
+    Minimum viable: Constitutional Invariants + External Anchoring
+    = boundary exists as protocol + external reality always enters
+    = system's own optimization pressure maintains sensing infrastructure
+  
+  Note: Formal threshold value for gradient cosine similarity
+  remains system-specific (see Open Problems #11).
 ```
 
 *Operational validation — single-agent grounding:*
@@ -618,7 +684,26 @@ R_{t+1} = R_t + f(A_t, D_t)
   f    = monotone increasing in both arguments
 ```
 
-Key requirement: `f(A_t, D_t) > 0` requires `D_t > 0` — absorption must be sender-controlled at a positive resolution gap. The exact form of `f` remains an open problem.
+*Storm–Collapse–Recovery lifecycle.* The degradation-upscaling cycle connects to a complete system lifecycle through the Storm–Collapse Mapping Layer (SCML, TLG §13.7):
+
+```
+Stable operation (VCZ) → perturbation exceeds capacity → Vector Storm
+  → containment attempted
+    ├── Success → Recovery → φ recovery → VCZ re-entry
+    └── Failure → SCML classifies storm type → collapse topology
+         → structural reconfiguration → recovery → VCZ re-entry
+
+Storm type determines governance response:
+  Local amplification  → node-level re-seeding
+  Boundary storm       → layer interface recalibration
+  Hub storm            → distributed mediation restructure
+  Global cascade       → Safe Collapse Protocol full execution
+
+Key insight: storm is not merely failure — it is topology discovery.
+The system emerges with governance geometry empirically tested and corrected.
+```
+
+This lifecycle closure means that RBIT's resolution gap is not just a design variable but a dynamic quantity that the system learns to manage through repeated storm-recovery cycles. Each cycle updates the system's operational θ threshold, narrows the residual floor, and expands the VCZ basin.
 
 *Boundary conditions on f from VST dynamics.* While the exact form of f(A_t, D_t) is unresolved, the S-equation (S = αn² / C(t)^β) constrains f's behavior through shared operational variables:
 
@@ -645,6 +730,24 @@ Constraint summary:
 ```
 
 These constraints do not specify f's exact form but bound its shape: f must be a decreasing function of system instability, with a zero-crossing near the critical threshold. Operational decisions use S_proxy directional signals (S_proxy rising/falling), not absolute f values. (See Vector Storm Theory §3.2.2 for the Absolute Calibration Layer that grounds S_norm.)
+
+*F_RBIT–S_norm cross-validation.* The instability functional F_RBIT provides an independent information-theoretic cross-check on S_norm, measuring the same underlying instability from a different perspective:
+
+```
+F_RBIT(ℓ) = w₁·(1−ρ_ℓ) + w₂·Φ(−Δρ_ℓ) + w₃·Ψ(B_ℓ) + w₄·E_ℓ + w₅·C_ℓ
+
+Cross-validation protocol:
+  S_norm rising AND F_RBIT rising  → confirmed instability
+  S_norm rising BUT F_RBIT stable  → S calibration check needed
+  S_norm stable BUT F_RBIT rising  → S may miss resolution-specific stress
+  Both stable                      → confirmed stability
+
+S_norm measures dynamical instability (generation vs absorption).
+F_RBIT measures informational adequacy (resolution sufficiency across layers).
+Concordance strengthens confidence; discordance flags calibration error.
+```
+
+(See Vector Storm Theory §3.2.6 for the full derivation connecting resolution gap polarity to S-equation dynamics.)
 
 *Degradation calibration — operational correspondence.* While the formal D(Δρ) function is unresolved (Open Problem #9), two established ML techniques implement the same calibration logic:
 
@@ -803,7 +906,41 @@ the same functional pair operating
 at each resolution level independently.
 ```
 
-*Conditional necessity.* Fractal structure is a scaling necessity for systems operating near criticality (R ≈ 1). At criticality, perturbation persistence creates path overlap, making the number of effective pairwise interactions quadratic in system size (n²). Hierarchical terrain formation — the emergence of boundaries, routing, and modularity — reduces effective interaction dimension from n² to n^{d_eff} where 1 < d_eff < 2. Without such structure, interaction load exceeds processing capacity at sufficient n. At small scale or in strongly subcritical regimes (R << 1), non-fractal architectures remain viable because interaction load is manageable. The prediction is that as system complexity grows past a critical n threshold, hierarchical structure will emerge endogenously if the system is permitted to self-organize. (See Vector Storm Theory §1.6.1–1.6.2 for the SOC derivation and empirical scaling exponents.)
+*Conditional necessity.* Fractal structure is a scaling necessity for systems operating near criticality (R ≈ 1). The n² scaling in the instability equation is not an assumption about network density — it is derivable from critical branching process dynamics, even in sparse networks:
+
+```
+At criticality (R ≈ 1):
+  Mean avalanche size: ⟨S⟩ ~ n
+  Concurrent active avalanches: ~ n
+  Total interaction load = concurrent × mean size = n × n = n²
+
+This holds in sparse networks because:
+  Static graph edges: O(nk) — sparse
+  Time-integrated reachable pairs: O(n²) — quasi-dense
+  (In small-world networks: path length ~ log(n)
+   → within log(n) propagation steps, nearly all pairs reachable)
+  
+  Network sparsity affects coupling intensity (α),
+  NOT the scaling exponent.
+```
+
+Hierarchical terrain formation — the emergence of boundaries, routing, and modularity — reduces effective interaction dimension from n² to n^{d_eff} where 1 < d_eff < 2:
+
+```
+System maturity spectrum:
+  Early system    (flat landscape):     S ~ n²       (d_eff ≈ 2)
+  Maturing system (terrain forming):    S ~ n^{1.5}  (d_eff ≈ 1.5)
+  Rest Mode       (deep terrain):       S ~ n^{1+ε}  (d_eff → 1)
+
+The sub-quadratic correction is conditional on maintaining
+the Signaling/Influence distinction (TLG §10.1):
+  Signaling (permitted): agents share state information peer-to-peer
+    → potential collisions detected before escalation → terrain benefit real
+  Influence (prohibited): agents modify each other's internal states
+    → load migrates invisibly → terrain benefit illusory
+```
+
+At small scale or in strongly subcritical regimes (R << 1), non-fractal architectures remain viable because interaction load is manageable. The prediction is that as system complexity grows past a critical n threshold, hierarchical structure will emerge endogenously if the system is permitted to self-organize. (See Vector Storm Theory §3.2.5 for the full critical phenomena derivation and §1.6.1–1.6.2 for the SOC framework.)
 
 *Why this matters for governance:*
 
@@ -943,6 +1080,27 @@ In each case, the failure is not a knowledge gap or a training deficiency. It is
 
 The key distinction: existing analyses explain mechanisms (how components behave); RBIT explains system-level consequences (why those behaviors produce cascade failures, how to detect cascade onset, and where to intervene).
 
+*Stability Saturation — the over-stability failure mode.* Three-Layer Governance §9.2.1 identifies a phenomenon where standard metrics cannot distinguish healthy stability from dangerous stasis:
+
+```
+Healthy stability:
+  collision frequency: low,  exploration: present and diverse,  φ: maintained
+  → system is mature and functioning
+
+Stability Saturation (SSS):
+  collision frequency: ≈ 0,  exploration: absent or monocultural,  φ: declining
+  → system appears mature but is losing adaptive capacity
+  → all dashboard metrics green — identical to healthy stability
+
+  Detection requires active probing:
+    Inject novel-but-non-destructive perturbation
+    Healthy: τ1 event → absorb → integrate → diversity briefly increases
+    SSS: no τ1 event, OR recovery time >> baseline, OR output unchanged
+    → adaptation pathways degraded under surface stability
+```
+
+This is relevant to RBIT because Stability Saturation is exactly the state where compression appears optimal (all resolution gaps managed, no escalation) but the system has lost the ability to detect geometry mismatch — the receiver's resolution has frozen rather than grown. In RBIT terms: R_{t+1} = R_t (resolution growth stalled, f(A_t, D_t) ≈ 0) despite all operational metrics suggesting health. The resolution gap variable Δρ cannot detect this because both sender and receiver have converged to the same frozen geometry.
+
 ### The Externalization Principle
 
 This correspondence implies a stronger claim:
@@ -999,7 +1157,7 @@ The Information Bottleneck (IB) framework (Tishby et al., 2000; Tishby & Zaslavs
 
 *1. Dynamic receiver capacity.* IB optimizes for a fixed Y. RBIT models receiver resolution as growing (R_{t+1} = R_t + f(A_t, D_t)), making optimal compression a moving target. IB's information plane is static; RBIT's design problem is a trajectory.
 
-*2. Consequence theory for miscalibration.* IB predicts graceful performance degradation along the information plane. RBIT + VST predict that negative resolution gaps produce qualitative phase transitions: forced compression → self-amplification → cascade failure. The S-equation (S = αn²/C(t)^β) models instability pressure from miscalibration. IB has no equivalent.
+*2. Consequence theory for miscalibration.* IB predicts graceful performance degradation along the information plane. RBIT + VST predict that negative resolution gaps produce qualitative phase transitions: forced compression → self-amplification → cascade failure. The S-equation (S = αn²/C(t)^β) models instability pressure from miscalibration. IB has no equivalent. VST v1.3 §3.8 provides the precise information-theoretic characterization: storms are uncontrolled mutual information spikes across agents — MI(agent_i, agent_j) >> MI_baseline — driven by forced compression that generates new correlations propagating as storm seeds. IB models compression quality; RBIT+VST models what happens when compression is forcibly miscalibrated at system scale.
 
 *3. Multi-channel governance.* IB operates on X → T → Y (single channel). RBIT addresses coordination across multiple interacting compression channels where one channel's error propagates to others through fractal structure — the governance problem that arises when many IB-optimizing layers of different capacity must interact.
 
@@ -1260,6 +1418,54 @@ Rest Mode
 
 ---
 
+## Measurement Interface
+
+RBIT's theoretical variables connect to log-observable metrics through operationalization work in companion theories. The following table summarizes the measurement status of key RBIT concepts:
+
+| RBIT Concept | Operational Proxy | Source | Log Availability |
+|---|---|---|---|
+| Resolution-proxy ρ | 1 − (Type I + Type II errors) / N | Recovery Theory OP1 | HIGH |
+| Buffer thickness | Perturbation amplitude before mode collapse; recovery-without-escalation rate | Recovery Theory §Proxy Gap | HIGH |
+| Escalation frequency f_esc | Human overrides + supervisor calls + fallbacks / N_total | Recovery Theory OP3 | HIGH |
+| Governance capacity C(t) | C_E(t) = escalation events resolved / Δt | Recovery Theory §C(t) | HIGH |
+| Degradation efficiency β | β_T (Type I/II accuracy) + β_R (recurrence rate) | Recovery Theory §β | HIGH |
+| S_proxy (instability) | n²_proxy / (C(t) · β(t)) | VST §3.2 + RT §S-equation | HIGH |
+| VCZ distance d_VCZ | Normalized recovery cost / baseline | Recovery Theory §d(·) | HIGH |
+| Opposing pair detection | Persistent negative gradient correlation | Recovery Theory §Proxy Gap | MEDIUM-HIGH |
+| Resolution gap Δρ routing | Four-type classification (Math/HC/Tacit/Noise) | NAT §4.4 | HIGH |
+| Cascade validation R | Branching ratio: activated_{t+1} / activated_t | NAT §7.2, VST §3.5.4 | HIGH |
+| F_RBIT instability functional | w₁(1−ρ) + w₂Φ(−Δρ) + w₃Ψ(B) + w₄E + w₅C | RBIT §Appendix RFEF, VST §3.2.6 | HIGH (component-wise) |
+| Consistency Index I | 1 − Σwij/M (pair-level rule coherence) | GRT via TLG §0.1 | HIGH |
+| Meta-Contradiction Ic | 1 − Σwij(global)/Mc (global rule conflicts) | GRT via TLG §0.1 | HIGH |
+| Position overlap Poverlap | Attractor convergence degree | GRT via TLG §9.2 | HIGH |
+| Dint (system diversity floor) | min(Dint_i) across domains | GRT via TLG §9.2 | HIGH |
+| NAF detection: RDE | ‖Δrepresentation‖ / ‖Δinput‖ | Recovery Theory §NAF | MEDIUM |
+| NAF detection: NCR | Novel-to-existing cluster assignment rate | Recovery Theory §NAF | MEDIUM |
+| NAF detection: SR | Geometry change response to novel input | Recovery Theory §NAF | MEDIUM |
+| Inner sphere convergence (HUG) | Hyperspherical Uniformity Gap | NAT §8.3.1 | MEDIUM (offline) |
+| Fractal alignment | Perturbation-response proportionality | NAT §8.3.1 | MEDIUM |
+| φ (value yield) | Reusable outcome rate (supporting signal only) | Recovery Theory §φ | MEDIUM |
+
+```
+Measurement dependency order:
+  Immediately available (no new instrumentation):
+    ρ, C(t), β, d_VCZ, buffer_thickness, f_esc, R
+
+  Available with basin calibration:
+    d(x,A) — attractor pull strength (requires reference set)
+
+  Available when φ unit stabilizes:
+    φ — reusable outcome rate (requires "exploration unit" definition)
+
+  Remaining open:
+    α absolute, β absolute, C absolute → formal calibration
+    f(A_t, D_t) exact form → boundary conditions exist, exact form open
+```
+
+(See Recovery Theory §Operationalization v0.1 for full measurement procedures, and Network Architecture Theory §10.1 for the proxy table connecting architectural concepts to these metrics.)
+
+---
+
 ## Open Problems
 
 | # | Problem | Status |
@@ -1298,6 +1504,15 @@ If systems with SR ≈ 0 (no surprise response), RDE ≈ 0 (frozen representatio
 
 **Criterion 5 — Storm onset must correlate with mismatch accumulation.**
 If Vector Storms occur without preceding mismatch pressure accumulation (measurable via RDE trajectory and buffer thickness decline), the pressure-accumulation model is wrong.
+
+**Criterion 6 — AND-entry / OR-exit must outperform symmetric governance protocols.**
+Systems using AND-entry (all conditions required) for stable-state declaration and OR-exit (any single violation sufficient) for reactivation should experience fewer premature stability declarations AND fewer delayed exits compared to symmetric AND/AND or OR/OR protocols. If symmetric protocols match performance, the asymmetry claim (derived from TLG §5.3) is weakened.
+
+**Criterion 7 — Minimum diversity determines vulnerability, not average.**
+The domain with the lowest internal differentiation (Dint) should be the primary contamination entry point. If contamination entry points are uniformly distributed regardless of per-domain Dint, or if mean Dint is a stronger predictor, the minimum-aggregation claim is falsified. (Derived from TLG §9.2 via GRT.)
+
+**Criterion 8 — Progressive withdrawal must reduce re-entry frequency.**
+Systems governed by staged human withdrawal (active → audit → periodic review → exit) should require fewer collapse-recovery restarts than fixed-epoch phase transitions. If fixed-epoch systems achieve equal or lower re-entry frequency, the protocol's advantage is not established. (Derived from TLG §13.2.2.)
 
 ---
 
@@ -1540,5 +1755,5 @@ not to claim derivation from or equivalence with Active Inference.
 
 ---
 
-*Timestamped: February 22, 2026*
-*DFG Framework · Resolution-Based Information Theory v1.1*
+*Timestamped: February 23, 2026*
+*DFG Framework · Resolution-Based Information Theory v1.4*
