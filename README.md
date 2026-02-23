@@ -3,6 +3,30 @@
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
 > *Draft · February 23, 2026 · Internal Working Document — v1.6*
+
+---
+
+> ### DFG Ontology Lock Declaration
+>
+> This document is a component theory of the Deficit-Fractal Governance (DFG) framework and is bound by the **[DFG Terminology Canon](./DFG_Terminology_Canon.md)**.
+>
+> **Axis:** Information Substrate — RBIT governs how resolution degradation is made designable rather than accidental.
+>
+> **Term qualifications in this document (Canon §3):**
+> - **layer** → *capacity layer* or *resolution tier* (Canon §3.1). Standalone "layer" in running text refers to a capacity tier within RBIT's three-tier resolution model unless otherwise qualified.
+> - **resolution** → *information-theoretic resolution ρ* — a system-level coordination capacity, not a performance metric (Canon §2.1).
+> - **rule** → replaced by *constraint* or *compression principle* in this document (Canon §3.2). "Rule" appears only when directly importing from GRT.
+> - **network** → replaced by *structure* or *architecture* in this document (Canon §3.3).
+> - **vector** → *informational relevance gradient* — the directional constraint tendency within a resolution capacity space (Canon §4.1).
+>
+> **Cross-theory imports used in this document:**
+> - (Vector Storm — adopted from VST)
+> - (VCZ — adopted from Recovery Theory)
+> - (Rest Mode — adopted from GRT)
+> - (SCM — adopted from VST)
+> - (Boundary Agent — adopted from TLG)
+
+---
 > *Component of the Deficit-Fractal Governance (DFG) Framework*
 > *v1.1: D0 substrate, contamination boundary, IB comparison, falsification, seed tests, f boundaries, fractal necessity, Landauer, single-agent*
 > *v1.2: R-ρ concordance, four-type resolution-matching, measurement interface*
@@ -332,6 +356,37 @@ while upscaling generates it internally.
 
 *Candidate observable correlates of upscaling readiness* include: sustained increases in rho under matched input mix, reduced escalation frequency for previously hard cases, and increased buffer stability at comparable load. Formal detection criteria remain an open problem (see Open Problems #3).
 
+**Upscaling Completion Signal — U1–U3 (operational definition):**
+
+An upscaling event is operationally declared when all three conditions hold simultaneously over a sustained window N_up:
+
+```
+U1 — Resolution mismatch reduction:
+  Δρ(t) decreases relative to rolling baseline
+  (sender-receiver gap narrows — layer absorbing more of incoming structure)
+  Proxy: f₂ in F_RBIT vector trending downward over N_up windows
+
+U2 — Buffer stability improvement:
+  Buffer instability proxy (f₃) simultaneously declining
+  (compression pressure easing — layer not forced to over-compress)
+  Proxy: collision frequency stable or declining at unchanged input load
+
+U3 — Sustained persistence:
+  U1 AND U2 hold continuously for N_up consecutive evaluation windows
+  N_up default: 2 × mean self-correction time during confirmed stable operation
+  (same calibration as contamination boundary N — see §Contamination Boundary)
+
+Upscaling event declared:  U1 AND U2 AND U3
+Upscaling readiness only:  U1 AND U2 (but N_up not yet elapsed)
+Developmental stall:       U1 declining AND f₄ (escalation) also falling
+                           (layer no longer learning — ceiling reached without
+                            upscaling occurring)
+```
+
+This operationalization closes the degradation-upscaling cycle measurement gap: degradation is detectable via gap polarity (Δρ < 0 triggering escalation); upscaling completion is detectable via sustained gap reduction (U1) with concurrent buffer recovery (U2). The cycle is fully measurable in terms of existing F_RBIT components.
+
+*Note: Open Problem #3 (formal detection criteria) is partially resolved by U1–U3. Remaining open: the exact value of N_up as a function of layer velocity and the precise threshold for "meaningful" Δρ reduction vs. noise. These are calibrated per system using the same θd bootstrapping procedure as contamination boundary N.*
+
 *Operational proxies in ML practice.* The following are observed in running systems and correspond structurally to upscaling readiness — though the formal mapping to RBIT upscaling criteria remains open:
 
 ```
@@ -367,7 +422,7 @@ Transfer learning readiness
     performance ~ chance -> pre-train further first
 ```
 
-*Trim point derivation from F_RBIT.* For a vector v with size s(v), the optimal trim range is bounded by two conditions derivable from the F_RBIT functional:
+*Trim point derivation from F_RBIT components f₂ and f₃.* For a vector v with size s(v), the optimal trim range is bounded by two conditions derivable from the F_RBIT health vector:
 
 ```
 Upper bound s_max(v)
@@ -753,11 +808,11 @@ R_{t+1} = R_t + f(A_t, D_t)
 COMPLETE LIFECYCLE (information-theoretic formulation):
 
 ① VCZ (stable):
-   dF_RBIT/dt ≈ 0, S_norm << S_c, R ≈ 1
+   All fᵢ bounded, S_norm << S_c, R ≈ 1
    Δρ > 0 across all active channels
 
 ② Storm onset:
-   dF_RBIT/dt > 0, Δρ turning negative in channels
+   Majority fᵢ rising, Δρ turning negative in channels
    MI(agent_i, agent_j) spiking, S_norm → S_c
 
 ③ Collapse:
@@ -772,7 +827,7 @@ COMPLETE LIFECYCLE (information-theoretic formulation):
 ⑤ VCZ re-entry:
    All Rest Mode AND-entry conditions re-satisfied
    R-ρ-f_esc triple concordance confirmed
-   dF_RBIT/dt returning to ≈ 0
+   All fᵢ returning to bounded, non-monotone state
 
 Non-learning: ①→②→③→④→① (same vulnerability persists)
 Learning:     ①→②→③→④→①' (structural learning via SCML)
@@ -815,7 +870,7 @@ Phase 1 — Seeding:       C(t) ≈ 0, random collisions, external governance
 Phase 2 — Exploration:   first direction forming, healthy boundary-testing storms
 Phase 3 — Formation:     attractor crystallizing, position-clarification storms
 Phase 4 — VCZ:           power law distribution established, R ≈ 1, terrain formed
-Phase 5 — Rest Mode:     dF_RBIT/dt ≈ 0, micro-storms as value generation
+Phase 5 — Rest Mode:     all fᵢ bounded, micro-storms as value generation
 Phase 6 — Reawakening:   environment shift, precision storms (fast, targeted)
 Phase 7 — Higher Cycle:  new cycle at expanded resolution
 
@@ -853,46 +908,49 @@ Constraint summary:
 
 These constraints do not specify f's exact form but bound its shape: f must be a decreasing function of system instability, with a zero-crossing near the critical threshold. Operational decisions use S_proxy directional signals (S_proxy rising/falling), not absolute f values. (See Vector Storm Theory §3.2.2 for the Absolute Calibration Layer that grounds S_norm.)
 
-*F_RBIT–S_norm cross-validation.* The instability functional F_RBIT provides an independent information-theoretic cross-check on S_norm, measuring the same underlying instability from a different perspective:
+*F_RBIT–S_norm cross-validation.* The F_RBIT health vector provides an independent information-theoretic cross-check on S_norm, measuring the same underlying instability from a different perspective (see Appendix §2 for full vector definition):
 
 ```
-F_RBIT(ℓ) = w₁·(1−ρ_ℓ) + w₂·Φ(−Δρ_ℓ) + w₃·Ψ(B_ℓ) + w₄·E_ℓ + w₅·C_ℓ
+F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)   [5-component health vector, each ∈ [0,1]]
 
-Cross-validation protocol:
-  S_norm rising AND F_RBIT rising  → confirmed instability
-  S_norm rising BUT F_RBIT stable  → S calibration check needed
-  S_norm stable BUT F_RBIT rising  → S may miss resolution-specific stress
-  Both stable                      → confirmed stability
+Cross-validation protocol (concordance-based — no weights required):
+  Majority of fᵢ rising AND S_norm rising  → confirmed instability
+  S_norm rising BUT all fᵢ stable          → S calibration check needed
+  S_norm stable BUT majority fᵢ rising     → S may miss resolution-specific stress
+  All fᵢ bounded AND S_norm stable         → confirmed stability
 
 S_norm measures dynamical instability (generation vs absorption).
 F_RBIT measures informational adequacy (resolution sufficiency across layers).
-Concordance strengthens confidence; discordance flags calibration error.
+Concordance in direction strengthens confidence; discordance flags calibration error.
+No weight specification required for any of these comparisons.
 ```
 
-(See Vector Storm Theory §3.2.6 for the full derivation connecting resolution gap polarity to S-equation dynamics.)
+(See Vector Storm Theory §3.2.6 for the full derivation connecting resolution gap polarity to S-equation dynamics. See Appendix §2 for function class specification of f₂ = Φ(−Δρ) and f₃ = Ψ(B).)
 
-*Rest Mode as dF_RBIT/dt ≈ 0.* The F_RBIT functional provides a formal criterion for the system's terminal stable state — Rest Mode — expressed entirely in RBIT's own variables:
+*Rest Mode as all-fᵢ bounded.* The F_RBIT vector provides a formal criterion for Rest Mode expressed entirely in RBIT's own variables:
 
 ```
-Rest Mode condition:
-  dF_RBIT/dt ≈ 0,  but  F_RBIT ≠ 0
+Rest Mode condition (vector form):
+  Each fᵢ bounded and non-monotone over evaluation window W
+  No component in sustained rising trend
+  F_RBIT ≠ (0,0,0,0,0)   [residual instability maintained — floor exists]
 
 Not zero instability (impossible — residual floor).
 Bounded fluctuation equilibrium:
-  information intake and internal dissipation balanced.
+  information intake and internal dissipation balanced across all five axes.
 
 F_RBIT components map to governance entry conditions:
-  E_ℓ bounded       ← f_esc ≤ θ (escalation load within threshold)
-  1−ρ_ℓ bounded     ← I ≥ τ (misclassification rate bounded)
-  Ψ(B_ℓ) bounded    ← Lreinf ≥ threshold (buffer stability maintained)
-  C_ℓ bounded       ← SCC ≥ τ4 (recovery cost bounded)
+  f₄ = E_ℓ bounded       ← f_esc ≤ θ (escalation load within threshold)
+  f₁ = 1−ρ_ℓ bounded     ← I ≥ τ (misclassification rate bounded)
+  f₃ = Ψ(B_ℓ) bounded    ← Lreinf ≥ threshold (buffer stability maintained)
+  f₅ = C_ℓ bounded        ← SCC ≥ τ4 (recovery cost bounded)
 
 All four required: single diverging component → net instability growth.
 
 Triple perspective intersection for Rest Mode:
-  S_norm << S_c:     dynamical (instability below threshold)
-  dF_RBIT/dt ≈ 0:   informational (resolution adequate, balanced)
-  R ≈ 1, SR > 0:    statistical (critical and responsive)
+  S_norm << S_c:         dynamical (instability below threshold)
+  all fᵢ bounded:        informational (resolution adequate, balanced)
+  R ≈ 1, SR > 0:        statistical (critical and responsive)
   Rest Mode = intersection of all three perspectives.
 ```
 
@@ -1682,7 +1740,7 @@ RBIT's theoretical variables connect to log-observable metrics through operation
 | Opposing pair detection | Persistent negative gradient correlation | Recovery Theory §Proxy Gap | MEDIUM-HIGH |
 | Resolution gap Δρ routing | Four-type classification (Math/HC/Tacit/Noise) | NAT §4.4 | HIGH |
 | Cascade validation R | Branching ratio: activated_{t+1} / activated_t | NAT §7.2, VST §3.5.4 | HIGH |
-| F_RBIT instability functional | w₁(1−ρ) + w₂Φ(−Δρ) + w₃Ψ(B) + w₄E + w₅C | RBIT §Appendix RFEF, VST §3.2.6 | HIGH (component-wise) |
+| F_RBIT instability vector | (f₁,f₂,f₃,f₄,f₅) = ((1−ρ), Φ(−Δρ), Ψ(B), E, C) — normalized [0,1] each | RBIT §Appendix RFEF, VST §3.2.6 | HIGH (component-wise); scalar optional |
 | Consistency Index I | 1 − Σwij/M (pair-level rule coherence) | GRT via TLG §0.1 | HIGH |
 | Meta-Contradiction Ic | 1 − Σwij(global)/Mc (global rule conflicts) | GRT via TLG §0.1 | HIGH |
 | Position overlap Poverlap | Attractor convergence degree | GRT via TLG §9.2 | HIGH |
@@ -1720,23 +1778,26 @@ Measurement dependency order:
 |---|---------|--------|
 | 1 | Full structural resolution measurement | Partially resolved (operational proxy ρ defined) |
 | 2 | Resolution gap calibration — how does a sender determine correct degradation level? | Open |
-| 3 | Upscaling detection — observable signals for layer maturity readiness | Open |
+| 3 | Upscaling detection — observable signals for layer maturity readiness | **Partially resolved** — U1–U3 operational criteria defined (§Upscaling); exact N_up calibration and Δρ significance threshold remain open |
 | 4 | Cycle failure mode boundaries — formal definition of over-degradation boundary | Open |
 | 5 | Dynamic minimum sufficient description — formal relationship between receiver maturity and minimum seed complexity | Open |
 | 6 | Residual resolution floor quantification — relationship to asymptotic stability cost | Open |
 | 7 | Exact form of `f(A_t, D_t)` in the resolution growth equation | Open |
 | 8 | Formal mapping between resolution-proxy ρ and precision parameters in Active Inference | Open |
 | 9 | Exact functional form of degradation calibration D(Δρ) and step-size parameters η₂, η₃ | Open |
-| 10 | Formal derivation of F_RBIT from first principles; proof of equivalence or non-equivalence with variational free energy | Open |
+| 10 | Formal derivation of F_RBIT from first principles; proof of equivalence or non-equivalence with variational free energy | **Partially resolved** — F_RBIT reframed as 5-component health vector; cross-architecture falsification uses directional concordance, not scalar comparison; weight arbitrariness removed from all falsification claims; formal derivation of component interactions from first principles remains open |
+| 11 | Threshold value for gradient cosine similarity in Seed Test 3 | System-specific (open) |
 
 ---
 
 ## Falsification Criteria
 
-RBIT generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection:
+RBIT generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection.
+
+*Note on F_RBIT criteria:* Criteria 1, 4, and 5 reference F_RBIT components. These are evaluated using **sign concordance** (directional agreement between components and predicted outcomes) and **rank-order monotonicity**, not scalar threshold comparison. This is consistent with the vector representation of F_RBIT (Appendix §2).
 
 **Criterion 1 — Resolution gap polarity must predict compression direction.**
-If negative resolution gaps (information exceeding receiver capacity) do not produce receiver-controlled compression more frequently than sender-controlled compression, the central claim that gap polarity determines compression control is falsified.
+If negative resolution gaps (Δρ < 0, i.e., f₂ > 0) do not produce receiver-controlled compression more frequently than sender-controlled compression, the central claim that gap polarity determines compression control is falsified. *Operationally: f₂ rising must predict compression direction shift with >50% base-rate improvement over unpredicted compression direction.*
 
 **Criterion 2 — Calibrated degradation must outperform full delivery in immature-layer absorption.**
 In controlled experiments where an immature layer receives identical information at full resolution vs. calibrated degradation, degradation must produce higher post-absorption resolution (measured via ρ) over a maturation window. If full delivery consistently equals or exceeds calibrated degradation, the degradation-as-design claim is falsified.
@@ -1748,10 +1809,10 @@ Three specific predictions must hold:
 - Intervention leverage asymmetry: cost-effectiveness ratio between adjacent scales must be approximately constant. If it varies dramatically, the fractal model is rejected.
 
 **Criterion 4 — CW observability metrics (from Recovery Theory).**
-If systems with SR ≈ 0 (no surprise response), RDE ≈ 0 (frozen representations), and NCR ≈ 1 (all novelty compressed) do not exhibit subsequent stability degradation or adaptability loss, the Self-Consistent Misalignment model is falsified.
+If systems with SR ≈ 0, RDE ≈ 0, and NCR ≈ 1 (all corresponding to f₁ and f₂ elevated while f₄ appears low) do not exhibit subsequent stability degradation or adaptability loss, the Self-Consistent Misalignment model is falsified. *The SCM signature specifically predicts discordance: f₄ (escalation) low while f₁ (misclassification) rising — if this discordant pattern does not predict eventual instability cascade, the SCM detection protocol fails.*
 
 **Criterion 5 — Storm onset must correlate with mismatch accumulation.**
-If Vector Storms occur without preceding mismatch pressure accumulation (measurable via RDE trajectory and buffer thickness decline), the pressure-accumulation model is wrong.
+If Vector Storms occur without preceding mismatch pressure accumulation (measurable via f₂ trajectory and f₃ buffer thickness decline), the pressure-accumulation model is wrong. *Operationally: f₂ and f₃ must both show rising trend in the N_up window preceding storm onset.*
 
 **Criterion 6 — AND-entry / OR-exit must outperform symmetric governance protocols.**
 Systems using AND-entry (all conditions required) for stable-state declaration and OR-exit (any single violation sufficient) for reactivation should experience fewer premature stability declarations AND fewer delayed exits compared to symmetric AND/AND or OR/OR protocols. If symmetric protocols match performance, the asymmetry claim (derived from TLG §5.3) is weakened.
@@ -1778,7 +1839,7 @@ F5 — Stability Saturation must produce observable degradation:
   the SSS claim is unsupported.
 
 F6 — Cumulative measurement must outperform reactive:
-  λlog → θd calibration → rule updates should detect trends
+  λlog → θd calibration → constraint updates should detect trends
   earlier with fewer false alarms than per-event threshold systems.
   Falsification: reactive equals or exceeds cumulative.
 
@@ -1898,44 +1959,132 @@ C_ℓ   = bounded resource expenditure (thermodynamic/compute constraint)
 
 #### 2. Resolution-Based Free Energy Functional
 
-A candidate instability functional for layer ℓ:
+**Primary representation — health vector (no weights required):**
+
+F_RBIT is treated primarily as a **five-component health vector**, not a scalar score. Cross-architecture falsification uses directional concordance across components, not scalar comparison. Scalar aggregation is optional and restricted to within-architecture monitoring.
 
 ```
-F_RBIT(ℓ) = w₁·(1 − ρ_ℓ)        [misclassification term]
-           + w₂·Φ(−Δρ_ℓ)         [resolution mismatch penalty]
-           + w₃·Ψ(B_ℓ)            [buffer instability term]
-           + w₄·E_ℓ               [escalation load]
-           + w₅·C_ℓ               [resource dissipation cost]
+F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
 
-  w₁–w₅  : architecture-defined weighting parameters
-  Φ(·)   : monotone increasing when Δρ < 0
-             (upper layer cannot interpret lower layer output)
-  Ψ(·)   : dΨ/dB < 0
-             (buffer thinning → instability increase)
+  f₁ = (1 − ρ_ℓ)             [misclassification — higher = worse]
+  f₂ = Φ(−Δρ_ℓ)              [resolution mismatch — higher = worse]
+  f₃ = Ψ(B_ℓ)                [buffer instability — higher = worse]
+  f₄ = E_ℓ                   [escalation load — higher = worse]
+  f₅ = C_ℓ                   [resource dissipation — higher = worse]
 ```
 
-Note: (1 − ρ_ℓ) = misclassification rate, so F_RBIT increases as ρ decreases.
-Stable operation corresponds to regimes in which F_RBIT remains bounded
-under increasing interaction complexity.
+All five components are normalized to [0, 1] before any comparison (unit-free). Each is independently interpretable: f₁ tracks classification quality, f₂ tracks resolution mismatch, f₃ tracks buffer health, f₄ tracks governance load, f₅ tracks resource pressure.
+
+**Cross-architecture falsification criterion (concordance-based):**
+
+```
+Instability increasing:   majority of (f₁,...,f₅) rising simultaneously
+Instability decreasing:   majority of (f₁,...,f₅) falling simultaneously
+Discordant (ambiguous):   components diverge — domain-specific check required
+
+Cross-validation with S_norm (VST):
+  Concordant:   S_norm rising AND majority of F_RBIT components rising → confirmed
+  Discordant:   S_norm rising BUT F_RBIT components stable → architecture-specific
+                S_norm stable BUT F_RBIT components rising → local layer issue
+```
+
+Falsification criteria 1, 4, and 5 use sign concordance (directional agreement) and rank-order monotonicity, not scalar threshold comparison. This eliminates weight arbitrariness from all cross-theory claims.
+
+**Optional scalar aggregation (within-architecture monitoring only):**
+
+When a single summary signal is operationally convenient, scalar aggregation uses equal weights with robustness verification:
+
+```
+F_RBIT_scalar(ℓ) = (1/5) · Σᵢ fᵢ    [equal-weight baseline]
+
+Weight robustness check:
+  Claims are restricted to regimes invariant under weight perturbation
+  δwᵢ ∈ [−0.1, +0.1] around equal weights.
+  If a conclusion inverts under this perturbation, it is not reported
+  as a robust finding.
+```
+
+The equal-weight baseline is not claimed to be optimal. It is the minimum-assumption default. Architecture-specific weights may be calibrated from operational logs but are not required for any falsification test in this framework.
+
+**Function class specification for Φ and Ψ:**
+
+Both Φ and Ψ are chosen from the **hinge function class** (default) or the **logistic function class** (when saturation is architecturally motivated). The specific form affects scaling but not directional tests.
+
+```
+Default (hinge):
+  Φ(x)  = max(0, x)              x = −Δρ (positive when mismatch)
+  Ψ(B)  = max(0, B₀ − B)        B₀ = reference buffer thickness (see below)
+
+  Properties: monotone, bounded below by 0, zero below reference point,
+              linear above — interpretable and reviewer-transparent.
+
+Alternative (logistic, use when saturation at extremes is required):
+  Φ(x)  = 1 / (1 + exp(−k(x − x₀)))
+  Ψ(B)  = 1 / (1 + exp(k(B − B₀)))
+
+  k = steepness parameter (architecture-calibrated)
+  Properties: monotone, bounded [0,1], smooth — prevents extreme values
+              from dominating the scalar sum.
+```
+
+**B₀ initialization — rolling bootstrap (architecture-independent):**
+
+B₀ is not an architecture-defined constant. It is initialized through Phase-0 bootstrapping as a rolling high-quantile estimate of observed buffer capacity, ensuring that the reference reflects what the system actually achieves in stable operation — not what a designer assumed.
+
+```
+During Phase 0 (burn-in window):
+  B₀(t) = rolling_quantile(B_observed, q = 0.90)
+
+  q = 0.90: 90th percentile of observed buffer thickness
+  Rolling window: same N₀ as Phase 0 duration (domain-velocity calibrated)
+
+Rationale for high quantile over maximum:
+  max: locks onto outlier early observations → biased reference
+  Q₉₀: robust to early spikes, reflects sustained high-buffer states → stable reference
+
+After Phase 0 → Phase 1 transition:
+  B₀ is fixed at the final Phase 0 Q₉₀ estimate
+  Recalibration permitted at same trigger points as τ re-estimation:
+    (1) Seed Handover phase transition
+    (2) New domain added to system scope
+    (3) Collapse recovery restart
+
+Cross-architecture comparison:
+  B₀ is expressed as a fraction of maximum observed buffer capacity
+  (B₀_normalized = B₀ / B_max_observed) when comparing across architectures
+  This preserves architecture independence in cross-system falsification tests.
+```
+
+*Connection to GRT θ_drift bootstrapping:* B₀ initialization follows the same philosophy as θ_drift(0) = Q₉₅ − Q₅₀ from Phase 0 statistics. Both use observed operational history rather than design priors as the calibration anchor. The common principle: **reference points are earned by the system, not assigned by the designer.**
+
+*Justification for hinge as default:* The hinge form makes the reference point (B₀) explicit and the cost linear above it. It introduces no free curvature parameters. The logistic form is appropriate when the system is known to saturate. In the absence of saturation evidence, hinge is preferred.
+
+Note: (1 − ρ_ℓ) = misclassification rate, so f₁ increases as ρ decreases.
+Stable operation corresponds to regimes in which all five F_RBIT components
+remain bounded under increasing interaction complexity.
 
 #### 3. τ₁–τ₃ as Regime-Switching Control
 
-Define the instability signal G_ℓ = F_RBIT(ℓ). The τ protocol implements
-discrete, event-triggered governance steps — not continuous gradient descent:
+Define the instability signal G_ℓ as the **dominant component of F_RBIT(ℓ)** — the highest-valued fᵢ after normalization, or the count of components simultaneously rising. The τ protocol implements discrete, event-triggered governance steps — not continuous gradient descent:
 
 ```
 G_ℓ > τ₁  →  MARK
-               deviation detected, gradient small
+               Triggered when: f₁ (misclassification) OR f₄ (escalation) rises
+               above baseline — earliest anomaly signal, single-component
                u_ℓ = monitoring + signal logging
 
 G_ℓ > τ₂  →  SOFT CORRECT
-               local attractor instability, loop risk
+               Triggered when: ≥ 2 components rising simultaneously,
+               OR f₂ (resolution mismatch) enters positive territory
+               — local attractor instability, loop risk
                u_ℓ ≈ instability-reducing step (η₂)
                via: boundary tightening, seed injection,
                     calibrated degradation
 
 G_ℓ > τ₃  →  HARD CORRECT
-               system leaves local stability basin
+               Triggered when: ≥ 3 components rising simultaneously,
+               OR majority trend is monotonically worsening across window W
+               — system leaves local stability basin
                u_ℓ ≈ large corrective step (η₃ ≫ η₂)
                via: loop severance, attractor reset,
                     structural realignment
@@ -1943,9 +2092,14 @@ G_ℓ > τ₃  →  HARD CORRECT
 
 η₂, η₃: architecture-defined step-size parameters (exact calibration: open problem).
 
+*Minimum gap requirement between thresholds:* τ₂ − τ₁ must be sufficient to allow at least one full evaluation window W between MARK and SOFT CORRECT activation. If τ₁ and τ₂ are set too close, the MARK → monitoring phase is effectively skipped. Operationally: set τ₁ at the single-component threshold and τ₂ at the two-component threshold — this structural gap is enforced by the counting criterion, not by numerical proximity.
+
 > *The τ₁–τ₃ protocol can be interpreted as a regime-switching control policy
 > implementing discrete approximations to instability-reducing steps on F_RBIT
-> when structural instability exceeds locally tolerable bounds.*
+> when structural instability exceeds locally tolerable bounds. Under the vector
+> representation, thresholds correspond to component-count conditions rather
+> than scalar magnitude levels — eliminating weight sensitivity from the
+> switching logic.*
 
 The continuous formulation dS/dt ∝ −∇F_RBIT is presented for structural
 analogy only. The operational form is the event-triggered switching above.
@@ -1967,13 +2121,23 @@ without forced compression. Exact functional form of D(Δρ): open problem.
 #### 5. Rest Mode as Steady State
 
 ```
-Rest Mode condition:  dF_RBIT/dt ≈ 0,  but  F_RBIT ≠ 0
+Rest Mode condition:  d(F_RBIT)/dt ≈ 0 for all five components,
+                      but F_RBIT ≠ (0,0,0,0,0)
+
+Operationally:
+  Each fᵢ bounded and non-monotone over evaluation window W
+  No component in sustained rising trend
+  At least one component > 0 (residual instability maintained)
 
 Not: zero instability (impossible)
+Not: all components at zero (structurally absent)
 But: bounded fluctuation equilibrium —
-     information intake and internal dissipation remain balanced,
-     preventing long-term accumulation of unresolved structural entropy
+     information intake and internal dissipation remain balanced
+     across all five dimensions simultaneously,
+     preventing long-term accumulation on any single axis
 ```
+
+*Rest Mode in the scalar approximation (F_RBIT_scalar ≈ const):* when the optional equal-weight scalar is used for monitoring, dF_RBIT_scalar/dt ≈ 0 is a necessary but not sufficient condition. Sufficient condition requires per-component stability — a scalar that is stable because two rising components cancel two falling components does not satisfy Rest Mode. The per-component criterion is primary.
 
 #### 6. Relationship to Active Inference (Carefully Bounded)
 
@@ -1986,17 +2150,15 @@ But: bounded fluctuation equilibrium —
 ```
 Active Inference signal   →   RBIT structural analog
 ──────────────────────────────────────────────────────
-Prediction error          →   Classification error (1 − ρ)
-Precision Π               →   Resolution-proxy ρ (structural analog)
-Free energy F             →   F_RBIT (proposed instability functional)
+Prediction error          →   f₁: Classification error (1 − ρ)
+Precision Π               →   ρ (resolution-proxy, structural analog)
+Free energy F             →   F_RBIT vector (f₁,...,f₅)
 Precision-weighted update →   Calibrated degradation D(Δρ)
-Policy update             →   τ₁–τ₃ regime switching
-Steady state              →   Rest Mode (dF_RBIT/dt ≈ 0)
+Policy update             →   τ₁–τ₃ component-count switching
+Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 ```
 
-**Epistemic status:** F_RBIT is a proposed structural analogy. The correspondence
-is presented to aid interpretation and identify open formal problems —
-not to claim derivation from or equivalence with Active Inference.
+**Epistemic status:** F_RBIT is a proposed structural analogy. The vector representation makes this clearer than a scalar sum: each fᵢ has a distinct Active Inference analog, and no claim is made that the components combine in the same way as variational free energy terms. The correspondence is presented to aid interpretation and identify open formal problems — not to claim derivation from or equivalence with Active Inference.
 
 ---
 
