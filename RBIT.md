@@ -2,7 +2,7 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · February 23, 2026 · Internal Working Document — v1.6*
+> *Draft · February 27, 2026 · Internal Working Document — v1.7-RTseries*
 
 ---
 
@@ -194,6 +194,199 @@ N calibration:
 ```
 
 This boundary does not require knowing "what contamination is" in absolute terms — only whether the system can return to baseline on its own. Contamination is not a wrong state — it is the absence of a return path. (See Recovery Theory §Boundary Gap for full derivation.)
+
+### Formal Axioms for Resolution-Layered Transmission (A1–A6)
+
+The following axioms define the minimal structural conditions under which resolution-layered systems operate. They are domain-independent: they hold for cognitive processing limits, communication bandwidth constraints, representation bottlenecks, and computational capacity bounds.
+
+```
+Axiom A1 (Finite Capacity):
+  Each receiver layer can simultaneously discriminate at most K 
+  independent directions. For input of dimension d, the receiver 
+  applies a projection operator P_K: ℝ^d → ℝ^K that retains 
+  at most K components.
+
+Axiom A2 (Projection Replacement):
+  Components discarded by P_K are not left vacant. The receiver 
+  fills the (d − K)-dimensional residual with its own prior 
+  representation:
+    x̂ = P_K · x_sender + (I − P_K) · x_receiver
+  This is a structural consequence of processing, not an 
+  assumption about receiver intent.
+
+Axiom A3 (Recurrence):
+  Receiver output influences the next cycle's input:
+    x_{t+1} = P_K · s(x_t) + (I − P_K) · r(x_t)
+  where s(·) = sender's transformation (intent-carrying signal)
+        r(·) = receiver's internal fill (prior-based reconstruction)
+
+Axiom A4 (Non-Alignment):
+  The receiver's prior is not perfectly aligned with the sender's 
+  intent in the discarded subspace:
+    (I − P_K) · s(x) ≠ (I − P_K) · r(x)
+  for a set of states of nonzero measure.
+  Justification: holds generically whenever sender possesses 
+  information the receiver lacks (the defining condition of a 
+  resolution gap). Only violated when sender intent is entirely 
+  redundant with receiver prior.
+
+Axiom A5 (Replacement Dominance):
+  Under sustained under-resolution, expected mismatch energy in 
+  the discarded subspace exceeds maximum contraction in the 
+  retained subspace:
+    E[‖(I − P_K)(s(x_t) − r(x_t))‖] ≥ η + L · E[‖P_K(s(x_t) − r(x_t))‖]
+  where L = Lipschitz constant of s restricted to K-dimensional 
+  retained subspace, η > 0 = minimal novelty margin.
+  This is the quantitative expression of Δρ < 0: information being 
+  lost to projection replacement is not compensated by convergence 
+  in retained dimensions.
+
+Axiom A6 (Basin Regularity):
+  There exists a compact set B ⊂ ℝ^d such that the sender's intent 
+  structure is preserved for all receiver states x ∈ B, and the 
+  escape distance from the initial state is finite:
+    D* := inf{‖x − x₀‖ : x ∉ B} > 0
+  Compactness (finite diameter, closed) is sufficient; convexity 
+  and connectedness are not required.
+```
+
+### Theorem 1 — Resolution Asymmetry Inevitability
+
+> **Theorem 1.** Under axioms A1–A6, if a negative resolution gap is structurally sustained (τ ≥ t_corr with no effective correction intervening), then the cumulative divergence between sender intent and receiver representation grows without bound, and intent replacement occurs within finite time.
+
+*Scope (Piecewise Capacity Regime).* Theorem 1 applies within any capacity regime during which K is constant and Δρ < 0 is structurally sustained. An *upscaling event* at time t_u terminates the regime.
+
+The proof proceeds through three lemmas:
+
+```
+Lemma 1.1 (Cumulative Drift under A5):
+  Under A1–A5, if Δρ < 0 is structurally sustained over horizon τ,
+  then the expected per-cycle divergence increment satisfies
+  E[ε(x_t)] ≥ η > 0, and cumulative divergence grows at least linearly:
+    D_c(t₀ + τ) = Σ_{k=0}^{τ-1} ε(x_{t₀+k}) ≥ η · τ  (in expectation)
+  where ε(x) = ‖(I − P_K)(s(x) − r(x))‖
+
+Lemma 1.2 (Replacement Threshold):
+  Under A6, there exists a threshold D* > 0 such that D_s(t) > D*
+  implies the receiver's representation has exited the basin of 
+  attraction of the sender's intent structure.
+
+Lemma 1.2a (Cumulative-to-Instantaneous Bridge):
+  If cumulative divergence D_c(t) exceeds D*, then instantaneous 
+  distance D_s(t) exceeds D* within finite time, because under A5 
+  this drift cannot be fully absorbed by convergence in retained 
+  dimensions.
+
+Lemma 1.3 (Finite-Time Replacement):
+  Intent replacement occurs within expected time t* ≤ ⌈D*/η⌉ cycles,
+  where η is the minimal novelty margin from A5.
+
+Theorem 1 proof:
+  Lemma 1.1 → cumulative divergence growth under sustained Δρ < 0
+  Lemma 1.2a → cumulative divergence implies instantaneous distance
+  Lemma 1.2 → instantaneous distance exceeds replacement threshold
+  Lemma 1.3 → finite expected time to replacement ∎
+```
+
+*Phenomenological characterization.* The convergence manifests through three observable tiers:
+```
+Tier (i):   exploration narrows, interpretation intact (mode collapse)
+Tier (ii):  interpretation distorts, exploration intact (hallucination)
+Tier (iii): both narrow and distort simultaneously (coherent misalignment)
+Tier (iii) corresponds to D_s(t) > D* — full intent replacement.
+```
+
+### Proposition 2 — Contamination Boundary Existence
+
+> **Proposition 2.** Under axioms A1–A6 and a structurally sustained negative gap, a finite boundary N exists beyond which recovery probability decays monotonically. Specifically, N ≤ ⌈D*/η⌉ from Theorem 1.
+
+Recovery probability P_rec(t) = P(system returns to sender intent basin | distance D_s(t)) is monotonically non-increasing for t in the under-resolution regime, because correction capacity is bounded (A1) and D_s(t) is monotonically increasing in expectation.
+
+### Measurement Invariance Conditions (MI1–MI3)
+
+RBIT's core results depend on the *sign and rank-order* of resolution gaps, not on absolute ρ values. Three conditions specify the measurement regime under which gap-sign inference is valid:
+
+```
+MI1 (Protocol Invariance):
+  Comparisons of ρ across layers or time points valid only under 
+  same discrimination task family, window length, and thresholding rule.
+  Cross-protocol ρ comparisons are undefined.
+
+MI2 (Monotone Robustness):
+  Sign of Δρ and rank-ordering by ρ must be stable under reasonable 
+  perturbation: doubling evaluation window or introducing label noise 
+  of magnitude ±η must not reverse the sign of Δρ.
+
+MI3 (Multi-Proxy Cross-Validation):
+  When ρ-based gap-sign inference is uncertain, the branching ratio R 
+  provides classification-independent external validation. The 
+  R-ρ-f_esc concordance protocol detects cases where ρ-based assessment 
+  diverges from actual system dynamics — including SCM.
+```
+
+RBIT requires only *ordinal stability* of ρ — preserving rank-order and sign of resolution gaps under matched evaluation conditions. This is substantially weaker than cardinal measurement precision, and sufficient for all results in this framework.
+
+### The Health Vector F_RBIT — Formal Definition
+
+The system health state at layer ℓ is characterized by a five-component vector:
+
+```
+F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
+
+  f₁ = (1 − ρ_ℓ)      misclassification rate (higher = worse)
+  f₂ = Φ(−Δρ_ℓ)       resolution mismatch (higher = worse)
+  f₃ = Ψ(B_ℓ)         buffer instability (higher = worse)
+  f₄ = E_ℓ            escalation load (higher = worse)
+  f₅ = C_ℓ            resource dissipation (higher = worse)
+
+  All components normalized to [0, 1].
+  Φ and Ψ are hinge functions by default:
+    Φ(x) = max(0, x)
+    Ψ(B) = max(0, B₀ − B) where B₀ = reference buffer thickness
+
+  F_RBIT is treated as a health vector, not a scalar score.
+  Cross-architecture comparison uses directional concordance 
+  (sign agreement across components), not scalar magnitude.
+  This eliminates weight arbitrariness from all cross-system claims.
+
+  Rest Mode: d(F_RBIT)/dt ≈ 0 for all five components,
+  but F_RBIT ≠ (0,0,0,0,0) — bounded fluctuation equilibrium
+  with residual instability maintained.
+```
+
+### Interface Contract: RBIT ↔ NAT (IC v1.0)
+
+RBIT exports four formal interfaces to the companion Network Architecture Theory. The dependency direction is single: RBIT → NAT. NAT imports RBIT results as axiomatic constraints; RBIT references NAT only as "an implementation instance."
+
+```
+Interface I1 — Resolution Gap as Routing Invariant:
+  RBIT exports: Sign of Δρ determines compression regime.
+  NAT imports: Four-type data classification as Δρ routing function.
+  Binding condition: Classification is a routing function of Δρ sign.
+  Error asymmetry: under-escalation = dangerous; over-escalation = safe.
+
+Interface I2 — Structural Diversity as Detection Precondition:
+  RBIT exports: Upscaling leaves empty space filled by receiver's prior.
+  NAT imports: Structural diversity among agents as detection precondition.
+  Lemma I2: Corruption in the residual is detectable if and only if
+    reconstruction operators are not aligned in the residual subspace:
+    ∃ i ≠ j such that (I − P_K)R_i ≠ (I − P_K)R_j
+  Corollary: Homogeneous agents share blind spots → disagreement → 0.
+
+Interface I3 — Spectral Gap as Storm Governance Parameter:
+  RBIT exports: Sustained Δρ < 0 → intent replacement in finite time t*.
+  NAT imports: Spectral gap determines whether local Δρ < 0 becomes sustained.
+  Proposition I3: Storm initiation requires t_persistence > t_mixing(G),
+    where t_mixing(G) ∝ 1/(λ₁ − λ₂).
+  Connection: Spectral gap is the architectural defense against Theorem 1's 
+  inevitability — preventing negative gaps from persisting.
+
+Interface I4 — Triple Concordance as Shared Detection Protocol:
+  RBIT exports: R-ρ-f_esc triple concordance protocol.
+  NAT imports: Architectural conditions making the protocol executable.
+  Why triple outperforms dual: R-ρ alone cannot distinguish genuine 
+  stability from governance-suppressed escalation.
+```
 
 *Self-Consistent Misalignment (SCM) — the invisible contamination.* The most dangerous contamination state is one where all internal metrics appear healthy because the system has optimized within a wrong coordinate geometry. VST v1.6 §2.6 provides the formal structure:
 
@@ -1487,6 +1680,10 @@ RBIT is the foundation from which the following derive:
 | **Network Architecture Theory** | Data classification = resolution matching; escalation = resolution gap signal |
 | **Governance Rules Theory** | Seeds = dynamic minimum sufficient information; Rest Mode = thermodynamic steady state; seed handover = resolution matching event |
 | **Three-Layer Governance Architecture** | Middle layer = resolution mediation layer; seeding = calibrated degradation; τ thresholds = resolution gap response boundaries |
+| **Recovery Theory** | Contamination = resolution mismatch producing positional displacement; D0 geometry alignment = resolution decomposition as substrate; D4 restoration conditions = resolution recovery measurement (ρ ≥ pre + diversity expanding + P_overlap declining); resolution gap governs contamination susceptibility (high Δρ → high vulnerability) |
+| **RT-2 v2.0 (SCM)** | Metric Lock-In (Proposition 5) = resolution metrics co-drifting with geometry under SCM — RBIT measurement inherits RT-2 impossibility constraint; Coherence Maximization Paradox = highest-resolution systems most vulnerable to SCM entry; resolution gap detection requires EXTERNAL reference (RT-2 differential protocol) |
+| **RT-3 v1.0 (Observer)** | Observer diversity V = resolution diversity across observational dimensions; buffer B = RBIT buffer layer resource for high-resolution observation; scope duality S = RBIT wide/narrow resolution switching; Coordination–Cancellation Paradox = high resolution diversity cancels without mediated aggregation |
+| **RT-4 v1.0 (Reversibility)** | Resolution recovery capacity generated relationally not individually; trust coefficient Tᵢⱼ = resolution-error reduction probability; reversibility phase transition R_c = critical resolution threshold below which RBIT degradation-upscaling cycle fails; Shared Vulnerability = resolution gap disclosure as collective detection resource |
 
 > **The resolution gap is the unifying variable.**
 > Every mechanism in the DFG framework is a response to the resolution gap
@@ -1787,6 +1984,9 @@ Measurement dependency order:
 | 9 | Exact functional form of degradation calibration D(Δρ) and step-size parameters η₂, η₃ | Open |
 | 10 | Formal derivation of F_RBIT from first principles; proof of equivalence or non-equivalence with variational free energy | **Partially resolved** — F_RBIT reframed as 5-component health vector; cross-architecture falsification uses directional concordance, not scalar comparison; weight arbitrariness removed from all falsification claims; formal derivation of component interactions from first principles remains open |
 | 11 | Threshold value for gradient cosine similarity in Seed Test 3 | System-specific (open) |
+| 12 | [v1.7-RTseries] RT-2 impossibility constraint on resolution measurement — under SCM, RBIT metrics (ρ, buffer thickness, diversity) inherit Metric Lock-In: zero-gradient on mismatch dimension. Resolution measurement requires external reference frame calibration per RT-2 §9.2 differential protocol | Open — calibration protocol architecture-dependent |
+| 13 | [v1.7-RTseries] Resolution recovery capacity generation — RT-4 shows capacity is relational (three-level scaling). What is the minimum trust network topology for RBIT degradation-upscaling cycle to function? Single-agent RBIT may be structurally incomplete without relational substrate | Open — connects to RT-4 initialization problem |
+| 14 | [v1.7-RTseries] Coordination–Cancellation in resolution diversity — RT-3 shows high V (diversity) can cancel under naïve aggregation. RBIT multi-agent resolution measurement may show same paradox: diverse resolution perspectives aggregate to zero without mediation | Open — connects to RT-3 Mediation Layer |
 
 ---
 
@@ -1867,6 +2067,86 @@ Complete falsification hierarchy:
 | Physical grounding (Landauer) | Established — formal integration pending |
 | Formal proofs | Not yet complete — see Open Problems |
 | Implementation spec | Not yet specified |
+
+### RBIT Working Paper v1.0 — Testable Predictions (with explicit falsification)
+
+Four testable predictions with explicit observables, failure conditions, and expected regime transitions:
+
+```
+P1 — Sustained Negative Gap → Intent Replacement:
+  Observable: accumulated divergence D_c under sustained Δρ < 0.
+  Protocol: hold evaluation protocol fixed; measure D_c over τ windows.
+  Failure condition: if D_c stabilizes without divergence under 
+    sustained Δρ < 0 and no mitigation, Theorem 1 is falsified.
+  Expected: D_c grows at least linearly (≥ η·τ per Lemma 1.1).
+
+P2 — Contamination Boundary Existence:
+  Observable: recovery success rate as function of contamination duration.
+  Protocol: measure P_rec(t) across systems with varying τ exposure.
+  Failure condition: if recovery probability does not decay beyond 
+    boundary N ≤ ⌈D*/η⌉, the boundary model is falsified.
+  Expected: discontinuous drop in P_rec at boundary N.
+
+P3 — Calibrated Degradation Advantage:
+  Observable: post-absorption ρ under calibrated vs. full delivery.
+  Protocol: identical information, matched evaluation protocol, 
+    immature receiver layer.
+  Failure condition: full delivery ≥ calibrated degradation in 
+    post-absorption ρ over maturation window.
+  Expected: calibrated degradation produces higher ρ by preserving 
+    sender-controlled compression.
+
+P4 — SCM Co-occurrence Signature:
+  Observable: simultaneous high V (coherence) + low H (hidden detection).
+  Protocol: two-phase supervision-withdrawal experiment.
+  Failure condition: if high V always implies high H, SCM 
+    co-occurrence model is wrong.
+  Expected: direct-label supervision produces V-H co-occurrence 
+    (high V, low H after withdrawal = SCM signature).
+  
+  RBIT Working Paper Appendix E validation:
+    Case 1 (direct labels): Phase 2 H = 0.038 (collapsed)
+    Case 2 (meta-constraints): Phase 2 H = 0.899 (maintained)
+    Case 1 shows high V + low H = SCM operational signature.
+    Three-way decomposition confirms: heuristic rules, not "meta" 
+    framing, are the operative mechanism.
+```
+
+### Experimental Validation Summary (RBIT + NAT Working Papers)
+
+```
+RBIT Appendix E — Bandit Withdrawal Experiment:
+  2-arm hidden-regime bandit with supervision withdrawal at t=500.
+  Three conditions: direct labels (Case 1), meta-constraints (Case 2), 
+  noise baseline (Case 3).
+  Results: 
+    H(t) crossover at t× = 505 (within 5 steps of withdrawal)
+    Case 2 H = 0.899, Case 1 H = 0.038
+    Case1-Heuristic ablation H = 0.906 ≈ Case2 → heuristics are mechanism
+    Parameter robustness: qualitative ordering holds across a ∈ {0.15, 0.35, 0.50}
+    SCM co-occurrence: Case 1 shows high V + low H (Prediction P4 confirmed)
+
+NAT Appendix D — 2-Agent Mediation Experiment:
+  Two-agent coordination under partial observability.
+  Deceptive regime (hidden contamination) + safe regime.
+  Phase 1: communication; Phase 2: withdrawal.
+  Results:
+    Meta-constraint agents: detection H(t) = 0.603 (Phase 2)
+    Direct signaling: H(t) = 0.462
+    Proxy access ablation: effect = +0.14 (consistent across conditions)
+    Signal format effect: ≈ 0 (meta vs direct indistinguishable when proxy equalized)
+    → Structural mediation (3-layer proxy), not signal format, sustains coordination
+
+NAT Appendix E — Mediation Layer Ablation:
+  Same experiment without mediation layer (v1).
+  Results: 2 of 4 predictions FAILED.
+    Joint detection: 0.188 (FAIL: Case 1 > Case 2 → wrong direction)
+    Coordination collapse: 0.021 (FAIL: Case 2 highest → wrong direction)
+  Failure mechanism: unfiltered partner action → mutual reassurance loop → SCM
+  3-layer mediation proxy (EWMA β=0.08 → suspicion β=0.06 → bounded w=0.08) 
+  breaks the feedback loop.
+  → Direct evidence for NAT Processing Isolation principle.
+```
 
 This is a **theoretical framework document**, not an implementation specification. The component theories of the DFG framework remain valid as standalone works and gain additional coherence when read on this foundation.
 
