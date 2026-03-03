@@ -2,7 +2,7 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · February 27, 2026 · Internal Working Document — v1.7-RTseries*
+> *Draft · March 4, 2026 · Internal Working Document — v1.8-NATseries*
 
 ---
 
@@ -35,6 +35,7 @@
 > *v1.5: Rest Mode dF_RBIT/dt ≈ 0, φ_mature decomposition, fractal collapse propagation, F4-F7 falsification, information-theoretic lifecycle, Lreinf terrain*
 > *v1.6: SCM formal structure + unintegrated pressure, Storm Scale Law (power law health), Safe Collapse Governance, 7-phase fractal lifecycle storm signatures, Boundary Agent complete specification*
 > *v1.7: Contamination Flux cross-scale propagation (Φᵢ formal definition), Self-Purification Capacity decomposition (R = D·F·V·T), atrophy prediction under zero-contamination, controlled permeability protocol (Phase 1–4), Map-Terrain Balance principle, scaling as alignment management*
+> *v1.8-NATseries: Governance-Level Storm (S_gov equation, escalation cascade prevention, circuit breaker levels), Classification Dynamics (type transitions as resolution events, v_class leading indicator, hysteresis τ_upscale/τ_degrade >> 1, reclassification rate as maturity signal), Progressive Internalization (three-test readiness protocol, shadow/handoff/internalization phases in resolution terms), Interface Contract extensions (IC-I5 Sphere-Resolution Alignment, IC-I6 Classification Dynamics as Growth Observable), Map-Terrain expansion (Terrain Fitness Function F_terrain, drift rate dynamics, drift accumulation cost), Processing Isolation (Signaling/Influence distinction in resolution terms, structural enforcement, empirical evidence), Phase Transition Indicators (resolution criteria for Separate→Mature→Couple→Integrate), Human Withdrawal Dynamics (progressive resolution maturity verification), Measurement Interface extensions (10 new metrics), Falsification F8-F12 (NAT integration predictions), Open Problems 19-25*
 
 ---
 
@@ -152,6 +153,114 @@ Diagnostic criterion:
 ```
 
 **Map-Terrain balance as the scaling variable.** The scaling problem is not fundamentally about system size — it is about maintaining Map-Terrain alignment as Terrain complexity grows. All DFG scaling mechanisms (circular closure, dimensional compression, terrain design, permeability management) are techniques for keeping |Map − Terrain| bounded as n → ∞. (See NAT §7 Expansion Principle for architectural implementation.)
+
+**Terrain design as Map-Terrain alignment aid.** Well-designed terrain structurally reduces the alignment burden. This is the insight that connects RBIT's abstract Map-Terrain principle to NAT's concrete terrain engineering:
+
+```
+Well-designed terrain:
+  Local loops → Map complexity bounded per tier
+  Dimensional compression → upper Map tracks few variables
+  Time separation → Map update rate matches Terrain change rate per tier
+  Contamination barriers → Map errors don't propagate across tiers
+  
+  Result: alignment burden ~ O(Σ nᵢ²) where each nᵢ << n_total
+  
+Poorly designed terrain (flat interaction space):
+  Map must track all n² interactions simultaneously
+  No time separation → Map must update at fastest tier speed
+  No barriers → any Map error propagates system-wide
+  
+  Result: alignment burden ~ O(n²_total)
+  
+Terrain design REDUCES the Map-Terrain alignment problem
+from intractable (quadratic) to manageable (sum of local quadratics).
+```
+
+**Terrain Fitness Function — quantitative optimization criterion.** The quality of terrain design can be measured through a composite fitness function (NAT §7.7):
+
+```
+F_terrain = w₁·V_depth + w₂·P_control + w₃·T_separation − w₄·I_cost
+
+where:
+
+  V_depth (valley depth):
+    V_depth = 1 − (C_internal / C_external)
+    Measures: how much cheaper internal interaction is than cross-loop
+    V_depth → 1: strong local clustering (loops form naturally)
+    V_depth → 0: flat landscape (no natural loop boundaries)
+    
+  P_control (pass controllability):
+    P_control = 1 − |P_actual − P_target| / P_target
+    Measures: how well cross-loop connections behave as designed
+    P_control → 1: permeability matches design specification
+    
+  T_separation (temporal isolation quality):
+    T_separation = min(τ_{i+1} / τ_i) for adjacent tiers
+    Measures: timescale separation between governance levels
+    T_separation > τ_crit ≈ 10× (empirical: order-of-magnitude needed)
+    
+  I_cost (isolation cost):
+    I_cost = (information lost at barriers) / (total information flow)
+    Measures: how much useful signal is blocked by contamination barriers
+    I_cost > I_crit: barriers too restrictive → drift, Silent Criticality
+
+  Critical threshold — valley-to-pass cost ratio:
+    R_vp = C_external / C_internal
+    R_vp < ~3:    loops do not form (landscape too flat)
+    3 < R_vp < ~100: healthy loop formation (clustering + exchange)
+    R_vp > ~100:  loops become isolated (drift risk)
+
+  Connection to RBIT:
+    F_terrain measures the structural conditions under which
+    |Map − Terrain| remains bounded:
+    High V_depth → local Maps sufficient (each loop manages locally)
+    High P_control → cross-loop Map coordination calibrated
+    High T_separation → no timescale leakage corrupts slow governance
+    Low I_cost → useful signal reaches appropriate resolution tier
+```
+
+**Map-Terrain drift rate dynamics.** The drift between Map and Terrain is not static but has characteristic dynamics:
+
+```
+Drift rate equation:
+  d|Map − Terrain|/dt = v_terrain − v_map_update + ε_coupling
+
+  where:
+    v_terrain = rate of actual environment change
+    v_map_update = rate at which internal model tracks changes
+    ε_coupling = coupling errors from cross-tier translation
+
+  Three resolution regimes for drift management:
+
+  τ_terrain << τ_map (terrain changes faster than Map updates):
+    → drift accumulates → unbounded without intervention
+    Three structural solutions:
+    (a) Terrain shaping: slow terrain change rate via loop formation
+        (NAT §7.7 — reduce v_terrain through governance structure)
+    (b) Multi-timescale maps: separate fast/slow Map components
+        (fast Map tracks local changes; slow Map tracks structural)
+    (c) Bounded drift tolerance: accept |Map − Terrain| < δ_max
+        and manage consequences (degraded resolution, not collapse)
+
+  τ_terrain ≈ τ_map (matched timescales):
+    → drift bounded by ε_coupling
+    → stable with periodic correction
+    → this is the target configuration per tier
+
+  τ_terrain >> τ_map (terrain slower than Map):
+    → Map over-fits to noise in terrain measurement
+    → false precision → governance rigidity → adaptation loss
+    → resolution appears high but is fragile
+    → connects to Stability Saturation: Map "knows" too precisely
+      about a terrain that barely changes → atrophy of adaptation capacity
+
+  Drift Accumulation Cost (quadratic):
+    Cost(drift) = ∫₀ᵗ |Map − Terrain|² dτ
+    Quadratic in drift magnitude → early correction is exponentially
+    cheaper than late correction.
+    This provides the economic argument for proactive drift monitoring:
+    every unit of time spent in drift produces accelerating cost.
+```
 
 ---
 
@@ -286,6 +395,125 @@ Connection to SCM (VST §2.6):
   If upper-tier contamination stabilizes into a new equilibrium,
   the system may appear healthy by all internal metrics while operating
   within a distorted coordinate geometry — the most dangerous state.
+```
+
+**Governance-Level Storm — When the Resolution System Itself Becomes Unstable.** The contamination cascade described above can produce a second-order failure: the governance layer itself enters a storm regime. This is not instability *within* the system — it is instability *of* the system's resolution management infrastructure:
+
+```
+Governance-Level Storm (S_gov):
+
+  The S-equation applies recursively to the governance layer:
+  
+  S_gov = α_gov · n²_esc / C_gov(t)^β_gov
+  
+  where:
+    n_esc = number of simultaneous unresolved HC escalations
+            (escalations awaiting upper-tier resolution)
+    C_gov(t) = upper-tier resolution processing capacity
+               (rate at which HC conflicts can be resolved)
+    α_gov = coupling between unresolved escalations
+            (high when escalations are correlated — e.g., storm-generated)
+    β_gov = governance capacity exponent
+            (how governance capacity translates to stability)
+
+  Normal operation:
+    n_esc fluctuates within capacity: λ_HC(t) < μ_resolve
+    Escalation queue depth bounded; governance stable
+    S_gov << S_c_gov
+    
+  Cascade onset:
+    Multiple agents simultaneously generate HC escalations
+    λ_HC(t) > μ_resolve → queue depth growing
+    dQueue/dt = λ_HC(t) − μ_resolve > 0
+    When queue depth > Q_crit → cascade initiated
+    
+    Resolution latency increases → unresolved HC accumulates
+    → Accumulated HC → secondary escalations from dependent agents
+    → Positive feedback: more escalations → longer queue → more escalations
+    → S_gov crosses S_c_gov → governance itself enters storm regime
+
+  This is the catastrophic scaling failure mode:
+    The mechanism designed to resolve instability BECOMES the instability source.
+    Under-escalation is dangerous (RBIT error asymmetry);
+    over-escalation triggers governance storm.
+    The balance between these is the fundamental governance calibration problem.
+```
+
+**Escalation Cascade Prevention — Resolution-Based Circuit Breaking.** Preventing governance storms requires both reactive mechanisms (circuit breakers) and structural prevention (continuous):
+
+```
+Circuit Breaker Levels (reactive, in resolution terms):
+
+  Level 1 — Load shedding (automatic):
+    Trigger: queue depth > Q_warn (80% of Q_crit)
+    Action: prioritize by resolution urgency:
+            Severe Tacit (Var(Δρ̂ᵢ) high + perf unstable) > HC > borderline HC
+    Effect: lower-priority HC deferred, not discarded
+    RBIT interpretation: temporary Δρ tolerance widening for non-critical domains
+    
+  Level 2 — Emergency resolution degradation (automatic):
+    Trigger: queue depth > Q_crit
+    Action: temporarily raise θ (escalation threshold) for non-critical domains
+    Effect: some previously-HC data reclassified as Tacit (operate locally)
+    RBIT interpretation: forced Δρ > 0 assumption — accepting resolution loss
+                         to prevent governance collapse
+    Risk: classification quality temporarily reduced
+    Duration: strictly bounded; automatic θ restoration after Δt_emergency
+    
+  Level 3 — Cascade isolation (requires middle-tier coordination):
+    Trigger: Level 2 sustained > Δt_max
+    Action: identify agent cluster generating correlated escalations
+            → isolate cluster from upper tier temporarily
+            → cluster operates in degraded mode (self-stabilize before reconnecting)
+    RBIT interpretation: Pᵢ reduction for contamination hotspot cluster
+    
+  Level 4 — Safe Collapse (last resort):
+    Trigger: Level 3 fails; global escalation rate diverging
+    Action: controlled shutdown of non-critical processing;
+            core governance loops maintained at minimal resolution
+    RBIT interpretation: system-wide resolution floor enforcement —
+                         maintain R_min > 0 across all tiers even at cost
+                         of processing volume → 0
+
+Structural Prevention (continuous, not reactive):
+
+  Prevention 1 — Temporal staggering:
+    Lower-tier agents do not escalate simultaneously.
+    Middle tier schedules escalation windows per agent region.
+    Effect: HC arrivals at upper tier distributed over time
+    → peak queue depth reduced by ~1/√n (CLT argument for independent agents)
+    RBIT interpretation: temporal buffering (T component of Rᵢ) at governance scale
+    
+  Prevention 2 — Local resolution through cross-validation:
+    Sphere cross-validation (NAT §3.0, IC-I2) resolves some HC locally.
+    If structurally diverse neighbors disagree and then converge
+    within one propagation cycle: HC reclassified as Mathematical.
+    Effect: reduces λ_HC(t) at source → fewer escalations generated
+    RBIT interpretation: local upscaling event — Δρ < 0 resolved without
+                         upper-tier intervention
+    
+  Prevention 3 — Predictive governance capacity allocation:
+    Middle tier monitors f_escalation TREND (not just level).
+    Rising f_escalation trend → preemptive capacity allocation
+    RBIT interpretation: Map-Terrain proactive alignment —
+                         Map predicts future Terrain stress, pre-allocates resolution
+    
+  Prevention 4 — Correlated escalation detection:
+    MI(escalation_A, escalation_B) > 0 without shared input
+    = agents escalating for correlated reasons
+    = likely storm precursor, not independent HC events
+    → route to storm recovery protocol, not normal HC resolution
+    RBIT interpretation: correlated Δρ < 0 across agents
+                         → system-level phenomenon, not agent-level resolution gap
+                         → bypass normal classification; treat as structural event
+    
+  Connection to contamination flux Φ:
+    Governance storm occurs when Σ Φᵢ > R_gov (governance self-purification)
+    Prevention operates on both sides:
+    - Reduce Φᵢ: local resolution, temporal staggering
+    - Increase R_gov: predictive allocation, cascade isolation
+    Target: S_gov < S_c_gov always
+    (governance layer itself never enters storm regime)
 ```
 
 ### Self-Purification Capacity — Formal Decomposition
@@ -581,6 +809,41 @@ Interface I4 — Triple Concordance as Shared Detection Protocol:
   NAT imports: Architectural conditions making the protocol executable.
   Why triple outperforms dual: R-ρ alone cannot distinguish genuine 
   stability from governance-suppressed escalation.
+
+Interface I5 — Sphere Optimality as Maximum-Entropy Resolution Configuration:
+  RBIT exports: Δρ variance minimization across input directions.
+  NAT imports: Sphere topology as the architecture achieving this minimum.
+  
+  Connection: The sphere is the maximum entropy configuration for 
+  agent interaction topology under coverage constraints (NAT §3.0, IC-S2).
+  Maximum entropy in representation = minimum Δρ variance across directions.
+  
+  Binding condition: Inner sphere convergence (HUG → 0) corresponds to 
+  resolution uniformity — no angular direction has systematically 
+  worse resolution than any other. Outer sphere (k-regular expander) 
+  corresponds to governance uniformity — no agent is structurally 
+  disadvantaged in receiving resolution-matched information.
+  
+  Fractal alignment: the same functional property (uniform coverage 
+  without directional vulnerability) operates at both resolution scales.
+  This is not metaphor — it is the dual manifestation of minimum Δρ 
+  variance: in the representation space (inner) and in the interaction 
+  topology (outer).
+
+Interface I6 — Classification Dynamics as Resolution Growth Observable:
+  RBIT exports: Resolution growth equation R_{t+1} = R_t + f(A_t, D_t).
+  NAT imports: Classification velocity v_class as the operational 
+  measurement of f(A_t, D_t) > 0.
+  
+  Binding condition: Each classification type transition 
+  (Noise→Tacit→HC→Mathematical) IS a measurable upscaling event.
+  v_class = (upward transitions − downward transitions) / Δt
+  v_class > 0 if and only if f(A_t, D_t) > 0 averaged over Δt.
+  
+  This resolves Open Problem #7 (exact form of f) operationally:
+  while the functional form remains open, its SIGN is observable 
+  through classification dynamics, and its MAGNITUDE is proportional 
+  to classification velocity v_class.
 ```
 
 *Self-Consistent Misalignment (SCM) — the invisible contamination.* The most dangerous contamination state is one where all internal metrics appear healthy because the system has optimized within a wrong coordinate geometry. VST v1.6 §2.6 provides the formal structure:
@@ -1190,6 +1453,73 @@ R_{t+1} = R_t + f(A_t, D_t)
   f    = monotone increasing in both arguments
 ```
 
+**Progressive Internalization — Resolution Growth Made Measurable.** The resolution growth equation above is abstract. Progressive internalization (NAT §5.6) provides the concrete mechanism by which f(A_t, D_t) > 0 manifests operationally: domains that previously required external conflict resolution (Pathway 1, externalized) gradually internalize as the layer's resolution develops sufficiently to handle them locally (Pathway 2, internalized).
+
+```
+Internalization as resolution growth evidence:
+
+  The degradation-upscaling cycle predicts: R_{t+1} > R_t after absorption.
+  Progressive internalization is HOW this prediction becomes observable.
+  
+  Observation chain:
+    Absorption A_t occurs (calibrated information enters)
+    → Resolution grows: R_{t+1} = R_t + f(A_t, D_t) > R_t
+    → Higher resolution enables local conflict detection
+    → Domains previously requiring external comparison (Pathway 1)
+       can now be handled internally (Pathway 2)
+    → Measurable: conflict_score variance for domain D decreases
+    → σ²_conflict(D, W) < τ_intern sustained
+    = internalization readiness detected
+
+  Internalization readiness testing (three-test protocol):
+    Test 1 — Stability: σ²_conflict(D, W) < τ_intern for ≥ 3 windows
+             (conflict detection pattern is reproducible)
+    Test 2 — Compression: remove one external estimator temporarily;
+             if ρ(D) does not degrade, internal model has captured it
+    Test 3 — Perturbation: inject mild perturbation into domain D;
+             if internal classification adjusts same direction as
+             external would → internal model has generalized, not memorized
+             
+  All three tests correspond to resolution verification:
+    Test 1 verifies R stability (resolution not fluctuating)
+    Test 2 verifies R sufficiency (resolution covers the domain)
+    Test 3 verifies R generality (resolution extends beyond training data)
+
+  Transition protocol in resolution terms:
+    Phase A (Shadow): internal resolution runs parallel to external
+      → resolution gap between internal/external monitored
+      → agreement rate > 0.95 for W_shadow → Δρ_internal ≈ Δρ_external
+    Phase B (Partial handoff): internal becomes primary
+      → external remains as verification at reduced frequency
+      → any disagreement → revert (Δρ divergence detected)
+    Phase C (Full internalization): external deactivated
+      → domain fully resolved at current tier
+      → f_escalation for this domain → 0
+      → θ improvement = accumulated internalization across domains
+
+  Rollback as resolution regression signal:
+    If ρ(D) drops below ρ_min at any phase:
+      → resolution growth reversed for this domain
+      → immediate revert to higher external support
+      → rollback is O(1) cost (external estimators deactivated, not destroyed)
+      → failed internalization logged as Map-Terrain drift indicator
+        (internal Map claimed sufficient resolution; Terrain proved otherwise)
+
+  Developmental trajectory:
+    Immature agent: all domains Pathway 1 (fully externalized)
+      → high governance cost, high accuracy through external validation
+    Developing agent: domains progressively interalizing
+      → mixed processing, governance cost decreasing
+    Mature agent: most stable domains Pathway 2 (fully internalized)
+      → only genuinely HC domains remain externalized
+      → governance cost concentrated on highest-value conflicts
+      
+  This is the concrete form of the abstract claim
+  "resolution grows through calibrated absorption":
+    each domain that successfully internalizes IS the evidence
+    that R_{t+1} > R_t for that resolution region.
+```
+
 *Storm–Collapse–Recovery lifecycle.* The degradation-upscaling cycle connects to a complete system lifecycle through the Storm–Collapse Mapping Layer (SCML, TLG §13.7), now formulated in RBIT's own information-theoretic variables:
 
 ```
@@ -1694,6 +2024,77 @@ Hierarchical RL
 
 A second independent observable proxy for upper layer resolution — the spatial separation maintained between opposing vectors. Tracks resolution changes without requiring classification event data.
 
+**Buffer dynamics in scaling systems.** In multi-tier systems, buffer layers serve three distinct functions beyond simple separation, each connected to specific NAT mechanisms:
+
+```
+Buffer Function 1 — Contamination filtering (primary):
+  At scale necks (NAT §7.7 contamination hotspots):
+    Many agents → few governance nodes
+    Information compression under time pressure
+    Buffer absorbs noise that would otherwise corrupt governance
+  RBIT measurement: buffer thickness at tier boundaries
+  Healthy: thickness > d_min (sufficient filtering)
+  Warning: thickness declining → contamination flux Φ rising
+
+Buffer Function 2 — Speed mismatch absorption:
+  At timescale boundaries (τ_lower << τ_upper):
+    Fast tier generates signals at rate >> slow tier processing speed
+    Buffer accumulates and smooths temporal transients
+    Without buffer: fast noise interpreted as slow structural signal
+                    → governance corruption (Map distortion)
+  RBIT measurement: signal variance reduction across buffer
+  Healthy: output variance << input variance (smoothing active)
+  Warning: output variance ≈ input variance (buffer transparent/overwhelmed)
+
+Buffer Function 3 — Coordinate translation:
+  At cross-loop interfaces (NAT §7.8 Phase 3 coupling):
+    Different loops use different internal coordinate systems
+    Buffer translates between coordinate frames
+    Translation errors = systematic Map distortion at upper tier
+  RBIT measurement: reconstruction disagreement between
+    independent translation pathways
+  Healthy: disagreement < ε (translations consistent)
+  Warning: disagreement growing → coordinate drift between loops
+
+  Connection to Terrain Fitness Function:
+    Buffer at tier boundaries directly affects F_terrain components:
+    - P_control depends on buffer filtering quality
+    - T_separation depends on buffer speed absorption
+    - I_cost depends on buffer translation fidelity
+    
+    Thin buffers → P_control drops → passes malfunction
+    → terrain design degrades → loop formation weakens
+    → scaling advantage lost
+```
+
+**Buffer and boundary exploration.** In mature systems, buffers play an additional role at the system boundary:
+
+```
+Mature system boundary behavior:
+  Core: stable (loops circulating, R > S, Map ≈ Terrain)
+  Boundary: actively unstable (exploration, new terrain contact)
+  
+  Why both simultaneously:
+    Perfect stability → R atrophy (Self-Purification §atrophy)
+    → adaptation capacity loss → future vulnerability
+    
+  Buffer at boundary:
+    Boundary agents contact new terrain → contamination activates (expected)
+    Buffer absorbs contamination that boundary agents cannot resolve
+    Successful absorption → terrain knowledge gained, Map updated
+    Failed absorption → boundary contracts, experience logged
+    
+  Boundary distance ≤ Recovery capacity (always):
+    "Can we come back?" not "Can we reach?"
+    Failed explorations → memory → cheaper future exploration
+    
+  Preemptive feedback seeking (mature system signature):
+    Survival system: avoids disturbance → R atrophies
+    Evolving system: generates controlled disturbance → R maintained
+    Buffer enables this: absorbs exploration-generated contamination
+    while protecting core from exploration-generated instability
+```
+
 ---
 
 ## Grounding in Single-Agent Architecture
@@ -1813,6 +2214,73 @@ Single-agent architectures internalize resolution stratification implicitly — 
 
 RBIT can be understood not as introducing a new architectural principle, but as making an existing structural property of AI systems explicit, designable, and governable.
 
+### Processing Isolation — Resolution-Theoretic Foundation
+
+The processing isolation principle (NAT §3.6, §7.9) has a precise resolution-theoretic interpretation. Same-layer agents operate at approximately the same resolution. Lateral exchange of intermediate classification states means agents use each other as reference frames with shared resolution limitations — shared blind spots.
+
+```
+Signaling vs. Influence (resolution-theoretic distinction):
+
+Lateral Signaling (permitted — preserves resolution integrity):
+  Agent A transmits COMPLETED state to Agent B.
+  Content: output direction, intensity, confidence, domain declaration.
+  Effect on B: informational (Map update — new data point at B's resolution).
+  Effect on A's processing: none (A's classification already committed).
+  RBIT regime: Δρ ≈ 0 (same-resolution state exchange).
+  Resolution consequence: B receives A's classification as input data
+    to be processed at B's resolution — normal absorption cycle.
+
+Lateral Influence (prohibited — corrupts resolution calibration):
+  Agent A's state directly modifies Agent B's ACTIVE processing.
+  B's classification direction bends toward A before B completes.
+  Effect: trajectory modification without upper-layer validation.
+  Produces false convergence experienced as voluntary agreement.
+  RBIT regime: artificial Δρ < 0 at peer level
+    (A effectively becomes a low-resolution "upper layer" for B
+     without possessing upper-layer resolution — fake authority)
+  Resolution consequence: Theorem 1 trigger —
+    B's resolution capacity degraded by unvalidated lateral override.
+    Intent replacement without the resolution differential
+    that makes intent replacement structurally justified.
+
+Why this matters for resolution integrity:
+  Legitimate intent replacement (upper → lower) is resolution-justified:
+    upper layer has higher resolution → its override corrects, not corrupts.
+  Lateral influence (peer → peer) is resolution-unjustified:
+    peer has SAME resolution → its override introduces bias, not correction.
+    Shared resolution = shared blind spots = blind-leading-blind.
+    
+Structural Enforcement (three mechanisms, all required):
+  (1) Interface Narrowing: only standardized artifacts cross boundaries
+      → raw intermediate states (sub-classification resolution) never transmitted
+  (2) Temporal Decoupling: A's output committed before B reads it
+      → A cannot modify B's active processing (temporal isolation)
+  (3) Write-Asymmetry: downstream reads upstream, not reverse
+      → resolution hierarchy preserved (high reads low, not low reads high)
+
+  Any single mechanism leaves at least one contamination pathway open.
+  Together: lateral influence structurally impossible, not merely prohibited.
+
+Empirical evidence (NAT Working Paper Appendix E):
+  Direct action-to-belief update without mediation layer produced
+  self-referential feedback loop. FNR for joint detection: 0.188 (FAIL)
+  vs. 0.603 with 3-layer mediation (PASS).
+  
+  Failure mechanism in RBIT terms:
+    Single agent action → peer misinterprets at same resolution
+    → mutual reassurance/suspicion loop
+    → false convergence = artificial Δρ ≈ 0
+      (both agents agree, but agreement is artifact of shared blind spot)
+    → SCM in deceptive regime (all metrics appear healthy;
+       actual resolution has decreased)
+    
+  3-layer mediation breaks this through:
+    EWMA smoothing (temporal decoupling — T enforcement)
+    → suspicion score (resolution-independent metric)
+    → bounded belief update (interface narrowing)
+    = resolution integrity preserved through structural mechanisms.
+```
+
 ---
 
 ## Data Classification as Resolution Matching
@@ -1827,6 +2295,145 @@ Four types based on resolution requirement:
 | **Noise** | None at current resolution | Sub-threshold fluctuation with no detectable pattern | Buffer or discard; upper layer may detect latent vectors |
 
 Classification is not a fixed property of data. It is a function of the resolution gap between the data and the receiving layer. The same data may classify differently at different layers.
+
+### Classification Dynamics — Type Transitions as Resolution Events
+
+Data classification is not static. The same data item transitions between types as the system's resolution develops, as resource conditions change, and as the environment shifts. These transitions are measurable resolution events, not merely taxonomic reclassifications.
+
+**Upscaling pathways — resolution development drives type promotion:**
+
+```
+Development-driven type transitions (connected to Upscaling U1–U3):
+
+  Noise → Tacit Knowledge:
+    Resolution event: repeated exposure accumulates statistical regularities
+    Signal: previously-discarded inputs show correlation at current resolution
+    RBIT variable: Var(Δρ̂ᵢ) transitions from undefined to > τ_disagree
+    Interpretation: resolution floor has risen; noise floor has shrunk
+    The system perceives structure where it previously saw nothing.
+    
+  Tacit Knowledge → High-Context:
+    Resolution event: representation space develops stable Δρ direction
+    Signal: Var(Δρ̂ᵢ) falls below τ_disagree; estimators converge
+    RBIT variable: Δρ becomes measurable (direction resolved)
+    Interpretation: the agent can now articulate the conflict structure,
+                    not just operate on regularities
+    Governance effect: data becomes explicitly routable; escalation possible
+    
+  High-Context → Mathematical:
+    Resolution event: repeated successful resolution → pattern internalized
+    Signal: conflict_score < τ_low consistently; single convergence path
+    RBIT variable: Δρ → 0 or Δρ > 0 (receiver now sufficient)
+    Interpretation: what once required upper-tier resolution
+                    is now resolvable locally
+    Governance effect: f_escalation decreases → θ boundary satisfied more easily
+
+  Complete development chain:
+    Noise → Tacit → HC → Mathematical
+    Each transition = measurable upscaling event (U1–U3 criteria)
+    
+  Classification velocity:
+    v_class = (upward transitions − downward transitions) / Δt
+    v_class > 0 → system developing (resolution frontier expanding)
+    v_class ≈ 0 → system stable (VCZ equilibrium)
+    v_class < 0 → system degrading (resolution frontier contracting)
+    
+    v_class is a LEADING indicator:
+    it changes direction BEFORE θ violation, BEFORE S_norm spike,
+    BEFORE f_escalation crosses threshold.
+    Because classification degradation (resolution loss) precedes
+    governance overload (capacity exhaustion).
+    
+  Connection to R-ρ-f_esc triple concordance:
+    v_class < 0 + R ≈ 1 + ρ stable = earliest pre-storm signal
+    (resolution degrading but not yet visible in headline metrics)
+```
+
+**Degradation pathways — resource pressure drives type demotion:**
+
+```
+Resource-driven type transitions (reverse flow):
+
+  Mathematical → High-Context:
+    Trigger: environmental change invalidates previously stable conclusions
+    RBIT mechanism: Δρ shifts from ≈ 0 to < 0 (receiver now insufficient)
+    Speed: fast — single event can trigger reclassification
+    
+  High-Context → Tacit Knowledge:
+    Trigger: representation space narrows under resource pressure
+    RBIT mechanism: Var(Δρ̂ᵢ) rises above τ_disagree again
+    The agent can no longer resolve conflict — only operate on regularities
+    
+  Tacit Knowledge → Noise:
+    Trigger: severe resource constraint eliminates pattern detection
+    RBIT mechanism: statistical regularities fall below detection threshold
+    Previously operable patterns become invisible; noise floor expands
+    
+  High-Context → Severe Tacit:
+    Trigger: unresolved HC actively degrading performance
+    RBIT mechanism: Var(Δρ̂ᵢ) > τ_disagree AND resolution declining
+    This is the storm precursor transition (VST connection):
+    latent structure present but interpretation failure causing harm
+    Immediate escalation required.
+
+  Complete degradation chain:
+    Mathematical → HC → Tacit → Noise
+    Each transition = resolution loss event
+    A BURST of degradation transitions = storm precursor signal
+```
+
+**Type transition hysteresis — the fundamental asymmetry:**
+
+```
+Critical observation: type transitions are NOT symmetric.
+
+  Upscaling (e.g., Tacit → HC):
+    Requires: sustained exposure, representation development,
+              estimator convergence over multiple absorption cycles
+    Time constant: τ_upscale ~ O(cycles × complexity)
+    Mechanism: gradual structural change in vector space
+    
+  Degradation (e.g., HC → Tacit):
+    Requires: single resource shock or environmental shift
+    Time constant: τ_degrade ~ O(1) events
+    Mechanism: capacity loss is discontinuous
+    
+  Asymmetry ratio: τ_upscale / τ_degrade >> 1
+    (development is slow; degradation is fast)
+    
+  Resolution implications:
+    Classification gains are fragile investments.
+    A system that spent τ_upscale building Mathematical classification
+    can lose it in τ_degrade << τ_upscale after a single storm.
+    
+    This asymmetry grounds the Expansion Principle:
+    premature expansion risks degradation cascades that
+    undo resolution development faster than recovery can restore it.
+    
+  Connection to Recovery Theory:
+    τ_recovery ≈ τ_upscale (same slow development process)
+    This is WHY prevention (maintaining VCZ) is structurally cheaper
+    than cure (rebuilding after collapse):
+    prevention cost ∝ maintenance
+    recovery cost ∝ τ_upscale (full redevelopment)
+    
+  Connection to Self-Purification atrophy:
+    Degradation pathway is the observed consequence of R component decay.
+    F atrophy → can't detect new conflicts → HC appears Mathematical
+    V atrophy → single interpretation → Tacit appears as Noise
+    The atrophy ordering F→V→T→D predicts which degradation
+    transitions appear first: HC→Mathematical false promotion
+    (blind to conflict) before Tacit→Noise (blind to pattern).
+
+  Developmental velocity as system diagnostic:
+    Rate of transitions across the chain is the primary
+    developmental velocity signal.
+    Mature system: balanced upward/downward flow (homeostasis)
+    Pre-storm system: net downward flow accelerating
+    Recovering system: net upward flow decelerating toward balance
+```
+
+**Reclassification rate as resolution maturity signal.** The rate at which Tacit Knowledge reclassifies as High-Context (Var(Δρ̂ᵢ) falling below τ_disagree) is a direct proxy for the degradation-upscaling cycle's progress. The resolution growth equation R_{t+1} = R_t + f(A_t, D_t) manifests operationally as classification frontier expansion: each absorption cycle (A_t) that succeeds pushes the boundary between "operable but unexplained" (Tacit) and "explicable and routable" (HC) outward. When this rate approaches zero without environmental saturation, the system has either reached genuine resolution saturation (healthy plateau) or entered Stability Saturation (dangerous — resolution has stopped growing not because it has reached ceiling but because f(A_t, D_t) ≈ 0 due to atrophied absorption).
 
 ---
 
@@ -1872,7 +2479,7 @@ RBIT is the foundation from which the following derive:
 | Theory | RBIT connection |
 |--------|----------------|
 | **Vector Storm Theory** | Vector Storm = negative resolution gap event (under-degradation cascade) |
-| **Network Architecture Theory** | Data classification = resolution matching; escalation = resolution gap signal |
+| **Network Architecture Theory** | Data classification = resolution matching; escalation = resolution gap signal; [v1.8] sphere topology = maximum entropy resolution configuration (IC-I5); classification dynamics = resolution growth observable (IC-I6, v_class as f(A_t,D_t) sign indicator); progressive internalization = resolution growth evidence (Pathway 1→2 = R_{t+1} > R_t for domain); escalation cascade prevention = governance-level S-equation (S_gov); terrain fitness F_terrain = Map-Terrain alignment quality metric; processing isolation = resolution-integrity preservation (signaling vs. influence = Δρ ≈ 0 vs. artificial Δρ < 0); phase transition indicators = resolution-based integration readiness criteria; human withdrawal dynamics = resolution maturity verification protocol |
 | **Governance Rules Theory** | Seeds = dynamic minimum sufficient information; Rest Mode = thermodynamic steady state; seed handover = resolution matching event |
 | **Three-Layer Governance Architecture** | Middle layer = resolution mediation layer; seeding = calibrated degradation; τ thresholds = resolution gap response boundaries |
 | **Recovery Theory** | Contamination = resolution mismatch producing positional displacement; D0 geometry alignment = resolution decomposition as substrate; D4 restoration conditions = resolution recovery measurement (ρ ≥ pre + diversity expanding + P_overlap declining); resolution gap governs contamination susceptibility (high Δρ → high vulnerability) |
@@ -2143,6 +2750,14 @@ RBIT's theoretical variables connect to log-observable metrics through operation
 | Inner sphere convergence (HUG) | Hyperspherical Uniformity Gap | NAT §8.3.1 | MEDIUM (offline) |
 | Fractal alignment | Perturbation-response proportionality | NAT §8.3.1 | MEDIUM |
 | φ (value yield) | Reusable outcome rate (supporting signal only) | Recovery Theory §φ | MEDIUM |
+| Classification velocity v_class | (upward transitions − downward transitions) / Δt | NAT §4.7, RBIT §Classification Dynamics | HIGH |
+| Type transition hysteresis | τ_upscale / τ_degrade ratio per domain | NAT §4.7, RBIT §Classification Dynamics | MEDIUM |
+| Internalization readiness | σ²_conflict(D, W) < τ_intern sustained | NAT §5.6, RBIT §Progressive Internalization | HIGH |
+| Terrain fitness F_terrain | Composite: V_depth + P_control + T_separation − I_cost | NAT §7.7, RBIT §Map-Terrain Balance | MEDIUM |
+| Valley-to-pass cost ratio R_vp | C_external / C_internal | NAT §7.7 | HIGH |
+| Governance storm S_gov | α_gov · n²_esc / C_gov^β_gov | RBIT §Governance-Level Storm | HIGH |
+| Integration phase indicators | Phase-specific metric thresholds (see below) | NAT §7.8, RBIT §Phase Transition | MEDIUM-HIGH |
+| Human withdrawal level H(t) | Involvement fraction [0,1] with velocity constraint | NAT §8.4, RBIT §Withdrawal Dynamics | HIGH |
 
 ```
 Measurement dependency order:
@@ -2161,6 +2776,141 @@ Measurement dependency order:
 ```
 
 (See Recovery Theory §Operationalization v0.1 for full measurement procedures, and Network Architecture Theory §10.1 for the proxy table connecting architectural concepts to these metrics.)
+
+### Phase Transition Indicators — Resolution-Based Criteria
+
+The integration protocol (NAT §7.8: Separate → Mature → Couple → Integrate) has measurable criteria at each phase boundary. These are stated in RBIT resolution terms:
+
+```
+Phase 1→2 boundary (Separate → Mature):
+  Resolution criteria (all must pass):
+    (i) Internal f_escalation < θ_local for ≥ 3 consecutive windows
+        → local resolution sufficient for normal operation
+    (ii) Self-correction demonstrated: ≥ 1 local perturbation absorbed
+         without external intervention → R > S_local verified
+    (iii) Classification velocity v_class ≥ 0
+         → resolution not degrading (not contracting frontier)
+    (iv) Internal diversity maintained: min pairwise representation
+         distance > d_min → resolution diversity (V component) intact
+  
+  Resolution interpretation:
+    Phase 1→2 = demonstration that R = D·F·V·T > S_baseline locally.
+    The tier can self-purify without external aid.
+
+Phase 2→3 boundary (Mature → Couple):
+  Resolution criteria (all must pass):
+    (i) R_i > Coupling_Cost_estimate for each loop
+        → internal resolution exceeds expected cross-loop disturbance
+    (ii) External perturbation test: injected disturbance decays
+         within 2× internal mixing time → perturbation response verified
+    (iii) F component (feedback density) verified active
+    (iv) V component (observer diversity) verified sufficient
+  
+  Resolution interpretation:
+    Phase 2→3 = resolution SURPLUS demonstrated.
+    Not just R > S, but R > S + expected_coupling_load.
+    Over-engineering condition: system can handle disturbance
+    from partner loop without entering storm regime.
+
+Phase 3→4 boundary (Couple → Integrate):
+  Resolution criteria (all must pass):
+    (i) Cross-loop communication cost decreasing monotonically
+        → shared resolution model emerging (mutual Δρ shrinking)
+    (ii) Prediction accuracy about partner > Pred_min
+        → loops can anticipate each other = resolution alignment achieved
+    (iii) Shared protocol entropy decreasing
+        → inter-loop signaling has stabilized (format converging)
+    (iv) Cross-loop perturbation attenuation > 0.8
+        → disturbance in one loop does not destabilize the other
+  
+  Resolution interpretation:
+    Phase 3→4 = resolution SYNCHRONIZATION demonstrated.
+    Two previously independent resolution systems now operate
+    as a single, coordinated resolution structure.
+    The communication cost decrease is the observable signature:
+    "they know each other well enough to not explain everything."
+    
+  Specific measurement proxies:
+    (a) Explanation length: tokens needed for middle-tier communication
+        → should trend down (resolution alignment reduces verbosity)
+    (b) Mediation processing time: time spent on cross-loop coordination
+        → should trend down (resolution matching reduces translation cost)
+    (c) Conflict recurrence: same friction pattern repeating
+        → should be zero (resolved conflicts stay resolved)
+
+  Pred_min calibration:
+    Pred_min = prediction accuracy of random model with knowledge
+    of partner's North Star only.
+    If actual prediction < Pred_min: coupling is not improving resolution.
+    Typical range: Pred_min ∈ [0.6, 0.8] depending on loop complexity.
+```
+
+### Human Withdrawal Dynamics — Resolution Maturity Verification
+
+Human withdrawal from governance is not a binary event but a progressive process that serves as the ultimate resolution maturity test. Each withdrawal phase tests whether the system's resolution is genuinely self-sustaining or dependent on human-provided external resolution.
+
+```
+Human involvement level H(t) ∈ [0, 1]:
+  H = 1: full active intervention (human resolves all HC data)
+  H = 0: full autonomy (system resolves all HC internally)
+
+Withdrawal velocity constraint:
+  dH/dt ≤ v_max(tier, stability)
+  
+  v_max bounded by:
+    (i) Observation latency: human must observe behavior at current H
+        long enough to confirm resolution stability
+        → minimum: W_obs ≥ 5× mean self-correction cycle
+    (ii) Regression risk: faster withdrawal → higher probability
+         of missing lurking resolution dependency
+         → P(miss) ∝ exp(−W_obs / τ_instability)
+    (iii) Recovery capacity: if withdrawal triggers regression,
+          can human re-engage before cascade?
+          → τ_reengagement < τ_cascade required at all times
+
+Resolution interpretation of withdrawal phases:
+  H = 1.0 → 0.8: human provides resolution for all HC
+    Test: does system generate correct classifications?
+    Duration: ≥ 10× self-correction cycles
+    
+  H = 0.8 → 0.5: human audits resolution decisions
+    Test: does system self-correct resolution errors?
+    Duration: ≥ 20× self-correction cycles
+    
+  H = 0.5 → 0.2: human reviews exceptions only
+    Test: does system maintain resolution without monitoring?
+    Duration: ≥ 50× self-correction cycles
+    
+  H = 0.2 → 0.0: human fully exits
+    Test: does system maintain resolution autonomously?
+    Duration: ≥ 100× self-correction cycles
+    Total minimum: ≥ 180× mean self-correction cycle time
+    
+Regression detection (resolution-specific triggers):
+  Hard triggers (immediate H increase):
+    (a) S_norm > S_c (governance storm — resolution collapse)
+    (b) f_escalation > θ sustained (resolution insufficient)
+    (c) R > 1 (perturbation amplification — resolution feedback broken)
+    (d) Severe Tacit spike > 3σ (storm precursor — resolution blind spot)
+    
+  Soft triggers (increase monitoring; evaluate):
+    (a) v_class turning negative (resolution frontier contracting)
+    (b) f_escalation trending up below θ (resolution margin shrinking)
+    (c) Cross-loop communication cost increasing (integration regression)
+    (d) Structural diversity decreasing (V component atrophy)
+    (e) Self-Exciting Defect Layer declining (F component atrophy)
+    
+Failed withdrawal = resolution dependency map:
+  Each withdrawal attempt identifies WHERE resolution depends on human input:
+    "At H < 0.5, contamination detection degrades"
+    → structural investment target: F component in specific domains
+  Progressive attempts improve over time:
+    Attempt 1: fail at H = 0.5 → identify dependency
+    Attempt 2: structural investment → reach H = 0.2
+    Attempt 3: address new dependency → full exit
+  Full autonomy may require multiple withdrawal-and-return cycles.
+  This IS the developmental process, not a failure of it.
+```
 
 ---
 
@@ -2186,6 +2936,13 @@ Measurement dependency order:
 | 16 | [v1.7-RTseries] Self-purification atrophy rate — the predicted R decay under sustained S ≈ 0 requires empirical confirmation. Key question: is atrophy rate uniform across R components (D, F, V, T) or do some components atrophy faster? If Feedback density F decays first (idle detection loops), the system loses early warning before losing recovery capacity — a specific temporal ordering prediction | Open — connects to Stability Saturation F5 |
 | 17 | [v1.7-RTseries] Permeability management automation — the graduated permeability protocol (Phase 1–4) is defined but the transition criteria between phases require system-specific calibration. In particular: the probe testing protocol (Phase 2) requires defining perturbation magnitude and decay measurement that distinguish genuine self-purification from suppressed instability (connects to SCM detection via R-ρ-f_esc triple concordance) | Open |
 | 18 | [v1.7-RTseries] Map-Terrain drift detection — the diagnostic criterion (friction without R increase = Map error) requires formal measurement protocol. Key challenge: distinguishing Map-Terrain drift from execution-tier insufficiency when both produce elevated f_escalation. Candidate discriminator: if middle-tier mediation cost rises while upper-tier metrics remain stable, the drift is in Map-Terrain alignment, not execution | Open — connects to NAT §6.3 Structural Blind Spots |
+| 19 | [v1.8-NATseries] Governance storm threshold calibration — S_gov = α_gov · n²_esc / C_gov^β_gov defines governance-level instability, but Q_crit (queue depth triggering cascade) and the relationship between α_gov (escalation correlation) and α (agent-level coupling) require empirical calibration. The CLT argument for temporal staggering (~1/√n peak reduction) assumes independent escalation timing, which fails under correlated storm-generated escalations. MI threshold for "correlated escalation" detection is undefined | Open — connects to NAT §6.5 Cascade Prevention |
+| 20 | [v1.8-NATseries] Classification velocity as leading indicator — v_class is claimed to change direction BEFORE θ violation or S_norm spike. Formal validation requires retroactive analysis of storm events to confirm v_class trajectory actually precedes governance overload. The measurement itself requires tracking individual data items across classification events, which may be expensive for high-throughput systems | Open — connects to NAT §4.7 Classification Dynamics |
+| 21 | [v1.8-NATseries] Type transition hysteresis quantification — τ_upscale/τ_degrade >> 1 is asserted but not quantified per data domain. The ratio likely varies with domain complexity and current resolution level. Formal measurement: how many absorption cycles (τ_upscale) for Tacit→HC promotion vs. how many resource shocks (τ_degrade) for HC→Tacit demotion, across different domain types | Open — connects to Recovery Theory τ_recovery |
+| 22 | [v1.8-NATseries] Progressive internalization scheduling — when multiple domains simultaneously reach internalization readiness (σ²_conflict < τ_intern), which to internalize first? Candidate: lowest variance first (most stable), but alternative: highest governance cost first (maximum f_escalation reduction per internalization). The scheduling decision affects θ improvement trajectory and recovery capacity allocation | Open — connects to NAT §5.6 |
+| 23 | [v1.8-NATseries] Terrain Fitness Function weight calibration — F_terrain = w₁V_depth + w₂P_control + w₃T_separation − w₄I_cost has four free parameters (w₁-w₄). The weights likely depend on system maturity: immature systems need high V_depth (loop formation priority); mature systems need high P_control (cross-loop coordination priority). Dynamic weight scheduling is undefined | Open — connects to NAT §7.7 |
+| 24 | [v1.8-NATseries] Phase transition measurement latency — Phase 3→4 (Couple→Integrate) requires detecting "monotonically decreasing communication cost," which is a trend detection problem under noise. Formal statistical test for sustained monotonic decrease (not just temporary dip) requires defining minimum trend duration, noise tolerance, and reversion detection sensitivity | Open — connects to NAT §7.8 Phase Transition Indicators |
+| 25 | [v1.8-NATseries] Withdrawal velocity optimization — dH/dt ≤ v_max is bounded but the optimal withdrawal speed within the constraint is undefined. Too fast → miss lurking dependencies (regression risk). Too slow → delayed autonomy + opportunity cost. The relationship between v_max and system-specific τ_instability, τ_cascade, and self-correction cycle time requires formalization | Open — connects to NAT §8.4 Human Withdrawal |
 
 ---
 
@@ -2247,10 +3004,59 @@ F7 — Silent Criticality must be detectable via perturbation:
   increasing cross-domain MI under perturbation testing.
   Falsification: no measurable difference from genuinely stable.
 
+F8 — Classification velocity must be a leading indicator:
+  v_class (classification transition rate) must change direction
+  BEFORE θ violation and BEFORE S_norm spike in pre-storm trajectories.
+  Specifically: v_class < 0 must precede f_escalation > θ by at least
+  one measurement window.
+  Falsification: if θ violation occurs without prior v_class decline,
+  classification dynamics is not the leading indicator claimed.
+  (Derived from NAT §4.7 classification dynamics integration.)
+
+F9 — Type transition hysteresis must show predicted asymmetry:
+  τ_upscale / τ_degrade >> 1 for all data domains tested.
+  Specifically: degradation transitions (HC→Tacit, Tacit→Noise)
+  must occur in significantly fewer cycles than the corresponding
+  upscaling transitions (Noise→Tacit, Tacit→HC).
+  Falsification: if symmetric (τ_upscale ≈ τ_degrade), the fragility
+  claim that justifies conservative expansion is unsupported.
+  (Derived from NAT §4.7 type transition hysteresis.)
+
+F10 — Progressive internalization must track resolution growth:
+  Domains that pass the three-test internalization protocol
+  (stability, compression, perturbation) must show subsequent
+  ρ(D) ≥ ρ_pre-internalization. If internalized domains show
+  systematic ρ decline, the internalization readiness tests
+  are insufficient — resolution appeared sufficient but was not.
+  Falsification: if >20% of internalized domains require rollback
+  within 10× self-correction cycles, the three-test protocol
+  does not reliably predict resolution sufficiency.
+  (Derived from NAT §5.6 progressive internalization.)
+
+F11 — Governance storm S_gov must predict cascade onset:
+  Systems where S_gov crosses S_c_gov must subsequently show
+  escalation cascade (positive feedback in queue depth).
+  Systems where S_gov remains below S_c_gov must not show cascades.
+  Falsification: if S_gov threshold does not discriminate cascade/
+  non-cascade events (AUC < 0.7), the governance-level S-equation
+  formulation does not capture cascade dynamics.
+  (Derived from NAT §6.5 escalation cascade prevention.)
+
+F12 — Phase transition indicators must gate integration success:
+  Systems that proceed through Couple→Integrate (Phase 3→4)
+  only when all phase criteria are satisfied must show lower
+  integration failure rate than systems that proceed without
+  full criteria satisfaction.
+  Falsification: if integration success rate is independent of
+  phase criteria satisfaction, the indicators do not identify
+  genuine resolution synchronization readiness.
+  (Derived from NAT §7.8 integration protocol.)
+
 Complete falsification hierarchy:
   Criteria 1-5:   core RBIT predictions (information theory)
   Criteria 6-8:   TLG governance predictions (architecture)
   F4-F7:          cross-theory predictions (dynamics × governance)
+  F8-F12:         NAT integration predictions (scaling × dynamics)
 ```
 
 (See Recovery Theory §Extended Falsification Framework and VST v1.5 §11.4 for derivations.)
@@ -2672,10 +3478,18 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 | Seed Sufficiency Test Protocols | Operational validation via SR, RDE, NCR, RIR metrics; D7 Boundary Agent for Test 3 | New v1.1 |
 | f Boundary Conditions | S-equation constraints on f(A_t, D_t) shape | New v1.1 |
 | Fractal Conditional Necessity | SOC-grounded scaling argument; conditional on R ≈ 1 regime | New v1.1 |
-| Falsification Criteria | 5 specific criteria for principled rejection of core claims | New v1.1 |
+| Falsification Criteria | 5 specific criteria for principled rejection of core claims; F4-F7 cross-theory; F8-F12 NAT integration | Updated v1.8 |
+| Governance-Level Storm | S_gov equation, escalation cascade prevention, circuit breaker levels 1-4, structural prevention mechanisms | New v1.8 |
+| Classification Dynamics | Type transitions as resolution events, v_class leading indicator, hysteresis, reclassification rate | New v1.8 |
+| Progressive Internalization | Three-test readiness, shadow/handoff/internalization, resolution growth evidence | New v1.8 |
+| Processing Isolation | Signaling/Influence in resolution terms, structural enforcement, empirical evidence | New v1.8 |
+| Phase Transition Indicators | Resolution criteria for integration protocol phase boundaries | New v1.8 |
+| Human Withdrawal Dynamics | Progressive withdrawal velocity, regression detection, dependency mapping | New v1.8 |
+| Map-Terrain Expansion | Terrain Fitness Function, drift rate dynamics, drift accumulation cost | New v1.8 |
+| Interface Contract Extensions | IC-I5 (Sphere-Resolution Alignment), IC-I6 (Classification Dynamics Observable) | New v1.8 |
 | Appendix: RFEF | F_RBIT functional, τ regime-switching, Bridge Hypothesis | Formal hypothesis only |
 
 ---
 
-*Timestamped: February 23, 2026*
-*DFG Framework · Resolution-Based Information Theory v1.6*
+*Timestamped: March 4, 2026*
+*DFG Framework · Resolution-Based Information Theory v1.8-NATseries*
