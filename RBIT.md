@@ -34,6 +34,7 @@
 > *v1.4: R-ρ-f_esc triple concordance, Stability Saturation, extended measurement (21 vars), Storm–Collapse lifecycle, TLG falsification*
 > *v1.5: Rest Mode dF_RBIT/dt ≈ 0, φ_mature decomposition, fractal collapse propagation, F4-F7 falsification, information-theoretic lifecycle, Lreinf terrain*
 > *v1.6: SCM formal structure + unintegrated pressure, Storm Scale Law (power law health), Safe Collapse Governance, 7-phase fractal lifecycle storm signatures, Boundary Agent complete specification*
+> *v1.7: Contamination Flux cross-scale propagation (Φᵢ formal definition), Self-Purification Capacity decomposition (R = D·F·V·T), atrophy prediction under zero-contamination, controlled permeability protocol (Phase 1–4), Map-Terrain Balance principle, scaling as alignment management*
 
 ---
 
@@ -104,6 +105,53 @@ Resolution, in this interpretation, is the capacity to reduce geometry mismatch 
 Existing frameworks treat all compression as failure to minimize. In adaptive multi-agent systems, this produces two design errors: over-delivering information to immature layers causes Vector Storm; under-delivering without preserving generative structure causes developmental stall. Neither error is addressable within a framework that treats all compression as loss.
 
 RBIT is the framework that makes compression designable rather than accidental — distinguishing between harmful compression (receiver-controlled, intent-replacing) and functional compression (sender-controlled, intent-preserving).
+
+### The Map-Terrain Balance — Resolution as Alignment Management
+
+The substrate principle establishes that resolution is geometry alignment capacity. At scale, this produces a specific structural problem: the system's internal model (Map) must track an environment manifold (Terrain) that changes continuously and independently.
+
+```
+Map = system's internal coordinate structure
+      (frame of reference, governance policies, routing rules,
+       predictive models — everything the system uses to interpret input)
+
+Terrain = actual environment manifold
+          (agent states, resource availability, interaction patterns,
+           external pressures — the ground truth the system operates within)
+
+Resolution ρ = capacity to reduce |Map − Terrain|
+
+Scaling problem restated:
+  As system size increases, Terrain complexity grows (more agents,
+  more interactions, more environmental coupling). Map must track
+  this growing complexity — but Map updates are slower than Terrain
+  changes (τ_map >> τ_terrain at lower tiers).
+  
+  Result: |Map − Terrain| grows with scale unless actively managed.
+```
+
+**Map-Terrain drift produces unnecessary friction.** When Map diverges from Terrain, the system generates friction that does not produce learning — resolution gap fluctuations that cannot be resolved because the coordinate system itself is misaligned:
+
+```
+Healthy friction (growth friction):
+  Map ≈ Terrain, small perturbation δ
+  → System corrects δ → Rᵢ increases → learning occurs
+  → Friction → Adaptation → R↑
+
+Pathological friction (Map-Terrain drift):
+  Map ≠ Terrain, repeated correction failure
+  → Same errors recur despite local repair
+  → Middle-tier mediation overload
+  → Escalation increases without learning
+  → Friction − Learning ≈ constant (no convergence)
+
+Diagnostic criterion:
+  If friction is not producing measurable R increase,
+  the problem is not at the execution tier —
+  it is at the Map (coordinate system / governance frame).
+```
+
+**Map-Terrain balance as the scaling variable.** The scaling problem is not fundamentally about system size — it is about maintaining Map-Terrain alignment as Terrain complexity grows. All DFG scaling mechanisms (circular closure, dimensional compression, terrain design, permeability management) are techniques for keeping |Map − Terrain| bounded as n → ∞. (See NAT §7 Expansion Principle for architectural implementation.)
 
 ---
 
@@ -194,6 +242,153 @@ N calibration:
 ```
 
 This boundary does not require knowing "what contamination is" in absolute terms — only whether the system can return to baseline on its own. Contamination is not a wrong state — it is the absence of a return path. (See Recovery Theory §Boundary Gap for full derivation.)
+
+### Contamination Flux — Cross-Scale Propagation
+
+The contamination boundary above defines *when* contamination exists at a single layer. The more dangerous phenomenon is *cross-scale contamination* — when instability generated at one resolution tier leaks upward and distorts higher-tier governance structures. This is the primary failure mode in scaling systems: local problems become global distortions.
+
+**Definition (Contamination Flux).** For resolution tier Lᵢ transmitting to higher tier Lᵢ₊₁, the contamination flux is:
+
+```
+Φᵢ = Pᵢ · max(0, Sᵢ − Rᵢ)
+
+where:
+  Sᵢ(t) = internal instability at tier i
+           (order parameter from VST S-equation, restricted to tier scope)
+  Rᵢ(t) = self-purification capacity at tier i
+           (rate at which internal perturbations decay without external aid)
+  Pᵢ(t) = boundary permeability between tier i and tier i+1
+           (fraction of unresolved instability that reaches the higher tier)
+
+Contamination flux interpretation:
+  Φᵢ = 0    → tier self-resolves all instability; no upward leakage
+  Φᵢ > 0    → residual instability exceeds local recovery and leaks upward
+  ΣΦᵢ > Rᵢ₊₁ → higher tier overwhelmed → governance distortion cascade
+```
+
+**Contamination propagation is bottom-up by default.** Lower tiers have higher agent density, faster interaction rates, and greater noise generation (n²_bottom >> n²_top). The instability generation rate is therefore highest at the lowest tier. Upper tiers are vulnerable not because they are weak, but because they are slow — their correction timescale τ_upper >> τ_lower means accumulated flux from below can distort governance frames before upper-tier feedback loops complete a single correction cycle.
+
+**Cross-scale contamination cascade.** When Φᵢ > 0 at multiple tiers simultaneously, the effects compound:
+
+```
+Cascade condition:
+  Tier 1: Φ₁ > 0 → residual reaches Tier 2
+  Tier 2: S₂ + Φ₁ > R₂ → Φ₂ > 0 → residual reaches Tier 3
+  ...
+  Tier k: S_k + Σ(upstream Φ) > R_k → governance frame distortion
+
+Observable signature:
+  - Increasing translation cost at middle tiers (mediation overload)
+  - Upper-tier policy drift without upper-tier input change
+  - Resolution gap Δρ turning negative at tiers that were previously stable
+  
+Connection to SCM (VST §2.6):
+  If upper-tier contamination stabilizes into a new equilibrium,
+  the system may appear healthy by all internal metrics while operating
+  within a distorted coordinate geometry — the most dangerous state.
+```
+
+### Self-Purification Capacity — Formal Decomposition
+
+Self-purification capacity Rᵢ is not a static property of a tier but a dynamic capability maintained through active use. It decomposes into four independently necessary components:
+
+```
+Rᵢ = Dᵢ · Fᵢ · Vᵢ · Tᵢ
+
+where:
+  Dᵢ = Decoupling strength
+       The degree to which internal perturbations are isolated from
+       cross-tier amplification. Operationally: 1/α_external — inverse
+       of coupling strength to adjacent tiers.
+       D ≈ 0 → every internal fluctuation immediately propagates outward
+       
+  Fᵢ = Feedback density
+       The frequency and coverage of internal error-correction loops.
+       Operationally: error detection rate × correction coverage fraction.
+       F ≈ 0 → errors accumulate undetected (Silent Criticality precursor)
+       
+  Vᵢ = Variance absorption capacity
+       Internal diversity of interpretation pathways. Prevents single-frame
+       lock-in. Operationally: rank of internal response space to perturbation.
+       V ≈ 0 → single interpretation dominates → small contamination
+       captures entire tier (connects to SCC Dint component, VST §6.5)
+       
+  Tᵢ = Time buffering
+       Duration of tolerance window before perturbation triggers escalation
+       or structural response. Permits recovery attempts before cascade.
+       T ≈ 0 → immediate escalation of every fluctuation → no learning
+
+Multiplicative structure:
+  If ANY component ≈ 0, then Rᵢ ≈ 0 regardless of other components.
+  A system with perfect feedback (F high) but no diversity (V ≈ 0) cannot
+  self-purify — it detects errors but has only one response pathway.
+  A system with high diversity (V) but no time buffer (T ≈ 0) cannot
+  self-purify — alternatives exist but are never tried.
+```
+
+**Self-purification atrophy under zero contamination.** A critical prediction: systems maintained in zero-contamination states (S → 0 sustained) will experience R decay:
+
+```
+Atrophy mechanism:
+  S → 0 sustained
+  → Feedback loops idle (F ↓ — nothing to detect)
+  → Diversity unused (V ↓ — no selection pressure maintains alternatives)
+  → Time buffer forgotten (T recalibrated to zero-tolerance)
+  → Decoupling untested (D calibration drifts)
+  
+  Result: R(t) → 0 despite no external attack
+  
+  This is Stability Saturation (RBIT F5) viewed from the
+  self-purification perspective: the system's recovery capacity
+  degrades precisely because recovery is never exercised.
+
+Optimal operating regime:
+  0 < Sᵢ < Rᵢ  (maintained residual instability)
+  
+  Small perturbations keep feedback loops active, diversity under
+  selection, and time buffers calibrated. The system is not clean —
+  it is continuously recovering, and this continuous recovery IS
+  the self-purification capacity.
+  
+  Connection to SOC (self-organized criticality):
+  The system naturally drifts toward the boundary S ≈ R because:
+  - S >> R → collapse → reset to lower S
+  - S << R → atrophy → R drops toward S
+  - S ≈ R → both components actively maintained
+```
+
+**Controlled permeability protocol.** Boundary permeability Pᵢ should not be binary (open/closed) but graduated:
+
+```
+Permeability management:
+
+Phase 1 — Initial isolation (new or recovering tier):
+  Pᵢ ≈ 0
+  Tier develops internal loops without cross-scale interference.
+  Duration: until Rᵢ > S_baseline (self-correction demonstrated)
+
+Phase 2 — Probe testing:
+  Pᵢ = ε (small)
+  Small external perturbations admitted.
+  Monitor: does perturbation decay (Rᵢ sufficient) or amplify?
+  If decay: proceed to Phase 3.
+  If amplify: return to Phase 1.
+
+Phase 3 — Graduated opening:
+  Pᵢ increases stepwise.
+  Condition for each step: Sᵢ/Rᵢ < θ_safe (safety margin)
+  AND perturbation response remains sub-critical.
+
+Phase 4 — Operational permeability:
+  Pᵢ stabilized at level where:
+  - Small contamination enters (learning fuel)
+  - Large contamination blocked (structural protection)
+  - Pᵢ(δ) = { open if δ < δ_c ; blocked if δ ≥ δ_c }
+
+Rollback condition:
+  Any sustained Φᵢ > 0 triggers Pᵢ reduction.
+  Middle-tier mediation overload triggers system-wide P review.
+```
 
 ### Formal Axioms for Resolution-Layered Transmission (A1–A6)
 
@@ -1987,6 +2182,10 @@ Measurement dependency order:
 | 12 | [v1.7-RTseries] RT-2 impossibility constraint on resolution measurement — under SCM, RBIT metrics (ρ, buffer thickness, diversity) inherit Metric Lock-In: zero-gradient on mismatch dimension. Resolution measurement requires external reference frame calibration per RT-2 §9.2 differential protocol | Open — calibration protocol architecture-dependent |
 | 13 | [v1.7-RTseries] Resolution recovery capacity generation — RT-4 shows capacity is relational (three-level scaling). What is the minimum trust network topology for RBIT degradation-upscaling cycle to function? Single-agent RBIT may be structurally incomplete without relational substrate | Open — connects to RT-4 initialization problem |
 | 14 | [v1.7-RTseries] Coordination–Cancellation in resolution diversity — RT-3 shows high V (diversity) can cancel under naïve aggregation. RBIT multi-agent resolution measurement may show same paradox: diverse resolution perspectives aggregate to zero without mediation | Open — connects to RT-3 Mediation Layer |
+| 15 | [v1.7-RTseries] Contamination flux cross-scale calibration — Φᵢ = Pᵢ · max(0, Sᵢ − Rᵢ) requires tier-specific calibration of Rᵢ components (D, F, V, T). Component measurement protocols for each factor are undefined. In particular: how to measure Decoupling strength D independently of Feedback density F when both manifest as perturbation response characteristics | Open — connects to RT-4 relational measurement |
+| 16 | [v1.7-RTseries] Self-purification atrophy rate — the predicted R decay under sustained S ≈ 0 requires empirical confirmation. Key question: is atrophy rate uniform across R components (D, F, V, T) or do some components atrophy faster? If Feedback density F decays first (idle detection loops), the system loses early warning before losing recovery capacity — a specific temporal ordering prediction | Open — connects to Stability Saturation F5 |
+| 17 | [v1.7-RTseries] Permeability management automation — the graduated permeability protocol (Phase 1–4) is defined but the transition criteria between phases require system-specific calibration. In particular: the probe testing protocol (Phase 2) requires defining perturbation magnitude and decay measurement that distinguish genuine self-purification from suppressed instability (connects to SCM detection via R-ρ-f_esc triple concordance) | Open |
+| 18 | [v1.7-RTseries] Map-Terrain drift detection — the diagnostic criterion (friction without R increase = Map error) requires formal measurement protocol. Key challenge: distinguishing Map-Terrain drift from execution-tier insufficiency when both produce elevated f_escalation. Candidate discriminator: if middle-tier mediation cost rises while upper-tier metrics remain stable, the drift is in Map-Terrain alignment, not execution | Open — connects to NAT §6.3 Structural Blind Spots |
 
 ---
 
