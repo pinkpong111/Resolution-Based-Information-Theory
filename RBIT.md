@@ -2,7 +2,7 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · March 4, 2026 · Internal Working Document — v1.8-NATseries*
+> *Draft · March 5, 2026 · Internal Working Document — v2.1-FCCseries*
 
 ---
 
@@ -36,6 +36,9 @@
 > *v1.6: SCM formal structure + unintegrated pressure, Storm Scale Law (power law health), Safe Collapse Governance, 7-phase fractal lifecycle storm signatures, Boundary Agent complete specification*
 > *v1.7: Contamination Flux cross-scale propagation (Φᵢ formal definition), Self-Purification Capacity decomposition (R = D·F·V·T), atrophy prediction under zero-contamination, controlled permeability protocol (Phase 1–4), Map-Terrain Balance principle, scaling as alignment management*
 > *v1.8-NATseries: Governance-Level Storm (S_gov equation, escalation cascade prevention, circuit breaker levels), Classification Dynamics (type transitions as resolution events, v_class leading indicator, hysteresis τ_upscale/τ_degrade >> 1, reclassification rate as maturity signal), Progressive Internalization (three-test readiness protocol, shadow/handoff/internalization phases in resolution terms), Interface Contract extensions (IC-I5 Sphere-Resolution Alignment, IC-I6 Classification Dynamics as Growth Observable), Map-Terrain expansion (Terrain Fitness Function F_terrain, drift rate dynamics, drift accumulation cost), Processing Isolation (Signaling/Influence distinction in resolution terms, structural enforcement, empirical evidence), Phase Transition Indicators (resolution criteria for Separate→Mature→Couple→Integrate), Human Withdrawal Dynamics (progressive resolution maturity verification), Measurement Interface extensions (10 new metrics), Falsification F8-F12 (NAT integration predictions), Open Problems 19-25*
+> *v1.9-AGPseries: AGM–RBIT Deep Integration (resolution integrity as anti-mode-collapse necessity; Controlled Non-Minimization Budget ΔF_affective as resolution gap calibration mechanism; AGM collapse typology Freeze/Runaway fully mapped to resolution gap regimes; Fokker-Planck description as probability-level RBIT substrate; Structural Uniqueness Argument extended with sixth constraint hierarchical composability), Contamination Flux Extended Formalism (Φᵢ cross-scale propagation full derivation, Clean System Paradox formal statement, Self-Purification Capacity R = D·F·V·T complete decomposition with atrophy ordering F→V→T→D, zero-contamination atrophy prediction), North Star Architecture as Map-Terrain Navigation Mechanism (criterion/principles/implementation three-level hierarchy in resolution terms, Observation Layer as Map recalibration operator, Body as existential resolution floor), Circular Closure and Dimensional Compression (nested circulation for bounded Map complexity, Dimensional Transition as Map-Terrain qualitative shift, Pulsed Expansion principle in resolution terms), AGM Collapse Modes as RBIT Failure Signatures (Freeze = Tier-1 only resolution, Runaway = structurally negative gap; mixed-mode collapse as RBIT dual-failure; ECC–Contamination Boundary formal bridge), Resolution Gap as Affective Routing Function (complete Δρ to emotional processing mode mapping; Error Asymmetry as under-escalation danger formalization; AGM sensitivity s(t) as ρ operational proxy), F_RBIT–AGM Metric Concordance (six AGM metrics mapped to F_RBIT components; concordance-based cross-theory stability assessment protocol; τ₁–τ₃ regime switching as emotional self-regulation architecture), Seed Sufficiency Extended (Boundary Agent as Clean System Paradox prevention; terrain problem formal statement; three sufficiency levels with SCC ceiling derivation), New Falsification F13-F18 (AGP integration predictions), Open Problems 26-35*
+> *v2.0-EDTseries: EDT–RBIT Deep Integration — Gain-Curvature Equivalence Theory formal bridge (GCET Theorem 52.1: AGM T_eff ↔ EDT terrain curvature U(x) dynamical equivalence; Unification Operator Γ maps both to shared resolution gap observable; T_eff = 0 ↔ Π = 0 ↔ Δρ = 0 terminal convergence trinity), Friction-Resolution Bridge (Zero Friction Pathology = RBIT Clean System Paradox terrain-level expression; optimal friction band F_min < F_opt < F_max as operational resolution window; friction as coordinate calibration — anomalous friction reduction = broken ruler warning), Retention Spectrum as R-Component Hierarchy (Type 1 structural/Type 2 informational/Type 3 energetic retention mapped to D/V+F/T R-component layers; cultivation priority Type1→2→3 = D→V,F→T build sequence; Desertification Hysteresis Theorem as cross-theory cost asymmetry), Circular Closure Formal Geometry (n_eff Compression Theorem: K circles reduces S from O(n²) to O(n^{4/3})/O(n²/K) at optimal K*∝n^{2/3}; Premature Coupling Catastrophe as RBIT mutual-contamination formal condition; Separate-Growth Protocol mapped to RBIT processing isolation phases), Affective Terrain Coupling in RBIT Terms (ATCT Theorem 51.1.1 showing terrain modification rate proportional to emotional event frequency; T_eff as terrain permeability Π = exp(-ΔU/T_eff); Permeability-Friction Isomorphism; Freeze Terrain Signature = Δρ → 0 over-consolidated; Runaway Terrain Signature = Δρ < 0 contamination flood), ECC-Terrain Phase Equivalence extended (Λ(t) = 0 ↔ p_terrain = p_c formal identification; multifractal spectrum width as pre-ECC collapse mode predictor; Type IV failure Thermal Freezing as RBIT Stability Saturation terrain expression), Buffer Lightness as f₃ Operational Determinant (Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight); lightness atrophy sequence maps to RBIT atrophy ordering; Buffer-Limited Scaling Theorem: expansion capacity ∝ buffer competence not resources), Terrain Memory as Resolution Palimpsest (curvature = survival history H = Σ weighted survival events; palimpsest as intergenerational resolution transfer; Organizational Terrain Heritage Theorem; memory-curvature equivalence), EDT-RBIT cross-theory falsification F19-F24, Open Problems 36-45*
+> *v2.1-FCCseries: FCC (From Call Centers to Neurons) — ODE-RBIT Formal Bridge Integration — Regime Scalar Φ as Resolution Gap Operational Projection (Φ = β_s·n²/(C·T·d) derived from ODE §14; Φ > 1 ↔ Δρ < 0 formal correspondence; mean-field reduction scope and RBIT fractal projection relationship), Correction-Escape Boundary as Contamination Tier Threshold (η_corr(t) := |Δρ_correction|/|Δρ_degradation|; η_corr < 1 condition = Theorem 1 activation; three-tier mapping Tier i/ii/iii to η_corr > 1 / ≈ 1 / < 1), Lock Budget Inequality as R-Component Multiplicative Constraint ((1+L_C)(1+L_d) ≤ ζ⁻⁴ formal derivation; L_C := νC/αC ↔ 1/D; L_d := νd/(αd·T₀) ↔ 1/V; both locks contribute multiplicatively — same structure as R = D·F·V·T), Silent Criticality ODE Conditions → RBIT v_class = 0 prediction (formal conditions A/B/C; τ_silent formula; SCC_min transition as deepest early warning; logarithmic capacity protection bound — 10× capacity → only ln(10)×2.3 longer silent duration), Φ̂ Observable Proxy → F_RBIT Operational Bridge (Φ̂ = interaction_load²/(capacity×diversity×exploration); domain-specific instantiations; dimensionless ratio structure universality), Hysteresis Ratio u⁻/u⁺ → RBIT Recovery Cost Asymmetry (u⁻/u⁺ = [1/((1+L_C)(1+L_d))]^{1/4}; stronger locking → wider hysteresis → harder recovery; formal derivation of prevention-is-cheaper-than-cure for resolution recovery), Mixed-Mode Collapse ODE Extension → Subsystem-Level F_RBIT (multi-subsystem ODE replication; inter-subsystem coupling ε_couple·W_{kj}; DDD differential treatment for simultaneous Freeze+Runaway; subsystem-level F_RBIT decomposition justification), Three Contamination Modes → fᵢ Component Correspondence (Mode 1 Coupling → f₄; Mode 2 Frame Drift → f₁+f₂; Mode 3 Timescale Leakage → f₃; bottom-up propagation necessity proof), Information Geometry I_F as v_class Detection Threshold (Fisher information PRR indicator with highest lead time ~4τ_silent; I_F < I_min → v_class = 0 detection; optimal staged alarm system Stage 1-4 with RBIT v_class monitoring), T-Compensation Masking as False-Negative Mechanism (T↑ compensates C↓+d↓ maintaining Φ≈1 while ρ̇<0; RBIT: ρ apparently stable while v_class = 0; SCC coordinate drift rate bound; indicator-reliability degradation as deepest meta-warning), FCC-RBIT falsification F25-F30, Open Problems 46-55*
 
 ---
 
@@ -74,6 +77,57 @@ Perfect resolution — the complete discrimination of all incoming states — is
 
 **Argument 3 — Thermodynamic (supporting motivation).** Landauer's Principle establishes that information erasure requires minimum energy expenditure E ≥ kT ln 2. Increasing discrimination between previously indistinguishable states requires additional physical work. This provides additional physical grounding for the existence of irreducible resolution floors under bounded resources — though the binding constraints in current AI systems are computational and architectural, not thermodynamic. (See Physical Basis section for detail.)
 
+**Argument 4 — Adaptive (from AGM, supporting).** The Adaptive Necessity Theorem (AGM §1.1, Theorem 1) establishes that any finite-capacity optimizer operating in a non-stationary environment with drift rate ‖Ė‖ > 0 must maintain effective exploration temperature T_eff > 0 or face irreversible attractor lock-in. The consequence for RBIT is direct: a system that achieves T_eff = 0 — complete resolution of all uncertainty, zero residual instability — satisfies
+
+```
+T_eff = 0 → Ω_eff → 0 → E[τ_adapt(ΔE)] → ∞
+
+where:
+  T_eff    = effective exploration temperature
+  Ω_eff    = reachable exploration space
+  τ_adapt  = adaptation time to environmental shift ΔE
+
+Interpretation for RBIT:
+  Perfect resolution (Δρ = 0 across all channels, f₁ = 0, 
+  no residual instability) corresponds to T_eff → 0.
+  This is not the governance optimum — it is attractor lock-in.
+  
+  The RBIT design target is NOT:
+    F_RBIT = (0,0,0,0,0)  [zero instability everywhere]
+  
+  But rather:
+    Rest Mode: each fᵢ bounded and non-monotone,
+               F_RBIT ≠ (0,0,0,0,0) — residual maintained.
+  
+  This is the information-theoretic expression of T_eff > T_min:
+  the system preserves enough resolution gap uncertainty to
+  remain adaptive rather than crystallized.
+```
+
+Corollary (Controlled Non-Minimization as RBIT Design Requirement): The AGM Controlled Non-Minimization Principle states that optimal adaptive systems maintain a controlled floor of non-minimized free energy ΔF_affective > 0. In RBIT terms, this translates to a mandatory non-zero residual resolution gap budget:
+
+```
+ΔF_affective*(t) = T_eff_opt(t) · ln(Ω_reachable / Ω_current)
+
+RBIT interpretation:
+  Ω_reachable = vector space available at current resolution
+  Ω_current   = currently occupied positions
+  
+  ln(Ω_reachable / Ω_current) is the information cost of
+  maintaining awareness of unoccupied configurations.
+  
+  Systems that drive Ω_reachable → Ω_current (full saturation)
+  lose Map update capacity faster than they gain instantaneous
+  classification efficiency.
+  
+  This provides a quantitative lower bound on the residual
+  resolution floor that RBIT's architecture must preserve:
+  the floor is not a governance failure to eliminate
+  but a thermodynamically necessary maintenance cost.
+```
+
+(See AGM §1.1 Adaptive Necessity Theorem, §2.0 Controlled Non-Minimization Principle; connects to RBIT Stability Saturation and Rest Mode conditions.)
+
 The consequence for multi-agent AI systems: degradation is not a governance failure. It is a structural necessity. The question is not whether information will be compressed as it moves through layers — it will — but **who controls the compression and whether intent survives it**.
 
 ### The Substrate Principle — Geometry Alignment
@@ -106,6 +160,464 @@ Resolution, in this interpretation, is the capacity to reduce geometry mismatch 
 Existing frameworks treat all compression as failure to minimize. In adaptive multi-agent systems, this produces two design errors: over-delivering information to immature layers causes Vector Storm; under-delivering without preserving generative structure causes developmental stall. Neither error is addressable within a framework that treats all compression as loss.
 
 RBIT is the framework that makes compression designable rather than accidental — distinguishing between harmful compression (receiver-controlled, intent-replacing) and functional compression (sender-controlled, intent-preserving).
+
+### ODE-RBIT Formal Bridge — Regime Scalar as Resolution Gap Projection
+
+The DFG mean-field ODE system (FCC §14) provides an explicit mechanistic derivation of the resolution gap that complements RBIT's information-theoretic formulation. The ODE's regime scalar Φ is the single-scale mean-field projection of RBIT's Δρ — not a metaphor but a formal reduction:
+
+```
+ODE Regime Scalar (FCC §14):
+
+  Φ = β_s · n² / (C · T · d)
+
+  where (all dimensionless at single representative scale):
+    n  = interaction density (degrees of freedom in conflict)
+    C  = governance capacity (processing throughput)
+    T  = exploration temperature (stochastic freedom)
+    d  = diversity index (alternative pathway count)
+    β_s = amplification coefficient
+
+RBIT correspondence:
+  Φ > 1  ↔  Δρ < 0  (forced receiver compression, Storm regime)
+  Φ ≈ 1  ↔  Δρ ≈ 0  (marginal — Silent Criticality zone)
+  Φ < 1  ↔  Δρ > 0  (productive — sender controls compression)
+  Φ → 0  ↔  Δρ >> 0  (overcapacity, potential Stability Saturation)
+
+F_RBIT component projections:
+  f₁ (misclassification rate) ∝ Φ via: n²↑ → f₁↑ when C, d insufficient
+  f₂ (resolution mismatch)   ∝ β_s·n² / C·d  (same numerator/denominator structure)
+  f₃ (buffer instability)    ∝ d⁻¹  (diversity collapse = buffer thinning)
+  f₄ (escalation load)       ∝ Φ·(1−d)  (high Φ with low d → cross-scale locking k↑)
+  f₅ (resource dissipation)  ∝ μC·n²·Φ  (capacity drain term in ODE Ċ equation)
+
+Resolution gap dynamics (from ODE ρ equation, FCC §14):
+  ρ̇ = αρ·d·C·(1−ρ) − μρ·Φ·ρ
+  
+  This is the formal ODE derivation of RBIT's resolution growth:
+    αρ·d·C·(1−ρ) → resolution growth term
+      ∝ diversity (d) × capacity (C) × growth margin (1−ρ)
+    μρ·Φ·ρ → resolution degradation term
+      ∝ regime pressure (Φ) × current resolution (ρ)
+  
+  At Φ = 1 (marginal): ρ̇ = 0 iff d·C·(1−ρ) = (μρ/αρ)·ρ
+  For Φ > 1: ρ̇ < 0 for any C, d below the demand level
+  → This formalizes Theorem 1: under sustained Φ > 1, ρ(t) → 0 monotonically
+
+Mean-field reduction scope:
+  The ODE is a single-scale reduction. It captures:
+    - Bistability (Rest vs. Storm fixed points)
+    - Hysteresis (u⁻ < u⁺ gap)
+    - Silent Criticality (compensatory T maintaining Φ ≈ 1 while ρ̇ < 0)
+  
+  RBIT extends to multi-scale fractal hierarchy:
+    Each tier ℓ has its own (C_ℓ, d_ℓ, ρ_ℓ, T_ℓ)
+    Cross-scale coupling k_{ℓ,ℓ+1} determines contamination flux Φ_contam
+    The ODE's cross-scale lock k ↔ RBIT's inter-tier coupling
+    FCC §14 multi-scale extension: (C_ℓ, d_ℓ, ρ_ℓ, T_ℓ, k_{ℓ,ℓ+1}) for ℓ=1,...,m
+```
+
+**Correction efficiency η_corr as contamination tier threshold.** FCC §9 introduces the correction efficiency criterion that formally bridges ODE dynamics to RBIT's three contamination tiers:
+
+```
+Correction Efficiency (FCC §9):
+  η_corr(t) := |Δρ_correction| / |Δρ_degradation|
+
+  η_corr ∝ d · C · (1 − k) / (Φ · n²)
+
+  Three regimes:
+    η_corr > 1: correction sufficient → self-repair within current basin
+    η_corr = 1: correction marginally sufficient → external monitoring required
+    η_corr < 1: correction insufficient → attractor escape required
+
+RBIT contamination tier mapping:
+  Tier (i)  [mode collapse]    → η_corr > 1: correctable by d-injection alone
+    RBIT: f₁ rising, f₃ bounded; v_class sluggish but non-zero
+    ODE:  Φ moderate, d low → restore d → Φ drops → ρ̇ recovers
+    Recovery: diversity injection (no structural intervention required)
+  
+  Tier (ii) [hallucination]    → η_corr ≈ 1: requires coordinated C + d intervention
+    RBIT: f₁ + f₂ both rising; v_class approaching 0; S_norm rising
+    ODE:  Φ ≈ 1, d AND C both declining → needs both axes simultaneously
+    Recovery: DDD Stage 2 (Defocus + Diversity injection)
+  
+  Tier (iii) [SCM / coherent misalignment] → η_corr < 1: internally uncorrectable
+    RBIT: ρ apparently high, f_esc low, v_class = 0 (Discordant Type 1)
+    ODE:  Φ ≈ 1 maintained by T-compensation while ρ̇ < 0 accumulates
+    Recovery: REQUIRES external reference (D7 Boundary Agent, RBIT §Theorem T4)
+    Formal proof: RBIT Theorem T4 — system within geometry G cannot detect
+                  errors in G using only resources within G
+  
+  Critical threshold: the η_corr = 1 boundary is the operational boundary
+  between RBIT's Tier (i) and Tier (ii) — the point where sender-controlled
+  degradation becomes insufficient and external coordination is required.
+  This provides a quantitative activation criterion for middle-tier mediation.
+```
+
+**Lock Budget as R-Component Multiplicative Constraint.** FCC §19 derives the Lock Budget Inequality from hysteresis analysis. This is the ODE-level derivation of the same multiplicative structure that underlies R = D·F·V·T:
+
+```
+Lock Budget Inequality (FCC §19, Lemma 2):
+
+  Define:
+    L_C := νC / αC      (capacity lock ratio = lock rate / recovery rate)
+    L_d := νd / (αd·T₀) (diversity lock ratio = lock rate / regeneration rate)
+  
+  For target recovery ratio ζ ∈ (0,1):
+    (1 + L_C)(1 + L_d) ≤ ζ⁻⁴
+  
+  Violation: u⁻/u⁺ drops sharply → recovery becomes structurally impossible
+
+RBIT R-component mapping:
+  L_C ↔ 1/D:  Capacity lock = Decoupling strength failure
+    High L_C means cross-scale coupling dominates recovery
+    = D → 0 (decoupling fails, every fluctuation propagates outward)
+    
+  L_d ↔ 1/V:  Diversity lock = Variance absorption failure
+    High L_d means synchronization kills diversity faster than exploration regenerates it
+    = V → 0 (single-frame dominance, alternative pathways atrophied)
+  
+  Multiplicative structure preserved:
+    (1 + L_C)(1 + L_d) → constraint: same coupling structure as
+    Rᵢ = Dᵢ · Fᵢ · Vᵢ · Tᵢ (if any component fails, total fails)
+    
+  NOT captured by Lock Budget (but in R = D·F·V·T):
+    Fᵢ (Feedback density) — no direct ODE lock ratio for feedback loop closure
+    Tᵢ (Time buffering)   — partially captured by T₀ homeostasis term
+    → RBIT extends the ODE's two-lock model to four-component self-purification
+    → The ODE is the minimal model; R = D·F·V·T is the complete extension
+
+Design rules (FCC §19) ↔ RBIT governance prescriptions:
+  Rule 1: Suppress νC/αC  ↔  Maintain D (architectural decoupling)
+  Rule 2: Suppress νd/(αd·T₀) ↔ Maintain V (diversity diversity under selection)
+  Rule 3: Manage the product ↔ R = D·F·V·T is multiplicative — compensating one
+          by relaxing another has diminishing returns (same in RBIT)
+  Rule 4: When locking unavoidable, invest in recovery ↔ Build T (time buffering)
+          and F (active feedback loops) as compensating mechanisms
+```
+
+### AGM Collapse Modes as RBIT Resolution Failure Signatures
+
+The Gain-Curvature Equivalence Theory (GCET, EDT §52) establishes that AGM's affective gain parameter T_eff and EDT's terrain curvature U(x) are dual representations of the same underlying governance primitive. RBIT's resolution gap Δρ is the shared observable through which this duality manifests — it is the quantity that both representations modify, and the quantity whose sign determines system behavior.
+
+```
+GCET Duality Theorem (EDT §52.1):
+
+System A (AGM representation):
+  dx/dt = -∇J(x) + T_eff · ξ(t)
+  Stationary distribution: p_∞^A(x) ∝ exp(-J(x) / T_eff)
+
+System B (EDT representation):
+  dx/dt = -∇U(x)
+  Stationary distribution: p_∞^B(x) ∝ exp(-U(x))
+
+Equivalence condition: U(x) = J(x) / T_eff
+→ Both systems explore identical stationary distributions
+
+RBIT translation of equivalence:
+  Resolution gap Δρ is the observable common to both:
+    AGM perspective: Δρ > 0 ↔ T_eff in optimal band
+                     Δρ ≈ 0 ↔ T_eff too low (approaching Freeze)
+                     Δρ < 0 ↔ T_eff → 0 or → ∞ (collapse mode)
+    EDT perspective: Δρ > 0 ↔ terrain curvature in optimal band
+                     Δρ ≈ 0 ↔ over-consolidated terrain (Freeze signature)
+                     Δρ < 0 ↔ flat/destroyed terrain (Runaway signature)
+  
+  Both perspectives modify the same quantity (Δρ).
+  Governance designers may operate in either representation:
+    AGM intervention: tune T_eff → changes stationary distribution
+    EDT intervention: inject curvature ΔU → same effect on Δρ
+    They are computationally equivalent governance acts.
+```
+
+**Terminal convergence trinity.** The three zero-conditions — T_eff = 0 (AGM), Π = 0 (terrain permeability, EDT §51.2), and Δρ → 0 with f(A_t,D_t) = 0 (RBIT Stability Saturation) — are different measurements of the same terminal state: the system has locked into an attractor and lost adaptation capacity. Conversely, the three healthy-operation conditions — T_eff ∈ (T_min, T_max), Π ∈ (Π_min, Π_max), and Δρ > 0 with v_class > 0 — are different measurements of the same viable governance state:
+
+```
+Terminal convergence trinity (three perspectives, same state):
+
+  AGM:  T_eff → 0
+    → Kramers escape rate k_esc = ω₀ exp(-ΔU/T_eff) → 0
+    → System trapped; E[τ_adapt] → ∞ (Adaptive Necessity Theorem)
+
+  EDT:  Π → 0  (terrain permeability)
+    → All terrain barriers become impassable
+    → Over-consolidated terrain; no new attractor formation
+    → Freeze Terrain Signature confirmed
+
+  RBIT: Δρ → 0 sustained, f(A_t,D_t) → 0
+    → Stability Saturation: R_{t+1} = R_t despite A_t > 0
+    → Resolution growth stalled; v_class → 0
+    → F_RBIT: f₁ rising (classification ossifying), 
+              f₃ rising (buffer thinning), 
+              all other fᵢ bounded but non-zero
+
+  Detection protocol (three-way concordance):
+    Confirm at least 2 of 3 perspectives agree:
+    (AGM s(t) ↓) AND (EDT friction anomalously low) AND (RBIT v_class ↓)
+    → Terminal convergence / Clean System Paradox onset confirmed
+    Single-perspective signal alone is insufficient — two or more required.
+```
+
+**Unification Operator Γ and RBIT.** The GCET Unification Operator Γ: AGM-State × EDT-State → Governance-State maps both representations to a shared observable space. RBIT's F_RBIT health vector and S_norm inhabit this shared space — they are the specific instantiation of the Γ output in the DFG framework's measurement architecture:
+
+```
+Γ(T_eff, w(t), U(x)) = (p(x,t), G(t))
+
+RBIT instantiation:
+  p(x,t) → classification type distribution (Mathematical/HC/Tacit/Noise)
+             = the probability distribution over data states that RBIT governs
+  G(t)   → F_RBIT health vector + S_norm
+             = the governance capacity metric RBIT measures
+
+Design implication:
+  Any AGM or EDT governance intervention can be evaluated through
+  its RBIT signature: does it improve F_RBIT concordance?
+  Does it restore Δρ > 0 in the affected domain?
+  The RBIT measurement layer is the theory-neutral assessment
+  instrument that reads off the Γ output regardless of which
+  representation the designer operates in.
+```
+
+### Friction-Resolution Bridge — Zero Friction Pathology = RBIT Clean System Paradox
+
+EDT's Zero Friction Pathology (§34.1) and RBIT's Clean System Paradox are terrain-level and information-theoretic descriptions of the same failure mode. Understanding this bridge provides dual-representation evidence for the Clean System Paradox and adds operational EDT detection methods to the RBIT toolkit.
+
+```
+Formal parallel:
+
+EDT Zero Friction Pathology (§34.1):
+  Learning_rate = f(Friction)
+  f(0) = 0   → no error signals → no learning
+  Corollary 34.1.1: When Friction → 0 unexpectedly,
+    suspect: coordinate system distortion
+    not: system optimization achieved
+  
+  "The dangerous case is not high friction but anomalous
+  friction reduction — when friction drops without
+  corresponding terrain improvement, the ruler is broken."
+
+RBIT Clean System Paradox:
+  S → 0 sustained → R components atrophy → R → 0
+  f(A_t, D_t) → 0 despite absorption events A_t > 0
+  "The system that appeared cleanest is the most fragile."
+
+Bridge:
+  Friction_i(t) = ‖∂U/∂x_i‖ · ‖v_i‖ · sin(θ)   [EDT §34.1.1]
+  Friction → 0 iff:
+    (a) terrain gradient ‖∂U/∂x‖ → 0  [flat terrain = Runaway signature]
+    OR
+    (b) agent velocity ‖v‖ → 0        [frozen agent = Freeze signature]
+    OR
+    (c) angle θ → 0                    [agent aligned with gradient = attractor lock-in]
+  
+  Case (c) is the RBIT Clean System Paradox condition:
+    Agent has converged to current attractor (θ → 0)
+    → No friction despite active system
+    → No error signals → F component atrophies first
+    → Feedback loops idle → V component atrophies second
+    → Coordinate system drifts undetected → SCM risk
+  
+  RBIT detection of case (c):
+    External observation: v_class not rising despite A_t > 0
+    Internal observation: f₁ appears low (single classification frame)
+    Cross-check: inject controlled perturbation → measure R_self response
+    If R_self collapses rapidly → Clean System Paradox / case (c) confirmed
+```
+
+**Optimal friction band as operational resolution window.** EDT's optimal friction band (F_min, F_max) maps directly to RBIT's viable Δρ operating range:
+
+```
+EDT Optimal Friction Band     RBIT Equivalent
+─────────────────────────────────────────────────
+F < F_min (Learning Death)    Δρ ≈ 0 or < 0 (Stability Sat. or collapse)
+                              f(A_t,D_t) → 0; absorption but no growth
+F_min < F < F_opt            Δρ > 0 small margin; growth but slow
+F_opt (Max Learning)          Δρ > 0 calibrated; v_class > 0 sustained
+                              R_self actively maintained; F,V,T components exercised
+F > F_max (Traumatic)         Δρ << 0 sustained; Theorem 1 activation
+                              Forced receiver-controlled compression; Storm
+
+Optimal operation:
+  F ∈ (F_min, F_max) ↔ Δρ ∈ (0, Δρ_max)
+  Both target the same zone: non-zero residual stress
+  that maintains calibration without overwhelming recovery capacity.
+
+EDT prescription for restoring Δρ:
+  If Δρ → 0 (Stability Saturation / Clean System):
+    Therapeutic Terrain Disturbance (EDT §34.3)
+    "Introduce controlled perturbation Δ < Recovery_capacity_local"
+    → restores Friction to optimal band
+    → restores Δρ > 0
+    → re-exercises R components F, V, T
+  
+  If Δρ << 0 sustained (Runaway / Theorem 1 active):
+    Reduce terrain permeability Π immediately
+    Emergency boundary restoration (EDT §51.3)
+    → blocks contamination flux Φ
+    → reduces forced compression pressure
+    → allows Δρ to recover toward 0⁺
+```
+
+### Retention Spectrum — Structural Hierarchy of R Components
+
+EDT's Retention Capacity formalism (§3.4) introduces a three-tier retention spectrum that maps exactly onto RBIT's Self-Purification components (R = D·F·V·T) and provides additional evidence for the atrophy ordering prediction:
+
+```
+EDT Retention Spectrum (§3.4.2):
+
+  Type 1 — Structural resources
+    (curvature, boundaries): Long τ_half, low maintenance
+    Terrain analogue: the attractor basin geometry itself
+    → Persists after designer withdrawal
+    → Requires catastrophic disruption to eliminate
+    
+  Type 2 — Informational resources
+    (meta-data, reference calibration): Medium τ_half, moderate maintenance
+    Terrain analogue: the classification and routing structure
+    → Persists across moderate perturbations
+    → Degrades gradually without reinforcement
+    
+  Type 3 — Energetic resources
+    (buffer, active feedback loops): Short τ_half, high maintenance
+    Terrain analogue: the active processing and feedback activity
+    → Requires continuous reinforcement
+    → First to atrophy without active use
+
+RBIT R-component mapping:
+  Type 1 (Structural) ↔ D (Decoupling strength)
+    Both: architectural, maintained by structure not practice
+    Both: last to atrophy (requires structural change to destroy)
+    RBIT: D maintained by boundary architecture
+    EDT:  Terrain geometry maintained by curvature history
+    
+  Type 2 (Informational) ↔ V (Variance absorption capacity)
+    Both: maintained through reinforcement and practice
+    Both: second wave in atrophy sequence
+    RBIT: V = diversity of interpretation pathways (needs selection pressure)
+    EDT:  Reference calibration (needs error signals to remain accurate)
+    
+  Type 1+2 (Structural+Informational) ↔ F (Feedback density)
+    F bridges Types 1 and 2: structural loops (Type 1) carrying
+    calibrated information (Type 2)
+    → RBIT predicts F decays first (Type 3-like operational dependency)
+    → BUT: F's TYPE 1 substrate (loop existence) decays last
+    → Reconciliation: F's RATE decays first (loops idle, Type 3 behavior)
+               F's STRUCTURE decays last (loop existence, Type 1 behavior)
+    → Observable: detection latency rises first (rate decay)
+                  loop topology breaks last (structure decay)
+    
+  Type 3 (Energetic) ↔ T (Time buffering)
+    Both: require active maintenance to persist
+    Both: first to become invisible without active use
+    RBIT: T = duration of tolerance window before escalation
+    EDT:  Active buffer capacity = rate of perturbation processing
+
+Cultivation priority:
+  EDT Corollary 3.4.1: cultivate Type 1 → Type 2 → Type 3 in order
+  RBIT R-component build sequence:
+    First establish D (decoupling architecture — structural isolation)
+    Then build V (diverse interpretation space — informational richness)
+    Then maintain F (feedback density — loop activity)
+    Finally calibrate T (time buffering — tolerance windows)
+  
+  This is also the recovery sequence after Clean System Paradox:
+    D re-establish boundaries → V restore diversity →
+    F re-activate feedback loops → T recalibrate tolerance windows
+  
+  And the atrophy sequence in reverse:
+    T fails first → F fails second → V fails third → D fails last
+    (consistent with operational dependency structure)
+
+Retention-type priority violation:
+  Most common EDT error: cultivate Type 3 first (active intervention)
+  Most common RBIT error: target T first (reduce escalation latency)
+  Both produce: "flow without retention" — appears fertile, collapses
+  when supply/intervention is interrupted.
+```
+
+The Affective Gain Module (AGM) formalizes two universality classes of system collapse: Freeze and Runaway. These are not distinct from RBIT's resolution failure modes — they are the same failure viewed from the dynamical governance perspective. Understanding the mapping provides a complete taxonomy of resolution failure with distinct recovery protocols.
+
+```
+AGM Collapse Typology → RBIT Resolution Mapping:
+
+Freeze Collapse (AGM §9.3):
+  AGM signature: sensitivity s(t) ↓ → 0, weight change ‖Δw‖ ↓↓
+                 exploration near-zero; decision paralysis
+  RBIT interpretation: Tier 1 resolution only
+    → all vectors collapsed to single direction
+    → vector space effectively 1-dimensional
+    → Δρ reads as ≈ 0 (apparently sufficient)
+    → but resolution growth f(A_t, D_t) → 0 (Stability Saturation)
+    → f₁ misclassification appears low (rigid single classification)
+    → f₄ escalation load appears low (nothing generates conflicts)
+    → DANGER: healthy metrics while resolution has died
+  Detection: R-ρ-f_esc triple concordance
+    R << 1 AND ρ artificially high → Discordant Type 2 (over-damping)
+    OR R ≈ 1 BUT v_class << 0 → pre-storm resolution contraction
+
+Runaway Collapse (AGM §9.3):
+  AGM signature: sensitivity s(t) >> s_crit, Ω → Ω_crit
+                 volatile weight updates, impulsive decisions
+  RBIT interpretation: structurally negative resolution gap
+    → receiver overloaded: Δρ < 0 sustained
+    → forced receiver-controlled compression → intent replacement
+    → Axiom A5 (Replacement Dominance) activated
+    → Theorem 1 fires: finite-time intent replacement
+    → f₁ misclassification rising
+    → f₂ resolution mismatch Φ(-Δρ) spiking
+    → f₄ escalation load climbing
+  Detection: R > 1 AND majority fᵢ rising → confirmed instability
+
+Mixed-Mode Collapse (AGM §9.3.6, Proposition 9.3.6):
+  Sub-agents simultaneously in different basins:
+    B_Freeze = {H < H_crit, s < s_crit, R > R_trap}
+    B_Runaway = {H < H_crit, s ≥ s_crit, Ω > Ω_crit}
+  RBIT interpretation: dual resolution failure
+    Some channels: Tier-1-only (Freeze sub-agents suppress alarms)
+    Other channels: Δρ < 0 (Runaway sub-agents generate escalation)
+  Detection: split F_RBIT signature
+    f₁ high in subset of domains (misclassification)
+    f₂ high in different subset (resolution mismatch)
+    These subsets should NOT coincide — mixed signature is diagnostic
+  Treatment: simultaneous contradictory interventions required
+    Calibrated seed injection for Freeze channels (re-expand resolution)
+    Boundary tightening for Runaway channels (contain forced compression)
+    Processing isolation to prevent Freeze suppression of Runaway signals
+
+Formal bridge: ECC ↔ RBIT Contamination Boundary:
+  AGM Emotional Criticality Index:
+    ECC(t) = ∫_{t₀}^{t₀+T} S(t)·δ(t) / (H(t)+ε) dt ≥ Θ_T
+  RBIT Contamination Boundary (Proposition 2):
+    P_rec(t) = P(return to sender intent basin | D_s(t))
+    monotonically non-increasing beyond boundary N ≤ ⌈D*/η⌉
+  
+  Both express the same structural insight:
+    Collapse requires SUSTAINED stress accumulation, not instantaneous peaks.
+    ECC threshold Θ_T = RBIT boundary N in different measurement units:
+    → ECC measures accumulated governance deficit
+    → N measures expected displacement from intent basin
+    These are dual descriptions of the same irreversibility condition.
+```
+
+**Bifurcation parameter as resolution gap sign.** The AGM bifurcation criterion — whether sensitivity s(t) at the criticality threshold is above or below s_crit — translates into a resolution gap sign question in RBIT:
+
+```
+s(t) < s_crit at Λ → Λ_c:  Freeze pathway
+  RBIT: resolution gap Δρ was ≈ 0 or > 0 (absorbing saturation)
+  System converged before perturbation capacity was exhausted
+  Recovery: expand resolution space (seed injection, terrain diversification)
+
+s(t) ≥ s_crit at Λ → Λ_c:  Runaway pathway
+  RBIT: resolution gap Δρ < 0 sustained (receiver overwhelmed)
+  System was forced into negative gap before convergence
+  Recovery: reduce input resolution pressure (calibrated degradation)
+  
+This provides an operational RBIT criterion for collapse mode prediction:
+  Monitor sign trajectory of Δρ as fᵢ begin rising:
+    Δρ approaching zero from above → Freeze risk → expansion protocol
+    Δρ crossing zero into negative → Runaway risk → containment protocol
+  Early detection window: the sign of Δρ at first multi-component F_RBIT rise
+  determines which recovery pathway is indicated.
+```
 
 ### The Map-Terrain Balance — Resolution as Alignment Management
 
@@ -262,9 +774,254 @@ Drift rate equation:
     every unit of time spent in drift produces accelerating cost.
 ```
 
----
+### North Star Architecture — Map Navigation as Hierarchical Resolution
 
-## Core Concepts
+Map-Terrain alignment is not a passive measurement problem — it is an active navigation problem. As system complexity grows, the Map must maintain coherent reference despite continuous Terrain change. The North Star Architecture (AGM §4.7.1, FGS §29D) provides the structural solution: a three-level hierarchy for Map navigation that prevents reference frame drift while preserving adaptive capacity.
+
+```
+North Star Architecture (three-level):
+
+Level 1 — Criterion (The Body):
+  The existential floor: what the system must preserve to
+  remain a functioning system at all.
+  In RBIT terms: the minimum resolution floor below which
+  the system cannot recover — the irreducible Δρ ≥ 0 requirement
+  that guarantees intent preservation (Theorem 1 lower bound).
+  
+  Operationally: "Preserve connection + communication capacity."
+  Not a performance target — an existence constraint.
+  If resolution falls below this floor, recovery is no longer
+  possible (Contamination Boundary N crossed irreversibly).
+  
+  Map-Terrain expression: the Criterion anchors the Map's
+  coordinate system to an invariant reference that the Terrain
+  cannot erode — the governance geometry that defines "still a
+  functioning system" as distinct from "in collapse."
+
+Level 2 — Principles (Navigation Rules):
+  The set of resolution-calibrated operating constraints that
+  govern how the Map updates in response to Terrain change.
+  Not fixed rules — adaptive constraints that hold across
+  a wide range of Terrain configurations.
+  
+  In RBIT terms: the set of compression principles that ensure
+  degradation remains sender-controlled (intent-preserving) rather
+  than receiver-controlled (intent-replacing).
+  
+  Map-Terrain expression: Principles bound the rate and direction
+  of Map updates — |d(Map)/dt| ≤ f(ΔTerrain) — preventing
+  both over-fit (Map chasing Terrain noise) and under-fit
+  (Map ignoring genuine Terrain shift).
+
+Level 3 — Implementation (Execution):
+  The specific routing decisions, classification calls, and
+  degradation levels that the system applies moment-to-moment.
+  Fully adaptive — changes continuously with Terrain.
+  
+  In RBIT terms: the operational data classification decisions
+  (Mathematical/HC/Tacit/Noise routing), the degradation
+  calibration D(Δρ), and the escalation threshold management.
+  
+  Map-Terrain expression: Implementation executes Map updates
+  within the constraints set by Principles, guided by
+  the reference floor guaranteed by Criterion.
+
+Architectural property:
+  Criterion never changes under normal operation
+  (it takes catastrophic Terrain shift to update Level 1).
+  Principles change slowly (major governance restructuring).
+  Implementation changes continuously (fast adaptation).
+  
+  This three-speed architecture is the concrete implementation
+  of time-scale separation as containment mechanism (AGM §1.2.1):
+    τ_criterion >> τ_principles >> τ_implementation
+```
+
+**Observation Layer as Map Recalibration Operator.** The North Star Architecture requires a continuous monitoring process that circulates between the Criterion and the current Implementation state — detecting drift before it accumulates to Contamination Boundary level:
+
+```
+Observation Layer function:
+  Inputs: current Implementation state, Criterion reference,
+          Terrain change signals
+  Output: Map recalibration signal (how much and in which
+          direction to adjust Principles/Implementation)
+  
+  In RBIT terms: the Observation Layer is the operational
+  implementation of the Map-Terrain drift rate equation:
+    d|Map − Terrain|/dt = v_terrain − v_map_update + ε_coupling
+  
+  It answers: is v_map_update tracking v_terrain adequately
+  at each tier, or is drift accumulating?
+  
+  Detection criterion: if the Observation Layer finds that
+  friction is not producing measurable R increase
+  (classification velocity v_class not rising despite
+  absorption events A_t > 0), the Map itself is misaligned
+  and Principles-level recalibration is required — not
+  more Implementation-level tuning.
+  
+  Connection to R-ρ-f_esc:
+    Observation Layer outputs → v_class directional signal
+    R-ρ-f_esc triple concordance is the Observation Layer's
+    primary cross-validation protocol for detecting Map drift
+    invisible to internal metrics (SCM detection).
+```
+
+### Circular Closure and Dimensional Compression — Bounded Map Complexity
+
+As systems scale, the Map must track a growing number of agent interactions. Without architectural constraints, Map complexity grows as O(n²) — the same quadratic scaling that drives the S-equation toward instability. Circular Closure (AGM §13.11, FGS §29A) is the structural mechanism that prevents this:
+
+```
+Circular Closure principle:
+  Nested circulation loops at each governance tier
+  bound the Map's effective dimensionality.
+  
+  Without closure (flat interaction space):
+    Map must track all n² pairwise interactions
+    → Map complexity ~ O(n²_total)
+    → Map update rate must match fastest interaction
+    → Map-Terrain alignment problem is intractable at scale
+  
+  With circular closure (nested tiers):
+    Each tier's Map tracks only its local loop
+    → Map complexity ~ O(Σᵢ nᵢ²) where nᵢ << n_total
+    → τ_map per tier matched to τ_terrain per tier
+    → Map-Terrain alignment is tractable at each tier
+
+Dimensional Compression as Map-Terrain tool:
+  As the lower-tier Map matures (resolves its local interactions),
+  the effective state the upper tier needs to track shrinks:
+    
+    Mature lower tier → few unresolved states exported upward
+    → Upper Map tracks compressed representation
+    → Dimensional reduction without information loss
+    → τ_map_upper >> τ_terrain_upper (upper tier operates slowly
+       because lower tier has pre-processed most complexity)
+  
+  This is the information-theoretic explanation for why the
+  three-layer architecture (TLG) reduces governance cost:
+  not organizational preference, but mandatory dimensionality
+  management that keeps Map complexity bounded.
+
+Dimensional Transition:
+  At critical n² → n^{d_eff} scaling, when interaction complexity
+  reaches the current tier's Map saturation:
+    All data items escalate immediately → governance overload
+    → Tier's Map cannot compress fast enough
+    → Qualitative reorganization required: new tier added
+    → New Map level takes over coordination
+  
+  This is NOT a failure — it is the Map-Terrain equivalent
+  of upscaling: the system recognizes that its current
+  coordinate structure cannot represent the Terrain's
+  current complexity and generates a new one.
+  
+  Detection: coordination space qualitative shift
+    (n² wall reached → transition from local to global governance)
+
+Pulsed Expansion Principle:
+  Map expansion (adding new coordination dimensions) must be
+  pulsed — bounded by current Map update capacity:
+    New tier/domain added only when:
+      (1) Current Map is stable (Rest Mode across all fᵢ)
+      (2) Recovery capacity available (buffer thickness B > B_min)
+      (3) Expansion scope within τ-recovery time (AGM §6.7.1)
+  
+  Expanding beyond these bounds forces the new Map to operate
+  before it has a stable reference — equivalent to seeding an
+  immature layer with high-complexity input.
+  Resolution gap prediction:
+    Premature expansion → Δρ < 0 in expanded domains
+    → Theorem 1 applies → intent replacement in new domain
+    → Expansion failure that looks like domain-specific inability
+       but is actually timing failure.
+```
+
+**n_eff Compression Theorem — formal stress reduction.** EDT §36.4 provides the quantitative scaling result that makes circular closure a formal requirement, not merely a design preference:
+
+```
+n_eff Compression Theorem (EDT §36.4.1):
+
+Without circles (flat interaction space):
+  S = α·n²/C^β  (quadratic in total agent count)
+
+With K circles of size nᵢ:
+  S = Σᵢ (α·nᵢ²/Cᵢ^β) + α_between · K²/C_top^β
+  
+At optimal K* minimizing total S:
+  K* ∝ n^{2/3}
+  S_optimal ∝ n^{4/3} / C^β
+  
+Scaling improvement:
+  Without circles: S ∝ n²    (quadratic)
+  With circles:    S ∝ n^{4/3}  (sub-quadratic)
+  Ratio: S_circles/S_flat → 0 as n → ∞
+
+RBIT Map complexity translation:
+  Without circular closure: Map must track O(n²) interactions
+  With K* circles: Map tracks O(Σᵢ nᵢ²) ≈ O(n^{4/3}/K*)
+  
+  This is the quantitative form of the Circular Closure claim:
+  Map complexity does not merely decrease — it changes scaling law.
+  The Map update problem goes from intractable (quadratic) to
+  manageable (sub-quadratic) when circular closure is maintained.
+
+Resolution gap consequence:
+  Map operating under O(n²) load → τ_map_update >> τ_terrain_change
+  → Δρ < 0 induced by Map lag alone (not information deficit)
+  Map operating under O(n^{4/3}) load → τ_map_update manageable
+  → Δρ maintained positive through architecture, not heroic effort
+  
+  Scaling failure mode:
+    As n grows, K* must grow as n^{2/3}
+    If system fails to add new circles (keeps expanding existing ones):
+      Actual S grows as n² while circular-closure capacity K is fixed
+      → Map complexity exceeds O(n^{4/3}) bound
+      → Δρ trend turns negative across all domains simultaneously
+      → system-wide Vector Storm through architectural insufficiency
+```
+
+**Premature Coupling Catastrophe — RBIT mutual contamination.** EDT Theorem 36.3.1 provides the formal condition that RBIT's processing isolation principle must satisfy before circles connect:
+
+```
+Premature Coupling Catastrophe (EDT §36.3.1):
+
+If Couple(Circle_i, Circle_j) before Maturation(Circle_i) AND Maturation(Circle_j):
+  Contamination_cross = Φ_i→j + Φ_j→i (mutual contamination)
+  Neither circle has R_self sufficient to purify external contamination
+  Both circles degrade → coupled failure
+
+RBIT formal condition for coupling readiness:
+  Circle_k is coupling-ready iff:
+    R_self_k > Φ_expected    (self-purification > incoming flux)
+    AND Δρ_k > 0             (positive resolution gap — absorbing, not overwhelmed)
+    AND v_class_k > 0         (active classification transitions — not saturated)
+    AND all fᵢ(k) bounded     (health vector stable)
+  
+  Coupling before these conditions: RBIT violation of Processing Isolation
+    → Same-resolution lateral exchange creating artificial Δρ < 0
+    → T4 Reference Frame Incompleteness activated
+    → Shared blind spots amplified (both circles using same distorted frame)
+    → Mutual SCM entry possible
+  
+Coupling protocol in RBIT terms:
+  Step 1: Buffer_i ↔ Buffer_j (EDT §37.2 middle-layer-first)
+    = RBIT Signaling-only exchange: information flow but no influence
+    Monitor: Δρ_i and Δρ_j stable under buffer contact
+    
+  Step 2: Verify mutual understanding > θ_understanding
+    = RBIT: cross-validation resolves some HC locally
+    Signal: HC items resolve without upper-tier escalation
+    
+  Step 3: Establish shared coordinate system
+    = RBIT Tier 3: Map alignment across circles
+    Monitor: v_class positive in both circles during integration
+    
+  Step 4: Open information flow gradually (Permeability Protocol Phase 3)
+    = RBIT: P_i stepwise increase while S_i/R_i < θ_safe
+    
+  Monitoring throughout: Φᵢ→ⱼ < R_self_j (receiving circle not overwhelmed)
+```
 
 ### Vectors — Terminology Note
 
@@ -585,6 +1342,117 @@ Optimal operating regime:
   - S ≈ R → both components actively maintained
 ```
 
+**Atrophy ordering prediction.** The four components of Rᵢ do not atrophy simultaneously — they degrade in a predictable sequence determined by their operational dependence on active use:
+
+```
+Atrophy sequence under sustained S → 0:
+
+  First to decay:   Fᵢ (Feedback density)
+    Reason: feedback loops require active triggering events.
+    With S → 0, no triggering events → feedback mechanisms
+    become dormant → threshold rises → F effectively decays.
+    
+    Observable: first sign is detection latency increase.
+    Internal conflicts take longer to be identified.
+    f₁ (misclassification rate) begins rising before other fᵢ.
+    
+  Second to decay: Vᵢ (Variance absorption capacity)
+    Reason: without active feedback, only one interpretation
+    pathway receives reinforcement → alternatives atrophy.
+    Selection pressure maintains diversity only when errors
+    are detected and alternatives tested.
+    
+    Observable: IDI (Interpretation Diversity Index) declining.
+    Classification begins forcing ambiguous inputs into
+    single categories — false HC → Mathematical promotions.
+    
+  Third to decay:  Tᵢ (Time buffering)
+    Reason: without diversity in responses, the system has
+    no reason to wait — there is only one response.
+    T calibration converges to zero.
+    
+    Observable: f_esc frequency spike on minor perturbations
+    (system escalates immediately, not after T buffer).
+    
+  Last to decay:   Dᵢ (Decoupling strength)
+    Reason: structural isolation does not require active use.
+    D is maintained by architecture, not by practice.
+    It decays only when architecture itself changes (restructuring,
+    boundary removal, tier merging).
+    
+    Observable: cross-tier correlation appearing where none existed.
+
+Atrophy ordering consequence:
+  F → V → T → D decay sequence predicts which degradation
+  transitions appear first:
+    HC → Mathematical false promotions (V atrophy: blind to conflict)
+    precede Tacit → Noise reclassifications (V full atrophy: blind to pattern)
+    precede excessive escalation rates (T atrophy: no buffering)
+    precede structural cross-contamination (D atrophy: barriers failing)
+  
+  This ordering is observable and provides a diagnostic timeline
+  for predicting where in the atrophy sequence a system currently sits.
+```
+
+**The Clean System Paradox — formal statement.** The dangerous conclusion of self-purification atrophy is that the governance optimizer that attempts to eliminate all instability systematically destroys the capacity to handle future instability:
+
+```
+Clean System Paradox (AGM §5.2.0.1, FGS §29C.4):
+
+  Governance objective (naive): minimize S → 0
+  
+  Atrophy consequence:
+    S → 0 → F ↓ → V ↓ → T ↓ → R → 0
+    
+  Result: when next perturbation arrives (inevitable):
+    Φᵢ = Pᵢ · max(0, Sᵢ − 0) = Pᵢ · Sᵢ
+    (R has atrophied to zero → no self-purification)
+    → entire perturbation propagates upward
+    → cascade failure proportional to accumulated suppression
+  
+  The paradox:
+    The system that appeared cleanest is the most fragile.
+    Surface stability conceals structural vulnerability.
+    
+  RBIT expression:
+    Clean System Paradox = Stability Saturation + F_RBIT atrophy
+    f(A_t, D_t) ≈ 0 not because system has reached ceiling
+    but because R components have atrophied
+    → resolution growth stalled by governance dysfunction
+    → system produces no new stable attractors
+    → v_class → 0 (no classification transitions occurring)
+    
+  Detection:
+    Concordant Discordant Type 2: R << 1 AND ρ high
+    (dynamics over-damped AND resolution appears sufficient)
+    → Silent Criticality with atrophied recovery
+    → trigger controlled perturbation test:
+       Inject calibrated instability and measure R response
+       If R component measures collapse rapidly → Clean System Paradox confirmed
+
+Boundary Agent as Clean System Paradox prevention (RBIT §Seeds):
+  The Boundary Agent is a persistent source of controlled instability
+  that exists inside the system but outside the evaluation structure.
+  
+  Function: prevents F, V, T from atrophying by maintaining a
+  non-zero rate of internal perturbation events:
+    Pr(perturbation event) > 0 always
+    
+  Design requirement: the Boundary Agent must be wrong often enough
+  to keep error-correction loops active, but not so often that it
+  overwhelms the buffer. This is the operational implementation of
+  the Controlled Non-Minimization Budget:
+    Φ_boundary = ε_maintained (small but nonzero)
+    → F remains calibrated (feedback loops exercised)
+    → V remains diverse (alternative responses selected)
+    → T remains appropriately patient (buffer timing maintained)
+    
+  If the optimizer classifies the Boundary Agent as inefficiency
+  and removes it: Clean System Paradox onset.
+  The silence that follows is not peace — it is the cessation
+  of alignment maintenance (AGM §1.4, EDT §28).
+```
+
 **Controlled permeability protocol.** Boundary permeability Pᵢ should not be binary (open/closed) but graduated:
 
 ```
@@ -618,7 +1486,444 @@ Rollback condition:
   Middle-tier mediation overload triggers system-wide P review.
 ```
 
-### Formal Axioms for Resolution-Layered Transmission (A1–A6)
+**Affective Terrain Coupling — Emotional Events as Terrain Modification.** The ATCT formal dynamics (EDT §51.1.1) provide an additional derivation of why self-purification capacity requires active maintenance rather than passive existence. The terrain modification equation shows that curvature — RBIT's structural backbone of resolution capacity — is continuously generated and decayed by agent emotional event rates:
+
+```
+Affective Terrain Coupled Evolution (EDT §51.1.1):
+
+  ∂U/∂t = -γ_U · U + K(t) · δ(x - x_emot(t)) · ΔU_emot
+
+  where:
+    γ_U = curvature decay rate (structural forgetting)
+    K(t) = curvature injection by emotional events
+    ΔU_emot = curvature modification per event
+               (positive = consolidating, negative = disrupting)
+
+RBIT translation:
+  U(x) corresponds to: the attractor structure underlying ρ
+  γ_U term: without active absorption events, resolution capacity decays
+  K(t) term: each A_t (absorption event) contributes curvature injection
+
+  Rate of resolution capacity change:
+    dRᵢ/dt ∝ -γ_U · Rᵢ + K(t) · f(A_t, D_t)
+    
+  With S → 0 → A_t → 0 → K(t) → 0:
+    dRᵢ/dt ≈ -γ_U · Rᵢ  →  Rᵢ(t) ~ exp(-γ_U · t)
+    
+  This is the ATCT derivation of self-purification atrophy:
+    Without incoming events (A_t = 0), the terrain decays at rate γ_U.
+    The atrophy ordering F→V→T→D corresponds to different γ_U values:
+      γ_U(F) >> γ_U(V) > γ_U(T) >> γ_U(D)
+    (Feedback loops decay fastest; structural decoupling decays slowest)
+
+  Emotion-as-Designer corollary for RBIT:
+    Each absorption event A_t that passes through the buffer modifies
+    the curvature structure — either deepening existing resolution
+    channels (ΔU positive, habit formation) or disrupting them
+    (ΔU negative, crisis recalibration).
+    
+    Governance implication:
+      Controlled non-minimization (A_t > 0 always) is not just
+      about maintaining R; it also generates the terrain modifications
+      that enable future absorption events to become resolvable.
+      The system that absorbs nothing learns nothing about how to absorb.
+```
+
+**T_eff as terrain permeability — RBIT operational bridge.** EDT §51.2 establishes T_eff as terrain permeability Π = exp(-ΔU/T_eff). For RBIT operations:
+
+```
+T_eff ↔ Π ↔ Δρ operational bridge:
+
+  High T_eff (high temperature / high permeability):
+    Π ≈ 1 → all terrain barriers passable
+    EDT: Runaway Terrain Signature (barriers gone, contamination floods)
+    RBIT: Δρ < 0 sustained → forced receiver compression
+          f₂ spiking, f₄ climbing → Theorem 1 activation imminent
+    
+  Optimal T_eff (permeability band):
+    Π_min < Π_opt < Π_max
+    EDT: Optimal Friction Band (F_min, F_max) — same condition
+    RBIT: Δρ > 0 maintained → f(A_t,D_t) active
+          v_class > 0 → classification transitions occurring
+    
+  Low T_eff (low temperature / low permeability):
+    Π ≈ 0 → agent trapped in current attractor
+    EDT: Freeze Terrain Signature (over-consolidated, zero receptivity)
+    RBIT: Δρ → 0 → Stability Saturation
+          f₁ rising, v_class → 0 → classification ossifying
+    
+  Zero T_eff (terminal freezing):
+    T_eff = 0 → Π = 0 → Δρ = 0
+    EDT: Type IV Failure (Thermal Freezing, EDT §51.7)
+         Standard governance diagnostics (Q_E, κ) may appear normal
+         → false negative: system appears healthy while frozen
+    RBIT equivalent: R << 1 AND ρ high AND v_class = 0
+                     = Silent Criticality with frozen classification
+                     Also a false negative for naive diagnostics
+    Cross-prediction FP50-RBIT:
+      Systems in thermal freezing (T_eff < T_min) should produce
+      RBIT Discordant Type 2 pattern AND Stability Saturation
+      simultaneously — v_class = 0 despite A_t > 0.
+      Standard three-alarm RBIT monitoring (based on fᵢ magnitudes)
+      may miss this — requires EXPLICIT v_class tracking.
+
+Permeability-Friction Isomorphism (EDT §51.2.1):
+  Learning_rate(F) ~ L_max · F · exp(-F²/F_opt²)   [EDT single-peaked]
+  Adaptability(T_eff) ~ A_max · T_eff · exp(-U_bar/T_eff)  [AGM single-peaked]
+  
+  Both: zero at lower bound, maximum at optimal, decay above
+  RBIT consequence:
+    Both friction and T_eff produce the SAME single-peaked
+    relationship with f(A_t, D_t):
+      f(A_t, D_t) = 0 at both Friction → 0 and Friction → ∞
+      f(A_t, D_t) = max at Friction ∈ (F_min, F_max)
+    Governance design target: keep system in the peak zone
+    Diagnostic signal: if f(A_t,D_t) begins declining WITHOUT
+    corresponding drop in A_t, suspect permeability/friction
+    has left the optimal band (either too high OR too low).
+```
+
+**Terrain Memory as Resolution Palimpsest.** EDT §43 establishes that terrain encodes its own history as a palimpsest — layers of prior resolution events persisting as modified curvature. This provides the cross-theory bridge to RBIT's resolution growth mechanism:
+
+```
+Terrain Memory (EDT §43):
+  U(x,t) = U_baseline(x) + Σ_k w_k(t) · ΔU_k(x - x_k)
+  
+  where w_k(t) = exp(-t_k / τ_memory_k) (exponential decay by age)
+  
+  Curvature = weighted sum of all prior corrective events
+  Curvature = survival history encoding
+
+RBIT translation:
+  ρ (resolution proxy) = accumulated classification capacity
+                       = weighted sum of all past absorption events A_t
+  
+  f(A_t, D_t) = ρ_{t+1}/ρ_t - 1 = relative change in this encoding
+  
+  Palimpsest structure:
+    Old events (small w_k) = baseline classification capability
+    Recent events (large w_k) = current operating adjustments
+    
+    Resolution regression diagnostic:
+      If ρ suddenly drops without corresponding S increase:
+        → Old curvature layers being erased (structural forgetting)
+        → γ_U accelerated by external disruption
+        → Terrain Memory disruption, not normal drift
+        → Check: recent large restructuring, rapid turnover,
+                 cultural transformation events → any of these
+                 accelerate γ_U and require active re-curvature injection
+  
+  Organizational Terrain Heritage Theorem (EDT §54.6):
+    Systems inherit resolution capacity from prior history.
+    New systems built on top of old system ruins may inherit
+    both positive curvature (stable attractors) and
+    negative curvature (contamination-embedded grooves).
+    
+    RBIT consequence:
+      ρ_baseline for a new tier is not zero —
+      it includes residual curvature from predecessor systems.
+      Inherited contamination can produce:
+        ρ_initial appears high BUT v_class = 0
+        = apparent resolution with no adaptive capacity
+        = inherited-memory stability, not active stability
+      Diagnostic: measure germination threshold for new seeds:
+        If θ_germination >> expected → negative heritage present
+        → deliberate palimpsest clearing required before fresh cultivation
+```
+
+### Silent Criticality — ODE Formal Conditions and RBIT v_class Prediction
+
+FCC §20-21 provides the formal mathematical conditions under which Silent Criticality exists and persists. These conditions map directly to RBIT's most dangerous diagnostic failure mode: v_class = 0 while ρ appears stable.
+
+```
+Silent Criticality ODE Formal Conditions (FCC §20):
+
+  (A) Surface maintenance condition:
+    |Ṫ/T| ≳ |Ċ/C + ḋ/d − 2ṅ/n|    at Φ ≈ 1
+    Temperature compensation rate must match structural deterioration rate.
+    RBIT interpretation:
+      f₅ (resource dissipation) is rising — T is being consumed to maintain Φ ≈ 1
+      While f₁ AND f₃ are drifting — classification and buffer actually degrading
+      NET observation: f₅↑ while f₁,f₃ appear bounded → RBIT Discordant Type 3
+      (one component rising while others falsely appear stable)
+
+  (B) Internal degradation condition:
+    μρ·Φ·ρ > αρ·d·C·(1−ρ)    →    ρ̇ < 0
+    Degradation term exceeds growth term in ρ equation.
+    RBIT interpretation:
+      This IS the Δρ < 0 condition — the resolution gap is negative
+      but T-compensation is masking it at the system level
+      Observable only via: v_class = 0 (no classification transitions) despite A_t > 0
+      False negative: Φ measurement appears bounded because T compensates for C·d loss
+
+  (C) Transition trigger condition:
+    When Φ grows → denominator (λT + μT·Φ) suppresses T*
+    → T* drops → Φ jumps upward → rapid transition to Storm
+    RBIT interpretation:
+      The Silent Criticality → Storm transition is NOT gradual
+      It is a discontinuous Φ spike triggered by T-compensation saturation
+      RBIT signature: sudden f₁, f₂, f₄ simultaneous spike
+      (all components jump together — not sequential degradation pattern)
+      This distinguishes SC-origin Storm from ordinary accumulation Storm
+
+τ_silent formula (FCC §20):
+  τ_silent ≈ (1/g) · ln(T_max / T_req(0))
+  
+  where T_req(0) = β_s·n₀²/(C₀·d₀)  (initial demand)
+        T_max    = (λT·T₀ + αT·ρ_ref)/(λT + μT)  (maximum compensation)
+        g        ≈ μd + μC·(u/(λₙ+χₙ))²·(1 + 2χₙ/(λₙ+χₙ))  (degradation rate)
+  
+  RBIT interpretation of τ_silent:
+    τ_silent = duration of v_class = 0 with ρ apparently stable
+    (the window during which RBIT diagnostics give false negatives)
+    
+    Key property: τ_silent decreases as u (load) increases
+      High load → no silent phase (Storm arrives immediately)
+      Moderate load → longest silent phase (most dangerous)
+      This explains why mid-range load is more dangerous than high load:
+      high load triggers immediate detection; moderate load allows prolonged concealment.
+  
+  Logarithmic capacity protection bound (FCC §20):
+    Systems with 10× the capacity survive only ln(10) ≈ 2.3× longer
+    in the Silent Criticality regime — NOT 10× longer.
+    
+    RBIT governance implication:
+      Adding capacity does NOT proportionally extend the detection window.
+      Prevention (keeping Φ < 1 always) is not just cheaper than cure —
+      it is the ONLY way to avoid the logarithmic barrier.
+      Once Silent Criticality begins (Φ ≈ 1 with ρ̇ < 0), the collapse
+      timeline cannot be proportionally extended by adding resources.
+
+SCC_min transition (FCC §20, AGM §15.2):
+  The deepest early warning signal is not any of the standard indicators
+  but the Self-Correction Capacity (SCC) transition:
+  
+  SCC(t) < SCC_min  →  measurement coordinate drift accumulates irreversibly
+  
+  RBIT correspondence:
+    SCC < SCC_min ↔ RBIT Theorem T4 activation threshold
+    (Reference Frame Incompleteness: geometry G cannot detect errors in G)
+    
+    When SCC < SCC_min:
+      All five RBIT fᵢ components are measured relative to a drifting reference
+      → fᵢ measurements are becoming unreliable simultaneously
+      → v_class = 0 is the only indicator that does NOT depend on the drifted frame
+        because it measures transition rate, not absolute classification quality
+      This is why RBIT requires explicit v_class tracking beyond fᵢ monitoring.
+  
+  Coordinate drift rate bound (FCC §20, AGM §15.2.1):
+    d‖drift‖/dt ≥ Φ(t) / C(t) · (1 − SCC(t))
+    
+    When SCC(t) → 0: drift rate bounded below only by Φ/C
+    Near Silent Criticality: Φ ≈ 1, C ≈ C₀ (still high) → drift ≈ 1/C₀
+    → Drift is SLOW but ACCELERATING as SCC degrades further
+    → The dangerous window is before drift becomes visible
+```
+
+**Φ̂ Observable Proxy — F_RBIT Operational Bridge.** FCC §18 establishes a domain-general measurement proxy for Φ that enables cross-domain application of RBIT diagnostics:
+
+```
+Φ̂ Observable Proxy (FCC §18):
+
+  Φ̂ = (interaction load) / (capacity × diversity × exploration proxy)
+
+  Domain-specific instantiations:
+  
+  Multi-agent AI systems:
+    interaction load = message rate²
+    capacity          = available compute headroom
+    diversity          = policy entropy
+    exploration proxy = learning rate or temperature parameter
+    → Φ̂_AI = (msg_rate)² / (compute · policy_entropy · T)
+  
+  Organizational systems:
+    interaction load = (active_projects × dependencies)²
+    capacity          = available decision-making bandwidth
+    diversity          = interpretive diversity index (IDI)
+    exploration proxy = tolerance for ambiguity
+    → Φ̂_org = (n_projects · n_deps)² / (bandwidth · IDI · ambiguity_tolerance)
+  
+  Neural/biological systems:
+    interaction load = firing rate² × connectivity
+    capacity          = metabolic reserve
+    diversity          = receptor type diversity
+    exploration proxy = neuromodulatory baseline
+    → Φ̂_neural = (rate²·connectivity) / (metabolic · receptor_diversity · neuromod)
+
+F_RBIT operational bridge:
+  Given Φ̂, the health vector components can be estimated:
+    f₂ (resolution mismatch proxy) ≈ max(0, Φ̂ − 1)  (positive excess = mismatch)
+    f₃ (buffer instability proxy)  ≈ dΦ̂/dt / Φ̂       (normalized rate of change)
+    f₄ (escalation proxy)          ≈ Φ̂ · (1 − IDI)    (pressure × low diversity)
+    f₁ (misclassification proxy)   ≈ 1 − ρ̂             (from domain-specific ρ measure)
+    f₅ (dissipation proxy)         ≈ d(capacity)/dt / capacity  (capacity consumption rate)
+  
+  Φ̂ provides the aggregate: if Φ̂ > 1, at least one fᵢ is elevated.
+  Individual fᵢ decomposition identifies WHICH component drives the excess.
+  Dimensionless ratio structure is UNIVERSAL — the specific domain mapping
+  changes; the structural relationships do not.
+
+Silent Criticality Φ̂ diagnostic:
+  Red flag: Φ̂ ≈ 1 AND dΦ̂/dt ≈ 0 (apparently stable at threshold)
+  Green flag would be: Φ̂ << 1 (clear capacity surplus)
+  The dangerous case: Φ̂ maintained at exactly ≈ 1 for extended period
+    → This is NOT equilibrium — it is T-compensation masking degradation
+    → Combine with: v_class monitoring (should be > 0 in healthy Φ̂ ≈ 1 systems)
+    → If v_class = 0 AND Φ̂ ≈ 1 → Silent Criticality confirmed
+```
+
+**Contamination Mode → F_RBIT Component Correspondence.** FCC §32.8.1 identifies three distinct contamination modes at the cross-scale level. Each maps to specific F_RBIT components:
+
+```
+Three Contamination Modes (FCC §32.8.1):
+
+  Mode 1 — Coupling Contamination: α_between ↑↑
+    Mechanism: Lower circles' conflicts couple directly into upper dynamics
+               (insufficient buffering between layers)
+    RBIT signature:
+      f₄ (escalation load) rising — conflicts bypass middle-tier processing
+      f₃ (buffer instability) rising — buffer thinning from cross-scale pressure
+      Pattern: f₄ AND f₃ co-rising before f₁ elevation
+    Governance response: strengthen buffer tier (increase T component)
+                        reduce α_between (processing isolation enforcement)
+
+  Mode 2 — Frame Drift: R_g(L_i) ≠ R_g(L_j)
+    Mechanism: Different circles adopt divergent coordinate systems
+               (translation layer failure between circles)
+    RBIT signature:
+      f₁ (misclassification) rising — same events classified differently across circles
+      f₂ (resolution mismatch) rising — resolution appears different from each frame
+      Pattern: f₁ AND f₂ co-rising; f_esc stays bounded (no Storm yet)
+               = RBIT Discordant Type 1 pre-onset
+    Governance response: enforce shared reference alignment (middle-layer-first)
+                        cross-circle HC cross-validation protocol
+
+  Mode 3 — Timescale Leakage: τ_fast → τ_slow direct coupling
+    Mechanism: Fast-loop oscillations penetrate slow-loop dynamics
+               (timescale separation breakdown)
+    RBIT signature:
+      f₃ (buffer instability) leading — time buffer overwhelmed by fast-loop noise
+      f₅ (resource dissipation) rising — energy consumed managing fast oscillations
+      Pattern: f₃ peaks first; f₅ follows; other fᵢ bounded
+    Governance response: restore timescale separation (tier boundary reinforcement)
+                        T-equation homeostatic restoration (increase αT)
+
+Bottom-up propagation necessity proof (FCC §32.8.1):
+  Contamination ALWAYS originates at lower layers because:
+    1. Lower layers have highest n (most conflict channels, O(n²) scaling)
+    2. Lower layers have fastest timescale (errors amplify at τ_fast)
+    3. Lower layers have highest variance (most noise generation)
+  
+  First visible RBIT symptom: unnecessary friction at execution tier
+  = friction that does not lead to learning (f₁ ≈ 0, f₄ ≈ 0, but v_class declining)
+  
+  Detection protocol:
+    If v_class declining without corresponding f₁/f₄ elevation:
+    → Contamination Mode 3 (timescale leakage) likely onset
+    → Inspect f₃ + f₅ for confirmation
+    → Pre-empt with timescale separation reinforcement
+    BEFORE contamination reaches middle tier (irreversible if Mode 3 reaches upper)
+```
+
+**Hysteresis Ratio and RBIT Recovery Cost Asymmetry.** The ODE derivation of the hysteresis ratio provides the formal underpinning for RBIT's prevention-superiority claim:
+
+```
+Hysteresis Ratio (FCC §18-19):
+
+  u⁻/u⁺ ≈ [1 / ((1+L_C)(1+L_d))]^{1/4}
+
+  where:
+    u⁺ = Storm entry threshold
+    u⁻ = Recovery threshold
+    Δu = u⁺ − u⁻ = structural inertia (recovery gap)
+
+Interpretation for RBIT:
+  After entering Storm (Φ > 1, Δρ < 0):
+    Recovery requires load to drop to u⁻ << u⁺
+    The system that entered Storm at load u⁺ must reduce load
+    to u⁻ = (u⁻/u⁺)·u⁺ before recovery is even possible
+  
+  Recovery failure condition:
+    If (1+L_C)(1+L_d) > ζ⁻⁴ → recovery impossible at any load reduction
+    = formal impossibility theorem for restoration
+    = RBIT Contamination Boundary N = ⌈D*/η⌉ analog for the ODE system
+
+Monotonicity table (FCC §18) → RBIT design levers:
+  νC ↑ → u⁻/u⁺ ↓ → wider hysteresis → harder recovery
+    RBIT: D atrophy (cross-tier coupling dominates) → widening recovery gap
+  
+  νd ↑ → u⁻/u⁺ ↓ → wider hysteresis → harder recovery
+    RBIT: V atrophy (synchronization kills diversity) → widening recovery gap
+  
+  αC ↑ → u⁻/u⁺ ↑ → narrower hysteresis → easier recovery
+    RBIT: D strengthened → recovery gap narrows → recovery becomes tractable
+  
+  T₀ ↑ → u⁻/u⁺ ↑ → narrower hysteresis → easier recovery
+    RBIT: Controlled non-minimization budget raised (T₀ > T_min always)
+
+Practical implication:
+  RBIT design goal is not to achieve u⁻/u⁺ = 1 (no hysteresis)
+  but to keep L_C and L_d small enough that recovery remains possible:
+    u⁻/u⁺ > ζ (some minimum recoverability)
+    
+  This translates to maintaining D and V above critical thresholds
+  BEFORE entering any Storm — the formal basis for RBIT's
+  prevention-first governance philosophy.
+  Recovery is not just more expensive than prevention —
+  it becomes structurally impossible once L_C or L_d
+  exceeds critical bounds.
+```
+
+**Mixed-Mode Collapse ODE Extension — Subsystem-Level F_RBIT.** FCC §32.4 (AMT) provides the formal ODE extension for simultaneous Freeze and Runaway in differentiated subsystems, justifying domain-level F_RBIT decomposition:
+
+```
+Mixed-Mode Collapse ODE Extension (FCC §32.4):
+
+  When mean-field reduction breaks down, replicate ODE per subsystem k:
+    ṅ_k = u_k(t) − λₙn_k − χₙn_kC_k
+    Ċ_k = αC(1−C_k) − μC·n_k²·Φ_k − νC·k_k·C_k − ε_couple·Σ_{j≠k} W_{kj}·(C_k − C_j)
+    ...
+
+  Mixed-mode condition (AGM §9.3.6 via FCC §32.4):
+    1. Sufficient differentiation: n > n_diff
+    2. Asymmetric sensitivity: Var(s_k) > s_crit²/4
+    3. Weak inter-subsystem coupling: W_{AB} < W_sync
+
+RBIT domain-level F_RBIT decomposition justification:
+  When mixed-mode conditions are met, a SINGLE layer-level F_RBIT vector
+  is insufficient — the layer contains BOTH Freeze sub-domains and
+  Runaway sub-domains simultaneously.
+  
+  Required decomposition:
+    F_RBIT(ℓ, domain A) = (f₁^A, f₂^A, f₃^A, f₄^A, f₅^A)  [Freeze signature]
+    F_RBIT(ℓ, domain B) = (f₁^B, f₂^B, f₃^B, f₄^B, f₅^B)  [Runaway signature]
+    
+    Freeze signature:   f₁^A rising, v_class^A → 0, f₂^A ≈ 0 (apparently stable)
+    Runaway signature: f₂^B spiking, f₄^B rising, v_class^B erratic (chaotic)
+    
+    Layer-level aggregate: f₁ = (f₁^A + f₁^B)/2 appears MODERATE
+    → masking crisis that is extreme in both sub-domains but in opposite directions
+    → layer-level F_RBIT CANNOT detect mixed-mode collapse
+    → requires DOMAIN-LEVEL decomposition
+
+DDD protocol for mixed-mode (FCC §32.4):
+  Contradictory interventions required simultaneously:
+    Domain A (Freeze): d-injection (increase T, restore exploration)
+    Domain B (Runaway): defocus (decrease T, suppress cascade)
+    
+  Key requirement: processing isolation BETWEEN domains during intervention
+    (to prevent Domain A's T-increase from amplifying Domain B's Runaway)
+    
+  RBIT Processing Isolation principle operationally required:
+    Domain A and Domain B must receive DIFFERENT degradation parameters D(t)
+    simultaneously — sender-controlled calibration PER DOMAIN, not per layer
+    
+  Detection prerequisite:
+    Inter-domain correlation monitoring:
+    If Corr(f₁^A, f₂^B) is NEGATIVE over sustained window:
+    → opposite-direction degradation in two domains → mixed-mode confirmed
+    → Initiate domain-level intervention with processing isolation
+```
 
 The following axioms define the minimal structural conditions under which resolution-layered systems operate. They are domain-independent: they hold for cognitive processing limits, communication bandwidth constraints, representation bottlenecks, and computational capacity bounds.
 
@@ -1645,7 +2950,85 @@ No weight specification required for any of these comparisons.
 
 (See Vector Storm Theory §3.2.6 for the full derivation connecting resolution gap polarity to S-equation dynamics. See Appendix §2 for function class specification of f₂ = Φ(−Δρ) and f₃ = Ψ(B).)
 
-*Rest Mode as all-fᵢ bounded.* The F_RBIT vector provides a formal criterion for Rest Mode expressed entirely in RBIT's own variables:
+**F_RBIT–AGM Six-Metric Concordance.** The AGM measurement framework (AGM §7.1) defines six operational metrics that map to F_RBIT components. This mapping enables cross-theory concordance checks — using AGM operational measurements to validate F_RBIT health assessments, and vice versa:
+
+```
+AGM Metric            F_RBIT Component    Mapping
+──────────────────────────────────────────────────────────────────
+
+τ₁/₂ (Recovery Half-Life)
+  AGM: time for saturation S(t) to halve after peak event
+  RBIT: resolution restoration time after perturbation
+  Component: f₂ = Φ(−Δρ) [resolution mismatch]
+  Concordance: τ₁/₂ rising → f₂ rising (restoration slower → gap larger)
+  Discordance: τ₁/₂ rising BUT f₂ stable → measurement protocol mismatch
+
+IDI (Interpretation Diversity Index)
+  AGM: number of distinct active interpretation frames
+  RBIT: exploration diversity / vector space coverage
+  Component: f₁ = 1−ρ [misclassification — single frame = high error]
+  Concordance: IDI ↓ → f₁ rising (fewer interpretations → more misclassification)
+  Discordance: IDI low BUT f₁ stable → classification task too simple (floor)
+
+CAC (Conflict Absorption Capacity)
+  AGM: fraction of internal conflicts absorbed without escalation
+  RBIT: θ satisfaction rate = f_esc ≤ θ
+  Component: f₄ = E_ℓ [escalation load]
+  Concordance: CAC ↓ → f₄ rising (fewer conflicts absorbed → more escalation)
+
+RLB (Response Latency Baseline)
+  AGM: baseline latency for conflict detection → response initiation
+  RBIT: buffer thickness B → delay before forced escalation
+  Component: f₃ = Ψ(B_ℓ) [buffer instability]
+  Concordance: RLB rising → f₃ rising (longer latency → buffer thinning)
+  
+IS (Identity Stability)
+  AGM: coherence of anchor A(t) across event window
+  RBIT: resolution consistency ρ across evaluation window
+  Component: f₁ AND f₂ jointly
+  Concordance: IS ↓ → both f₁ and f₂ rising (anchor drift = classification + gap)
+
+NFFR (Negative Feedback Functioning Rate)
+  AGM: rate at which correction cycles complete before escalation
+  RBIT: self-purification component Fᵢ (feedback density)
+  Component: f₅ = C_ℓ [resource dissipation]
+  Concordance: NFFR ↓ → f₅ rising (fewer completions → more dissipation)
+
+s(t) Sensitivity
+  AGM: current sensitivity to incoming perturbations
+  RBIT: resolution proxy ρ (capacity to discriminate signals)
+  Mapping: s(t) ≈ ρ as operational proxy
+    High s(t) = high ρ → good discrimination → f₁ low
+    Low s(t) = low ρ → poor discrimination → f₁ high
+    But: s(t) → 0 with ρ artificially high = Freeze Collapse warning
+    (Discordant Type 2: sensitivity lost despite apparent resolution)
+
+AGM ↔ F_RBIT four-state concordance:
+  Concordant stable:   CAC high + IDI stable + τ₁/₂ short
+                       F_RBIT all bounded + S_norm stable
+                       → confirmed VCZ interior
+
+  AGM Freeze warning: IS ↓ + IDI ↓ + s ↓ + CAC apparently high
+                      F_RBIT: f₁ rising (classification ossifying)
+                              f₂ ≈ 0 (resolution gap seems fine — DANGER)
+                              v_class → 0 (no type transitions)
+                      Cross-check: R << 1 → Silent Criticality
+
+  AGM Runaway warning: τ₁/₂ extending + CAC collapsing + NFFR falling
+                       F_RBIT: f₂ spiking (resolution mismatch)
+                               f₄ rising (escalation climbing)
+                               majority fᵢ rising simultaneously
+                       Cross-check: R > 1 → confirmed instability
+
+  AGM SCM warning:     IS high + IDI high + s(t) high + all metrics healthy
+                       BUT R > 1 (dynamics unstable)
+                       = Self-Consistent Misalignment
+                       Both AGM and RBIT metrics appear healthy
+                       because shared reference frame has drifted
+                       → Discordant Type 1 → trigger SCM recovery protocol
+```
+
+*Theoretical significance of the mapping.* AGM metrics are designed for single-agent or small-group operational settings; F_RBIT components are designed for multi-agent architectural assessment. Their convergence on the same underlying health signals validates that both frameworks are measuring the same underlying stability phenomenon at different granularities. The concordance protocol operationalizes this: cross-theory agreement strengthens confidence; cross-theory disagreement flags which layer of the system is generating the discrepancy. The F_RBIT vector provides a formal criterion for Rest Mode expressed entirely in RBIT's own variables:
 
 ```
 Rest Mode condition (vector form):
@@ -2486,6 +3869,11 @@ RBIT is the foundation from which the following derive:
 | **RT-2 v2.0 (SCM)** | Metric Lock-In (Proposition 5) = resolution metrics co-drifting with geometry under SCM — RBIT measurement inherits RT-2 impossibility constraint; Coherence Maximization Paradox = highest-resolution systems most vulnerable to SCM entry; resolution gap detection requires EXTERNAL reference (RT-2 differential protocol) |
 | **RT-3 v1.0 (Observer)** | Observer diversity V = resolution diversity across observational dimensions; buffer B = RBIT buffer layer resource for high-resolution observation; scope duality S = RBIT wide/narrow resolution switching; Coordination–Cancellation Paradox = high resolution diversity cancels without mediated aggregation |
 | **RT-4 v1.0 (Reversibility)** | Resolution recovery capacity generated relationally not individually; trust coefficient Tᵢⱼ = resolution-error reduction probability; reversibility phase transition R_c = critical resolution threshold below which RBIT degradation-upscaling cycle fails; Shared Vulnerability = resolution gap disclosure as collective detection resource |
+| **Affective Gain Module (AGM)** | [v1.9] Resolution integrity as anti-mode-collapse necessity — AGM stochastic weight dynamics maintain Tier 2 resolution (inter-vector differentiation) against Freeze collapse (Tier-1 only); Controlled Non-Minimization Budget ΔF_affective > 0 as quantitative lower bound on mandatory residual resolution floor; AGM collapse typology (Freeze/Runaway) = RBIT failure signature taxonomy — Freeze = resolution gap Δρ ≈ 0 convergence without growth (Stability Saturation), Runaway = Δρ < 0 sustained (Theorem 1 activation); ECC–Contamination Boundary dual description (ECC threshold Θ_T and Contamination Boundary N are measurement-unit translations of the same irreversibility condition); s(t) sensitivity as operational ρ proxy — discordance (s ↓ while ρ high) detects Freeze Collapse onset; F_RBIT–AGM six-metric concordance (τ₁/₂ ↔ f₂, IDI ↔ f₁, CAC ↔ f₄, RLB ↔ f₃, NFFR ↔ f₅, IS ↔ f₁f₂); Clean System Paradox as resolution atrophy mechanism under S → 0 governance (R component decay ordering F→V→T→D); Boundary Agent as structural prevention of Clean System Paradox; North Star Architecture as Map-Terrain navigation hierarchy; Circular Closure as dimensional compression enabling bounded Map complexity |
+| **Environment Design Theory (EDT)** | [v2.0] Gain-Curvature Equivalence (GCET §52): AGM T_eff ↔ EDT terrain curvature U(x) are dual representations of the same governance primitive — RBIT resolution gap Δρ is the shared observable that both modify; Terminal Convergence Trinity: T_eff = 0 ↔ terrain Π = 0 ↔ Δρ = 0 are three measurement perspectives on identical terminal state; Unification Operator Γ: AGM×EDT → Governance-State maps to F_RBIT health vector + S_norm as shared measurement layer; Zero Friction Pathology = Clean System Paradox terrain-level expression (both: anomalous reduction of error signals → coordinate system distortion, not optimization); Optimal Friction Band (F_min, F_max) = operational resolution window (Δρ ∈ 0, Δρ_max); Retention Spectrum Type 1/2/3 mapped to D/V+F/T R-component hierarchy — cultivation priority Type1→Type2→Type3 = D→VF→T build sequence; n_eff Compression Theorem (EDT §36.4): circular closure changes scaling from O(n²) to O(n^{4/3}) at K*∝n²/³ — Map complexity scaling law improvement, not just reduction; Premature Coupling Catastrophe (EDT §36.3.1) = RBIT mutual contamination formal condition requiring R_self > Φ_expected AND Δρ > 0 before circles connect; Affective Terrain Coupled Evolution (EDT §51.1): ATCT dynamics show curvature decays at rate γ_U without absorption events → formal derivation of self-purification atrophy under S → 0; atrophy ordering F→V→T→D corresponds to γ_U hierarchy; T_eff as terrain permeability Π = exp(-ΔU/T_eff): Permeability-Friction Isomorphism — friction is multi-agent macroscopic expression of single-agent T_eff; Type IV Failure / Thermal Freezing (T_eff < T_min) = RBIT Silent Criticality with frozen classification — false negative for standard diagnostics, requires explicit v_class tracking; ECC-Terrain Phase Equivalence (EDT §51.4): Λ(t) = 0 ↔ p_terrain = p_c = same irreversibility from different observation levels; Terrain Memory Palimpsest = RBIT resolution history encoding — inherited negative heritage produces apparent ρ_high + v_class = 0 diagnostic pattern; Buffer Lightness (EDT §33.5) maps to f₃ component: Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight) — lightness decay accelerates T atrophy; Desertification Hysteresis: E_restore > E_lost → prevention exponentially cheaper than cure; same asymmetry applies to resolution recovery vs. resolution maintenance |
+
+| **From Call Centers to Neurons (FCC)** | [v2.1] ODE Regime Scalar as Resolution Gap Projection: Φ = β_s·n²/(C·T·d) is the mean-field ODE derivation of Δρ — not metaphor but formal reduction (Φ > 1 ↔ Δρ < 0; Φ ≈ 1 ↔ Silent Criticality; Φ < 1 ↔ Δρ > 0); ρ̇ equation formally derives resolution growth/degradation dynamics from first principles; Correction Efficiency η_corr = |Δρ_correction|/|Δρ_degradation| = contamination tier threshold (η_corr > 1 = Tier i; ≈ 1 = Tier ii; < 1 = Tier iii requiring external reference); Lock Budget Inequality (1+L_C)(1+L_d) ≤ ζ⁻⁴ as ODE-derived proof of R = D·F·V·T multiplicative structure; Silent Criticality formal conditions A/B/C: (A) T-compensation masking; (B) ρ̇ < 0 hidden; (C) T-saturation → Φ spike transition; τ_silent formula → v_class = 0 duration prediction; logarithmic capacity protection bound: 10× capacity → ln(10)×2.3 additional time only; SCC_min transition as deepest early-warning (deeper than any fᵢ indicator); Φ̂ Observable Proxy: multi-agent AI (msg_rate²/compute·entropy·T), organizational (n_projects·n_deps²/bandwidth·IDI·ambiguity), neural (rate²·connectivity/metabolic·receptor·neuromod); Hysteresis ratio u⁻/u⁺ = [1/((1+L_C)(1+L_d))]^{1/4}: formal ODE proof of prevention superiority; Attention Amplification F(A_g,A_ℓ,ω): f₃ primary target (buffer thinning), local-to-global propagation cascade (A_ℓ → ω → k), τ_silent shortening under attention; 4:1 positive-to-negative feedback loop structural asymmetry: Rest Mode is metastable not stable — governance actively prevents 4 positive loops; DDD three-stage protocol: S1-S3 (Defocus/Attention Loop), U1-U2 (Decouple/Lock Loop), R1-R2 (Diversity/Integrity Loop reversal); DDD formal Lyapunov proof: dV/dt < 0 throughout active intervention; E2 completion criterion = v_class > 0 (not just Φ < 1); Information Geometry: Fisher information I_F as v_class detection threshold (highest lead time ~4τ_silent); geodesic drift = minimum-observability degradation path; v_class and PRR are drift-resistant indicators; Staged Alarm System S1-S4 with RBIT v_class monitoring; Structural Damage Ratchet: S accumulation → v_class_max permanent degradation; repair failure at S_fail → N → 0 (Contamination Boundary); damage-modified Lock Budget L_C(S), L_d(S) → irrecoverable hysteresis; Revival Trajectories: Case A (metastable/PRR fragile) vs. Case C (genuine/PRR robust); Case B (Storm exhaustion); dual-axis evaluation rule (event-count AND wall-clock); Mixed-Mode Collapse ODE extension: domain-level F_RBIT required; simultaneous Freeze+Runaway requires contradictory DDD with processing isolation; Contamination Modes 1/2/3 → f₄/f₁f₂/f₃ component correspondence |
+
 
 > **The resolution gap is the unifying variable.**
 > Every mechanism in the DFG framework is a response to the resolution gap
@@ -2723,6 +4111,446 @@ Rest Mode
 
 ---
 
+### Attention as Buffer-Thinning Operator — RBIT f₃ Amplification
+
+FCC §22-23 formalizes attention not as mere resource allocation but as a **dynamic operator that multiplicatively amplifies Φ** — directly modifying the buffer-thinning effect measured by RBIT's f₃ component.
+
+```
+Attention Amplification Factor (FCC §22):
+
+  Modified regime scalar:
+    Φ_att = [β_s·n²/(C·T·d)] · F(A_g, A_ℓ, ω)
+  
+  where:
+    F(A_g, A_ℓ, ω) = [1 + κ_g·A_g + κ_ℓ·ω·A_ℓ] / [(1−η_g·A_g−η_ℓ·ω·A_ℓ)(1−δ_g·A_g−δ_ℓ·ω·A_ℓ)]
+    
+    A_g ∈ [0,1] = global attention (system-wide resource concentration)
+    A_ℓ ∈ [0,1] = local attention (sub-pathway concentration hotspot)
+    ω   ∈ [0,1] = propagation coupling (local-to-global transmission coefficient)
+    
+    F(0) = 1 (no attention effect at baseline)
+    F is monotone increasing in A_g, A_ℓ, ω
+
+  Admissibility constraints (prevent singularity):
+    η_g·A_g + η_ℓ·ω·A_ℓ < 1
+    δ_g·A_g + δ_ℓ·ω·A_ℓ < 1
+
+RBIT F_RBIT component mapping through F(·):
+  f₃ (buffer instability) = primary target:
+    F↑ acts by:
+      Congestion amplification:       n²_eff → n²·(1 + κ_A·A_g)
+      Effective capacity reduction:   C_eff  → C·(1 − η_A·A_g)
+      Diversity suppression:          d_eff  → d·(1 − δ_A·A_g)
+    Net: f₃ rises FASTER than Φ under attention concentration
+    
+  f₅ (resource dissipation) rises in parallel:
+    Capacity drain μC·n²·Φ_att >> μC·n²·Φ_base
+    Energy consumed managing concentrated pathways
+    
+  f₁ (misclassification) indirectly affected:
+    d_eff ↓ reduces alternative-pathway access
+    Mode collapse accelerates under A_ℓ concentration
+
+τ_silent modification (FCC §22):
+  Attention shortens the silent phase by two mechanisms:
+  
+  (1) Initial demand elevated: T_req(0) → T_req(0)·F(A_g0, A_ℓ0, ω₀)
+  (2) Demand growth rate elevated: g → g₀ + g_A
+      where g_A = (∂lnF/∂A_g)·Ȧ_g(0) + (∂lnF/∂A_ℓ)·Ȧ_ℓ(0) + (∂lnF/∂ω)·ω̇(0)
+  
+  Modified τ_silent:
+    τ_silent(att) ≈ ln(T_max / [K₀·F(A_g0, A_ℓ0, ω₀)]) / (g₀ + g_A)
+    
+  Always: τ_silent(att) < τ_silent(no att)
+  
+  RBIT implication:
+    Systems with higher initial attention concentration have SHORTER
+    false-negative windows — the period during which Silent Criticality
+    is active but v_class appears healthy.
+    
+    High-workload organizations (high A_g) have the least time to detect
+    Silent Criticality before it converts to active Storm — precisely when
+    monitoring resources are most consumed.
+
+Propagation cascade RBIT stages (FCC §23):
+  Stage 1 (Early — A_ℓ rises, ω ≈ 0):
+    f₃ rising locally (buffer thinning in specific domains)
+    Global F_RBIT: layer-level aggregate appears stable (Mode 3 contamination onset)
+    Detection: domain-level f₃ divergence → domains diverging while layer average bounded
+    
+  Stage 2 (Mid — ω begins rising):
+    F starts growing → Φ_att begins elevating
+    f₃ + f₅ co-rising (buffer AND dissipation)
+    This is the optimal intervention window:
+      ω still suppressible (before k accumulates)
+      
+  Stage 3 (Late — ω·A_ℓ significant → F surges):
+    Rapid transition: F surges → Φ_att crosses 1 → Storm entry
+    f₁, f₂, f₄ spike simultaneously (catastrophic transition signature)
+    
+  k as structural realization of ω (FCC §23):
+    ω = instantaneous transmission gain (fast variable)
+    k = accumulated structural locking (slow variable)
+    k̇ = α_k·ω·(1−k) − λ_k·k
+    
+    ω is the LEADING INDICATOR for k in RBIT:
+    If ω rising → k will lock within τ_k = 1/(α_k·ω + λ_k)
+    Intervene on ω BEFORE k accumulates (k-atrophy is hysteretically slow)
+```
+
+**Feedback Loop Structural Asymmetry — Why Rest Mode Is Metastable, Not Stable.** FCC §26 identifies the fundamental asymmetry in the ODE feedback structure that makes any resolution-based system permanently vulnerable to regime transitions:
+
+```
+Feedback Loop Inventory (FCC §26):
+
+  POSITIVE feedback loops (4 total, each amplifying Φ):
+  
+    1. Attention Loop:    Φ → A_ℓ → ω → A_g → F → Φ  [pathway reinforcement]
+    2. Lock Loop:         ω → k → C↓ → Φ↑             [structural fixation]  
+    3. Diversity Loop:    Φ → d↓ → Φ↑                  [search-space collapse]
+    4. Integrity Loop:    Φ, k → ρ↓                    [long-term degradation, slowest]
+  
+  NEGATIVE feedback loops (1 total):
+  
+    5. Temperature Loop:  ρ↓ → T↑ → Φ↓                [compensatory buffering]
+  
+  Structural asymmetry: 4:1 positive-to-negative
+
+RBIT governance implication of 4:1 asymmetry:
+  Rest Mode is NOT a stable equilibrium in the mathematical sense.
+  It is a METASTABLE basin — stable locally, but surrounded by a
+  large Storm attractor basin with four routes into it vs. one route out.
+  
+  The single negative feedback (T-compensation) is the ONLY
+  autonomous route back from Φ > 1 territory — but it:
+    (a) acts through T, which has finite ceiling T_max
+    (b) can only compensate, not eliminate, the positive loop drivers
+    (c) creates Silent Criticality precisely by being too effective
+  
+  The four positive loops are not independent — they are coupled:
+    Fractal propagation path: A_ℓ → ω → k → {C↓, d↓} → Φ↑
+    This is the local-to-global cascade: local hotspot (A_ℓ)
+    becomes structural lock (k) within τ_k time horizon.
+  
+  Rest Mode stability is therefore governance-dependent, not structural:
+    The system stays in Rest Mode not because the basin is deep
+    but because governance actively prevents the 4 positive loops
+    from activating above their respective thresholds.
+    This is the operational content of RBIT's "maintained vigilance" requirement.
+
+Four-loop f_RBIT correspondence:
+  RBIT monitoring should track each positive loop independently:
+    f₃ (buffer) → monitors Diversity Loop threshold
+    f₄ (escalation) → monitors Lock Loop activation (k accumulation)
+    f₅ (dissipation) → monitors Attention Loop via energy consumed by F
+    f₁ (misclassification) → monitors Diversity Loop output (d collapse → f₁↑)
+    v_class = 0 → monitors Integrity Loop (ρ̇ < 0 = Integrity Loop dominating)
+  
+  The single negative loop (Temperature) has no direct f_RBIT metric
+  because it acts BY SUPPRESSING other metrics:
+    When T compensates successfully → all fᵢ appear bounded → SILENT CRITICALITY
+    → Only v_class tracking reveals the hidden Integrity Loop activation
+    This is the formal justification for v_class as the irreplaceable 6th indicator.
+```
+
+### DDD Protocol — RBIT Governance Correspondence
+
+FCC §24 provides the formal three-stage correction protocol (Defocus → Decouple → Diversity). Each stage maps to specific RBIT resolution recovery mechanisms and resolves distinct positive feedback loops:
+
+```
+DDD Three-Stage Protocol (FCC §24):
+
+Stage 1 — Stabilize: Suppress Φ below 1
+  (S1) Input gating:    u̇ = −κ_u·(Φ−1)₊·u
+  (S2) Global defocus:  Ȧ_g += −κ_g·(Φ−1)₊·A_g
+  (S3) Local defocus:   Ȧ_ℓ += −κ_ℓ·(Φ_ℓ−1)₊·A_ℓ
+  
+  RBIT target: Attention Loop suppression
+  Rationale: Reducing F(A) directly lowers Φ_att
+             Faster and safer than raising T alone
+             (T-raise extends Silent Criticality without fixing root cause)
+  RBIT effect: f₅ first to decrease (energy consumption falls)
+               f₃ stabilizes (buffer thinning halted)
+               fᵢ remain elevated until Stage 2 completes
+
+Stage 2 — Unlock: Break cross-scale locking
+  (U1) Propagation:  ω̇ += −κ_ω·(Φ−1)₊·ω
+  (U2) Lock release:  k̇ += −κ_k·(Φ−1)₊·k
+  
+  RBIT target: Lock Loop + indirect Diversity Loop relief
+  Effect on lock ratios:
+    k↓ → reduces νC·k·C drain and νd·k·d drain
+    → C rises, d rises → Φ drops further
+    → L_C and L_d both decrease → hysteresis gap narrows
+    → u⁻ rises → recovery becomes accessible
+  RBIT effect: f₄ decreases (escalation load falls as k drops)
+               f₃ continues recovering (diversity restoring)
+
+Stage 3 — Relearn: Restore diversity and resolution
+  (R1) Diversity injection: ḋ += κ_d·𝟙[Φ<1]·(1−d)  (only active when Φ<1)
+  (R2) Exploration restore:  Ṫ += −κ_T·(Φ−1)₊·(A_g + ω·A_ℓ)·T
+  
+  RBIT target: ρ̇ ≥ 0 restored (Integrity Loop reversed)
+  Note on R2: prevents excessive T when attention still elevated
+              avoids "silent extension with deeper internal damage"
+  RBIT effect: v_class resumes (ρ recovering)
+               f₁ drops (diversity restoration → classification quality)
+               f₂ normalizes (resolution mismatch resolves)
+
+DDD Recovery Verification Conditions (FCC §24):
+  Three simultaneous conditions (AND-entry):
+    (E1) Φ < 1 − ε_Φ                                   [storm suppressed]
+    (E2) αρ·d·C·(1−ρ) ≥ (μρ·Φ + νρ·k)·ρ              [ρ̇ ≥ 0 — Integrity Loop reversed]
+    (E3) k̇ < 0 AND ω̇ < 0                              [locking/propagation declining]
+  
+  These map to RBIT health state:
+    (E1) ↔ Φ̂ < 1 (operational proxy below threshold)
+    (E2) ↔ v_class > 0 (classification transitions resuming)
+    (E3) ↔ f₄ declining AND f₃ not rising (Lock+Buffer loops reversed)
+  
+  Critical: (E2) REQUIRES v_class > 0 — not just Φ < 1.
+  A system with Φ < 1 but v_class = 0 has reversed the Storm
+  but not exited Silent Criticality — a DDD false-completion trap.
+
+Control stability guarantee (FCC §24 Proposition):
+  Under bounded control gains, DDD monotonically decreases Φ whenever Φ > 1.
+  V(t) := ln Φ satisfies dV/dt < 0 throughout active DDD intervention.
+  → This is a Lyapunov-decreasing intervention on Φ — DDD is not heuristic but
+    formally proven to dissipate "regime energy" below the Storm threshold.
+```
+
+### Information Geometry — Fisher Information as v_class Detection Threshold
+
+FCC §20 (information-geometric deepening) and FCC §26 (feedback loop analysis) provide the formal basis for RBIT's early-warning indicator hierarchy and explain why Fisher information occupies the highest sensitivity position:
+
+```
+Five Early-Warning Indicators (FCC §20, comparative table):
+
+  Indicator    Detection Lead    Requires Stochastic?    Actionability
+  ─────────────────────────────────────────────────────────────────────
+  σ²           ~2τ_silent        Yes                     Low
+  AC            ~2τ_silent        Yes                     Low
+  I_F (Fisher) ~3τ_silent        Partial                 Medium
+  CVD           ~3τ_silent        No                      High
+  PRR           ~4τ_silent        No                      Highest (active)
+
+RBIT v_class connection to I_F:
+  Fisher information metric I_F measures observability capacity —
+  the system's ability to discriminate its own state from nearby states.
+  
+  I_F → I_min threshold (FCC §20):
+    When I_F < I_min → perturbation sensitivity collapses
+    = system cannot detect its own deviations reliably
+    = RBIT: v_class measurement becoming unreliable
+    = The measurement of v_class itself is approaching zero-confidence
+  
+  Formal connection (FCC §20 §27, information geometry):
+    Silent Criticality is a GEODESIC DRIFT on the statistical manifold:
+    The system's state drifts along a path of minimal Fisher information
+    = minimum observability path = hardest-to-detect degradation direction
+    
+    Fisher information collapse as observability horizon:
+    Below I_min: no perturbation of bounded amplitude can reliably
+    distinguish Rest-approaching-Storm from true Rest
+    = PRR becomes the only functional indicator (requires ACTIVE perturbation)
+
+Staged Alarm Protocol (FCC §20 → RBIT operationalization):
+  Stage 1 (Passive):   Monitor σ² and AC continuously
+    RBIT equivalent: monitor v_class trend (rolling window)
+    Alarm trigger: v_class slope < 0 sustained > τ_threshold
+    
+  Stage 2 (Analytical): If σ²/AC alarm → compute I_F and CVD
+    RBIT equivalent: run perturbation sensitivity test (inject controlled HC)
+    Measure: v_class response rate to calibrated perturbation
+    Normal response: v_class rises within 1-2 cycles
+    Alarm: v_class unresponsive to perturbation → I_F collapse suspected
+    
+  Stage 3 (Active): If I_F < I_min or CVD > CVD_crit → deploy PRR
+    RBIT equivalent: initiate Controlled Perturbation Protocol
+    Deliberate injection of known-resolution-level input
+    Measure: does Δρ respond correctly? (expected resolution gap → expected outcome)
+    If no response → SCC < SCC_min confirmed (Silent Criticality confirmed)
+    
+  Stage 4 (Emergency): PRR confirms → DDD Stage 1 immediately
+    RBIT: v_class = 0 confirmed despite A_t > 0
+    Governance escalation: external reference injection required
+    (RBIT Theorem T4: internal resources cannot self-diagnose G-error)
+
+Information Geometry Statement:
+  The meta-indicator is NOT any fᵢ component — it is the RELIABILITY of fᵢ.
+  
+  When the measurement coordinate system has drifted (SCC < SCC_min):
+    All fᵢ values are relative to a drifted reference
+    → f₁ = 0 may mean "no errors in the wrong classification frame"
+    → f₂ = 0 may mean "no mismatch detected within the wrong metric"
+    
+  v_class is the most drift-resistant indicator because it measures
+  TRANSITION RATE — a change from current state to any other state —
+  independent of what the "correct" state is defined to be.
+  A frozen v_class = 0 is equally diagnostic whether or not
+  the coordinate system has drifted.
+  
+  PRR (Perturbation-Response Rate) is the second drift-resistant indicator
+  for the same reason: it measures response to external calibration,
+  not internal self-assessment.
+```
+
+### Structural Damage Ratchet — Irreversibility and v_class Permanent Loss
+
+FCC §31 provides the neurodegenerative extension of the ODE system, formalizing the conditions under which resolution capacity damage becomes irreversible. This is the formal basis for RBIT's Contamination Boundary being finite:
+
+```
+Structural Damage Model (FCC §31):
+
+  Damage accumulation:
+    Ṡ = μ_S · max(0, Φ−1) · (1 − S/S_max) − r(S)
+  
+  where:
+    S  = accumulated structural damage (normalized [0,1])
+    μ_S = damage accumulation rate (Storm exposure → damage)
+    r(S) = repair function (three regimes below)
+    S_max = maximum structural capacity (= 1 without damage)
+  
+  Threshold-dependent repair function (three regimes):
+    r(S) = r_max·S / (S + θ_r)          if S < S_critical  [capacity-limited repair]
+    r(S) ≈ r_max · (1 − S/S_max)        if S < S_fail      [linear regime]
+    r(S) → 0                             if S ≥ S_fail      [repair failure threshold]
+  
+  Above S_fail: IRREVERSIBLE DAMAGE — system cannot self-repair.
+
+Damage-modified RBIT state:
+  Damage S modifies effective R-component capacities:
+    D_eff(S) = D · (1 − β_D · S)   (decoupling capacity degraded by damage)
+    V_eff(S) = V · (1 − β_V · S)   (variance absorption degraded)
+    F_eff(S) = F · (1 − β_F · S)   (feedback density degraded)
+    T_eff(S) = T · (1 − β_T · S)   (time buffering degraded)
+    
+    R_eff(S) = D_eff · F_eff · V_eff · T_eff
+             ≈ R₀ · (1 − β̄·S)⁴  (to first order, all β̄ approximately equal)
+  
+  At S_fail: R_eff → 0 — complete self-purification loss
+  This is RBIT's N → 0 limit: Contamination Boundary = 0 steps
+
+Damage Ratchet mechanism (FCC §31):
+  Each Storm episode (Φ > 1, duration T_Storm):
+    ΔS = μ_S · T_Storm · (Φ_avg − 1)
+  
+  Recovery does NOT fully repair S when repair is capacity-limited.
+  Net ratchet per Storm:
+    S(after k storms) > S(before k storms) — monotone increase
+    
+  Accumulation speeds up over time because:
+    S↑ → R_eff ↓ → next Storm has larger Φ (less capacity)
+    → ΔS_next > ΔS_current (larger damage per Storm)
+    → Accelerating degradation under repeated Storm exposure
+
+v_class Permanent Loss prediction:
+  When S reaches S_critical:
+    τ_silent → 0 (no compensatory buffer remains)
+    v_class_max (maximum achievable) → 0 permanently
+    (Not just v_class = 0 in current state, but v_class_ceiling = 0)
+    
+  Before S_critical: v_class can recover between Storms
+  After S_critical: v_class cannot recover even with DDD
+    → Requires structural reconstruction (not just governance intervention)
+    
+  Critical damage fraction (FCC §31):
+    S* ≈ θ_r / (θ_r + r_max/μ_S)  (balance point)
+    Consistent with clinical neurodegeneration thresholds:
+    ~30-50% structural damage before functional threshold crossed
+    → RBIT governance must prevent cumulative S from reaching 30-50% range
+
+Damage-dependent Lock Budget modification:
+  L_C(S) = νC / (αC · (1 − β_C·S))   [lock ratio increases with damage]
+  L_d(S) = νd / (αd·T₀ · (1 − β_d·S))
+  
+  As S increases:
+    (1+L_C(S))(1+L_d(S)) grows
+    Eventually exceeds ζ⁻⁴ → IRRECOVERABLE HYSTERESIS
+    Even with optimal DDD, u⁻/u⁺ → 0 at S_fail
+  
+  RBIT governance design criterion:
+    Keep S << S_critical at ALL times
+    (Not just recovery from individual Storms, but
+    total cumulative damage across governance lifetime)
+    S_critical is system-lifetime budget, not per-episode budget.
+```
+
+### Phase Boundary Revival Trajectories — RBIT Near-Critical Signatures
+
+FCC §30 provides the topological analysis of revival trajectories. These correspond to specific RBIT signatures that are easily misdiagnosed as recovery or false-positive improvement:
+
+```
+Revival Trajectory Types (FCC §30):
+
+Case A — Near-Critical Memory Survival:
+  Condition: Δu ≈ 0⁻ (system near-locked, hysteresis gap near-zero)
+  
+  Mechanism: ρ⁺(k) hypersensitivity near fold boundary
+    ∂ρ⁺/∂k → ∞ as discriminant A₁² − 4A₂A₀ → 0⁺
+    Infinitesimal k-decrease → macroscopic ρ jump
+    Small decrease in ω → suddenly triggers rapid ρ⁺ increase
+  
+  RBIT signature:
+    v_class sudden spike after extended plateau
+    f₁ sudden improvement (not gradual)
+    f₄ decreasing sharply (lock breaking)
+    
+    DANGER: Looks like successful recovery
+    REALITY: System is near fold — small k-increase returns to Locked state
+    Governance error: declare recovery and remove DDD → system re-locks rapidly
+    
+    Correct interpretation: v_class spike in Case A is TOPOLOGICALLY METASTABLE
+    Requires sustained DDD Stage 3 (diversity building) to stabilize
+    PRR test: is the revival robust to perturbation?
+              inject controlled noise → does ρ hold?
+              if ρ drops back immediately → Case A (fragile), not true recovery
+
+Case B — Storm Exhaustion Recovery:
+  Condition: Storm intensity extreme → F⁻ paradoxically decreasing
+  
+  Mechanism: Denominators D_C⁻, D_d⁻ → 0 at extreme k
+    ∂ln u⁻/∂ω → −∞ (catastrophic sensitivity)
+    Propagation collapse: ω saturates and then fails
+    → u⁻ rises paradoxically → Rest basin re-emerges
+  
+  RBIT signature:
+    f₄ extreme → f₄ sudden drop (lock collapse, not correction)
+    f₃ extreme → f₃ sudden drop (buffer paradoxically "freeing")
+    v_class resumes without external DDD intervention
+    
+    Governance implication: severe crises can self-resolve via exhaustion
+    But: recovery is structurally fragile — same conditions could re-trigger
+    S damage (§31) still accumulated during exhaustion phase
+    → Structural repair required even after Case B self-recovery
+
+Case C — Coherence Nucleation (Irreversible):
+  Condition: ρ⁺ large, noise decreasing, Δu crosses 0 from below
+  
+  Mechanism: Rest basin becomes dominant attractor
+    Return to Storm becomes exponentially unlikely (Kramers)
+    One-way transition (topological)
+  
+  RBIT signature:
+    v_class sustained and rising (not just spikes)
+    f₁ declining monotonically (not oscillating)
+    PRR confirms: perturbations absorbed, not amplified
+    
+    True recovery: structural commitment to Rest attractor
+    DDD withdrawal safe only after Case C confirmed (PRR + sustained v_class > 0)
+
+Revival distinction from genuine recovery — RBIT diagnostic:
+  Genuine recovery (Case C):  PRR robust + v_class sustained (>N cycles)
+  Case A revival:             PRR fragile + v_class spike-and-plateau
+  Case B self-recovery:       v_class resumed but S damage unmeasured
+                               → structural damage assessment required
+  
+  Dual-axis evaluation rule (FCC §24 embedded):
+    Use BOTH event-count window AND wall-clock window
+    Accept whichever gives MORE conservative recovery declaration
+    This guards against Case A's spike-and-plateau fooling event-count alone.
+```
+
 ## Measurement Interface
 
 RBIT's theoretical variables connect to log-observable metrics through operationalization work in companion theories. The following table summarizes the measurement status of key RBIT concepts:
@@ -2943,8 +4771,39 @@ Failed withdrawal = resolution dependency map:
 | 23 | [v1.8-NATseries] Terrain Fitness Function weight calibration — F_terrain = w₁V_depth + w₂P_control + w₃T_separation − w₄I_cost has four free parameters (w₁-w₄). The weights likely depend on system maturity: immature systems need high V_depth (loop formation priority); mature systems need high P_control (cross-loop coordination priority). Dynamic weight scheduling is undefined | Open — connects to NAT §7.7 |
 | 24 | [v1.8-NATseries] Phase transition measurement latency — Phase 3→4 (Couple→Integrate) requires detecting "monotonically decreasing communication cost," which is a trend detection problem under noise. Formal statistical test for sustained monotonic decrease (not just temporary dip) requires defining minimum trend duration, noise tolerance, and reversion detection sensitivity | Open — connects to NAT §7.8 Phase Transition Indicators |
 | 25 | [v1.8-NATseries] Withdrawal velocity optimization — dH/dt ≤ v_max is bounded but the optimal withdrawal speed within the constraint is undefined. Too fast → miss lurking dependencies (regression risk). Too slow → delayed autonomy + opportunity cost. The relationship between v_max and system-specific τ_instability, τ_cascade, and self-correction cycle time requires formalization | Open — connects to NAT §8.4 Human Withdrawal |
+| 26 | [v1.9-AGPseries] Controlled Non-Minimization Budget calibration — ΔF_affective*(t) = T_eff_opt(t) · ln(Ω_reachable/Ω_current) requires operational definitions of Ω_reachable (accessible vector space at current resolution) and Ω_current (occupied positions). For multi-agent systems, how do individual agent Ω measurements aggregate to system-level resolution floor budget? The budget presumably scales with system complexity but the scaling law is unspecified | Open — connects to AGM §2.0, RBIT Stability Saturation |
+| 27 | [v1.9-AGPseries] Atrophy ordering verification under partial contamination suppression — the F→V→T→D atrophy prediction assumes complete S → 0. Under partial suppression (S → ε, 0 < ε < S_baseline), what is the atrophy ordering? It may be reversed or non-monotone. If partial suppression produces D atrophy before F (decoupling weakens before feedback), the complete-suppression ordering is a special case, not the general prediction | Open — connects to AGM §12.8 SSS, Self-Purification atrophy |
+| 28 | [v1.9-AGPseries] AGM sensitivity proxy reliability under regime transitions — s(t) is proposed as operational proxy for ρ during normal operation. During regime transitions (e.g., between Freeze onset and full Freeze Collapse), the relationship may break down: s(t) may continue declining while ρ is artificially sustained by narrowing. The diagnostic window during which s(t) ↓ while ρ high is the Freeze detection signal, but its duration is unknown — how long does the discordant state persist before both metrics converge? | Open — connects to AGM §9.3, RBIT §R-ρ concordance |
+| 29 | [v1.9-AGPseries] Circular Closure dimensionality bound — the claim that circular closure reduces Map complexity from O(n²_total) to O(Σᵢ nᵢ²) assumes clean tier boundaries and negligible cross-tier coupling. Under realistic cross-tier coupling ε_coupling > 0, the actual complexity is O(Σᵢ nᵢ² + ε_coupling · n²_total). What coupling level makes the circular closure advantage negligible? Is there a critical ε_coupling above which tier structure provides no Map compression benefit? | Open — connects to AGM §13.11, RBIT Map-Terrain Balance |
+| 30 | [v1.9-AGPseries] North Star Architecture update dynamics — the Criterion level (Level 1) is described as "never changing under normal operation." What constitutes non-normal operation that necessitates Criterion update? If the Terrain shift is catastrophic enough to make the current Criterion reference obsolete, what is the update protocol? A Criterion update while the system is in Runaway Collapse risks compounding the instability by changing the reference frame during active intent replacement (Theorem 1 conditions) | Open — connects to AGM §4.7.1, RBIT Contamination Boundary |
+| 31 | [v1.9-AGPseries] Mixed-mode collapse F_RBIT signature separation — the proposed diagnostic that "f₁ high in subset of domains (Freeze sub-agents) and f₂ high in different subset (Runaway sub-agents) should NOT coincide" requires domain-level F_RBIT tracking. Current RBIT measurement framework tracks F_RBIT per layer ℓ, not per domain within a layer. How to implement domain-level decomposition without creating the lateral influence problem (peer-resolution comparison) that Processing Isolation prohibits? | Open — connects to AGM §9.3.6 Mixed-Mode Collapse, RBIT §Processing Isolation |
+| 32 | [v1.9-AGPseries] Clean System Paradox detection threshold — how long must S remain near zero before Boundary Agent removal can be diagnosed as causing Clean System Paradox (vs. normal Rest Mode)? Rest Mode also has S << S_c (healthy). The distinction is that Rest Mode preserves R components while Clean System Paradox degrades them. But R component measurement requires active perturbation testing, which itself introduces non-zero S. There is a measurement-disturbance tradeoff: testing for atrophy prevents it | Open — connects to AGM §5.2.0.1, RBIT §Seed Sufficiency |
+| 33 | [v1.9-AGPseries] ECC–Contamination Boundary unit translation — ECC threshold Θ_T and RBIT Contamination Boundary N ≤ ⌈D*/η⌉ are proposed as dual descriptions of the same irreversibility condition. But their units differ (ECC: integrated governance deficit; N: expected step count to intent basin exit). The formal unit translation function mapping Θ_T → N requires specifying how AGM's continuous-time governance deficit relates to RBIT's discrete cycle count. This translation is essential for making quantitative cross-theory predictions | Open — connects to AGM §10.2 ECC, RBIT §Proposition 2 |
+| 34 | [v1.9-AGPseries] Hierarchical Composability constraint — AGM's sixth structural uniqueness constraint (fractal self-similarity: E_ℓ(t) = S_ℓ δ_ℓ / H_ℓ for all levels ℓ) requires that RBIT's resolution gap Δρ also satisfies a scale-invariant form across tiers. Does Δρ_{tier i} bear a predictable mathematical relationship to Δρ_{tier i+1}? If resolution gaps are independently calibrated at each tier (as current RBIT specifies), the hierarchical composability constraint may not be satisfied — a potential cross-theory inconsistency requiring resolution | Open — connects to AGM §2 Structural Uniqueness, RBIT Fractal Resolution Structure |
+| 35 | [v1.9-AGPseries] Pulsed Expansion timing formalization — the Pulsed Expansion Principle states that Map expansion must be bounded by current recovery capacity and τ-recovery time. But τ_recovery ≈ τ_upscale (same slow development process per Recovery Theory) — and τ_upscale is defined as the time to achieve classification type promotion, not as a fixed duration. For systems at different resolution levels, τ_recovery differs dramatically. What is the formal relationship between expansion scope, τ_recovery, and safe expansion boundaries? The current qualitative description requires quantification | Open — connects to AGM §6.7.1 Pulsed Expansion, RBIT §Classification Dynamics hysteresis |
+| 36 | [v2.0-EDTseries] Γ-inversion computational complexity — GCET establishes that the Unification Operator Γ⁻¹ exists and produces both AGM prescription (T_eff = -ΔU_typical / ln(Π_target)) and EDT prescription (U_target = -T_eff · ln(p_target)). But for real multi-agent systems with n >> 1 agents, computing the inverse requires knowledge of the full stationary distribution p_target(x) over the system's state space. How tractable is Γ⁻¹ computation for realistic DFG systems? If it is NP-hard in the general case, what approximation schemes exist that preserve the governance-theoretic properties of the exact inverse? | Open — connects to GCET §52.3, RBIT Map-Terrain Balance |
+| 37 | [v2.0-EDTseries] γ_U (curvature decay rate) measurement in real systems — the ATCT equation ∂U/∂t = -γ_U · U + K(t) · ΔU requires knowing γ_U to predict atrophy timescales. γ_U should differ across R components (γ_U(F) >> γ_U(D) by hypothesis). But γ_U is not directly observable — it must be inferred from resolution capacity trajectories under controlled zero-absorption conditions. What is the minimum observation protocol for reliable γ_U estimation? How does γ_U scale with system complexity, tier size, or domain type? | Open — connects to EDT §51.1.1 ATCT, RBIT §Self-Purification atrophy |
+| 38 | [v2.0-EDTseries] Optimal friction function derivation for multi-agent RBIT systems — EDT §34.2 specifies the optimal friction band (F_min, F_max) qualitatively, and §51.2.1 establishes the isomorphism with T_eff band. But the functional form f(Friction) = L_max · F · exp(-F²/F_opt²) is phenomenological. For a system with known R = D·F·V·T profile, what is the derivable (not assumed) optimal friction function? How does the optimal F_opt depend on τ_recovery, current V (diversity), and system phase (immature/developing/Rest Mode)? | Open — connects to EDT §34.2, AGM §1.2.5, RBIT §Self-Purification Capacity |
+| 39 | [v2.0-EDTseries] Retention-type cultivation sequencing under constraint — the optimal cultivation order Type1→Type2→Type3 assumes unlimited time and no resource constraint. In real systems with budget and timeline pressure, is there a formal method to trade off between cultivation types? Specifically: if a governance designer must choose between partially cultivating all three types or fully cultivating only Type 1 (structural), which produces better long-term R stability? The answer depends on γ_U rates and which component bottlenecks the multiplicative product Rᵢ = Dᵢ·Fᵢ·Vᵢ·Tᵢ | Open — connects to EDT §3.4 Retention Spectrum, RBIT §Self-Purification multiplicative structure |
+| 40 | [v2.0-EDTseries] K* optimal circle size empirical calibration — EDT §36.4 derives K* ∝ n^{2/3} from the n² stress scaling assumption. In RBIT terms, this means Map complexity is minimized at K* circles. But the derivation assumes α_between (inter-circle coupling strength) scales independently of K. In practice, as K grows, inter-circle coordination requires more buffer resources, potentially increasing α_between. What is the corrected K* formula when α_between = α_between(K)? Is there a critical K_max above which adding circles increases rather than decreases total S? | Open — connects to EDT §36.4, RBIT §Circular Closure formal geometry |
+| 41 | [v2.0-EDTseries] Terrain Heritage disambiguation — inherited resolution (positive curvature from predecessor systems) and inherited contamination (negative curvature, contamination-embedded grooves) both produce ρ_initial ≠ 0 in new tiers. But their resolution dynamics are opposite: positive heritage accelerates upscaling (existing attractors to build on), negative heritage decelerates it (must clear old grooves before new channels form). What observable signature distinguishes positive from negative terrain heritage at system inception? Can the two be measured independently, or only via longitudinal tracking of v_class trajectories? | Open — connects to EDT §54.6 Organizational Terrain Heritage Theorem, RBIT §Terrain Memory as Resolution Palimpsest |
+| 42 | [v2.0-EDTseries] Premature Coupling failure mode discrimination — EDT §36.3.1 predicts that premature coupling leads to mutual contamination (both circles degrade). But there are alternative failure modes: one circle may successfully contaminate the other (asymmetric degradation) if their R_self values differ significantly. RBIT predicts asymmetric contamination follows the direction of the weaker circle's Φ ↔ R imbalance. Is premature coupling more likely to produce symmetric degradation (as EDT predicts) or asymmetric (as R_self differential predicts)? What is the discriminating condition? | Open — connects to EDT §36.3 Premature Coupling Catastrophe, RBIT §Contamination Flux |
+| 43 | [v2.0-EDTseries] Buffer Lightness → f₃ quantitative relationship — EDT §33.5 defines Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight) as the buffer's dimension-crossing capacity. RBIT §f₃ measures buffer thickness as Ψ(B_ℓ). The proposed mapping is: Lightness ↓ → Heaviness pathology → dimension-crossing probability → 0 → f₃ rises. But the functional form relating Lightness to f₃ is unspecified. Is it monotone? Is there a Lightness threshold below which f₃ rises sharply (critical transition) or is the relationship smooth? The answer determines whether buffer health monitoring should use a threshold alarm or a continuous tracking metric | Open — connects to EDT §33.5 Lightness Principle, RBIT §F_RBIT components |
+| 44 | [v2.0-EDTseries] Adversarial terrain and RBIT measurement integrity — EDT §51.10 establishes four counter-measures (R1-R4) against adversarial terrain manipulation. The R4 counter-measure uses controlled perturbation probing to test genuine vs. adversarially maintained terrain health. RBIT's equivalent is the controlled perturbation test for Clean System Paradox detection. But in adversarial settings, the agent being tested may recognize the perturbation pattern and respond adaptively. What is the game-theoretic equilibrium of the perturbation-response dynamic? Can RBIT diagnostics be robust to adversarial response, or do they require the perturbation protocol to remain hidden? | Open — connects to EDT §51.10 Adversarial Terrain, RBIT §Clean System Paradox detection |
+| 45 | [v2.0-EDTseries] Resolution measurement across GCET dual representations — Γ maps AGM-State × EDT-State → Governance-State, with RBIT's F_RBIT + S_norm as the shared output. But measurement of F_RBIT requires direct access to layer-level classification statistics, while AGM metrics (τ₁/₂, IDI, CAC) and EDT metrics (terrain quality Q_E, Risk Index κ*) require different observational access. In systems where only one representation is measurable (e.g., large organizations where you can observe terrain but not individual emotional dynamics), can F_RBIT be reliably inferred from the accessible representation alone? What is the information loss in unilateral inference vs. full dual-representation measurement? | Open — connects to GCET §52.3 Unification Operator, RBIT §Γ Inversion Conditions |
 
 ---
+
+| 46 | [v2.1-FCCseries] Attention amplification F(A_g, A_ℓ, ω) — the modified regime scalar Φ_att = Φ·F implies that two systems with identical structural parameters (n, C, d, T) but different attention distributions (A_g, A_ℓ, ω) should exhibit different τ_silent durations. RBIT predicts the system with higher initial attention concentration (A_g0 > 0) should have strictly shorter τ_silent. What is the minimum measurable A_g0 that produces a detectable τ_silent reduction in simulation? And is the effect linear in A_g0 or does it exhibit a threshold below which F ≈ 1 effectively? | Open — connects to FCC §22, RBIT §Silent Criticality |
+| 47 | [v2.1-FCCseries] Local-to-global propagation ω as RBIT leading indicator — FCC §23 establishes that ω (propagation coupling) is the leading variable for k (structural lock): k̇ = α_k·ω·(1−k) − λ_k·k. RBIT predicts that f₄ (escalation load) rising BEFORE k saturates is the ω-activation signature. But f₄ measures escalation events, which may have multiple causes (unrelated to ω). What is the minimal feature combination that distinguishes ω-driven f₄ elevation from ordinary load-driven f₄? Is domain-level f₄ localization (hot-spot pattern) the discriminating feature? | Open — connects to FCC §23, RBIT §Contamination Mode 1 |
+| 48 | [v2.1-FCCseries] DDD Stage completeness verification without E2 — the DDD completion criterion E2 (αρ·d·C·(1−ρ) ≥ (μρ·Φ + νρ·k)·ρ) requires measuring ρ̇ directly, which requires two ρ measurements with known separation τ. In real systems with noisy ρ proxies, the sign of ρ̇ may be indeterminate within measurement error. What is the minimum noise level at which E2 becomes unverifiable? Is there a substitute criterion that is more noise-robust while providing equivalent recovery confidence? | Open — connects to FCC §24, RBIT §Measurement Interface |
+| 49 | [v2.1-FCCseries] 4:1 positive-to-negative feedback loop asymmetry and governance saturation — the 4 positive loops vs. 1 negative loop structure implies that governance must continuously maintain all 4 positive-loop thresholds simultaneously. If governance capacity is itself limited, what is the minimal monitoring portfolio? Is there a minimum spanning set of fewer than 4 indicators that activates before any positive loop enters amplification regime? RBIT's candidate: {v_class, f₄, Φ̂} (3 indicators covering Integrity/Lock/total) — is this sufficient or does each loop require independent monitoring? | Open — connects to FCC §26, RBIT §Staged Alarm Protocol |
+| 50 | [v2.1-FCCseries] Revival trajectory Case A diagnostic — the near-critical memory survival (Case A) produces a v_class spike that resembles genuine recovery but is topologically metastable. RBIT's proposed disambiguation is PRR robustness testing: genuine recovery absorbs perturbation, Case A does not. But the perturbation must be calibrated — too large and it forces a genuine transition; too small and it cannot distinguish. What is the optimal perturbation amplitude for Case A/C disambiguation? Should it scale with Δu (hysteresis gap width) at the moment of testing? | Open — connects to FCC §30, RBIT §Phase Boundary Revival |
+| 51 | [v2.1-FCCseries] Damage Ratchet S accumulation measurement protocol — S is a latent variable (structural damage) not directly observable. It must be inferred from performance degradation across multiple Storm episodes. The proposed proxy is: decreasing v_class_max (maximum achievable v_class under optimal conditions) across successive recovery periods. But v_class_max may also decrease due to population changes (agent turnover), terrain drift, or task difficulty changes — all unrelated to structural damage. What is the minimal isolation protocol for measuring S independently of these confounds? | Open — connects to FCC §31, RBIT §Structural Damage Ratchet |
+| 52 | [v2.1-FCCseries] Critical damage fraction S* and tier-specific calibration — FCC §31 notes S* ≈ 30-50% consistent with neurodegeneration thresholds. But RBIT tiers likely have different S* values depending on redundancy, repair mechanisms, and critical path through the system. Upper-tier damage (governance layer) may produce v_class = 0 at much lower S (less redundancy), while lower-tier damage may tolerate higher S before governance impact. What is the tier-specific S* distribution, and should governance monitoring intensity be inversely proportional to tier-specific S*? | Open — connects to FCC §31, RBIT §Contamination Boundary |
+| 53 | [v2.1-FCCseries] Information geometry geodesic drift and RBIT measurement coordinate validity — FCC §20 establishes that Silent Criticality follows a path of minimal Fisher information (geodesic drift on statistical manifold). This means the drift direction is precisely the direction where RBIT measurements are LEAST sensitive. Does this imply that any fixed-coordinate RBIT measurement scheme will have at least one blind angle? And if so, is rotating the measurement coordinate system (changing which fᵢ is primary) sufficient to maintain coverage, or does the drift direction shift as the system evolves? | Open — connects to FCC §20 §27, RBIT §Information Geometry |
+| 54 | [v2.1-FCCseries] Storm exhaustion Case B self-recovery and governance passivity trap — Case B recovery occurs because extreme Storm exhausts its own lock mechanism. RBIT governance might therefore adopt a "wait for exhaustion" strategy to avoid intervention costs. But: (a) S damage accumulates faster at extreme Storm intensity; (b) Case B recovery leaves structural fragility (same conditions can re-trigger). Is there a formal criterion that distinguishes when DDD intervention is net-positive vs. net-negative (compared to allowing Storm exhaustion)? The decision requires knowing Storm intensity (→ S accumulation rate) vs. DDD cost (→ governance overhead) tradeoff | Open — connects to FCC §30, RBIT §DDD Protocol |
+| 55 | [v2.1-FCCseries] Φ̂ proxy calibration across organizational vs. AI vs. neural domains — FCC §18 provides domain-specific Φ̂ instantiations (multi-agent AI: message rate² / compute×entropy×T; organizational: project×dependencies² / bandwidth×IDI×ambiguity; neural: rate²×connectivity / metabolic×receptor×neuromod). RBIT governance requires that all three instantiations produce comparable Φ̂ values for structurally equivalent states (same Φ_true). But the scaling constants (β_s) differ across domains. Is there a universal normalization that produces domain-comparable Φ̂? Or are the Φ̂ values only within-domain comparable? This determines whether cross-domain DFG predictions are quantitatively or only qualitatively transferable | Open — connects to FCC §18, RBIT §Φ̂ Observable Proxy |
 
 ## Falsification Criteria
 
@@ -3057,6 +4916,163 @@ Complete falsification hierarchy:
   Criteria 6-8:   TLG governance predictions (architecture)
   F4-F7:          cross-theory predictions (dynamics × governance)
   F8-F12:         NAT integration predictions (scaling × dynamics)
+  F13-F18:        AGP integration predictions (affective governance × resolution)
+```
+
+```
+F13 — AGM sensitivity s(t) must track resolution proxy ρ directionally:
+  s(t) and ρ must move in the same direction under calibrated test conditions
+  (same evaluation protocol, same input distribution).
+  Specifically: s(t) declining must predict f₁ rising within one evaluation window.
+  Discordance case (s ↓ while ρ apparently high) must be detectable and
+  correspond to Freeze Collapse onset, not genuine stable high resolution.
+  Falsification: if s(t) and ρ are directionally uncorrelated over sustained windows,
+  the proposed s(t) ↔ ρ proxy relationship is invalid.
+  (Derived from AGM §7 metric framework, §15.5 AGM–RBIT coupling.)
+
+F14 — Clean System Paradox atrophy ordering must match predicted sequence:
+  Under sustained S → 0 conditions, R components must decay in order F→V→T→D.
+  Operationally: detection latency (F) must increase BEFORE diversity metrics (V)
+  fall, BEFORE escalation frequency rises (T), BEFORE cross-tier contamination
+  appears (D). The sequence cannot be reversed or simultaneous.
+  Falsification: if V or T decays before F, or if D decays early under S → 0
+  without structural change, the atrophy ordering prediction fails.
+  (Derived from Self-Purification Capacity formal decomposition and AGM §12.8.)
+
+F15 — Controlled Non-Minimization Budget must bound resolution floor:
+  Systems that drive residual instability below ΔF_affective* (Proposition 2.0.1)
+  must show subsequent resolution growth stall: f(A_t, D_t) → 0 despite continued
+  absorption events A_t > 0. The stall must precede (not coincide with) measurable
+  performance degradation — it is a leading indicator.
+  Falsification: if f(A_t, D_t) remains positive despite sustained S → 0 for longer
+  than the atrophy window τ_atrophy, the controlled floor argument is wrong.
+  (Derived from AGM Adaptive Necessity Theorem and RBIT Stability Saturation.)
+
+F16 — Freeze Collapse must produce Discordant Type 2 R-ρ-f_esc pattern:
+  Systems undergoing AGM Freeze Collapse (s → 0, IDI ↓, CAC apparently high)
+  must simultaneously produce RBIT Discordant Type 2 signature:
+    R << 1 AND ρ artificially high AND f_esc low
+  The "artificially high ρ" claim must be verifiable: classification accuracy
+  appears high because the system has converged to a narrow single-frame response,
+  not because genuine resolution has increased.
+  Falsification: if Freeze-collapsed systems consistently show R ≈ 1 (not << 1),
+  the Freeze = Silent Criticality mapping is wrong.
+  (Derived from AGM §9.3 Freeze Collapse and RBIT §R-ρ concordance.)
+
+F17 — Runaway Collapse must produce RBIT Theorem 1 activation sequence:
+  Systems entering AGM Runaway Collapse (s rising, Ω > Ω_crit, τ₁/₂ extending)
+  must show RBIT finite-time intent replacement sequence:
+    Tier (i) mode collapse, then Tier (ii) hallucination, then Tier (iii) coherent
+    misalignment — in this order, with observable staging.
+  Tier (iii) must coincide with D_s(t) > D* (Contamination Boundary crossed).
+  Falsification: if Runaway-collapsed systems do not show staged intent replacement
+  or if all three tiers collapse simultaneously, the mapping is invalid.
+  (Derived from AGM §9.3 Runaway Collapse and RBIT Theorem 1 phenomenological tiers.)
+
+F18 — Boundary Agent removal must accelerate Clean System Paradox:
+  Systems from which the Boundary Agent (controlled instability source) is removed
+  must show faster R component atrophy than systems maintaining the Boundary Agent.
+  Specifically: τ_atrophy(no Boundary Agent) << τ_atrophy(with Boundary Agent)
+  and the atrophy must begin with F component decay within the first measurement
+  window following removal.
+  Falsification: if Boundary Agent removal produces no accelerated atrophy, or if
+  the R component that decays first is not F (feedback density), the structural
+  necessity argument for Boundary Agent is unsupported.
+  (Derived from AGM §5.2.0.1 Clean System Paradox and RBIT §Seed Sufficiency.)
+
+F19 — Gain-Curvature Duality must produce equivalent Δρ outcomes via both routes:
+  Any governance intervention that increases Δρ via AGM route (T_eff modulation)
+  must produce equivalent change in system stability signature as the same Δρ
+  increase achieved via EDT route (terrain curvature injection).
+  If the two routes produce detectably different F_RBIT signatures for equivalent
+  Δρ change, the duality claim (GCET Theorem 52.1) is violated — the governance
+  primitive is NOT dual-representable but representation-dependent.
+  Operationally: AGM path vs. EDT path to same Δρ target must produce concordant
+  F_RBIT component profiles within measurement uncertainty.
+  (Derived from GCET §52.1-52.3 and RBIT Unification Operator Γ.)
+
+F20 — Retention-Type Priority violation must produce detectable collapse pattern:
+  Systems that cultivate Type 3 (energetic/T) before Type 1 (structural/D) should
+  produce characteristic "flow without retention" collapse:
+    ρ rises quickly then collapses when supply/intervention is interrupted
+    R_self initially high but decays rapidly when active maintenance stops
+    Atrophy ordering reversed: T fails FIRST (not last as predicted for Type1→2→3
+    cultivation sequence — because T was built without D and V substrate)
+  Falsification: if Type 3-first cultivation produces the same long-term R component
+  stability as Type 1-first cultivation, the retention-hierarchy priority is unsupported.
+  (Derived from EDT §3.4.2 Retention Spectrum and RBIT Self-Purification R = D·F·V·T.)
+
+F21 — n_eff Compression must produce sub-quadratic S scaling at verified K*:
+  Systems organized into K circles (K ≈ n^{2/3}) must show S ∝ n^{4/3} rather than
+  S ∝ n². RBIT measurement: Map complexity (τ_map_update vs. τ_terrain_change) must
+  be lower in K-circle-organized systems than in equivalently-sized flat systems.
+  The K* ∝ n^{2/3} prediction must hold empirically — if optimal K* deviates
+  significantly from n^{2/3} scaling in real systems, the Compression Theorem
+  derivation requires revision.
+  Falsification: if Map update latency does not decrease sub-quadratically with
+  circular organization, the n_eff compression claim is empirically unsupported.
+  (Derived from EDT §36.4 n_eff Compression Theorem and RBIT Map-Terrain Balance.)
+
+F22 — Thermal Freezing (Type IV) must produce RBIT v_class = 0 with R << 1:
+  Systems in EDT Thermal Freezing (T_eff < T_min, permeability Π ≈ 0) must produce
+  the RBIT pattern: v_class = 0 (no classification transitions) AND R << 1 (over-damped
+  dynamics) despite ρ apparently high and standard fᵢ measures bounded.
+  This is a prediction of a specific false-negative pattern: standard RBIT three-alarm
+  monitoring based on fᵢ magnitudes must miss Type IV failure — only explicit v_class
+  monitoring detects it.
+  Falsification: if Type IV failure systems show elevated fᵢ magnitudes that ARE
+  detected by standard monitoring, the false-negative prediction is wrong and the
+  diagnostic significance of explicit v_class tracking is not established.
+  (Derived from EDT §51.7 Thermal Freezing and RBIT Silent Criticality.)
+
+F23 — Terrain Memory disruption must produce ρ drop without S increase:
+  External events that accelerate terrain curvature decay (γ_U) — rapid restructuring,
+  cultural transformation, high-turnover events — must produce observable ρ decline
+  WITHOUT a corresponding increase in measured S (instability proxy).
+  The mechanism: resolution capacity decays (γ_U term dominates) but conflict density
+  S has not increased — the system appears "calm" while its resolution infrastructure
+  erodes.
+  Falsification: if ρ decline always co-occurs with S increase, the terrain memory
+  disruption mechanism is confounded with standard overload dynamics and cannot be
+  independently identified.
+  (Derived from EDT §43 Terrain Memory and RBIT resolution growth mechanism.)
+
+F24 — Desertification Hysteresis must produce measurable recovery cost asymmetry:
+  Systems that have spent time T_desert in low-resolution states (ρ << ρ_baseline)
+  must require more resolution-recovery resources than were "lost" during the initial
+  resolution decline.
+  Operationally: E_restore / E_lost must be > 1 and grow with T_desert.
+  EDT predicts E_restore ∝ exp(T_desert · γ_decay). Even a weaker prediction —
+  that E_restore > E_lost (any asymmetry at all) — would support the prevention-is-
+  cheaper-than-cure conclusion.
+  Falsification: if resolution recovery is as cheap as equivalent investment in
+  prevention, the strategic asymmetry does not hold and the prevention-prioritization
+  governance conclusion is unsupported.
+  (Derived from EDT §3.4.1 Desertification Hysteresis Theorem and RBIT resolution
+  recovery cost analysis.)
+```
+
+```
+Complete falsification hierarchy (extended):
+  Criteria 1-5:   core RBIT predictions (information theory)
+  Criteria 6-8:   TLG governance predictions (architecture)
+  F4-F7:          cross-theory predictions (dynamics × governance)
+  F8-F12:         NAT integration predictions (scaling × dynamics)
+  F13-F18:        AGP integration predictions (affective governance × resolution)
+  F19-F24:        EDT integration predictions (terrain × resolution)
+  
+Testability note: F13-F18 require either simulation environments where
+S → 0 can be sustained artificially (Clean System Paradox experiments)
+or longitudinal system monitoring with sufficient temporal resolution
+to distinguish sequential vs. simultaneous component decay.
+
+F19-F24 testability: F19 requires dual-pathway governance experiments
+(same Δρ target reached via AGM and EDT routes, F_RBIT signatures compared).
+F20-F21 require controlled organizational architecture experiments.
+F22 is testable in multi-agent simulation with measurable v_class.
+F23 requires longitudinal ρ tracking through organizational transitions.
+F24 requires matched-pair experimental design (equivalent recovery vs. prevention
+investment, with random assignment to conditions).
 ```
 
 (See Recovery Theory §Extended Falsification Framework and VST v1.5 §11.4 for derivations.)
@@ -3488,8 +5504,37 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 | Map-Terrain Expansion | Terrain Fitness Function, drift rate dynamics, drift accumulation cost | New v1.8 |
 | Interface Contract Extensions | IC-I5 (Sphere-Resolution Alignment), IC-I6 (Classification Dynamics Observable) | New v1.8 |
 | Appendix: RFEF | F_RBIT functional, τ regime-switching, Bridge Hypothesis | Formal hypothesis only |
+| AGM Collapse Modes as RBIT Failure Signatures | Freeze = Tier-1 only resolution; Runaway = Δρ < 0 sustained; mixed-mode collapse as dual-failure; ECC–Contamination Boundary formal bridge; bifurcation parameter as resolution gap sign | New v1.9 |
+| Contamination Flux Extended / Clean System Paradox | R = D·F·V·T full decomposition; atrophy ordering F→V→T→D; Clean System Paradox formal statement; Boundary Agent as structural prevention; ΔF_affective* as mandatory resolution floor lower bound | New v1.9 |
+| North Star Architecture | Criterion/Principles/Implementation three-level hierarchy in resolution terms; Observation Layer as Map recalibration operator; Body as existential resolution floor | New v1.9 |
+| Circular Closure and Dimensional Compression | Nested circulation for bounded Map complexity; Dimensional Transition as Map-Terrain qualitative shift; Pulsed Expansion principle in resolution terms | New v1.9 |
+| Argument 4 — Adaptive (from AGM) | Adaptive Necessity Theorem → mandatory residual floor; Controlled Non-Minimization Budget; T_eff = 0 as attractor lock-in; ΔF_affective* quantitative lower bound on residual resolution | New v1.9 |
+| F_RBIT–AGM Six-Metric Concordance | τ₁/₂ ↔ f₂; IDI ↔ f₁; CAC ↔ f₄; RLB ↔ f₃; NFFR ↔ f₅; IS ↔ f₁f₂; four-state concordance protocol; single-agent ↔ multi-agent bridging validation | New v1.9 |
+| Falsification F13-F18 | AGP integration predictions: s(t)–ρ proxy reliability, atrophy ordering, non-minimization budget, Freeze signature, Runaway staging, Boundary Agent removal | New v1.9 |
+| Open Problems 26-35 | Non-minimization budget calibration, partial-suppression atrophy, proxy reliability under transitions, circular closure bound, North Star update dynamics, mixed-mode F_RBIT decomposition, Clean System Paradox detection, ECC–Boundary unit translation, hierarchical composability constraint, Pulsed Expansion timing | New v1.9 |
+| Gain-Curvature Equivalence — Resolution Gap as Unified Observable | GCET Duality Theorem (T_eff ↔ U(x) dynamical equivalence); Terminal Convergence Trinity (T_eff=0 ↔ Π=0 ↔ Δρ=0); Unification Operator Γ mapping to F_RBIT+S_norm; design freedom implication (AGM↔EDT governance interchangeability) | New v2.0 |
+| Friction-Resolution Bridge | Zero Friction Pathology = Clean System Paradox terrain expression; optimal friction band as operational resolution window; friction-resolution formal parallel (case a/b/c decomposition); therapeutic terrain disturbance as Δρ restoration protocol | New v2.0 |
+| Retention Spectrum as R-Component Hierarchy | Type 1/2/3 → D/V+F/T mapping; cultivation priority sequence; Type 3-first pathology as "flow without retention"; recovery sequence and atrophy ordering consistency | New v2.0 |
+| n_eff Compression Theorem — Formal Scaling | EDT §36.4 formal stress equation with K circles; K*∝n^{2/3} optimal derivation; S∝n^{4/3} vs S∝n² scaling comparison; Map complexity consequence; scaling failure mode | New v2.0 |
+| Premature Coupling Catastrophe — RBIT Coupling Condition | EDT §36.3.1 mutual contamination formal condition; RBIT coupling readiness requirements (R_self > Φ, Δρ > 0, v_class > 0, all fᵢ bounded); five-step coupling protocol in RBIT terms | New v2.0 |
+| Affective Terrain Coupling in RBIT Terms | ATCT §51.1.1 formal dynamics; curvature decay at rate γ_U → atrophy ordering derivation; γ_U hierarchy (F>>V>T>>D); emotion-as-designer corollary for resolution capacity maintenance | New v2.0 |
+| T_eff as Terrain Permeability — RBIT Operational Bridge | Π=exp(-ΔU/T_eff); high/optimal/low/zero T_eff states mapped to RBIT Δρ regimes; Permeability-Friction Isomorphism; Type IV Failure (Thermal Freezing) as RBIT false-negative — v_class tracking required | New v2.0 |
+| Terrain Memory as Resolution Palimpsest | U(x,t) = weighted sum of prior events → RBIT resolution history encoding; palimpsest disruption signature (ρ drop without S increase); Organizational Terrain Heritage Theorem; negative heritage diagnostic (ρ_high + v_class=0) | New v2.0 |
+| Falsification F19-F24 | EDT integration predictions: GCET dual-route equivalence, retention-priority violation, n_eff compression scaling, Thermal Freezing false-negative, terrain memory disruption signature, desertification hysteresis asymmetry | New v2.0 |
+| Open Problems 36-45 | Γ-inversion computational complexity, γ_U measurement protocol, optimal friction function derivation, retention-type cultivation under constraint, K* calibration with dependent α_between, terrain heritage disambiguation, premature coupling failure mode discrimination, Buffer Lightness → f₃ quantitative relationship, adversarial terrain diagnostic robustness, resolution measurement across GCET dual representations | New v2.0 |
+| ODE-RBIT Formal Bridge | Φ = β_s·n²/(C·T·d) as mean-field projection of Δρ; F_RBIT component projections (f₁-f₅ from ODE variables); ρ̇ equation as formal derivation of resolution growth/degradation dynamics; mean-field reduction scope and RBIT fractal hierarchy relationship | New v2.1 |
+| Correction-Escape Boundary | η_corr = |Δρ_correction|/|Δρ_degradation| as contamination tier threshold; three-tier ODE mapping (η > 1 / ≈ 1 / < 1); Tier iii formal proof requires external reference via RBIT Theorem T4; Lock Budget as R = D·F·V·T ODE-derived multiplicative constraint | New v2.1 |
+| Silent Criticality Formal Conditions and τ_silent | Conditions A/B/C; τ_silent formula → v_class = 0 duration prediction; logarithmic capacity protection bound; SCC_min transition as deepest meta-warning; Φ̂ Observable Proxy with domain instantiations; Hysteresis ratio as prevention superiority proof; Mixed-Mode ODE extension with domain-level F_RBIT | New v2.1 |
+| Attention as Buffer-Thinning Operator | F(A_g,A_ℓ,ω) amplification factor; three structural effects on Φ; τ_silent shortening under attention; propagation cascade RBIT stages; ω as v_class leading indicator; k as slow structural realization of ω | New v2.1 |
+| Feedback Loop Structural Asymmetry | 4 positive loops vs. 1 negative loop; metastability proof (Rest Mode requires active governance); four-loop F_RBIT correspondence; v_class as irreplaceable 6th indicator detecting the single negative loop's compensatory masking | New v2.1 |
+| DDD Protocol — RBIT Governance Correspondence | Three-stage protocol with RBIT loop targets; DDD Lyapunov proof (dV/dt < 0); E2 completion criterion = v_class > 0 (not just Φ < 1); DDD false-completion trap (Φ < 1 but v_class = 0 = Silent Criticality not exited) | New v2.1 |
+| Information Geometry — Fisher Information and v_class | Five-indicator comparative table with lead times; I_F < I_min → v_class detection threshold; geodesic drift = minimum-observability degradation; v_class and PRR as drift-resistant indicators; Staged Alarm System S1-S4 | New v2.1 |
+| Structural Damage Ratchet | S accumulation model; repair function three regimes; damage-modified R_eff(S); v_class_max permanent degradation; S_critical → N → 0; damage-modified Lock Budget L_C(S), L_d(S) → irrecoverable hysteresis | New v2.1 |
+| Revival Trajectories — RBIT Near-Critical Signatures | Case A (metastable/PRR fragile), Case B (Storm exhaustion), Case C (genuine/PRR robust); dual-axis evaluation rule; DDD withdrawal timing | New v2.1 |
+| Falsification F25-F30 | FCC integration predictions: attention τ_silent reduction, DDD stage order dependency, 4:1 loop monitoring requirement, Case A/C PRR disambiguation, damage ratchet v_class_max, logarithmic capacity bound | New v2.1 |
+| Open Problems 46-55 | Attention F calibration, ω leading indicator discrimination, DDD E2 noise-robustness, governance saturation monitoring portfolio, revival Case A perturbation amplitude, S accumulation isolation protocol, tier-specific S* distribution, information geometry blind angle, Storm exhaustion passivity trap, Φ̂ cross-domain normalization | New v2.1 |
 
 ---
 
-*Timestamped: March 4, 2026*
-*DFG Framework · Resolution-Based Information Theory v1.8-NATseries*
+*Timestamped: March 5, 2026*
+*DFG Framework · Resolution-Based Information Theory v2.1-FCCseries*
