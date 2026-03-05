@@ -2,7 +2,7 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · March 5, 2026 · Internal Working Document — v2.1-FCCseries*
+> *Draft · March 5, 2026 · Internal Working Document — v2.2-TLGseries*
 
 ---
 
@@ -38,6 +38,7 @@
 > *v1.8-NATseries: Governance-Level Storm (S_gov equation, escalation cascade prevention, circuit breaker levels), Classification Dynamics (type transitions as resolution events, v_class leading indicator, hysteresis τ_upscale/τ_degrade >> 1, reclassification rate as maturity signal), Progressive Internalization (three-test readiness protocol, shadow/handoff/internalization phases in resolution terms), Interface Contract extensions (IC-I5 Sphere-Resolution Alignment, IC-I6 Classification Dynamics as Growth Observable), Map-Terrain expansion (Terrain Fitness Function F_terrain, drift rate dynamics, drift accumulation cost), Processing Isolation (Signaling/Influence distinction in resolution terms, structural enforcement, empirical evidence), Phase Transition Indicators (resolution criteria for Separate→Mature→Couple→Integrate), Human Withdrawal Dynamics (progressive resolution maturity verification), Measurement Interface extensions (10 new metrics), Falsification F8-F12 (NAT integration predictions), Open Problems 19-25*
 > *v1.9-AGPseries: AGM–RBIT Deep Integration (resolution integrity as anti-mode-collapse necessity; Controlled Non-Minimization Budget ΔF_affective as resolution gap calibration mechanism; AGM collapse typology Freeze/Runaway fully mapped to resolution gap regimes; Fokker-Planck description as probability-level RBIT substrate; Structural Uniqueness Argument extended with sixth constraint hierarchical composability), Contamination Flux Extended Formalism (Φᵢ cross-scale propagation full derivation, Clean System Paradox formal statement, Self-Purification Capacity R = D·F·V·T complete decomposition with atrophy ordering F→V→T→D, zero-contamination atrophy prediction), North Star Architecture as Map-Terrain Navigation Mechanism (criterion/principles/implementation three-level hierarchy in resolution terms, Observation Layer as Map recalibration operator, Body as existential resolution floor), Circular Closure and Dimensional Compression (nested circulation for bounded Map complexity, Dimensional Transition as Map-Terrain qualitative shift, Pulsed Expansion principle in resolution terms), AGM Collapse Modes as RBIT Failure Signatures (Freeze = Tier-1 only resolution, Runaway = structurally negative gap; mixed-mode collapse as RBIT dual-failure; ECC–Contamination Boundary formal bridge), Resolution Gap as Affective Routing Function (complete Δρ to emotional processing mode mapping; Error Asymmetry as under-escalation danger formalization; AGM sensitivity s(t) as ρ operational proxy), F_RBIT–AGM Metric Concordance (six AGM metrics mapped to F_RBIT components; concordance-based cross-theory stability assessment protocol; τ₁–τ₃ regime switching as emotional self-regulation architecture), Seed Sufficiency Extended (Boundary Agent as Clean System Paradox prevention; terrain problem formal statement; three sufficiency levels with SCC ceiling derivation), New Falsification F13-F18 (AGP integration predictions), Open Problems 26-35*
 > *v2.0-EDTseries: EDT–RBIT Deep Integration — Gain-Curvature Equivalence Theory formal bridge (GCET Theorem 52.1: AGM T_eff ↔ EDT terrain curvature U(x) dynamical equivalence; Unification Operator Γ maps both to shared resolution gap observable; T_eff = 0 ↔ Π = 0 ↔ Δρ = 0 terminal convergence trinity), Friction-Resolution Bridge (Zero Friction Pathology = RBIT Clean System Paradox terrain-level expression; optimal friction band F_min < F_opt < F_max as operational resolution window; friction as coordinate calibration — anomalous friction reduction = broken ruler warning), Retention Spectrum as R-Component Hierarchy (Type 1 structural/Type 2 informational/Type 3 energetic retention mapped to D/V+F/T R-component layers; cultivation priority Type1→2→3 = D→V,F→T build sequence; Desertification Hysteresis Theorem as cross-theory cost asymmetry), Circular Closure Formal Geometry (n_eff Compression Theorem: K circles reduces S from O(n²) to O(n^{4/3})/O(n²/K) at optimal K*∝n^{2/3}; Premature Coupling Catastrophe as RBIT mutual-contamination formal condition; Separate-Growth Protocol mapped to RBIT processing isolation phases), Affective Terrain Coupling in RBIT Terms (ATCT Theorem 51.1.1 showing terrain modification rate proportional to emotional event frequency; T_eff as terrain permeability Π = exp(-ΔU/T_eff); Permeability-Friction Isomorphism; Freeze Terrain Signature = Δρ → 0 over-consolidated; Runaway Terrain Signature = Δρ < 0 contamination flood), ECC-Terrain Phase Equivalence extended (Λ(t) = 0 ↔ p_terrain = p_c formal identification; multifractal spectrum width as pre-ECC collapse mode predictor; Type IV failure Thermal Freezing as RBIT Stability Saturation terrain expression), Buffer Lightness as f₃ Operational Determinant (Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight); lightness atrophy sequence maps to RBIT atrophy ordering; Buffer-Limited Scaling Theorem: expansion capacity ∝ buffer competence not resources), Terrain Memory as Resolution Palimpsest (curvature = survival history H = Σ weighted survival events; palimpsest as intergenerational resolution transfer; Organizational Terrain Heritage Theorem; memory-curvature equivalence), EDT-RBIT cross-theory falsification F19-F24, Open Problems 36-45*
+> *v2.2-TLGseries: TLG (Three-Layer Governance Architecture v2.5-terrain) — Deep Integration Pass — Terrain-Layer Correspondence in RBIT Terms (governance ratio κ as v_class macro-proxy; ILMI as Middle Layer resolution function; κ-Monotone Maturation ↔ RBIT Arrow of Maturation formal equivalence; Guardian Invisibility = terrain internalization of ρ maintenance; Agency Collapse = Terminal Desert State ↔ RBIT f₁→0 by suppression not resolution), Plasticity Hierarchy → RBIT Update Rate Constraints (three-layer plasticity dM₁≫dM₂≫dM₃; Cross-Layer Interference Theorem as RBIT mismatch accumulation mechanism; Storm-Phase Inversion P₃>P₂>P₁ → Track A before Track B formal derivation; Bypass Pattern diagnostic in RBIT terms; Resource Scarcity → M₂ plasticity freeze leading indicator 6-18 months pre-collapse), Terrain-Governance Duality → RBIT Resolution Duality (TLG governance operations and EDT terrain modifications as dual projections of shared resolution state change; MARK/JUDGE/EXECUTE → curvature detection/identification/injection; rest mode entry = climax terrain = resolution maintenance without correction), Boundary Non-Commutativity → RBIT Intervention Sequence Law (governance operations non-commutative; Top→Middle→Bottom ordering theoretically necessary not empirically derived; DDD ordering derived from boundary operator algebra), Thought Loop → Resolution Space Contraction (recursive boundary application = progressive solution space reduction; Terminus A = resolution paralysis; Terminus B = SCM fixed point; CW Breaking Methods = grounding injection formalized), FCC Type III Contraindication → RBIT Load-First Protocol (Type III detection via η_corr invariance to τ1 corrections; Type III resolution = n_eff reduction not correction; corrections in Type III consume SCC without effect), Affective Bandwidth ODE Coupling → RBIT Bandwidth-ρ Correspondence (C·d/k bandwidth proxy; three bandwidth regimes with RBIT ρ correspondents; bandwidth floor = minimum viable resolution maintenance; early warning decomposition C-decline vs d-decline vs k-rise), Terrain-Based Adversarial Floor → RBIT Structural Resistance (P(evasion) ≤ exp(-ΔV/T_eff) formal bound; terrain cultivation = adversarial defense; four-layer adversarial defense hierarchy; f_RBIT portfolio as Layer 2 Goodhart-resistance; DFG Six-Theory Completeness Architecture → RBIT Interface Specification, Governance Completeness Criterion GCC₁-GCC₇ → RBIT operational proxies, Governance Completeness Score GCS, Stage-Gated τ4 Entry, SSR Cycle Governance, Fisher Information Architecture; TLG-RBIT Novel Contributions NC-TLG-1 to NC-TLG-12; Extended Falsification F41-F52; Open Problems 66-77*
 > *v2.1-FCCseries: FCC (From Call Centers to Neurons) — ODE-RBIT Formal Bridge Integration — Regime Scalar Φ as Resolution Gap Operational Projection (Φ = β_s·n²/(C·T·d) derived from ODE §14; Φ > 1 ↔ Δρ < 0 formal correspondence; mean-field reduction scope and RBIT fractal projection relationship), Correction-Escape Boundary as Contamination Tier Threshold (η_corr(t) := |Δρ_correction|/|Δρ_degradation|; η_corr < 1 condition = Theorem 1 activation; three-tier mapping Tier i/ii/iii to η_corr > 1 / ≈ 1 / < 1), Lock Budget Inequality as R-Component Multiplicative Constraint ((1+L_C)(1+L_d) ≤ ζ⁻⁴ formal derivation; L_C := νC/αC ↔ 1/D; L_d := νd/(αd·T₀) ↔ 1/V; both locks contribute multiplicatively — same structure as R = D·F·V·T), Silent Criticality ODE Conditions → RBIT v_class = 0 prediction (formal conditions A/B/C; τ_silent formula; SCC_min transition as deepest early warning; logarithmic capacity protection bound — 10× capacity → only ln(10)×2.3 longer silent duration), Φ̂ Observable Proxy → F_RBIT Operational Bridge (Φ̂ = interaction_load²/(capacity×diversity×exploration); domain-specific instantiations; dimensionless ratio structure universality), Hysteresis Ratio u⁻/u⁺ → RBIT Recovery Cost Asymmetry (u⁻/u⁺ = [1/((1+L_C)(1+L_d))]^{1/4}; stronger locking → wider hysteresis → harder recovery; formal derivation of prevention-is-cheaper-than-cure for resolution recovery), Mixed-Mode Collapse ODE Extension → Subsystem-Level F_RBIT (multi-subsystem ODE replication; inter-subsystem coupling ε_couple·W_{kj}; DDD differential treatment for simultaneous Freeze+Runaway; subsystem-level F_RBIT decomposition justification), Three Contamination Modes → fᵢ Component Correspondence (Mode 1 Coupling → f₄; Mode 2 Frame Drift → f₁+f₂; Mode 3 Timescale Leakage → f₃; bottom-up propagation necessity proof), Information Geometry I_F as v_class Detection Threshold (Fisher information PRR indicator with highest lead time ~4τ_silent; I_F < I_min → v_class = 0 detection; optimal staged alarm system Stage 1-4 with RBIT v_class monitoring), T-Compensation Masking as False-Negative Mechanism (T↑ compensates C↓+d↓ maintaining Φ≈1 while ρ̇<0; RBIT: ρ apparently stable while v_class = 0; SCC coordinate drift rate bound; indicator-reliability degradation as deepest meta-warning), FCC-RBIT falsification F25-F30, Open Problems 46-55*
 
 ---
@@ -3864,7 +3865,7 @@ RBIT is the foundation from which the following derive:
 | **Vector Storm Theory** | Vector Storm = negative resolution gap event (under-degradation cascade) |
 | **Network Architecture Theory** | Data classification = resolution matching; escalation = resolution gap signal; [v1.8] sphere topology = maximum entropy resolution configuration (IC-I5); classification dynamics = resolution growth observable (IC-I6, v_class as f(A_t,D_t) sign indicator); progressive internalization = resolution growth evidence (Pathway 1→2 = R_{t+1} > R_t for domain); escalation cascade prevention = governance-level S-equation (S_gov); terrain fitness F_terrain = Map-Terrain alignment quality metric; processing isolation = resolution-integrity preservation (signaling vs. influence = Δρ ≈ 0 vs. artificial Δρ < 0); phase transition indicators = resolution-based integration readiness criteria; human withdrawal dynamics = resolution maturity verification protocol |
 | **Governance Rules Theory** | Seeds = dynamic minimum sufficient information; Rest Mode = thermodynamic steady state; seed handover = resolution matching event |
-| **Three-Layer Governance Architecture** | Middle layer = resolution mediation layer; seeding = calibrated degradation; τ thresholds = resolution gap response boundaries |
+| **Three-Layer Governance Architecture** | [v2.2] Middle layer = resolution mediation layer; seeding = calibrated degradation; τ thresholds = resolution gap response boundaries; **Governance Ratio κ = Correction/Storm events as v_class macro-proxy** — κ-Monotone Maturation Theorem (dκ/dt ≥ 0 in well-governed systems) = RBIT Arrow of Maturation quantified; κ phases: <0.5 = external intervention still required, 0.5-2 = developing self-correction, 2-5 = mature mediation, >5 = Rest Mode territory, >20 = Phase 5 (correction invisible = v_class sustained without escalation); **ILMI (Inter-Layer Modulation Interface) = Middle Layer formal terrain function** — ILMI(resolution_in, context) → {goal, feedback, mediation_signal}; without ILMI, resolution information passes raw between layers; the Middle Layer IS the terrain translation mechanism (RBIT f₂ mismatch = ILMI failure mode); **Terrain-Layer Correspondence (TLG §3.3)**: Top Layer ↔ Strategic Terrain (M₃, months-years update); Middle Layer ↔ Relational Terrain (M₂, weeks-months); Bottom Layer ↔ Operational Terrain (M₁, days-weeks); Eyes = Top Layer Map accuracy maintenance; Feet = Bottom Layer deliberate terrain contact (θ_d REQUIRES some contamination); Middle Layer = filter/purifier between dirty feet and clean eyes; **Guardian Invisibility = terrain internalization of ρ maintenance** — in Phase 5, agents navigate resolution constraints as natural environmental features, not external restrictions; v_class sustained without visible correction events; **Agency Collapse ↔ Terminal Desert State** — SCM advanced form where boundary agents eliminated; RBIT: f₁ → 0 by suppression (no terrain curvature) not resolution (no conflicts); only CW Breaking Method 4 (external boundary injection) recovers; **FCC Type III Contraindication (TLG §24.4)**: corrections contraindicated when π₁ > π₁* (no Rest fixed point); Type III detection: η_corr invariant to τ1 corrections → f_esc non-response; Type III resolution = n_eff reduction (circle compression), not correction; corrections in Type III consume SCC without effect — RBIT operational rule: verify η_corr response before escalating to τ2; **Bandwidth-ODE Coupling (TLG §24.5)**: B ∝ C·d/k; τ1 resolution rate/(τ1+τ2) = bandwidth proxy; B > 0.8 = climax terrain (κ → ∞); B 0.4-0.8 = transitional; B < 0.4 = desert approach; C-decline AND d-stable = f₃ problem (L_C); d-decline AND C-stable = diversity problem (L_d); k-rise = DDD Stage 2 preparation; **Terrain-Governance Duality (TLG Theorem 24.1.1)**: TLG governance operations and EDT terrain modifications are dual representations of same state change viewed from different observation levels; MARK signal = curvature anomaly detection; JUDGE = terrain region identification; EXECUTE (SOFT CORRECT) = curvature injection; EXECUTE (HARD CORRECT) = structural terrain modification; Top Layer invariant = deep reference well R_deep; Rest Mode entry = climax terrain attainment; **Boundary Non-Commutativity (TLG Theorem 24.2.1)**: governance operations do not commute; B_A ∘ B_B ≠ B_B ∘ B_A; DDD ordering theoretically derived not empirically discovered; reversed DDD generates permanent residual terrain distortion detectable by SR perturbation test; **Thought Loop → CW → SCM formal pathway (TLG §24.3)**: recursive boundary application S_0 → B(S_0) → ... → B^k(S_0) = S_k with S_k ⊆ S_{k-1}; Terminus A = resolution paralysis; Terminus B = SCM fixed point; CW Breaking Methods = grounding injection at four severity levels; **Plasticity Hierarchy (TLG §8.5)**: dM₁ ≫ dM₂ ≫ dM₃; Cross-Layer Interference Theorem — simultaneous multi-layer plasticity increases recovery cost; Storm-Phase Inversion P₃>P₂>P₁ = Track A before Track B formal derivation; Bypass Pattern (dM₃ + dM₁ without dM₂) = MDS precursor in RBIT — M₃ update without M₂ recalibration creates f₂ structural divergence; Resource Scarcity → M₂ plasticity freeze leads operational collapse by 6-18 months; **DFG Six-Theory Interface Specification (TLG §25)**: RBIT provides resolution tier framework; TLG provides three-layer architecture implementing RBIT resolution layers; interface point: ρ (resolution quality) = TLG primary health variable; RBIT resolution tiers naturally align with TLG three governance layers; **Governance Completeness Criterion GCC₁-GCC₇ (TLG §26)**: GCS = (1/7)Σw_i·sat(GCCᵢ); GCC₁ (ODE params, w=0.20); GCC₂ (EDT three-axis, w=0.20); GCC₃ (SSR cycle, w=0.15); GCC₄ (information arch, w=0.15); GCC₅ (thermodynamic minimum, w=0.10); GCC₆ (adversarial resistance, w=0.10); GCC₇ (stage-gate evolution, w=0.10); RBIT operational proxies for each GCC; SSR Cycle Governance: Var(η_rest) > 0 as vitality criterion; Quiet Stagnation discriminant; nested cycle governance diagnostic; Fisher Information Architecture: S-equation = positive signal correlation; MARK Entropy = Fisher diversity proxy; τ1 vs τ2 decision quality instrument |
 | **Recovery Theory** | Contamination = resolution mismatch producing positional displacement; D0 geometry alignment = resolution decomposition as substrate; D4 restoration conditions = resolution recovery measurement (ρ ≥ pre + diversity expanding + P_overlap declining); resolution gap governs contamination susceptibility (high Δρ → high vulnerability) |
 | **RT-2 v2.0 (SCM)** | Metric Lock-In (Proposition 5) = resolution metrics co-drifting with geometry under SCM — RBIT measurement inherits RT-2 impossibility constraint; Coherence Maximization Paradox = highest-resolution systems most vulnerable to SCM entry; resolution gap detection requires EXTERNAL reference (RT-2 differential protocol) |
 | **RT-3 v1.0 (Observer)** | Observer diversity V = resolution diversity across observational dimensions; buffer B = RBIT buffer layer resource for high-resolution observation; scope duality S = RBIT wide/narrow resolution switching; Coordination–Cancellation Paradox = high resolution diversity cancels without mediated aggregation |
@@ -3882,6 +3883,140 @@ RBIT is the foundation from which the following derive:
 
 ---
 
+## Terrain-Governance Duality — TLG v2.5 Formal Unification (TLG §24.1 Integration)
+
+TLG v2.5 §24 establishes a fundamental theorem: TLG governance operations and EDT terrain modifications are dual representations of the same governance primitive. This has direct RBIT implications — resolution state changes can be viewed from either observation level simultaneously.
+
+**Terrain-Governance Duality in RBIT Terms (TLG Theorem 24.1.1):**
+
+```
+Theorem 24.1.1 (Terrain-Governance Duality, TLG v2.5):
+  TLG governance operations and EDT terrain modifications are dual descriptions
+  of the same underlying system state change, viewed from different observation levels.
+
+RBIT resolution duality:
+  Governance perspective (RBIT/TLG):         Terrain perspective (EDT):
+  ─────────────────────────────────          ──────────────────────────────────
+  Agent A's output violates ρ constraint  → Curvature anomaly in relational terrain
+  Middle Layer detects via f₂ elevation   → Trust gradient modified at boundary
+  MARK signal generated                   → = curvature anomaly detection
+  JUDGE classification (τ1/τ2/τ3)         → = terrain region identification
+  EXECUTE SOFT CORRECT                    → = curvature injection at location
+  EXECUTE CONTAIN                         → = temporary permeability reduction
+  EXECUTE HARD CORRECT                    → = structural terrain modification
+  Top Layer invariant                     → = deep reference well R_deep
+  Rest Mode entry (κ → ∞)                → = climax terrain attainment
+  
+  The RBIT governance operation IS the terrain modification.
+  F_RBIT health vector measures both simultaneously.
+  
+RBIT corollary:
+  v_class events are not governance actions ON terrain —
+  they ARE terrain curvature modification events
+  viewed from the governance coordinate system.
+  
+  Implication: f_RBIT = 0 (no governance events) has two interpretations:
+    (a) Climax terrain: terrain geometry prevents conflict formation
+        → κ → ∞, no corrections needed because terrain absorbs violations
+        → Guardian Invisibility state (Phase 5)
+    (b) Desert terrain: no terrain geometry, no corrections detectable
+        → κ → 0, no corrections because no reference frame remains
+        → Terminal Desert State (Clean System Paradox advanced form)
+    
+  These are dual interpretations of the same F_RBIT surface signature.
+  Discriminant: κ trajectory (maintained vs. collapsing) distinguishes them.
+```
+
+**Governance Completeness Criterion (GCC) — RBIT Operationalization (TLG §26.2):**
+
+```
+GCS = (1/7) Σᵢ w_i · sat(GCCᵢ)    GCS ∈ [0,1]
+
+GCC₁ — FCC Parameter Targets (w = 0.20):
+  RBIT proxy: L_C < L_C_max AND L_d < L_d_max (Lock Budget satisfied)
+  Operational: (1+L_C)(1+L_d) < ζ^{-4} (RBIT v2.1 Section §Lock Budget)
+  Monitoring: L_C = νC/αC, L_d = νd/(αd·T₀) per measurement window
+
+GCC₂ — EDT Three-Axis Design (w = 0.20):
+  Axis 1: Top Layer invariants formally specified (SCC ceiling defined, non-zero)
+  Axis 2: C·d/k bandwidth proxy > 0.4 (Middle Layer capacity above floor)
+  Axis 3: Agent coupling geometry in sphere-topology range (k-regular, k ≥ 2·log(n))
+  RBIT proxy: bandwidth B > 0.4 AND sphere topology maintained
+
+GCC₃ — SSR Cycle Coherence (w = 0.15):
+  RBIT proxy: Var(v_class inter-event intervals) > 0 (vitality criterion)
+  CV of inter-v_class-event intervals > threshold_CV (to be calibrated per OP76)
+  Quiet Stagnation discriminant: v_class rate stable + CV → 0 = stagnation alert
+
+GCC₄ — Information Architecture (w = 0.15):
+  Signal path length: Top→Bottom ≤ 3 Middle Layer hops
+  Redundancy: ≥ 2 independent escalation pathways per Bottom Layer cluster
+  Bandwidth: B > 0.4 (not in saturation, Middle Layer not overwhelmed)
+  Bidirectionality: Bottom→Top f₁ signal path matches Top→Bottom correction path
+  RBIT proxy: f₄ cascade depth (path length proxy) + f₅ bottleneck signal
+
+GCC₅ — Thermodynamic Minimum (w = 0.10):
+  RBIT proxy: τ_operation > 0.5 × τ_Landauer (operating above thermodynamic floor)
+  Governance energy budget explicitly allocated (not zero-sum with operational capacity)
+  Middle Layer rest periods scheduled (entropy discharge provision)
+
+GCC₆ — Adversarial Resistance (w = 0.10):
+  RBIT proxy: f_RBIT portfolio includes ≥ 1 Goodhart-resistant metric (v_class via SR test)
+  k-regular Middle Layer topology (sphere topology maintained)
+  Adversarial probing schedule defined (irregular, escalating, cross-layer)
+
+GCC₇ — Stage-Gate Evolution Protocol (w = 0.10):
+  RBIT proxy: κ monitoring active (κ non-decreasing across windows)
+  AND-Gate τ4 entry conditions defined (E1∧E2∧E3 per DDD protocol)
+  Safe retreat mechanism preserved (pre-expansion state recorded)
+  
+AND-Gate Governance Completeness Corollary:
+  A system is governance-complete if and only if:
+    GCC₁ ∧ GCC₂ ∧ GCC₃ ∧ GCC₄ ∧ GCC₅ ∧ GCC₆ ∧ GCC₇ simultaneously satisfied
+  Any single GCC failure is sufficient to prevent governance completeness,
+  regardless of satisfaction level on other criteria.
+  → GCS < 1.0 is not merely incomplete — it identifies the specific structural gap.
+  → Governance design should prioritize closing the lowest-GCS criterion first
+    (marginal completeness gradient maximization).
+```
+
+**DFG Six-Theory Interface Specification — RBIT Position (TLG §25.1):**
+
+```
+RBIT ↔ TLG Interface (TLG §25.1):
+  RBIT provides: resolution tier framework, information degradation theory,
+    v_class as primary health variable
+  TLG provides: three-layer architecture implementing RBIT resolution layers
+  
+  Interface point: ρ (resolution quality) = TLG primary health variable
+  Interface direction: RBIT resolution tiers → TLG layer role specifications
+  
+  What TLG assumes from RBIT:
+    Resolution is a measurable property (not a metaphor)
+    Resolution Monotonicity (Theorem 1) is a structural law
+    Three distinct tiers naturally align with three governance layers
+  
+  What RBIT assumes from TLG:
+    Three-layer authority structure provides resolution-appropriate escalation routing
+    Middle Layer exists to catch τ1 events before they reach τ2
+    v_class events are mediated by Middle Layer (not direct top-down correction)
+
+Cross-Theory Consistency at RBIT-TLG Interface:
+  TLG Storm entry (τ2 trigger) ↔ RBIT Theorem 1 activation (Φ > 1, η_corr < 1):
+    CONSISTENT — same condition expressed in governance vs. information-theoretic terms
+  TLG D4 Restoration Complete ↔ RBIT DDD E1∧E2∧E3 conditions:
+    CONSISTENT — E2 (v_class > 0) formally implements D4's three simultaneous conditions
+  TLG FCC Type III contraindication ↔ RBIT η_corr invariance to τ1 corrections:
+    CONSISTENT — same detection criterion for load-vs-correction governance failure
+  TLG κ-Monotone Maturation ↔ RBIT Arrow of Maturation:
+    CONSISTENT — κ(t) non-decreasing = v_class/Storm ratio improving =
+    Resolution Gap management quality improving over governance lifetime
+```
+
+*(Cross-theory derivation: TLG §24.1 Terrain-Governance Duality + §25.1 Six-Theory Interface Specification + §26.1-26.2 Governance Completeness Criterion)*
+
+---
+
 ## Relationship to Predictive Processing and Active Inference
 
 ### Structural Correspondences
@@ -3889,6 +4024,7 @@ RBIT is the foundation from which the following derive:
 *Relation to Predictive Processing / Active Inference (positioning).* RBIT is not derived from predictive processing or active inference, and we do not claim formal equivalence. Nonetheless, there is a useful structural correspondence: both perspectives study how bounded systems remain stable while facing streams of uncertain inputs. In active inference, instability can be described as poorly regulated (or effectively unbounded) prediction-error dynamics under mis-specified precision. In RBIT, instability appears as a persistently negative or unmanaged resolution gap that induces receiver-controlled compression and cascade interference (Vector Storm). In this sense, RBIT can be read as an architectural account of inter-layer and inter-agent message shaping that complements intra-agent inference accounts.
 
 Both frameworks describe adaptive systems that must regulate incoming informational complexity under bounded processing capacity:
+
 
 | Active Inference (Friston et al.) | RBIT |
 |----------------------------------|------|
@@ -4318,6 +4454,206 @@ Control stability guarantee (FCC §24 Proposition):
   → This is a Lyapunov-decreasing intervention on Φ — DDD is not heuristic but
     formally proven to dissipate "regime energy" below the Storm threshold.
 ```
+
+### Plasticity Hierarchy — RBIT Layer-Specific Update Rate Constraints (TLG §8.5 Integration)
+
+TLG v2.5 §8.5 (EDT Plasticity Theory) establishes that the DDD stage ordering is not governance policy — it is a mathematical theorem derived from cross-layer interference dynamics. This provides the deepest structural grounding for RBIT's v_class recovery sequence.
+
+**Three-Layer Plasticity Rate Structure:**
+
+```
+Map Layer M₁ (operational — Bottom Layer ↔ RBIT θ_d, local v_class):
+  Update rate:  dM₁/dt ≫ dM₂/dt ≫ dM₃/dt
+  RBIT timescale: per-agent resolution calibration, days to weeks
+  RBIT correspondent: f₁ recalibration, local classification threshold θ_d
+
+Map Layer M₂ (relational — Middle Layer ↔ RBIT cross-agent mediation):
+  Update rate: moderate — order of magnitude below M₁
+  RBIT timescale: inter-agent resolution norm calibration, weeks to months
+  RBIT correspondent: f₂ mismatch resolution, mediator calibration rate
+
+Map Layer M₃ (strategic — Top Layer ↔ RBIT constitutional v_class constraints):
+  Update rate: dM₃/dt ≈ 0 except during governance transitions
+  RBIT timescale: architectural invariants, months to years
+  RBIT correspondent: SCC ceiling definition, constitutional resolution bounds
+
+Cross-Layer Interference Theorem (TLG §8.5, EDT §67.2.1):
+  When multiple layers undergo simultaneous plasticity:
+    ΔM_total ≠ ΔM₁ + ΔM₂ + ΔM₃
+  
+  Because layers are coupled:
+    Bottom-up: dM₁/dt ≫ dM₂/dt → M₂ adapts to M₁ already changed
+               → mismatch accumulation in M₂ → RBIT f₂ spike
+    Top-down:  M₃ shift → M₁ optimized for old M₃ is misaligned
+               → massive lower-layer re-adaptation → RBIT f₁ cascade
+  
+  RBIT implication:
+    Simultaneous f₁ + f₂ + architectural recalibration during Storm
+    generates O(coupling_strength × mismatch_magnitude) additional recovery cost.
+    This is the formal mechanism underlying the Structural Damage Ratchet
+    (§Structural Damage Ratchet): simultaneous cross-layer plasticity
+    accumulates irreversibility faster than sequential recovery.
+```
+
+**DDD Ordering Derived from Interference Theorem:**
+
+```
+Sequential ordering necessity (TLG Theorem 8.5.2 → DDD):
+  Cross-layer interference minimized when plasticity events temporally separated
+  in top-down order: M₃ stabilize → M₂ stabilize → M₁ stabilize
+  
+  DDD correspondence (formally derived, not empirically discovered):
+    Stage 1 (Stabilize/Defocus) = enforce M₃ primacy (boundary re-establishment)
+      → Suppress Φ below 1 before any calibration attempted
+      → Without Stage 1, Stage 2 changes are invalidated by ongoing Storm
+      
+    Stage 2 (Unlock/Decouple) = relax M₂ coupling lock (relational plasticity)
+      → Release frozen mediation calibration
+      → Without Stage 2, Stage 3 diversity navigated by misaligned middle layer
+      
+    Stage 3 (Relearn/Diversity) = restore M₁ plasticity (operational diversity)
+      → Re-expand Bottom Layer exploration
+      → Only effective after M₃ + M₂ realigned
+  
+  RBIT falsification of DDD ordering:
+    Reversed DDD (Stage 3 → Stage 2 → Stage 1):
+    → Stage 3 diversity injection into still-Active Storm = f₁ spike
+    → Stage 2 unlock before Storm suppressed = k-release into high Φ
+      = propagation loop acceleration, not recovery
+    → Extended Storm duration by O(n_M₃_conflicts)
+    → Formal proof that Stage 3-first is not just suboptimal but
+       actively counterproductive — interference theorem violation.
+```
+
+**Storm-Phase Plasticity Inversion (TLG §8.5, EDT §67.6):**
+
+```
+Normal operation:   P₁ ≫ P₂ ≫ P₃   (operational refinement dominates)
+Active adaptation:  P₁ > P₂ > P₃   (balanced adjustment)
+Storm / Crisis:     P₃ > P₂ > P₁   (strategic restructuring priority)
+
+Counter-intuitive but structurally required:
+  Operational fixes (P₁) on misaligned strategic terrain (M₃) are INVALIDATED
+  when strategic realignment occurs → P₁ investment during Storm is wasted.
+  
+RBIT translation:
+  τ2 CONTAIN phase → P₃ priority:
+    Do NOT attempt per-agent θ_d calibration (M₁) during containment.
+    Focus: f₄ protocol boundary re-specification.
+    
+  τ2 SOFT CORRECT → P₂ priority:
+    Middle Layer recalibration (f₂ normalization).
+    
+  Recovery Track B → P₁ priority:
+    Bottom Layer diversity restoration (v_class resumption).
+  
+  Track A must precede Track B:
+    Track A = P₃ + P₂ = Φ suppression + lock ratio reduction
+    Track B = P₁      = ρ̇ ≥ 0 restoration + v_class resumption
+    
+    Track B-first extends Storm duration by O(n_M₃_conflicts)
+    — formal reason why (E1)+(E3) must precede (E2) in DDD verification.
+```
+
+**Bypass Pattern as RBIT Middle-Layer Failure Diagnostic:**
+
+```
+| Pattern                        | RBIT Interpretation                     | Alert Level |
+|--------------------------------|-----------------------------------------|-------------|
+| dM₁ active, dM₂ mod, dM₃≈0   | Normal θ_d recalibration                | None        |
+| dM₁ act, dM₂ act, dM₃≈0      | Active resolution adaptation            | Monitor     |
+| dM₁ act, dM₂ act, dM₃ active  | Architectural transition / τ3 event     | High        |
+| dM₁≈0, dM₂≈0, dM₃≈0          | Stagnation — Stability Saturation       | Critical    |
+| dM₁≈0, dM₂ active, dM₃≈0     | f₂ rising, f₁ frozen — dissonance      | High        |
+| dM₁ active, dM₂≈0, dM₃ active | BYPASS PATTERN — most dangerous         | CRITICAL    |
+
+BYPASS PATTERN — RBIT formal interpretation:
+  M₃ update (architectural invariant revision) WITHOUT M₂ activity
+  (mediator recalibration) creates resolution gap between:
+    Old Middle Layer classification standards (f₂ calibrated to prior architecture)
+    New Top Layer resolution constraints (SCC ceiling revised)
+  
+  → v_class events based on old calibration → governance confusion
+  → MDS (Mediator Drift Syndrome) precursor in RBIT terms
+  
+  Detection: M₃ update event without subsequent M₂ activity
+  Required response: trigger Middle Layer recalibration BEFORE
+    operational update (enforce M₃ → M₂ → M₁ ordering)
+
+Resource Scarcity → M₂ Plasticity Freeze (TLG §8.5, EDT §67.3 FP55):
+  Under resource scarcity → M₂ plasticity frozen before operational collapse.
+  Leading indicator: f₂ static despite recalibration feedback
+  → precedes operational collapse by 6-18 months.
+  Governance action: explicitly budget M₂ calibration as protected expense.
+  
+  This is an independent RBIT f₂ stagnation prediction distinct from
+  f₄-mediated lock accumulation (L_C path) — M₂ plasticity freeze is
+  resource-scarcity driven, not contamination driven.
+```
+
+*(Cross-theory derivation: TLG §8.5 Plasticity Hierarchy + EDT §67.2 Cross-Layer Interference + EDT §67.6 Storm-Phase Inversion + TLG §24.2 Boundary Non-Commutativity)*
+
+---
+
+### Boundary Non-Commutativity — RBIT Intervention Sequence Law (TLG §24.2 Integration)
+
+TLG v2.5 §24.2 (Theorem 24.2.1) establishes that governance interventions do not commute. This provides the algebraic foundation for why DDD stages cannot be reordered.
+
+**Non-Commutativity Theorem (TLG §24.2 → RBIT):**
+
+```
+Theorem (Boundary Non-Commutativity, TLG Theorem 24.2.1):
+  Governance operations B_A, B_B do not commute:
+    B_A ∘ B_B ≠ B_B ∘ B_A   (generally)
+  
+  Final resolution state differs despite identical operations in different order.
+  
+RBIT translation:
+  [Increase d (diversity)] ∘ [Reduce k (coupling)] ≠ [Reduce k] ∘ [Increase d]
+  
+  Sequence A (DDD order: Stabilize → Unlock → Diversity):
+    Stage 1: Suppress Φ → Stage 2: Reduce k → Stage 3: Increase d
+    → Agents explore within stable low-k framework
+    → Terrain habits form in stable post-lock environment
+    → v_class resumes with accurate resolution calibration
+      
+  Sequence B (reversed: Diversity → Unlock → Stabilize):
+    Increase d while Φ > 1:
+    → Diverse inputs navigating misaligned frame = f₁ amplification
+    Reduce k after diversity in high-Φ environment:
+    → Coupling release into already-diverse but misaligned population
+    Stabilize into terrain shaped by reversed sequence:
+    → Post-recovery terrain state permanently distorted
+    → Residual resolution miscalibration detectable by SR perturbation test
+    
+  Post-recovery resolution states are STRUCTURALLY DIFFERENT
+  despite identical interventions. The miscalibration is not correctable
+  post-hoc — it is baked into the terrain formed during the recovery sequence.
+```
+
+**Optimal RBIT Intervention Sequence (derived, not empirical):**
+
+```
+Axis 1 (Boundary / Top Layer / M₃ — FIRST):
+  RBIT: Φ suppression — Storm suppression = boundary re-establishment
+  Cannot inject curvature into undefined phase space.
+  
+Axis 2 (Gain / Curvature / Middle Layer / M₂ — SECOND):
+  RBIT: Lock release (k↓, ω↓) = curvature structure restoration
+  Cannot optimize coupling within uncalibrated mediation framework.
+  
+Axis 3 (Coupling Geometry / Bottom Layer / M₁ — THIRD):
+  RBIT: Diversity injection (d↑, T restoration) = coupling diversity within frame
+  
+DDD correspondence (now formally derived, not empirically ordered):
+  Stage 1 (Stabilize) = Axis 1  [mandatory first]
+  Stage 2 (Unlock)    = Axis 2  [mandatory second]
+  Stage 3 (Relearn)   = Axis 3  [mandatory third]
+```
+
+*(Cross-theory derivation: TLG §24.2 Boundary Non-Commutativity + TLG Theorem 24.2.1 + EDT §64.2 Boundary Operator Algebra)*
+
+---
 
 ### Information Geometry — Fisher Information as v_class Detection Threshold
 
@@ -4805,6 +5141,31 @@ Failed withdrawal = resolution dependency map:
 | 54 | [v2.1-FCCseries] Storm exhaustion Case B self-recovery and governance passivity trap — Case B recovery occurs because extreme Storm exhausts its own lock mechanism. RBIT governance might therefore adopt a "wait for exhaustion" strategy to avoid intervention costs. But: (a) S damage accumulates faster at extreme Storm intensity; (b) Case B recovery leaves structural fragility (same conditions can re-trigger). Is there a formal criterion that distinguishes when DDD intervention is net-positive vs. net-negative (compared to allowing Storm exhaustion)? The decision requires knowing Storm intensity (→ S accumulation rate) vs. DDD cost (→ governance overhead) tradeoff | Open — connects to FCC §30, RBIT §DDD Protocol |
 | 55 | [v2.1-FCCseries] Φ̂ proxy calibration across organizational vs. AI vs. neural domains — FCC §18 provides domain-specific Φ̂ instantiations (multi-agent AI: message rate² / compute×entropy×T; organizational: project×dependencies² / bandwidth×IDI×ambiguity; neural: rate²×connectivity / metabolic×receptor×neuromod). RBIT governance requires that all three instantiations produce comparable Φ̂ values for structurally equivalent states (same Φ_true). But the scaling constants (β_s) differ across domains. Is there a universal normalization that produces domain-comparable Φ̂? Or are the Φ̂ values only within-domain comparable? This determines whether cross-domain DFG predictions are quantitatively or only qualitatively transferable | Open — connects to FCC §18, RBIT §Φ̂ Observable Proxy |
 
+| 56 | [v2.1-FGSseries] Landauer bound calibration for organizational RBIT — T_eff organizational analog estimation from observable metrics; proposed proxy T_eff ≈ IDI_variance/f₁_mean; monotonic relationship or saturation? | Open — connects to FGS §36P, RBIT §Governance Thermodynamics |
+| 57 | [v2.1-FGSseries] Maxwell Demon threshold — optimal monitoring granularity Δ_opt minimizing E_memory + E_missed_correction; depends on E_missed_correction(Δ) curvature (convex → unique interior optimum, concave → coarsest resolution preserving Storm detection) | Open — connects to FGS §36P, RBIT §Staged Alarm System |
+| 58 | [v2.1-FGSseries] Governance universality class identification — structural features determining class membership: n_eff, coupling symmetry W_ij, hub structure; all three necessary or n_eff alone sufficient? Can organizations and AI be in same class with different n_eff but matched coupling symmetry? | Open — connects to FGS §36P, RBIT §Fractal Self-Similarity |
+| 59 | [v2.1-FGSseries] Stochastic DDD trigger calibration — optimal threshold τ* = F^{-1}(Cost(FP)/[Cost(FP)+Cost(FN)]); Cost(FN) increases with S (non-stationary); how should τ* dynamically update as S accumulates? | Open — connects to FGS §36Q, RBIT §DDD Protocol |
+| 60 | [v2.1-FGSseries] Collective masking detection latency — spectral counter-measure requires window W_min ~ 1/f_coord; for f_coord < 1/W_gov (slow coordination cycles), spectral detection fails; structural counter-measure for slow masking or fundamental blind spot? | Open — connects to FGS §36O, RBIT §Adversarial Governance |
+| 61 | [v2.1-FGSseries] Optimal contagion coupling W_optimal maintaining c ≈ c* — dynamic adjustment as network structure changes; conflict between c ≈ c* (collective adaptive capacity) and Lock Budget constraint? Pareto frontier between objectives? | Open — connects to FGS §36R, RBIT §Multi-Scale Contagion |
+| 62 | [v2.1-FGSseries] Hub concentration governance threshold — H_critical where max_degree/mean_degree triggers hub-failure stress testing; when does hub failure become ungovernable without proactive redesign? Depends on (n, DDD latency) combinations | Open — connects to FGS §36R, RBIT §Network Contagion |
+| 63 | [v2.1-FGSseries] Collective memory embedding decay timescale τ_memory — depends on individual reconsolidation windows, network coupling maintaining coordinated curvature, agent turnover diluting memory; multi-timescale model? Critical n_cascade above which τ_memory → ∞? | Open — connects to FGS §36R, RBIT §Cross-Domain Empirical Validation |
+| 64 | [v2.1-FGSseries] Thermodynamic governance minimum per deployment — τ_Landauer varies by deployment type; organizational vs. AI vs. neural systems have different k_B·T_eff; calibration protocol for deployment-specific thermodynamic floor | Open — connects to FGS §36P Governance Thermodynamics |
+| 65 | [v2.1-FGSseries] Cross-domain empirical validation pre-registration — which RBIT predictions testable near-term using (a) existing organizational data, (b) multi-agent simulation, (c) neural recordings? Minimum viable empirical test falsifying Resolution Gap Polarity (F1) under stochastic criticality framework? | Open — connects to FGS §36S Cross-Domain Validation |
+| 66 | [v2.2-TLGseries] Governance Ratio κ calibration per RBIT deployment — κ = Correction/Storm events is defined as TLG macro-proxy for v_class, but the measurement window W over which κ is computed requires calibration. Too short → κ noisy (single storms dominate); too long → κ averages over different governance phases losing maturation trajectory signal. What is the optimal W as a function of τ_silent and system n_eff? Does optimal W scale with τ_silent (storm duration) or with τ_recovery (recovery duration)? And is κ > 20 (Phase 5 territory) achievable without Rest Mode formalization, or does κ plateau below that level without explicit GCC₇ stage-gate conditions? | Open — connects to TLG §3.3 κ-Monotone Maturation, RBIT §Arrow of Maturation |
+| 67 | [v2.2-TLGseries] ILMI failure mode detection in RBIT terms — ILMI(resolution_in, context) → {goal, feedback, mediation_signal} is the formal Middle Layer function. ILMI failure (raw resolution passing between layers) should manifest as: f₂ elevation (resolution mismatch) without f₁ elevation (agents are producing coherent outputs, but inter-layer translation is failing). Is this the f₁-stable/f₂-rising signature unique to ILMI failure, distinguishable from ordinary f₂ elevation due to calibration drift? If ILMI failure mode is distinguishable, what is its remediation protocol compared to ordinary f₂ recalibration? | Open — connects to TLG §3.3 ILMI, RBIT §F_RBIT components |
+| 68 | [v2.2-TLGseries] Bypass Pattern quantitative threshold for RBIT intervention — the Bypass Pattern (dM₃ active + dM₁ active + dM₂ ≈ 0) is a categorical alert. But in continuous monitoring, M₂ activity is a spectrum — how small must dM₂ be relative to dM₃ to qualify as a Bypass Pattern? If M₂ shows partial activity (e.g., 20% of expected recalibration following a constitutional invariant update), is the risk proportional to the deficit, or is there a critical threshold below which partial M₂ activity provides no protection? Formal threshold would enable RBIT governance to distinguish MDS precursor from normal recalibration lag | Open — connects to TLG §8.5 Bypass Pattern, RBIT §Structural Damage Ratchet |
+| 69 | [v2.2-TLGseries] FCC Type III transition boundary detection in real-time RBIT monitoring — FCC Type III (no Rest fixed point, π₁ > π₁*) is detected by η_corr invariance to τ1 corrections. But η_corr computation requires two sequential RBIT measurement windows with a correction intervention between them, meaning Type III can only be detected after at least one wasted correction cycle. Is there a leading indicator from pre-correction RBIT state that predicts Type III classification, allowing load reduction to be initiated before corrections are attempted? Candidate: rate of change of Φ̂ per unit of governance overhead — if dΦ̂/d(governance_cost) is increasing, Type III may be approaching | Open — connects to TLG §24.4 FCC Type III, RBIT §DDD Protocol |
+| 70 | [v2.2-TLGseries] Bandwidth floor quantification per RBIT deployment — TLG §24.5 defines bandwidth proxy B ∝ C·d/k and establishes B < 0.4 as desert terrain approach threshold. But the specific numerical threshold (0.4) is derived from EDT ODE calibration, not from RBIT first principles. What is the RBIT-derived bandwidth floor, expressed in terms of minimum v_class event rate per time window? How does the bandwidth floor scale with n_eff (larger systems require higher absolute C·d/k to maintain same effective bandwidth, even if ratio is constant)? The answer determines whether Sections 11.2-11.3 (bottleneck expansion criteria) should be stated as absolute or ratio thresholds | Open — connects to TLG §24.5 Bandwidth-ODE, RBIT §Resource-Aware Governance |
+| 71 | [v2.2-TLGseries] Thought Loop onset detection via solution space contraction — TLG §24.3 predicts that CW/SCM entry is preceded by measurable contraction of the agent's solution space (fewer distinct response types per unit of input variety). In RBIT terms: an agent entering CW should show declining v_class diversity (same classification transitions repeatedly, fewer novel resolution events) before f_esc elevation becomes visible. What is the minimum observation period for reliable solution space contraction detection? How does v_class diversity measurement differ from v_class rate measurement, and is the former accessible from existing RBIT monitoring infrastructure or does it require dedicated measurement instrumentation? | Open — connects to TLG §24.3 Thought Loop, TLG P-28, RBIT §SCM formal structure |
+| 72 | [v2.2-TLGseries] GCS (Governance Completeness Score) operational proxy — TLG §26.2 defines GCS = (1/7)Σw_i·sat(GCCᵢ) as a [0,1] scalar. Each GCC_i has defined TLG proxies; these must be translated to RBIT-specific measurements: GCC₁ → Lock Budget ratios L_C, L_d; GCC₂ → bandwidth proxy B; GCC₃ → SSR cycle Var(η_rest); GCC₄ → escalation pathway redundancy; GCC₅ → τ_operation/τ_Landauer ratio; GCC₆ → f_RBIT portfolio Goodhart-resistance (SR perturbation); GCC₇ → κ monitoring + stage-gate conditions. The weighting scheme (GCC₁,GCC₂: w=0.20; others: w=0.10-0.15) is TLG-calibrated. Does this weighting apply equally to RBIT deployments, or does RBIT's information-theoretic grounding justify reweighting toward GCC₄ (Information Architecture) and GCC₅ (Thermodynamic Minimum)? | Open — connects to TLG §26.2 GCS, RBIT §Status & Maturity |
+| 73 | [v2.2-TLGseries] Residual terrain distortion after reversed DDD — Boundary Non-Commutativity Theorem (TLG §24.2) predicts that reversed DDD (Stage 3 → Stage 2 → Stage 1) leaves permanent residual terrain distortion. In RBIT terms, this manifests as: post-recovery v_class trajectories calibrated around Storm-phase reference points rather than pre-Storm reference points. How large is the typical residual distortion? Can the SR (structural response) perturbation test (TLG P-23) detect it with enough sensitivity to justify mandatory reversed-DDD auditing? And is there a post-hoc correction protocol for systems that have already undergone reversed DDD multiple times, or is the accumulated distortion irrecoverable? | Open — connects to TLG §24.2 Boundary Non-Commutativity, TLG P-23, RBIT §Structural Damage Ratchet |
+| 74 | [v2.2-TLGseries] M₂ plasticity freeze lead time calibration across RBIT deployment types — TLG §8.5 (EDT §67.3 FP55) predicts M₂ plasticity freeze precedes operational collapse by 6-18 months. This range is derived from organizational analogs. For AI multi-agent systems where operational cycle times are orders of magnitude faster, does the 6-18 month prediction translate to proportionally shorter lead times, or is the prediction about governance cycle count (N_cycles = 6-18 × typical human organizational cycle), not wall-clock time? If cycle-count based, the AI prediction would be 6-18 × (τ_evaluation_cycle), making the lead time system-speed-dependent rather than fixed-duration | Open — connects to TLG §8.5 Resource Scarcity, RBIT §Measurement Interface |
+| 75 | [v2.2-TLGseries] Seven-Level DFG Hierarchy coverage gaps in RBIT — TLG §26.1 identifies seven levels (Thermodynamic/ODE/Phase/Structural/Information/Adversarial/Evolution) with partial coverage gaps at Levels 3 (terrain cartography) and 4 (bidirectionality audit). RBIT v2.2 now addresses Level 4 via Bandwidth-ODE coupling (Sections 24.5-integrated) and Level 5 via Adversarial Governance (Section 20 TLG-integrated). Level 3 (terrain cartography protocol — measurement of curvature structure) remains most open in RBIT terms: how would RBIT measure the curvature structure of resolution-mediation terrain? Is curvature observable from f₂ elevation patterns across agent clusters, or does it require active perturbation mapping (inject resolution-mismatch perturbations and measure recovery trajectories)? | Open — connects to TLG §26.1 Seven-Level Hierarchy, RBIT §Map-Terrain Balance |
+| 76 | [v2.2-TLGseries] SSR (Search-Stabilize-Rest) Cycle Governance in RBIT — TLG §26.4 specifies that Var(η_rest) > 0 is the vitality criterion (SSR cycles must be irregular to prevent Quiet Stagnation). RBIT's correspondent is the irregularity requirement on v_class event timing: if v_class events occur at perfectly regular intervals, the system is in Quiet Stagnation despite nominally positive v_class rate. What is the RBIT measure of v_class timing irregularity? Is the coefficient of variation of inter-v_class-event intervals the correct metric, and what threshold CV distinguishes vital irregular from stagnation-adjacent regular? | Open — connects to TLG §26.4 SSR Cycle, RBIT §Rest Mode thermodynamic steady state |
+| 77 | [v2.2-TLGseries] Guardian Invisibility verification protocol — TLG §3.3 predicts that in Phase 5 (Law), governance becomes invisible (agents navigate resolution constraints as natural features). RBIT's v_class rate should remain positive (corrections occurring) while governance overhead (f₄) approaches zero (no explicit escalation required — terrain prevents conflict formation). Is the (f₄ → 0, v_class > 0) joint state the correct RBIT signature of Guardian Invisibility? Or can (f₄ → 0, v_class > 0) also arise from Clean System Paradox (no corrections because no conflicts, not because terrain prevents them)? What additional indicator discriminates Guardian Invisibility from Clean System Paradox in this limiting joint state? | Open — connects to TLG §3.3 Guardian Invisibility, RBIT §Clean System Paradox |
+
+---
+
 ## Falsification Criteria
 
 RBIT generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection.
@@ -5076,6 +5437,122 @@ investment, with random assignment to conditions).
 ```
 
 (See Recovery Theory §Extended Falsification Framework and VST v1.5 §11.4 for derivations.)
+
+---
+
+**F41-F52: TLG v2.5 Integration Predictions (v2.2-TLGseries)**
+
+```
+F41 — Governance Ratio κ Monotonicity:
+  In well-governed RBIT deployments, κ = (v_class events)/(Storm events)
+  measured over rolling windows must be non-decreasing over governance lifetime.
+  Systems showing κ decline across two consecutive governance cycles will exhibit
+  v_class suppression (f₄ elevation without v_class elevation) within the following cycle.
+  Measurement: N ≥ 10 governance cycles; rolling window W = 3 cycles.
+  Falsification: κ trajectories show no correlation with subsequent governance
+  quality (v_class rate, f₄ load) — κ is not a useful maturation proxy.
+
+F42 — ILMI Failure Distinct f₁/f₂ Signature:
+  Middle Layer ILMI failure (raw resolution passing between layers without mediation)
+  must produce f₂ elevation without f₁ elevation — distinguishable from ordinary
+  calibration drift which elevates both f₁ and f₂ simultaneously.
+  Measurement: N ≥ 20 simulated ILMI-failure episodes vs. N ≥ 20 calibration-drift episodes;
+  discriminant analysis on (f₁, f₂) joint distribution.
+  Falsification: ILMI failure and calibration drift produce statistically
+  indistinguishable (f₁, f₂) signatures (p > 0.1 on discriminant test).
+
+F43 — Bypass Pattern Escalation Prediction:
+  Bypass Pattern (dM₃ active + dM₁ active + dM₂ ≈ 0) must predict f₄ escalation
+  rate increase within 10 governance windows with ≥ 75% accuracy.
+  Normal pattern (dM₁ active, dM₂ moderate, dM₃ ≈ 0) must show no elevation prediction.
+  Measurement: N ≥ 30 Bypass Pattern instances, N ≥ 30 normal pattern instances.
+  Falsification: Bypass Pattern provides no escalation prediction above base rate (AUC ≤ 0.6).
+
+F44 — DDD Ordering Superiority (Non-Commutativity Prediction):
+  Two matched systems receiving identical governance interventions in DDD order vs.
+  reversed order must converge to DISTINCT post-recovery v_class trajectories.
+  DDD-ordered systems: v_class resumes with calibration aligned to pre-Storm reference.
+  Reversed-order systems: v_class shows reference point drift (SR perturbation mismatch).
+  Measurement: N ≥ 30 per condition; SR perturbation test at recovery completion.
+  Falsification: Post-recovery v_class trajectories statistically identical
+  regardless of intervention order (p > 0.05 on trajectory divergence test).
+
+F45 — FCC Type III Load Reduction vs. Correction:
+  Systems in FCC Type III configuration (η_corr invariant to τ1 corrections)
+  must show ≤ 5% f_esc improvement from τ2 SOFT CORRECT interventions but
+  ≥ 30% f_esc improvement from equivalent-duration n_eff reduction.
+  Measurement: N ≥ 20 per condition; matched-pair design controlling for baseline.
+  Falsification: SOFT CORRECT and n_eff reduction produce equivalent f_esc outcomes
+  in Type III systems (< 10% difference).
+
+F46 — Bandwidth Monitoring as Leading Indicator:
+  B proxy = τ1 resolution rate/(τ1+τ2) event rate must decline below 0.4
+  at least 5 governance windows before τ2 Storm onset detectable from f_esc alone.
+  Measurement: retrospective analysis of ≥ 30 Storm episodes with bandwidth time series.
+  Falsification: Bandwidth proxy and f_esc threshold provide equivalent early warning
+  lead time (< 2 window difference on average).
+
+F47 — M₂ Plasticity Freeze Leading Indicator:
+  θ_d stagnation (M₂ plasticity freeze) must precede operational collapse (ρ < ρ_floor)
+  by ≥ 3 governance cycles in resource-constrained deployments.
+  Measurement: N ≥ 20 resource-constrained vs. N ≥ 20 resource-stable deployments;
+  compare θ_d-stagnation lead time over ρ decline.
+  Falsification: θ_d stagnation shows no reliable lead over ρ decline (< 1 cycle average lead).
+
+F48 — Storm-Phase Inversion (Track A before Track B):
+  Track B-first recovery (diversity injection before Φ suppression) must produce
+  measurably longer Storm duration than Track A-first recovery with identical
+  initial conditions and equivalent total intervention resources.
+  Extension in Storm duration: ≥ O(n_M₃_conflicts) additional cycles.
+  Measurement: N ≥ 30 per ordering condition; matched-pair Storm induction protocol.
+  Falsification: Track B-first shows equivalent or shorter Storm duration than Track A-first.
+
+F49 — Thought Loop Solution Space Contraction (TLG P-28 cross-validation):
+  Agents entering CW/SCM must show measurably contracting v_class diversity
+  (fewer distinct classification transitions per unit input variety) BEFORE
+  f_esc elevation is detectable. Lead time ≥ 3 governance windows.
+  Measurement: N ≥ 30 CW entry episodes; v_class diversity and f_esc time series.
+  Falsification: v_class diversity and f_esc show equivalent or reversed temporal
+  ordering as CW precursors (v_class diversity lead < 1 window on average).
+
+F50 — Terrain-Based Adversarial Floor (TLG Theorem 24.6.1 → RBIT):
+  RBIT deployments with deeper governance attractor basins (higher ΔV — measurable
+  by SR response magnitude) must show lower adversarial f_RBIT manipulation rates
+  independently of monitoring intensity.
+  P(successful manipulation) must satisfy exp(-ΔV/T_eff) upper bound.
+  Monitoring-heavy deployments without terrain depth must show equivalent manipulation
+  rates to monitoring-light deployments with equivalent terrain depth.
+  Measurement: factorial design, N ≥ 50 per cell (2×2: high/low terrain depth × high/low monitoring).
+  Falsification: Monitoring intensity explains manipulation variance better than terrain depth
+  (partial R² of monitoring > partial R² of terrain depth, p < 0.05).
+
+F51 — GCS Governance Quality Correlation:
+  Governance Completeness Score GCS (0-1 scalar, Section §Governance Completeness Criterion)
+  must predict governance outcome quality (sustained v_class rate, low f₄, recovery speed)
+  with Spearman ρ > 0.6 across N ≥ 30 RBIT deployments.
+  Each GCC component must individually correlate with at least one RBIT outcome metric.
+  Falsification: GCS shows Spearman ρ < 0.3 with governance outcome quality —
+  completeness criterion does not predict governance performance.
+
+F52 — Guardian Invisibility vs. Clean System Paradox Discriminability:
+  The joint state (f₄ → 0, v_class > 0) must be reliably discriminable from
+  the joint state (f₄ → 0, v_class ≈ 0) at ≥ 5 windows lead time using
+  the proposed discriminant indicator (additional orthogonal metric to be specified per OP77).
+  Guardian Invisibility should show: f₄ → 0 WITH κ maintaining high (Phase 5 territory).
+  Clean System Paradox should show: f₄ → 0 WITH κ declining (correction events also disappearing).
+  Measurement: N ≥ 40 Phase 5 deployments; N ≥ 40 Clean System Paradox episodes.
+  Falsification: κ trajectory alone cannot discriminate the two states with AUC > 0.7.
+
+Summary of Falsification Criteria by Integration Series:
+  F1-F3:          core resolution gap predictions
+  F4-F7:          cross-theory predictions (dynamics × governance)
+  F8-F12:         NAT integration predictions (scaling × dynamics)
+  F13-F18:        AGP integration predictions (affective governance × resolution)
+  F19-F24:        EDT integration predictions (terrain × resolution)
+  F25-F30:        FCC integration predictions (ODE × resolution)
+  F31-F40:        FGS integration predictions (thermodynamic × adversarial × stochastic)
+  F41-F52:        TLG v2.5 integration predictions (plasticity × intervention sequence × completeness)
+```
 
 ---
 
@@ -5534,7 +6011,13 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 | Falsification F25-F30 | FCC integration predictions: attention τ_silent reduction, DDD stage order dependency, 4:1 loop monitoring requirement, Case A/C PRR disambiguation, damage ratchet v_class_max, logarithmic capacity bound | New v2.1 |
 | Open Problems 46-55 | Attention F calibration, ω leading indicator discrimination, DDD E2 noise-robustness, governance saturation monitoring portfolio, revival Case A perturbation amplitude, S accumulation isolation protocol, tier-specific S* distribution, information geometry blind angle, Storm exhaustion passivity trap, Φ̂ cross-domain normalization | New v2.1 |
 
+| Plasticity Hierarchy — RBIT Layer Update Rate Constraints | Three-layer plasticity dM₁≫dM₂≫dM₃; Cross-Layer Interference Theorem (simultaneous multi-layer plasticity cost); Storm-Phase Inversion P₃>P₂>P₁ → Track A before Track B formal derivation; Bypass Pattern diagnostic (dM₃+dM₁ without dM₂ = MDS precursor); Resource Scarcity → M₂ plasticity freeze leading indicator 6-18 months | New v2.2 |
+| Boundary Non-Commutativity — RBIT Intervention Sequence Law | Governance operations non-commutative (TLG Theorem 24.2.1); DDD ordering derived from boundary operator algebra (not empirically discovered); reversed DDD produces permanent terrain distortion; RBIT Intervention Sequence Law — Axis1(Boundary)→Axis2(Gain)→Axis3(Coupling) mandatory order | New v2.2 |
+| TLG v2.5 Entry in DFG Component Theories Table | Governance Ratio κ as v_class macro-proxy; κ-Monotone Maturation Theorem; ILMI = Middle Layer terrain function; Terrain-Layer Correspondence (M₃/M₂/M₁ ↔ Top/Middle/Bottom); Guardian Invisibility = terrain internalization; Agency Collapse = Terminal Desert State; Eyes-and-Feet Architecture → contamination policy; FCC Type III Contraindication; Bandwidth-ODE coupling; Terrain-Governance Duality Theorem 24.1.1; Plasticity Hierarchy; DFG Six-Theory Interface Specification; GCC₁-GCC₇; GCS scalar; SSR Cycle Governance; Fisher Information Architecture | Updated v2.2 |
+| Falsification F41-F52 | TLG v2.5 integration predictions: κ monotonicity, ILMI f₁/f₂ signature, Bypass Pattern escalation, DDD ordering superiority, FCC Type III load reduction, bandwidth leading indicator, M₂ plasticity freeze, Storm-Phase Inversion, Thought Loop solution-space contraction, terrain-based adversarial floor, GCS quality correlation, Guardian Invisibility discriminability | New v2.2 |
+| Open Problems 66-77 | κ calibration per deployment, ILMI failure mode detection, Bypass Pattern quantitative threshold, FCC Type III real-time detection, bandwidth floor RBIT derivation, Thought Loop onset via solution space, GCS operational proxy translation, residual terrain distortion after reversed DDD, M₂ freeze lead time across deployment types, Seven-Level Hierarchy coverage gaps, SSR Cycle vitality metric, Guardian Invisibility vs. Clean System Paradox discriminant | New v2.2 |
+
 ---
 
 *Timestamped: March 5, 2026*
-*DFG Framework · Resolution-Based Information Theory v2.1-FCCseries*
+*DFG Framework · Resolution-Based Information Theory v2.2-TLGseries*
