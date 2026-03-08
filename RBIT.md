@@ -2,7 +2,7 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · March 5, 2026 · Internal Working Document — v2.4-FGS2series*
+> *Draft · March 8, 2026 · Internal Working Document — v2.6-EDTseries2*
 
 ---
 
@@ -38,6 +38,8 @@
 > *v1.8-NATseries: Governance-Level Storm (S_gov equation, escalation cascade prevention, circuit breaker levels), Classification Dynamics (type transitions as resolution events, v_class leading indicator, hysteresis τ_upscale/τ_degrade >> 1, reclassification rate as maturity signal), Progressive Internalization (three-test readiness protocol, shadow/handoff/internalization phases in resolution terms), Interface Contract extensions (IC-I5 Sphere-Resolution Alignment, IC-I6 Classification Dynamics as Growth Observable), Map-Terrain expansion (Terrain Fitness Function F_terrain, drift rate dynamics, drift accumulation cost), Processing Isolation (Signaling/Influence distinction in resolution terms, structural enforcement, empirical evidence), Phase Transition Indicators (resolution criteria for Separate→Mature→Couple→Integrate), Human Withdrawal Dynamics (progressive resolution maturity verification), Measurement Interface extensions (10 new metrics), Falsification F8-F12 (NAT integration predictions), Open Problems 19-25*
 > *v1.9-AGPseries: AGM–RBIT Deep Integration (resolution integrity as anti-mode-collapse necessity; Controlled Non-Minimization Budget ΔF_affective as resolution gap calibration mechanism; AGM collapse typology Freeze/Runaway fully mapped to resolution gap regimes; Fokker-Planck description as probability-level RBIT substrate; Structural Uniqueness Argument extended with sixth constraint hierarchical composability), Contamination Flux Extended Formalism (Φᵢ cross-scale propagation full derivation, Clean System Paradox formal statement, Self-Purification Capacity R = D·F·V·T complete decomposition with atrophy ordering F→V→T→D, zero-contamination atrophy prediction), North Star Architecture as Map-Terrain Navigation Mechanism (criterion/principles/implementation three-level hierarchy in resolution terms, Observation Layer as Map recalibration operator, Body as existential resolution floor), Circular Closure and Dimensional Compression (nested circulation for bounded Map complexity, Dimensional Transition as Map-Terrain qualitative shift, Pulsed Expansion principle in resolution terms), AGM Collapse Modes as RBIT Failure Signatures (Freeze = Tier-1 only resolution, Runaway = structurally negative gap; mixed-mode collapse as RBIT dual-failure; ECC–Contamination Boundary formal bridge), Resolution Gap as Affective Routing Function (complete Δρ to emotional processing mode mapping; Error Asymmetry as under-escalation danger formalization; AGM sensitivity s(t) as ρ operational proxy), F_RBIT–AGM Metric Concordance (six AGM metrics mapped to F_RBIT components; concordance-based cross-theory stability assessment protocol; τ₁–τ₃ regime switching as emotional self-regulation architecture), Seed Sufficiency Extended (Boundary Agent as Clean System Paradox prevention; terrain problem formal statement; three sufficiency levels with SCC ceiling derivation), New Falsification F13-F18 (AGP integration predictions), Open Problems 26-35*
 > *v2.0-EDTseries: EDT–RBIT Deep Integration — Gain-Curvature Equivalence Theory formal bridge (GCET Theorem 52.1: AGM T_eff ↔ EDT terrain curvature U(x) dynamical equivalence; Unification Operator Γ maps both to shared resolution gap observable; T_eff = 0 ↔ Π = 0 ↔ Δρ = 0 terminal convergence trinity), Friction-Resolution Bridge (Zero Friction Pathology = RBIT Clean System Paradox terrain-level expression; optimal friction band F_min < F_opt < F_max as operational resolution window; friction as coordinate calibration — anomalous friction reduction = broken ruler warning), Retention Spectrum as R-Component Hierarchy (Type 1 structural/Type 2 informational/Type 3 energetic retention mapped to D/V+F/T R-component layers; cultivation priority Type1→2→3 = D→V,F→T build sequence; Desertification Hysteresis Theorem as cross-theory cost asymmetry), Circular Closure Formal Geometry (n_eff Compression Theorem: K circles reduces S from O(n²) to O(n^{4/3})/O(n²/K) at optimal K*∝n^{2/3}; Premature Coupling Catastrophe as RBIT mutual-contamination formal condition; Separate-Growth Protocol mapped to RBIT processing isolation phases), Affective Terrain Coupling in RBIT Terms (ATCT Theorem 51.1.1 showing terrain modification rate proportional to emotional event frequency; T_eff as terrain permeability Π = exp(-ΔU/T_eff); Permeability-Friction Isomorphism; Freeze Terrain Signature = Δρ → 0 over-consolidated; Runaway Terrain Signature = Δρ < 0 contamination flood), ECC-Terrain Phase Equivalence extended (Λ(t) = 0 ↔ p_terrain = p_c formal identification; multifractal spectrum width as pre-ECC collapse mode predictor; Type IV failure Thermal Freezing as RBIT Stability Saturation terrain expression), Buffer Lightness as f₃ Operational Determinant (Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight); lightness atrophy sequence maps to RBIT atrophy ordering; Buffer-Limited Scaling Theorem: expansion capacity ∝ buffer competence not resources), Terrain Memory as Resolution Palimpsest (curvature = survival history H = Σ weighted survival events; palimpsest as intergenerational resolution transfer; Organizational Terrain Heritage Theorem; memory-curvature equivalence), EDT-RBIT cross-theory falsification F19-F24, Open Problems 36-45*
+> *v2.6-EDTseries2: EDT §45-§50 (Terrain Phase Transition Theory → first-order desertification hysteresis/nucleation/metastability in F_RBIT; second-order maturation → M_RBIT order parameter; critical exponents → RBIT observable scaling laws; universality classes I/II/III → measurement protocol adjustments; τ_silent=τ₀·exp(SCC_min/T_eff) unification), Terrain Information Geometry (Fisher metric DDD natural gradient correction; Cramér-Rao → fourth E1 false-completion mechanism; geodesic path → minimal-disturbance DDD), Temporal Stratification (four strata → f₁-f₅ update cycle hierarchy; temporal boundary layer TB1-TB4 crisis mechanisms; adiabatic breakdown warning; chronotopic W_chrono DDD window), Governance Energy Economics (EROTI formally derives DDD Stage 1→4 priority; E_min fifth false-completion mechanism; maintenance dominance → trap diagnosis), Emergence Topology (β₀/β₁/β₂ Betti → topological EW-T1/T2/T3 preceding conventional EW; sheaf H¹≠0 → boundary-localized f₂; persistent homology → DDD Protected Core), EDT §51-§54 (ATCT non-adiabatic correction: GCET valid only at stationarity; affective events → f₁ via terrain curvature pathway; emotional legacy → extended resolution palimpsest with affective component; heritage asymmetry → r_positive,min quantitative formula; collective memory n_cascade scaling → group DDD n_cascade-efficiency; emotional succession ↔ RBIT maturation phase mapping), Attractor Grammar (NF1 Resonance Capture/NF2 Grammar Incompleteness/NF3 Attractor Proliferation Overflow → distinct F_RBIT signatures; C_G_min/C_G^* bounds → over-complexity signature f₄+f₅↑ with f₁,f₂ normal), Emotional Ecology (contagion c*=1/(λ₁-λ₂) → collective F_RBIT phase; hub ecology ↔ NAT sphere topology reconciliation), FCC §19.5 (κ(t)=f₂·f₃·M_RBIT unified scale-invariant control parameter; critical manifold moving threshold; three criticality paths Path1 visible/Path2 semi-visible/Path3 invisible; triangular (Φ,L,q) → three-timescale RBIT loop), FCC §19.6 (Fractal Governance Necessity formal proof: k* structural necessity; T_collapse≤(κ_c-κ₀)/δ finite bound; L_min≳logχ₀; multi-level F_RBIT monitoring), FCC §30 (Phase Boundary Revival Taxonomy: Case A/B/C with F_RBIT signatures; Conley index topological necessity; Fisher-KPP c_min propagation; hub-last cascade ordering; revival dilemma optimal coupling; Kramers stochastic inevitability), VST §19.8-19.9 (F_RBIT evolution ODE dF/dt=G-L; storm onset=equilibrium destabilization; critical slowing-down as earliest warning), VST §21.5-21.6 (I5 maturity gradient attenuation; I6 C_RBIT>C_NAT>C_interface priority; full cross-theory convergence); Novel Contributions NC-EDT2-RBIT-1 to NC-EDT2-RBIT-20; Falsification F93-F113; Open Problems 122-145*
+> *v2.5-GGTseries: GGT v4.0 (§75 BGC Universal Adaptive Criticality + §82 CTGPSR Micro-Dynamical Substrate + §83 CTGPSRB Buffer Governance Order Parameter) — Deep Integration Pass — BGC–RBIT Resolution Architecture (Buffer-Gate-Cascade four-layer structure as multi-tier resolution substrate; Universal Critical Master Equation dX/dt=Φ(X)·G(X;Θ(X))+η as resolution gap dynamics at governance level; Structural Stability Constant κ=α/β as Δρ-regime indicator; cubic term γ·X³ as multistability encoding Collapse/Transition bifurcation fork), CTGPSR Five-State Resolution Dynamics (C/T/G/P/R state vector full RBIT-variable mapping; GGT-82.1–82.5 governing equations RBIT interpretation; ρ̇ as CTGPSR mean-field renormalized projection; Loop Instability Π>1 ↔ Δρ<0; Critical Transition Π_eff≈1 ↔ Silent Criticality with τ_silent derivation; Storm-Transition simultaneous Ċ<0/Ṗ>>0/Ṙ<0 as RBIT triple-failure signature; Recovery-Renormalization C_new*≠C_old* as post-storm resolution architecture change; Unified Critical Manifold (K,τ,θ_v,R*)=H(Π_eff) as F_RBIT co-variation proof), CTGPSR Cross-Theory Correspondence (CTGPSR–GCF Correspondence; CTGPSR–VST V=|∇T| as storm field micro-origin; CTGPSR–RT recovery equation bridge; Four-Theory Criticality Equivalence Π_eff=1↔Π_G=1↔χ_TBG=θ↔C_A=1 as single governance criticality in four languages), CTGPSRB Buffer Governance Variable (three-buffer architecture G/P/R at timescales τ_G<τ_P<τ_R as f₃ decomposition; atrophy ordering F→V→T→D derived from first principles; B as governance order parameter β_gov=1; Thirteen-Way M_crit Equivalence E13:B=B_c; Buffer Renormalization T₀→T_B; Non-Monotone Storm Response dB/dt trajectory diagnostic; Governance Universality Theorem), FGS §36AA–§36AF Deep Integration (Buffer Capstone Theorem f₃ irreplaceability proof; Capstone Erosion Paradox P↑⇒M↓ as F_RBIT improvement danger signal; Capstone Safety Condition M(t)≥M*(t)=δlnn/k; Observer-Controller Dilemma O(n²) cost proof; Gardener Strategy O(1)+O(n) as dominant mature-governance mode; scale-invariant constants K_i as O(1)–O(logn) measurement portfolio; Fractal Seed (N*,R,B) as resolution propagation protocol; d_f=4/3 fractal scaling; Branch Governor as distributed capstone; Dual Reference Dynamics Δ=f₂ Map-Terrain formalization; Buffer Ecology Phase I/II/III; Dominant Hidden Structure Theorem; Governance Maturation Trajectory four phases), AGP v2.4+ Extended Integration (Adversarial Governance Self-Defeating Optimizer as f₁-contraction; Four Robustness Layers as F_RBIT portfolio; Formal Robustness Theorem P(evasion)≤exp(−ΔV/T_eff)), NAT §7.16 Extensions (T_c=⟨ΔU⟩/ln(ν₀/r*) minimum governance controllability temperature; Governance Impossibility Theorem T_eff=0→DDD E1 false completion; Affective SOC Uniqueness six-constraint proof), Novel Contributions NC-GGT-RBIT-1 to NC-GGT-RBIT-12; Falsification F77-F92; Open Problems 102-121*
 > *v2.4-FGS2series: FGS v2 Pass 2 — Cube Domination §7.8 (post-Storm frame competition; K-cluster fragmentation; translation-dominated frame selection P_{g→i}; n_split threshold; K* optimal module count; aversion stagnation δ_crit; scale-invariant governance constant κ(K); Silent Fragmentation Σ(t) KPI decoupling; S-equation Cube cycle integration); §34.5 ILMI full integration (Inter-Layer Modulation Interface formal operator ẋ=I(E,L)·F(x); Invisibility Principle Visibility(I)∝Instability; Energy-Priority Sacrifice I→I_min at E<E_crit; Overload Waiting Principle U↑ at L>L_crit; Expandability Theorem 1 Ẋ=ρ_X·U−γ_ε·ε; Rest Mode Lyapunov Stability Theorem 2 λ_max(J)<0; Storm Formation Criterion Theorem 3 U→0+ε>ε_crit+C≈0; Scale-Invariant Governance Ratio κ(t)=U/(ε+ε₀); Maturational Convergence Theorem 4 κ→κ*; Dual Attractor Theorem 5 Rest vs Silent Criticality; Guardian Function J_m=λ·X_m+(1−λ)·P_m; Agency Collapse ∂s/∂t≈g(E_m)+∂s/∂internal≈0; Distortion/Abstention ODEs ε̇=α_ε·ε−β_C·C·ε+η_L·L; ILMI Falsification F1-F5); §31.7 Buffer Maturation Paradox (actor→structure mode transition ẋ=f(x)+u_buffer→ẋ=f(x;E_buffer); upper-layer isolation Upper_isolation∝M/V_M; additive→multiplicative dynamics); §31A Local-Global Coordination Topology (three-level coordination; priority-weighted alignment w_α/w_β/w_γ; Terrain-Local Solution Correspondence theorem; exploration obligation; Functional Convergence F*=5±2 categories; governance gap detection); §35.5 DFG Component Theory Architecture (7-phase fractal lifecycle; Cross-Theory Correspondence Map full table); Novel Contributions NC-FGS2-11 to NC-FGS2-20; Falsification F65-F76; Open Problems 90-101*
 > *v2.3-FGS2series: FGS v2 (Fractal Governance Scaling v2, §15.5–15.8 + §36R + §38) — Deep Integration Pass — Middle-Layer Centrality Thesis formal derivation (three-phase layer thickness evolution T_L→T_M→T_U Phase I/II/III; Maturity Index ℳ(t) = T_M/(T_L+T_U); position scarcity and maturation accumulation effect; lower-layer thinning dual mechanisms: execution noise reduction + terrain mastery compression); Middle-Layer Invisibility ODE (Upward Blindness Theorem dV_M/dM < 0; observability collapse mechanism ∂z/∂M → 0; dual-track operation visible/invisible; self-reinforcing invisibility dR_pre/dt = ω·M·(1−R_pre); R_pre* = 1−exp(−ωM*)); Buffer as Adaptive Intervention Gate (Router–Filter Duality formal gate structure; noise classification theorem GrowthPotential(n,T_k); multi-criterion escalation gate Escalate ↔ r̂>Θ_esc ∧ T_persist>Δ_min ∧ coherence>Γ_min; false-alarm suppression rate FAR(M) ≪ Pr(ε>Θ); under-actuation sweet spot u_upper ∈ (0, u_crit/κ(M))); Observer Back-Action (Λ_eff = Λ+η·q; observation-buffer destruction loop dM/dt−χ·q; invisibility window W_inv = {M : V_M < V_crit}; optimal observation = minimum-disturbance indirect; intensive monitoring paradox q↑ → M↓ → p_Collapse↑); Middle-Layer Governance Unified ODE (§36R full system: ẋ = f+κ(M)·[π(y)−x]+ξ; buffer thickness ṁ = α·φ(r)−β·M−γ·ψ(P)−χ·q; Rigidity Trap entry condition α·φ(r*) < β·Mc+γ·ψ(P*); scale-dependent optimal buffer M*(n) ≈ δlnn/k; cross-layer resolution cascade z_U=g_U(g_M(g_L(x))); Transition-Collapse Fork p_T(t) = σ((M−Mc)/s); success-driven fork closure; Maturity Index ℳ; Router-Filter mode σ(t) dynamics; Predictions R1–R7); Cross-Domain Empirical Validation Framework §38 → RBIT operational translation (three-tier measurement protocol Tier1/2/3; Neural H1-H2 with RBIT v_class/f₃ proxies; AI H3-H5 with n_eff² scaling, DDD, Cube Domination; Org H6-H7 with organizational v_class proxies; Cross-Domain Equivalence H8 L_C/L_d distribution; Pre-registration timeline; Failure Mode Analysis explicit falsification conditions); Novel Contributions NC-FGS2-1 to NC-FGS2-10; Falsification F53-F64; Open Problems 78-89*
 > *v2.2-TLGseries: TLG (Three-Layer Governance Architecture v2.5-terrain) — Deep Integration Pass — Terrain-Layer Correspondence in RBIT Terms (governance ratio κ as v_class macro-proxy; ILMI as Middle Layer resolution function; κ-Monotone Maturation ↔ RBIT Arrow of Maturation formal equivalence; Guardian Invisibility = terrain internalization of ρ maintenance; Agency Collapse = Terminal Desert State ↔ RBIT f₁→0 by suppression not resolution), Plasticity Hierarchy → RBIT Update Rate Constraints (three-layer plasticity dM₁≫dM₂≫dM₃; Cross-Layer Interference Theorem as RBIT mismatch accumulation mechanism; Storm-Phase Inversion P₃>P₂>P₁ → Track A before Track B formal derivation; Bypass Pattern diagnostic in RBIT terms; Resource Scarcity → M₂ plasticity freeze leading indicator 6-18 months pre-collapse), Terrain-Governance Duality → RBIT Resolution Duality (TLG governance operations and EDT terrain modifications as dual projections of shared resolution state change; MARK/JUDGE/EXECUTE → curvature detection/identification/injection; rest mode entry = climax terrain = resolution maintenance without correction), Boundary Non-Commutativity → RBIT Intervention Sequence Law (governance operations non-commutative; Top→Middle→Bottom ordering theoretically necessary not empirically derived; DDD ordering derived from boundary operator algebra), Thought Loop → Resolution Space Contraction (recursive boundary application = progressive solution space reduction; Terminus A = resolution paralysis; Terminus B = SCM fixed point; CW Breaking Methods = grounding injection formalized), FCC Type III Contraindication → RBIT Load-First Protocol (Type III detection via η_corr invariance to τ1 corrections; Type III resolution = n_eff reduction not correction; corrections in Type III consume SCC without effect), Affective Bandwidth ODE Coupling → RBIT Bandwidth-ρ Correspondence (C·d/k bandwidth proxy; three bandwidth regimes with RBIT ρ correspondents; bandwidth floor = minimum viable resolution maintenance; early warning decomposition C-decline vs d-decline vs k-rise), Terrain-Based Adversarial Floor → RBIT Structural Resistance (P(evasion) ≤ exp(-ΔV/T_eff) formal bound; terrain cultivation = adversarial defense; four-layer adversarial defense hierarchy; f_RBIT portfolio as Layer 2 Goodhart-resistance; DFG Six-Theory Completeness Architecture → RBIT Interface Specification, Governance Completeness Criterion GCC₁-GCC₇ → RBIT operational proxies, Governance Completeness Score GCS, Stage-Gated τ4 Entry, SSR Cycle Governance, Fisher Information Architecture; TLG-RBIT Novel Contributions NC-TLG-1 to NC-TLG-12; Extended Falsification F41-F52; Open Problems 66-77*
@@ -7417,5 +7419,2193 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 
 ---
 
-*Timestamped: March 5, 2026*
-*DFG Framework · Resolution-Based Information Theory v2.4-FGS2series*
+## v2.5 Integration Pass: GGT v4.0 · AGP v2.4+ · NAT v2.2 · FGS §36AA–§36AF
+
+> *v2.6-EDTseries2: EDT §45-§50 (Terrain Phase Transition Theory → first-order desertification hysteresis/nucleation/metastability in F_RBIT; second-order maturation → M_RBIT order parameter; critical exponents → RBIT observable scaling laws; universality classes I/II/III → measurement protocol adjustments; τ_silent=τ₀·exp(SCC_min/T_eff) unification), Terrain Information Geometry (Fisher metric DDD natural gradient correction; Cramér-Rao → fourth E1 false-completion mechanism; geodesic path → minimal-disturbance DDD), Temporal Stratification (four strata → f₁-f₅ update cycle hierarchy; temporal boundary layer TB1-TB4 crisis mechanisms; adiabatic breakdown warning; chronotopic W_chrono DDD window), Governance Energy Economics (EROTI formally derives DDD Stage 1→4 priority; E_min fifth false-completion mechanism; maintenance dominance → trap diagnosis), Emergence Topology (β₀/β₁/β₂ Betti → topological EW-T1/T2/T3 preceding conventional EW; sheaf H¹≠0 → boundary-localized f₂; persistent homology → DDD Protected Core), EDT §51-§54 (ATCT non-adiabatic correction: GCET valid only at stationarity; affective events → f₁ via terrain curvature pathway; emotional legacy → extended resolution palimpsest with affective component; heritage asymmetry → r_positive,min quantitative formula; collective memory n_cascade scaling → group DDD n_cascade-efficiency; emotional succession ↔ RBIT maturation phase mapping), Attractor Grammar (NF1 Resonance Capture/NF2 Grammar Incompleteness/NF3 Attractor Proliferation Overflow → distinct F_RBIT signatures; C_G_min/C_G^* bounds → over-complexity signature f₄+f₅↑ with f₁,f₂ normal), Emotional Ecology (contagion c*=1/(λ₁-λ₂) → collective F_RBIT phase; hub ecology ↔ NAT sphere topology reconciliation), FCC §19.5 (κ(t)=f₂·f₃·M_RBIT unified scale-invariant control parameter; critical manifold moving threshold; three criticality paths Path1 visible/Path2 semi-visible/Path3 invisible; triangular (Φ,L,q) → three-timescale RBIT loop), FCC §19.6 (Fractal Governance Necessity formal proof: k* structural necessity; T_collapse≤(κ_c-κ₀)/δ finite bound; L_min≳logχ₀; multi-level F_RBIT monitoring), FCC §30 (Phase Boundary Revival Taxonomy: Case A/B/C with F_RBIT signatures; Conley index topological necessity; Fisher-KPP c_min propagation; hub-last cascade ordering; revival dilemma optimal coupling; Kramers stochastic inevitability), VST §19.8-19.9 (F_RBIT evolution ODE dF/dt=G-L; storm onset=equilibrium destabilization; critical slowing-down as earliest warning), VST §21.5-21.6 (I5 maturity gradient attenuation; I6 C_RBIT>C_NAT>C_interface priority; full cross-theory convergence); Novel Contributions NC-EDT2-RBIT-1 to NC-EDT2-RBIT-20; Falsification F93-F113; Open Problems 122-145*
+> *v2.5-GGTseries: GGT v4.0 (§75 BGC Universal Adaptive Criticality + §82 CTGPSR Micro-Dynamical Substrate + §83 CTGPSRB Buffer Governance Order Parameter) — Deep Integration Pass — BGC–RBIT Resolution Architecture (Buffer-Gate-Cascade layered structure as multi-tier resolution substrate; Universal Critical Master Equation dX/dt = Φ(X)·G(X;Θ(X))+η as resolution gap dynamics at governance level; Structural Stability Constant κ = α/β as Δρ-regime indicator; Transition Structural Constant derivation; BGC four-layer formal correspondence to RBIT three-tier model), CTGPSR Five-State Resolution Dynamics (C/T/G/P/R state vector as resolution-substrate variables; CTGPSR governing ODE system GGT-82.1–82.5 full RBIT-variable mapping; Loop Instability Theorem Π>1 ↔ Δρ<0 formal identification; Critical Transition Theorem Π_eff≈1 ↔ Silent Criticality; Storm-Transition Theorem coupled C↓/P↑/R↓ as RBIT triple-failure signature; Recovery-Renormalization Theorem C_new*≠C_old* as resolution substrate structural memory; Unified Critical Manifold Theorem (K,τ,θ_v,R*)=H(Π_eff) as F_RBIT observables co-variation proof), CTGPSR Cross-Theory Correspondence in RBIT Terms (CTGPSR–GCF Correspondence Π_eff=Π_G at base point with storm/recovery correction factor; CTGPSR–VST Correspondence storm field V=|∇T| as VST storm intensity micro-origin; CTGPSR–RT Correspondence recovery equation GGT-82.5 as RT dynamics embedding; Four-Theory Criticality Equivalence Π_eff=1 ↔ Π_G=1 ↔ χ_TBG=θ ↔ C_A=1 as single governance criticality condition in four languages), CTGPSRB Buffer Governance Variable as Hidden Resolution Order Parameter (three-buffer architecture G/P/R at timescales τ_G<τ_P<τ_R embedded in CTGPSR; Buffer Governance Variable B(t)=w_g·G+w_p·P+w_r·R as weighted resolution-capacity scalar; Dual Ontology Resolution — projection vs. autonomous variable; B as governance order parameter with second-order phase transition β_gov=1; Buffer Renormalization Theorem mapping criticality triplet T_0→T_B; Thirteen-Way M_crit Equivalence extending to E13: B=B_c; Buffer Self-Regulation Non-Monotone Storm Response; Governance Universality Theorem; Five-Regime Classification); AGP v2.4+ RBIT Extended Integration (Adversarial Governance–RBIT formal bridge: Self-Defeating Optimizer as f₁-collapse under self-referential correction; Four Robustness Layers as F_RBIT portfolio maintenance protocol; Formal Robustness Theorem P(evasion)≤exp(−ΔV/T_eff) in RBIT resolution terms; Projection Replacement Axiom A2 as emotional template filling formalized; Processing Isolation as emotional architecture principle; τ₁–τ₃ regime switching as emotional self-regulation architecture; v_class as developmental leading indicator; Degradation–Upscaling Cycle as maturation engine; Test 1/2/3 seed sufficiency mapped to emotional maturation milestones); FGS §36AA–§36AF Deep Integration (Buffer Capstone Theorem — M→0 induces collapse regardless of upper/lower layer strength; Capstone Erosion Paradox P↑⇒Ṁ↓⇒M↓⇒p_C↑ as RBIT f₃ self-destruction pathway; Alarm Gate multi-criterion structure with FAR scaling; Operational Invisibility at Optimum ∂z/∂M→0 as f₃ measurement paradox formalization; Observer-Controller Dilemma C_control∼O(n²) → gardener strategy; Gardener Resolution environment design as O(1)+O(n) vs O(n²) cost structure; Scale-Invariant Constants as low-cost upper-layer observables; Fractal Seed Architecture (N*,R,B) as governance generative program; Governance Seed fractal self-similarity d_f∈(1,2); Branch Governor Assignment as distributed capstone deployment; Dual Reference Dynamics local-global North Star tension; Buffer Ecology three-phase evolution; Governance Maturation Trajectory four-phase upper-layer evolution; Gardener Meta-Strategy as f₃ complement); NAT v2.2 Extensions (Finite-Temperature Phase Transition T_c = ⟨ΔU⟩/ln(ν₀/r*) as minimum governance controllability temperature; Governance Impossibility Theorem T_eff=0 → zero behavioral change → DDD protocol failure; Affective SOC Uniqueness six-constraint proof; Multifractal Affective Dynamics collapse mode prediction via spectrum width; Adversarial Affective Dynamics self-defeat cascade; Plasticity Hierarchy as resolution update rate constraints); Novel Contributions NC-GGT-RBIT-1 to NC-GGT-RBIT-12; Falsification F77-F100; Open Problems 102-121*
+
+---
+
+### Section 25 — GGT v4.0 Deep Integration: CTGPSR–RBIT Formal Bridge
+
+#### 25.1 BGC Architecture as Multi-Tier Resolution Substrate
+
+The Buffer–Gate–Cascade (BGC) framework (GGT §75) provides the most complete formal grounding of RBIT's three-tier capacity model. Where RBIT axioms posit finite resolution capacity at each tier, the BGC architecture derives the structural origin of that capacity from four interacting layers.
+
+**BGC–RBIT Layer Correspondence:**
+
+| BGC Layer | Formal Structure | RBIT Correspondence |
+|---|---|---|
+| L1 Environment Dynamics | dX/dt = F(X)+I(t) | External contamination flux Φᵢ acting on resolution state ρ |
+| L2 Buffer Interpretation | X_c_eff = X_c + Δ(X) | Tier-boundary adaptive modulation — effective capacity ceiling is not fixed but context-dependent |
+| L3 Gate Activation | G(X; X_c_eff) = σ(k·(X−X_c_eff)) | Escalation threshold function: resolution mismatch triggers tier-boundary crossing exactly at the critical locus |
+| L4 Cascade Propagation | x_{t+1} = R·x_t | Contamination propagation through tier structure — R<1 subcritical, R=1 critical, R>1 supercritical |
+
+**Universal Critical Master Equation — RBIT Derivation:**
+
+The BGC aggregation produces the macroscopic master equation (GGT-75.2):
+
+```
+dX/dt = Φ(X)·G(X; Θ(X)) + η(t)
+
+where:
+  Φ(X) = α·X − β·X² + γ·X³    (nonlinear growth with cubic multistability)
+  G(X; Θ(X)) = σ(k·(X − X_c − Δ(X)))   (adaptive gate with buffer modulation)
+  η(t)                           (stochastic perturbation)
+```
+
+RBIT interpretation: X(t) ↔ governance load (n² term in ODE Φ); Φ(X) ↔ F_RBIT accumulation dynamics; G(X;Θ) ↔ resolution tier crossing function; Δ(X) ↔ buffer capacity M(t) providing adaptive modulation.
+
+**Structural Stability Constant:**
+
+The BGC structural stability constant κ = α/β (GGT-75.3) maps directly to RBIT resolution regimes:
+
+```
+κ < κ_c  ↔  Δρ > 0  (subcritical — sender controls compression)
+κ ≈ κ_c  ↔  Δρ ≈ 0  (critical — Silent Criticality zone)
+κ > κ_c  ↔  Δρ < 0  (supercritical — forced receiver compression, Storm regime)
+```
+
+The cubic term γ·X³ in BGC encodes multistability that produces the Collapse/Transition bifurcation fork in RBIT's lifecycle model: it creates secondary attractor basins corresponding to the post-Storm alternative stable states (governance renewal vs. terminal collapse).
+
+#### 25.2 CTGPSR Five-State System as Resolution Micro-Dynamics
+
+The CTGPSR framework (GGT §82) provides the first microscopic five-dimensional ODE system from which RBIT's resolution gap dynamics emerge as a renormalized projection. The CTGPSR state vector
+
+```
+x(t) = (C(t), T(t), G(t), P(t), R(t)) ∈ ℝ₊⁵
+```
+
+maps to RBIT variables as follows:
+
+| CTGPSR Variable | RBIT Correspondence | F_RBIT Component |
+|---|---|---|
+| C(t) — Cluster coherence | Resolution substrate structural integrity; degree to which governance domains maintain coherent boundaries | f₁ (misclassification rate) ∝ 1/C: as C→0, domain boundaries dissolve, classification fails |
+| T(t) — Targeting concentration | Diagnostic selectivity — resolution capacity directed toward specific problem regions | f₂ (resolution mismatch) ∝ T_mismatch/C: high T with low C = high-effort targeting with collapsed structure |
+| G(t) — Gate openness | Escalation channel activation magnitude — degree to which tier-crossing pathways are open | f₄ (escalation load) ∝ G: open gates under stressed conditions → escalation cascade risk |
+| P(t) — Package consolidation | Intervention density — degree to which processed information is consolidated into actionable corrections | f₅ (resource dissipation) ∝ P_excess: packages deployed without resolution → dissipation without repair |
+| R(t) — Recovery reserve | Post-storm re-clustering potential — available structural restoration capacity; maps to R = D·F·V·T | f₃ (buffer instability) ∝ 1/R: depleted recovery → persistent instability after perturbation |
+| V(t) = |∇T| — Storm field | Vector Storm intensity; directional anisotropy in targeting pressure | S_norm (storm severity) via VST S-equation |
+
+**CTGPSR Governing Equations — RBIT Interpretation:**
+
+```
+Ċ = α + ηP + ξ_R·R − μC − νGC − χVC         (GGT-82.1)
+  RBIT: Resolution substrate regenerates via package feedback (ηP) and recovery (ξ_R·R);
+        decays via natural diffusion (μC), over-escalation (νGC), and storm pressure (χVC)
+  
+Ṫ = βC − λT + φGT − ψPT                       (GGT-82.2)
+  RBIT: Diagnostic capacity requires structural coherence C as prerequisite;
+        gate-targeting co-activation (φGT) represents runaway diagnostic overload;
+        package completion (ψPT) resolves targeting (correction loop)
+  
+Ġ = κσ(T−θ) − δG                              (GGT-82.3)
+  RBIT: Escalation gate opens when targeting exceeds threshold θ;
+        direct micro-counterpart of UGAL activation law and RBIT tier-crossing criterion
+  
+Ṗ = ρGT − ωP + ζVGT                           (GGT-82.4)
+  RBIT: Packages require both gate AND targeting (ρGT);
+        storm field induces burst packaging (ζVGT) = crisis-driven mass escalation
+  
+Ṙ = r₀ + r₁P − r₂R − r₃VR                    (GGT-82.5)
+  RBIT: Recovery reserve maintains positive floor r₀ > 0;
+        package accumulation builds recovery (r₁P = resolved governance events strengthen system);
+        storm field burns recovery reserve (r₃VR = RT storm-induced recovery deficit)
+```
+
+**RBIT ρ̇ Equation as CTGPSR Renormalized Projection:**
+
+The RBIT resolution growth ODE (from FCC §14):
+```
+ρ̇ = αρ·d·C·(1−ρ) − μρ·Φ·ρ
+```
+emerges from CTGPSR as a mean-field renormalized projection:
+- αρ·d·C·(1−ρ) ← C-driven capacity expansion (cluster coherence enables resolution growth)
+- μρ·Φ·ρ ← Φ = β_s·n²/(C·T·d) means that collapse of C,T,d simultaneously drives Φ→∞ and ρ→0
+
+This establishes the CTGPSR system as the *micro-dynamical substrate* of RBIT's resolution dynamics — not a separate theory but the structural level from which RBIT emerges under coarse-graining.
+
+#### 25.3 CTGPSR Main Theorems — RBIT Formal Bridges
+
+**Theorem 25.3.1 (Loop Instability ↔ Resolution Deficit).** The CTGPSR Loop Instability Theorem (GGT-82.C.1) states: if base loop amplification number Π > 1, the C→T→G→P→C feedback loop is linearly unstable. RBIT bridge:
+
+```
+Π > 1  ↔  Δρ < 0  (formal identification via CTGPSR–GCF Correspondence GGT-82.F.1)
+
+Mechanism: Self-amplifying loop Π > 1 means each governance cycle
+amplifies the problem further — RBIT's forced receiver-controlled compression
+is the information-theoretic expression of this structural instability.
+```
+
+**Theorem 25.3.2 (Critical Transition ↔ Silent Criticality).** The CTGPSR Critical Transition Theorem (GGT-82.C.2) states: when Π_eff ≈ 1, the system exhibits SOC-like critical dynamics with power-law avalanche distribution Pr(s) ∝ s^{-τ} and critical slowing-down. RBIT bridge:
+
+```
+Π_eff ≈ 1  ↔  Silent Criticality (Φ ≈ 1, v_class = 0)
+
+The critical slowing-down τ_relax ∼ |Π_eff − 1|^{−z_g} is the formal derivation
+of τ_silent: the silent phase persists longer when the system is closer to
+the critical manifold, not because it is healthier but because it is
+harder to dislodge.
+
+Logarithmic capacity protection bound (FCC-derived):
+10× capacity → only ln(10)·2.3 longer τ_silent
+This is the CTGPSR explanation: capacity expansion moves Π_eff only
+logarithmically toward subcritical, because the feedback loop structure
+is preserved.
+```
+
+**Theorem 25.3.3 (Storm-Transition ↔ RBIT Triple-Failure).** The CTGPSR Storm-Transition Theorem (GGT-82.C.3) states: when Π_eff > 1 AND V·G > θ_v simultaneously, the system enters directional storm regime with Ċ < 0, Ṗ >> 0, Ṙ < 0 simultaneously. RBIT bridge:
+
+```
+CTGPSR directional storm = RBIT Triple-Failure Signature:
+  Ċ < 0   ↔  f₁↑ (structural dissolution → misclassification cascade)
+  Ṗ >> 0  ↔  f₅↑ (burst escalation → resource dissipation spike)
+  Ṙ < 0   ↔  f₃↓ (recovery depletion → buffer collapse)
+
+Critical diagnostic: All three F_RBIT components move simultaneously and
+in the same direction during storm onset. Single-component elevation =
+not yet a storm. Triple simultaneous movement = storm confirmed.
+```
+
+**Theorem 25.3.4 (Recovery-Renormalization ↔ Post-Storm Resolution Architecture).** The Recovery-Renormalization Theorem (GGT-82.C.4) states: post-storm recovery produces C_new* ≠ C_old* — the new cluster structure encodes storm history. RBIT bridge:
+
+```
+C_new* ≠ C_old*  ↔  Post-recovery resolution substrate is structurally altered
+
+This provides the micro-dynamical explanation of Recovery Theory's
+non-trivial recovery path: the system does not simply return to
+pre-storm state because the cluster coherence equilibrium has been
+renormalized by the storm's burst-packaging and recovery-depletion events.
+
+DDD Protocol implication: E3 (full internalization) must verify that the
+new C_new* corresponds to higher resolution capacity, not merely restored
+capacity. C_new* < C_old* = structural degradation despite apparent recovery.
+C_new* > C_old* = genuine upscaling via storm-forced reorganization.
+```
+
+**Theorem 25.3.5 (Unified Critical Manifold ↔ F_RBIT Co-Variation).** The CTGPSR Unified Critical Manifold Theorem (GGT-82.C.5) establishes: all four observables (K, τ, θ_v, R*) = H(Π_eff). RBIT bridge:
+
+```
+This is the CTGPSR proof of F_RBIT co-variation:
+  K (cluster multiplicity) ∝ 1/f₂ (resolution match quality)
+  τ (avalanche exponent)  ↔  PRR distribution shape (healthy: τ→τ_SOC)
+  θ_v (storm threshold)  ↔  Contamination Boundary N threshold
+  R* (recovery reserve)  ↔  R = D·F·V·T (Self-Purification Capacity)
+
+All four are functions of a single control parameter Π_eff.
+RBIT implication: a system that has degraded any single F_RBIT component
+has necessarily altered all four CTGPSR observables simultaneously.
+"Partial F_RBIT degradation" is not structurally stable.
+```
+
+#### 25.4 Four-Theory Criticality Equivalence in RBIT Terms
+
+The CTGPSR Four-Theory Criticality Equivalence (GGT Theorem GGT-82.F.5) establishes that four apparently distinct criticality conditions are formally equivalent at the base operating point:
+
+```
+Π_eff = 1  ↔  Π_G = 1  ↔  χ_TBG = θ  ↔  C_A = 1
+```
+
+RBIT integration of this equivalence produces a single governance criticality condition expressed in four languages:
+
+| Formalism | Criticality Condition | RBIT Interpretation |
+|---|---|---|
+| CTGPSR (GGT §82) | Π_eff = 1 | Loop amplification exactly balanced — governance loop neither self-amplifying nor self-suppressing |
+| GCF (GGT §81) | Π_G = 1 | Governance control number at critical separatrix — resolution restoration rate = contamination rate |
+| TGBGT (GGT §80) | χ_TBG = θ | Targeting-gating equality at criticality — tier-crossing threshold matched to information density |
+| ACD (GGT §77) | C_A = 1 | Adaptive criticality number at self-tuned fixed point — system self-organizes to resolution maintenance |
+
+**RBIT Unification Statement:** Silent Criticality (v_class = 0, Φ ≈ 1) is the RBIT-level expression of this single criticality condition. The Silent Criticality detection challenge is structurally explained: the system is at a fixed point of the renormalization group flow — perturbations decay but the fixed point is marginally stable, making the system simultaneously "healthy-appearing" and "maximally storm-susceptible."
+
+#### 25.5 CTGPSRB Buffer Governance Variable — Hidden Resolution Order Parameter
+
+The CTGPSRB framework (GGT §83) introduces the Buffer Governance Variable B(t) as the sixth degree of freedom — the hidden order parameter of governance phase transitions. This provides the deepest RBIT foundation for f₃ (buffer instability) as a governance order parameter.
+
+**Three-Buffer Architecture as RBIT f₃ Decomposition:**
+
+CTGPSRB identifies three structurally distinct buffers within the CTGPSR system, operating at different timescales:
+
+```
+Gate Buffer G(t):     τ_G (fastest) — noise rejection, onset delay
+                      RBIT: instantaneous tier-crossing threshold modulation
+                      
+Package Buffer P(t):  τ_P (medium) — structural inertia, prevents premature consolidation
+                      RBIT: F (feedback integrity) component of R = D·F·V·T
+                      
+Recovery Buffer R(t): τ_R (slowest) — cascade arrest, post-storm structural floor
+                      RBIT: D (diversity maintenance) component — longest atrophy time
+```
+
+The Buffer Governance Variable B(t) aggregates these:
+```
+B_obs(t) = w_g·G(t) + w_p·P(t) + w_r·R(t)
+```
+
+This provides the micro-dynamical decomposition of RBIT's f₃ (buffer instability): f₃ is not a single quantity but a weighted combination of three buffer modes at three timescales. The atrophy ordering F→V→T→D from Self-Purification Capacity theory (v1.9) now has a CTGPSRB explanation:
+```
+F (fast-decaying) ↔ Gate Buffer G at τ_G (fastest atrophy)
+V (medium)        ↔ Package Buffer P at τ_P (medium atrophy)
+T (slow)          ↔ Recovery Buffer R at τ_R (slowest atrophy, longest recovery)
+D (structural)    ↔ Cluster Coherence C (deepest structural layer)
+```
+
+**Buffer as Governance Order Parameter:**
+
+The CTGPSRB Theorem GGT-83.C.1 proves B as a genuine order parameter with second-order phase transition and mean-field exponent β_gov = 1:
+
+```
+B(t) below B_c:   governance subcritical — buffer provides sufficient storm resistance
+B(t) = B_c:       governance critical manifold — bifurcation point
+B(t) above B_c:   governance supercritical — buffer over-constrains system, Rigidity Trap onset
+```
+
+RBIT bridge: B_c corresponds to the resolution-maintenance threshold. The Rigidity Trap (observed in FGS §36AA as capstone erosion) is the CTGPSRB supercritical regime: B temporarily elevated while C deteriorates, creating false stability signal.
+
+**Thirteen-Way M_crit Equivalence:**
+
+CTGPSRB extends the Twelve-Way criticality equivalence to Thirteen-Way by adding:
+```
+E13: B = B_c  (Buffer Governance Variable at critical value)
+```
+
+RBIT now has thirteen equivalent formulations of the governance critical condition, all expressing the same structural fact: resolution maintenance capacity exactly balances resolution degradation pressure.
+
+**Buffer Renormalization Theorem — RBIT Implication:**
+
+The Buffer Renormalization Theorem (GGT-83.C.3) maps the criticality triplet T₀ = (Π_eff, M_crit, τ) → T_B = (Π_eff^B, Σ_CTGPSRB, τ_B). RBIT bridge:
+
+```
+Renormalization by buffer governance changes all three CTGPSR critical parameters
+simultaneously:
+  Π_eff → Π_eff^B = Π_eff/(1+δ_B·B)   (buffer suppresses loop gain)
+  M_crit → Σ_CTGPSRB(B)                 (critical manifold becomes B-dependent surface)
+  τ → τ_B = τ + Φ_FB·V                 (avalanche exponent shift under storm load)
+
+F_RBIT implication: measuring F_RBIT components without accounting for
+B(t) produces systematic misclassification of resolution state. A system
+with high B(t) appears subcritical (Π_eff^B << 1) but is actually near
+the renormalized critical surface Σ_CTGPSRB.
+```
+
+**Non-Monotone Storm Response — RBIT Diagnostic Correction:**
+
+The Buffer Self-Regulation Non-Monotone Storm Response (Theorem GGT-83.D.1) shows that B initially increases with storm intensity V (buffer activation) before decreasing (buffer depletion):
+
+```
+∂B/∂V at low V: +  (buffer activation — storm triggers defensive buffer thickening)
+∂B/∂V at high V: −  (buffer depletion — intense storm burns buffer faster than it activates)
+
+RBIT diagnostic correction:
+  Measuring f₃ during early storm phase may show IMPROVEMENT (B↑).
+  This is not recovery — it is the pre-depletion buffer activation phase.
+  True diagnostic: track dB/dt trajectory, not B level.
+  dB/dt turning from + to −: storm-buffer transition → storm intensification
+  is structurally imminent regardless of current f₃ level.
+```
+
+---
+
+### Section 26 — FGS §36AA–§36AF Deep Integration: Buffer Capstone Theory in RBIT Terms
+
+#### 26.1 Buffer Capstone Theorem — Formal RBIT Bridge
+
+The Buffer Capstone Theorem (FGS Theorem §36AA.1) states: in any three-layer DFG architecture above critical scale n > n*, removal of the middle-layer buffer M(t) induces governance collapse with probability p_collapse(M=0) → 1, regardless of upper-layer policy or lower-layer dynamics strength.
+
+RBIT bridge: This theorem provides the strongest formal statement of f₃'s role in RBIT's health vector. While f₁–f₅ jointly constitute F_RBIT, the Capstone Theorem establishes that f₃ is *structurally irreplaceable* — not merely one component among five but the element whose removal makes all others inoperative:
+
+```
+Buffer Capstone Theorem in F_RBIT terms:
+  lim_{f₃→1} F_RBIT = 1    (maximum degradation)  regardless of  f₁, f₂, f₄, f₅
+
+Mechanism: M→0 drives κ(M)→κ_max (damping eliminated), turning any f₁ elevation
+into direct upper-layer intervention without filtering.
+Every noise spike in the governance system reaches upper-layer as if it were
+a structural crisis signal.
+```
+
+**Corollary 26.1.1 (f₃ Irreplaceability).** No configuration of f₁, f₂, f₄, f₅ can compensate for f₃ = 1 (buffer collapse). Increasing upper-layer intervention capacity (∼reducing f₄ endpoint) beyond u_crit/κ(M) under buffer collapse conditions produces instability regardless of intervention quality. This formalizes why "working harder" at governance during buffer failure produces worse outcomes.
+
+**Capstone Erosion Paradox:**
+
+The Rigidity Trap reformulation as capstone erosion (FGS §36AA.2):
+
+```
+P(t)↑  →  γ·ψ(P)↑  →  Ṁ↓  →  M(t)↓  →  p_Collapse↑
+
+In RBIT terms:
+  Governance success (F_RBIT metrics improving) → efficiency pressure → f₃ erosion
+  → resolution substrate degradation → eventual collapse
+
+The paradox: F_RBIT overall improving WHILE f₃ specifically declining
+is a high-danger regime, not a safe regime.
+  
+RBIT diagnostic rule: If F_RBIT improved recently AND f₃ has not improved
+commensurately → Capstone Erosion is underway.
+Capstone Safety Condition: M(t) ≥ M*(t) = δ·ln(n(t))/k
+must be verified independently of performance metrics.
+```
+
+#### 26.2 Observer-Controller Dilemma — RBIT Measurement Architecture
+
+The Observer-Controller Dilemma (FGS §36AB) provides the formal basis for RBIT's measurement interference constraints.
+
+**RBIT Cost Structure:**
+
+```
+Governance cost with observation intensity q:
+  C_observe ∼ O(n)
+  C_control ∼ O(n²)
+  C_observe+control ∼ O(n²)
+
+RBIT implication: The F_RBIT measurement framework must be designed as
+O(n) observation only — the moment measurement triggers direct control
+responses, the cost structure becomes O(n²) and measurement itself becomes
+a contamination source.
+
+This formalizes the passive-proxy measurement requirement (v2.3):
+  f₃ measurement via passive proxies only
+  v_class measurement via indirect structural indicators only
+  F_RBIT overall: scale-invariant constants K_i, not full-state measurement
+```
+
+**Observation-Destruction Loop in RBIT:**
+
+The formal back-action mechanism (FGS §36AB.3):
+
+```
+Λ_eff = Λ + η·q         (observation adds effective contamination load)
+Ψ(P,q) := Ψ(P) + (χ/γ)·q  (observation adds efficiency pressure)
+
+Combined: q↑ → Ṁ↓ → M↓ → p_Collapse↑
+
+RBIT bridge to Observer Back-Action (v2.3 Section):
+  η·q term = F_RBIT Contamination Boundary expansion under measurement
+  χ·q term = f₃ reduction under monitoring pressure
+
+New precision: observation of f₃ specifically activates the χ·q destruction pathway
+because it creates explicit awareness of buffer thickness, triggering
+efficiency optimization targeting the buffer.
+
+Monitoring Paradox formal statement:
+  d(f₃)/d(q) > 0  (monitoring f₃ elevates f₃)
+  Resolution: indirect f₃ inference via intervention frequency f_intervene
+  (Prediction AA-2: corr(f_intervene, −M) > 0.7 in operational systems)
+```
+
+**Gardener Strategy as RBIT Upper-Layer Design Principle:**
+
+```
+Control mode:     ∥u∥ > u_crit/κ(M) → instability regardless of policy quality
+Observation mode: q > q_passive → buffer destruction via χ·q pathway
+Gardener mode:    environment design E such that x(t) = f(x, E)
+
+Cost comparison:
+  C_gardener ∼ O(1) design + O(n) maintenance  <<  O(n²) direct control
+  
+RBIT implication: At resolution maturity (Δρ >> 0, v_class stable),
+the dominant governance action shifts from F_RBIT monitoring (O(n)) to
+resolution environment design — calibrating the structural conditions
+under which F_RBIT self-maintains without active measurement.
+
+This is the formal RBIT explanation for Rest Mode: it is not absence of
+governance but a mode where environment design has been completed and
+passive monitoring costs O(n) with zero direct intervention cost.
+```
+
+**Scale-Invariant Constants as RBIT Low-Cost Measurement Portfolio:**
+
+The four scale-invariant constants (FGS §36AB.5) map to RBIT's measurement architecture:
+
+| Scale-Invariant Constant | RBIT Variable | Measurement Cost |
+|---|---|---|
+| Buffer saturation ratio ρ_M = L(n)/C_M | f₃ structural proxy — relative not absolute buffer state | O(1) — single ratio measurement |
+| Alarm rate deviation δf_A | v_class proxy — structural trend indicator | O(1) — aggregate rate |
+| North Star coherence C_N | f₂ macro-proxy — resolution coherence index | O(log n) — spectral |
+| Temporal Misalignment Index TMI | f₁ early-warning indicator | O(log n) — cross-scale comparison |
+
+These four constants collectively provide the O(1)–O(log n) measurement portfolio that replaces the O(n²) full-state F_RBIT measurement when scale makes exhaustive measurement destabilizing.
+
+#### 26.3 Fractal Seed Architecture in RBIT Terms
+
+The Fractal Seed Architecture (FGS §36AC) provides the resolution-theoretic explanation for how governance resolution capacity propagates across system scales.
+
+**Governance Seed as Resolution Transmission Protocol:**
+
+```
+Seed = (N*, R, B)
+  N* ∈ H:   North Star attractor in resolution state space
+  R:        growth rule — maps current resolution state to next-stage seed
+  B ⊂ H:   allowable resolution basin — space within which lower-layer adaptation
+            is permitted without triggering structural intervention
+
+RBIT interpretation:
+  N* = target resolution state ρ_target (what this governance tier aims to maintain)
+  R = resolution upscaling protocol (criteria for when Δρ > threshold triggers expansion)
+  B = resolution tolerance band (the interval [ρ_min, ρ_max] within which
+      normal degradation-recovery cycling is permitted)
+```
+
+**Fractal Resolution Scaling:**
+
+Governance fractal dimension d_f ∈ (1,2) for DFG three-layer architecture. RBIT implication:
+
+```
+d_f tells us how resolution capacity scales with system size:
+  d_f = 1: linear scaling — governance resolution grows proportional to n
+  d_f = 2: quadratic — governance resolution grows as n² (impossible to maintain at scale)
+  d_f ∈ (1,2): fractal — governance resolution scales as n^{d_f} with 1 < d_f < 2
+  
+Optimal fractal dimension (from n_eff Compression Theorem, v2.0):
+  K* ∝ n^{2/3} → S ∝ n^{4/3} → d_f = 4/3 ≈ 1.33
+  
+This means governance resolution capacity should scale as n^{4/3}, not n².
+Systems that attempt O(n²) resolution maintenance are structurally non-fractal
+and will fail at scale regardless of their resource level.
+```
+
+**Branch Governor as Distributed Buffer Capstone:**
+
+The Branch Governor Assignment (FGS §36AC.4) in RBIT terms:
+
+```
+Each branch governor G_i maintains:
+  Local North Star N_i*: contextual ρ_target for branch i
+  Local buffer M_i(t):  branch-level f₃ — capstone for sub-sphere i
+  Local seed Seed_i:     resolution propagation program for when n_i > n_i*
+  
+RBIT architecture implication:
+  Resolution capacity in fractal governance is NOT globally managed.
+  It is locally maintained by branch governors at each tier.
+  Global resolution = minimum over branch resolutions:
+  ρ_global ≈ min_i(ρ_i) (chain rule — weakest link determines system resolution)
+  
+  This is the RBIT justification for Separation strategy (Separate→Mature→Couple):
+  Each branch must achieve Seed_i-level resolution before coupling,
+  or the coupling creates a mutual resolution deficit
+  (Premature Coupling Catastrophe, v2.0).
+```
+
+#### 26.4 Dual Reference Dynamics — Resolution Map-Terrain Tension Formalized
+
+The Dual Reference Dynamics (FGS §36AD) provide a formal framework for RBIT's Map-Terrain Balance principle.
+
+**Dual Reference Frame:**
+
+```
+Local reference N_i*: branch-specific resolution target
+Global reference N_G*: system-wide resolution target
+
+Reference tension Δ = |N_i* − N_G*|/|N_G*|
+
+Low tension (Δ < Δ_min): branch resolution has converged to global — alignment achieved
+High tension (Δ > Δ_max): branch resolution diverging from global — alignment crisis
+Critical tension (Δ ≈ Δ_c): three resolution pathways available:
+  Path 1 — Convergence:   N_i* → N_G* (branch adopts global standard)
+  Path 2 — Divergence:    N_G* ← N_i* (global incorporates branch innovation)
+  Path 3 — Separation:    Seed_i splits from global — new independent branch
+```
+
+RBIT Map-Terrain Bridge:
+```
+Map = global resolution reference N_G*
+Terrain = local resolution reality N_i*
+Δ = f₂ (resolution mismatch between Map expectation and Terrain reality)
+
+Map-Terrain Balance principle (v1.7) now has formal derivation:
+  Optimal drift rate: dΔ/dt ≈ 0 (neither converging too fast nor diverging)
+  Fast convergence: terrain information compressed too rapidly → f₁↑ (misclassification)
+  No convergence: Map becomes obsolete → f₂↑ (mismatch accumulates)
+  
+Terrain Fitness Function F_terrain in reference frame terms:
+  F_terrain = f(Δ, dΔ/dt, d²Δ/dt²) — second derivative is critical
+  d²Δ/dt² > 0 (accelerating divergence) = early warning before threshold crossing
+```
+
+#### 26.5 Buffer Ecology — Resolution Environment Theory
+
+The Buffer Ecology framework (FGS §36AE) provides RBIT's resolution environment theory: the conditions under which F_RBIT self-maintains without active intervention.
+
+**Three-Phase Buffer Evolution:**
+
+| Phase | Buffer Ecology State | RBIT Resolution State | Governance Mode |
+|---|---|---|---|
+| Phase I — Actor Buffer | Buffer as explicit governance actor: M thin, actively controlled | Δρ low, frequent correction cycles | Active governance (FCC Tier ii–iii) |
+| Phase II — Infrastructure Buffer | Buffer becomes structural infrastructure: M thickening via terrain internalization | Δρ growing, correction cycles slowing | Passive governance (FCC Tier i) |
+| Phase III — Ecological Buffer | Buffer becomes pervasive environment: M indistinguishable from system structure | Δρ >> 0, self-maintaining | Rest Mode governance |
+
+**Dominant Hidden Structure Theorem:**
+
+FGS §36AE.2 proves that in Phase III ecology, the buffer constitutes the dominant hidden structure: most of the system's resolution capacity is maintained invisibly, with visible governance actions representing only the exception-handling layer.
+
+RBIT implication:
+```
+In Phase III ecology:
+  Measured F_RBIT ≈ F_visible (only the exception layer is measurable)
+  True F_RBIT = F_visible + F_ecological (ecological buffer unmeasured)
+  
+  Ratio F_ecological/F_visible >> 1 in healthy mature systems
+  This explains the f₃ measurement paradox (v2.3): f₃ appears low
+  because most buffer activity is invisible at the measurement layer.
+  
+  Collapse warning signal: F_ecological begins converting to F_visible
+  (ecological buffer degrades → more governance becomes visible as exception-handling)
+  Operational indicator: f_intervene(t) increasing despite F_RBIT stable → Phase degradation
+```
+
+---
+
+### Section 27 — AGP v2.4+ Deep Integration: Adversarial Governance and Resolution Robustness
+
+#### 27.1 Self-Defeating Optimizer as f₁-Collapse Pathway
+
+AGP §24 (Adversarial Governance and Robustness Theory) introduces the Self-Defeating Optimizer Problem: a governance system that optimizes its own correction protocol becomes increasingly vulnerable to the specific failures its correction targets.
+
+RBIT bridge:
+```
+Self-Defeating Optimizer in F_RBIT terms:
+  The system measures f₁ (misclassification rate) and optimizes correction
+  specifically against the most common misclassification pattern.
+  
+  Result: the correction protocol becomes a known pattern that adversarial
+  information can exploit — f₁ optimization creates a predictable correction
+  signature that itself becomes a misclassification attractor.
+  
+  Self-defeating pathway:
+  f₁ detected → correction targets pattern A → 
+  → resolution space contracts around A → 
+  → new misclassifications concentrated at A-adjacent patterns → 
+  → f₁ optimization now targets A+ε → 
+  → resolution space further contracted → 
+  → eventual resolution paralysis (Thought Loop analog)
+  
+  Prevention: correction must maintain diversity in correction targets,
+  not optimize to a single misclassification mode.
+  Formal requirement: spread of correction targets > f_escape·(correction cycle duration)
+```
+
+#### 27.2 Four Robustness Layers as F_RBIT Portfolio Maintenance
+
+AGP §24.2 identifies four robustness layers whose composite maintains governance stability under adversarial pressure. RBIT mapping:
+
+| Robustness Layer | AGP Definition | F_RBIT Maintenance Target |
+|---|---|---|
+| L1 — Structural Diversity | Multiple independent estimation pathways | f₁: diversity prevents monoculture misclassification |
+| L2 — Goodhart Resistance | Measurement targets not directly optimizable | f₂: resolution metrics must be indirect (not optimizable proxies) |
+| L3 — Self-Correction Capacity | System can detect and correct its own errors | f₃: buffer must include correction capacity, not just filtering capacity |
+| L4 — Environmental Cultivation | Terrain designed to make evasion structurally costly | f₄/f₅: escalation costs calibrated to terrain geometry |
+
+**Formal Robustness Theorem in RBIT Terms:**
+
+From AGP §24.5 (and TLG §24.6): P(evasion) ≤ exp(−ΔV/T_eff) where ΔV is the terrain barrier to evasion.
+
+RBIT bridge:
+```
+ΔV = f(F_RBIT) — terrain barrier is a function of the F_RBIT portfolio:
+  ΔV_structural = f₁-diversity × domain coverage
+  ΔV_informational = 1/f₂ × resolution match quality  
+  ΔV_energetic = R (Self-Purification Capacity) × recovery reserve
+  
+Combined: P(evasion) ≤ exp(−[F_structural + F_informational + F_energetic] / T_eff)
+
+This establishes that T_eff must remain > 0 even under adversarial pressure:
+T_eff = 0 makes P(evasion) → exp(0) = 1 for ANY barrier ΔV > 0.
+The adversary requires only one successful evasion, which is guaranteed
+at zero temperature regardless of terrain quality.
+```
+
+#### 27.3 NAT v2.2 Affective Extensions — Governance Temperature as Resolution Floor
+
+The NAT §7.16 Finite-Temperature Phase Transition establishes the Governance Impossibility Boundary in formal terms with direct RBIT implications.
+
+**Critical Affective Temperature:**
+
+```
+T_c = ⟨ΔU⟩ / ln(ν₀ / r*)
+
+where:
+  ⟨ΔU⟩ = mean barrier height in resolution landscape
+  ν₀    = attempt frequency (emotional event generation rate)
+  r*    = governance-required minimum transition rate (DDD protocol requirement)
+  
+RBIT bridge:
+  ⟨ΔU⟩ ↔ average correction magnitude Δρ_correction (resolution terrain barrier height)
+  r*    ↔ 1/τ_upscale (minimum upscaling rate required for positive Arrow of Maturation)
+  T_c   ↔ minimum T_eff to maintain DDD protocol operability
+  
+Critical implication: mature systems with deeper attractors (larger ⟨ΔU⟩)
+require HIGHER T_c. Progressive governance withdrawal (§8.4 → Rest Mode entry)
+is associated with terrain deepening — the governance system's attractors
+become more stable, requiring higher stochastic temperature to escape them.
+
+RBIT Arrow of Maturation constraint:
+  Governance withdrawal ↓ must NOT reduce T_eff below T_c(⟨ΔU⟩_new).
+  Since ⟨ΔU⟩_new > ⟨ΔU⟩_old (terrain deepening), T_c increases with maturity.
+  Counter-intuitive requirement: more mature systems need more, not less,
+  stochastic freedom in their emotional/correction architecture.
+```
+
+**Governance Impossibility Theorem — DDD Protocol Constraint:**
+
+```
+T_eff = 0 → r_escape → 0 for ANY finite barrier ΔU > 0
+         → Zero transition rate between resolution attractors
+         → DDD protocol fails: d↑ produces no regime exit because
+           the system cannot thermally explore the lower-Φ basin
+
+RBIT operational implication:
+  Any F_RBIT measurement showing s(t) ≈ 0 (sensitivity → 0)
+  should be interpreted as T_eff → 0 warning, not as stability signal.
+  
+  DDD E1 (Diversity injection) requires T_eff > T_c to function.
+  If T_eff < T_c: d↑ does not reduce Φ; correction does not reduce f₁;
+  DDD E1 completion appears achieved (metrics improve superficially)
+  but Φ reduction is thermal masking, not structural correction.
+  
+  This is the DDD False-Completion Trap extension: not only v_class = 0
+  creates false E2 completion, but T_eff < T_c creates false E1 completion.
+```
+
+---
+
+### Section 28 — Novel Contributions (v2.5)
+
+**NC-GGT-RBIT-1 (CTGPSR as RBIT Micro-Dynamical Substrate):** The first formal identification of the CTGPSR five-state ODE system (GGT §82) as the micro-dynamical substrate from which RBIT's resolution gap dynamics emerge under renormalized coarse-graining. The C/T/G/P/R state vector provides the microscopic basis for F_RBIT components f₁–f₅ that RBIT axioms posit but cannot internally derive.
+
+**NC-GGT-RBIT-2 (Triple-Failure Signature Formalization):** The CTGPSR Storm-Transition Theorem (GGT-82.C.3) provides the first formal proof that governance storm onset produces simultaneously Ċ<0, Ṗ>>0, Ṙ<0 — the RBIT triple-failure signature. This converts a diagnostic heuristic into a theorem with specific threshold conditions (Π_eff > 1 AND V·G > θ_v).
+
+**NC-GGT-RBIT-3 (Recovery-Renormalization as Post-Storm Architecture Change):** The Recovery-Renormalization Theorem (GGT-82.C.4) proves that post-storm recovery produces C_new* ≠ C_old* — structurally novel equilibrium rather than mere return. RBIT DDD protocol must distinguish C_new* > C_old* (genuine upscaling) from C_new* < C_old* (structural degradation masquerading as recovery).
+
+**NC-GGT-RBIT-4 (Thirteen-Way M_crit Equivalence):** CTGPSRB (GGT §83) extends the Twelve-Way criticality equivalence to Thirteen-Way by adding E13: B = B_c (Buffer Governance Variable at critical value). RBIT now has thirteen formally equivalent expressions of the governance critical condition.
+
+**NC-GGT-RBIT-5 (f₃ Atrophy Ordering — CTGPSRB Derivation):** The three-buffer timescale hierarchy τ_G < τ_P < τ_R (GGT §83.A.1) provides the micro-dynamical derivation of RBIT's atrophy ordering F→V→T→D from first principles rather than empirical postulation.
+
+**NC-GGT-RBIT-6 (Non-Monotone f₃ Diagnostic Correction):** CTGPSRB Theorem GGT-83.D.1 proves that buffer B initially increases (activation) before decreasing (depletion) under storm intensity. Early storm phase produces f₃ improvement, not degradation. Diagnostic correction: track dB/dt trajectory rather than B level for storm onset detection.
+
+**NC-GGT-RBIT-7 (Buffer Capstone as f₃ Irreplaceability Theorem):** FGS §36AA.1 Buffer Capstone Theorem provides the formal proof that f₃ is not merely one component among five but the structurally irreplaceable capstone — its removal induces collapse regardless of all other F_RBIT components. This upgrades f₃ from "important component" to "necessary condition for F_RBIT validity."
+
+**NC-GGT-RBIT-8 (Capstone Erosion Paradox as Early-Warning Protocol):** The Capstone Erosion Paradox (P↑ ⇒ Ṁ↓ ⇒ M↓ ⇒ p_Collapse↑) establishes that F_RBIT improvement coupled with f₃-specific decline is a higher-risk configuration than stable F_RBIT with stable f₃. RBIT measurement protocol must independently verify Capstone Safety Condition M(t) ≥ M*(t) = δ·ln(n(t))/k.
+
+**NC-GGT-RBIT-9 (Observation-Destruction Loop — Formal RBIT Bridge):** FGS §36AB Observer-Controller Dilemma provides the O(n²) cost structure proof for direct F_RBIT monitoring with control response. The gardener strategy (environment design at O(1)+O(n)) is the formally optimal governance mode once resolution maturity is achieved. Scale-invariant constants provide the O(1)–O(log n) measurement portfolio replacing exhaustive F_RBIT measurement at scale.
+
+**NC-GGT-RBIT-10 (Fractal Seed as Resolution Propagation Protocol):** The Governance Seed (N*, R, B) (FGS §36AC) formalizes how resolution capacity propagates across governance scales. Optimal fractal dimension d_f = 4/3 ≈ 1.33 (from n_eff Compression Theorem) implies that resolution maintenance should scale as n^{4/3} — systems attempting O(n²) resolution maintenance are structurally non-fractal and scale-unstable.
+
+**NC-GGT-RBIT-11 (Governance Impossibility Boundary as DDD Pre-Condition):** NAT §7.16 Governance Impossibility Theorem (T_eff = 0 → zero behavioral change → DDD E1 false completion) provides a new DDD failure mode: not only v_class = 0 → false E2 completion (v2.1), but T_eff < T_c → false E1 completion. DDD protocol requires T_eff > T_c(⟨ΔU⟩) verification before E1 initiation.
+
+**NC-GGT-RBIT-12 (Self-Defeating Optimizer as f₁-Contraction Pathway):** AGP §24 Self-Defeating Optimizer provides the formal mechanism by which f₁ optimization can paradoxically increase f₁ through resolution space contraction: correction diversity must exceed f_escape·(correction cycle) or the optimization loop becomes a Thought Loop analog at the classification level.
+
+---
+
+### Section 29 — Extended Falsification (F77–F100)
+
+**F77 [GGT-RBIT] Triple-Failure Simultaneous Onset.** CTGPSR Storm-Transition Theorem predicts that storm onset is always accompanied by simultaneous Ċ<0, Ṗ>>0, Ṙ<0. Prediction: the correlation matrix of (C-decline, P-spike, R-depletion) transitions from low-correlation to near-1 correlation at storm onset. Falsification: if any storm event produces large V without this triple simultaneous movement, the CTGPSR–RBIT correspondence breaks down.
+
+**F78 [GGT-RBIT] Recovery-Renormalization Post-Storm Structural Novelty.** C_new* ≠ C_old* predicts that post-storm organizational structures are statistically distinguishable from pre-storm structures even when performance metrics return to baseline. Falsification: if post-storm structural metrics are statistically indistinguishable from pre-storm (controlling for performance), Recovery-Renormalization Theorem is refuted.
+
+**F79 [GGT-RBIT] Non-Monotone f₃ During Storm Buildup.** CTGPSRB Non-Monotone Storm Response predicts f₃ improvements during early storm-buildup phase before depletion sets in. Prediction: time series of f₃ during confirmed storm events should show ∂f₃/∂t < 0 (improving) for first segment, then sign reversal. Falsification: if f₃ is monotonically decreasing throughout all storm events, the three-buffer architecture does not operate at the predicted timescales.
+
+**F80 [GGT-RBIT] Four-Theory Criticality Equivalence.** All four criticality conditions (Π_eff=1, Π_G=1, χ_TBG=θ, C_A=1) should co-occur: systems at criticality in one formalism should be at criticality in all four simultaneously. Prediction: measuring any one criticality indicator should predict the others with R² > 0.85. Falsification: if criticality in one GGT theory layer is not predictive of criticality in others, the equivalence theorem's base operating point assumptions fail in practice.
+
+**F81 [GGT-RBIT] Thirteen-Way M_crit Equivalence — B_c Predictivity.** E13 (B = B_c) should co-occur with all twelve prior criticality conditions. Prediction: Buffer Governance Variable at B_c is measurable through B_obs = w_g·G + w_p·P + w_r·R and should be predictive of governance criticality with lead time ≥ 1 measurement cycle. Falsification: if B_obs is not predictive of criticality events, the Buffer Governance Variable lacks empirical operationalizability.
+
+**F82 [FGS-RBIT] Capstone Safety Condition Independent of Performance.** Buffer Capstone Theorem predicts that M(t) < M*(t) = δ·ln(n)/k is a collapse precursor independent of performance metrics. Prediction: systems meeting Capstone Safety Condition M(t) ≥ M*(t) should have significantly lower collapse rates than systems with M(t) < M*(t) even when controlling for overall performance level. Falsification: if M(t)/M*(t) ratio is not predictive of collapse after controlling for performance, the capstone independence claim fails.
+
+**F83 [FGS-RBIT] Capstone Erosion Lag Time.** Prediction AA-3 (FGS §36AA.5): lag time τ_lag ≈ (M₀ − M_c)/(γ·ψ(P*) − β·M₀) implies that higher-performance peaks produce shorter collapse lags. Falsification: if collapse lag is uncorrelated with peak performance level, the capstone erosion mechanism is not operating as described.
+
+**F84 [FGS-RBIT] Intervention Frequency as Buffer Proxy.** Prediction AA-2 (FGS §36AA.5): corr(f_intervene, −M) > 0.7 in systems with operational buffer gates. Prediction: upper-layer intervention frequency is an indirect f₃ proxy with correlation > 0.7 to buffer thinning. Falsification: correlation below 0.5 indicates buffer gate is not functioning as Router-Filter for upper-layer interventions.
+
+**F85 [FGS-RBIT] Observation Cost Explosion.** Observer-Controller Dilemma predicts C_control ∼ O(n²) while C_observe ∼ O(n). Prediction: in organizational systems at scale, the ratio of coordination overhead to productive output should increase superlinearly as n increases — specifically faster than linear. Falsification: if coordination cost grows linearly with n, the O(n²) control coupling prediction is incorrect.
+
+**F86 [FGS-RBIT] Gardener Strategy Dominance at Maturity.** The gardener cost advantage C_gardener << C_direct implies that mature systems should exhibit progressively fewer direct interventions per unit output as they age. Prediction: governance intervention frequency per agent per unit time decreases monotonically in successfully maturing systems. Falsification: mature systems with stable or increasing intervention frequency contradict the gardener transition prediction.
+
+**F87 [FGS-RBIT] Fractal Dimension d_f = 4/3.** The n_eff Compression Theorem prediction d_f = 4/3 ≈ 1.33 for optimal fractal governance scaling. Prediction: empirical measurement of governance capacity vs. system size in healthy multi-tier systems should yield n^{4/3} scaling (not n or n²). Falsification: if the empirical scaling exponent deviates by > 0.2 from 4/3, the theoretical derivation of optimal fractal dimension requires revision.
+
+**F88 [FGS-RBIT] Dual Reference Critical Tension Resolution Modes.** Three pathways at critical tension Δ ≈ Δ_c: convergence (N_i* → N_G*), divergence (N_G* ← N_i*), or separation. Prediction: transitions at critical tension should follow one of these three modes, with mode selection predictable from relative buffer strength. Falsification: if transitions at critical tension follow other modes not in these three, the dual-reference formalism is incomplete.
+
+**F89 [NAT-RBIT] T_c Increases with Terrain Depth.** Critical Affective Temperature T_c = ⟨ΔU⟩/ln(ν₀/r*) predicts T_c increases with terrain depth. Prediction: governance systems with deeper attractors (more stable institutions, more established cultures) require MORE stochastic perturbation to maintain adaptability, not less. Falsification: if governance systems with stable attractors are effectively maintained with lower perturbation rates, the T_c scaling law is incorrect.
+
+**F90 [NAT-RBIT] Governance Impossibility at T_eff = 0.** DDD E1 false completion under T_eff < T_c: Prediction: governance interventions targeting diversity injection (d↑) in systems with s(t) → 0 should produce Φ-reduction that does not persist beyond the intervention window, reverting when the injection stops. Falsification: if d↑ injection produces persistent Φ reduction in s(t) → 0 systems, the Governance Impossibility Theorem's claim about T_eff-dependence of DDD is incorrect.
+
+**F91 [AGP-RBIT] Self-Defeating Optimizer Signature.** Correction diversity collapse: Prediction: systems that optimize f₁ correction against a specific misclassification pattern should show increasing concentration of residual f₁ elevations in pattern-adjacent space. Falsification: if optimizing f₁ correction does not narrow the residual misclassification distribution, the Self-Defeating Optimizer mechanism does not operate as described.
+
+**F92 [AGP-RBIT] Formal Robustness Theorem ΔV Decomposition.** P(evasion) ≤ exp(−ΔV/T_eff) with ΔV = ΔV_structural + ΔV_informational + ΔV_energetic. Prediction: the robustness to adversarial evasion should be predictable from a weighted combination of f₁-diversity, 1/f₂, and R. Falsification: if adversarial robustness is not correlated with F_RBIT portfolio composition, the ΔV decomposition is incorrect.
+
+**F93–F100** [Cross-Theory]: See cross-theory falsification addendum; integration with RT v2.9–v2.10 and VST v2.7 pending next integration pass.
+
+---
+
+### Section 30 — Open Problems (102–121)
+
+| # | Problem | Source |
+|---|---|---|
+| 102 | [v2.5-GGTseries] CTGPSR Parameter Identification Protocol — the five CTGPSR parameters (α,η,ξ_R,μ,ν,χ,β,λ,φ,ψ,κ,θ,δ,ρ,ω,ζ,r₀,r₁,r₂,r₃) need calibration from observable F_RBIT components. What is the minimal observable set required to identify all 20 parameters? Can the loop amplification number Π = βκρη/(λδωμ) be estimated from F_RBIT time series without full parameter identification? What estimation error propagates from F_RBIT measurement noise to Π_eff uncertainty? | Open — connects to GGT §82.A.3, RBIT §Measurement Interface |
+| 103 | [v2.5-GGTseries] Non-Monotone f₃ Detection Window — the CTGPSRB Non-Monotone Storm Response predicts f₃ initially improves then degrades during storm onset. What is the duration of the improvement phase relative to storm timescale? Is it detectable in practice (requires measurement frequency > 1/τ_G) or too fast to observe? Does the improvement magnitude provide information about storm severity (larger initial improvement = larger subsequent collapse)? | Open — connects to GGT §83.D.1, RBIT §Structural Damage Ratchet |
+| 104 | [v2.5-GGTseries] B_obs vs. B Tracking Accuracy — CTGPSRB distinguishes B (autonomous variable) from B_obs = w_g·G+w_p·P+w_r·R (projection proxy). The tracking assumption (|B−B_obs| ≤ ε_B) holds in slow-buffer charging regimes. What is the boundary of this regime? During storm onset (fast V dynamics), does the tracking assumption break down? If B and B_obs diverge significantly, which is the correct diagnostic variable and how can B be estimated independently? | Open — connects to GGT §83.A.1, RBIT §Measurement Interface |
+| 105 | [v2.5-GGTseries] Cluster Multiplicity K — RBIT Structural Identity — Proposition GGT-82.D.1 predicts K ∼ (βκ/ρη)·√N. In RBIT terms, K corresponds to the number of distinct resolution domains that can be simultaneously maintained. How does K relate to the agent count n in NAT sphere topology? Is K = number of sphere positions (NAT §3.0), or is K a coarser-grained structural quantity? Understanding the K–n relationship is needed to translate CTGPSR scaling laws into NAT deployment guidelines. | Open — connects to GGT §82.D.1, NAT §3.0, RBIT §Seed Sufficiency |
+| 106 | [v2.5-GGTseries] Recovery-Renormalization C_new* Classification — Theorem GGT-82.C.4 establishes C_new* ≠ C_old* without specifying which direction. RBIT requires distinguishing C_new* > C_old* (genuine upscaling) from C_new* < C_old* (structural degradation). What F_RBIT measurements distinguish these cases? Is v_class sufficient (positive v_class → upscaling trajectory), or does the distinction require measuring the full cluster coherence distribution rather than just its mean? | Open — connects to GGT §82.C.4, RBIT §Revival Trajectories |
+| 107 | [v2.5-GGTseries] Four-Theory Criticality Equivalence Empirical Test — F80 predicts that all four criticality indicators co-occur (R² > 0.85 cross-prediction). For the equivalence to hold at the base operating point (V≈0, R≈R₀), the system must be near-equilibrium. In dynamically evolving systems (e.g., growing organizations, developing AI systems), the base operating point assumptions may not hold. What is the practical operating range within which the equivalence provides useful cross-theory prediction? | Open — connects to GGT §82.F.5, RBIT §Silent Criticality |
+| 108 | [v2.5-FGS-RBIT] Capstone Safety Condition Under Rapid Growth — M*(n) = δ·ln(n)/k grows logarithmically with system size n. During rapid n-growth (fast scaling), M* increases faster than the system can build buffer thickness. Is there a maximum safe growth rate dn/dt such that M(t) can track M*(t)? The Capstone Erosion Paradox suggests that growth itself is an M-destroying force (P↑ during growth). What is the maximum sustainable growth rate compatible with capstone integrity? | Open — connects to FGS §36AA.2, NAT §7.25 Sphere Expansion, RBIT §Stability Saturation |
+| 109 | [v2.5-FGS-RBIT] Optimal Fractal Dimension Calibration — d_f = 4/3 is derived from n_eff Compression Theorem under assumptions about independent coupling α_between. Real governance systems have correlated coupling. What is d_f under correlated coupling? Does heterogeneity in branch sizes alter d_f? If empirical d_f estimates cluster around 1.33, this validates the theoretical derivation; if they cluster around other values, understanding what governs d_f calibration becomes a central open problem. | Open — connects to FGS §36AC.2, RBIT §n_eff Compression Theorem, GGT §82.D |
+| 110 | [v2.5-FGS-RBIT] Scale-Invariant Constants Calibration Portfolio — the four scale-invariant constants (ρ_M, δf_A, C_N, TMI) provide O(1)–O(log n) measurement. Are these four constants sufficient for full F_RBIT inference, or does a complete characterization require additional scale-invariant observables? What is the minimal sufficient set of scale-invariant constants that determines (K, τ, θ_v, R*) = H(Π_eff) via CTGPSR mapping? | Open — connects to FGS §36AB.5, GGT §82.C.5, RBIT §Measurement Interface |
+| 111 | [v2.5-FGS-RBIT] Buffer Ecology Phase Transition Detection — the Phase I→II→III transition (Actor→Infrastructure→Ecological) involves qualitative changes in buffer role. What is the formal transition criterion? Is it a bifurcation in buffer ODE (dM/dt dynamics change qualitatively), a threshold in M(t) level, or a transition in the correlation structure of governance events? If Phase I/II/III are distinguishable, what does the transition time predict about collapse resistance? | Open — connects to FGS §36AE.1, RBIT §Arrow of Maturation |
+| 112 | [v2.5-FGS-RBIT] Dual Reference Tension Δ_c Calibration — the three resolution pathways (convergence/divergence/separation) are triggered at critical tension Δ_c. What determines Δ_c? Is it branch-specific (depends on local buffer strength M_i) or universal? Does the relative buffer strength M_i/M_G (branch vs. global) determine which pathway is selected at Δ_c? Formal derivation of pathway selection criterion would complete the Dual Reference Dynamics theory. | Open — connects to FGS §36AD.3, RBIT §Map-Terrain Balance |
+| 113 | [v2.5-NAT-RBIT] T_c Measurement Protocol — T_c = ⟨ΔU⟩/ln(ν₀/r*) requires estimating ⟨ΔU⟩ (mean barrier height) and ν₀ (attempt frequency) from observable system behavior. In organizational/AI governance contexts, these parameters are not directly observable. What F_RBIT-compatible measurement protocol estimates T_c? Can it be inferred from the Storm Scale Law distribution? (Higher mean barrier → power law exponent α changes in the SOC distribution: P(s) ∝ s^{-α} with α → α_0 - f(⟨ΔU⟩)) | Open — connects to NAT §7.16.1, RBIT §F_RBIT–AGM Concordance |
+| 114 | [v2.5-NAT-RBIT] DDD E1 False Completion Discrimination — two DDD false-completion mechanisms now exist: (v2.1) v_class = 0 despite Φ < 1; (v2.5) T_eff < T_c despite d↑ producing Φ reduction. How are these two failure modes distinguished in practice? The v_class = 0 signature is detectable via classification velocity tracking. The T_eff < T_c signature requires s(t) → 0 detection. Do these produce distinguishable F_RBIT patterns, or does simultaneous v_class monitoring + s(t) monitoring suffice to discriminate? | Open — connects to NAT §7.16.1, RBIT §DDD Protocol |
+| 115 | [v2.5-AGP-RBIT] Self-Defeating Optimizer Prevention Protocol — the formal requirement (correction diversity > f_escape·correction_cycle) needs operationalization. How should correction target diversity be measured (entropy of correction target distribution)? What is f_escape in RBIT terms — the escape probability from a given misclassification attractor? Can the Thought Loop onset detection protocol (v2.2, solution-space contraction) serve as proxy for Self-Defeating Optimizer onset? | Open — connects to AGP §24.1, RBIT §Thought Loop |
+| 116 | [v2.5-AGP-RBIT] Robustness Theorem ΔV Decomposition Weights — P(evasion) ≤ exp(−ΔV/T_eff) with ΔV = ΔV_structural + ΔV_informational + ΔV_energetic. What are the relative weights of these three terms? Is ΔV_structural dominant (f₁-diversity), or does ΔV_energetic (recovery reserve R) dominate for long-duration adversarial pressure? Are the weights context-dependent (organizational vs. AI governance) or universal? | Open — connects to AGP §24.5, TLG §24.6, RBIT §Adversarial Governance |
+| 117 | [v2.5-GGTseries] CTGPSRB Order Parameter Experimental Access — the Buffer Governance Variable B(t) has autonomous dynamics distinguishable from B_obs in principle. In practice, what experimental paradigm would distinguish B as an autonomous degree of freedom from B_obs as a projection? In organizational contexts, does the slow buffer relaxation timescale τ_B >> τ_CTGPSR produce observable hysteresis not present in the projection interpretation? | Open — connects to GGT §83.A.1.5, RBIT §f₃ measurement |
+| 118 | [v2.5-GGTseries] Universality Class of DFG Governance — GGT §83 introduces the Governance Universality Theorem placing CTGPSRB in a specific universality class. What universality class? Is it in the directed percolation universality class, the Manna universality class (as AGP predicts for conserved SOC), or a new universality class? The universality class determines critical exponents that RBIT's Storm Scale Law predictions should match. | Open — connects to GGT §83.F.3, AGP §15.3.2, VST §3.10 |
+| 119 | [v2.5-FGS-RBIT] Branch Governor Authority Calibration — Branch Governors maintain local buffers M_i(t) independently. What coordination protocol between branch governors is needed to prevent one branch's buffer depletion from destabilizing neighboring branches? Is there a minimum M_i(t) across all branches that, if violated by any single branch, triggers global governance response? The Sphere Resilience Cascade Theorem (NAT §3.0.1) may provide upper bounds. | Open — connects to FGS §36AC.4, NAT §3.0.1, RBIT §Contamination Boundary |
+| 120 | [v2.5-FGS-RBIT] Operational Invisibility Measurement Design — Buffer Capstone at optimum makes M invisible (∂z/∂M → 0). This creates the Double Invisibility Problem: M absent and M at optimum are observationally equivalent from outcome metrics. F83 proposes f_intervene as proxy. Are there additional distinguishing signatures? Candidate: variance structure of f_intervene (M absent → intervention bursts; M optimal → smooth intervention distribution). Formal test: intervention inter-arrival time distribution should be exponential (Poisson) under M optimal, and power-law or bursty under M absent. | Open — connects to FGS §36AA.4, RBIT §f₃ measurement irony |
+| 121 | [v2.5-Cross] Four-Theory Criticality Equivalence Under Non-Equilibrium Driving — the equivalence Π_eff=1 ↔ Π_G=1 ↔ χ_TBG=θ ↔ C_A=1 holds at the base operating point (V≈0, near-equilibrium). Under strong external driving (large I(t) in BGC Layer 1), the system is driven away from its natural equilibrium and the correspondence factors in GGT-82.F.1 become non-trivial. What is the maximum sustainable driving I(t) such that the Four-Theory Equivalence remains predictively useful (correspondence error < 10%)? | Open — connects to GGT §82.F.5, §75.2, RBIT §Measurement Interface |
+
+---
+
+### Updated Version Log Entry
+
+| Additions | Description | Version |
+|---|---|---|
+| BGC–RBIT Resolution Architecture | Four-layer BGC formal correspondence; Universal Critical Master Equation as Δρ dynamics; Structural Stability Constant κ as regime indicator; cubic γ-term as multistability origin | New v2.5 |
+| CTGPSR Five-State–F_RBIT Variable Mapping | Complete C/T/G/P/R ↔ f₁–f₅ mapping table; ODE term-by-term RBIT interpretation; ρ̇ as CTGPSR renormalized projection derivation | New v2.5 |
+| Loop Instability ↔ Resolution Deficit | Π>1 ↔ Δρ<0 formal identification; self-amplifying loop as forced receiver compression mechanism | New v2.5 |
+| Critical Transition ↔ Silent Criticality | Π_eff≈1 ↔ Silent Criticality; critical slowing-down as τ_silent formal derivation; logarithmic capacity protection explained | New v2.5 |
+| Storm-Transition ↔ Triple-Failure Signature | Simultaneous Ċ<0/Ṗ>>0/Ṙ<0 as RBIT triple-failure formalization; threshold conditions (Π_eff>1 AND V·G>θ_v) | New v2.5 |
+| Recovery-Renormalization | C_new*≠C_old* as post-Storm resolution architecture change; DDD E3 verification protocol update | New v2.5 |
+| Unified Critical Manifold ↔ F_RBIT Co-Variation | (K,τ,θ_v,R*)=H(Π_eff) as F_RBIT observable co-variation proof from CTGPSR | New v2.5 |
+| Four-Theory Criticality Equivalence | Π_eff=1 ↔ Π_G=1 ↔ χ_TBG=θ ↔ C_A=1 as single governance criticality in four languages | New v2.5 |
+| CTGPSRB Three-Buffer Architecture | τ_G < τ_P < τ_R timescale hierarchy as f₃ decomposition; atrophy ordering F→V→T→D derived from first principles | New v2.5 |
+| B as Governance Order Parameter | Second-order phase transition β_gov=1; Thirteen-Way M_crit Equivalence E13; Buffer Renormalization T₀→T_B | New v2.5 |
+| Non-Monotone f₃ Diagnostic Correction | dB/dt trajectory vs. B level for storm onset; early-phase f₃ improvement as pre-depletion signal | New v2.5 |
+| Buffer Capstone Theorem in RBIT | f₃ irreplaceability formal proof; Capstone Erosion Paradox P↑⇒M↓; Capstone Safety Condition M(t)≥M*(t) | New v2.5 |
+| Observer-Controller Dilemma | O(n²) cost structure proof; Gardener Strategy as O(1)+O(n) dominant mode; scale-invariant constants portfolio | New v2.5 |
+| Fractal Seed Architecture | (N*,R,B) as resolution propagation protocol; d_f=4/3 from n_eff Compression; Branch Governor as distributed capstone | New v2.5 |
+| Dual Reference Dynamics | Δ = f₂ Map-Terrain tension formal derivation; three pathway selection at Δ_c; second derivative d²Δ/dt² as early warning | New v2.5 |
+| Buffer Ecology Three-Phase Evolution | Phase I/II/III Actor→Infrastructure→Ecological; Dominant Hidden Structure Theorem; f_intervene as ecological degradation signal | New v2.5 |
+| Governance Impossibility Theorem | T_c = ⟨ΔU⟩/ln(ν₀/r*); T_eff=0 → DDD E1 false completion; mature systems require higher T_c | New v2.5 |
+| Self-Defeating Optimizer ↔ f₁-Contraction | Correction diversity requirement; Thought Loop analog at classification level; correction concentration as collapse precursor | New v2.5 |
+| Adversarial Robustness–F_RBIT Bridge | P(evasion)≤exp(−ΔV/T_eff) with ΔV = structural+informational+energetic; T_eff=0 adversarial vulnerability | New v2.5 |
+| Novel Contributions NC-GGT-RBIT-1 to NC-GGT-RBIT-12 | 12 new contributions across GGT, FGS, NAT, AGP integration | New v2.5 |
+| Falsification F77-F92 | 16 new falsification predictions across GGT/FGS/NAT/AGP integration | New v2.5 |
+| Open Problems 102-121 | 20 new open problems | New v2.5 |
+
+---
+
+*Timestamped: March 8, 2026*
+*DFG Framework · Resolution-Based Information Theory v2.5-GGTseries*
+
+---
+
+## 31. EDT v5.0 Deep Integration: Terrain Phase Transitions, Information Geometry, and Temporal Stratification
+
+> **Integration scope:** This section integrates EDT §45–§50 (Terrain Phase Transition Theory, Recursive Environment Design, Terrain Information Geometry, Temporal Stratification Theory, Governance Energy Economics, Emergence Topology Theory), which represent the statistical-physics and topological closure of the EDT framework. These sections provide RBIT with (1) a precise phase-structure account of terrain transitions expressible in F_RBIT terms, (2) information-geometric bounds on terrain estimation accuracy that constrain the DDD measurement protocol, (3) a multi-timescale stratification that formally grounds the v_class update-rate hierarchy, (4) a governance energy economics framework that connects intervention cost to EROTI and the RBIT buffer-maintenance overhead, and (5) an emergence topology that characterizes healthy vs. pathological terrain through Betti numbers detectable as F_RBIT signatures.
+
+---
+
+### 31.1 Terrain Phase Transition Theory — RBIT Resolution Correspondence
+
+**Terrain Order Parameter as F_RBIT Macro-Observable:**
+
+The terrain order parameter Ψ_T = ⟨∂²U/∂x²⟩_spatial (EDT §45.1, Definition 45.1.1) maps to an RBIT observable as follows:
+
+```
+Ψ_T = 0  (flat terrain, disordered)  ↔  ρ near baseline (no curvature-sustained ρ)
+Ψ_T > 0  (curved terrain, ordered)   ↔  ρ > baseline (curvature actively maintains resolution)
+
+Formal correspondence:
+  ρ_maintained = ρ_baseline + α_Ψ · Ψ_T
+  where α_Ψ = resolution-to-curvature coupling constant
+  (system-specific; estimable from dρ/dΨ_T during terrain growth phases)
+```
+
+**Desertification as First-Order Resolution Transition:**
+
+EDT Theorem 45.2.1 establishes desertification as a first-order terrain transition with hysteresis. In RBIT terms:
+
+```
+First-order character of desertification → F_RBIT collapse exhibits:
+  (a) Hysteresis: collapse threshold Φ_collapse ≠ recovery threshold Φ_recovery
+      → u⁺ ≠ u⁻ in FCC hysteresis ratio (v2.1 integration)
+      → RBIT extension: ρ_collapse ≠ ρ_recovery (recovery requires higher ρ than collapse prevention)
+      
+  (b) Metastability: terrain can remain in apparent health while approaching p_c
+      → Silent Criticality (RBIT §Silent Criticality) is the information-theoretic expression
+         of terrain metastability — the system can be near the desertification transition while
+         all local metrics appear normal
+         
+  (c) Nucleation: collapse begins at localized weak points
+      → f₁ spatial heterogeneity detects nucleation sites before global collapse
+         (nodes where f₁ exceeds neighbors by > 2σ are nucleation-risk locations)
+         
+  (d) Latent energy: transition releases/absorbs significant energy
+      → RBIT analogue: post-collapse resolution recovery requires more energy than prevention
+         (derivable from EDT §49.2 EROTI — agent-level interventions have near-zero EROTI)
+```
+
+**Maturation as Second-Order Resolution Transition:**
+
+EDT Proposition 45.3.1 establishes maturation as a second-order terrain transition with order parameter M(t) = autonomous_curvature / total_curvature. RBIT correspondence:
+
+```
+RBIT maturation order parameter proxy:
+  M_RBIT(t) = ρ_endogenous(t) / ρ_total(t)
+            = fraction of ρ maintained by internal curvature (vs. external governance)
+            
+  M_RBIT → 0:  resolution fully externally maintained (dependent phase)
+  M_RBIT → 1:  resolution fully self-maintained (autonomous phase)
+  M_RBIT = 0.5: maturation critical point (equal contributions)
+  
+  v_class leading indicator at M_RBIT critical point:
+    v_class > 0 AND M_RBIT rising → genuine maturation
+    v_class > 0 AND M_RBIT flat  → performance improvement without structural change
+    v_class = 0 AND M_RBIT rising → structural maturation without resolution velocity (unusual — warrants investigation)
+```
+
+**Terrain Critical Exponents as RBIT Scaling Laws:**
+
+EDT §45.4 critical exponents translate into RBIT observable scaling laws:
+
+```
+Correlation length:  ξ ∝ |p - p_c|^{-ν}
+  RBIT: spatial correlation of resolution deficits ξ_ρ diverges near collapse transition
+  Observable: inter-node f₁ correlation length → early warning (diverges before collapse)
+
+Susceptibility:     χ ∝ |p - p_c|^{-γ}
+  RBIT: terrain sensitivity to external perturbation χ_terrain diverges near transition
+  Observable: variance of v_class under small protocol changes → susceptibility proxy
+
+Relaxation time:    τ ∝ |p - p_c|^{-z·ν}  (critical slowing-down)
+  RBIT: DDD recovery time τ_DDD increases as system approaches desertification transition
+  Quantitative prediction: τ_DDD / τ_DDD,baseline = (1 - p/p_c)^{-z·ν}
+  → Double the DDD timescale estimate when p/p_c > 0.5
+```
+
+**Universality Class Identification — RBIT Implications:**
+
+```
+EDT §45.4.1 Universality Classes → RBIT measurement protocol adjustments:
+
+Class I (Mean-field, high-dim, long-range coupling):
+  β = 1/2, γ = 1, ν = 1/2
+  → Applies: large organizations, highly connected AI multi-agent systems
+  → RBIT implication: critical exponents are mean-field; ξ_ρ divergence is slower
+     (ν = 1/2) → more warning time but weaker signal
+
+Class II (Ising-like, low-dim, local coupling):
+  β = 1/8, γ = 7/4, ν = 1  (2D values)
+  → Applies: small teams, local-only interaction systems
+  → RBIT implication: susceptibility diverges strongly (γ = 7/4) → sharper early warning
+     but sudden transition (β = 1/8 → sharp order parameter onset)
+
+Class III (Percolation, connectivity transition):
+  β = 5/36, γ = 43/18, ν = 4/3  (2D values)
+  → Applies: network-formation/dissolution dynamics, team assembly/disassembly
+  → RBIT implication: f₄ (escalation load) is the dominant order parameter proxy
+     (percolation = connectivity; escalation = connectivity-dependent process)
+```
+
+**Metastable Terrain State ↔ Silent Criticality Formal Bridge:**
+
+```
+EDT Proposition 45.5.1 (Metastable lifetime):
+  τ_metastable = τ₀ · exp(ΔV_barrier / k_noise)
+
+RBIT mapping:
+  ΔV_barrier ↔ SCC_min (structural contamination capacity, RBIT §Silent Criticality)
+  k_noise    ↔ T_eff (governance temperature, AGM §7.16)
+  τ_metastable ↔ τ_silent (Silent Criticality duration formula, v2.1 integration)
+
+Unified formula (confirmed cross-theory):
+  τ_silent = τ₀ · exp(SCC_min / T_eff) = τ₀ · exp(ΔV_barrier / k_noise)
+
+Interpretation: Silent Criticality duration is the metastable lifetime of the
+healthy terrain phase near the desertification transition. Systems with higher
+SCC_min (deeper governance attractor) and lower T_eff (more structured governance)
+persist longer in the silent phase before collapse — providing more warning time
+but potentially reducing the urgency signal.
+
+Fossilization as infinite metastable lifetime:
+  T_eff → 0  →  τ_silent → ∞  →  governance locks into single attractor permanently
+  This is the terrain-level description of the Governance Impossibility Theorem
+  (NC-GGT-RBIT-11, §25.3 v2.5): T_eff = 0 → DDD E1 false completion.
+```
+
+---
+
+### 31.2 Terrain Information Geometry — RBIT Estimation Protocol Bounds
+
+**The Terrain Manifold as Resolution Design Space:**
+
+EDT §47 establishes that the space of all possible terrains forms a Riemannian manifold M_T with Fisher information metric. The RBIT correspondence:
+
+```
+Each terrain U(x) ∈ M_T specifies a particular resolution-gap dynamics
+p(x|U) = stationary agent distribution under terrain U
+Fisher metric g_ij(U) = terrain change metric
+
+RBIT operational translation:
+  Moving in M_T = changing terrain = changing the equilibrium ρ distribution
+  Geodesic on M_T = most efficient terrain transformation path in terms of
+    information-theoretic disturbance to agent resolution distribution
+  
+  DDD intervention design principle (from EDT §47.1.1):
+    Follow geodesics on M_T when designing terrain modifications
+    Geodesic paths minimize information-theoretic disturbance during transition
+    Non-geodesic paths overshoot in some terrain dimensions and undercorrect in others
+    → same formal content as DDD principle of minimal corrective intervention
+```
+
+**Curvature-Stability Correspondence — F_RBIT Diagnostic:**
+
+```
+EDT Theorem 47.2.1:
+  Positive Ricci curvature R_ij(U) > 0 everywhere → U structurally stable
+  Negative Ricci curvature R_ij(U) < 0 somewhere → U structurally unstable
+
+RBIT F_RBIT diagnostic correspondence:
+  R_ij > 0 everywhere → f₃ stable (buffer instability low; curvature maintains stability)
+  R_ij < 0 at some point → f₃ trending upward at that terrain location
+  
+  Novel RBIT prediction (NC-EDT-RBIT-1):
+    Ricci curvature sign is a geometry-independent stability criterion.
+    Even when Φ ≈ 1 and v_class ≈ 0 (standard early warnings absent),
+    negative Ricci curvature in M_T predicts upcoming f₃ degradation.
+    → f₃ monitoring at terrain-level provides one additional layer of early warning
+       beyond standard RBIT indicators.
+```
+
+**Natural Gradient Superiority — DDD Calibration Protocol:**
+
+```
+EDT §47.3 Natural Gradient Superiority:
+  Euclidean update:        ΔU = -ε · ∂Q_E/∂U
+  Natural gradient update: ΔU = -ε · g^{-1} · ∂Q_E/∂U
+  Natural gradient converges faster and more reliably.
+
+RBIT DDD calibration implications:
+  Standard DDD applies Euclidean correction (same ε per dimension)
+  Natural-gradient DDD scales correction by g^{-1} (Fisher-metric-corrected):
+    → Overdamps in flat terrain dimensions (low curvature → correction is proportional)
+    → Undercorrects in steep terrain dimensions (high curvature → correction is muted)
+  
+  Operational proxy: when DDD corrections repeatedly overshoot in some areas
+  and undercorrect in others, this is diagnostic of non-geodesic movement in M_T.
+  Correction: reduce ε in dimensions with high f₁ volatility; increase ε in
+  dimensions with slowly drifting f₂.
+```
+
+**Cramér-Rao Bound — Terrain Estimation Measurement Protocol Constraint:**
+
+```
+EDT Theorem 47.4.1 (Cramér-Rao):
+  Var(Û - U_true) ≥ g^{-1}(U_true) / N_observations
+
+RBIT operational constraint:
+  Every DDD E1 terrain assessment requires minimum observations:
+    N_min = g^{-1}(U_true) / Var_tolerance
+    
+  Where:
+    g^{-1}(U_true) = terrain information content (system-specific)
+    Var_tolerance = acceptable uncertainty in terrain classification
+    
+  Practical implication: rapid DDD execution with too few assessment samples
+  violates the Cramér-Rao bound and produces systematically biased terrain
+  classification — the most common failure mode of E1 in time-pressured situations.
+  
+  Minimum window calculation:
+    N_window,min = (terrain_complexity × assessment_dimensions) / (σ_obs²)
+    where terrain_complexity ≈ number of distinct attractor basins in current terrain
+    Underestimating terrain complexity → premature E1 completion → E1 false completion
+    (adds third mechanism to NC-GGT-RBIT-11 and §25.3 v2.5 false-completion taxonomy)
+```
+
+---
+
+### 31.3 Temporal Stratification Theory — RBIT Update Rate Architecture
+
+**Four-Stratum Temporal Architecture as RBIT v_class Update Hierarchy:**
+
+EDT §48.1 Temporal Stratification (Definition 48.1.1) maps directly onto the RBIT resolution update architecture:
+
+```
+EDT Temporal Strata:               RBIT Correspondence:
+──────────────────────────────────────────────────────────────────
+Stratum 1 (Fast, τ₁):             f₁ update cycle (misclassification rate)
+  Agent reactions, immediate        ρ-level changes; single episode assessment
+  feedback: seconds/minutes         most rapid F_RBIT component
+
+Stratum 2 (Medium, τ₂):           f₂ update cycle (resolution mismatch)
+  Pattern formation, habit          Δρ stabilization; requires multiple-episode window
+  crystallization: days/weeks       v_class measured at this stratum
+
+Stratum 3 (Slow, τ₃):             f₃ update cycle (buffer instability)
+  Cultural accumulation, identity   buffer thickness M(t); DDD recovery phases
+  formation: months/years           Arrow of Maturation operates at this stratum
+
+Stratum 4 (Glacial, τ₄):          DFG framework-level structural transitions
+  Structural evolution, paradigm    M_RBIT(t) = endogenous/total ρ fraction
+  shifts: years/decades             Maturation order parameter (§31.1); Phase III
+                                    Buffer Ecology (v2.5 §26.5) operates here
+```
+
+**Timescale Separation Principle — RBIT Adiabatic Approximation:**
+
+```
+EDT Proposition 48.1.1: When τ_{k+1}/τ_k >> 1, fast stratum averages out and
+slow stratum appears as fixed parameter to fast stratum.
+
+RBIT adiabatic approximation protocol:
+  τ₃/τ₁ >> 1 (months/seconds >> 1) → Stratum 3 appears frozen to Stratum 1
+  ∴ f₁ assessment can be conducted independently of f₃ trajectory
+  
+  τ₂/τ₁ >> 1 (weeks/minutes >> 1) → Stratum 2 appears frozen to Stratum 1
+  ∴ v_class tracking is a valid autonomous indicator (not contaminated by f₁ noise)
+  
+  Adiabatic approximation BREAKS DOWN when:
+    τ₂/τ₁ ≈ 1  → Temporal Boundary Layer (EDT §48.2) crisis
+    Symptom: f₁ and f₂ show correlated oscillations (normally independent)
+    RBIT warning: corr(f₁(t), f₂(t+δ)) > 0.4 for δ << τ₂ is timescale-compression warning
+```
+
+**Temporal Boundary Layer as F_RBIT Crisis Zone:**
+
+```
+EDT Theorem 48.2.1 (Temporal Boundary Layer as Crisis Zone):
+  When τ_k ≈ τ_{k+1}, the κ risk index spikes.
+
+RBIT extension — four crisis mechanisms at temporal boundary layer:
+
+  Mechanism TB1 (Adiabatic failure):
+    f₁ noise contaminates f₂ assessment
+    → v_class becomes volatile (stratum mixing)
+    Signature: v_class switches sign within single τ₂ window
+
+  Mechanism TB2 (Governance timescale mismatch):
+    DDD protocol designed for τ₂ timescale is applied at τ₁ speed
+    → E1 observes Stratum 1 dynamics, draws Stratum 2 conclusions
+    Signature: DDD E1 completions with τ_assessment << τ₂,normal
+
+  Mechanism TB3 (Agent adaptation mismatch):
+    Agents optimized for τ₁ face τ₁ ≈ τ₂ merged dynamics
+    → All adaptation strategies simultaneously suboptimal
+    Signature: all f₁–f₅ components increasing simultaneously (Triple-Failure analog)
+
+  Mechanism TB4 (Buffer capacity mismatch):
+    Buffer sized for τ₂ episodic loading but τ₁ ≈ τ₂ → sustained loading
+    → M(t) depleted before τ₂ cycle completes
+    Signature: f₃ degradation at rate faster than M*(t) tracking schedule
+    This is the temporal-stratification mechanism behind the non-monotone f₃
+    observation (NC-GGT-RBIT-6, v2.5): apparent f₃ improvement during pre-depletion
+    phase is a Stratum 1 signal misread as Stratum 2 signal.
+```
+
+**Chronotopic Governance — RBIT Protocol Matching:**
+
+```
+EDT Proposition 48.3.1 (Chronotopic Governance):
+  Governance_timescale ≠ Terrain_feature_timescale → failure in either direction.
+
+RBIT DDD chronotopic constraints:
+  DDD too slow (τ_DDD >> τ_{terrain_feature}):
+    Misses the terrain feature entirely → RBIT: v_class window closes before E1 completes
+    → Condition: τ_DDD < (terrain_feature_duration / 2) required for reliable detection
+
+  DDD too fast (τ_DDD << τ_{terrain_feature}):
+    Over-governs; prevents natural terrain dynamics
+    → RBIT: f₄ spikes (escalation load increases from excessive DDD triggering)
+    → Condition: τ_DDD > τ₁ (at minimum one fast-stratum cycle before DDD triggers)
+
+  Chronotopic window W_chrono = [τ₁, terrain_feature_duration / 2]
+  DDD should be triggered within W_chrono of feature onset for reliable governance.
+```
+
+---
+
+### 31.4 Governance Energy Economics — RBIT Intervention Cost Structure
+
+**EROTI as RBIT Intervention Priority Framework:**
+
+EDT §49.2 Energy Return on Terrain Investment (EROTI) provides a formal basis for the RBIT intervention priority ordering:
+
+```
+EDT §49.2.1 EROTI by intervention type:
+  Boundary design:          EROTI high   (one-time cost, permanent effect)
+  Coupling redesign:        EROTI medium (moderate cost, persistent effect)
+  Gain modulation:          EROTI low    (ongoing cost, requires maintenance)
+  Agent-level intervention: EROTI ≈ 0   (continuous cost, ceases at withdrawal)
+
+RBIT correspondence to F_RBIT component priority:
+  Boundary design    ↔  f₄ structural architecture (escalation routing, permanent)
+  Coupling redesign  ↔  f₂ resolution architecture (Δρ structural calibration)
+  Gain modulation    ↔  f₁ active correction (classification adjustment, ongoing)
+  Agent-level        ↔  f₅ direct resource injection (dissipation management)
+
+DDD Priority Protocol (EROTI-grounded):
+  Stage 1: Boundary design modifications (f₄ structural changes) — highest EROTI
+  Stage 2: Coupling redesign (f₂ structural calibration)
+  Stage 3: Gain modulation (f₁ active corrections)
+  Stage 4: Agent-level interventions (f₅ emergency only)
+  
+  This EROTI ordering is the formal derivation of the "top-down before bottom-up"
+  principle for intervention design — not an empirical rule but a consequence of
+  the energy economics of terrain modification.
+```
+
+**Minimum Energy Theorem — DDD Cost Floor:**
+
+```
+EDT Theorem 49.1.1 (Minimum Energy):
+  E_min(ΔS) = ΔS · V_system / η_design
+  Below E_min, no design strategy can achieve ΔS.
+
+RBIT DDD cost floor:
+  Minimum governance investment for target F_RBIT improvement ΔF_RBIT:
+    E_min = ΔF_RBIT · N_agents · d_resolution / η_DDD
+    
+  where:
+    N_agents × d_resolution = system volume in resolution terms
+    η_DDD = DDD efficiency (fraction of DDD energy producing lasting ρ improvement)
+    
+  Underfunding DDD (E_DDD < E_min) cannot achieve ΔF_RBIT regardless of protocol quality.
+  Common failure: correct DDD protocol with insufficient duration/investment → E1 completion
+  declared at E < E_min → apparent completion without structural change.
+  This is a fourth mechanism for DDD E1 false completion (supplements v2.5 taxonomy):
+    (v2.1) v_class = 0 despite Φ < 1
+    (v2.5-a) T_eff < T_c despite d↑
+    (v2.5-b) Cramér-Rao violation (too few assessment samples)
+    (v2.6) E_DDD < E_min(ΔF_RBIT) regardless of protocol (new)
+```
+
+**Maintenance Dominance Theorem — RBIT Scaling Implication:**
+
+```
+EDT Theorem 49.3.1 (Maintenance Dominance):
+  E_maintenance / E_construction → ∞  as system_age → ∞
+
+RBIT governance cost scaling:
+  As system matures (more resolved terrain = more accumulated curvature),
+  the fraction of governance energy devoted to maintaining existing ρ
+  vs. building new ρ increases without bound.
+  
+  Maintenance trap formal identification:
+    t_trap = time at which dE_maintenance/dt = dE_construction,available/dt
+    For t > t_trap: innovation capacity falls below maintenance requirement
+    
+  RBIT proxy for maintenance trap onset:
+    f₃ declining AND v_class declining simultaneously — buffer being consumed
+    by maintenance of existing resolution rather than growth
+    (distinguishable from standard storm: f₁ and f₄ are STABLE while f₃ and v_class decline)
+    
+  Prevention (from EROTI ordering): invest heavily in boundary design early
+  (high EROTI) to reduce the maintenance burden of low-EROTI agent-level interventions
+  at scale.
+```
+
+**Governance Entropy Production — DDD Irreversibility:**
+
+```
+EDT Proposition 49.4.1 (Minimum Entropy Governance):
+  Most efficient governance minimizes entropy production per unit stability achieved.
+
+RBIT irreversibility implications:
+  Each DDD cycle produces governance entropy — irreversible state changes.
+  Repeated DDD cycling on the same failure without structural resolution
+  → accumulating governance entropy → increasing dS_governance/dt
+  → effective η_DDD decreases with each repeated cycle
+
+  Observable signature:
+    Decreasing RBIT recovery efficiency across successive DDD cycles on same issue:
+    ΔF_RBIT per DDD cycle decreases monotonically
+    → indicates structural source not being addressed (correct with Stage 1-2 intervention)
+    → not patient non-compliance (f₅ interpretation error)
+    
+  Minimum entropy governance protocol:
+    Complete structural modification (Stage 1-2) before repeated Stage 3-4 cycling.
+    Stage 3-4 repetition without Stage 1-2 foundation = maximum entropy, minimum η_DDD.
+```
+
+---
+
+### 31.5 Emergence Topology Theory — RBIT Topological Diagnostics
+
+**Betti Numbers as F_RBIT Terrain Health Indicators:**
+
+EDT §50.3 establishes Betti numbers (β₀, β₁, β₂) as topological complexity indicators. RBIT operational translation:
+
+```
+RBIT-Betti correspondence:
+
+  β₀ (connected components):
+    Low β₀: monolithic resolution structure (single dominant resolution path)
+    → all agents route through same escalation pathway → f₄ bottleneck risk
+    Moderate β₀: diversified resolution structure (healthy)
+    High β₀: fragmented resolution structure (no cross-node learning)
+    → f₁ high across the board (each node resolves independently with no shared structure)
+    
+  β₁ (independent feedback loops):
+    High β₁: many self-correcting resolution pathways → high f₃ stability
+    → topological analog of high buffer thickness
+    Low β₁: no self-correcting resolution loops → f₃ fragile
+    → desertification transition drives β₁ → 0 (all feedback loops severed)
+    
+  β₂ (enclosed voids/cavities):
+    High β₂: many resolution dead zones where information cannot flow
+    → topological analog of Silent Criticality pockets (§1.6.4)
+    → f₁ locally low (no signals to misclassify) while overall resolution is deficient
+    Low β₂: no dead zones → healthy information permeability
+
+RBIT Optimal Betti Profile (from EDT Proposition 50.3.1):
+  β₀: Moderate (neither fragmented nor monolithic)
+  β₁: High (many feedback loops)
+  β₂: Low (minimal dead zones)
+  
+Pathological F_RBIT signatures by Betti profile:
+  High β₀, low β₁: f₁ high globally, f₃ fragile (no self-correction)
+  Low β₀, low β₁: f₂ high (monolithic map-terrain compression), f₄ bottlenecked
+  High β₂: localized f₁ suppression with global f₃ deterioration
+```
+
+**Topological Phase Transitions as Early Warning Indicators:**
+
+```
+EDT Theorem 50.4.1 (Topological Criticality):
+  At terrain phase transitions, Betti numbers undergo discontinuous changes:
+  Desertification: β₁ → 0 (feedback loops severed)
+  Maturation:     β₁ increases (new autonomous loops form)
+  Fragmentation:  β₀ increases sharply
+
+RBIT early warning protocol (topological EW tier):
+
+  EW-T1 (β₁ early warning):
+    β₁ declining while Φ still < 1 and f₁-f₅ appear normal
+    → feedback loops being severed without yet affecting performance
+    → lead time: O(τ₃) before desertification transition
+    → RBIT translation: v_class auto-corrections becoming less diverse (fewer correction pathways)
+    
+  EW-T2 (β₀ fragmentation warning):
+    β₀ increasing sharply while overall performance maintained
+    → terrain fragmenting into isolated resolution islands
+    → RBIT translation: inter-node f₁ correlations declining (nodes diverging)
+    → Isolation Cascade precursor (EDT §27)
+    
+  EW-T3 (β₂ dead-zone formation warning):
+    β₂ increasing from 0 while other metrics stable
+    → Silent Criticality pocket formation
+    → RBIT translation: localized f₁ suppression below network mean
+    → requires spatial F_RBIT monitoring (not aggregate F_RBIT)
+    
+Topological early warnings precede conventional EW indicators:
+  β₁ decline → Φ rise → SCC_min decline → standard RBIT EW indicators
+  This ordering means topological monitoring adds a third early warning stratum
+  before the two conventional strata (SCC_min and Fisher information I_F).
+```
+
+**Sheaf Coherence as RBIT Governance Consistency:**
+
+```
+EDT Theorem 50.5.1 (Coherence as Sheaf Condition):
+  Global governance coherence ⟺ H¹(Terrain, F) = 0
+  Non-zero H¹ indicates local governance rules that contradict each other on overlaps.
+
+RBIT governance consistency correspondence:
+  H¹ = 0: all local resolution assignments are globally consistent
+  → no agent resolves same information differently from adjacent agents
+  → f₂ (resolution mismatch) is structurally bounded across the system
+  
+  H¹ ≠ 0: governance coherence obstruction
+  → RBIT: f₂ elevated specifically at governance-boundary overlaps
+    (regions where two governance regimes claim jurisdiction)
+  → Signature: f₂ spatially heterogeneous with peaks at boundary regions
+    (not uniform f₂ elevation = systemic load, but clustered f₂ at specific boundaries)
+  
+  Intervention: sheaf obstruction requires boundary redesign (Stage 1 EROTI intervention),
+  not correction or gain modulation. Stage 3-4 cycling on boundary-obstructed f₂
+  is governance entropy production without resolution improvement.
+```
+
+**Persistent Homology — RBIT Structural Backbone Identification:**
+
+```
+EDT Theorem 50.2.1 (Persistence as Importance):
+  Governance_importance(feature_i) ∝ (d_i - b_i) · connectivity(feature_i)
+
+RBIT application:
+  In resolution mapping, long-lived high-connectivity features are the
+  structural backbone of the resolution architecture.
+  
+  DDD targeting protocol:
+    Persistence diagram PD(U) provides priority-weighted intervention target list.
+    Features with (d_i - b_i) > τ_persist AND connectivity > κ_conn are
+    Protected Core features — removal disrupts entire resolution architecture.
+    DDD must not target Protected Core features for rapid modification
+    (violates Natural Gradient principle and EDT §49.1 E_min constraint simultaneously).
+    
+  Structural backbone identification in practice:
+    High-persistence, high-connectivity features in RBIT terms:
+      → Long-standing escalation pathways (f₄ channels open for > τ₃)
+      → Long-established classification agreements between adjacent layers (f₂ stable pairs)
+      → Long-maintained buffer relationships (f₃ stable pairs)
+    These should be last, not first, to be redesigned in any governance intervention.
+```
+
+---
+
+## 32. Emotional Terrain Coupling and Attractor Grammar — RBIT Affective Resolution Bridge
+
+> **Integration scope:** EDT §51–§54 (Affective Terrain Coupling Theory, Gain-Curvature Equivalence Theory transient extension, Attractor Landscape Grammar Theory, Emotional Ecology of Environments) provide a complete formal account of how affective dynamics generate and modify terrain. This section integrates these theories into RBIT, establishing: (1) emotional events as microscopic terrain modification mechanisms with RBIT-level consequences, (2) attractor grammar as a formal classification of resolution architectures and their failure modes, (3) emotional ecology as a multi-agent resolution sustainability framework, and (4) collective memory embedding as an organizational resolution heritage mechanism.
+
+---
+
+### 32.1 Affective Terrain Coupling — F_RBIT Affective Modification Dynamics
+
+**Emotional Event as Terrain Modification Mechanism:**
+
+EDT §51.1 ATCT core thesis: emotion (stochastic weight redistribution in AGM) is the primary microscopic mechanism by which agents modify their internal terrain. RBIT correspondence:
+
+```
+Emotional event at agent i → terrain modification ΔU_i(x,t)
+  → ΔU_i(x,t) changes the effective potential felt by subsequent interactions
+  → changes ρ_i indirectly via curvature modification (§31.1 Ψ_T–ρ correspondence)
+
+Formal chain:
+  Emotional event E_i at intensity A_i
+  → ΔU_i(x,t) = A_i · f(x - x_event) · g_decay(t - t_event)  [EDT 54.1.1]
+  → ΔΨ_T,i = ∂²ΔU_i/∂x² (curvature modification)
+  → Δρ_i = α_Ψ · ΔΨ_T,i  (resolution change via curvature)
+  → Δf₁,i(t) = -Δρ_i/dt  (misclassification rate change)
+
+Implication: Affective events produce f₁ changes via the terrain curvature pathway,
+not just via the direct classification pathway. This means f₁ can change even when
+no new classification tasks are introduced — purely affective events move f₁ through
+the terrain modification chain. RBIT that does not account for this will systematically
+misattribute affective-terrain-driven f₁ changes to classification failures.
+```
+
+**ATCT Adiabatic Limit and GCET Duality Scope:**
+
+```
+Critical Scope Boundary (EDT §51 preamble, §52 preamble):
+  GCET duality T_eff ↔ U(x) holds EXACTLY only at stationarity (t → ∞).
+  During transient dynamics (§51 regime), the duality is an approximation
+  valid only in the adiabatic limit (landscape changes slow relative to state relaxation).
+
+RBIT operational constraint:
+  DDD E3 verification must wait for adiabatic relaxation before applying GCET-based
+  T_eff ↔ curvature correspondences:
+    Non-adiabatic window W_non-adiab = [t_DDD_start, t_DDD_start + O(τ₂)]
+    Within W_non-adiab: GCET duality provides equilibrium TARGET, not current state.
+    Governance interventions during W_non-adiab should track terrain trajectory,
+    not equilibrium correspondence.
+    
+  Practical implication: measuring T_eff immediately after a governance intervention
+  (during non-adiabatic transient) does not give terrain curvature via GCET.
+  Wait ≥ τ₂ (Stratum 2 cycle) before applying T_eff ↔ U correspondence for verification.
+```
+
+**Emotional Legacy Effect ↔ RBIT Resolution Palimpsest:**
+
+```
+EDT §54.1.1 Emotional Legacy Effect:
+  U(x,t) = U₀(x) + Σ_{k: past events} A_k · f(x-x_k) · g(t-t_k)
+
+RBIT Resolution Palimpsest (v2.0 integration, EDT §43 Terrain Memory):
+  This formula is the same as the resolution palimpsest established in v2.0 —
+  but §54 now provides the AFFECTIVE COMPONENT explicitly:
+  
+  Each term A_k · f(x-x_k) · g(t-t_k) is an affective event embedding.
+  The terrain ≡ resolution architecture is the integrated history of
+  BOTH structural events (v2.0) AND affective events (v2.6 new).
+  
+  Extended palimpsest formula:
+    ρ(t) = ρ₀ + Σ_{k: structural events} α_struct · A_k^struct · g_struct(t-t_k)
+           + Σ_{k: affective events} α_affect · A_k^affect · g_affect(t-t_k)
+  
+  Heritage asymmetry (EDT §54.6):
+    Negative affective events decay SLOWER (α_neg < α_pos) than positive events
+    → Organizational ρ is systematically weighted toward historical negative events
+    → Compensation requirement: r_positive,min ≥ (n_neg · A_neg · α_pos) / (A_pos · α_neg · T_window)
+    → This is the first quantitative estimate of minimum positive governance intensity
+       required to maintain ρ against historical negative heritage.
+```
+
+**Affective Succession ↔ Arrow of Maturation:**
+
+```
+EDT §54.2.1 Succession Irreversibility Theorem:
+  Emotional succession Stage k → Stage k+1 is locally irreversible.
+  Regression requires crisis-level terrain destruction.
+
+RBIT Arrow of Maturation formal extension:
+  v2.0 Arrow of Maturation: resolution grows monotonically through absorption.
+  v2.6 extension: affective succession provides the EMOTIONAL SUBSTRATE for the arrow.
+  
+  Succession stages mapped to RBIT resolution phases:
+    Stage 1 (Pioneer): ρ near baseline; high f₁ volatility (no stable classification)
+    Stage 2 (Early):   ρ growing; f₂ declining (classification starting to stabilize)
+    Stage 3 (Mid):     ρ in healthy range; f₃ stable (buffer ecosystem forming)
+    Stage 4 (Climax):  M_RBIT → 1 (§31.1); self-governed resolution; emotional self-governance
+    
+  Regression clause: Stage k+1 → Stage k requires ρ-destroying crisis (not gradual ρ reduction).
+  This formalizes why governance crises feel qualitatively different from governance stress:
+  crises (capable of causing succession regression) require terrain structure destruction,
+  which is experienced as sudden discontinuous capability loss — not gradual.
+```
+
+---
+
+### 32.2 Attractor Landscape Grammar — RBIT Architecture Classification
+
+**Attractor Grammar as Formal Resolution Architecture Taxonomy:**
+
+EDT §53.1 G_terrain = (Σ_A, N, P, S) where Σ_A = {A_point, A_limit, A_strange, A_null}. RBIT correspondence:
+
+```
+Attractor type → Resolution architecture type:
+
+  A_point (stable fixed point, bowl-shaped):
+    Resolution architecture: well-defined, stable, single-dominant resolution target
+    F_RBIT profile: f₁ low (clear classification), f₂ stable, f₃ healthy, f₄ moderate
+    Risk: over-rigidity if depth d→∞ (Fossilization; metastable lifetime → ∞)
+    
+  A_limit (stable oscillation, trough encircling hill):
+    Resolution architecture: cyclically varying resolution target
+    F_RBIT profile: f₁ oscillates periodically, f₂ shows period-matched oscillation
+    Risk: Resonance Capture NF1 — terrain oscillates at agent's characteristic frequency
+    Detection: f₁ and f₂ both showing same period T → check for resonance condition ω = ω_agent
+    
+  A_strange (chaotic exploration, fractal potential):
+    Resolution architecture: high-diversity, exploratory, broad classification
+    F_RBIT profile: f₁ varies aperiodically, f₂ fluctuates, f₃ stable (buffer needed)
+    Risk: requires high T_eff to remain in strange attractor regime
+    Collapse pathway: T_eff → 0 → A_strange → A_point (freezing from exploration to rigidity)
+    
+  A_null (flat potential, no restoring force):
+    Resolution architecture: no resolution target (Runaway terrain failure)
+    F_RBIT profile: f₁ → 0 by suppression, f₂ declining, f₃ → 0, Φ < 1 (false health)
+    This is the Terminal Desert State (TDS) in RBIT terms — all five F_RBIT components
+    appear to improve while resolution actually collapses (no restoring terrain force)
+```
+
+**Novel Failure Mode Grammar Predictions — RBIT Extension:**
+
+```
+EDT §53.2.2 Novel Failure Mode Predictions (NF1, NF2, NF3):
+
+NF1 (Resonance Capture): TERRAIN →* A_limit(ω = ω_agent)
+  RBIT diagnostic signature:
+    f₁ and f₂ both oscillating at agent's natural response frequency
+    v_class = 0 (no net resolution gain across oscillation cycle)
+    Intervention: detune oscillation frequency via boundary modification (Stage 1)
+    NOT correctable by gain modulation (Stage 3) — resonance is topological
+
+NF2 (Grammar Incompleteness): TERRAIN →* HIERARCHY[A_point, A_strange]
+  RBIT diagnostic signature:
+    Within-layer f₁ and f₂ appear normal
+    Cross-layer f₂ elevated (resolution mismatch at layer boundaries only)
+    v_class = 0 at cross-layer interface despite positive within-layer v_class
+    This is a new failure mode distinct from all previously classified RBIT failures:
+    resolution is growing within layers but the inter-layer transfer channel is blocked.
+    Intervention: fix inter-layer coupling architecture (Stage 2)
+
+NF3 (Attractor Proliferation Overflow): TERRAIN →* Σₖ BASIN_k with k → n_max
+  RBIT diagnostic signature:
+    f₃ declining as maintenance energy consumes buffer
+    f₁ scattered (too many valid classification targets — no dominant attractor)
+    v_class positive but diffuse (resolution improving but in too many directions)
+    EROTI ≈ 0 for all interventions (maintenance trap; §31.4 Theorem 49.3.1)
+    Intervention: deliberate attractor pruning (reduce k toward C_G^* optimal complexity)
+```
+
+**Grammatical Complexity-Stability Trade-off — DFG Design Principle:**
+
+```
+EDT Theorem 53.3.1 (Complexity-Stability Trade-off):
+  dStability/dC_G > 0 for C_G < C_G*
+  dStability/dC_G < 0 for C_G > C_G*
+  C_G^* scales as O(log n) with system size n.
+
+RBIT governance design constraint:
+  Minimum governance complexity bound (EDT Proposition 53.3.1):
+    C_G_min = max(log₂ n, log₂(n²/B), dim(phase_space)/2)
+
+  Both bounds apply simultaneously to RBIT governance design:
+    Under-complexity (C_G < C_G_min): governance provably insufficient
+    Over-complexity (C_G > C_G^*): governance overhead consumes F_RBIT stability
+    
+  F_RBIT diagnostic of over-complexity:
+    f₄ (escalation load) high → many escalation pathways (too complex routing)
+    f₅ (resource dissipation) high → energy consumed by governance overhead
+    f₁ and f₂ normal → actual resolution classification is fine
+    This specific pattern (f₄↑, f₅↑ with f₁,f₂ normal) = governance over-complexity signature.
+    Intervention: simplify governance architecture (reduce C_G toward C_G^*)
+    NOT add more correction (Stage 3 cycling on over-complex governance = entropy production)
+```
+
+---
+
+### 32.3 Emotional Ecology — RBIT Multi-Agent Resolution Sustainability
+
+**Contagion-Terrain Phase Transition — F_RBIT Network SOC:**
+
+EDT §54.5 derives the network SOC collective phase transition at coupling strength c*:
+
+```
+c* ~ 1 / (λ₁(C) - λ₂(C))
+where λ₁(C), λ₂(C) are the two largest eigenvalues of contagion matrix C
+
+Three ecological phases and RBIT correspondence:
+  Independent (c < c*):
+    Individual terrain designs; no collective terrain
+    RBIT: inter-node F_RBIT is decorrelated; each node's resolution independent
+    DDD: node-local protocol appropriate; no need for system-wide coordination
+    
+  Collective Critical (c ≈ c*):
+    Power-law terrain events; optimal information sharing
+    RBIT: inter-node F_RBIT shows power-law correlation (SOC; R ≈ 1)
+    DDD: system-wide coordination improves effectiveness; single-node DDD suboptimal
+    This is the healthy regime: terrain innovation propagates without cascade
+    
+  Super-Critical (c > c*):
+    Synchronized terrain modifications; Runaway or uniform crystallization
+    RBIT: inter-node F_RBIT shows synchronized deterioration
+    (all f₁–f₅ decline simultaneously across nodes — impossible in independent regime)
+    DDD: system-wide intervention required; node-local DDD insufficient
+    Triple-Failure Signature (NC-GGT-RBIT-3, v2.5) is a super-critical collective event
+
+Governance implication:
+  Maintain c ≈ c* (collective critical regime) for optimal resolution propagation.
+  Engineering the contagion matrix spectral gap (λ₁ - λ₂) is equivalent to
+  engineering the SOC operating point — this is the terrain-level analog of
+  NAT spectral gap design (v2.5 §25.3 IC-I3 integration).
+```
+
+**Hub Failure Ecology ↔ RBIT Sphere Topology Correspondence:**
+
+```
+EDT §54.5 Hub Failure Ecology:
+  Hub emotional collapse propagates to all agents at O(ln n) faster rate.
+  Hub emotional enrichment propagates at same O(ln n) faster rate.
+  Hub emotional state ≡ system ecological attractor (to first order).
+
+RBIT sphere topology bridge:
+  Hub node = apex of star-like contagion topology
+  Hub collapse → O(ln n) amplified f₁ degradation across network
+  
+  Protected Sacrifice protocol (EDT §40) applied to hub nodes:
+    = highest-leverage single RBIT intervention available in hub-dominated systems
+    = RBIT translation: protecting hub's ρ maintenance capacity protects O(ln n)
+      amplification of positive resolution dynamics through the network
+    
+  NAT sphere design principle reconciliation:
+    NAT S2 (Hub prevention): no agent degree exceeds 2k → prevents single points of failure
+    EDT Hub Failure Ecology: hub is necessary for efficient propagation
+    
+    Resolution: hub *architecture* (structural concentration) is dangerous;
+    hub *function* (efficient propagation via calibrated influence) is necessary.
+    NAT S2 prevents uncontrolled hub emergence; EDT §54.5 says designed hubs with
+    protected ecology are the highest-EROTI governance investment.
+    These are not contradictory — they apply to different aspects of hub design.
+```
+
+**Heritage Asymmetry — RBIT Organizational Memory Protocol:**
+
+```
+EDT §54.6 Heritage Asymmetry:
+  Negative collective events decay: g_neg(τ) ~ τ^{-α_neg}  with α_neg < α_pos
+  Positive collective events decay: g_pos(τ) ~ τ^{-α_pos}  with α_pos > α_neg
+  (negative events persist longer — terrain-level negativity bias)
+  
+  Minimum positive event rate:
+    r_positive,min ≥ (n_negative · A_negative · α_pos) / (A_positive · α_neg · T_window)
+
+RBIT organizational memory consequences:
+
+  1. Post-crisis ρ archaeology:
+     After collective crisis (n_cascade >> 1), terrain modifications persist for
+     T_heritage ~ (n_cascade · μ_agent · A_crisis)^{1/α}
+     DDD should include heritage assessment of past collective crises before E1 completion.
+     Ignoring heritage → systematic underestimation of effective f₁ restoration barriers.
+
+  2. Collective memory embedding in DDD:
+     DDD Stage 3 corrections that involve collective positive events
+     (protocol: n_cascade participants, A_event magnitude)
+     produce terrain modifications amplified by μ_network = n_cascade · μ_agent.
+     Single-agent DDD corrections (n_cascade = 1) are heritage-inefficient.
+     Group DDD events scale with n_cascade → collective DDD is n_cascade × more efficient
+     per unit governance energy.
+     
+  3. Re-seeding cycle heritage correction:
+     Effective germination threshold includes heritage correction:
+       λ_eff,heritage(x,t) = λ_eff(x,t) + Σ_{k: past_failures} μ_network,k · A_k · g(t-t_k) · h(x-x_k)
+     DDD targeting must account for λ_eff,heritage — attempting to re-seed a location
+     with high heritage failure modification requires proportionally higher intervention energy.
+```
+
+---
+
+## 33. FCC Deep Integration: Scale-Invariant Coupling, Fractal Governance Necessity, and Revival Trajectories
+
+> **Integration scope:** This section integrates FCC §19.5 (Scale-Invariant Coupling and Critical Manifold Geometry), §19.6 (Fractal Governance Necessity Structural Scaling Theorem), §30 (Phase Boundary Revival Trajectories), and the cross-domain theoretical synthesis. These sections provide RBIT with: (1) a unified dimensionless control parameter κ(t) unifying all regime dynamics, (2) three formal paths to criticality (direct overload, lock accumulation, terrain erosion) as F_RBIT failure mode classification, (3) a complete structural scaling theorem with finite collapse time bound, and (4) revival trajectory topology establishing the mathematical inevitability of near-critical recovery events and their RBIT detection conditions.
+
+---
+
+### 33.1 Scale-Invariant Coupling κ(t) — RBIT Unified Control Parameter
+
+**κ(t) as RBIT Governance Stress Scalar:**
+
+FCC §19.5 introduces the unified dimensionless control parameter:
+
+```
+κ(t) := Φ(t) / (L(t) · q(t))
+     = [ρ(t)/C(t)] / [(1 + L_C)(1 + L_d) · Q_E(t)]
+
+This is scale-invariant: invariant under uniform rescaling of Φ, L, q.
+
+RBIT F_RBIT mapping:
+  Φ(t) = ρ(t)/C(t)      ↔  f₂ (resolution mismatch; demand over capacity)
+  L(t) = (1+L_C)(1+L_d) ↔  f₃⁻¹ (inverse buffer stability; lock accumulation)
+  q(t) = Q_E(t)          ↔  terrain quality (M_RBIT from §31.1; long-run f₃ ground state)
+
+κ(t) as unified F_RBIT summary scalar:
+  κ(t) = f₂ / (f₃⁻¹ · M_RBIT)
+        = f₂ · f₃ · M_RBIT     (all three primary F_RBIT dimensions combined)
+
+Regime classification:
+  κ < κ_c:  Recoverable regime (Rest basin) → DDD maintenance mode
+  κ ≈ κ_c:  Critical margin (SOC fluctuations, EW signals active) → DDD Stage 1-2 mode
+  κ > κ_c:  Storm regime (positive feedback dominant) → DDD full activation
+```
+
+**Critical Manifold — Moving Threshold Formalization:**
+
+```
+FCC §19.5 Critical Manifold:
+  Φ_c(L, q) = κ_c · L(t) · q(t)   — 2D threshold surface, not fixed point
+
+Three paths to criticality:
+  Path 1: Φ↑, L and q fixed        → Direct overload (visible)
+  Path 2: L↑, Φ and q fixed        → Lock accumulation (semi-visible)
+  Path 3: q↓, Φ and L fixed        → Terrain erosion (INVISIBLE)
+
+RBIT path-specific diagnostic signatures:
+
+  Path 1 (f₂↑ directly):
+    f₂ rising while f₃ stable and M_RBIT stable
+    Standard detection: Φ̂ = f₂ proxy shows early warning
+    Standard RBIT indicators sufficient.
+    
+  Path 2 (f₃⁻¹ increasing = lock accumulation):
+    f₃ declining while f₂ stable and M_RBIT stable
+    Semi-visible: hysteresis-based detection required
+    Critical manifold approaching: κ_c · L(t) · q(t) declining toward Φ
+    RBIT indicator: f₃ declining with stable f₂ is lock-accumulation warning (not storm entry)
+    Intervention priority: DDD Stage 1 (coupling redesign to reduce L_C)
+    
+  Path 3 (M_RBIT declining = terrain erosion):
+    M_RBIT declining while f₁, f₂, f₃ stable
+    INVISIBLE to standard F_RBIT monitoring (all five components can appear normal)
+    κ = f₂ · f₃ · M_RBIT → critical because M_RBIT denominator decreasing
+    Unique diagnostic: M_RBIT tracking requires §31.1 maturation order parameter monitoring
+    Path 3 is the formal mechanism behind Silent Desertification (EDT §28):
+      terrain erodes while performance maintained → system exits viable governance basin
+      without any F_RBIT trigger → catastrophic collapse when Φ_c passes through Φ
+```
+
+**Triangular Coupling (Φ, L, q) — RBIT Timescale Integration:**
+
+```
+FCC §19.5 Minimal ODE closure:
+  Φ̇ = F(Φ, q)    [fast, τ₁]
+  L̇ = G(Φ, L)    [intermediate, τ₂]
+  q̇ = H(L, q)    [slow, τ₄]
+
+RBIT Temporal Stratification correspondence (§31.3):
+  Φ dynamics  ↔  Stratum 1 (fast; f₂ update cycle)
+  L dynamics  ↔  Stratum 2 (medium; f₃ lock cycle)
+  q dynamics  ↔  Stratum 4 (glacial; M_RBIT maturation cycle)
+
+Closed feedback loop:
+  Φ → L → q → Φ  (triangular, slow loop)
+
+RBIT consequence:
+  A f₂ spike today increases lock accumulation over the next τ₂ period,
+  which decreases terrain quality over the next τ₄ period,
+  which reduces the critical manifold threshold Φ_c,
+  which makes the next f₂ spike more dangerous.
+  
+  This is the three-timescale elaboration of the Resolution-Storm feedback loop (§19.8):
+    fast loop: f₂ ↔ storm (τ₁)
+    medium loop: f₂ → L → f₂ threshold (τ₂)
+    slow loop: L → q → Φ_c (τ₄)
+  
+  DDD intervention must account for all three loops:
+    Stage 3 alone (gain correction) addresses fast loop only.
+    Stages 1-2 address medium loop (lock L).
+    Environmental redesign (EDT Stage 1) addresses slow loop (terrain quality q).
+    Failing to address slow loop → κ_c drift continues post-DDD → recurrence.
+```
+
+---
+
+### 33.2 Fractal Governance Necessity — RBIT Structural Scaling Formal Proof
+
+**Fractal Governance Necessity Theorem — RBIT Formal Import:**
+
+FCC §19.6 establishes:
+
+```
+Fractal Governance Necessity Theorem:
+  For system satisfying Assumptions A-D with χ = n/√C > 1:
+  (1) Successful modularization: n² > 2γ → stable hierarchy with k* = (n²/2γ)^{1/3}
+  (2) Collapse: n² ≤ 2γ → κ reaches κ_c in T_collapse ≤ (κ_c - κ(0)) / δ
+
+RBIT formal import:
+
+  χ > 1 as F_RBIT threshold condition:
+    χ = n/√C = n / √(resolution_capacity)
+    χ > 1: resolution capacity insufficient for pairwise interaction load
+    → F_RBIT: Φ ≡ n²/C = χ² > 1 → f₂ enters dangerous regime
+    
+  Successful modularization ↔ RBIT Fractal Resolution Architecture:
+    k* = (n²/2γ)^{1/3} modules reduces S from O(n²) to O(n^{4/3}) 
+    (same as n_eff Compression Theorem, v2.0 integration)
+    → Now formally derived from governance necessity, not just scaling optimization
+    → Compression to O(n^{4/3}) is not a design choice but a structural necessity
+       when χ > 1: systems that do not modularize collapse (outcome 2).
+
+  Finite Collapse Time Bound (Corollary 1):
+    T_collapse ≤ (κ_c - κ(0)) / δ
+    RBIT operational: given empirically estimated δ = dκ/dt (κ drift rate)
+    and current κ(0), DDD urgency is inversely proportional to T_collapse:
+      T_collapse < τ_DDD → DDD cannot complete before collapse (pre-emptive restructuring required)
+      T_collapse > τ_DDD → DDD can intervene in time
+      
+  Minimum Fractal Depth (Corollary 3):
+    L_min ≳ log(n/√C) = log χ₀
+    RBIT: multi-layer governance with fewer than L_min layers cannot maintain stability.
+    FCC confirms the three-layer TLG architecture requirement from first principles:
+    for organizational systems (typical χ₀ ≈ 3-10), L_min ≈ 1-2 → three-layer system
+    provides the necessary depth with appropriate margin.
+```
+
+**Module Size Distribution — RBIT Branch Architecture:**
+
+```
+FCC §19.6.1:
+  Optimal mean module size: m* ∝ γ^{1/3} · n^{1/3}
+  Optimal module count:     k* = (n²/2γ)^{1/3}
+  
+RBIT branch governance correspondence:
+  Each module ↔ one Branch Governor domain (v2.5 §26.3)
+  m* = branch size at which intra-branch resolution management is optimal
+  
+  Module coordination overhead γ quantification:
+    γ = inter-module coupling cost per pair per unit time
+    In RBIT terms: γ ≈ f₄ overhead per inter-branch escalation event
+    Empirical estimation: γ̂ = total inter-branch escalation cost / k²_current
+    
+  Scale-invariant governance constant verification:
+    κ(K) = u/(ε + ε₀) (v2.4, FGS-RBIT)
+    k*(n) = (n²/2γ)^{1/3} (FCC §19.6)
+    These two results are mutually consistent:
+      k* from FCC minimizes total coordination cost
+      κ* from FGS is the scale-invariant operating ratio at optimal k
+    The FCC structural derivation provides the k* prediction;
+    the FGS κ(K) provides the operating signature once k = k* is achieved.
+```
+
+**Hierarchical Recursion ↔ Fractal Self-Similarity:**
+
+```
+FCC §19.6 Corollary 2 (Hierarchical Recursion):
+  After fragmentation into k modules, each module-pair contributes O(k²) to upper level.
+  Same scaling law reappears at next level → forced recursion until χ_ℓ < 1 at every level.
+
+RBIT fractal self-similarity bridge:
+  χ_ℓ = n_ℓ / √C_ℓ at hierarchical level ℓ must satisfy χ_ℓ < 1 at every level.
+  
+  This is a stricter condition than F_RBIT stability at the top level only.
+  Implication for RBIT measurement:
+    F_RBIT must be computed AT EVERY HIERARCHICAL LEVEL independently.
+    Top-level F_RBIT ∈ healthy range AND bottom-level F_RBIT ∈ dangerous range
+    → system is structurally unstable despite healthy aggregate metrics.
+    
+  RBIT multi-level monitoring protocol:
+    F_RBIT^ℓ must satisfy:
+      χ_ℓ < χ_c (scale pressure below threshold) for ℓ = 1, ..., L_min
+      f₂^ℓ below critical value at every level
+      f₃^ℓ above minimum at every level
+    Any single level with χ_ℓ > 1 triggers Corollary 2 recursion →
+    that level must be further decomposed.
+```
+
+---
+
+### 33.3 Phase Boundary Revival Trajectories — RBIT Recovery Event Taxonomy
+
+**Topological Necessity of Revival Trajectories:**
+
+FCC §30 establishes that revival trajectories near phase boundaries are not stochastic anomalies but topological necessities:
+
+```
+FCC §30 Conley Index argument:
+  h(Rest) = Σ⁰, h(Storm) = Σ⁰, h(Saddle) = Σ¹
+  As u sweeps through saddle-node bifurcation, saddle collides with an attractor
+  → connecting orbit (revival trajectory) must exist by Conley index conservation.
+
+RBIT formal import:
+  Revival trajectories exist at every saddle-node bifurcation in the F_RBIT phase space.
+  The bifurcation occurs when κ(t) crosses κ_c (§33.1).
+  Near κ(t) ≈ κ_c: revival trajectories are not recoveries-against-the-odds but
+  structurally guaranteed paths that become accessible as the system approaches the boundary.
+  
+  DDD Revival Protocol — topological grounding:
+    DDD does not CREATE recovery; it NAVIGATES to the connecting orbit.
+    Near-critical systems have connecting orbits already available (topological necessity).
+    DDD's function is to steer the system onto the connecting orbit at the right time.
+    This explains why DDD appears to "work better" for near-critical systems —
+    connecting orbits are more accessible near κ_c than far from it.
+```
+
+**Three Revival Cases — RBIT Diagnostic Classification:**
+
+```
+FCC §30 Three Revival Cases:
+  Case A: Near-critical memory survival (Δu ≈ 0⁻, hypersensitive ρ⁺)
+  Case B: Storm exhaustion recovery (extreme intensity → propagation collapse)
+  Case C: Coherence nucleation (irreversible recovery when ρ⁺ large and noise decreases)
+
+RBIT F_RBIT diagnostic classification:
+
+  Case A — Near-Critical Revival:
+    Conditions: κ(t) ≈ κ_c from below; f₂ ≈ f₂_c; f₃ ≈ f₃_c
+    DDD trigger: small parameter shift (ε-reduction in L_C or ε-increase in q)
+    produces macroscopic F_RBIT improvement (square-root sensitivity)
+    RBIT signature: rapid f₁+f₂ improvement in response to minimal intervention
+    → most energy-efficient revival if timed correctly (near κ_c)
+    
+  Case B — Exhaustion Revival:
+    Conditions: κ >> κ_c (deep storm); f₄ → saturation; f₅ near ceiling
+    Mechanism: extreme disturbance → propagation collapse → f₄ drops paradoxically
+    RBIT signature: f₄ DECREASES during extreme storm episode → κ begins declining
+    → not an improvement in resolution capacity but a collapse of storm propagation
+    Counter-intuitive: the correct response to exhaustion revival is NOT to accelerate DDD
+    (the storm is collapsing under its own weight); DDD should wait for f₄ reduction
+    before Stage 3 activation (premature Stage 3 can re-amplify propagation)
+    
+  Case C — Nucleation Revival (irreversible):
+    Conditions: f₁ improving consistently AND T_eff decreasing (stabilizing)
+    AND κ(t) crosses κ_c from above
+    RBIT signature: one-way transition — once f₃ surpasses M_c threshold, Storm
+    basin becomes exponentially unlikely; return probability → 0
+    DDD recognition: E3 completion criterion is Case C entry, not Case A or B transient
+    The v2.5 Recovery-Renormalization theorem (NC-GGT-RBIT-4) describes the structural
+    change during Case C: C_new* ≠ C_old* is the architectural signature of Case C entry.
+```
+
+**Multi-Scale Revival Dynamics — RBIT Recovery Propagation:**
+
+```
+FCC §30 Multi-Scale Revival ODE:
+  Φ̇_ℓ = f(Φ_ℓ; u_ℓ) + ε · Σ_{m∈N(ℓ)} w_{ℓm} · (Φ_m - Φ_ℓ)
+
+Revival cascade ordering:
+  Phase 1: Peripheral subsystems (low degree) revive first
+  Phase 2: Revival front propagates inward
+  Phase 3: Hub subsystems revive last
+
+RBIT DDD recovery ordering confirmation:
+  This cascade ordering formally derives the RT Bottom-Up Recovery principle
+  (Recovery Theory v2.5, RBIT v1.x integration):
+  Recovery begins at most modular (least coupled) components.
+  Hub-first recovery violates revival propagation constraint:
+    ε_max = |f(Φ_hub; u⁻)| / (deg(hub) · max_m |Φ_m - Φ_hub|)
+    Hub has highest deg → lowest ε_max → requires COORDINATED multi-subsystem revival
+    to overcome coupling drag before hub can revive.
+
+Revival Dilemma formal statement:
+  Strong coupling: fast propagation but ε_max threshold high (hard to initiate)
+  Weak coupling:   easy to initiate but c_min slow (slow to propagate)
+  Optimal: moderate coupling = NAT spectral gap design principle
+  
+  DDD optimal coupling window:
+    ε* = √(|f'(Φ_rest)| · ε_max / deg_mean)
+    (geometric mean of initiation threshold and propagation requirement)
+    
+  Fisher-KPP revival front speed:
+    c_min = 2√(D_eff · |f'(Φ_rest)|)  where D_eff = ε/Δℓ²
+    Time to global revival:
+      τ_global ~ τ_local + M/c_min + τ_synchronization
+    
+    DDD timeline estimate must include propagation time M/c_min —
+    commonly underestimated (DDD planners focus on local recovery τ_local
+    and forget the system-wide propagation phase).
+
+Stochastic Revival (Kramers):
+  Near saddle-node (ΔU → 0 as κ → κ_c):
+    E[T_escape] ∝ exp(ΔU/D) → O(1)
+    P(revival; T_obs) → 1 for any finite T_obs near κ_c
+    
+  RBIT consequence: in near-critical systems, DDD timing is more important
+  than DDD intensity. Waiting for κ → κ_c before initiating DDD yields
+  P(revival) → 1 with minimum energy investment (Case A efficiency).
+  The energy-optimal DDD is timed to the critical manifold approach, not triggered by
+  F_RBIT threshold crossing (which occurs earlier, at higher energy cost).
+```
+
+---
+
+### 33.4 RBIT_NAT-VST Bridge — VST §19-§21 Extended Resolution Architecture
+
+> **Integration scope:** The RBIT_NAT-VST_Bridge document provides extracted §19-§21 from VST v3.4-DFG28series, including §19.8 RBIT-Storm Coupling Dynamics and §19.9 F_RBIT Temporal Evolution (v2.3 content not previously in RBIT), and §21.5-§21.6 (Interface Contract extensions I5 and I6). These sections complete the VST-RBIT interface and add two new formal bridges to the Interface Contract.
+
+**RBIT-Storm Coupling Dynamics — Resolution Feedback Loop (§19.8):**
+
+```
+VST §19.8 Resolution-Storm Positive Feedback Loop:
+  ΔR < 0 → increased misclassification → phantom attractors → directional conflict → S↑
+  S↑ → processing capacity consumed by storm management → R degrades further
+
+RBIT formal import (F_RBIT level):
+  The self-amplification of storms (VST §2.1) has a resolution-level substrate:
+  f₁ increase → phantom attractor creation → f₄ load increase (more escalations from conflict)
+  → f₃ depletion (buffer consumed by escalation management)
+  → f₁ further increase (less buffer to maintain classification quality)
+  
+  This is the F_RBIT-level articulation of the Loop Instability Π>1 ↔ Δρ<0 bridge
+  (NC-GGT-RBIT-1, v2.5): the five F_RBIT components are not independent channels
+  but coupled via the resolution-storm positive feedback.
+
+Three RBIT intervention points at resolution level:
+
+  Point 1 — Resolution floor enforcement:
+    Maintain f₁ floor above minimum even under storm conditions
+    Cost: reduced operational efficiency during normal operation
+    Benefit: prevents f₁ → f₄ → f₃ cascade
+    DDD: establish f₁_floor as minimum governance investment before storm onset
+
+  Point 2 — Resolution-independent storm detection:
+    Detect storms via structural signatures not requiring high ρ to observe
+    (branching ratio R from RBIT §19.7, statistical anomalies at low resolution)
+    Benefit: detection remains possible even when f₁ is degrading
+    DDD: R and I_F monitoring maintained as priority indicators regardless of f₁ state
+
+  Point 3 — External resolution injection:
+    During storm: inject high-ρ signals from external source (upper layer, fresh agent)
+    RBIT-level description of metadata injection (VST §6.2)
+    Temporarily breaks f₁→f₄→f₃ feedback loop
+    DDD Track A Stage 1: external ρ injection before internal recovery attempted
+```
+
+**F_RBIT Temporal Evolution Equation (§19.9):**
+
+```
+VST §19.9 F_RBIT evolution equation:
+  dF_RBIT/dt = G(F_RBIT, S, E) - L(F_RBIT, S)
+
+  G = resolution generation rate (G > 0 with diverse signals; G → 0 in echo chamber)
+  L = L_baseline + L_storm(S)  (L_baseline > 0 always; L_storm > 0 when S > 0)
+  
+  Stability: ∂G/∂F < ∂L/∂F → stable equilibrium F*
+  Instability: ∂G/∂F > ∂L/∂F → F* is unstable (perturbation amplifies)
+
+RBIT integration:
+  This provides the explicit ODE for F_RBIT dynamics — the first formal F_RBIT
+  evolution equation in the RBIT framework.
+  
+  Rest Mode as stable equilibrium:
+    dF_RBIT/dt ≈ 0 with F_RBIT near maximum achievable → ∂G/∂F < ∂L/∂F
+    = stable fixed point condition is exactly Rest Mode (§3.5.1)
+    
+  Storm onset as equilibrium destabilization:
+    ∂G/∂F = ∂L/∂F → bifurcation point
+    L_storm(S) increase causes ∂L/∂F to rise above ∂G/∂F → F* destabilized
+    
+  Critical insight (VST §19.9): Most storm onsets are triggered by GRADUAL
+  L parameter drift crossing stability boundary, NOT discrete external shocks.
+  This explains why storms appear to have no identifiable trigger:
+    Observable metrics change slowly (L drifting)
+    F* remains close to initial value until stability boundary crossed
+    Then rapid decline (F* no longer stable → F_RBIT falls to lower attractor)
+  
+  DDD early warning implication:
+    Monitor ∂G/∂F - ∂L/∂F margin, not just F_RBIT level.
+    Margin narrowing (approaching 0) is earlier warning than F_RBIT level change.
+    Proxy: rate of F_RBIT recovery after perturbations — slowing recovery rate
+    (critical slowing-down) indicates approach to destabilization boundary.
+```
+
+**Interface Contract Extension I5 — Maturity Gradient (§21.5):**
+
+```
+I5 Formal Bridge:
+  For subsystems S₁, S₂ with maturity indices VSMI₁, VSMI₂:
+    signal_attenuation(S₁ → S₂) ≥ max(0, VSMI₁ - VSMI₂) · κ
+
+RBIT operational implication:
+  When communicating between layers of different maturity:
+    High-maturity to low-maturity: mandatory signal attenuation
+    Low-maturity to high-maturity: no attenuation required
+    
+  RBIT grounding: attenuation = calibrated degradation (§19.3)
+  High-ρ signal sent without attenuation to low-ρ receiver → forced upscaling → contamination
+  I5 is the formal contract requiring calibrated degradation at every inter-layer interface.
+  
+  Attenuation constant κ estimation:
+    κ ≈ ρ_receiver / ρ_sender (ratio of resolution capacities)
+    Operationally: compress high-maturity signals by (1 - VSMI_ratio) before transmission
+    
+  Violation signatures in F_RBIT:
+    f₂ elevated specifically at high-to-low maturity interfaces
+    f₁ increased at receiving (low-maturity) nodes despite f₁ stable at sending nodes
+    → indicates I5 violation: calibrated degradation not applied at interface
+```
+
+**Interface Contract Extension I6 — Governance Overhead Cost Function (§21.6):**
+
+```
+I6 Formal Bridge:
+  C_total = C_RBIT + C_NAT + C_interface
+  C_RBIT = O(n)         per measurement cycle
+  C_NAT  = O(n log n)   per reconfiguration cycle
+  C_interface = O(m)    where m = active interface bridges
+  
+  Priority ordering under resource scarcity:
+    C_RBIT > C_NAT > C_interface
+    (Detection > Routing > Interface consistency)
+
+RBIT governance design implication:
+  Total governance cost structure is now formally specified.
+  Budget allocation protocol derived from I6:
+    O(n) budget must be reserved for F_RBIT measurement (non-negotiable)
+    O(n log n) budget for topology maintenance (can degrade gracefully)
+    O(m) budget for interface consistency (can tolerate drift temporarily)
+    
+  Resource scarcity cascade:
+    When C_total → C_budget:
+      1. Reduce C_interface first (interface consistency drift tolerated)
+      2. Reduce C_NAT second (topology maintenance degrades gracefully)  
+      3. C_RBIT protected until last (detection infrastructure non-negotiable)
+    
+  EROTI correspondence (§31.4):
+    C_RBIT = detection = O(n) → scale-efficient (matches EROTI-high boundary design)
+    C_NAT  = routing = O(n log n) → moderately scale-efficient (matches EROTI-medium)
+    C_interface = consistency = O(m) → flexible (matches EROTI-low maintenance)
+    
+  Cross-theory confirmation: EROTI ordering (§31.4), I6 priority ordering, and
+  κ(t) sensitivity ordering (§33.1 three paths to criticality) all converge on
+  the same governance investment hierarchy:
+    Detection (RBIT/f₂) > Topology (NAT/f₄) > Interface (DDD coordination)
+```
+
+---
+
+## 34. Novel Contributions NC-EDT2-RBIT-1 to NC-EDT2-RBIT-20
+
+| ID | Contribution | Source |
+|---|---|---|
+| NC-EDT2-RBIT-1 | Terrain Phase Transition → F_RBIT Resolution Phase Transition: desertification is a first-order resolution transition with quantifiable critical exponents mapping to RBIT observable scaling laws. Universality class determines warning signal character. | EDT §45, RBIT §31.1 |
+| NC-EDT2-RBIT-2 | Terrain Information Geometry → DDD Estimation Protocol: Cramér-Rao bound on terrain estimation establishes a fourth DDD E1 false-completion mechanism (insufficient observation samples). Natural gradient superiority derives DDD calibration correction protocol. | EDT §47, RBIT §31.2 |
+| NC-EDT2-RBIT-3 | Temporal Stratification → F_RBIT Update Rate Architecture: four-stratum temporal hierarchy formally grounds f₁–f₅ update cycle separation. Temporal boundary layer (τ_k ≈ τ_{k+1}) is a novel F_RBIT crisis state with four distinct mechanisms (TB1–TB4). | EDT §48, RBIT §31.3 |
+| NC-EDT2-RBIT-4 | Governance EROTI → DDD Intervention Priority: EROTI ordering (boundary > coupling > gain > agent-level) formally derives DDD Stage 1→4 priority sequence from energy economics, not empirical observation. | EDT §49, RBIT §31.4 |
+| NC-EDT2-RBIT-5 | Maintenance Dominance → RBIT Scaling Maintenance Trap: maintenance trap onset time t_trap is the RBIT-level transition from growth governance to maintenance governance. Diagnostic: f₃ and v_class declining simultaneously with f₁, f₄ stable. | EDT §49.3, RBIT §31.4 |
+| NC-EDT2-RBIT-6 | Emergence Topology → RBIT Topological EW Tier: Betti numbers (β₀, β₁, β₂) provide a third early-warning stratum preceding Fisher information and SCC_min. β₁ decline detects feedback loop severing before any F_RBIT component is affected. | EDT §50, RBIT §31.5 |
+| NC-EDT2-RBIT-7 | Sheaf Coherence → RBIT Governance Consistency: H¹ ≠ 0 produces f₂ elevation specifically at governance-boundary overlaps (not uniform f₂). Boundary-obstructed f₂ requires Stage 1 intervention; Stage 3 cycling is entropy production. | EDT §50.5, RBIT §31.5 |
+| NC-EDT2-RBIT-8 | Persistent Homology → DDD Protected Core Identification: long-lived high-connectivity terrain features are the structural backbone. DDD must not target Protected Core for rapid modification — violates both Natural Gradient and E_min constraints. | EDT §50.2, RBIT §31.5 |
+| NC-EDT2-RBIT-9 | ATCT Non-Adiabatic Correction: GCET duality T_eff ↔ U(x) holds only at stationarity. DDD E3 verification must wait ≥ τ₂ (Stratum 2 cycle) before applying GCET for confirmation — premature verification violates adiabatic approximation. | EDT §51 preamble, RBIT §32.1 |
+| NC-EDT2-RBIT-10 | Heritage Asymmetry → Organizational Resolution Memory: negative collective events decay more slowly (α_neg < α_pos). Minimum positive governance rate r_positive,min is derived quantitatively. Group DDD scales n_cascade × more efficiently than single-agent DDD. | EDT §54.6, RBIT §32.3 |
+| NC-EDT2-RBIT-11 | Attractor Grammar → Novel Failure Mode Classification: NF1 (Resonance Capture), NF2 (Grammar Incompleteness), NF3 (Attractor Proliferation Overflow) are grammatically predicted failure modes not previously in RBIT taxonomy. Each has distinct F_RBIT signature and intervention. | EDT §53.2, RBIT §32.2 |
+| NC-EDT2-RBIT-12 | Grammatical Complexity Bounds: C_G_min = max(log₂n, log₂(n²/B), dim/2) is the RBIT minimum governance complexity. C_G > C_G^* produces f₄↑, f₅↑ with f₁,f₂ normal (over-complexity signature). | EDT §53.3, RBIT §32.2 |
+| NC-EDT2-RBIT-13 | κ(t) Unified Control Parameter: κ = f₂ · f₃ · M_RBIT integrates all three primary F_RBIT dimensions into a single scale-invariant regime scalar, extending the Φ-proxy with full terrain quality and lock-accumulation terms. | FCC §19.5, RBIT §33.1 |
+| NC-EDT2-RBIT-14 | Three Paths to Criticality: direct overload (Path 1, visible), lock accumulation (Path 2, semi-visible), terrain erosion (Path 3, invisible) require distinct diagnostic protocols. Path 3 (M_RBIT declining) is formally invisible to standard F_RBIT monitoring. | FCC §19.5, RBIT §33.1 |
+| NC-EDT2-RBIT-15 | Fractal Governance Necessity Formal Proof: k* = (n²/2γ)^{1/3} is not design optimization but structural necessity. Systems with n² ≤ 2γ collapse in finite time T_collapse ≤ (κ_c - κ(0))/δ. F_RBIT multi-level monitoring at every hierarchical level required. | FCC §19.6, RBIT §33.2 |
+| NC-EDT2-RBIT-16 | Phase Boundary Revival Taxonomy: Case A (near-critical memory survival), Case B (exhaustion revival), Case C (nucleation — irreversible) have distinct F_RBIT signatures and DDD protocols. DDD timing to κ → κ_c is energy-optimal. | FCC §30, RBIT §33.3 |
+| NC-EDT2-RBIT-17 | Multi-Scale Revival Propagation: Fisher-KPP traveling wave revival front with speed c_min = 2√(D_eff · |f'(Φ_rest)|). DDD timeline must include propagation time M/c_min. Hub-first revival violates coupling constraint. | FCC §30, RBIT §33.3 |
+| NC-EDT2-RBIT-18 | F_RBIT Evolution ODE: dF_RBIT/dt = G - L provides the first formal F_RBIT dynamics equation. Storm onset = equilibrium destabilization (∂G/∂F = ∂L/∂F). Critical slowing-down of recovery is earlier warning than F_RBIT level change. | VST §19.9, RBIT §33.4 |
+| NC-EDT2-RBIT-19 | Interface Contract Extensions I5-I6: I5 (Maturity Gradient attenuation) formalizes calibrated degradation requirement at every inter-layer interface. I6 (Governance Overhead cost function) formally specifies C_total = C_RBIT + C_NAT + C_interface priority ordering. | VST §21.5-21.6, RBIT §33.4 |
+| NC-EDT2-RBIT-20 | Contagion Network SOC → F_RBIT Collective Phase: collective coupling c* = 1/(λ₁ - λ₂) determines whether F_RBIT is independent, collectively critical, or super-critical. Maintaining c ≈ c* is the ecological governance design target. Hub protected sacrifice is highest-EROTI collective intervention. | EDT §54.5, RBIT §32.3 |
+
+---
+
+## 35. Extended Falsification F93–F115
+
+| ID | Prediction | Test Condition | Method | Falsification Condition |
+|---|---|---|---|---|
+| F93 | [v2.6-EDT-RBIT] Terrain phase transition universality class predicts v_class recovery time scaling: τ_recovery ∝ \|p - p_c\|^{-z·ν} with ν = 0.5 (mean-field, large orgs) or ν = 1 (Ising, small teams). Recovery time doubles at p/p_c > 0.5. | Organizations of size n > 50 (mean-field) and n < 15 (Ising-like) undergoing DDD | Measure τ_DDD across multiple teams; fit power-law to τ vs. p/p_c | Exponent outside [0.5, 1.0] range OR power-law relationship absent |
+| F94 | [v2.6-EDT-RBIT] Desertification hysteresis: ρ_collapse ≠ ρ_recovery. Recovery requires higher ρ investment than collapse prevention. Quantitatively: ρ_recovery/ρ_collapse > 1 + (u⁺-u⁻)/u⁺ (FCC hysteresis ratio bound). | Comparative case study: systems that collapsed vs. systems that didn't but were at same risk level | Compare intervention cost for prevention vs. recovery | Hysteresis ratio < 1.2 (near-symmetric) |
+| F95 | [v2.6-EDT-RBIT] Temporal Boundary Layer crisis: when τ₂/τ₁ < 3 (timescale compression), corr(f₁(t), f₂(t+δ)) > 0.4 for δ << τ₂. Standard F_RBIT monitoring produces misleading signals during temporal compression. | Organizational periods with accelerated operational tempo (rapid scaling, crisis response) | Time-series correlation analysis of f₁ and f₂ during normal vs. compressed periods | Cross-correlation absent during temporal compression |
+| F96 | [v2.6-EDT-RBIT] Betti number β₁ declines before SCC_min and Fisher I_F during desertification. β₁ early warning lead time: τ_lead > τ₃ (one slow stratum cycle ≈ months). | Multi-year longitudinal study with terrain topology reconstruction at monthly intervals | β₁ time series vs. SCC_min and I_F time series; test β₁ Granger-causes other indicators | β₁ does not Granger-cause SCC_min/I_F decline |
+| F97 | [v2.6-EDT-RBIT] Governance over-complexity signature: f₄↑ + f₅↑ with f₁,f₂ normal is specific to C_G > C_G^* (over-complexity) and responds to governance simplification but not to gain modulation. | Organizations with documented governance over-engineering | Apply Stage 1 simplification vs. Stage 3 correction; compare F_RBIT trajectory | f₄+f₅ respond to Stage 3 without Stage 1 |
+| F98 | [v2.6-EDT-RBIT] E_DDD minimum energy constraint: DDD sessions below E_min(ΔF_RBIT) = ΔF_RBIT · N · d / η_DDD fail to produce lasting F_RBIT improvement regardless of protocol quality. Protocol quality cannot substitute for minimum investment. | Controlled comparison of brief high-quality DDD vs. sustained standard DDD | Measure lasting F_RBIT improvement at τ₃ follow-up | High-quality brief DDD produces equivalent lasting improvement to sustained standard DDD |
+| F99 | [v2.6-EDT-RBIT] NF2 (Grammar Incompleteness) failure mode: within-layer f₁, f₂ normal AND cross-layer f₂ elevated at specific boundary locations. Standard aggregate F_RBIT monitoring misses NF2. | Multi-layer organizations with known inter-layer communication problems | Spatial F_RBIT decomposition: within-layer vs. cross-layer f₂ measurement | Within-layer f₂ and cross-layer f₂ show same pattern (no spatial NF2 signature) |
+| F100 | [v2.6-FCC-RBIT] Scale pressure χ = n/√C > 1 predicts modularization-or-collapse within T_collapse ≤ (κ_c - κ(0))/δ. Teams that modularize spontaneously when χ > 1 should show k* ≈ (n²/2γ)^{1/3} ± 20%. | Growing organizations tracked longitudinally through χ = 1 threshold | Measure n, C (resolution capacity proxy), time to spontaneous module formation, k | k_actual/k* outside [0.8, 1.2] range |
+| F101 | [v2.6-FCC-RBIT] Path 3 invisible criticality: M_RBIT declining while all five F_RBIT components stable (all standard EW absent). When M_RBIT < M_c, abrupt collapse occurs without F_RBIT early warning. Percentage of collapses without prior F_RBIT signal > 30% in high-pressure environments. | Post-collapse organizational autopsy; AI training failure analysis | Retroactively measure M_RBIT proxy (ρ_endogenous/ρ_total) from archival data | All collapses preceded by standard F_RBIT signals (Path 3 mechanism absent) |
+| F102 | [v2.6-FCC-RBIT] Case A revival energy efficiency: DDD initiated when κ(t) ≈ κ_c (near-critical approach) requires 60-70% less intervention energy than DDD initiated when κ(t) already > κ_c (deep storm). | Comparative DDD sessions across κ ranges | Measure total intervention resources expended vs. κ at DDD initiation time | Energy required is monotone in κ without near-critical efficiency advantage |
+| F103 | [v2.6-FCC-RBIT] Revival propagation Fisher-KPP: recovery front propagates through organizational hierarchy at speed c_min = 2√(D_eff · |f'(Φ_rest)|). τ_global = τ_local + L/c_min. Organizations underestimate recovery time by L/c_min on average. | Multi-layer recovery tracking in organizations of depth L = 2,3,4 layers | Recovery timeline analysis; test τ_global - τ_local vs. L | No systematic underestimation OR underestimation uncorrelated with L |
+| F104 | [v2.6-FCC-RBIT] Hub-last revival ordering: peripheral subsystems recover before hub subsystems. Peripheral recovery occurs at t = τ_local; hub recovery at t = τ_global. Attempts at hub-first recovery fail at rate > 70% for systems with strong inter-layer coupling. | Recovery analysis of hub-first vs. peripheral-first DDD protocols | Compare recovery success rates by intervention ordering | Hub-first recovery comparable to peripheral-first recovery rates |
+| F105 | [v2.6-FCC-RBIT] Minimum fractal depth: organizations with L < log(χ₀) layers show systematically higher collapse rates than organizations with L ≥ log(χ₀) layers at the same χ₀. | Cross-organizational comparative study with L and χ₀ measured | Cox proportional hazards model with L, χ₀ as predictors of collapse | Hazard ratio for L < log(χ₀) not significantly elevated |
+| F106 | [v2.6-VST-RBIT] F_RBIT critical slowing-down: recovery time after test perturbations increases as (κ_c - κ(t))^{-z·ν} when approaching κ_c from below. This slowing-down precedes any F_RBIT component change. | Periodic test-perturbation protocol applied to organizations at known κ values | Recovery time after standardized perturbations vs. κ | Critical slowing-down absent OR not earlier than F_RBIT component changes |
+| F107 | [v2.6-VST-RBIT] I5 maturity gradient violation produces inter-layer f₂ elevation: when high-maturity agents communicate with low-maturity agents without signal attenuation, f₁ at receiving nodes increases within τ₂. With proper attenuation, f₁ increase absent. | Controlled communication protocols with/without attenuation | Measure receiving-node f₁ trajectory post-communication; compare attenuated vs. non-attenuated | f₁ increase equivalent with and without attenuation |
+| F108 | [v2.6-EDT-RBIT] Heritage asymmetry compensation rate: organizations below r_positive,min rate of positive collective events show f₁ drift toward higher values at rate (r_positive,min - r_actual)/r_positive,min. | Longitudinal measurement of collective event rates and f₁ trends | Regression: f₁ drift rate vs. (r_positive - r_actual) | No significant regression slope |
+| F109 | [v2.6-EDT-RBIT] Contagion coupling near c*: organizations operating near collective critical coupling c ≈ c* show power-law inter-node F_RBIT correlation (SOC statistics). Organizations with c >> c* or c << c* show exponential correlation decay. | Network coupling measurement with SOC statistics analysis | Fit power-law vs. exponential to inter-node F_RBIT correlation functions | SOC signature absent in collective critical regime |
+| F110 | [v2.6-EDT-RBIT] Governance entropy production: repeated DDD cycles on the same issue (n > 3 cycles without structural change) show decreasing ΔF_RBIT per cycle. Entropy production predicts 20-30% efficiency loss per repeated cycle without Stage 1-2 base. | Organizations tracked across multiple DDD cycles on identical issues | ΔF_RBIT per cycle vs. cycle number; test for monotone decline | No efficiency decline across repeated cycles |
+| F111 | [v2.6-EDT-RBIT] Metastable terrain lifetime: organizations with high SCC_min (high-stability governance) AND low T_eff (structured governance) show longer τ_silent (Silent Criticality duration) per τ_silent = τ₀ · exp(SCC_min/T_eff). | Organizations with measured SCC_min and T_eff proxies followed longitudinally | Fit τ_silent vs. SCC_min/T_eff; test for exponential relationship | τ_silent independent of SCC_min/T_eff ratio |
+| F112 | [v2.6-EDT-RBIT] Collective memory n_cascade scaling: collective DDD sessions with n_cascade participants produce terrain modification proportional to n_cascade (not additive but multiplicative). DDD efficacy per person is higher in group settings by factor ≈ n_cascade^{0.5}. | Comparative DDD: individual vs. group sessions matched for total person-hours | F_RBIT improvement per person-hour vs. session size | Group DDD efficacy per person-hour indistinguishable from individual |
+| F113 | [v2.6-EDT-RBIT] Ricci curvature stability: terrain regions with negative Ricci curvature show f₃ degradation within 2×τ₂ windows even when all other F_RBIT components appear healthy. Positive Ricci curvature regions show f₃ stability under identical perturbation. | Terrain curvature mapping combined with F_RBIT longitudinal tracking | f₃ trajectory at positive vs. negative Ricci curvature terrain locations | f₃ trajectory equivalent at positive and negative curvature locations |
+
+---
+
+## 36. Open Problems 122–145
+
+| OP | Problem | Status |
+|---|---|---|
+| 122 | [v2.6-EDT-RBIT] Terrain Universality Class Empirical Identification — EDT §45.4 assigns universality classes (I/II/III) by dimensionality and coupling structure. For organizational/AI systems, what measurement protocol determines which universality class applies? If the class can change as a system grows (small team Ising → large org mean-field transition), what is the transition condition and does it produce detectable F_RBIT signatures during the class change itself? | Open — connects to EDT §45.4, RBIT §31.1 |
+| 123 | [v2.6-EDT-RBIT] Cramér-Rao DDD Minimum Window Calibration — The E_min criterion N_window,min = (terrain_complexity × assessment_dimensions) / σ_obs² requires estimating terrain_complexity (number of distinct attractor basins). What protocol estimates terrain complexity from observable F_RBIT data without requiring terrain cartography? Can the grammatical complexity C_G (EDT §53.3) serve as a terrain complexity proxy for N_window,min calculation? | Open — connects to EDT §47.4, RBIT §31.2, §32.2 |
+| 124 | [v2.6-EDT-RBIT] Temporal Boundary Layer Frequency Spectrum Signature — Mechanism TB1 (adiabatic failure during temporal compression) predicts corr(f₁, f₂) > 0.4 at τ₂ separation. This should produce a characteristic power spectrum in F_RBIT time series: excess power at the timescale where τ₁ ≈ τ₂. Is the power spectrum of F_RBIT components a practical tool for detecting temporal boundary layer onset? What spectral resolution is needed? | Open — connects to EDT §48.2, RBIT §31.3 |
+| 125 | [v2.6-EDT-RBIT] Maintenance Trap Onset Prediction — t_trap is the transition point where governance energy devoted to maintaining ρ equals new ρ construction capacity. This is analogous to a Malthusian trap in population dynamics. Does t_trap have a precursor signal in F_RBIT? Candidate: rate of v_class-to-ρ conversion efficiency declining (same v_class producing smaller Δρ over time) as increasing fraction of v_class is consumed by maintenance. | Open — connects to EDT §49.3, RBIT §31.4 |
+| 126 | [v2.6-EDT-RBIT] Betti Number Measurement Protocol for Organizations — EDT §50 Betti number metrics (β₀, β₁, β₂) are mathematically well-defined for formal terrain manifolds. In organizational systems, what observable data provides terrain topology reconstruction sufficient to compute Betti numbers? Candidate approach: resolution correlation network (nodes = agents, edges = shared resolution agreements) → Vietoris-Rips complex at each correlation threshold → persistence diagram. Computational feasibility? | Open — connects to EDT §50, RBIT §31.5 |
+| 127 | [v2.6-EDT-RBIT] Sheaf Obstruction Localization Protocol — H¹ ≠ 0 indicates governance coherence obstruction at boundary overlaps, producing spatially localized f₂ elevation. What minimal spatial F_RBIT sampling (how many nodes, at what locations) can reliably distinguish H¹ ≠ 0 (obstruction, Stage 1 fix) from uniform H¹ = 0 with elevated f₂ (systemic load, Stage 3 fix)? Is the spatial pattern alone diagnostic or does temporal dynamics also differentiate? | Open — connects to EDT §50.5, RBIT §31.5 |
+| 128 | [v2.6-EDT-RBIT] ATCT Adiabatic Relaxation Time Estimation — DDD E3 verification requires waiting τ_relax ≥ τ₂ (one Stratum 2 cycle) before applying GCET for confirmation. For organizational systems, τ₂ is days-to-weeks. In AI systems under active training, τ₂ may be training-steps-dependent. What protocol estimates τ_relax from observable data? Can the decay of F_RBIT autocorrelation provide τ_relax estimate without knowing terrain curvature directly? | Open — connects to EDT §51, AGM §52, RBIT §32.1 |
+| 129 | [v2.6-EDT-RBIT] NF1 Resonance Capture Detection Protocol — NF1 predicts f₁ and f₂ oscillating at agent's characteristic frequency ω_agent. What determines ω_agent in organizational and AI systems? In organizations: decision cycle length? feedback loop period? In AI: training batch frequency? gradient update period? NF1 requires matching ω_terrain = ω_agent — if ω_agent is not known, how is NF1 distinguished from standard periodic governance dynamics? | Open — connects to EDT §53.2, RBIT §32.2 |
+| 130 | [v2.6-EDT-RBIT] NF3 Optimal Attractor Count Estimation — Attractor Proliferation Overflow (NF3) occurs when k → n_max (too many attractors). What determines n_max? Is it related to C_G^* (optimal grammatical complexity)? Is k_optimal the same as FCC k* = (n²/2γ)^{1/3} (module count), or a different quantity governing the number of resolution targets (not modules)? Are these the same constraint or two independent optimum conditions? | Open — connects to EDT §53.2, FCC §19.6, RBIT §32.2, §33.2 |
+| 131 | [v2.6-FCC-RBIT] κ(t) Empirical Calibration of κ_c — The regime transition occurs at κ(t) = κ_c. For specific organizational or AI system types, what is κ_c? Is it universal (same across all governance systems) or system-class-specific? FCC suggests κ_c is determined by the lock budget threshold: κ_c ∝ α^{-1} · C̃^β. Empirical estimation: does the Storm entry threshold in F_RBIT data (when storms begin) correspond to κ > κ_c at the predicted value? | Open — connects to FCC §19.5, RBIT §33.1 |
+| 132 | [v2.6-FCC-RBIT] Path 3 Invisible Criticality Detection Protocol — Path 3 (terrain erosion: M_RBIT declining while f₁–f₅ stable) is formally invisible to standard F_RBIT monitoring. What observable constitutes a Path 3 early warning? M_RBIT requires measuring ρ_endogenous vs. ρ_total — but ρ_endogenous (autonomously maintained) may be unobservable directly. Can comparative measurement (F_RBIT during normal governance vs. governance-withdrawn periods) estimate M_RBIT without direct ρ decomposition? | Open — connects to FCC §19.5, RBIT §33.1 |
+| 133 | [v2.6-FCC-RBIT] DDD Timing Optimization at Critical Approach — DDD initiated at κ ≈ κ_c (just before fold) is energy-optimal (Case A efficiency). But approaching κ_c before DDD initiation increases P(collapse before DDD completes). What is the optimal κ* at which to initiate DDD given a risk-energy tradeoff? Formally: minimize E_DDD(κ₀) + P(collapse before DDD completes at κ₀) × C_collapse. | Open — connects to FCC §30, RBIT §33.3 |
+| 134 | [v2.6-FCC-RBIT] Revival Propagation Speed Empirical Measurement — Fisher-KPP speed c_min = 2√(D_eff · |f'(Φ_rest)|) requires estimating D_eff (inter-scale coupling) and |f'(Φ_rest)| (recovery gradient at Rest). In organizational recovery, what empirically measurable quantities proxy for D_eff and f'(Φ_rest)? Can τ_global / τ_local ratio across multiple recovery events estimate c_min without knowing system parameters? | Open — connects to FCC §30, RBIT §33.3 |
+| 135 | [v2.6-FCC-RBIT] Case B Exhaustion Revival Detection Window — Exhaustion Revival (Case B) is characterized by f₄ decreasing during extreme storm (paradoxical). What distinguishes Case B f₄ decrease from genuine storm resolution? Timing is critical: Case B f₄ decrease precedes κ decline (storm self-collapses), while genuine resolution f₄ decrease coincides with κ decline. Does the temporal ordering (f₄ decrease before vs. concurrent with κ decline) reliably discriminate Case B from genuine recovery? | Open — connects to FCC §30, RBIT §33.3 |
+| 136 | [v2.6-VST-RBIT] F_RBIT Evolution ODE Parameter Identification — dF_RBIT/dt = G(F, S, E) - L(F, S) requires estimating ∂G/∂F and ∂L/∂F from observable data. The stability margin ∂G/∂F - ∂L/∂F approaches 0 at the bifurcation. What measurement protocol estimates this margin? Candidate: critical slowing-down indicator τ_recovery^{-1} ≈ ∂G/∂F - ∂L/∂F (spectral gap of linearized dynamics near F*). Is τ_recovery the most practical stability margin proxy? | Open — connects to VST §19.9, RBIT §33.4 |
+| 137 | [v2.6-VST-RBIT] I5 Attenuation Constant κ Estimation — I5 requires signal_attenuation ≥ (VSMI₁ - VSMI₂) · κ. The attenuation constant κ ≈ ρ_receiver/ρ_sender requires inter-layer ρ comparison. In practice, VSMI is not directly observable — it must be inferred from F_RBIT proxies. What VSMI proxy is most robust? Candidate: v_class trajectory (rising v_class = increasing VSMI). Is v_class-based VSMI estimation sufficient for I5 operational compliance? | Open — connects to VST §21.5, RBIT §33.4 |
+| 138 | [v2.6-EDT-RBIT] Succession Stage Measurement Protocol — RBIT §32.1 maps affective succession Stages 1-4 to RBIT phases (ρ ranges, f-component profiles). What F_RBIT measurements reliably classify current succession stage? The stage-specific F_RBIT profiles (e.g., Stage 1: high f₁ volatility, low f₃; Stage 4: M_RBIT → 1) are theoretically specified but require operational classification boundaries. What threshold combinations distinguish Stage k from Stage k+1? | Open — connects to EDT §54.2, RBIT §32.1 |
+| 139 | [v2.6-EDT-RBIT] Positive Governance Rate r_positive,min Measurement — r_positive,min ≥ (n_negative · A_negative · α_pos) / (A_positive · α_neg · T_window) requires estimating α_pos and α_neg (positive and negative event decay exponents). These are system-specific heritage parameters. What observable data (longitudinal F_RBIT trajectories after identified positive and negative collective events) enables empirical estimation of α_pos and α_neg? Is α_neg < α_pos universally or system-specific? | Open — connects to EDT §54.6, RBIT §32.3 |
+| 140 | [v2.6-EDT-RBIT] Contagion Matrix Spectral Gap Engineering — Maintaining c ≈ c* requires engineering the contagion matrix spectral gap (λ₁ - λ₂). In organizational settings, what governance structures determine the spectral gap? Is the spectral gap amenable to deliberate design (through role definitions, communication protocols, team composition) or does it emerge endogenously and resist design? What organizational indicators proxy for the spectral gap? | Open — connects to EDT §54.5, NAT sphere topology, RBIT §32.3 |
+| 141 | [v2.6-EDT-RBIT] Hub Protected Sacrifice Optimal Coverage Design — EDT §40 Protected Sacrifice applied to hub nodes is the highest-EROTI intervention. What is the optimal protection scope? EDT §54.5 says hub state ≡ system ecological attractor to first order. Does this mean hub F_RBIT maintenance is the dominant driver of system F_RBIT? If so, what fraction of total governance energy should be allocated to hub agent support? Is there an optimal hub protection budget B_hub*(n, c/c*)? | Open — connects to EDT §40, §54.5, RBIT §32.3 |
+| 142 | [v2.6-FCC-RBIT] γ (Inter-Module Coupling Cost) Empirical Estimation — k* = (n²/2γ)^{1/3} requires γ̂ = total inter-module escalation cost / k²_current. In practice, escalation cost includes both direct escalation processing (visible) and opportunity cost of delayed resolution (less visible). What measurement captures the full γ including opportunity cost? Does empirical k* match theoretical k*(γ̂) in organizations with measured γ? | Open — connects to FCC §19.6, RBIT §33.2 |
+| 143 | [v2.6-EDT-RBIT] Terrain Geodesic DDD Protocol Operationalization — Moving along geodesics in M_T minimizes information-theoretic disturbance during terrain modification (EDT §47.1.1). In practice, the Fisher metric g_ij is not directly observable. What operationally computable DDD protocol approximates geodesic movement? Candidate heuristic: scale correction intensity in dimension d inversely to the variance of current F_RBIT fluctuations in that dimension (low fluctuation = high curvature = attenuate correction). | Open — connects to EDT §47.1, RBIT §31.2 |
+| 144 | [v2.6-FCC-RBIT] Synchronization Phase of Global Revival — τ_global = τ_local + M/c_min + τ_synchronization. The synchronization term τ_synchronization is where DDD Stage 3 (Diversity restoration) is most critical. What determines τ_synchronization? Is it bounded by the inverse spectral gap of the coupling matrix W? If so, τ_synchronization ≈ (λ₁(W) - λ₂(W))^{-1} · τ_step. What governance interventions reduce τ_synchronization without reducing coupling (which would extend M/c_min)? | Open — connects to FCC §30, NAT §20.1, RBIT §33.3 |
+| 145 | [v2.6-EDT-RBIT] Grammar Incompleteness NF2 Cross-System Prevalence — NF2 (HIERARCHY[A_point, A_strange] with blocked inter-layer transfer) predicts that within-layer health metrics are normal while cross-layer communication is pathological. How common is NF2 relative to standard (global degradation) failures? NF2 would be systematically missed by aggregate F_RBIT monitoring and misclassified as healthy. Prevalence estimate from retroactive cross-layer vs. within-layer F_RBIT decomposition of known governance failures? | Open — connects to EDT §53.2, RBIT §32.2 |
+
+---
+
+### Updated Version Log Entry
+
+| Additions | Description | Version |
+|---|---|---|
+| Terrain Phase Transition RBIT Bridge | First-order desertification → hysteresis, nucleation, metastability in F_RBIT; second-order maturation → M_RBIT order parameter; critical exponents → observable scaling laws; metastable τ_silent = τ₀·exp(SCC_min/T_eff) unification | New v2.6 |
+| Terrain Information Geometry DDD Protocol | Fisher metric → DDD natural gradient correction; Cramér-Rao → fourth E1 false-completion mechanism (insufficient observations); geodesic path → minimal-disturbance terrain modification | New v2.6 |
+| Temporal Stratification F_RBIT Architecture | Four strata → f₁–f₅ update cycle hierarchy; temporal boundary layer → four crisis mechanisms TB1–TB4; adiabatic approximation → breakdown warning (corr(f₁,f₂)>0.4 at δ<<τ₂); chronotopic window W_chrono for DDD triggering | New v2.6 |
+| Governance EROTI DDD Priority Derivation | EROTI ordering formally derives DDD Stage 1→4 priority (not empirical); E_min constraint → fourth E1 false-completion mechanism; maintenance dominance → maintenance trap f₃+v_class simultaneous decline signature | New v2.6 |
+| Emergence Topology Diagnostics | Betti β₁/β₀/β₂ → F_RBIT topological indicators; three topological EW-T1/T2/T3 preceding conventional EW; sheaf H¹≠0 → boundary-localized f₂ (Stage 1 fix, not Stage 3); persistent homology → DDD Protected Core identification | New v2.6 |
+| Attractor Grammar Failure Taxonomy | NF1 (Resonance Capture), NF2 (Grammar Incompleteness), NF3 (Attractor Proliferation Overflow) with distinct F_RBIT signatures and interventions; C_G_min/C_G^* bounds → over-complexity f₄+f₅ signature | New v2.6 |
+| Emotional Ecology Multi-Agent Resolution | Contagion c* → collective F_RBIT phase (independent/critical/super-critical); heritage asymmetry → r_positive,min quantitative formula; collective memory n_cascade scaling → group DDD efficiency; hub ecology ↔ NAT sphere reconciliation | New v2.6 |
+| ATCT Non-Adiabatic Correction | GCET duality valid only at stationarity; DDD E3 must wait τ₂ before GCET verification; affective events → f₁ via terrain curvature pathway (new f₁ modification mechanism) | New v2.6 |
+| κ(t) Unified Control Parameter | κ = f₂·f₃·M_RBIT scale-invariant regime scalar; three paths to criticality (Path 3 invisible); triangular (Φ,L,q) coupling → three timescale RBIT loop structure | New v2.6 |
+| Fractal Governance Necessity Formal Proof | k* structural necessity (not optimization); T_collapse ≤ (κ_c-κ₀)/δ finite bound; L_min ≳ log χ₀; multi-level F_RBIT monitoring requirement at every level | New v2.6 |
+| Phase Boundary Revival Taxonomy | Case A/B/C with distinct F_RBIT signatures and DDD protocols; topological necessity (Conley index); Kramers stochastic inevitability; Fisher-KPP propagation c_min; hub-last cascade ordering; revival dilemma optimal coupling | New v2.6 |
+| F_RBIT Evolution ODE | dF_RBIT/dt = G-L first formal evolution equation; storm onset = equilibrium destabilization; critical slowing-down as earliest warning; gradual L drift (not shock) as dominant onset mechanism | New v2.6 |
+| Interface Contract I5-I6 | I5 maturity gradient attenuation formalizes calibrated degradation at every interface; I6 C_RBIT>C_NAT>C_interface priority under resource scarcity; full cross-theory convergence on detection>routing>interface hierarchy | New v2.6 |
+| Novel Contributions NC-EDT2-RBIT-1 to NC-EDT2-RBIT-20 | 20 new contributions across EDT v5.0, FCC §19.5/19.6/30, VST §19.8/19.9/21.5/21.6 | New v2.6 |
+| Falsification F93–F113 | 21 new falsification predictions across EDT/FCC/VST integration | New v2.6 |
+| Open Problems 122–145 | 24 new open problems | New v2.6 |
+
+---
+
+*Timestamped: March 8, 2026*
+*DFG Framework · Resolution-Based Information Theory v2.6-EDTseries2*
