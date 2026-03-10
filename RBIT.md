@@ -1517,6 +1517,25 @@ Status: This bridge remains tentative pending formal derivation of Γ.
   Falsifiable prediction: systems in C2 should show ρ_p − ρ_c > δ_C2
   simultaneously with v_class declining but f₁ still bounded.
   See updated Open Problem [OP-ρ-decomp] in §Open Problems.
+
+NAT structural grounding of Γ (NAT v2.8 §7.35):
+  The "topology and routing" terms in Γ : (F_RBIT, topology, routing) → (ρ_p, ρ_c)
+  map onto specific NAT sphere structures:
+
+    ρ_p arises from:  sphere geometry (IDI), cross-validation quality, B_align, terrain visibility
+    ρ_c arises from:  escalation routing (k_eff), spectral gap (λ_2), hub structure (1 − κ_hub/κ_c)
+
+  NAT approximate projection operators:
+    ρ_p ≈ Γ_p(G_topology, S_sphere) ≈ IDI · cross_val_concordance · B_align
+    ρ_c ≈ Γ_c(G_topology, R_routing) ≈ λ_2 · k_eff · (1 − κ_hub/κ_c)
+
+  This grounding provides two new Δρ_pc diagnostics from NAT observables:
+    Δρ_pc > 0 (ρ_c lagging):  κ_hub ↑ or k_eff ↓ while IDI stable → routing bottleneck
+    Δρ_pc < 0 (ρ_p lagging):  IDI ↓ or B_align ↓ while k_eff stable → perception failure
+    Both declining:            C3 — corr(IDI, k_eff) sign changes (see NAT §7.35)
+
+  Earliest cross-theory warning: corr(IDI, k_eff) sign flip (NAT observable)
+  precedes v_class collapse (RBIT observable) — widest intervention window.
 ```
 
 ### Operational Contamination Boundary
@@ -2471,6 +2490,22 @@ Formal relationship to F_RBIT:
     BEFORE any fᵢ rise above warning thresholds.
     v_class is the only early warning indicator for SMA
     that does not invert under metric lock-in.
+
+NAT terrain-level equivalence (NAT v2.8 §7.34):
+  The RBIT SMA condition maps to the NAT Basin Misalignment Potential Ψ:
+
+    SMA activation  ↔  Ψ ≥ Ψ_c (False Basin stabilized in NAT terrain)
+
+  The correspondence is structural:
+    v_class → 0      ↔  IDI collapse (NAT exploration capacity lost)
+    ∀fᵢ → optimal   ↔  B_align ↓ (metric satisfaction = terrain misalignment deepening)
+    V(ρ) ↓           ↔  V_depth ↑ (reachable state-space shrinking while lock-in grows)
+
+  Diagnostic implication:
+    Ψ/Ψ_c provides continuous NAT-side tracking of SMA onset trajectory —
+    observable BEFORE v_class crosses v_floor in RBIT terms.
+    Cross-monitoring: Ψ/Ψ_c > 0.7 in NAT triggers SMA pre-alert in RBIT
+    (intervention window still open at this stage).
 ```
 
 **Integrated Structural Failure Diagnosis — SMA × PMW × C-depth Combined Protocol.** The three diagnostic frameworks introduced in RBIT v2.7–v2.8 are individually defined but operationally interdependent. In real systems, failure does not present as a single indicator — it presents as a pattern across multiple concurrent signals. This section formalizes the combined diagnostic matrix and defines the maximum-risk composite state.
@@ -2571,7 +2606,29 @@ Cross-theory concordance at State 4:
 
   Any 3 of 4 concurrent → State 4 confirmed.
   All 4 concurrent → Safe Collapse must be considered as recovery option.
-```
+
+NAT-side State 4 composite score (NAT v2.8 §7.34):
+  The NAT signal "sphere cross-validation producing consistent OOD misclassification"
+  expands to a five-signal composite with continuous early warning metric Σ_risk:
+
+    NAT State 4 signals (all five required for full NAT_S4):
+      Signal 1: Sphere cross-validation failure (cross-reference injection → Noise/Math)
+      Signal 2: IDI < IDI_floor sustained over τ_terrain AND dIDI/dt < 0
+      Signal 3: κ_hub ≥ κ_c AND dκ_hub/dt > 0 (hub concentration rising)
+      Signal 4: B_align < B_c AND dB_align/dt < 0 (alignment degrading)
+      Signal 5: Ψ(t) = V_depth·IDI⁻¹·(1−B_align) ≥ Ψ_c (onset scalar at threshold)
+
+    Minimum NAT_S4: Signal 2 (IDI collapse) ∧ Signal 5 (Ψ ≥ Ψ_c) MUST both be true.
+
+    Continuous approach tracking via Σ_risk:
+      Σ_risk = w₁·(Ψ/Ψ_c) + w₂·(1−IDI/IDI₀) + w₃·(κ_hub/κ_c)
+             + w₄·(1−B_align/B₀) + w₅·(cross_val_failure_fraction)
+      Σ_risk ≥ 0.75 → NAT State 4 → contributes NAT confirmation to SFS ≥ 3 rule above.
+
+  Cross-metric alignment:
+    RBIT SFS [v_class < v_floor] ↔ NAT Σ_risk Signal 2 (IDI collapse)
+    RBIT SFS [C3]                ↔ NAT Σ_risk Signals 3+1 (κ_hub + cross-val failure)
+    Both SFS ≥ 3 AND Σ_risk ≥ 0.75 → highest-confidence State 4 (dual confirmation).
 
 Boundary permeability Pᵢ should not be binary (open/closed) but graduated:
 
@@ -10685,6 +10742,21 @@ RBIT governance design implication:
 
 ---
 
+## 37. Open Problems 146–153 (v2.8-RTseries — NAT v2.8 Integration)
+
+| OP | Problem | Status |
+|---|---|---|
+| 146 | [v2.8-RTseries] Ψ_c calibration across system types — The Basin Misalignment Potential threshold Ψ_c = R_gov_min / P_max provides a conservative lower bound (NAT v2.8 §7.34), but actual Ψ_c may be higher if inter-sphere coupling is healthy. What observable proxy estimates Ψ_c empirically without requiring direct V_depth, IDI, and B_align measurement simultaneously? Candidate: baseline Ψ during confirmed Rest Mode provides Ψ_safe; Ψ_c can be estimated as Ψ_safe × (κ_hub_crit / κ_hub_baseline)^α for topology-dependent threshold scaling. Is this proxy monotonically ordered with true Ψ_c, and what is the required safety margin? | Open — connects to NAT v2.8 §7.34, RBIT §Ω_c Onset Threshold |
+| 147 | [v2.8-RTseries] Ψ–Ω_c coupling quantification — The partial derivative ∂Ω_c/∂Ψ < 0 establishes that False Basin formation lowers the contamination cascade threshold, but the magnitude of this coupling is unspecified. Is it linear (Ω_c = Ω_c0 − k·Ψ for some k > 0) or nonlinear? At C3 depth, dΩ_c/dt < 0 when dΨ/dt > 0 (threshold self-lowering). What is the characteristic time constant for this self-lowering under C3 conditions? Is it bounded by τ_topology, or does C3 contamination accelerate Ω_c decay below τ_topology scale? | Open — connects to NAT v2.8 §7.34 (Ψ–Ω_c coupling), RBIT §Ω_c Onset Threshold, RBIT §Timescale Stratification |
+| 148 | [v2.8-RTseries] Γ_p / Γ_c formal derivation — The GCET Unification Operator Γ : (F_RBIT, topology, routing) → (ρ_p, ρ_c) and its NAT grounding (NAT v2.8 §7.35: ρ_p ≈ IDI · cross_val_concordance · B_align; ρ_c ≈ λ_2 · k_eff · (1 − κ_hub/κ_c)) remain tentative approximations. A formal derivation of Γ requires showing that (i) the NAT sphere variables are complete sources of ρ_p and ρ_c (no other structural factors missing), (ii) the projection operators Γ_p and Γ_c are well-defined at all F_RBIT values (not just near Rest Mode), and (iii) the coupled ODE (dρ_p/dt, dρ_c/dt) is consistent with the scalar ODE dρ/dt = G − L. This is the primary open problem blocking full Γ formalization. See [OP-ρ-decomp]. | Open — connects to NAT v2.8 §7.35, RBIT §ρ_p/ρ_c ODE Bridge, RBIT [OP-ρ-decomp] |
+| 149 | [v2.8-RTseries] corr(IDI, k_eff) sign flip detection window — NAT v2.8 §7.35 identifies the sign change in corr(IDI, k_eff) as the earliest topology-level C3 warning: normally positive (sphere health improves both), flips negative at C3 onset (IDI declining while k_eff still stable). What minimum observation window W_min is required to reliably detect this sign flip given normal fluctuation in both IDI and k_eff? Is a rolling correlation window sufficient, or does the detection require a baseline period and drift detection against it? What false-positive rate does a threshold-based detection rule produce in simulated healthy systems? | Open — connects to NAT v2.8 §7.35, RBIT §Integrated Structural Failure Diagnosis |
+| 150 | [v2.8-RTseries] Δρ_pc threshold δ_C2 empirical calibration — The C2 contamination falsification prediction (RBIT §ρ_p/ρ_c ODE Bridge) states: systems in C2 should show ρ_p − ρ_c > δ_C2 simultaneously with v_class declining but f₁ still bounded. What is δ_C2? It must be large enough to exceed measurement noise in the ρ_p and ρ_c proxies but small enough to detect early C2. Candidate approach: δ_C2 = k · σ(Δρ_pc) during confirmed Rest Mode (k = 2 for 95% specificity). Does this threshold correctly identify C2 onset in simulation without producing C1 false positives? | Open — connects to NAT v2.8 §7.35, RBIT §ρ_p/ρ_c ODE Bridge Falsifiable prediction, RBIT §C1–C3 Depth Hierarchy |
+| 151 | [v2.8-RTseries] SFS ∧ Σ_risk dual confirmation sensitivity — RBIT v2.8 defines SFS ≥ 3 as State 4 on RBIT side; NAT v2.8 defines Σ_risk ≥ 0.75 as NAT State 4. When both are simultaneously satisfied (dual confirmation), this is the highest-confidence State 4 detection. What is the false-positive rate of dual confirmation vs. single-theory threshold? And what is the false-negative rate — can State 4 be missed if both SFS and Σ_risk are slightly below threshold? Is the dual-threshold rule conservative (requiring both) or sensitive (requiring either)? Should the combined rule be SFS ≥ 3 ∧ Σ_risk ≥ 0.75 (conservative) or SFS ≥ 3 ∨ Σ_risk ≥ 0.75 (sensitive)? | Open — connects to RBIT §Integrated Structural Failure Diagnosis, NAT v2.8 §7.34 |
+| 152 | [v2.8-RTseries] Four-stage False Basin timescale measurement protocol — NAT v2.8 §Timescale Stratification of False Basin Formation defines four stages (τ_topology, τ_terrain, τ_monitoring, τ_behavior scale accumulation). Stage 1 and Stage 2 are formally unobservable at standard monitoring timescales — they become visible only via Ψ trajectory rate (dΨ/dt > 0 sustained over τ_terrain). What minimum Ψ sampling frequency is required to detect Stage 2 onset before Stage 3? If monitoring operates at τ_monitoring >> τ_terrain, Stage 2 may complete invisibly. Is there a compressed proxy signal — perhaps corr(IDI, V_depth) sign change — that provides Stage 1/2 detection from τ_monitoring-scale measurements? | Open — connects to NAT v2.8 §Timescale Stratification of False Basin, RBIT §Timescale Stratification × C-depth |
+| 153 | [v2.8-RTseries] Adiabatic breakdown intervention window — Both RBIT (§Timescale Stratification) and NAT (§Timescale Stratification of False Basin) identify adiabatic approximation breakdown as a critical signal: RBIT uses corr(f₁, f₄) > threshold; NAT uses corr(IDI, V_depth) sign flip. These are different observables of the same underlying phenomenon (timescale separation collapse). Do they become detectable at the same time, or is one systematically earlier? If NAT corr(IDI, V_depth) detects breakdown before RBIT corr(f₁, f₄), this defines a new cross-theory early warning protocol with wider intervention window than either single-theory threshold. What is the expected lead time difference between NAT and RBIT adiabatic breakdown signals? | Open — connects to RBIT §Timescale Stratification, NAT v2.8 §Timescale Stratification of False Basin |
+
+---
+
 ### Updated Version Log Entry
 
 | Additions | Description | Version |
@@ -10725,6 +10797,19 @@ RBIT governance design implication:
 | Stable Misalignment Attractor | Formal SMA (local stability + global misalignment + self-reinforcing); F_RBIT inversion signature; v_class as sole SMA-sensitive EW; CSP vs SMA structural distinction; four-stage detection; C2/C3 recovery paths | New v2.7 |
 | Terrain Perception Distortion | L_perceived vs L_actual; coordinate misalignment vs landscape distortion; invisible escape paths; drift → distortion threshold δ_crit; cross-reference injection detection protocol; NAT vision problem bridge | New v2.7 |
 | Perfect Metric Warning (PMW) | PMW formal condition; metric improvement during structural collapse mechanism; PMW-1/2/3 severity; Anti-PMW governance design (S_floor/IDI_floor/v_floor); v_class as PMW-sensitive instrument; cross-theory concordance | New v2.7 |
+
+---
+
+### Updated Version Log Entry (v2.8)
+
+| Additions | Description | Version |
+|---|---|---|
+| Timescale Stratification × C-depth | τ_behavior/τ_landscape/τ_topology mapping to C1/C2/C3; phase lag explanation for long-stability → sudden-cascade; timescale mismatch as contamination amplifier; timescale identification via η_corr trajectory; F_RBIT stratum (f₁–f₅) correspondence; adiabatic breakdown corr(f₁,f₄) warning for C3 acceleration | New v2.8 |
+| Contamination Onset Threshold Ω_c | Ωᵢ = Pᵢ·(Sᵢ−Rᵢ) signed extension; three-regime classification (Absorption / Leakage / Cascade); structural onset threshold formal bound R_gov_min/P_max; Ωᵢ/Ω_c continuous early warning metric; rate dΩᵢ/dt as timescale indicator; C-depth effect on Ω_c degradation; silent cascade (C3 → Ω_c → 0) | New v2.8 |
+| Integrated Structural Failure Diagnosis | SMA × PMW × C-depth composite matrix (States 1–4); State 4 MAX RISK formal definition; SFS composite score formula with binary indicators; minimum State 4 condition ([v_class < v_floor] ∧ [C3]); cross-theory concordance protocol (RBIT+AGM+EDT+NAT); NAT Σ_risk mapping to SFS; dual confirmation (SFS ≥ 3 ∧ Σ_risk ≥ 0.75) | New v2.8 |
+| ρ_p/ρ_c ODE Bridge via GCET Γ | Tentative coupled dynamics dρ_p/dt = Γ_p·(G−L), dρ_c/dt = Γ_c·(G−L); Γ_p > Γ_c empirical constraint; Γ_p ≈ Γ_c at Rest Mode; C-depth mapping via (ρ_p,ρ_c): C1→ρ_p perturbation, C2→divergence, C3→both declining; Δρ_pc perception-control gap as earliest contamination depth signal; NAT §7.35 grounding (ρ_p ≈ IDI·B_align, ρ_c ≈ λ_2·k_eff); corr(IDI,k_eff) sign flip as C3 earliest warning | New v2.8 |
+| SMA × Ψ_c NAT equivalence | SMA activation ↔ Ψ ≥ Ψ_c (NAT v2.8 §7.34); three-way mapping v_class→IDI collapse, ∀fᵢ→optimal↔B_align↓, V(ρ)↓↔V_depth↑; Ψ/Ψ_c > 0.7 triggers SMA pre-alert | New v2.8 |
+| Open Problems 146–153 | 8 new open problems: Ψ_c calibration, Ψ–Ω_c coupling quantification, Γ_p/Γ_c formal derivation, corr(IDI,k_eff) detection window, δ_C2 empirical calibration, SFS∧Σ_risk dual confirmation, False Basin Stage 1/2 measurement protocol, adiabatic breakdown cross-theory lead time | New v2.8 |
 
 ---
 
