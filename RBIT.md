@@ -2,7 +2,7 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · March 8, 2026 · Internal Working Document — v2.6-EDTseries2*
+> *Draft · March 11, 2026 · Internal Working Document — v2.8-RTseries*
 
 ---
 
@@ -93,17 +93,33 @@ where:
   τ_adapt  = adaptation time to environmental shift ΔE
 
 Interpretation for RBIT:
-  Perfect resolution (Δρ = 0 across all channels, f₁ = 0, 
-  no residual instability) corresponds to T_eff → 0.
-  This is not the governance optimum — it is attractor lock-in.
-  
-  The RBIT design target is NOT:
-    F_RBIT = (0,0,0,0,0)  [zero instability everywhere]
-  
-  But rather:
+  Two states must be distinguished carefully:
+
+  (1) Ideal resolution — the governance target:
+      Δρ ≈ 0 across classification channels (f₁ ≈ 0)
+      f₃ (buffer dynamics), f₄ (coupling load), f₅ (resource dissipation)
+      remain bounded and NON-ZERO — these are structural properties of
+      a functioning system, not defects to eliminate.
+      F_RBIT ≠ (0,0,0,0,0) in healthy operation.
+
+      This corresponds to T_eff ∈ (T_min, T_max): the system retains
+      enough adaptive dynamics to remain responsive.
+
+  (2) Zero-instability state — the degenerate attractor:
+      F_RBIT = (0,0,0,0,0)  [all channels at zero]
+      This is NOT the governance optimum. It corresponds to T_eff → 0:
+      attractor lock-in, complete loss of adaptive capacity.
+
+  RBIT interprets bounded instability as a feature of healthy
+  systems, not a defect. The structural channels f₃, f₄, f₅
+  encoding buffering dynamics, coupling load, and resource
+  dissipation must remain active for the system to maintain
+  sender-controlled compression and adaptation capacity.
+
+  The RBIT design target is therefore:
     Rest Mode: each fᵢ bounded and non-monotone,
                F_RBIT ≠ (0,0,0,0,0) — residual maintained.
-  
+
   This is the information-theoretic expression of T_eff > T_min:
   the system preserves enough resolution gap uncertainty to
   remain adaptive rather than crystallized.
@@ -203,6 +219,22 @@ Resolution gap dynamics (from ODE ρ equation, FCC §14):
       ∝ diversity (d) × capacity (C) × growth margin (1−ρ)
     μρ·Φ·ρ → resolution degradation term
       ∝ regime pressure (Φ) × current resolution (ρ)
+
+  Dual protective role of C and d (design note):
+    In this reduction, C and d play a dual protective role: they not
+    only increase constructive resolution growth capacity (∝ C·d in
+    the growth term), but also dilute effective regime pressure through
+    Φ = β_s·n²/(C·T·d) — appearing as inverse factors in the loss term.
+    This asymmetry is intentional, not accidental. It encodes the claim
+    that capacity and diversity are both productive resources AND
+    protective buffers against overload simultaneously.
+
+    Accordingly, C and d are not symmetric state variables inside a
+    single conservation law; they are governance-side resilience
+    variables that both enable growth and reduce overload exposure.
+    This is consistent with the R = D·F·V·T multiplicative structure:
+    each component contributes to both constructive capacity and
+    contamination resistance — not as a tradeoff but as a dual function.
   
   At Φ = 1 (marginal): ρ̇ = 0 iff d·C·(1−ρ) = (μρ/αρ)·ρ
   For Φ > 1: ρ̇ < 0 for any C, d below the demand level
@@ -779,7 +811,120 @@ Drift rate equation:
     every unit of time spent in drift produces accelerating cost.
 ```
 
-### North Star Architecture — Map Navigation as Hierarchical Resolution
+**Terrain Perception Distortion — The Landscape Visibility Problem.** Map-Terrain drift can also be interpreted as a distortion of the system's *effective landscape* — the landscape that agents actually navigate — rather than merely a coordinate misalignment. This distinction is critical: coordinate misalignment (C2 contamination) can be corrected by recalibration, but landscape distortion may cause the system to fail to perceive the existence of viable escape paths even when such paths are objectively present.
+
+```
+Formal distinction:
+
+  Map defines the coordinate system through which the landscape is evaluated.
+  Terrain defines the true structure of the environment manifold.
+
+  Let:
+    L_perceived(x) = landscape as evaluated through current Map coordinates
+    L_actual(x)    = true landscape in objective coordinates
+
+  Coordinate misalignment (C2):
+    Map coordinates rotated/scaled relative to Terrain coordinates
+    L_perceived is a distorted IMAGE of L_actual
+    → same topology, wrong metric (distances misjudged)
+    → escape paths exist and are perceived, but mispriced
+    → recovery: recalibrate Map coordinates
+
+  Landscape distortion (C3 onset):
+    Map coordinates diverged so severely that entire regions of L_actual
+    are INVISIBLE to L_perceived
+    → L_perceived topology differs from L_actual topology
+    → escape paths may exist in L_actual but not appear in L_perceived
+    → agents cannot navigate toward paths they cannot perceive
+    → recovery: requires C3-level architectural intervention
+
+  Formal condition for landscape distortion:
+    When |Map − Terrain| > δ_crit:
+      ∃ x ∈ L_actual such that x ∉ domain(L_perceived)
+      (portions of actual landscape have no representation in perceived landscape)
+
+Systematic exploration failure:
+
+  Even when escape paths exist in the true landscape,
+  landscape distortion produces systematic exploration failure:
+
+  Agent belief (from L_perceived):
+    "No viable alternative trajectories exist."
+    "Current state is locally optimal."
+    "Continued exploration is futile."
+
+  Actual landscape (L_actual):
+    Viable escape paths exist in unrepresented regions
+    Current state is NOT globally optimal
+    Exploration in the correct dimensions would find alternatives
+
+  Observable signature in RBIT:
+    Exploration attempts consistent with L_perceived (locally thorough)
+    Exploration absent in dimensions corresponding to unrepresented regions
+    v_class = 0 in specific dimensions (not globally — discriminating)
+    f₁ high for inputs that activate unrepresented regions
+
+  This is distinct from C1 (in basin, can explore) and C2 (wrong metric, paths mispriced):
+    Landscape distortion = paths not visible at all
+    The difference is visible in the exploration signature:
+      C2: agents explore broadly but systematically bias toward wrong directions
+      C3/LD: agents explore locally but fail to generate exploration in specific dimensions
+
+Drift → Distortion transition:
+
+  The Map-Terrain drift accumulation cost (quadratic) describes the transition:
+
+    |Map − Terrain| < δ_safe:    coordinate misalignment only (C2-recoverable)
+    |Map − Terrain| > δ_crit:    landscape distortion begins (C3 threshold)
+    |Map − Terrain| >> δ_crit:   large landscape regions invisible (SMA risk)
+
+  Drift rate equation implication:
+    d|Map − Terrain|/dt = v_terrain − v_map_update + ε_coupling
+    
+    When drift is unmanaged for time T:
+      |Map − Terrain|(T) can cross δ_crit → qualitative failure mode change
+      From: "paths mispriced" (C2, correctable)
+      To:   "paths invisible" (C3, architectural intervention required)
+    
+    This is the RBIT economic argument for proactive drift monitoring:
+    every unit of time spent in drift not only increases cost quadratically,
+    but may cross the qualitative threshold from recoverable to architectural.
+
+Detection through cross-reference injection:
+
+  Standard RBIT monitoring cannot detect landscape distortion
+  (it cannot see what the Map cannot perceive).
+  
+  Protocol:
+    Step 1: Identify dimensions with low v_class but non-zero A_t
+            (absorption events not producing classification transitions
+             → inputs exist in these dimensions but are not being resolved)
+    Step 2: External reference injection targeting these dimensions
+            (inject structured inputs known to lie in unrepresented regions)
+    Step 3: Measure response:
+            If correct classification → dimension NOT distorted (C2 at most)
+            If Noise classification → dimension IS distorted (C3 / landscape invisible)
+    Step 4: Quantify distortion extent:
+            Fraction of dimensions showing Step 3 Noise classification
+            = landscape distortion severity score
+
+Connection to NAT terrain problem vs. vision problem:
+  NAT distinguishes:
+    Terrain problem: landscape is wrong (basin structure problematic)
+    Vision problem:  landscape is right but agent cannot see it
+
+  RBIT landscape distortion = NAT vision problem at the Map level:
+    Not that the terrain is wrong,
+    but that the Map cannot represent the terrain correctly.
+  
+  Combined failure (SMA + landscape distortion):
+    Terrain problem AND vision problem simultaneously
+    = agent is in a false basin AND cannot see the true basins that would enable escape
+    → Most dangerous combined failure mode; requires C3 intervention and
+       external reference to even diagnose.
+```
+
+
 
 Map-Terrain alignment is not a passive measurement problem — it is an active navigation problem. As system complexity grows, the Map must maintain coherent reference despite continuous Terrain change. The North Star Architecture (AGM §4.7.1, FGS §29D) provides the structural solution: a three-level hierarchy for Map navigation that prevents reference frame drift while preserving adaptive capacity.
 
@@ -1091,6 +1236,289 @@ Misclassification consequences (RBIT failure prediction):
 
 This connects the abstract resolution gap variable to concrete operational routing, where classification error in the dangerous direction (under-escalation) produces the cascade failure RBIT predicts, while error in the safe direction (over-escalation) produces only cost overhead.
 
+### Resolution as Exploration Capacity — Geometric Interpretation of ρ
+
+Resolution ρ admits a geometric interpretation that connects it directly to Recovery Theory's exploration capacity φ and AGM's effective temperature T_eff. This interpretation is not a replacement of the information-theoretic definition but an additional representation that clarifies why resolution growth and exploration capacity growth are coupled — and why resolution collapse produces exploration failure even when agents appear active.
+
+```
+Geometric interpretation:
+
+  High ρ:
+    Multiple viable trajectories exist in state space
+    The system can distinguish between competing attractors
+    → Reachable state-space volume is large
+    → Alternative response pathways are available and distinguishable
+
+  Low ρ:
+    Trajectories collapse into narrow attractor basins
+    The system cannot maintain distinction between competing directions
+    → Reachable state-space volume contracts
+    → Alternative pathways exist structurally but are functionally inaccessible
+
+  Resolution growth = expansion of reachable state-space volume
+    Operationally: each upscaling event v_class > 0 adds discriminable dimensions
+    
+  Resolution collapse = contraction of reachable trajectories
+    Operationally: v_class → 0, then v_class < 0 (classification regressing)
+    Structurally: Tier 2 and Tier 3 capacity collapses back toward Tier 1 only
+
+ρ ↔ φ formal bridge:
+
+  Recovery Theory exploration capacity φ:
+    φ = fraction of state space accessible to recovery trajectories
+    φ → 0: system trapped in single basin → recovery impossible
+    φ > 0: multiple escape paths available → recovery possible
+
+  RBIT resolution ρ:
+    ρ = capacity to distinguish between competing vectors
+    ρ → 0: all vectors compressed to single direction
+    ρ > 0: multiple vectors maintained simultaneously
+
+  Bridge relation:
+    φ ∝ V(ρ) where V(ρ) = volume of distinguishable state space
+    
+    High ρ → large V(ρ) → large φ (recovery can explore many paths)
+    Low ρ  → small V(ρ) → small φ (recovery restricted to single path)
+    
+    The contamination depth C1–C3 hierarchy maps onto this:
+      C1: ρ intact, position wrong → φ > 0 (escape paths available)
+      C2: ρ coordinate misaligned → φ mispointed (paths exist but miscalculated)
+      C3: ρ generator corrupted → φ actively shrinking (landscape collapses)
+
+Resolution floor and exploration minimum:
+
+  When ρ → ρ_min (Contamination Boundary N approached):
+    V(ρ) → V_min
+    φ → φ_min (minimum exploration capacity)
+    
+  Below ρ_min:
+    V(ρ) < V_required_for_recovery
+    φ < φ_critical
+    → Recovery is geometrically impossible: no escape trajectories exist
+    → Contamination Boundary N ≤ ⌈D*/η⌉ is the formal ρ_min condition
+    
+  This is the RBIT geometric expression of Recovery Theory Theorem:
+    "Recovery requires φ > 0; once φ = 0, no governance intervention can restore it."
+
+AGM T_eff connection:
+
+  T_eff (effective temperature) governs escape probability from attractors:
+    k_esc = ω₀ · exp(-ΔU / T_eff)    [Kramers rate]
+    
+  T_eff ↔ ρ:
+    High T_eff → high thermal exploration → corresponds to high ρ
+                  (many trajectories thermally accessible)
+    Low T_eff  → low thermal exploration → corresponds to low ρ
+                  (single attractor dominates)
+    T_eff = 0  → no thermal exploration → ρ = ρ_min → φ = 0
+    
+  Terminal convergence trinity (geometric form):
+    T_eff = 0 ↔ ρ = ρ_min ↔ φ = 0
+    All three express: reachable state-space volume has collapsed to zero.
+
+Exploration calibration protocol:
+
+  Target: maintain V(ρ) above V_recovery_threshold
+  
+  Warning indicators:
+    v_class → 0 sustained (no new dimensions being discriminated)
+    IDI declining (fewer distinct interpretation pathways active)
+    Tier 2/3 throughput declining relative to Tier 1 (dimensionality collapse)
+    
+  Recovery protocol:
+    Seed injection restores V(ρ) directly:
+      Each seed = one new distinguishable attractor added to state space
+      Seed density ∝ required V(ρ) restoration rate
+    DDD Stage 3 (Diversity restoration) = V(ρ) expansion protocol
+    North Star Architecture = mechanism for preventing V(ρ) collapse below floor
+```
+
+**Resolution capacity and state-space topology.** The geometric interpretation connects RBIT to the topological diagnostics introduced in v2.6:
+
+```
+Betti numbers and resolution:
+  β₀ = number of connected components in state space
+       High β₀ → fragmented state space → multiple isolated basins
+       β₀ = 1  → single connected exploration space → optimal for φ
+  
+  β₁ = number of independent loops in state space
+       High β₁ → rich attractor structure → V(ρ) large
+       β₁ = 0  → no loop structure → resolution confined to single dimension
+
+  Topological EW-T1/T2/T3 → geometric resolution warnings:
+    EW-T1 (β₀ → 1 from fragmentation) = state space consolidating into single basin
+                                         → V(ρ) collapsing
+    EW-T2 (β₁ declining)               = loop structure disappearing
+                                         → resolution losing dimensional richness
+    EW-T3 (β₂ anomaly)                 = higher-dimensional topology disrupted
+                                         → Tier 3 Map Design capacity failing
+```
+
+
+
+The scalar resolution variable ρ conflates two functionally distinct capacities that evolve independently and fail independently. Formal precision requires distinguishing them.
+
+**Definition.** Resolution capacity ρ decomposes into two components:
+
+```
+ρ_p  (perception resolution)
+     The capacity to represent incoming complexity in sufficient
+     dimensional detail — to decompose the state space into
+     distinguishable independent axes.
+     Operationally: number of independent dimensions the system
+     can simultaneously track and differentiate.
+
+ρ_c  (control resolution)
+     The capacity to act on perceived distinctions — to apply
+     differentiated governance responses across recognized axes.
+     Operationally: number of independent intervention dimensions
+     available to the system at current architectural scale.
+```
+
+**Structural relationship.** The two components are not symmetric:
+
+```
+ρ_p ≥ ρ_c  in general (perception outpaces control reach)
+
+Stable governance requires BOTH conditions simultaneously:
+  Φ ≤ ρ_p   (complexity does not exceed perceptual dimensionality)
+  Φ ≤ ρ_c   (complexity does not exceed control dimensionality)
+
+Combined stability condition:
+  Φ ≤ min(ρ_p, ρ_c)
+```
+
+**Failure mode taxonomy under decomposition.**
+
+```
+Case 1: Φ > ρ_p  (perception collapse)
+  System cannot distinguish problem dimensions.
+  All incoming complexity compressed to fewer axes.
+  Metrics appear stable; information loss already in progress.
+  → This is the Silent Criticality onset mechanism.
+  → Precedes control failure in most observed collapse sequences.
+
+Case 2: Φ > ρ_c  with ρ_p intact  (control gap)
+  System correctly perceives problem structure
+  but lacks differentiated response capacity.
+  Manifests as analysis paralysis or metric-response mismatch.
+  → Externally visible — system reports problems it cannot address.
+
+Case 3: ρ_p ↑ while ρ_c ↓  (perception-control divergence)
+  Increasingly accurate diagnosis with shrinking intervention space.
+  High-risk governance state: informed helplessness.
+  → Typical in late-stage organizational resource depletion.
+
+Case 4: ρ_c ↑ while ρ_p ↓  (blind intervention)
+  Control capacity outpaces representational accuracy.
+  System acts on compressed/incorrect state models.
+  → Overreaction, misguided intervention, governance thrashing.
+```
+
+**Why perception collapses first.** Incoming complexity scales as Φ ∝ n² (interaction pair count), while perceptual and control capacities scale at most linearly with system resources. As a result, Φ reaches ρ_p before ρ_c in the majority of growth trajectories. This explains the empirical regularity that most complex system failures are preceded by representation failure rather than resource exhaustion.
+
+**Relation to existing RBIT variables.**
+
+```
+ρ_p correspondence:
+  f₁ (misclassification rate) ∝ 1/ρ_p  — classification error rises as perception
+                                          dimensionality collapses
+  f₂ (resolution mismatch)   ∝ Δρ_p    — mismatch between sender ρ_p and
+                                          receiver ρ_p
+  v_class (classification velocity) = leading indicator of ρ_p decline
+
+ρ_c correspondence:
+  f₃ (buffer instability)  ∝ 1/ρ_c    — buffer is the margin between perceived
+                                         need and available control response
+  f₄ (escalation load)     ∝ Φ/ρ_c    — escalation rises when local ρ_c is
+                                         insufficient relative to incoming Φ
+  η_corr (correction efficiency) = direct ratio of ρ_c-driven correction
+                                    to ongoing degradation
+```
+
+**Scalar ρ as effective minimum.** For contexts where a single scalar is required, ρ := min(ρ_p, ρ_c) is the conservative choice — it captures the binding constraint. All existing RBIT theorems stated in terms of scalar ρ remain valid under this interpretation; the decomposition adds diagnostic specificity without changing the formal results.
+
+**Open problem.** The precise mapping between ODE variables (C, d, T, n) and the ρ_p / ρ_c decomposition remains an open formal question. Tentatively: C and d jointly determine ρ_c (governance action space), while v_class and branching ratio R are the primary ρ_p observables. A formal identification protocol is required before the decomposition can be operationalized independently of the scalar proxy. See Open Problem [OP-ρ-decomp] in §Open Problems.
+
+**Tentative ODE Bridge for Resolution Decomposition via GCET Γ.** Although the full identification protocol remains open, the GCET Unification Operator Γ provides a tentative structural bridge that constrains the form of the coupled dynamics. This is not a closed derivation but a theoretical scaffold for future formalization.
+
+```
+Setup:
+
+  RBIT scalar F_RBIT evolution:
+    dF_RBIT/dt = G(F, S, E) − L(F, S)       [dF_RBIT/dt ODE, v2.6]
+
+  Resolution decomposition:
+    ρ = ρ_p + ρ_c   (or conservatively: ρ = min(ρ_p, ρ_c))
+
+  GCET Unification Operator Γ (EDT §52.1):
+    Γ : (F_RBIT, topology, routing) → (ρ_p, ρ_c)
+    Γ maps governance state to its perceptual and control projections.
+
+Tentative coupled dynamics:
+
+  Define projection operators:
+    Γ_p = ∂ρ_p / ∂F_RBIT   (sensitivity of perceptual resolution to health)
+    Γ_c = ∂ρ_c / ∂F_RBIT   (sensitivity of control resolution to health)
+
+  Then:
+    dρ_p/dt ≈ Γ_p · (G − L) + η_p(t)
+    dρ_c/dt ≈ Γ_c · (G − L) + η_c(t)
+
+  where η_p, η_c capture topology-specific perturbations not captured by scalar F_RBIT.
+
+Empirical constraints on Γ_p vs. Γ_c:
+
+  Γ_p > Γ_c in most systems:
+    Perceptual resolution responds faster to governance improvement than control resolution.
+    Classification capacity (ρ_p) scales with information input.
+    Control capacity (ρ_c) scales with architectural throughput — slower to change.
+
+  Γ_p ≈ Γ_c at Rest Mode:
+    At stable equilibrium, both components track F_RBIT at the same rate.
+    Divergence (Γ_p >> Γ_c or Γ_c >> Γ_p) is a pre-storm signal.
+
+Contamination regime mapping via (ρ_p, ρ_c):
+
+  This tentative bridge maps contamination depth to resolution failure type:
+
+  C1 (Positional): local ρ_p perturbation, ρ_c intact
+    → Φ correctable through perceptual recalibration alone
+    → Γ_p correction sufficient
+
+  C2 (Coordinate): ρ_p and ρ_c diverge
+    → ρ_p perceives terrain correctly; ρ_c cannot act on perception
+    → Diagnostic: ρ_p − ρ_c > δ_C2 (perception-control gap threshold)
+    → Requires routing recalibration (Γ_c correction)
+
+  C3 (Generator): both ρ_p and ρ_c degrading simultaneously
+    → dρ_p/dt < 0 AND dρ_c/dt < 0 sustained
+    → Γ is corrupted: governance health F_RBIT can improve (metric satisfaction)
+       while both resolution components decline
+    → Observable: F_RBIT rising while ρ_p and ρ_c both falling
+    → Requires architectural reset (Γ itself must be reconstructed)
+
+Diagnostic implication:
+
+  The perception-control gap Δρ_pc = ρ_p − ρ_c serves as a contamination
+  depth indicator independent of scalar ρ:
+
+    Δρ_pc ≈ 0, both high → healthy (C0 — no contamination)
+    Δρ_pc > 0, ρ_c low   → C1 or early C2 (perception ahead of control)
+    Δρ_pc < 0, ρ_p low   → advanced C2 (perception failing, Map collapse)
+    Both declining        → C3 confirmed (generator failure)
+
+  This provides an early warning sequence:
+    ρ_p − ρ_c diverging → before scalar ρ shows any decline
+    → First detectable signal of contamination onset
+    → Enables C-depth identification before Φᵢ > 0 is observed
+
+Status: This bridge remains tentative pending formal derivation of Γ.
+  Falsifiable prediction: systems in C2 should show ρ_p − ρ_c > δ_C2
+  simultaneously with v_class declining but f₁ still bounded.
+  See updated Open Problem [OP-ρ-decomp] in §Open Problems.
+```
+
 ### Operational Contamination Boundary
 
 The contamination/normal-variation boundary is defined behaviorally, not by state classification:
@@ -1114,6 +1542,257 @@ N calibration:
 
 This boundary does not require knowing "what contamination is" in absolute terms — only whether the system can return to baseline on its own. Contamination is not a wrong state — it is the absence of a return path. (See Recovery Theory §Boundary Gap for full derivation.)
 
+### Structural Depth of Contamination — C1–C3 Hierarchy
+
+Contamination may arise at different structural depths within the information substrate. The behavioral contamination boundary above identifies *that* contamination is present; the following depth taxonomy identifies *where* the contamination is anchored — which determines the appropriate recovery mechanism. This hierarchy bridges RBIT contamination dynamics with Recovery Theory's three-phase contamination depth model and provides the ODE bridge linking Δρ, η_corr, and Φ to structural intervention levels.
+
+```
+C1 — Positional Contamination
+
+  Definition:
+    The system state lies within a local attractor basin,
+    but the attractor landscape itself remains structurally valid.
+    The coordinate system is intact; only the current position is wrong.
+
+  RBIT signature:
+    Δρ temporarily < 0 but self-correcting
+    η_corr > 0 (correction attempts are producing some improvement)
+    Φᵢ = 0 or small (contamination not yet propagating upward)
+    v_class fluctuating but not collapsing
+
+  Recovery mechanism:
+    Stochastic exploration (increase T_eff or inject diversity)
+    Diversity injection via Boundary Agent (controlled perturbation)
+    Seed injection at affected tier
+    Expected recovery time: O(1/T_eff) — escape rate from local basin
+
+  Danger flag:
+    C1 misidentified as C2 → over-intervention destroys valid landscape structure
+    C1 misidentified as system health → atrophy if T_eff further reduced
+
+C2 — Coordinate Contamination
+
+  Definition:
+    The system's internal coordinate system has diverged from
+    the environment manifold. The map itself is misaligned —
+    not just the position within it.
+
+  RBIT signature:
+    Persistent correction without convergence:
+      η_corr oscillates but does not trend positive
+      Repeated Δρ < 0 corrections → Δρ returns to same negative value
+      f₁ rising despite active correction (misclassification not decreasing)
+    v_class → 0 despite A_t > 0 (absorption events not producing upscaling)
+    Map-Terrain drift |Map − Terrain| growing despite governance effort
+
+  Recovery mechanism:
+    External reference recalibration:
+      North Star Criterion recalibration (Level 1 reset, not Level 3 tuning)
+      Observation Layer forced reset from external reference
+      DDD Stage 2 (map realignment) required before Stage 3 (diversity)
+    Cross-tier coordinate synchronization
+    Expected recovery time: O(τ_map_update) — slower than C1
+
+  Danger flag:
+    C2 treated as C1 → stochastic exploration explores the wrong landscape
+    Result: activity without progress (apparent exploration, systematic failure)
+    RBIT observable: v_class < 0 sustained (classification regressing)
+
+C3 — Landscape Generator Corruption
+
+  Definition:
+    The system's update dynamics themselves have been modified
+    such that the effective landscape reshapes toward misaligned attractors.
+    The governance mechanism that generates attractors is corrupted.
+
+  RBIT signature:
+    Optimization reinforces misaligned attractors:
+      Governance metrics improving → resolution degrading (anti-correlated)
+      F_RBIT declining while S_norm improving (health vector inverted)
+      η_corr < 0 sustained (correction actively worsens outcome)
+    Φᵢ large AND increasing despite R maintenance (self-purification ineffective)
+    SCM (Self-Consistent Misalignment, VST §2.6) confirmed:
+      internal coherence high, external alignment deteriorating
+
+  Recovery mechanism:
+    Architectural intervention or boundary reset:
+      DDD Stage 4 (deep diagnostic) required — no correction at lower levels
+      Buffer thickness B must be verified > B_critical before any intervention
+      Possible: Safe Collapse + controlled rebuild (FGS §29C)
+      Boundary Agent replacement (if C3 corrupted the Boundary Agent itself)
+    Expected recovery time: O(τ_architectural) — longest timescale
+
+  Danger flag:
+    C3 is the failure mode where the system appears most stable
+    (optimization objectives satisfied locally) while being most misaligned.
+    Standard monitoring produces false negatives — requires cross-theory
+    concordance (RBIT + AGM + EDT) for detection.
+
+Depth-recovery protocol mapping:
+
+  C1 → Stochastic injection (Boundary Agent activation)
+  C2 → External reference recalibration (Map reset)
+  C3 → Architectural intervention (Boundary reset or Safe Collapse)
+
+  Wrong-depth intervention consequence:
+    Intervening at C1 level for C3 contamination:
+      = seed injection into corrupted landscape
+      = injection accelerates attractor reinforcement
+      = C3 worsens under C1 treatment
+    
+    Intervening at C3 level for C1 contamination:
+      = architectural disruption of valid landscape
+      = destroys functional attractor structure unnecessarily
+      = recovery set back to T=0 for affected tier
+
+  Depth identification protocol:
+    Step 1: Is η_corr > 0? (any correction producing improvement?)
+            Yes → C1 likely
+            No  → proceed to Step 2
+    Step 2: Does external reference injection change trajectory?
+            Yes → C2 likely (coordinate misalignment, correctable by reference)
+            No  → proceed to Step 3
+    Step 3: Is F_RBIT anti-correlated with governance optimization?
+            Yes → C3 confirmed (landscape generator corrupted)
+            No  → uncertain; cross-theory concordance required
+
+Cross-theory connections:
+  C1 ↔ Recovery Theory Phase 1 (local basin escape)
+  C2 ↔ Recovery Theory Phase 2 (coordinate recalibration)
+  C3 ↔ Recovery Theory Phase 3 (architectural reconstruction)
+  C1–C3 depth ↔ NAT terrain problem vs. vision problem distinction:
+    C1 = agent problem (position in valid terrain)
+    C2 = map problem (map-terrain divergence)
+    C3 = terrain generator problem (landscape production corrupted)
+```
+
+**C-depth and contamination flux coupling.** The structural depth of contamination determines not only recovery mechanism but also cross-scale propagation dynamics:
+
+```
+Φᵢ(C1): small, self-limiting (basin escape generates bounded flux)
+Φᵢ(C2): moderate, sustained (misaligned map generates persistent error signal)
+Φᵢ(C3): large, escalating (corrupted generator produces growing flux)
+
+Critical implication:
+  C3 contamination at Tier 1 can produce S_gov > S_c_gov
+  (Governance-Level Storm) even when n_esc appears normal —
+  because each escalation carries C3-contaminated governance signals
+  that distort upper-tier resolution capacity upon receipt.
+  
+  Detection: Φᵢ growing despite n_esc stable → C3 depth signature
+             Standard queue depth monitoring (S_gov formula) misses this.
+```
+
+**Timescale Stratification of Contamination Depth.** The C1–C3 hierarchy is not merely a structural classification — it is a timescale hierarchy. Each depth level corresponds to a different characteristic update time of the underlying structural layer. This correspondence transforms the contamination depth taxonomy from a descriptive typology into a predictive dynamical framework.
+
+```
+Timescale ordering in DFG systems:
+
+  Let:
+    τ_behavior   = characteristic update time of local agent trajectories
+    τ_landscape  = characteristic update time of coordination basin geometry
+    τ_topology   = characteristic update time of interaction architecture
+
+  Empirically across complex adaptive systems:
+    τ_topology  ≫  τ_landscape  ≫  τ_behavior
+
+  This ordering maps directly to the contamination depth hierarchy:
+
+C1 — Positional Contamination   ↔   τ ≈ τ_behavior
+  Local agent trajectories trapped within an existing valid basin.
+  The landscape and architecture remain correct; only position is wrong.
+  Recovery operates at behavioral timescale — fast.
+  Expected recovery time: O(1/T_eff), Kramers escape rate.
+  Governance intervention: stochastic exploration, seed injection.
+
+C2 — Coordinate Contamination   ↔   τ ≈ τ_landscape
+  Map–Terrain drift has deformed the perceived landscape geometry.
+  The coordinate system through which the landscape is evaluated is wrong.
+  Recovery operates at landscape update timescale — medium.
+  Expected recovery time: O(τ_map_update) — slower than C1 by construction.
+  Governance intervention: external reference recalibration (Map reset).
+
+C3 — Landscape Generator Corruption   ↔   τ ≈ τ_topology
+  Interaction architecture has reshaped the landscape itself.
+  The mechanism that generates attractors is operating incorrectly.
+  Recovery operates at architectural timescale — slowest.
+  Expected recovery time: O(τ_architectural) — slowest possible.
+  Governance intervention: architectural intervention, boundary reset.
+
+Timescale hierarchy consequence — phase lag:
+
+  Because τ_topology ≫ τ_landscape ≫ τ_behavior,
+  structural degradation at deeper levels produces PHASE LAG
+  before observable contamination cascade:
+
+  C3 degradation (architecture)
+    → τ_topology lag before landscape deforms (C2 visible)
+    → τ_landscape lag before behavioral cascade (C1 visible)
+    → Only then does Φᵢ > 0 become measurable
+
+  This explains the common empirical pattern:
+    long apparent stability → sudden cascade
+
+  The system was accumulating C3-level degradation while
+  appearing stable by all C1-level metrics (fᵢ, S_norm).
+
+Timescale mismatch as contamination amplifier:
+
+  When governance correction operates at τ_behavior
+  but contamination is rooted at τ_topology:
+
+    Correction attempts: fast (τ_behavior scale)
+    Contamination source: slow (τ_topology scale)
+
+  Result: corrections appear locally effective (C1 behavior improves)
+          while C3 source continues generating contamination unimpeded.
+
+  Observable signature:
+    η_corr > 0 briefly after each correction (C1 behavior)
+    followed by return to same Δρ < 0 baseline (C3 source)
+    = "correction without convergence" = definitive C2/C3 signal
+
+Timescale identification protocol:
+
+  Measure: η_corr trajectory over multiple correction cycles
+  
+  If η_corr > 0 sustained after correction:
+    Recovery operating at same timescale as contamination → C1
+
+  If η_corr > 0 transiently but returns to baseline within τ_landscape:
+    Contamination root at τ_landscape → C2
+
+  If η_corr > 0 transiently but returns within τ_topology cycles:
+    Contamination root at τ_topology → C3
+
+  This provides an empirical timescale identification method
+  that does not require directly observing topology or landscape.
+
+Connection to RBIT Temporal Stratification (v2.6):
+
+  The four temporal strata (f₁–f₅ update cycle hierarchy, v2.6)
+  map onto the timescale hierarchy:
+    f₁ (misclassification): τ_behavior scale — fastest update
+    f₂ (resolution mismatch): τ_behavior–τ_landscape boundary
+    f₃ (buffer instability): τ_landscape scale
+    f₄ (escalation load): τ_landscape–τ_topology boundary
+    f₅ (structural): τ_topology scale — slowest update
+
+  C-depth and F_RBIT stratum correspondence:
+    C1 contamination: primarily visible in f₁, f₂ (behavioral strata)
+    C2 contamination: primarily visible in f₃, f₄ (landscape strata)
+    C3 contamination: primarily visible in f₅ (structural stratum)
+                      + F_RBIT inversion pattern (all fᵢ improving while f₅ declining)
+
+  Adiabatic approximation validity (v2.6 ATCT):
+    Valid when τ_topology ≫ τ_landscape ≫ τ_behavior (standard regime)
+    Breaks down when C3 contamination accelerates τ_topology:
+      dτ_topology/dt < 0 (architecture updating faster than normal)
+      → adiabatic approximation fails
+      → f₁ and f₄ become correlated (temporal boundary layer TB1)
+      → corr(f₁, f₄) > threshold is a C3 acceleration warning
+```
+
 ### Contamination Flux — Cross-Scale Propagation
 
 The contamination boundary above defines *when* contamination exists at a single layer. The more dangerous phenomenon is *cross-scale contamination* — when instability generated at one resolution tier leaks upward and distorts higher-tier governance structures. This is the primary failure mode in scaling systems: local problems become global distortions.
@@ -1135,6 +1814,98 @@ Contamination flux interpretation:
   Φᵢ = 0    → tier self-resolves all instability; no upward leakage
   Φᵢ > 0    → residual instability exceeds local recovery and leaks upward
   ΣΦᵢ > Rᵢ₊₁ → higher tier overwhelmed → governance distortion cascade
+```
+
+**Contamination Onset Threshold — Leakage vs. Cascade Regime.** The contamination flux Φᵢ > 0 marks the beginning of upward leakage, but leakage alone does not imply cascade dynamics. A critical distinction exists between the *leakage regime* (Φᵢ > 0, containable) and the *cascade regime* (self-reinforcing, structural). The onset threshold formalizes this boundary.
+
+```
+Contamination Potential:
+
+  Define the contamination potential at tier i:
+
+    Ωᵢ(t) = Pᵢ · (Sᵢ(t) − Rᵢ(t))
+
+  Note: Ωᵢ = Φᵢ when Sᵢ > Rᵢ, and Ωᵢ ≤ 0 when Sᵢ ≤ Rᵢ.
+  The potential Ωᵢ is signed; Φᵢ = max(0, Ωᵢ) is its positive part.
+
+Three-Regime Classification:
+
+  Regime 0 — Absorption (Ωᵢ ≤ 0):
+    Sᵢ ≤ Rᵢ
+    All disturbances fully absorbed locally.
+    No upward leakage. Self-purification capacity sufficient.
+    Observable: all fᵢ bounded and stable; v_class > 0.
+
+  Regime 1 — Leakage (0 < Ωᵢ < Ω_c):
+    Φᵢ > 0 but below structural cascade threshold.
+    Residual instability propagates upward but:
+      Upper tiers can absorb: ΣΦᵢ < Rᵢ₊₁
+      Cascade does not self-amplify.
+    Observable: f₄ (escalation load) rising; upper-tier load increasing;
+                but governance does not enter storm regime.
+    Intervention window: OPEN — early DDD effective here.
+    This is the pre-cascade regime where the system is
+    vulnerable but not yet committed to cascade.
+
+  Regime 2 — Cascade (Ωᵢ ≥ Ω_c):
+    ΣΦᵢ > Rᵢ₊₁ for one or more upper tiers.
+    Cascade becomes self-reinforcing:
+      Upper-tier overwhelm → reduced Rᵢ₊₁ → higher Φᵢ₊₁ → further overwhelm
+    Observable: S_gov approaching S_c_gov; multiple fᵢ rising simultaneously;
+                F_RBIT ODE stability margin (∂G/∂F − ∂L/∂F) → 0.
+    Intervention window: CLOSING — DDD must activate immediately.
+
+Structural Onset Threshold Ω_c:
+
+  Ω_c is determined by:
+    Network coupling density κ:       higher κ → lower Ω_c (more vulnerable)
+    Feedback latency τ_feedback:       longer τ → lower Ω_c (slower correction)
+    Coordination friction f_conflict:  optimal friction → higher Ω_c (better calibrated)
+    Hub centrality concentration:      higher concentration → lower Ω_c
+
+  Formal bound (conservative):
+    Ω_c ≤ R_gov_min / P_max
+    where R_gov_min = minimum governance self-purification across tiers
+          P_max = maximum cross-tier permeability
+
+  This bound is conservative: actual Ω_c may be higher if tiers are
+  well-coupled with healthy R components. But R_gov_min / P_max provides
+  the architectural minimum — the Ω_c that holds regardless of governance quality.
+
+Ω_c as early warning target:
+
+  The trajectory of Ωᵢ(t) / Ω_c provides a continuous early warning metric:
+
+    Ωᵢ / Ω_c < 0:     Regime 0 (absorption) — no action required
+    0 < Ωᵢ / Ω_c < 1: Regime 1 (leakage) — monitoring intensified
+    Ωᵢ / Ω_c → 1:     Cascade onset approaching — DDD Stage 1 activated
+    Ωᵢ / Ω_c ≥ 1:     Regime 2 (cascade) — emergency protocol
+
+  Rate of approach dΩᵢ/dt is often more informative than level:
+    Slow approach: gradual structural drift (C3 timescale)
+    Fast approach: acute shock or C1-level instability spike
+    This rate × timescale combination identifies the contamination depth:
+      fast Ω approach → C1 (behavioral spike)
+      slow Ω drift    → C3 (architectural degradation)
+
+Ω_c and C-depth:
+
+  Ω_c is not fixed — it depends on contamination depth already present:
+    C1 contamination: Ω_c relatively high (architecture intact)
+    C2 contamination: Ω_c reduced (Map misalignment weakens R calibration)
+    C3 contamination: Ω_c degraded toward 0 (generator corruption
+                      reduces effective R faster than observed)
+
+  Critical consequence:
+    C3 contamination can bring Ω_c → 0 while Ωᵢ appears stable.
+    The system transitions directly from Regime 0 to Regime 2
+    (no Regime 1 window) when Ω_c collapses below current Ωᵢ.
+    This is the silent cascade: no leakage warning before full cascade onset.
+
+  Monitoring requirement:
+    Track both Ωᵢ AND Ω_c (not just their ratio).
+    C3 detection (§C1–C3 Depth Hierarchy) is prerequisite for Ω_c estimation.
+    If C3 is present: treat Ω_c as unknown → conservative cascade threshold.
 ```
 
 **Contamination propagation is bottom-up by default.** Lower tiers have higher agent density, faster interaction rates, and greater noise generation (n²_bottom >> n²_top). The instability generation rate is therefore highest at the lowest tier. Upper tiers are vulnerable not because they are weak, but because they are slow — their correction timescale τ_upper >> τ_lower means accumulated flux from below can distort governance frames before upper-tier feedback loops complete a single correction cycle.
@@ -1399,7 +2170,123 @@ Atrophy ordering consequence:
   for predicting where in the atrophy sequence a system currently sits.
 ```
 
-**The Clean System Paradox — formal statement.** The dangerous conclusion of self-purification atrophy is that the governance optimizer that attempts to eliminate all instability systematically destroys the capacity to handle future instability:
+**Perfect Metric Warning — The Silence Before Collapse.** The atrophy sequence F→V→T→D produces a characteristic and dangerous pattern: as each component atrophies, the system's internal metrics may improve rather than degrade. This inversion — where metric satisfaction accompanies structural collapse — is the Perfect Metric Warning. Near-perfect stability and metric performance may indicate metric lock-in or self-purification atrophy rather than genuine health.
+
+```
+Perfect Metric Warning (PMW) — formal structure:
+
+  PMW condition:
+    ∀ fᵢ: fᵢ → fᵢ_optimal  (all health metrics approaching optimal)
+    AND v_class → 0           (exploration capacity collapsing)
+    AND V(ρ) ↓               (reachable state-space contracting)
+
+  Why metrics improve as health degrades:
+
+    F atrophy → detection latency ↑ → f₁ (misclassification apparent rate) ↓
+      (errors take longer to register → they don't register → metric appears clean)
+      
+    V atrophy → single interpretation dominates → f₁ → 0 from forced consensus
+      (nothing is "misclassified" because there is only one classification available)
+      
+    T atrophy → immediate response to any deviation → f₃ appears bounded
+      (buffer appearing thin because response is immediate, not because conflict is absent)
+      
+    D atrophy (late stage) → cross-tier correlation appears as "consistency"
+      (correlated failures look like coordinated health to naive metrics)
+
+  Net effect:
+    As the system progresses F→V→T→D:
+      All fᵢ trend toward optimal values
+      S_norm trends toward 0
+      F_RBIT health score trends toward maximum
+      v_class → 0
+      
+    To a naive monitoring system: the system has never been healthier.
+    To a PMW-aware system: this is the Clean System Paradox / SMA onset signature.
+
+PMW thresholds and calibration:
+
+  PMW is triggered when:
+    (S_norm < S_warn) AND (v_class < v_warn) AND (|A_t| > A_min)
+    
+    where:
+      S_warn  = warning threshold for apparent stability (typically 20th percentile)
+      v_warn  = minimum classification velocity below which exploration is insufficient
+      A_min   = minimum absorption event rate confirming system is active (not dormant)
+    
+    Interpretation:
+      Low S_norm + low v_class + active A_t
+      = system appears stable, is not growing, but IS receiving inputs
+      = inputs being absorbed without producing resolution growth
+      = F or V atrophy confirmed
+
+  PMW severity levels:
+
+    PMW-1 (mild): v_class ≈ 0 sustained > 2τ₂
+      F atrophy beginning; V intact
+      Response: Boundary Agent activation check; controlled perturbation test
+      
+    PMW-2 (moderate): v_class < 0 sustained > τ₂; IDI declining
+      V atrophy confirmed; T beginning
+      Response: DDD Stage 1-2; diversity injection; escalation threshold review
+      
+    PMW-3 (severe): all fᵢ at apparent optimal; v_class << 0; V(ρ) < V_floor
+      Multiple components atrophied; SMA risk high
+      Response: external reference injection for SMA detection;
+                C-depth determination; C2/C3 intervention protocol
+
+  Anti-PMW governance design:
+
+    Healthy adaptive systems actively maintain small levels of:
+      noise:        non-zero S_baseline prevents F atrophy
+      disagreement: maintained IDI prevents V atrophy
+      trajectory diversity: v_class > 0 sustained confirms T calibrated
+
+    These signals are not inefficiency to be eliminated.
+    They are active evidence of maintained exploration capacity.
+    
+    The system that produces NO noise and NO disagreement
+    has either:
+      (a) Achieved perfect alignment (extremely rare, τ_achievement → ∞)
+      (b) Entered PMW condition (common under naive optimization)
+    
+    Default assumption when apparent health is perfect:
+      Assume (b) until (a) is demonstrated by external reference injection.
+    
+    Governance rule:
+      S → S_floor > 0  (floor, not zero)
+      IDI → IDI_floor > 0
+      v_class → v_floor > 0
+      
+      If any floor is violated, governance has over-optimized
+      and PMW protocol must activate.
+
+Relationship to other RBIT failure modes:
+
+  PMW → Clean System Paradox (atrophy precedes collapse)
+  PMW → Stable Misalignment Attractor (metric satisfaction deepens false basin)
+  PMW → Silent Criticality (no alarm signals from internal monitoring)
+  PMW → C3 contamination (landscape distortion invisible to perfect metrics)
+  
+  PMW is therefore the EARLIEST detectable signal for multiple critical failure modes.
+  v_class monitoring is the PMW-sensitive instrument: it responds to atrophy
+  before any fᵢ shows abnormality, because v_class measures growth (exploration)
+  while fᵢ measures failure events (which atrophy eliminates from the record).
+
+Cross-theory PMW concordance:
+
+  AGM: s(t) ↓ while Ω appears stable → Freeze onset under PMW conditions
+  EDT: Friction → 0 without terrain improvement → Zero Friction Pathology = PMW
+  NAT: sphere diversity declining while sphere performance stable → basin lock-in
+  
+  PMW triple concordance (strongest signal):
+    RBIT: v_class < v_warn
+    AGM:  s(t) declining toward s_crit
+    EDT:  anomalous friction reduction without terrain validation
+    → All three simultaneous → PMW-3 protocol immediate
+```
+
+ The dangerous conclusion of self-purification atrophy is that the governance optimizer that attempts to eliminate all instability systematically destroys the capacity to handle future instability:
 
 ```
 Clean System Paradox (AGM §5.2.0.1, FGS §29C.4):
@@ -1458,7 +2345,235 @@ Boundary Agent as Clean System Paradox prevention (RBIT §Seeds):
   of alignment maintenance (AGM §1.4, EDT §28).
 ```
 
-**Controlled permeability protocol.** Boundary permeability Pᵢ should not be binary (open/closed) but graduated:
+**Stable Misalignment Attractor — The False Basin.** The Clean System Paradox describes how the recovery capacity atrophies. There is a related but structurally distinct failure: a system that has not merely lost recovery capacity but has *converged to a self-sustaining misaligned attractor* — a state that is simultaneously locally stable, metric-satisfying, and globally misaligned. This is the most dangerous failure mode in RBIT, because it produces no internal alarm signals.
+
+```
+Stable Misalignment Attractor (SMA) — formal definition:
+
+  A system state x* is a Stable Misalignment Attractor if:
+
+    (1) Local stability:
+        x* = argmin_{local} E_metric(x)
+        (x* minimizes observable performance metrics locally)
+
+    (2) Global misalignment:
+        x* ≠ argmin_{global} E_true(x)
+        (x* is NOT the global optimum of the true objective)
+
+    (3) Self-reinforcing:
+        Local optimization dynamics at x* reinforce the basin:
+        d/dt[P(x* is attractor)] > 0 under standard governance
+        
+        → Escape becomes increasingly unlikely over time
+        → Governance interventions calibrated to E_metric deepen the basin
+
+  Formally:
+    x*(t) such that:
+      apparent_instability(x*) ↓ (stability metrics improving)
+      local_performance(x*) ↑  (performance metrics improving)
+      exploration_capacity(x*) ↓ (V(ρ) shrinking)
+      global_alignment(x*) ↓    (true objective diverging)
+
+RBIT variables at SMA:
+
+  ρ:      apparently stable or growing (misaligned coordinate counts as "resolution")
+  Δρ:     fluctuates near 0 (no acute stress — false positive)
+  v_class: → 0 or < 0 (classification ossifying or regressing)
+  F_RBIT: mixed — some fᵢ healthy, others degraded in pattern-specific ways
+  
+  Characteristic pattern:
+    f₁ (misclassification): LOW in metric-space but HIGH in true-alignment space
+                            → system classifies correctly for METRIC but not for truth
+    f₃ (buffer instability): LOW (buffer appears thick — no perceived stress)
+    f₄ (escalation load):    LOW (no conflict generated by metric-satisfying behavior)
+    v_class: → 0 (no new attractors being discriminated)
+    Exploration capacity V(ρ): declining
+
+  Cross-theory expression:
+    AGM perspective: T_eff in apparent optimal range, but true objective gradient → 0
+    EDT perspective: terrain curvature high in metric dimensions, flat in truth dimensions
+    RBIT perspective: ρ_p > ρ_c in metric dimensions; V(ρ) collapses for truth dimensions
+
+SMA corresponds to:
+  Goodhart Collapse:
+    "When a measure becomes a target, it ceases to be a good measure."
+    Formal RBIT expression: E_metric becomes the landscape, E_true becomes inaccessible.
+    
+  Metric Lock-In:
+    The coordinate system (Map) has aligned to E_metric terrain
+    while E_true terrain has become unrepresented in the Map.
+    Recovery requires C2 or C3 intervention — not C1.
+    
+  Self-Consistent Misalignment (SCM — VST §2.6):
+    The attractor is self-consistent: all internal measurements confirm health.
+    External reference required to detect SMA — internal monitoring insufficient.
+    SCM is the dynamical process; SMA is the attractor state SCM produces.
+
+Detection protocol (SMA cannot be detected by internal monitoring alone):
+
+  Stage 1 — Internal flags (necessary but not sufficient):
+    v_class sustained at 0 despite A_t > 0
+    IDI declining (diversity atrophying under apparent stability)
+    Perfect Metric Warning: all fᵢ → optimal simultaneously (see below)
+    
+  Stage 2 — External reference injection (required):
+    Inject calibrated out-of-distribution perturbations
+    If system correctly escalates → NOT SMA (coordinate system intact)
+    If system classifies OOD perturbation as Mathematical → SMA likely
+    (coordinate system cannot detect that it is outside its training manifold)
+    
+  Stage 3 — Cross-theory concordance:
+    Confirm: (RBIT v_class ↓) AND (AGM T_eff apparently optimal) AND
+             (EDT friction anomalously low) AND (ρ apparently stable)
+    Triple concordance of "apparent health" = strongest SMA signal
+    
+  Stage 4 — Landscape verification:
+    Independently measure true objective E_true
+    If E_true trajectory and E_metric trajectory diverging → SMA confirmed
+    If no independent E_true measurement exists → SMA cannot be ruled out
+
+SMA recovery protocol:
+
+  SMA is NOT recoverable by Stage 1–2 DDD.
+  Required: C2 or C3 intervention (contamination depth determines level)
+  
+  If SMA is C2-rooted (coordinate misalignment, landscape still valid):
+    North Star Criterion recalibration from external reference
+    Observation Layer forced reset
+    Expected recovery: O(τ_map_update)
+    
+  If SMA is C3-rooted (landscape generator corrupted):
+    Architectural intervention required
+    Safe Collapse + controlled rebuild may be necessary
+    Expected recovery: O(τ_architectural)
+    
+  Key insight:
+    SMA is deeper than Clean System Paradox.
+    CSP = capacity atrophy (R → 0, recovery possible if R rebuilt)
+    SMA = coordinate corruption (basin itself is wrong; rebuilding R into wrong coordinates
+          strengthens the false attractor)
+    SMA + CSP simultaneously = most dangerous combined failure mode.
+
+Formal relationship to F_RBIT:
+
+  SMA produces a characteristic F_RBIT inversion signature:
+    Standard failure: fᵢ rise as health deteriorates
+    SMA failure:      fᵢ FALL while health deteriorates
+                      (metric satisfaction creates apparent health improvement)
+    
+  This inversion means:
+    SMA is a false negative for standard RBIT monitoring
+    Only v_class and V(ρ) tracking are SMA-sensitive
+    (these track exploration capacity, not metric performance)
+
+  Prediction (falsifiable):
+    In systems that enter SMA, v_class will decline to 0
+    BEFORE any fᵢ rise above warning thresholds.
+    v_class is the only early warning indicator for SMA
+    that does not invert under metric lock-in.
+```
+
+**Integrated Structural Failure Diagnosis — SMA × PMW × C-depth Combined Protocol.** The three diagnostic frameworks introduced in RBIT v2.7–v2.8 are individually defined but operationally interdependent. In real systems, failure does not present as a single indicator — it presents as a pattern across multiple concurrent signals. This section formalizes the combined diagnostic matrix and defines the maximum-risk composite state.
+
+```
+Diagnostic Component Summary:
+
+  C-depth (C1/C2/C3):
+    What structural layer is contamination anchored at?
+    Timescale of contamination and required intervention level.
+
+  SMA (Stable Misalignment Attractor):
+    Has the system converged to a self-reinforcing misaligned state?
+    Detected by: v_class → 0 BEFORE fᵢ rise (inversion pattern).
+
+  PMW (Perfect Metric Warning):
+    Are all internal metrics converging to optimal while exploration collapses?
+    Detected by: ∀fᵢ → optimal AND v_class → 0 AND V(ρ) ↓.
+
+Integrated Diagnostic Matrix:
+
+  State 1 — Nominal (no compound failure):
+    C1 active, PMW absent, no SMA
+    All fᵢ stable, v_class > 0, Ωᵢ in Regime 0–1
+    Action: standard monitoring, maintain S_floor
+
+  State 2 — Early Misalignment Risk:
+    C1 + PMW-1
+    Local basin trapping; metrics improving; variance beginning to decline.
+    Ωᵢ in Regime 1. IDI declining but not collapsed.
+    Action: Boundary Agent activation check; controlled perturbation test.
+
+  State 3 — Coordinate Contamination + Metric Inversion:
+    C2 + PMW-2
+    Map–Terrain drift; exploration capacity declining; v_class → 0 approaching.
+    Ωᵢ approaching Ω_c. External reference required.
+    Action: DDD Stage 2 (Map recalibration); diversity injection;
+            escalation threshold audit; cross-theory concordance check.
+
+  State 4 — MAXIMUM RISK: SMA + PMW-3 + C3
+    Stable false basin + metric perfection + landscape generator corruption.
+    
+    Observable signature (all simultaneously):
+      v_class sustained ≤ 0
+      ∀fᵢ → optimal (or fᵢ declining — F_RBIT inversion)
+      V(ρ) < V_floor (reachable state-space collapsed)
+      η_corr oscillates without convergence (C2/C3 indicator)
+      Ωᵢ / Ω_c → 1 or Ω_c unknown (C3 present)
+      ρ_p − ρ_c: both declining (tentative C3 signal via Γ bridge)
+      
+    Interpretation:
+      The system is locally stable, metric-satisfying, and structurally misaligned.
+      Standard DDD calibrated to E_metric deepens the false basin.
+      Internal monitoring produces false negatives across all indicators.
+      
+    This is the maximum-risk regime in the RBIT framework.
+    It cannot be detected by any single indicator.
+    It requires composite signal confirmation.
+
+    Required action sequence:
+      Step 0: Suspend metric-optimization governance (prevent further deepening).
+      Step 1: External reference injection — verify B_align (basin alignment score).
+      Step 2: C-depth determination via timescale protocol (§Timescale Stratification).
+      Step 3: If C3 confirmed — architectural intervention, NOT parameter tuning.
+              If C2 — North Star recalibration before DDD Stage 3.
+      Step 4: Ω_c re-estimation under C3 correction (treat Ω_c as degraded).
+      Step 5: Verify SMA escape: v_class > 0 sustained over 2τ_governance
+              before returning to normal monitoring.
+
+Composite signal scoring:
+
+  Define a composite structural failure score:
+
+    SFS = w₁ · [v_class < v_floor] + w₂ · [∀fᵢ → optimal] 
+        + w₃ · [C-depth = C3] + w₄ · [Ωᵢ/Ω_c > θ_onset]
+        + w₅ · [ρ_p − ρ_c both declining]
+
+  where each term is a binary indicator (0 or 1).
+
+  SFS thresholds:
+    SFS ≤ 1:  State 1–2 (routine monitoring)
+    SFS = 2:  State 3 (accelerated intervention)
+    SFS ≥ 3:  State 4 — Maximum Risk (emergency protocol)
+
+  Minimum required for State 4 diagnosis:
+    [v_class < v_floor] AND [C-depth = C3] must BOTH be true.
+    PMW-3 without C3 = State 3 (serious but recoverable by DDD).
+    C3 without v_class collapse = early C3 (intervention possible).
+    Both together = State 4 (architectural intervention mandatory).
+
+Cross-theory concordance at State 4:
+
+  State 4 confirmation requires cross-theory agreement:
+    RBIT: v_class ≤ 0 AND F_RBIT inversion AND Ωᵢ → Ω_c
+    AGM:  s(t) declining toward s_crit OR frozen at apparent optimum
+    EDT:  anomalous friction reduction (f_conflict → 0) AND novelty_rate > 0
+    NAT:  sphere cross-validation producing consistent OOD misclassification
+
+  Any 3 of 4 concurrent → State 4 confirmed.
+  All 4 concurrent → Safe Collapse must be considered as recovery option.
+```
+
+Boundary permeability Pᵢ should not be binary (open/closed) but graduated:
 
 ```
 Permeability management:
@@ -2703,20 +3818,6 @@ Combined monitoring
 ### Contamination — Terminology Note
 
 A **contaminated vector** is one that has deviated from its resolution-appropriate trajectory and begun self-reinforcing in a loop — amplifying in a fixed direction regardless of incoming information. Contamination is not moral failure or intentional deviation. It is a structural condition: a vector that can no longer update through normal absorption because it has exceeded its layer's correction capacity.
-
-
-### Buffer Layer
-
-A zone of directionally neutral material (noise) placed between opposing vectors by the upper layer. The upper layer, operating at Tier 3 resolution, identifies which vectors are structurally opposed and places neutral material between them to prevent direct collision.
-
-Buffer layer thickness is a direct observable proxy for upper layer resolution precision: the more accurately the upper layer maps opposing relationships, the thicker the buffer it can maintain. This avoids a measurement circularity — if resolution were defined by contamination detection rate, and contamination by resolution, neither could be measured independently. Buffer thickness breaks this loop.
-
-```
-Thicker buffer = higher upper layer resolution
-Thin or absent buffer = Vector Storm precondition
-```
-
-*Operational measurement of buffer thickness is covered in §Operational Measurement — Buffer Layer Thickness, including attractor pull strength implementations and policy dependence caveats.*
 
 
 ### Buffer Layer
@@ -6247,6 +7348,7 @@ Planned partial falsification:
 | # | Problem | Status |
 |---|---------|--------|
 | 1 | Full structural resolution measurement | Partially resolved (operational proxy ρ defined) |
+| OP-ρ-decomp | **ρ_p / ρ_c decomposition operational identification** — The perception-control decomposition (ρ_p = perceptual dimensionality, ρ_c = control dimensionality) is formally introduced in §Resolution Capacity Decomposition. The current conjecture maps C and d primarily to ρ_c (governance action space), and v_class + branching ratio R primarily to ρ_p (representational fidelity). However, the exact identification protocol — how to estimate ρ_p and ρ_c independently from observable F_RBIT proxies without circularity — remains open. Key subproblems: (i) Can ρ_p be estimated independently of ρ_c from classification trajectory data alone? (ii) Does the ODE ρ̇ equation need to be extended to a coupled (ρ_p, ρ_c) system, or does scalar ρ = min(ρ_p, ρ_c) remain sufficient for all current RBIT theorems? (iii) Is there an observable signature that distinguishes Case 1 (perception collapse, Φ > ρ_p) from Case 2 (control gap, Φ > ρ_c) without already knowing ρ_p and ρ_c separately? | Open — introduced v2.6 |
 
 | 2 | Resolution gap calibration — how does a sender determine correct degradation level? | Open |
 | 3 | Upscaling detection — observable signals for layer maturity readiness | **Partially resolved** — U1–U3 operational criteria defined (§Upscaling); exact N_up calibration and Δρ significance threshold remain open |
@@ -8129,7 +9231,6 @@ RBIT operational implication:
 
 **F92 [AGP-RBIT] Formal Robustness Theorem ΔV Decomposition.** P(evasion) ≤ exp(−ΔV/T_eff) with ΔV = ΔV_structural + ΔV_informational + ΔV_energetic. Prediction: the robustness to adversarial evasion should be predictable from a weighted combination of f₁-diversity, 1/f₂, and R. Falsification: if adversarial robustness is not correlated with F_RBIT portfolio composition, the ΔV decomposition is incorrect.
 
-**F93–F100** [Cross-Theory]: See cross-theory falsification addendum; integration with RT v2.9–v2.10 and VST v2.7 pending next integration pass.
 
 ---
 
@@ -9525,7 +10626,7 @@ RBIT governance design implication:
 
 ---
 
-## 35. Extended Falsification F93–F115
+## 35. Extended Falsification F93–F113
 
 | ID | Prediction | Test Condition | Method | Falsification Condition |
 |---|---|---|---|---|
@@ -9588,10 +10689,18 @@ RBIT governance design implication:
 
 | Additions | Description | Version |
 |---|---|---|
-| Terrain Phase Transition RBIT Bridge | First-order desertification → hysteresis, nucleation, metastability in F_RBIT; second-order maturation → M_RBIT order parameter; critical exponents → observable scaling laws; metastable τ_silent = τ₀·exp(SCC_min/T_eff) unification | New v2.6 |
+| Contamination Structural Depth C1–C3 | Three-tier contamination depth taxonomy (C1 Positional/C2 Coordinate/C3 Landscape Generator); C-depth → recovery mechanism mapping; depth identification protocol; C3 landscape distortion → Φᵢ growth despite n_esc stable; cross-theory bridge (C1↔RT Phase 1, C2↔RT Phase 2, C3↔RT Phase 3); C-depth × flux coupling | New v2.7 |
+| Timescale Stratification of C-depth | τ_behavior/τ_landscape/τ_topology mapping to C1/C2/C3; phase lag explanation for long-stability → sudden-cascade pattern; timescale mismatch as contamination amplifier; timescale identification protocol via η_corr trajectory; F_RBIT stratum (f₁–f₅) correspondence; adiabatic breakdown corr(f₁,f₄) warning for C3 acceleration | New v2.8 |
+| Contamination Onset Threshold Ω_c | Contamination potential Ωᵢ = Pᵢ·(Sᵢ−Rᵢ) signed extension; three-regime classification (Absorption/Leakage/Cascade); structural onset threshold Ω_c formal bound R_gov_min/P_max; Ωᵢ/Ω_c as continuous early warning metric; rate dΩᵢ/dt as timescale indicator; C-depth effect on Ω_c degradation; silent cascade (C3 brings Ω_c → 0) | New v2.8 |
+| Integrated Structural Failure Diagnosis | SMA × PMW × C-depth composite diagnostic matrix (States 1–4); State 4 MAX RISK definition (SMA + PMW-3 + C3); composite SFS score formula; minimum State 4 condition ([v_class < v_floor] AND [C3]); cross-theory concordance requirement (RBIT+AGM+EDT+NAT); Safe Collapse trigger condition | New v2.8 |
+| ρ_p/ρ_c ODE Bridge via GCET Γ | Tentative coupled dynamics dρ_p/dt = Γ_p·(G−L), dρ_c/dt = Γ_c·(G−L); Γ_p > Γ_c empirical constraint; Γ_p ≈ Γ_c at Rest Mode; contamination regime mapping via (ρ_p,ρ_c): C1→ρ_p perturbation, C2→ρ_p−ρ_c divergence, C3→both declining; perception-control gap Δρ_pc as depth indicator; Δρ_pc diverging as earliest contamination onset signal | New v2.8 |
+| Resolution as Exploration Capacity | ρ geometric interpretation as reachable state-space volume V(ρ); ρ ↔ φ formal bridge (Recovery Theory exploration capacity); resolution growth = V(ρ) expansion; resolution collapse = V(ρ) contraction; ρ_min ↔ Contamination Boundary N (geometric expression); AGM T_eff ↔ ρ ↔ φ triple bridge; terminal convergence trinity geometric form; Betti β₀/β₁/β₂ connection to V(ρ) | New v2.7 |
+| Stable Misalignment Attractor (SMA) | Formal SMA definition (local stability + global misalignment + self-reinforcing); RBIT variable pattern at SMA (v_class → 0, fᵢ healthy); Goodhart Collapse / Metric Lock-In / SCM as SMA expressions; four-stage detection protocol (internal flags → external injection → cross-theory concordance → landscape verification); SMA recovery (C2 vs C3 path); SMA vs CSP structural distinction; F_RBIT inversion signature (fᵢ fall as alignment degrades); v_class as sole SMA-sensitive early warning | New v2.7 |
+| Terrain Perception Distortion | L_perceived vs L_actual formal distinction; coordinate misalignment (C2) vs landscape distortion (C3/LD); invisible escape paths despite objective existence; systematic exploration failure signature in RBIT; drift → distortion threshold (δ_safe → δ_crit → δ_crit >> ); detection through cross-reference injection protocol; NAT terrain problem vs vision problem bridge; SMA + landscape distortion combined failure mode | New v2.7 |
+| Perfect Metric Warning (PMW) | PMW formal condition (∀fᵢ → optimal AND v_class → 0 AND V(ρ) ↓); mechanism of metric improvement during structural collapse (F→V→T→D atrophy improving metrics); PMW-1/2/3 severity levels with response protocols; Anti-PMW governance design (S_floor / IDI_floor / v_floor requirements); v_class as PMW-sensitive instrument; cross-theory PMW concordance (AGM s↓ / EDT friction anomaly / NAT sphere diversity); PMW as earliest signal for CSP/SMA/Silent Criticality/C3 | New v2.7 |
 | Terrain Information Geometry DDD Protocol | Fisher metric → DDD natural gradient correction; Cramér-Rao → fourth E1 false-completion mechanism (insufficient observations); geodesic path → minimal-disturbance terrain modification | New v2.6 |
 | Temporal Stratification F_RBIT Architecture | Four strata → f₁–f₅ update cycle hierarchy; temporal boundary layer → four crisis mechanisms TB1–TB4; adiabatic approximation → breakdown warning (corr(f₁,f₂)>0.4 at δ<<τ₂); chronotopic window W_chrono for DDD triggering | New v2.6 |
-| Governance EROTI DDD Priority Derivation | EROTI ordering formally derives DDD Stage 1→4 priority (not empirical); E_min constraint → fourth E1 false-completion mechanism; maintenance dominance → maintenance trap f₃+v_class simultaneous decline signature | New v2.6 |
+| Governance EROTI DDD Priority Derivation | EROTI ordering formally derives DDD Stage 1→4 priority (not empirical); E_min constraint → fifth E1 false-completion mechanism; maintenance dominance → maintenance trap f₃+v_class simultaneous decline signature | New v2.6 |
 | Emergence Topology Diagnostics | Betti β₁/β₀/β₂ → F_RBIT topological indicators; three topological EW-T1/T2/T3 preceding conventional EW; sheaf H¹≠0 → boundary-localized f₂ (Stage 1 fix, not Stage 3); persistent homology → DDD Protected Core identification | New v2.6 |
 | Attractor Grammar Failure Taxonomy | NF1 (Resonance Capture), NF2 (Grammar Incompleteness), NF3 (Attractor Proliferation Overflow) with distinct F_RBIT signatures and interventions; C_G_min/C_G^* bounds → over-complexity f₄+f₅ signature | New v2.6 |
 | Emotional Ecology Multi-Agent Resolution | Contagion c* → collective F_RBIT phase (independent/critical/super-critical); heritage asymmetry → r_positive,min quantitative formula; collective memory n_cascade scaling → group DDD efficiency; hub ecology ↔ NAT sphere reconciliation | New v2.6 |
@@ -9607,5 +10716,17 @@ RBIT governance design implication:
 
 ---
 
-*Timestamped: March 8, 2026*
-*DFG Framework · Resolution-Based Information Theory v2.6-EDTseries2*
+### Updated Version Log Entry (v2.7)
+
+| Additions | Description | Version |
+|---|---|---|
+| C1–C3 Contamination Depth Hierarchy | Structural depth taxonomy for contamination; C1 Positional / C2 Coordinate / C3 Landscape Generator; recovery mechanism per depth; depth identification protocol; Φᵢ-depth coupling; RT Phase 1/2/3 bridge | New v2.7 |
+| Resolution as Exploration Capacity | ρ ↔ V(ρ) state-space volume geometric interpretation; ρ ↔ φ (RT exploration capacity) formal bridge; ρ_min ↔ Contamination Boundary geometric form; T_eff ↔ ρ ↔ φ triple bridge; topological β connection | New v2.7 |
+| Stable Misalignment Attractor | Formal SMA (local stability + global misalignment + self-reinforcing); F_RBIT inversion signature; v_class as sole SMA-sensitive EW; CSP vs SMA structural distinction; four-stage detection; C2/C3 recovery paths | New v2.7 |
+| Terrain Perception Distortion | L_perceived vs L_actual; coordinate misalignment vs landscape distortion; invisible escape paths; drift → distortion threshold δ_crit; cross-reference injection detection protocol; NAT vision problem bridge | New v2.7 |
+| Perfect Metric Warning (PMW) | PMW formal condition; metric improvement during structural collapse mechanism; PMW-1/2/3 severity; Anti-PMW governance design (S_floor/IDI_floor/v_floor); v_class as PMW-sensitive instrument; cross-theory concordance | New v2.7 |
+
+---
+
+*Timestamped: March 11, 2026*
+*DFG Framework · Resolution-Based Information Theory v2.8-RTseries*
