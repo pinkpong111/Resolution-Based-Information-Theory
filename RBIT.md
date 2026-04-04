@@ -2,6 +2,10 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
+> *Draft · April 2026 · Internal Working Document — v2.9-DFGmaster*
+>
+> *v2.9-DFGmaster: DFG Master Theory v4.4 + VST v3.6-NAT-theory + AGM v2.8-THM + NAT v2.7-DFGmaster Full Integration Pass — (1) Deltaρ/E-layer translation: Deltaρ >= 0 = Omega -> 0 AND lambda_V <= 0; C_A approx 1 = S[V] approx S_c AND lambda_V approx 0; spectral gap >= lambda_min* = lambda_V <= 0 => Omega bounded; formal translation table registered in §25.4-ext; (2) D-S[V]-lambda_V-Omega cascade: master N.11 cascade formally bridged to RBIT — D up => S_D[V] up => lambda_V up => Omega up; Deltaρ language = L2/L3 (lambda_V, Omega) slice of N.11 cascade; RBIT contamination accumulation Omega = L3 of cross-scale cascade; (3) Five-Theory Criticality Equivalence: Four-Theory Equivalence extended to Five-Theory by adding RBIT Deltaρ >= 0 as fifth condition: Pi_eff = 1 iff Pi_G = 1 iff chi_TBG = theta iff C_A = 1 iff Deltaρ >= 0 (all five = single governance criticality in five languages); (4) VE-RBIT bridge: VE_sphere 5-way condition {C_A approx 1, D <= D_max^VE, S_D[V] <= S_c, lambda_V <= 0, Omega <= Omega_c} — RBIT supplies Omega condition (Omega <= Omega_c = contamination bounded; Omega = N.9 proxy); (5) New IC extensions: IC-I7 (Cascade Layer Correspondence: RBIT L3 Omega iff master N.11 L3 contamination); (6) New Open Problems: OP-RBIT-CASCADE-1 (Omega ODE calibration), OP-RBIT-ELAYER-1 (Deltaρ/E-layer translation empirical test), OP-RBIT-VE-1 (RBIT role in VE_sphere 5-way condition); (7) New cross-theory correspondences: Deltaρ >= 0 iff Omega -> 0 AND lambda_V <= 0; RBIT Theorem 1 activation (sustained Deltaρ < 0) iff lambda_V > 0 AND Omega accumulating; F_RBIT equilibrium (Rest Mode) iff VCZ regime (all five conditions simultaneously); Omega slow variable iff contamination accumulation at resolution degradation timescale*
+
 > *Draft · March 11, 2026 · Internal Working Document — v2.8-RTseries*
 
 ---
@@ -3264,6 +3268,15 @@ F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
 RBIT exports four formal interfaces to the companion Network Architecture Theory. The dependency direction is single: RBIT → NAT. NAT imports RBIT results as axiomatic constraints; RBIT references NAT only as "an implementation instance."
 
 ```
+Interface I7 — Cascade Layer Correspondence (v2.9-DFGmaster):
+  RBIT L3 contamination accumulation (Ω) corresponds formally to master N.11 L3
+  contamination accumulation dynamics: dot-Ω = -η_Ω Ω + b_Ω (λ_V)_+.
+  RBIT Omega (accumulated asymmetry/contamination) IS master N.11 L3 Omega.
+  RBIT Theorem 1 (sustained Δρ < 0) = L2 condition (λ_V > 0 sustained) from above.
+  The Interface Contract now extends to: RBIT ↔ NAT ↔ VST ↔ AGM via master N.11.
+  Cross-layer alarm: hat-D > D_alarm (AGM L0) ⟹ S_D[V] computed (VST L1)
+  ⟹ λ_V > 0 (VST L2) ⟹ Δρ declining (RBIT L2/L3) ⟹ Ω accumulating (RBIT L3).
+
 Interface I1 — Resolution Gap as Routing Invariant:
   RBIT exports: Sign of Δρ determines compression regime.
   NAT imports: Four-type data classification as Δρ routing function.
@@ -5407,6 +5420,7 @@ RBIT is the foundation from which the following derive:
 
 | **Fractal Governance Scaling v2 — Buffer Maturation + Local-Global Topology (FGS §31.7 + §31A)** | [v2.4] **Buffer Maturation Paradox (§31.7)**: dM/dt>0 AND dV_M/dt<0 simultaneously during maturation (thickening and decreasing visibility co-occur); **Actor→Structure Mode Transition**: early buffer ẋ=f(x)+u_buffer(t) (additive, observable); mature buffer ẋ=f(x;E_buffer) (multiplicative, invisible); transition = mathematical signature of middle-layer maturation; upper-layer isolation Upper_isolation(t)∝M(t)/V_M(t) — upper layer sees stable outputs, opaque mechanisms, decreasing apparent intervention effect; **Local-Global Coordination Topology (§31A)**: Global_Optimum≠Σ Local_Optimum_i (non-additivity from cross-terrain interactions); three-level coordination: B_i→Local_Optimum_i → B_coord resolves conflicts → G=Coordinate({L_i}); T_coord=T_global+Σ_{i≠j}Interaction(T_i,T_j) (coordinator operates on higher-resolution terrain); **Priority-Weighted Alignment**: Priority(L_i)=w_α·Alignment_global+w_β·Scalability+w_γ·Stability; low-priority solutions archived not discarded (mature governance); **Terrain-Local Solution Correspondence Theorem**: active terrain T_i without associated L_i = governance gap; perturbations propagate directly without local damping; amplitude scales with terrain activity A(T_i); **Exploration Obligation**: State(L_i)∈{Stable, Exploring, Gap}; Exploring = productive; Gap = dangerous (immediate buffer assignment required); **Functional Convergence with Tool Divergence**: T_tools(B_i)≠T_tools(B_j) (tool divergence) AND F_categories={Routing,Filtering,Buffering,Translation,Exploration} stable (functional convergence); F*=5±2 categories across all mature systems; **RBIT translation**: governance gap = terrain without v_class coverage; F*=5±2 prediction ↔ RBIT Prediction R6 from §36R (confirming cross-theory consistency); local-global topology = formal basis for RBIT cross-domain equivalence H8 claim |
 
+| **DFG Master Theory v4.4 — N.11 D-S[V]-lambda_V-Omega Cascade (v2.9-DFGmaster)** | [v2.9] **Cross-layer cascade translation**: RBIT Deltaρ language registered in master E-layer (S[V], lambda_V, Omega) as follows — Deltaρ >= 0 iff Omega -> 0 AND lambda_V <= 0 (L2+L3 subcritical); Deltaρ < 0 sustained iff lambda_V > 0 AND Omega accumulating (Theorem 1 iff L2+L3 supercritical); C_A approx 1 iff S[V] approx S_c AND lambda_V approx 0 (N.9 exact); **RBIT role in VE_sphere 5-way**: RBIT supplies L3 (Omega <= Omega_c) in VE joint condition {C_A, D, S_D[V], lambda_V, Omega}; **Five-Theory Equivalence**: Four-Theory extended to Pi_eff=1 iff Pi_G=1 iff chi_TBG=theta iff C_A=1 iff Deltaρ >= 0 (five languages for same governance criticality); **IC-I7**: RBIT L3 Omega formally corresponds to master N.11 L3 Omega ODE (dot-Omega = -eta_Omega Omega + b_Omega (lambda_V)_+); contamination accumulation in RBIT is the downstream consequence of sustained lambda_V > 0; **cascade direction in RBIT**: D up => S_D[V] up => lambda_V up => Deltaρ declining => Omega accumulating; cross-layer alarm: hat-D > D_alarm (AGM) => S_D[V] (VST) => lambda_V > 0 => Deltaρ < 0 (RBIT) => Omega > Omega_c (RBIT) => DDD; **new open problems**: OP-RBIT-CASCADE-1 (eta_Omega, b_Omega calibration); OP-RBIT-ELAYER-1 (Deltaρ/E-layer empirical translation test); OP-RBIT-VE-1 (Omega condition independence in VE regime) |
 | **Fractal Governance Scaling v2 — DFG Component Architecture (FGS §35.5)** | [v2.4] **7-Phase Fractal Lifecycle**: Phase1(Seeding,C≈0,random), Phase2(Exploration,first direction forming), Phase3(Formation,attractor crystallizing), Phase4(VCZ,power law,R≈1), Phase5(Rest Mode,all fᵢ bounded), Phase6(Reawakening,precision storms), Phase7(Higher Cycle,expanded resolution); RBIT translation: each Phase maps to F_RBIT health vector profile — Phase4→5 transition = dF_RBIT/dt→0; Phase6 = Precision Storm type (fast,targeted v_class events); **RBIT Position in DFG Architecture (§35.5.2)**: Resolution ≠ computational power; ρ = structural capacity to maintain distinction (grows through calibrated absorption); Three tiers: T1(Vector-Noise Separation), T2(Inter-Vector Differentiation), T3(Full Map Design); Resolution Gap: Δρ≈0(direct absorption), Δρ>0(stable/diverse), Δρ>>0(over-degradation risk), Δρ<0(Theorem 1 activation); **Theorem 1 (Resolution Asymmetry Inevitability)**: sustained Δρ<0 → cumulative divergence grows without bound; intent replacement within t*≤⌈D*/η⌉; axioms A1-A6 (finite capacity, projection replace, recurrence, non-alignment, replacement dominance, basin regularity); Three contamination tiers: Tier(i)=mode collapse, Tier(ii)=hallucination, Tier(iii)=SCM; **Cross-Theory Correspondence Table (§35.6)**: full RBIT↔VST↔RT↔NAT↔GRT↔TLG cross-mapping; RBIT v_class ↔ κ (TLG governance ratio); RBIT ε ↔ geometry mismatch (RT D0); RBIT Δρ<0 ↔ Storm entry (VST §1); RBIT f_RBIT≈0 ↔ Phase 5/Rest Mode (GRT AND-entry) |
 
 
@@ -8757,15 +8771,35 @@ has necessarily altered all four CTGPSR observables simultaneously.
 "Partial F_RBIT degradation" is not structurally stable.
 ```
 
-#### 25.4 Four-Theory Criticality Equivalence in RBIT Terms
+#### 25.4 Five-Theory Criticality Equivalence in RBIT Terms (updated v2.9-DFGmaster)
 
-The CTGPSR Four-Theory Criticality Equivalence (GGT Theorem GGT-82.F.5) establishes that four apparently distinct criticality conditions are formally equivalent at the base operating point:
+The CTGPSR Four-Theory Criticality Equivalence (GGT Theorem GGT-82.F.5) establishes that four apparently distinct criticality conditions are formally equivalent at the base operating point. RBIT v2.9 extends this to a **Five-Theory Equivalence** by adding the RBIT resolution condition as the fifth:
 
 ```
-Π_eff = 1  ↔  Π_G = 1  ↔  χ_TBG = θ  ↔  C_A = 1
+Π_eff = 1  ↔  Π_G = 1  ↔  χ_TBG = θ  ↔  C_A = 1  ↔  Δρ ≥ 0
 ```
 
-RBIT integration of this equivalence produces a single governance criticality condition expressed in four languages:
+The fifth condition (Δρ ≥ 0) is the RBIT resolution criticality: at the base operating point (VCZ/Rest Mode boundary), the system maintains non-negative resolution gap. This is formally equivalent to the other four conditions via the N.11 cascade: C_A = 1 iff lambda_V = 0 (N.9 exact) iff S_D[V] = S_c iff Omega at steady state iff Deltaρ at zero accumulation.
+
+#### 25.4-ext Δρ / E-layer Translation (v2.9-DFGmaster)
+
+RBIT's Δρ language connects to the master E-layer (S[V], λ_V, Ω) through the D–S[V]–λ_V–Ω cascade (master N.11):
+
+| RBIT language | Master E-layer | N.11 layer |
+|---|---|---|
+| Δρ ≥ 0 (non-negative gap) | Ω → 0 AND λ_V ≤ 0 | L2 + L3 |
+| Δρ < 0 sustained (Theorem 1) | λ_V > 0 AND Ω accumulating | L2 + L3 positive |
+| Δρ ≈ 0 (VCZ boundary) | λ_V ≈ 0 (N.9 exact) | L2 at criticality |
+| C_A ≈ 1 (sphere self-tuned) | S[V] ≈ S_c AND λ_V ≈ 0 | L1 + L2 |
+| Ω ≤ Ω_c (contamination bounded) | Ω_hat = 1 (N.9 proxy) | L3 (RBIT canonical role) |
+
+RBIT supplies **L3** of the master N.11 cascade: contamination accumulation (Ω) is the slow downstream consequence of sustained λ_V > 0. RBIT Theorem 1 (sustained Δρ < 0 ⟹ cumulative divergence) = sustained λ_V > 0 at the E-layer level. F_RBIT equilibrium (Rest Mode) = VCZ regime: all five conditions simultaneously satisfied.
+
+**VE-RBIT bridge:** The VE_sphere 5-way condition (master N.11.6, NAT §7.34) assigns RBIT the fifth condition: Ω ≤ Ω_c (contamination bounded). RBIT is the L3 supplier in the four-theory role partition {NAT: C_A; AGM: D; VST: S_D[V], λ_V; RBIT: Ω}.
+
+**Cascade direction in RBIT language:** D up ⟹ S_D[V] up ⟹ λ_V up ⟹ Δρ declining ⟹ Ω accumulating. Resolution degradation is the L2/L3 readout of the cascade initiated at L0 (AGM distortion D).
+
+RBIT integration of the five-theory equivalence produces a single governance criticality condition in five languages:
 
 | Formalism | Criticality Condition | RBIT Interpretation |
 |---|---|---|
@@ -10753,6 +10787,9 @@ RBIT governance design implication:
 | 150 | [v2.8-RTseries] Δρ_pc threshold δ_C2 empirical calibration — The C2 contamination falsification prediction (RBIT §ρ_p/ρ_c ODE Bridge) states: systems in C2 should show ρ_p − ρ_c > δ_C2 simultaneously with v_class declining but f₁ still bounded. What is δ_C2? It must be large enough to exceed measurement noise in the ρ_p and ρ_c proxies but small enough to detect early C2. Candidate approach: δ_C2 = k · σ(Δρ_pc) during confirmed Rest Mode (k = 2 for 95% specificity). Does this threshold correctly identify C2 onset in simulation without producing C1 false positives? | Open — connects to NAT v2.8 §7.35, RBIT §ρ_p/ρ_c ODE Bridge Falsifiable prediction, RBIT §C1–C3 Depth Hierarchy |
 | 151 | [v2.8-RTseries] SFS ∧ Σ_risk dual confirmation sensitivity — RBIT v2.8 defines SFS ≥ 3 as State 4 on RBIT side; NAT v2.8 defines Σ_risk ≥ 0.75 as NAT State 4. When both are simultaneously satisfied (dual confirmation), this is the highest-confidence State 4 detection. What is the false-positive rate of dual confirmation vs. single-theory threshold? And what is the false-negative rate — can State 4 be missed if both SFS and Σ_risk are slightly below threshold? Is the dual-threshold rule conservative (requiring both) or sensitive (requiring either)? Should the combined rule be SFS ≥ 3 ∧ Σ_risk ≥ 0.75 (conservative) or SFS ≥ 3 ∨ Σ_risk ≥ 0.75 (sensitive)? | Open — connects to RBIT §Integrated Structural Failure Diagnosis, NAT v2.8 §7.34 |
 | 152 | [v2.8-RTseries] Four-stage False Basin timescale measurement protocol — NAT v2.8 §Timescale Stratification of False Basin Formation defines four stages (τ_topology, τ_terrain, τ_monitoring, τ_behavior scale accumulation). Stage 1 and Stage 2 are formally unobservable at standard monitoring timescales — they become visible only via Ψ trajectory rate (dΨ/dt > 0 sustained over τ_terrain). What minimum Ψ sampling frequency is required to detect Stage 2 onset before Stage 3? If monitoring operates at τ_monitoring >> τ_terrain, Stage 2 may complete invisibly. Is there a compressed proxy signal — perhaps corr(IDI, V_depth) sign change — that provides Stage 1/2 detection from τ_monitoring-scale measurements? | Open — connects to NAT v2.8 §Timescale Stratification of False Basin, RBIT §Timescale Stratification × C-depth |
+| 154 | [v2.9-DFGmaster] OP-RBIT-CASCADE-1: Contamination ODE parameter calibration — The master N.11 L3 ODE dot-Omega = -eta_Omega Omega + b_Omega (lambda_V)_+ introduces two RBIT-relevant parameters: eta_Omega (contamination decay rate) and b_Omega (accumulation rate per unit spectral excess). In RBIT terms, eta_Omega corresponds to the natural recovery rate of resolution gap (inverse of τ_degrade), and b_Omega captures how fast Δρ deteriorates per unit λ_V. Empirical approach: measure Omega (directional asymmetry, contamination proxy) recovery time after Storm termination as proxy for 1/eta_Omega; measure accumulation rate during sustained Δρ < 0 period as proxy for b_Omega. Does b_Omega/eta_Omega = Omega_ss/lambda_V hold empirically? Connection: AGM OP-192; NAT OP-NAT-CASCADE-1. | Open — connects to master N.11 L3, RBIT §Contamination Flux |
+| 155 | [v2.9-DFGmaster] OP-RBIT-ELAYER-1: Empirical test of Δρ / E-layer translation — §25.4-ext establishes that Δρ ≥ 0 iff Omega → 0 AND lambda_V ≤ 0 (from master N.11 cascade). This translation predicts: (a) when Δρ crosses zero (Theorem 1 activation), lambda_V should simultaneously cross zero from below; (b) Omega accumulation should lag lambda_V crossing by one timescale τ_slow = 1/eta_Omega. Testable prediction: in a system approaching Storm (Δρ declining), lambda_V > 0 signal should precede Omega > Omega_c signal by τ_slow. What is the empirical lead time between lambda_V crossing and Omega threshold crossing, and does it match 1/eta_Omega? This would directly validate the E-layer translation as a predictive framework. | Open — connects to §25.4-ext, master N.11, VST §3.5.B |
+| 156 | [v2.9-DFGmaster] OP-RBIT-VE-1: RBIT's role in VE_sphere 5-way condition — RBIT supplies the fifth condition (Omega ≤ Omega_c) in the VE_sphere joint condition {C_A approx 1, D <= D_max^VE, S_D[V] <= S_c, lambda_V <= 0, Omega <= Omega_c}. Question: is the Omega condition independent of the other four, or is it derivable from lambda_V <= 0 (via Omega steady state)? If Omega_ss = (b_Omega/eta_Omega) lambda_V, then lambda_V <= 0 implies Omega_ss <= 0, which trivially satisfies Omega <= Omega_c. This would make the fifth condition redundant in steady state. However, in transient dynamics (lambda_V just crossed to negative), Omega may still be high from prior accumulation. Does the fifth condition provide independent information in the transient regime? | Open — connects to master N.11.6, NAT §7.34, RBIT §Contamination Flux |
 | 153 | [v2.8-RTseries] Adiabatic breakdown intervention window — Both RBIT (§Timescale Stratification) and NAT (§Timescale Stratification of False Basin) identify adiabatic approximation breakdown as a critical signal: RBIT uses corr(f₁, f₄) > threshold; NAT uses corr(IDI, V_depth) sign flip. These are different observables of the same underlying phenomenon (timescale separation collapse). Do they become detectable at the same time, or is one systematically earlier? If NAT corr(IDI, V_depth) detects breakdown before RBIT corr(f₁, f₄), this defines a new cross-theory early warning protocol with wider intervention window than either single-theory threshold. What is the expected lead time difference between NAT and RBIT adiabatic breakdown signals? | Open — connects to RBIT §Timescale Stratification, NAT v2.8 §Timescale Stratification of False Basin |
 
 ---
@@ -10815,3 +10852,41 @@ RBIT governance design implication:
 
 *Timestamped: March 11, 2026*
 *DFG Framework · Resolution-Based Information Theory v2.8-RTseries*
+
+---
+
+## DFG Integration Hook
+
+**Master document:** `README_DFG_Unified_Theory_v4_0.md`
+**Version cross-reference:** Master v4.0 ↔ RBIT v2.8 (current)
+
+### Primary Contribution to Master Equations
+
+RBIT provides the **information-theoretic governance sector** — resolution $\rho(t)$ as the core scalar health metric, resolution gap $\Delta\rho$ as instability precursor, and the six axioms A1–A6 grounding DFG governance in information theory.
+
+| Master eq. | RBIT contribution | Status |
+|---|---|---|
+| **E3** — $\sigma(y,t)$ | Source amplitude relates to resolution capacity $\rho(t)$ | [Established] |
+| **E5** — $R$ component | Frame integrity $F$ (one of $D\cdot F\cdot V\cdot T$) grounded in RBIT A2 | [Established] |
+| **§14 Master** — Interface | Resolution gap $\Delta\rho$ as VST $S[V]$ precursor | [Established] |
+
+### Variables Defined Here That Appear in Master
+
+| Symbol | Master eq. | Definition here |
+|---|---|---|
+| $\rho(t)$ | E3 ($\sigma$ grounding), §14 Master | §2: Path convergence capacity; global resolution scalar |
+| $\Delta\rho = \rho_{\mathrm{required}} - \rho_{\mathrm{actual}}$ | §14 Master | §3: Resolution gap; early warning signal |
+| $\Phi_{\mathrm{contam}} = P_i\max(0,S_i-R_i)$ | E5 (augmented, via VST §25.6) | §4: Contamination flux; RBIT-derived |
+| $D_\rho = \int\max(0,-\Delta\rho)dt$ | — | §5: Cumulative resolution deficit; pre-storm debt |
+| A1–A6 | E8 (projection postulate grounding) | §1: Six information-theoretic governance axioms |
+
+### Epistemic Status Summary
+
+| RBIT component | Status |
+|---|---|
+| Resolution $\rho(t)$ definition and dynamics | [Established] |
+| Resolution gap $\Delta\rho$ as instability precursor | [Established] |
+| Contamination flux $\Phi_{\mathrm{contam}}$ | [Established] |
+| Axioms A1–A6 | [Established] structural |
+| $D_\rho$ resolution debt model | [Established] |
+| RBIT–VST S-equation coupling | [Established] |
