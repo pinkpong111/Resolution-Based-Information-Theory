@@ -2,7 +2,9 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · July 2026 · Internal Working Document — v3.1-unified-audit*
+> *Draft · July 2026 · Internal Working Document — v3.2-B0cheapbench*
+>
+> *v3.2-B0cheapbench: F_RBIT measurement-model and B0 cheap-benchmark pass — (1) B0 split into B0-R (six-axis resolution measurement) and B0-F (five-component health-vector selectivity); (2) common baseline/critical normalization operator and component-specific candidate measurement equations added; (3) fully controlled synthetic harness executed with fixed seed 20260720; (4) B0-R pipeline sanity checks passed for test–retest reliability, monotonicity, axis selectivity, window/noise robustness, and sham stability; (5) B0-F direct intervention matrix was diagonally dominant and the 5-component representation outperformed 3-component and scalar competitors in intervention identification; (6) results are explicitly limited to code/measurement-pipeline sanity, not empirical validation of the RBIT ontology; (7) real-substrate construct validity, independent demand oracle, external-reference/SCM, cross-domain invariance, and longitudinal prediction remain PENDING.*
 >
 > *v3.1-unified-audit: The two user-facing v3.0 files were byte-identical and are deduplicated into this single canonical document. Reader-safety audit corrections: (1) U1 polarity fixed by defining mismatch pressure \(m_\rho=\max(0,-\Delta\rho)\); (2) RCA symbol collisions removed — affective state \(\mathbf a\), maturity/history \(\mathcal M\), prior/reference \(\Pi\), and action \(u\) are distinct from absorption \(A\), AGM endurance \(H\), projection \(P_K\), and other legacy variables; (3) \(f_3\) namespace locked to buffer instability (higher=worse), while \(B_{\mathrm{cap}}\) denotes buffer capacity/thickness (higher=better); (4) scalarization no longer automatically inherits vector-model theorems; (5) legacy cross-theory “iff/equivalence” claims are demoted to bridge hypotheses requiring object-locked calibration; (6) Theorem 1 is reader-safety downgraded to an A7-dependent conditional escape theorem because A1–A6 alone do not prove the cumulative-to-instantaneous bridge; (7) resolution-proxy normalization and causal-identification locks strengthened.*
 >
@@ -107,34 +109,28 @@ where:
 Interpretation for RBIT:
   Two states must be distinguished carefully:
 
-  (1) Ideal resolution — the governance target:
-      Δρ ≈ 0 across classification channels (f₁ ≈ 0)
-      f₃ (buffer dynamics), f₄ (coupling load), f₅ (resource dissipation)
-      remain bounded and NON-ZERO — these are structural properties of
-      a functioning system, not defects to eliminate.
-      F_RBIT ≠ (0,0,0,0,0) in healthy operation.
+  (1) Ideal operational resolution — the governance target:
+      Δρ is non-negative or near the declared operating boundary on
+      relevant channels, while measured burdens f₁–f₅ remain bounded
+      under a matched protocol. Some normalized burden components may
+      equal zero when they are at or below their healthy baselines.
 
-      This corresponds to T_eff ∈ (T_min, T_max): the system retains
-      enough adaptive dynamics to remain responsive.
+      Adaptive capacity is not inferred from a non-zero F_RBIT floor.
+      It is verified separately through perturbation response, held-out
+      transfer, sensitivity, exploration diversity, and v_class dynamics.
 
-  (2) Zero-instability state — the degenerate attractor:
-      F_RBIT = (0,0,0,0,0)  [all channels at zero]
-      This is NOT the governance optimum. It corresponds to T_eff → 0:
-      attractor lock-in, complete loss of adaptive capacity.
+  (2) Zero-adaptability state — a latent dynamical condition:
+      T_eff → 0, Ω_eff → 0, perturbation response collapses, and transfer
+      fails. An observed F_RBIT = (0,0,0,0,0) does NOT by itself establish
+      this state because F_RBIT is a baseline-normalized burden vector.
 
-  RBIT interprets bounded instability as a feature of healthy
-  systems, not a defect. The structural channels f₃, f₄, f₅
-  encoding buffering dynamics, coupling load, and resource
-  dissipation must remain active for the system to maintain
-  sender-controlled compression and adaptation capacity.
+  RBIT interprets controlled adaptive dynamics as necessary, but the
+  required residual activity belongs to perturbation/exploration objects,
+  not to a mandatory positive floor in every burden component.
 
   The RBIT design target is therefore:
-    Rest Mode: each fᵢ bounded and non-monotone,
-               F_RBIT ≠ (0,0,0,0,0) — residual maintained.
-
-  This is the information-theoretic expression of T_eff > T_min:
-  the system preserves enough resolution gap uncertainty to
-  remain adaptive rather than crystallized.
+    Rest Mode: each fᵢ bounded with no sustained adverse trend,
+               while independent adaptability tests remain positive.
 ```
 
 Corollary (Controlled Non-Minimization as RBIT Design Requirement): The AGM Controlled Non-Minimization Principle states that optimal adaptive systems maintain a controlled floor of non-minimized free energy ΔF_affective > 0. In RBIT terms, this translates to a mandatory non-zero residual resolution gap budget:
@@ -3559,8 +3555,8 @@ F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
   f₁ = (1 − ρ̄_ℓ)     normalized task-specific discrimination loss (higher = worse)
   f₂ = Φ(−Δρ̄_ℓ)      normalized negative-margin pressure (higher = worse)
   f₃ = Ψ(B_ℓ)         buffer instability (higher = worse)
-  f₄ = E_ℓ            escalation load (higher = worse)
-  f₅ = C_ℓ            resource dissipation (higher = worse)
+  f₄ = L_esc,ℓ        escalation-load pressure (higher = worse)
+  f₅ = D_res,ℓ        resource-dissipation burden (higher = worse)
 
   All components are normalized to [0, 1] under a declared protocol; bars denote the declared scalarization of vector resolution and demand.
   Φ and Ψ are hinge functions by default:
@@ -3572,9 +3568,9 @@ F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
   (sign agreement across components), not scalar magnitude.
   This avoids one source of scalar-weight arbitrariness but does not by itself establish cross-system comparability.
 
-  Rest Mode: d(F_RBIT)/dt ≈ 0 for all five components,
-  but F_RBIT ≠ (0,0,0,0,0) — bounded fluctuation equilibrium
-  with residual instability maintained.
+  Rest Mode: no component has a sustained adverse trend and all remain
+  within declared operating bounds. An observed zero vector is allowed
+  under baseline normalization; adaptability is checked independently.
 ```
 
 **F_RBIT namespace lock (v3.1).**
@@ -3584,6 +3580,107 @@ F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
 - Therefore \(B_{\mathrm{cap}}\uparrow\) normally corresponds to \(f_3\downarrow\), not \(f_3\uparrow\).
 - \(f_5\) is resource dissipation burden, not remaining resource stock.
 - Historical phrases using “\(f_3\) thickness” are superseded and must be translated to \(B_{\mathrm{cap}}\) before use.
+
+### F_RBIT Candidate Measurement Model (v3.2)
+
+> **Status lock.** The following equations are `[DEFINED — CANDIDATE MEASUREMENT MODEL]`. The synthetic B0 pass below validates implementation and designed identifiability only. It does **not** establish real-substrate construct validity, independence, cross-domain invariance, or causal interpretation.
+
+Every component must report the raw observable, normalized value, reference baseline, critical threshold, evaluation window, and uncertainty interval. Min–max normalization from the observed sample is prohibited because a moving empirical maximum can hide deterioration. The common candidate normalization is
+
+$$
+\mathcal N(z;z_0,z_{\mathrm{crit}})
+=
+\operatorname{clip}
+\left(
+\frac{z-z_0}{z_{\mathrm{crit}}-z_0},0,1
+\right).
+$$
+
+Here \(z_0\) is a matched healthy baseline and \(z_{\mathrm{crit}}\) is a predeclared contract/intervention threshold.
+
+#### \(f_1\): task-specific discrimination loss
+
+$$
+f_1
+=
+\operatorname{clip}
+\left(
+\frac{L_{\mathrm{disc}}-L_{\mathrm{oracle}}}
+     {L_{\mathrm{chance}}-L_{\mathrm{oracle}}},0,1
+\right).
+$$
+
+Use balanced error, a proper scoring loss, or a contract-weighted normalized loss. Coverage/abstention must be locked or charged explicitly; otherwise selective refusal can manufacture an artificially low \(f_1\).
+
+#### \(f_2\): negative resolution-margin pressure
+
+The demand estimate must be generated independently of the receiver output used to score \(f_1\). For episode \(e\) and resolution axis \(k\),
+
+$$
+m_{e,k}
+=
+\max\left(0,\widehat r_{e,k}-\widehat\rho^{\mathrm{cal}}_{i,k}\right),
+\qquad
+f_2
+=
+\mathbb E_{e,k}
+\left[w_{e,k}\,\mathcal N(m_{e,k})\right].
+$$
+
+Thus \(f_1\) asks whether the receiver actually failed, whereas \(f_2\) asks whether task demand exceeded the independently calibrated capacity frontier. If the same errors are reused to construct both, the two components are not independently identified.
+
+#### \(f_3\): buffer-instability deficit area
+
+For a standardized burst or perturbation,
+
+$$
+d_B(t)=
+\frac{[B_0-B_{\mathrm{cap}}(t)]_+}{B_0},
+\qquad
+f_3
+=
+\frac{1}{T_{\mathrm{rec}}}
+\int_0^{T_{\mathrm{rec}}}d_B(t)\,dt.
+$$
+
+Report peak deficit, recovery half-life, collision/overwrite rate, and recovery-without-escalation as supporting observables. Escalation policy must be fixed during the direct \(f_3\) identification window.
+
+#### \(f_4\): escalation-load pressure
+
+Let \(\lambda_{\mathrm{esc}}\) be arriving escalated work units per unit time and \(\mu_{\mathrm{esc}}\) the declared service capacity. Then
+
+$$
+L_{\mathrm{esc}}
+=
+\frac{\lambda_{\mathrm{esc}}}{\mu_{\mathrm{esc}}},
+\qquad
+f_4
+=
+\frac{L_{\mathrm{esc}}}{1+L_{\mathrm{esc}}}.
+$$
+
+False escalation, missed escalation, tail waiting time, privacy exposure, and authority expansion remain separate diagnostics; raw escalation count alone is not a load measure.
+
+#### \(f_5\): resource-dissipation burden
+
+To avoid collision with capacity symbols, use \(C_{\mathrm{cap}}\) for available resource capacity and \(D_{\mathrm{res}}\) for expenditure burden. Within a declared architecture,
+
+$$
+D_{\mathrm{res}}
+=
+\frac{1}{N_{\mathrm{episodes}}}
+\sum_j\pi_j z_j,
+\qquad
+f_5
+=
+\mathcal N(D_{\mathrm{res}};D_0,D_{\mathrm{crit}}),
+$$
+
+where \(z_j\) may include compute, latency, tokens, tool calls, human minutes, and rollback cost. The shadow prices \(\pi_j\) are architecture- and contract-specific; absolute cross-architecture comparison is not licensed without an independent common cost model.
+
+#### Zero-vector reader-safety lock
+
+An observed \(F_{\mathrm{RBIT}}=(0,0,0,0,0)\) under this baseline normalization means only that all measured burdens are at or below their declared healthy baselines in that window. It does **not** by itself prove loss of adaptive capacity or Freeze. Freeze/Stability-Saturation requires an external perturbation response, sensitivity, held-out transfer, or \(v_{\mathrm{class}}\) test. Historical statements that treat the observed zero vector itself as pathological are superseded.
 
 ### Interface Contract: RBIT ↔ NAT (IC v1.0)
 
@@ -4854,7 +4951,7 @@ IS (Identity Stability)
 NFFR (Negative Feedback Functioning Rate)
   AGM: rate at which correction cycles complete before escalation
   RBIT: self-purification component Fᵢ (feedback density)
-  Component: f₅ = C_ℓ [resource dissipation]
+  Component: f₅ = D_res,ℓ [resource-dissipation burden]
   Concordance: NFFR ↓ → f₅ rising (fewer completions → more dissipation)
 
 s(t) Sensitivity
@@ -4895,19 +4992,18 @@ AGM ↔ F_RBIT four-state concordance:
 
 ```
 Rest Mode condition (vector form):
-  Each fᵢ bounded and non-monotone over evaluation window W
-  No component in sustained rising trend
-  F_RBIT ≠ (0,0,0,0,0)   [residual instability maintained — floor exists]
+  Each fᵢ remains within declared operating bounds over window W
+  No component is in a sustained adverse trend
+  Independent perturbation/transfer tests show adaptive response remains available
 
-Not zero instability (impossible — residual floor).
-Bounded fluctuation equilibrium:
-  information intake and internal dissipation balanced across all five axes.
+An observed zero burden vector is permitted under baseline normalization.
+It is not equivalent to zero adaptability or attractor lock-in.
 
 F_RBIT components map to governance entry conditions:
   f₄ = E_ℓ bounded       ← f_esc ≤ θ (escalation load within threshold)
   f₁ = 1−ρ_ℓ bounded     ← I ≥ τ (misclassification rate bounded)
   f₃ = Ψ(B_ℓ) bounded    ← Lreinf ≥ threshold (buffer stability maintained)
-  f₅ = C_ℓ bounded        ← SCC ≥ τ4 (recovery cost bounded)
+  f₅ = D_res,ℓ bounded    ← resource burden remains within declared recovery budget
 
 All four required: single diverging component → net instability growth.
 
@@ -7393,7 +7489,7 @@ RBIT's theoretical variables connect to log-observable metrics through operation
 | Opposing pair detection | Persistent negative gradient correlation | Recovery Theory §Proxy Gap | MEDIUM-HIGH |
 | Resolution gap Δρ routing | Four-type classification (Math/HC/Tacit/Noise) | NAT §4.4 | HIGH |
 | Cascade validation R | Branching ratio: activated_{t+1} / activated_t | NAT §7.2, VST §3.5.4 | HIGH |
-| F_RBIT instability vector | (f₁,f₂,f₃,f₄,f₅) = ((1−ρ), Φ(−Δρ), Ψ(B), E, C) — normalized [0,1] each | RBIT §Appendix RFEF, VST §3.2.6 | HIGH (component-wise); scalar optional |
+| F_RBIT health vector | component-specific v3.2 candidate measurements; raw logs retained with baseline, threshold, window, and uncertainty | RBIT §F_RBIT Candidate Measurement Model / B0 | **Raw-log availability: HIGH; construct validity: OPEN; scalar optional** |
 | Consistency Index I | 1 − Σwij/M (pair-level rule coherence) | GRT via TLG §0.1 | HIGH |
 | Meta-Contradiction Ic | 1 − Σwij(global)/Mc (global rule conflicts) | GRT via TLG §0.1 | HIGH |
 | Position overlap Poverlap | Attractor convergence degree | GRT via TLG §9.2 | HIGH |
@@ -7593,25 +7689,99 @@ Every benchmark run must freeze:
 
 Every claimed cause must be tested with an intervention or matched counterfactual. Observational correlation alone remains `[DIAGNOSTIC]`, not `[CAUSAL]`.
 
-### B0 — Resolution Measurement Lock
+### B0 — Measurement Lock: B0-R + B0-F
 
-**Question.** Can each resolution dimension be measured reproducibly before causal decomposition?
+B0 is split into two independent gates.
 
-**Tasks.** Construct difficulty-controlled probes for representation, context, control, relational, temporal, and safety resolution.
+#### B0-R — Six-axis resolution measurement
 
-**Candidate normalized score:**
+**Question.** Can representation, context, control, relational, temporal, and safety resolution be measured reproducibly and selectively before causal decomposition?
+
+**Tasks.** Construct one difficulty-controlled probe family per axis and estimate the intervention-response Jacobian
 
 $$
-\rho_k
+J_{kj}=\frac{\partial\widehat\rho_k}{\partial d_j}.
+$$
+
+A separated coordinate system requires the targeted response to dominate irrelevant-axis leakage: \(|J_{kk}|\gg|J_{kj}|\) for \(j\ne k\). The candidate normalized score remains
+
+$$
+\widehat\rho_k
 =
 1-
 \frac{E_k-E_k^{\mathrm{oracle}}}
      {E_k^{\mathrm{chance}}-E_k^{\mathrm{oracle}}}.
 $$
 
-**Pass.** Test–retest reliability; monotone decline with controlled difficulty; relative invariance to irrelevant-factor interventions; sensitivity to matched distribution shift.
+**Provisional engineering pass.** Test–retest ICC \(\ge0.8\) or rank stability \(\ge0.9\); at least 90% monotone targeted difficulty pairs; target-axis effect at least twice the largest off-axis effect; gap-sign/risk-rank stability under doubled windows and small label noise; null/sham stability.
 
-**Kill.** If the score changes primarily with input mix or evaluator framing rather than capacity, it cannot support later causal claims.
+**Kill.** If the score changes mainly with input mix, evaluator framing, coverage, or irrelevant-axis interventions rather than the declared capacity axis, that axis is not identified.
+
+#### B0-F — Five-component health-vector selectivity
+
+Apply five direct interventions with matched receiver, task, terrain, routing, and resource contract:
+
+1. response-threshold bias targeting \(f_1\);
+2. demand increase with correct abstention targeting \(f_2\);
+3. buffer-capacity reduction with routing fixed targeting \(f_3\);
+4. escalation-gate hypersensitivity targeting \(f_4\);
+5. redundant resource use with output fixed targeting \(f_5\).
+
+Define the direct-window response matrix
+
+$$
+M^{\mathrm{direct}}_{ij}=\Delta f_j\mid I_i.
+$$
+
+The direct matrix should be diagonally dominant. A later window is analyzed separately because genuine downstream propagation such as \(f_3\uparrow\to f_4\uparrow\to f_5\uparrow\) is allowed after the direct identification window.
+
+B0-F also compares three competing representations: scalar \(M_1\), grouped three-component \(M_3\), and full five-component \(M_5\). Five components are retained only if they improve held-out intervention identification, failure prediction, or intervention prescription beyond the lower-dimensional competitors.
+
+#### v3.2 cheap synthetic harness result — `[PIPELINE SANITY PASS; EMPIRICAL VALIDITY OPEN]`
+
+A fully controlled synthetic harness was executed with fixed seed `20260720`. The data-generating process deliberately contained six separable difficulty axes, five direct interventions, modest cross-talk, delayed downstream propagation, sham interventions, repeated windows, and small observation noise.
+
+**B0-R result:**
+
+| Audit | Result | Provisional gate |
+|---|---:|---:|
+| ICC(2,1) | 0.9997 | ≥ 0.80 |
+| test–retest rank correlation | 0.9970 | ≥ 0.90 |
+| targeted monotonicity | 1.000 on all six axes | ≥ 0.90 |
+| minimum diagonal/off-axis selectivity | 12.93× | ≥ 2× |
+| doubled-window rank stability | 0.9961 | ≥ 0.90 |
+| label-noise rank stability | 0.9941 | ≥ 0.90 |
+| minimum sign stability | 0.9815 | ≥ 0.90 |
+| maximum mean sham change | 0.0035 | diagnostic only |
+
+**B0-F direct diagonal-dominance ratios:**
+
+| Component | Ratio |
+|---|---:|
+| \(f_1\) | 10.82× |
+| \(f_2\) | 17.75× |
+| \(f_3\) | 8.63× |
+| \(f_4\) | 8.34× |
+| \(f_5\) | 26.46× |
+
+Held-out nearest-centroid intervention identification was \(0.313\pm0.033\) for scalar \(M_1\), \(0.693\pm0.035\) for grouped \(M_3\), and \(1.000\pm0.000\) for full \(M_5\). The late-window matrix showed the deliberately injected downstream propagation while preserving direct-window target selectivity.
+
+**Interpretation boundary.** These results prove only that the proposed code, normalization, response-matrix audit, timing split, and model-competition procedure can recover separability when the synthetic mechanism contains it. Because the generator was designed with separable axes and direct effects, this is not evidence that natural AI, neural, or organizational logs possess the same five-dimensional ontology. No RBIT theorem or empirical bridge is promoted by this synthetic pass.
+
+**Artifacts.** `run_rbit_b0_cheapbench.py` and `rbit_b0_cheapbench_results.json` contain the reproducible harness and exact output.
+
+#### B0 items retained as PENDING
+
+- `[PENDING — REAL SUBSTRATE]` run B0-R on actual agent/model versions and held-out task families;
+- `[PENDING — INDEPENDENT DEMAND ORACLE]` estimate \(r(x,c,t)\) without reusing receiver errors or the same evaluator used for \(f_1\);
+- `[PENDING — CONSTRUCT VALIDITY]` show that \(f_1\)–\(f_5\) respond selectively under real interventions rather than shared log transformations;
+- `[PENDING — EXTERNAL REFERENCE / SCM]` test whether apparently healthy internal vectors miss coordinated frame drift;
+- `[PENDING — CROSS-DOMAIN INVARIANCE]` repeat across AI, organizational, and other substrates with domain-specific observables;
+- `[PENDING — LONGITUDINAL]` establish whether component trajectories predict upscaling, contamination, recovery, or failure on held-out episodes;
+- `[PENDING — UNCERTAINTY]` pre-register bootstrap/Bayesian intervals and missing-log sensitivity;
+- `[PENDING — MODEL SELECTION]` compare \(M_1,M_3,M_5\) using real held-out intervention attribution and prescription, not synthetic class labels.
+
+**Current B0 status.** Synthetic implementation gate: `PASS`. Real-substrate measurement validity: `OPEN`. Causal interpretation: `OPEN`.
 
 ### B1 — Intrinsic Capacity Isolation
 
@@ -7821,7 +7991,8 @@ A model is not promoted because it explains all observed trajectories post hoc. 
 - RCA-C1: `[DEFINED — BASELINE]`.
 - RCA-C2: `[DEFINED — CANONICAL CANDIDATE; NOT YET SELECTED BY BENCH]`.
 - RCA-C3: `[DEFINED — MULTI-AGENT EXTENSION; IDENTIFIABILITY OPEN]`.
-- B0–B10: `[PROTOCOL SPECIFIED; EXECUTION OPEN]`.
+- B0: `[SYNTHETIC PIPELINE SANITY PASS; REAL-SUBSTRATE CONSTRUCT/CAUSAL VALIDITY OPEN]`.
+- B1–B10: `[PROTOCOL SPECIFIED; EXECUTION OPEN]`.
 
 ---
 
@@ -7854,12 +8025,12 @@ H1 (Silent Criticality detection):
   BEFORE behavioral degradation > 2 SD.
   
   RBIT proxy mapping:
-    σ (branching ratio) ↔ RBIT f₃ proxy (buffer capacity)
+    σ (branching ratio) ↔ candidate B_cap / f₃ supporting proxy
     Behavioral degradation ↔ RBIT f₁ elevation
-    H1 in RBIT: f₃ proxy declines BEFORE f₁ elevation
-    → f₃ is the leading indicator, f₁ is the lagging indicator.
-    This cross-validates RBIT's claim that buffer thinning precedes
-    conflict escalation.
+    H1 in RBIT: B_cap declines (equivalently f₃ rises) BEFORE f₁ elevation.
+    → f₃ is the candidate leading burden indicator and f₁ the lagging indicator.
+    This remains a bridge hypothesis until the substrate-specific mapping
+    from branching ratio to buffer deficit is independently calibrated.
 
 H2 (Lock budget):
   RBIT: subjects with lower L_d proxy (cognitive flexibility)
@@ -8006,7 +8177,7 @@ The following items remain open after the easy reader-safety patch:
 1. **T1 escape certificate identification.** A7 supplies a mathematically adequate drift object, but RBIT still lacks a substrate-independent method for constructing \(V,D^*,\eta,b\) and validating that basin exit means intent replacement.
 2. **Vector-resolution identifiability.** The six resolution axes are a candidate coordinate system. Factor separation, invariance, and aggregation have not been established.
 3. **Demand estimator circularity.** Estimating \(\mathbf r(x,c,t)\) may require the same high-resolution oracle whose absence motivates escalation.
-4. **F_RBIT component validity.** \(f_1\)–\(f_5\) need independent measurement models, uncertainty intervals, and cross-domain invariance tests. \(f_3/B_{\mathrm{cap}}\) has now been namespace-corrected, but historical extensions require full line-by-line migration.
+4. **F_RBIT component validity.** v3.2 defines independent candidate measurement equations and the synthetic B0-F implementation/selectivity gate passes. Real-substrate construct validity, uncertainty intervals, independent demand estimation, external-reference resistance, longitudinal prediction, and cross-domain invariance remain open. \(f_3/B_{\mathrm{cap}}\) has been namespace-corrected, but historical extensions still require full line-by-line migration.
 5. **Affect versus response bias.** AGP gain can change decision thresholds without changing perception. B4 must prove discrimination change rather than only output change.
 6. **Network-mediated demand change.** Mediation can reduce task demand as well as increase effective capacity; B3 must estimate both.
 7. **Cross-theory bridges.** Spectral, thermodynamic, SOC, GGT, and E-layer correspondences remain hypotheses unless separately object-locked and benchmarked.
@@ -8913,7 +9084,7 @@ F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
   f₂ = Φ(−Δρ_ℓ)              [resolution mismatch — higher = worse]
   f₃ = Ψ(B_ℓ)                [buffer instability — higher = worse]
   f₄ = E_ℓ                   [escalation load — higher = worse]
-  f₅ = C_ℓ                   [resource dissipation — higher = worse]
+  f₅ = D_res,ℓ               [resource-dissipation burden — higher = worse]
 ```
 
 All five components are normalized to [0, 1] before any comparison (unit-free). Each is independently interpretable: f₁ tracks classification quality, f₂ tracks resolution mismatch, f₃ tracks buffer health, f₄ tracks governance load, f₅ tracks resource pressure.
@@ -9064,13 +9235,14 @@ without forced compression. Exact functional form of D(Δρ): open problem.
 #### 5. Rest Mode as Steady State
 
 ```
-Rest Mode condition:  d(F_RBIT)/dt ≈ 0 for all five components,
-                      but F_RBIT ≠ (0,0,0,0,0)
+Rest Mode condition: no F_RBIT component is in a sustained adverse trend
+                     and all remain within declared operating bounds.
 
 Operationally:
-  Each fᵢ bounded and non-monotone over evaluation window W
-  No component in sustained rising trend
-  At least one component > 0 (residual instability maintained)
+  An observed zero burden vector is allowed under baseline normalization.
+  Adaptive freedom must be demonstrated by perturbation response, transfer,
+  sensitivity, exploration diversity, or v_class rather than by forcing
+  at least one burden component to remain positive.
 
 Not: zero instability (impossible)
 Not: all components at zero (structurally absent)
@@ -9130,6 +9302,7 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 | Canonical Resolution Causal Architecture | Supply/demand split; six-axis resolution vector; relational effective capacity; RCA-C1 additive baseline, RCA-C2 staged canonical candidate, RCA-C3 multiplex extension; fast/slow affect paths and network object locks | New v3.0 |
 | Canonical Cause Benchmark Suite B0–B10 | Measurement lock, intrinsic capacity, terrain swap, network intervention, affective gain clamp, factorial interactions, path order, longitudinal upscaling, affective legacy, SCM external reference, and propagation benches | New v3.0 |
 | Unified Audit and Namespace Lock | Deduplicated user copies; U1 polarity repair; RCA symbol lock; f₃/B_cap separation; T1 A7 dependency; cross-theory bridge downgrade; resolution-proxy normalization | New v3.1 |
+| F_RBIT Measurement + B0 Cheap Bench | component-specific candidate measurement equations; B0-R/B0-F split; synthetic intervention-response and M1/M3/M5 model-competition sanity pass; real-substrate validity pending | New v3.2 |
 | Physical Basis | Restructured: combinatorial + governance arguments primary; Landauer as supporting motivation | Updated v1.1 |
 | Substrate Principle (D0) | Geometry alignment as substrate interpretation; contamination = geometry mismatch projection | New v1.1 |
 | Operational Contamination Boundary | N-step behavioral criterion; contamination = absence of return path | New v1.1 |
@@ -11464,6 +11637,7 @@ RBIT governance design implication:
 | Benchmark Suite B0–B10 | Measurement, capacity, terrain, network, gain, factorial, path-order, longitudinal upscaling, affective legacy, SCM external-reference, and perturbation propagation protocols | New v3.0 |
 | Polarity and Routing Cleanup | Canonical $\Delta\rho=\rho^{eff}-r$ restored globally; zero gap no longer implies upscaling; over-escalation no longer labeled safe; legacy tier proxy and DFG Hook corrected | New v3.0 |
 | Unified Audit | Deduplicated byte-identical user copies; U1 sign repair; RCA symbol namespace; $f_3/B_{cap}$ separation; T1 A7 dependency; bridge-equivalence downgrade; balanced resolution proxy | New v3.1 |
+| F_RBIT Measurement and B0 Cheap Bench | baseline/critical normalization; independent candidate formulas for $f_1$–$f_5$; B0-R/B0-F protocol; reproducible synthetic pipeline pass with strict non-empirical scope and pending ledger | New v3.2 |
 
 ---
 
@@ -11475,7 +11649,7 @@ RBIT governance design implication:
 ## DFG Integration Hook
 
 **Master document:** `README_DFG_Unified_Theory_v4_0.md`
-**Version cross-reference:** Master v4.0 ↔ RBIT v3.1-unified-audit (master-side synchronization pending)
+**Version cross-reference:** Master v4.0 ↔ RBIT v3.2-B0cheapbench (master-side synchronization pending)
 
 ### Primary Contribution to Master Equations
 
