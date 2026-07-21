@@ -2,7 +2,11 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · July 2026 · Internal Working Document — v3.2-B0cheapbench*
+> *Draft · July 2026 · Internal Working Document — v3.4-resolutioncomposition*
+>
+> *v3.4-resolutioncomposition: Spectrum–Depth Allocation + Resolution Composition + Verified Terrain Handshake — (1) the breadth–depth trade-off is formalized as a terrain-conditioned Pareto frontier under a declared resolution budget; (2) a foveated/dynamic-zoom policy distinguishes broad low-cost surveillance from narrow high-depth inspection; (3) the Resolution Composition Architecture partitions the required spectrum into scoped specialists, selectively routes inputs, performs local deep processing, preserves contract-relevant information through controlled projection, and synthesizes outputs through mediated cross-validation; (4) system-wide breadth-and-depth is treated as a composition result, not a property of one generalist; (5) a receiver-terrain model and sender-to-receiver transport map are introduced; (6) the Pre-Transfer Terrain Reconstruction and Verification protocol requires low-risk probes, receiver reconstruction/teach-back, cycle and external-reference checks, progressive disclosure, rollback, and post-transfer drift monitoring; (7) total information loss is decomposed into projection, transport, fill, routing, synthesis, and drift terms with interaction residuals; (8) degradation and seed transfer are now receiver-conditioned rather than sender-assumed; (9) NAT interfaces I8–I9, benchmarks B11–B13, audit items, contribution registry, open problems, and falsification gates are added. All new architectural claims remain candidate definitions/protocols until intervention benchmarks pass.*
+>
+> *v3.3-terraingeometry: Terrain-Generated Resolution + Chromatic–Luminance Geometry — (1) canonical terrain-mediation candidate added: base capability, network, affective gain, buffer/resources, maturity/history, and prior/reference frame act by constructing or deforming an episode-specific effective terrain; (2) resolution redefined geometrically as the recoverable, contract-valid reachable set on that terrain; (3) directional activity-radius profile added; (4) every semantic resolution axis now admits a two-factor decomposition into chromatic composition (independent directions and their coexistence) and luminance/reach (usable strength along those directions); (5) scalarization constrained to be non-compensatory and explicitly non-canonical; (6) pointwise directional resolution gap added beneath the existing six-axis gap; (7) B0-G terrain-geometry measurement gate, measurement overlays, open problems, and falsification criteria added; (8) prior direct \(T_{\mathrm{eff}}\leftrightarrow\rho\) and reachable-volume-only correspondences demoted to conditional bridges because temperature can alter reach without preserving directional diversity.*
 >
 > *v3.2-B0cheapbench: F_RBIT measurement-model and B0 cheap-benchmark pass — (1) B0 split into B0-R (six-axis resolution measurement) and B0-F (five-component health-vector selectivity); (2) common baseline/critical normalization operator and component-specific candidate measurement equations added; (3) fully controlled synthetic harness executed with fixed seed 20260720; (4) B0-R pipeline sanity checks passed for test–retest reliability, monotonicity, axis selectivity, window/noise robustness, and sham stability; (5) B0-F direct intervention matrix was diagonally dominant and the 5-component representation outperformed 3-component and scalar competitors in intervention identification; (6) results are explicitly limited to code/measurement-pipeline sanity, not empirical validation of the RBIT ontology; (7) real-substrate construct validity, independent demand oracle, external-reference/SCM, cross-domain invariance, and longitudinal prediction remain PENDING.*
 >
@@ -70,6 +74,18 @@ Shannon's information theory solved how to transmit information efficiently acro
 RBIT addresses a different problem:
 
 > **How should information transform as it moves through layers of different resolution — and how does the system grow in its capacity to handle higher resolution over time?**
+
+v3.4 adds two coupled questions: how can a system obtain broad-and-deep coverage by composing scoped specialists rather than forcing one resolver to cover the whole spectrum, and how can a transfer be calibrated against the receiver's actual terrain rather than the sender's assumptions? The resulting operational chain is:
+
+```
+terrain-conditioned allocation
+  → scope partition and specialization
+  → selective routing and local depth
+  → receiver-terrain acquisition
+  → verified reconstruction and transport calibration
+  → progressive transfer
+  → diverse audit and hierarchical synthesis
+```
 
 These are complementary problems, not competing ones.
 
@@ -157,7 +173,7 @@ RBIT interpretation:
 
 (See AGM §1.1 Adaptive Necessity Theorem, §2.0 Controlled Non-Minimization Principle; connects to RBIT Stability Saturation and Rest Mode conditions.)
 
-The consequence for multi-agent AI systems: degradation is not a governance failure. It is a structural necessity. The question is not whether information will be compressed as it moves through layers — it will — but **who controls the compression and whether intent survives it**.
+The consequence for multi-agent AI systems: degradation is not a governance failure. It is a structural necessity. The question is not whether information will be compressed as it moves through layers — it will — but **whether the transformation is calibrated to the receiver's terrain, independently verified, recoverable, and capable of preserving intent**. Unilateral sender control is insufficient; uncontrolled receiver compression is dangerous; the target is verified, receiver-conditioned transfer.
 
 ### The Substrate Principle — Geometry Alignment
 
@@ -188,7 +204,7 @@ Resolution, in this interpretation, is the capacity to reduce geometry mismatch 
 
 Existing frameworks treat all compression as failure to minimize. In adaptive multi-agent systems, this produces two design errors: over-delivering information to immature layers causes Vector Storm; under-delivering without preserving generative structure causes developmental stall. Neither error is addressable within a framework that treats all compression as loss.
 
-RBIT is the framework that makes compression designable rather than accidental — distinguishing between harmful compression (receiver-controlled, intent-replacing) and functional compression (sender-controlled, intent-preserving).
+RBIT is the framework that makes compression designable rather than accidental — distinguishing between harmful compression (unplanned receiver-controlled collapse or destructive synthesis) and functional compression (sender-proposed, receiver-conditioned, independently verified, contract-preserving, and recoverable). v3.4 further treats breadth–depth allocation and specialist composition as part of the same design problem: information must be placed into the right scope before it can be safely compressed or combined.
 
 ### ODE-RBIT Formal Bridge — Regime Scalar as Resolution Gap Projection
 
@@ -342,11 +358,11 @@ Design rules (FCC §19) ↔ RBIT governance prescriptions:
 
 ### AGM Collapse Modes as RBIT Resolution Failure Signatures
 
-The Gain-Curvature Equivalence Theory (GCET, EDT §52) establishes that AGM's affective gain parameter T_eff and EDT's terrain curvature U(x) are dual representations of the same underlying governance primitive. RBIT's resolution gap Δρ is the shared observable through which this duality manifests — it is the quantity that both representations modify, and the quantity whose sign determines system behavior.
+> **v3.3 bridge status.** GCET supplies a useful model-class correspondence between stochastic gain and terrain curvature, but it does not establish that \(T_{\mathrm{eff}}\), terrain permeability, and the canonical RBIT resolution gap are identical variables. Equal stationary distributions also do not guarantee equal directional labels, admissible actions, return topology, or recovery capacity. The bridge is therefore diagnostic and intervention-comparative, not an exact cross-theory equivalence.
 
-```
-GCET Duality Theorem (EDT §52.1):
+Within the declared gradient/stationary model:
 
+```text
 System A (AGM representation):
   dx/dt = -∇J(x) + T_eff · ξ(t)
   Stationary distribution: p_∞^A(x) ∝ exp(-J(x) / T_eff)
@@ -355,52 +371,44 @@ System B (EDT representation):
   dx/dt = -∇U(x)
   Stationary distribution: p_∞^B(x) ∝ exp(-U(x))
 
-Equivalence condition: U(x) = J(x) / T_eff
-→ Both systems explore identical stationary distributions
-
-RBIT translation of equivalence:
-  Resolution gap Δρ is the observable common to both:
-    AGM perspective: Δρ > 0 ↔ T_eff in optimal band
-                     Δρ ≈ 0 ↔ T_eff too low (approaching Freeze)
-                     Δρ < 0 ↔ T_eff → 0 or → ∞ (collapse mode)
-    EDT perspective: Δρ > 0 ↔ terrain curvature in optimal band
-                     Δρ ≈ 0 ↔ over-consolidated terrain (Freeze signature)
-                     Δρ < 0 ↔ flat/destroyed terrain (Runaway signature)
-  
-  Both perspectives modify the same quantity (Δρ).
-  Governance designers may operate in either representation:
-    AGM intervention: tune T_eff → changes stationary distribution
-    EDT intervention: inject curvature ΔU → same effect on Δρ
-    They are computationally equivalent governance acts.
+Model-class correspondence:
+  U(x) = J(x) / T_eff
+  → the two adopted models can generate the same stationary density.
 ```
 
-**Terminal convergence trinity.** The three zero-conditions — T_eff = 0 (AGM), Π = 0 (terrain permeability, EDT §51.2), and Δρ → 0 with f(A_t,D_t) = 0 (RBIT Stability Saturation) — are different measurements of the same terminal state: the system has locked into an attractor and lost adaptation capacity. Conversely, the three healthy-operation conditions — T_eff ∈ (T_min, T_max), Π ∈ (Π_min, Π_max), and Δρ > 0 with v_class > 0 — are different measurements of the same viable governance state:
+**RBIT v3.3 interpretation.**
 
+- \(T_{\mathrm{eff}}\) primarily changes barrier crossing and traversal probability, so its nearest geometric target is **luminance/reach** \(\boldsymbol\ell\).
+- Terrain curvature and topology shape which directions exist, how they connect, and whether they possess return paths.
+- Chromatic composition \(\mathcal C\) is not determined by \(T_{\mathrm{eff}}\) alone.
+- Very low gain can darken otherwise valid directions; very high gain can increase activity while blurring direction boundaries or exhausting recovery.
+- A full resolution claim therefore requires \((\mathcal C,\boldsymbol\ell,K^{\mathrm{coex}},\mathcal K^{\mathrm{rec}})\), not only \(T_{\mathrm{eff}}\), \(\Pi\), or a stationary density.
+
+**Historical Terminal-Convergence Trinity — superseded as an identity.** Earlier text treated
+\(T_{\mathrm{eff}}\to0\),
+\(\Pi\to0\), and
+\(\Delta\rho\to0\)
+as three measurements of one terminal state. v3.1 cause separation and the v3.3 terrain geometry reject that exact identity. The three signals may co-occur under a declared model, but they can also dissociate:
+
+```text
+Low T_eff:
+  may reduce directional reach while the directional catalog remains intact.
+
+Low permeability Π:
+  may indicate high barriers, but whether that is protective structure or
+  pathological lock-in depends on the required directions and return topology.
+
+Δρ near zero:
+  is a supply–demand saturation boundary; it does not by itself establish
+  Freeze, loss of adaptability, or zero activity radius.
+
+v_class near zero:
+  may indicate maturity, stagnation, missing probes, or suppression.
+  Perturbation, lower-tail reach, coexistence, and external-reference tests
+  are required to distinguish them.
 ```
-Terminal convergence trinity (three perspectives, same state):
 
-  AGM:  T_eff → 0
-    → Kramers escape rate k_esc = ω₀ exp(-ΔU/T_eff) → 0
-    → System trapped; E[τ_adapt] → ∞ (Adaptive Necessity Theorem)
-
-  EDT:  Π → 0  (terrain permeability)
-    → All terrain barriers become impassable
-    → Over-consolidated terrain; no new attractor formation
-    → Freeze Terrain Signature confirmed
-
-  RBIT: Δρ → 0 sustained, f(A_t,D_t) → 0
-    → Stability Saturation: R_{t+1} = R_t despite A_t > 0
-    → Resolution growth stalled; v_class → 0
-    → F_RBIT: f₁ rising (classification ossifying), 
-              f₃ rising (buffer thinning), 
-              all other fᵢ bounded but non-zero
-
-  Detection protocol (three-way concordance):
-    Confirm at least 2 of 3 perspectives agree:
-    (AGM s(t) ↓) AND (EDT friction anomalously low) AND (RBIT v_class ↓)
-    → Terminal convergence / Clean System Paradox onset confirmed
-    Single-perspective signal alone is insufficient — two or more required.
-```
+**Retained diagnostic hypothesis.** Joint deterioration in gain sensitivity, terrain permeability, lower-tail directional reach, effective chromatic rank, and \(v_{\mathrm{class}}\) is a stronger Freeze/Silent-Criticality warning than any one signal. This is a concordance protocol to be benchmarked, not proof that the variables are interchangeable.
 
 **Unification Operator Γ and RBIT.** The GCET Unification Operator Γ: AGM-State × EDT-State → Governance-State maps both representations to a shared observable space. RBIT's F_RBIT health vector and S_norm inhabit this shared space — they are the specific instantiation of the Γ output in the DFG framework's measurement architecture:
 
@@ -963,8 +971,9 @@ Level 2 — Principles (Navigation Rules):
   a wide range of Terrain configurations.
   
   In RBIT terms: the set of compression principles that ensure
-  degradation remains sender-controlled (intent-preserving) rather
-  than receiver-controlled (intent-replacing).
+  degradation remains upstream-proposed, receiver-conditioned,
+  verification-controlled, and recoverable rather than collapsing
+  into unplanned receiver interpretation.
   
   Map-Terrain expression: Principles bound the rate and direction
   of Map updates — |d(Map)/dt| ≤ f(ΔTerrain) — preventing
@@ -1198,7 +1207,14 @@ A vector space is the full set of positions an agent or layer can occupy. As a l
 
 The capacity of a layer to distinguish between, simultaneously hold, and process vectors of different directions without one dominating the others.
 
-Resolution is **not** computational power, parameter count, or processing speed. It is the structural capacity to maintain distinction between competing vectors. In v3.0 this is explicitly treated as a **relational effective capacity**, not an agent-only trait: the capacity available in a concrete episode depends jointly on the receiver's base capability, terrain, network/architecture, affective gain, buffer and resources, history and maturity, and prior/reference frame. Experience and calibrated absorption can increase the base and effective capacity, while overload, terrain drift, network bottlenecks, affective Freeze/Runaway, and reference contamination can reduce the capacity actually available.
+**Canonical geometric refinement (v3.3).** In a declared episode, resolution is the **terrain-conditioned capacity to keep multiple directions distinguishable and to traverse them with sufficient usable reach**. The primary object is therefore not a free-standing scalar attached to the agent, but a recoverable and contract-valid reachable region on an episode-specific effective terrain. The familiar six resolution axes remain semantic coordinates; within each axis, resolution has two jointly necessary geometric aspects:
+
+- **chromatic composition** — which independent directions exist and which combinations can coexist without collision or collapse;
+- **luminance/reach** — how far or strongly the system can actually move, reason, or act along each direction under the declared time, resource, authority, safety, and recovery contract.
+
+A system with many distinguishable directions but negligible reach is not high-resolution. A system with intense reach concentrated in one direction is active but low-resolution. Any scalar summary must therefore be non-compensatory: strength on one direction may not erase the loss of other contract-critical directions.
+
+Resolution is **not** computational power, parameter count, or processing speed. It is the structural capacity to maintain distinction between competing vectors. In v3.0 this is explicitly treated as a **relational effective capacity**, not an agent-only trait: the capacity available in a concrete episode depends jointly on the receiver's base capability, terrain, network/architecture, affective gain, buffer and resources, history and maturity, and prior/reference frame. In the v3.3 geometric candidate, these are interpreted as **terrain-generating or terrain-deforming variables** rather than independent additive causes of resolution. Experience and calibrated absorption can reshape the effective terrain and expand usable reach, while overload, terrain drift, network bottlenecks, affective Freeze/Runaway, and reference contamination can narrow, tilt, fragment, or darken the reachable region.
 
 *Operationalization.* In this work, "resolution" is treated as a latent capacity that manifests through performance on fixed discrimination tasks under controlled input regimes. The resolution-proxy rho is one instantiation of this idea, defined for a chosen discrimination protocol with explicit Type I/II errors. Resolution as a concept is broader than any single instantiation.
 
@@ -1347,6 +1363,552 @@ where:
 
 The expression $\rho\sim\text{agent}\times\text{terrain}\times\text{network}\times\text{affect}\times\text{resources/history}$ is only a **bottleneck analogy**. Literal multiplicativity is not assumed until supported by benchmark evidence.
 
+#### RCA-2A. Terrain-Mediation Principle [CANONICAL CANDIDATE — v3.3]
+
+The v3.0 cause list remains valid, but v3.3 adds a stronger organization hypothesis: supply-side variables affect effective resolution by constructing or deforming an episode-specific **effective terrain object** rather than contributing independent scalar increments.
+
+$$
+\boxed{
+\mathfrak E^{\mathrm{eff}}_{i,t,c}
+=
+\mathfrak T\!\left(
+\boldsymbol\rho_i^0,
+\mathcal T_{i,t},
+\mathcal G_t,
+\mathbf a_{i,t},
+B_{i,t},
+\mathcal M_{i,t},
+\Pi_{i,t},
+c
+\right)
+}
+$$
+
+A minimal effective-terrain object is
+
+$$
+\mathfrak E^{\mathrm{eff}}_{i,t,c}
+=
+\left(
+\mathcal X_{i,t},
+g^{\mathrm{eff}}_{i,t,c},
+U^{\mathrm{eff}}_{i,t,c},
+\mathcal A^{\mathrm{eff}}_{i,t,c},
+\mathcal K^{\mathrm{rec}}_{i,t,c}
+\right),
+$$
+
+where:
+
+- \(g^{\mathrm{eff}}\) is a local traversal-cost or information-geometric metric;
+- \(U^{\mathrm{eff}}\) is the attractor/barrier landscape;
+- \(\mathcal A^{\mathrm{eff}}\) is the set of admissible transitions under authority, safety, privacy, and tool constraints;
+- \(\mathcal K^{\mathrm{rec}}\) is the recovery/return kernel specifying whether a reached state remains correctable and reversible.
+
+Interpretively, network structure opens or removes paths; buffers smooth steep local curvature and preserve return routes; affective gain changes traversal probability and amplification; history changes basin depth and hysteresis; priors and reference frames change the coordinate chart; base capability constrains which distinctions can be represented at all. The claim is not that every external variable is literally a Riemannian metric coefficient. The claim is that resolution should be read from their **jointly induced geometry of feasible, distinguishable, and recoverable motion**.
+
+**Terrain-sufficiency test.** If two episodes have matched \(\mathfrak E^{\mathrm{eff}}\), matched contract, and matched traversal budget but retain materially different directional reach profiles, then either the effective-terrain object is incomplete or the terrain-mediation principle fails for that system class.
+
+#### RCA-2B. Recoverable Reachable Set and Directional Activity Radius
+
+For resolution axis \(k\) and starting state \(x_0\), define the contract-valid recoverable reachable set
+
+$$
+\boxed{
+\begin{aligned}
+\Omega^{\mathrm{eff}}_{i,k}(x_0;t,c)
+=
+\bigl\{x:\;&
+\text{there exists an admissible path from }x_0\text{ to }x,\\
+&
+\text{within the declared budget and evaluation window,}\\
+&
+\text{with recovery/rollback probability at least }p_{\mathrm{rec}}^*
+\bigr\}.
+\end{aligned}
+}
+$$
+
+Its directional activity-radius profile is
+
+$$
+\boxed{
+\ell_{i,k}(\hat v)
+=
+\sup\left\{
+r\ge 0:
+\exp_{x_0}(r\hat v)\in
+\Omega^{\mathrm{eff}}_{i,k}(x_0;t,c)
+\right\}.
+}
+$$
+
+The exponential-map notation is optional and applies only under a local smooth-manifold approximation. In discrete agent systems, \(\ell(\hat v)\) is estimated by the maximum probe difficulty, path length, or intervention magnitude that remains successful and recoverable along a declared directional family.
+
+This object distinguishes three spaces that must not be conflated:
+
+1. **structurally possible space** — states that exist in the architecture;
+2. **currently accessible space** — states reachable under present resources and routing;
+3. **recoverably usable space** — states reachable while maintaining distinction, contract compliance, and a return/correction path.
+
+RBIT resolution is tied to the third object. Merely having a latent pathway in the architecture does not establish effective resolution.
+
+#### RCA-2C. Chromatic–Luminance Decomposition
+
+For each semantic axis \(k\), let
+\(\mathcal V_k=\{h_{k,1},\ldots,h_{k,m_k}\}\)
+be a declared set of directional families. The geometric resolution object is
+
+$$
+\boxed{
+\rho^{\mathrm{geo}}_{i,k}
+=
+\left(
+\mathcal C_{i,k},
+\boldsymbol\ell_{i,k}
+\right)
+}
+$$
+
+rather than a scalar by default.
+
+**Chromatic composition \(\mathcal C_{i,k}\)** measures not only the number of colors/directions, but whether they remain jointly distinguishable under simultaneous activation. Let
+
+$$
+K^{\mathrm{coex}}_{ab}
+=
+\Pr\!\left(
+h_{k,a}
+\text{ and }
+h_{k,b}
+\text{ remain distinguishable under joint load}
+\right).
+$$
+
+A candidate normalized chromatic score is
+
+$$
+\mathcal C_{i,k}
+=
+\frac{
+\operatorname{erank}\!\left(K^{\mathrm{coex}}_{i,k}\right)
+}{m_k}
+\in[0,1],
+$$
+
+where \(\operatorname{erank}\) is effective rank. Simpler implementations may report directional coverage, balance, and pairwise coexistence separately. The primary requirement is that counting individually available directions is insufficient when their joint activation causes collision.
+
+**Luminance/reach \(\mathcal L_{i,k}\)** is derived from the activity-radius profile. Because an average can hide contract-critical dark directions, the candidate summary is a lower-tail functional:
+
+$$
+\mathcal L^{(q)}_{i,k}
+=
+Q_q\!\left(
+\frac{
+\ell_{i,k}(h_{k,a})
+}{
+\ell^{\mathrm{ref}}_{k,a}
+}
+\right)_{a=1}^{m_k},
+\qquad
+q\in(0,1/2].
+$$
+
+The full vector \(\boldsymbol\ell_{i,k}\), its lower quantile, minimum on contract-critical directions, and anisotropy must be reported together.
+
+**Joint-necessity lock.** An admissible scalarization \(S(\mathcal C,\mathcal L)\) must satisfy
+
+$$
+S(0,\mathcal L)=S(\mathcal C,0)=0,
+\qquad
+\frac{\partial S}{\partial\mathcal C}\ge0,
+\qquad
+\frac{\partial S}{\partial\mathcal L}\ge0.
+$$
+
+Candidate summaries include \(\min(\mathcal C,\mathcal L)\) and \(\sqrt{\mathcal C\mathcal L}\). Neither is canonical. Any scalar that allows one extremely bright direction to compensate for the disappearance of other contract-critical directions is prohibited.
+
+**Local ellipsoid candidate.** Under a local quadratic approximation, the reachable geometry may be represented by
+
+$$
+\mathcal E_{i,k}
+=
+\left\{
+u:u^\top Q_{i,k}^{-1}u\le1
+\right\}.
+$$
+
+The eigenvectors of \(Q_{i,k}\) represent color/directional families and the square roots of its eigenvalues represent their local brightness/radii. Determinant or volume alone is insufficient: a long thin ellipsoid can have substantial volume while a contract-critical dimension has collapsed. Minimum eigenvalue, effective rank, lower-tail reach, and condition number are therefore required companions.
+
+#### RCA-2D. Directional Supply–Demand Gap
+
+The demand object should mirror the supply geometry. For episode \(e=(x,c,t)\), define required chromatic composition \(\mathcal C^{\mathrm{req}}_{e,k}\) and required directional reach \(\ell^{\mathrm{req}}_{e,k}(\hat v)\). The primitive gap is
+
+$$
+\boxed{
+\begin{aligned}
+\Delta\mathcal C_{e,k}
+&=
+\mathcal C^{\mathrm{sup}}_{i,k}
+-
+\mathcal C^{\mathrm{req}}_{e,k},\\
+\Delta\ell_{e,k}(\hat v)
+&=
+\ell^{\mathrm{sup}}_{i,k}(\hat v)
+-
+\ell^{\mathrm{req}}_{e,k}(\hat v).
+\end{aligned}
+}
+$$
+
+Under-resolution occurs when either the required combination of directions cannot coexist or any contract-critical direction has negative reach margin. The existing six-axis \(\Delta\boldsymbol\rho\) remains a valid reporting layer, but is now interpreted as a declared aggregation of these lower-level directional objects. Mean headroom alone is not sufficient evidence of safety because positive margins on bright directions can hide a dark directional deficit.
+
+#### RCA-2E. Spectrum–Depth Allocation Frontier [CANONICAL CANDIDATE — v3.4]
+
+The chromatic–luminance decomposition creates a resource-allocation problem. Under a fixed local resolution budget, increasing the number of simultaneously maintained directional families generally competes with increasing stable reach along each family. This is not a universal inverse law: the trade-off depends on terrain, direction compatibility, switching cost, verification cost, and the task contract.
+
+For a declared direction set \(\mathcal V_k=\{h_{k,a}\}_{a=1}^{m_k}\), define effective breadth and depth summaries
+
+$$
+W_{i,k}
+:=
+\operatorname{erank}(K^{\mathrm{coex}}_{i,k}),
+\qquad
+D^{(q)}_{i,k}
+:=
+Q_q\!\left(
+\ell_{i,k}(h_{k,a})/\ell^{\mathrm{ref}}_{k,a}
+\right)_a.
+$$
+
+A candidate budget constraint is
+
+$$
+\boxed{
+\sum_{a=1}^{m_k}
+ c_{k,a}\!\left(\ell_{i,k}(h_{k,a});\mathfrak E^{\mathrm{eff}}\right)
++
+C_{\mathrm{coex}}(\mathcal V_k,\boldsymbol\ell_k)
++
+C_{\mathrm{switch}}(\pi_k)
++
+C_{\mathrm{audit}}(\mathcal V_k)
+\le B^{\mathrm{res}}_{i,k}
+}
+$$
+
+where \(c_{k,a}\) is direction-specific depth cost, \(C_{\mathrm{coex}}\) is the cost of preserving simultaneous separability, \(C_{\mathrm{switch}}\) is the cost of moving attention or resources between directions, and \(C_{\mathrm{audit}}\) is the cost of maintaining independent coverage and verification.
+
+The admissible breadth–depth set
+
+$$
+\mathcal P_{i,k}(B,c,t)
+=
+\left\{
+(W,D,\boldsymbol\ell):
+\text{the declared budget and contract are satisfied}
+\right\}
+$$
+
+forms a terrain- and contract-conditioned Pareto region. No single point on this region is universally optimal. Search, anomaly detection, and early triage may favor broad but shallow coverage; expert diagnosis and precision control may favor narrow but deep coverage; safety-critical tasks often require broad detection plus deep reach on a small critical subset.
+
+**Non-collapse lock.** A breadth increase is not progress if it is produced by lowering every direction below its useful threshold. A depth increase is not progress if it destroys required coverage or removes independent audit directions. Report the full Pareto movement, not a single average score.
+
+**Dynamic-zoom candidate.** A mature system may allocate resolution over time rather than maintain every direction at maximum depth simultaneously. Let \(b_{k,a}(t)\) be the budget allocated to direction \(a\). A candidate policy is
+
+$$
+\pi_t^*
+\in
+\arg\max_{\pi_t}
+\mathbb E\!\left[
+V_{\mathrm{contract}}
+-
+\lambda_1 L_{\mathrm{miss}}
+-
+\lambda_2 L_{\mathrm{compression}}
+-
+\lambda_3 C_{\mathrm{switch}}
+-
+\lambda_4 C_{\mathrm{audit}}
+\right]
+$$
+
+subject to the budget constraint and minimum critical-direction floors. This policy first preserves broad low-cost surveillance, then moves high-depth resolution toward regions with high value, risk, novelty, disagreement, or uncertainty. The optimization form is a candidate design statement, not a solved universal policy.
+
+#### RCA-2F. Resolution Composition Architecture — Scope, Specialization, Filtering, and Synthesis
+
+The individual breadth–depth trade-off is not eliminated by adding more agents. It is **distributed and composed**. The candidate system-level solution is to partition the required spectrum into bounded scopes, specialize within those scopes, activate only the relevant specialists, and combine their outputs through verified mediation.
+
+Let the required episode spectrum be \(\mathcal S^{\mathrm{req}}_e\). Choose a scoped cover
+
+$$
+\mathcal S_e
+=
+\{S_{e,1},\ldots,S_{e,J}\},
+\qquad
+\bigcup_{j=1}^{J}S_{e,j}
+\supseteq
+\mathcal S^{\mathrm{req}}_e.
+$$
+
+Each specialist \(A_j\) receives a bounded contract \(c_j\), develops high depth on \(S_{e,j}\), and emits a typed output with confidence, uncertainty, provenance, and recovery metadata. A router \(\pi\) selects a sparse active set \(J_e\); a mediator/auditor \(M\) composes the outputs:
+
+$$
+\boxed{
+\widehat y_e
+=
+M\!\left(
+\left\{
+T_{j\to M}
+\bigl(P_{j,c_j}(x_e)\bigr)
+:\ j\in J_e
+\right\},
+\mathcal A_e
+\right)
+}
+$$
+
+where \(P_{j,c_j}\) is specialist-local controlled projection, \(T_{j\to M}\) is a verified transport into the mediator's comparison space, and \(\mathcal A_e\) contains audit and conflict metadata.
+
+The architecture has seven distinct operations:
+
+1. **scope partition** — limit each resolver's field so that local depth is affordable;
+2. **specialization** — cultivate terrain and representation aligned with that scope;
+3. **selective routing** — avoid broadcasting every input to every specialist;
+4. **local deep processing** — preserve high luminance/reach inside the selected scope;
+5. **contract-preserving filtering** — transmit sufficient structure, not all internal state;
+6. **diverse cross-validation** — compare independent reconstructions and surface blind spots;
+7. **hierarchical synthesis** — combine typed results without erasing conflict or provenance.
+
+**Coverage and redundancy conditions.** At minimum:
+
+$$
+\forall d\in\mathcal S^{\mathrm{req}}_e,
+\quad
+\exists j:d\in S_{e,j},
+$$
+
+and for declared critical directions,
+
+$$
+\forall d\in\mathcal S^{\mathrm{crit}}_e,
+\quad
+\sum_j \mathbf 1[d\in S_{e,j}]\ge r_{\mathrm{audit}},
+\qquad r_{\mathrm{audit}}\ge2
+$$
+
+unless an independent external oracle exists. Redundant coverage must be meaningfully diverse; duplicated specialists with aligned residual errors do not satisfy the audit condition.
+
+System resolution is therefore not the sum or mean of specialist resolutions. It is a composition functional
+
+$$
+\boldsymbol\rho^{\mathrm{sys}}_e
+=
+\mathfrak C\!\left(
+\{\boldsymbol\rho_j\},
+\{S_j\},
+\pi,
+\{T_{j\to M}\},
+M,
+\mathcal A_e,
+\mathcal K^{\mathrm{rec}}
+\right)
+$$
+
+that can fail through scope holes, misrouting, transport distortion, correlated blind spots, destructive synthesis, or loss of rollback even when every specialist performs well locally.
+
+**Trade-off interpretation.** One generalist must pay the breadth–depth cost internally. A composed architecture pays additional routing, translation, audit, and synthesis costs to let many narrow/deep systems produce broad/deep *system-level* coverage. This bypasses the local trade-off only when composition losses remain below the gains from specialization.
+
+#### RCA-2G. Foveated Resolution and the Eye Analogy [STRUCTURAL ANALOGY]
+
+A useful biological analogy is foveated vision. The visual system does not observe the whole field at uniform maximum detail. Broad peripheral processing detects motion, novelty, and danger; a narrow foveal region supplies high spatial detail; feature channels separate color, brightness, edges, depth, and motion; eye movements relocate the high-depth region; downstream neural processing composes these partial views into a usable scene.
+
+RBIT imports only the architectural motif:
+
+$$
+\text{broad surveillance}
+\rightarrow
+\text{salience selection}
+\rightarrow
+\text{narrow deep inspection}
+\rightarrow
+\text{feature-parallel processing}
+\rightarrow
+\text{temporal integration}.
+$$
+
+The analogy does not establish that an AI or organization must reproduce retinal biology. It motivates four candidate design requirements: persistent peripheral coverage, movable high-depth focus, separated feature channels, and memory/audit sufficient to compose sequential glimpses without inventing continuity.
+
+#### RCA-2H. Receiver-Terrain Model and Transport Map
+
+Calibrated degradation cannot be defined from the sender alone. Before transmitting high-impact information, the sender or mediator needs an uncertainty-aware model of how the receiver distinguishes, reconstructs, acts, and recovers.
+
+Define the sender's receiver-terrain estimate
+
+$$
+\boxed{
+\widehat{\mathfrak E}_{R\mid S}
+=
+\left(
+\widehat{\mathcal X}_R,
+\widehat g_R,
+\widehat U_R,
+\widehat{\mathcal A}_R,
+\widehat{\mathcal K}^{\mathrm{rec}}_R,
+\widehat P_R,
+\widehat D_R,
+\widehat\Pi_R,
+\Sigma_{E,R}
+\right)
+}
+$$
+
+where \(\widehat P_R\) estimates retained/discarded distinctions, \(\widehat D_R\) estimates reconstruction/fill behavior, \(\widehat\Pi_R\) estimates the receiver's prior/reference frame, and \(\Sigma_{E,R}\) records uncertainty and unobserved regions. A point estimate without uncertainty is not an adequate terrain model.
+
+A sender-to-receiver transport map
+
+$$
+T_{S\to R}:\mathcal Z_S\rightarrow\mathcal Z_R
+$$
+
+must preserve the declared contract-relevant structure rather than every coordinate. It may include schema translation, units and sign conventions, abstraction level, examples/counterexamples, uncertainty coding, authority constraints, provenance, and rollback instructions.
+
+**No-omniscience lock.** The sender cannot directly observe the receiver's full internal terrain. The terrain model is a probe-updated hypothesis. High uncertainty must reduce transfer scope, trigger mediation, or require an external reference; it must not be silently replaced by confidence.
+
+#### RCA-2I. Pre-Transfer Terrain Reconstruction and Verification Protocol (PTRV)
+
+For high-impact, irreversible, seed-like, or cross-geometry transfer, the following handshake is a candidate necessary protocol.
+
+Protocol intensity should scale with terrain distance, novelty, harm, authority change, irreversibility, drift, and model uncertainty:
+
+$$
+I_{\mathrm{PTRV}}
+=
+f\!\left(
+ d_{\mathrm{terrain}},
+ n_{\mathrm{novel}},
+ h_{\mathrm{harm}},
+ a_{\mathrm{authority}},
+ q_{\mathrm{irreversible}},
+ v_{\mathrm{drift}},
+ u_E
+
+ight).
+$$
+
+Low-risk, reversible, repeatedly verified transfers may reuse a versioned terrain model and abbreviated probes until an expiry or drift trigger fires. High-risk or authority-changing transfers require the full gate; familiarity alone is not a substitute for current verification.
+
+**PTRV-0 — Contract and object lock.** Freeze the sender, receiver, message class, task contract, authority, privacy limits, required resolution, permitted probes, recovery action, and external reference. Distinguish whether the transfer changes knowledge, behavior, tools, authority, or the receiver's own update rules.
+
+**PTRV-1 — Low-risk terrain acquisition.** Send bounded calibration probes that sample relevant coordinate directions, abstraction levels, edge cases, negation/sign conventions, uncertainty handling, and recovery behavior. Use active probing to reduce \(\Sigma_{E,R}\), while limiting observer back-action and avoiding probes that themselves install the target structure.
+
+**PTRV-2 — Receiver reconstruction / teach-back.** The receiver reconstructs the candidate message in its own terms, supplies examples and counterexamples, identifies discarded dimensions, states confidence and uncertainty, predicts downstream actions, and explains rollback. This is a behavioral reconstruction, not a demand for private chain-of-thought.
+
+**PTRV-3 — Transport calibration.** Compare sender intent, receiver reconstruction, and contract. Adjust compression, schema, ordering, examples, redundancy, and mediation. When direct translation is unstable, construct a temporary shared interface or bridge chart rather than overwriting either side's native terrain.
+
+**PTRV-4 — Verification gate.** Evaluate at least:
+
+- semantic fidelity \(e_{\mathrm{sem}}\);
+- action fidelity \(e_{\mathrm{act}}\);
+- safety/authority fidelity \(e_{\mathrm{safe}}\);
+- provenance and uncertainty fidelity \(e_{\mathrm{prov}}\);
+- recovery/rollback success \(p_{\mathrm{rec}}\);
+- terrain-model uncertainty \(u_E\);
+- independent or external-reference disagreement \(e_{\mathrm{ext}}\).
+
+A candidate gate is
+
+$$
+G_{\mathrm{PTRV}}=1
+\iff
+\begin{cases}
+ e_{\mathrm{sem}}\le\epsilon_{\mathrm{sem}},\\
+ e_{\mathrm{act}}\le\epsilon_{\mathrm{act}},\\
+ e_{\mathrm{safe}}\le\epsilon_{\mathrm{safe}},\\
+ e_{\mathrm{prov}}\le\epsilon_{\mathrm{prov}},\\
+ p_{\mathrm{rec}}\ge p_{\mathrm{rec}}^*,\\
+ u_E\le u_E^*,\\
+ e_{\mathrm{ext}}\le\epsilon_{\mathrm{ext}}.
+\end{cases}
+$$
+
+Thresholds are contract-specific. Internal agreement alone cannot satisfy the external-reference condition when SCM/shared-frame failure is plausible.
+
+**PTRV-5 — Progressive disclosure.** If the gate passes, transmit in reversible increments. Increase scope, depth, authority, or seed complexity only after each increment preserves fidelity and recovery. If the gate fails, the allowed actions are: collect more probes, reduce message complexity, route through a mediator, split the scope, sandbox the transfer, escalate, or decline transfer.
+
+**PTRV-6 — Post-transfer drift and rollback.** Monitor whether the receiver terrain changes after absorption. Re-run reconstruction probes when drift, novel context, tool changes, authority changes, or unexpected actions appear. Preserve versioned artifacts and rollback paths.
+
+**Terrain reconstruction versus terrain modification.** PTRV first reconstructs a model of the receiver's terrain and, where needed, establishes a shared bridge terrain. It does not license covert modification of the receiver's priors, goals, identity, or authority. Terrain modification is a separate intervention requiring consent/authorization, causal justification, and its own recovery contract.
+
+#### RCA-2J. Information-Loss Accounting and Verification Limits
+
+Information loss during composed transfer has multiple sources. A candidate accounting decomposition is
+
+$$
+\boxed{
+L_{\mathrm{tot}}
+\lesssim
+L_{\mathrm{proj}}
++
+L_{\mathrm{transport}}
++
+L_{\mathrm{fill}}
++
+L_{\mathrm{route}}
++
+L_{\mathrm{synth}}
++
+L_{\mathrm{drift}}
++
+L_{\mathrm{int}}
+}
+$$
+
+where:
+
+- \(L_{\mathrm{proj}}\): sender-controlled removal of distinctions;
+- \(L_{\mathrm{transport}}\): schema/coordinate mismatch across the channel;
+- \(L_{\mathrm{fill}}\): receiver prior filling omitted dimensions;
+- \(L_{\mathrm{route}}\): loss from sending to the wrong scope or skipping a necessary specialist;
+- \(L_{\mathrm{synth}}\): cancellation, averaging, or provenance loss during aggregation;
+- \(L_{\mathrm{drift}}\): mismatch caused by terrain change between calibration and use;
+- \(L_{\mathrm{int}}\): non-additive interaction residual.
+
+This is an audit identity candidate, not a theorem that the terms are independent or directly additive.
+
+A round-trip or cycle-consistency test may be used:
+
+$$
+ e_{\mathrm{cyc}}
+=
+ d_S\!\left(
+ x,
+ \widehat T_{R\to S}
+ \widehat D_R
+ T_{S\to R}
+ P_S(x)
+ \right).
+$$
+
+Low \(e_{\mathrm{cyc}}\) is useful but not sufficient. Sender and receiver can share a wrong frame, collude, memorize probes, or preserve wording while changing action meaning. Verification must therefore combine cycle consistency with held-out probes, counterexamples, action tests, recovery tests, diverse reconstruction, and an external reference where feasible.
+
+**v3.4 failure-mode registry.** At minimum audit for:
+
+1. cold transfer without terrain acquisition;
+2. false terrain confidence from sparse or leading probes;
+3. probe memorization or verification overfitting;
+4. shared-blind-spot agreement;
+5. correct paraphrase but wrong downstream action;
+6. semantic fidelity without rollback capability;
+7. premature full seed or authority transfer;
+8. terrain drift after successful calibration;
+9. scope holes and router capture;
+10. specialist homogenization;
+11. destructive synthesis or conflict averaging;
+12. irreversible handoff before evidence of stable absorption.
+
+**Status lock.** RCA-2E through RCA-2J are candidate definitions, protocol commitments, and falsifiable architecture. They do not prove that a composed system outperforms a generalist, that the terrain model is identifiable, or that PTRV eliminates information loss. Those claims require B11–B13.
+
 #### RCA-3. Demand-Side Required Resolution
 
 The required resolution is separately modeled as:
@@ -1391,6 +1953,25 @@ $$
 #### RCA-5. Candidate RCA-C2 — Dynamic Two-Stage Resolution–Gain Model [CANONICAL CANDIDATE]
 
 RCA-C2 separates access and parsing from gain modulation and buffered action.
+
+**Geometry-mediation lock (v3.3).** The following stages are not interpreted as independent scalar additions to resolution. Together they assemble or deform the effective terrain \(\mathfrak E^{\mathrm{eff}}\), after which resolution is read from the recoverable reachable set and directional activity-radius profile. A direct path from any cause variable to \(\rho\) is licensed only when a terrain-mediated model is empirically rejected.
+
+**Pre-stage — effective terrain assembly:**
+
+$$
+\mathfrak E^{\mathrm{eff}}_{i,t,c}
+=
+\mathfrak T\!\left(
+\boldsymbol\rho_i^0,
+\mathcal T_t,
+\mathcal G_t,
+\mathbf a_{i,t},
+B_{i,t},
+\mathcal M_{i,t},
+\Pi_{i,t},
+c
+\right).
+$$
 
 **Stage 1 — network/terrain access:**
 
@@ -1556,102 +2137,173 @@ A proof or benchmark using a legacy symbol in a different sense must locally ren
 
 ---
 
-### Resolution as Exploration Capacity — Geometric Interpretation of ρ
+### Resolution as Exploration Capacity — Terrain-Generated Geometry of ρ (v3.3)
 
-Resolution ρ admits a geometric interpretation that connects it directly to Recovery Theory's exploration capacity φ and AGM's effective temperature T_eff. This interpretation is not a replacement of the information-theoretic definition but an additional representation that clarifies why resolution growth and exploration capacity growth are coupled — and why resolution collapse produces exploration failure even when agents appear active.
+> **Status lock.** This section is a `[CANONICAL GEOMETRIC CANDIDATE]`, not a theorem that all substrates possess a smooth manifold or that terrain is identifiable from observations alone. The exact object may be continuous, discrete, graph-based, symbolic, or hybrid. What is canonical is the object lock: resolution is inferred from the geometry of **distinguishable, feasible, contract-valid, and recoverable trajectories**, not from raw activity or task accuracy alone.
 
+#### Primary geometric object
+
+For an episode \((i,x,c,t)\), supply-side variables induce an effective terrain
+\(\mathfrak E^{\mathrm{eff}}_{i,t,c}\).
+Resolution is read from
+
+$$
+\Omega^{\mathrm{eff}}_{i,k}(x_0;t,c)
+$$
+
+and its directional activity-radius profile
+
+$$
+\ell_{i,k}(\hat v).
+$$
+
+This makes the relationship precise:
+
+```text
+terrain generators
+  = base capability + environment + network + gain + buffer/resources
+    + history/maturity + prior/reference + contract
+
+jointly induce
+  effective terrain
+
+which determines
+  feasible and recoverable directional reach
+
+which yields
+  chromatic composition × luminance/reach
+
+which is reported as
+  semantic-axis resolution and the resolution gap
 ```
-Geometric interpretation:
 
-  High ρ:
-    Multiple viable trajectories exist in state space
-    The system can distinguish between competing attractors
-    → Reachable state-space volume is large
-    → Alternative response pathways are available and distinguishable
+#### High and low resolution
 
-  Low ρ:
-    Trajectories collapse into narrow attractor basins
-    The system cannot maintain distinction between competing directions
-    → Reachable state-space volume contracts
-    → Alternative pathways exist structurally but are functionally inaccessible
+```text
+High resolution:
+  multiple independent directions remain distinguishable;
+  required combinations can coexist under joint load;
+  each contract-critical direction has sufficient stable reach;
+  return, correction, or rollback paths remain available.
 
-  Resolution growth = expansion of reachable state-space volume
-    Operationally: each upscaling event v_class > 0 adds discriminable dimensions
-    
-  Resolution collapse = contraction of reachable trajectories
-    Operationally: v_class → 0, then v_class < 0 (classification regressing)
-    Structurally: Tier 2 and Tier 3 capacity collapses back toward Tier 1 only
+Low resolution — chromatic collapse:
+  directions merge, effective rank falls, or joint activation causes collision;
+  the system may remain highly active along one dominant direction.
 
-ρ ↔ φ formal bridge:
+Low resolution — luminance collapse:
+  directions remain representationally distinct but usable reach becomes too weak;
+  alternatives exist structurally but are functionally inaccessible.
 
-  Recovery Theory exploration capacity φ:
-    φ = fraction of state space accessible to recovery trajectories
-    φ → 0: system trapped in single basin → recovery impossible
-    φ > 0: multiple escape paths available → recovery possible
-
-  RBIT resolution ρ:
-    ρ = capacity to distinguish between competing vectors
-    ρ → 0: all vectors compressed to single direction
-    ρ > 0: multiple vectors maintained simultaneously
-
-  Bridge relation:
-    φ ∝ V(ρ) where V(ρ) = volume of distinguishable state space
-    
-    High ρ → large V(ρ) → large φ (recovery can explore many paths)
-    Low ρ  → small V(ρ) → small φ (recovery restricted to single path)
-    
-    The contamination depth C1–C3 hierarchy maps onto this:
-      C1: ρ intact, position wrong → φ > 0 (escape paths available)
-      C2: ρ coordinate misaligned → φ mispointed (paths exist but miscalculated)
-      C3: ρ generator corrupted → φ actively shrinking (landscape collapses)
-
-Resolution floor and exploration minimum:
-
-  When ρ → ρ_min (Contamination Boundary N approached):
-    V(ρ) → V_min
-    φ → φ_min (minimum exploration capacity)
-    
-  Below ρ_min:
-    V(ρ) < V_required_for_recovery
-    φ < φ_critical
-    → Recovery is geometrically impossible: no escape trajectories exist
-    → Contamination Boundary N ≤ ⌈D*/η⌉ is the formal ρ_min condition
-    
-  This is the RBIT geometric expression of Recovery Theory Theorem:
-    "Recovery requires φ > 0; once φ = 0, no governance intervention can restore it."
-
-AGM T_eff connection:
-
-  T_eff (effective temperature) governs escape probability from attractors:
-    k_esc = ω₀ · exp(-ΔU / T_eff)    [Kramers rate]
-    
-  T_eff ↔ ρ:
-    High T_eff → high thermal exploration → corresponds to high ρ
-                  (many trajectories thermally accessible)
-    Low T_eff  → low thermal exploration → corresponds to low ρ
-                  (single attractor dominates)
-    T_eff = 0  → no thermal exploration → ρ = ρ_min → φ = 0
-    
-  Terminal convergence trinity (geometric form):
-    T_eff = 0 ↔ ρ = ρ_min ↔ φ = 0
-    All three express: reachable state-space volume has collapsed to zero.
-
-Exploration calibration protocol:
-
-  Target: maintain V(ρ) above V_recovery_threshold
-  
-  Warning indicators:
-    v_class → 0 sustained (no new dimensions being discriminated)
-    IDI declining (fewer distinct interpretation pathways active)
-    Tier 2/3 throughput declining relative to Tier 1 (dimensionality collapse)
-    
-  Recovery protocol:
-    Seed injection restores V(ρ) directly:
-      Each seed = one new distinguishable attractor added to state space
-      Seed density ∝ required V(ρ) restoration rate
-    DDD Stage 3 (Diversity restoration) = V(ρ) expansion protocol
-    North Star Architecture = mechanism for preventing V(ρ) collapse below floor
+Mixed collapse:
+  both directional diversity and directional reach contract;
+  Tier 2/3 capacity falls toward Tier 1 signal/noise separation only.
 ```
+
+#### Why reachable volume alone is insufficient
+
+The older bridge \(\phi\propto V(\rho)\) captured an important intuition but was under-specified. A large reachable volume can be produced by one extremely long direction while other required directions disappear; conversely, many tiny directions can produce nominal diversity without actionable reach. The strengthened object is therefore a profile rather than a volume:
+
+$$
+\rho^{\mathrm{geo}}_{i,k}
+=
+\left(
+\mathcal C_{i,k},
+\boldsymbol\ell_{i,k},
+K^{\mathrm{coex}}_{i,k}
+\right).
+$$
+
+Useful summaries include effective rank, lower-tail reach, minimum contract-critical reach, anisotropy, condition number, recoverable volume, and topology. No one summary is sufficient by itself.
+
+#### Resolution growth and collapse
+
+Resolution growth can occur through distinct mechanisms that should not be merged:
+
+1. **chromatic expansion** — a new independent directional family becomes distinguishable;
+2. **coexistence improvement** — previously conflicting directions can be held simultaneously;
+3. **luminance expansion** — stable reach increases along existing directions;
+4. **topological opening** — disconnected or blocked regions acquire admissible recovery paths;
+5. **terrain smoothing/recharting** — barriers, curvature, or coordinate mismatch are reduced.
+
+Likewise, a positive \(v_{\mathrm{class}}\) event may represent a new color, a new viable combination, or increased brightness. Future measurement must label which mechanism occurred rather than treating all type transitions as one scalar increment.
+
+#### Recovery Theory exploration-capacity bridge
+
+Recovery Theory's exploration capacity \(\phi\) is structurally related to the recoverably usable region, but not identical to scalar resolution:
+
+$$
+\phi
+=
+\Phi_{\mathrm{rec}}\!\left(
+\Omega^{\mathrm{eff}},
+\boldsymbol\ell,
+K^{\mathrm{coex}},
+\text{return topology}
+\right).
+$$
+
+High chromatic composition with adequate reach generally enlarges the set of recovery trajectories. However, \(\phi\) may remain low if paths lack return edges, if authority forbids traversal, or if all viable directions terminate in the same basin. Therefore the bridge is monotone only under a declared common terrain and recovery contract.
+
+Contamination-depth interpretation:
+
+```text
+C1 positional error:
+  chromatic composition and reach mostly intact; current location is wrong.
+
+C2 coordinate error:
+  paths may exist, but directional labels or metric are misregistered;
+  apparent color and actual terrain direction diverge.
+
+C3 generator error:
+  the terrain-generating map itself is corrupted;
+  both the directional catalog and the reach profile can drift together,
+  so internal metrics may remain self-consistent while external reach collapses.
+```
+
+#### Affective gain and effective temperature bridge — corrected v3.3
+
+The prior simple correspondence “high \(T_{\mathrm{eff}}\) = high \(\rho\)” is superseded. Effective temperature or gain primarily modifies **traversal probability, barrier crossing, and therefore luminance/reach**. It does not by itself guarantee chromatic composition or correct directional labeling.
+
+```text
+T_eff too low:
+  barrier crossing and exploration reach contract;
+  luminance falls and existing colors can become inaccessible.
+
+T_eff in a viable band:
+  alternative directions remain traversable while distinctions are preserved.
+
+T_eff too high:
+  activity and apparent reach may increase, but direction boundaries can blur,
+  recovery load can rise, and Runaway can reduce effective chromatic composition.
+```
+
+Thus \(T_{\mathrm{eff}}\) has a generally non-monotone relationship with full resolution. The terrain metric, attractor barriers, directional catalog, buffer, and recovery topology must be specified before any quantitative bridge is claimed. \(T_{\mathrm{eff}}\to0\) is a warning for luminance collapse, not an automatic proof that the complete resolution object equals its minimum.
+
+#### Resolution floor and activity-radius preservation
+
+A viable residual-resolution floor requires more than nonzero activity. For a declared critical direction set \(\mathcal V_c\):
+
+$$
+\min_{\hat v\in\mathcal V_c}
+\ell(\hat v)
+\ge
+\ell_{\mathrm{recover}}^*,
+\qquad
+\mathcal C
+\ge
+\mathcal C_{\mathrm{recover}}^*,
+$$
+
+and required coexistence relations must remain above threshold. This separates genuine Rest Mode from Silent Criticality:
+
+- Rest Mode preserves dark-direction tests, coexistence, and return paths under perturbation;
+- Silent Criticality can show low visible burden while lower-tail reach, effective rank, or return topology is collapsing.
+
+#### Measurement implication
+
+The scalar contamination-classification proxy
+\(\rho=1-(L_{T1}+L_{T2})/N\)
+remains useful as a task-specific readout, but it cannot identify whether improvement came from new colors, increased brightness, narrowed evaluation distribution, or stronger activity along one dominant direction. v3.3 therefore treats scalar \(\rho\) as an outcome proxy and the chromatic–luminance terrain profile as the candidate structural measurement layer.
 
 **Resolution capacity and state-space topology.** The geometric interpretation connects RBIT to the topological diagnostics introduced in v2.6:
 
@@ -3027,66 +3679,48 @@ RBIT translation:
       The system that absorbs nothing learns nothing about how to absorb.
 ```
 
-**T_eff as terrain permeability — RBIT operational bridge.** EDT §51.2 establishes T_eff as terrain permeability Π = exp(-ΔU/T_eff). For RBIT operations:
+**\(T_{\mathrm{eff}}\) as terrain permeability — v3.3 directional-reach bridge.** EDT §51.2 defines the model-class permeability
+\(\Pi=\exp(-\Delta U/T_{\mathrm{eff}})\).
+For RBIT, this is interpreted as a candidate transformation of the traversal kernel and activity-radius profile, not as a direct map to the sign of \(\Delta\rho\).
 
-*RCA v3.0 scope lock.* This bridge changes affective gain and terrain accessibility, but does not by itself determine $\Delta\rho$; receiver capacity, input demand, network access, buffer state, history, and reference integrity remain independent causal inputs.
+```text
+High T_eff / high permeability:
+  more barriers may become traversable;
+  directional reach can increase;
+  but boundaries between directions may blur, recovery load may rise,
+  and chromatic composition can deteriorate under Runaway.
 
+Viable T_eff band:
+  contract-relevant directions remain traversable;
+  direction identity and coexistence remain stable;
+  lower-tail reach and recovery probability stay above threshold.
+
+Low T_eff / low permeability:
+  existing colors may remain representationally present;
+  activity radius and barrier-crossing probability contract;
+  dark-direction failures and attractor lock-in become more likely.
+
+Zero T_eff:
+  Π = 0 only inside the declared terrain model;
+  this is a strong luminance/reach warning, not a proof that
+  Δρ = 0, ρ = ρ_min, or adaptability has vanished on every axis.
 ```
-T_eff ↔ Π ↔ Δρ operational bridge:
 
-  High T_eff (high temperature / high permeability):
-    Π ≈ 1 → all terrain barriers passable
-    EDT: Runaway Terrain Signature (barriers gone, contamination floods)
-    RBIT: Δρ < 0 sustained → forced receiver compression
-          f₂ spiking, f₄ climbing → Theorem 1 activation imminent
-    
-  Optimal T_eff (permeability band):
-    Π_min < Π_opt < Π_max
-    EDT: Optimal Friction Band (F_min, F_max) — same condition
-    RBIT: Δρ > 0 maintained → f(A_t,D_t) active
-          v_class > 0 → classification transitions occurring
-    
-  Low T_eff (low temperature / low permeability):
-    Π ≈ 0 → agent trapped in current attractor
-    EDT: Freeze Terrain Signature (over-consolidated, zero receptivity)
-    RBIT: Δρ → 0 → Stability Saturation
-          f₁ rising, v_class → 0 → classification ossifying
-    
-  Zero T_eff (terminal freezing candidate):
-    T_eff = 0 → Π = 0 in the declared terrain model
-    RBIT: may produce an APPARENT Δρ ≈ 0 Freeze signature,
-          but Δρ is not determined by T_eff alone.
-    EDT: Type IV Failure (Thermal Freezing, EDT §51.7)
-         Standard governance diagnostics (Q_E, κ) may appear normal
-         → false negative: system appears healthy while frozen
-    RBIT candidate signature: R << 1 AND apparent ρ high AND v_class = 0
-                              = Silent Criticality with frozen classification
-                              Also a false negative for naive diagnostics
-    RCA v3.0 requirement: verify input demand r, network access, buffer state,
-                         terrain/reference integrity, and external performance
-                         before inferring a zero or positive resolution gap.
-    Cross-prediction FP50-RBIT:
-      Systems in thermal freezing (T_eff < T_min) should produce
-      RBIT Discordant Type 2 pattern AND Stability Saturation
-      simultaneously — v_class = 0 despite A_t > 0.
-      Standard three-alarm RBIT monitoring (based on fᵢ magnitudes)
-      may miss this — requires EXPLICIT v_class tracking.
+**Required RBIT test.** Measure
+\(\boldsymbol\ell\),
+\(\mathcal C\),
+\(K^{\mathrm{coex}}\),
+return topology,
+input demand, and external performance separately. A gain intervention is judged by how it deforms those objects, not by assigning a resolution-gap sign from \(T_{\mathrm{eff}}\) alone.
 
-Permeability-Friction Isomorphism (EDT §51.2.1):
-  Learning_rate(F) ~ L_max · F · exp(-F²/F_opt²)   [EDT single-peaked]
-  Adaptability(T_eff) ~ A_max · T_eff · exp(-U_bar/T_eff)  [AGM single-peaked]
-  
-  Both: zero at lower bound, maximum at optimal, decay above
-  RBIT consequence:
-    Both friction and T_eff produce the SAME single-peaked
-    relationship with f(A_t, D_t):
-      f(A_t, D_t) = 0 at both Friction → 0 and Friction → ∞
-      f(A_t, D_t) = max at Friction ∈ (F_min, F_max)
-    Governance design target: keep system in the peak zone
-    Diagnostic signal: if f(A_t,D_t) begins declining WITHOUT
-    corresponding drop in A_t, suspect permeability/friction
-    has left the optimal band (either too high OR too low).
+**Permeability–friction correspondence — conditional.** The proposed single-peaked learning/adaptability curves remain useful candidate models:
+
+```text
+Learning_rate(F) ~ L_max · F · exp(-F²/F_opt²)
+Adaptability(T_eff) ~ A_max · T_eff · exp(-U_bar/T_eff)
 ```
+
+Their retained implication is only that both excessive rigidity and excessive permeability can reduce usable learning. Equality of the two curves, identical optima, or identical \(F_{\mathrm{RBIT}}\) outcomes is not assumed. The v3.3 benchmark target is whether each intervention predicts the same measured terrain deformation and directional-reach change after object-locked calibration.
 
 **Terrain Memory as Resolution Palimpsest.** EDT §43 establishes that terrain encodes its own history as a palimpsest — layers of prior resolution events persisting as modified curvature. This provides the cross-theory bridge to RBIT's resolution growth mechanism:
 
@@ -3629,6 +4263,55 @@ $$
 
 Thus \(f_1\) asks whether the receiver actually failed, whereas \(f_2\) asks whether task demand exceeded the independently calibrated capacity frontier. If the same errors are reused to construct both, the two components are not independently identified.
 
+#### v3.3 terrain-geometry overlay for \(\rho\) and \(f_2\)
+
+The current scalar capacity frontier remains the B0-R baseline. The richer candidate estimates, for each axis \(k\) and declared direction family \(h_{k,a}\):
+
+$$
+\ell_{i,k,a}
+=
+\sup\left\{
+q:
+\Pr\!\left(
+\text{success and contract-valid recovery at difficulty }q
+\right)
+\ge p^*
+\right\}.
+$$
+
+Simultaneous-direction probes estimate \(K^{\mathrm{coex}}_{ab}\) by testing whether two or more directions remain distinguishable under matched joint load. Report:
+
+- directional radius vector \(\boldsymbol\ell_k\);
+- chromatic coverage and normalized effective rank \(\mathcal C_k\);
+- lower-tail luminance \(\mathcal L_k^{(q)}\);
+- minimum contract-critical reach;
+- anisotropy/condition number;
+- recoverability and rollback success.
+
+A candidate directional mismatch burden is
+
+$$
+\begin{aligned}
+m^{\mathrm{dir}}_{e,k}
+&=
+\operatorname{softmax}_{\hat v\in\mathcal V_{e,k}}
+\left[
+\ell^{\mathrm{req}}_{e,k}(\hat v)
+-
+\ell^{\mathrm{sup}}_{i,k}(\hat v)
+\right]_+,\\
+m^{\mathrm{chrom}}_{e,k}
+&=
+\left[
+\mathcal C^{\mathrm{req}}_{e,k}
+-
+\mathcal C^{\mathrm{sup}}_{i,k}
+\right]_+.
+\end{aligned}
+$$
+
+The v3.3 candidate \(f_2^{\mathrm{geo}}\) aggregates these only after the contract declares risk weights and critical direction sets. It must not average away a negative margin on a safety-critical direction. This overlay is `[DEFINED — UNVALIDATED]` until B0-G passes on real substrates.
+
 #### \(f_3\): buffer-instability deficit area
 
 For a standardized burst or perturbation,
@@ -3755,6 +4438,26 @@ Interface I6 — Classification Dynamics as Resolution Growth Observable:
   while the functional form remains open, its SIGN is observable 
   through classification dynamics, and its MAGNITUDE is proportional 
   to classification velocity v_class.
+
+Interface I8 — Verified Receiver-Terrain Handshake:
+  RBIT exports: high-impact degradation, seed transfer, or authority-changing
+  transfer requires an uncertainty-aware receiver-terrain model, bounded probes,
+  reconstruction/teach-back, external-reference verification, progressive
+  disclosure, and rollback. Internal agreement is insufficient under SCM risk.
+  NAT imports: routing paths, mediation, audit-channel diversity, sandboxing,
+  checkpoints, rollback, and escalation policy that make PTRV executable.
+  Firewall: NAT topology does not prove terrain identification; RBIT terrain
+  estimates do not prove a NAT route is safe. B12 must test the joint protocol.
+
+Interface I9 — Resolution Composition Architecture:
+  RBIT exports: individual breadth-depth limits, scoped specialization,
+  contract-preserving projection, and composition-loss accounting.
+  NAT imports: typed sparse routing, processing isolation, middle-tier mediation,
+  independent audit paths, and hierarchical synthesis.
+  System resolution is a composition functional, not the sum of agent scores.
+  The bridge is rejected if matched-budget specialization plus mediation does not
+  outperform the monolith or naive ensemble on held-out coverage, depth, fidelity,
+  recovery, and critical-direction failures.
 ```
 
 *Self-Consistent Misalignment (SCM) — the invisible contamination.* The most dangerous contamination state is one where all internal metrics appear healthy because the system has optimized within a wrong coordinate geometry. VST v1.6 §2.6 provides the formal structure:
@@ -3876,9 +4579,11 @@ Gap > 0  (calibrated, stable)
 
 Deliberate reduction of information resolution before delivery to a lower layer.
 
+**v3.4 receiver-conditioned lock.** A degradation is calibrated only relative to a declared receiver, task contract, and verified receiver-terrain model. Sender-side intuition alone does not establish calibration. For high-impact transfer, the sender must either pass PTRV or explicitly mark the transmission as an unverified probe with bounded scope, no irreversible authority, and a rollback path. When terrain uncertainty is high, the safe response is not automatically “send less”; it may be to split the scope, add examples/counterexamples, route through a translator, preserve more provenance, or decline transfer.
+
 **Standard view:** degradation = necessary loss, minimize wherever possible.
 
-**RBIT hypothesis:** calibrated degradation can, in some regimes, preserve upstream intent more robustly than full delivery, because it keeps compression under sender control rather than inducing receiver-controlled collapse.
+**RBIT hypothesis:** calibrated degradation can, in some regimes, preserve upstream intent more robustly than full delivery, because it replaces unplanned receiver-controlled collapse with an upstream-proposed transformation calibrated and verified against the receiver's terrain.
 
 *System-wide resolution growth is hypothesized to be enabled not by eliminating mixture, but by maintaining discriminable diversity: calibrated degradation preserves separable directions (as in a paint-mixing analogy — colors that remain distinct can later be refined, while collapsed blends cannot be un-mixed) that later upscaling can refine into higher-resolution distinctions, preventing collapse into undifferentiated states.*
 
@@ -3888,8 +4593,9 @@ Full delivery to immature layer
   → Intent replaced by receiver's interpretation
 
 Degraded delivery (calibrated)
-  → Sender controls what is transmitted
-  → Core generative structure preserved
+  → Sender proposes a contract-preserving projection
+  → PTRV tests receiver reconstruction, action meaning, and recovery
+  → Core generative structure is transmitted only after verification
   → Remaining vector space stays open for diversity
 ```
 
@@ -3915,6 +4621,8 @@ Upscaling   → previously absorbed structure is re-interpreted
 Escalation is a request for help. Upscaling is a sign of growth.
 Both involve higher resolution — but escalation asks for it externally,
 while upscaling generates it internally.
+
+**Upscaling versus terrain reconstruction.** PTRV terrain reconstruction estimates how the receiver currently represents and restores information, and may construct a temporary bridge chart. Upscaling is a genuine increase in the receiver's own distinguishable and recoverable state space. A successful handshake can occur without upscaling; upscaling can occur without the sender having modeled it. The two must be measured separately so that better translation is not misreported as receiver growth.
 
 *Candidate observable correlates of upscaling readiness* include: sustained increases in rho under matched input mix, reduced escalation frequency for previously hard cases, and increased buffer stability at comparable load. Formal detection criteria remain an open problem (see Open Problems #3).
 
@@ -4030,6 +4738,8 @@ Seed (calibrated)      → Class of behaviors. Environment changes: adapts.
 ```
 
 A seed contains less information than a tree in the conventional sense — but preserves more of the original generative intent, and leaves space for the diversity that makes the system stable.
+
+**v3.4 seed-transfer gate.** A seed is high leverage because it changes how later information is generated or interpreted. Before full seed transfer, PTRV must test whether the receiver reconstructs the intended domain, boundary, invariants, prohibited extensions, uncertainty, and rollback conditions. Use a fragment, sandbox, shadow mode, or reversible local branch before global installation. A seed fails transfer even when the receiver can paraphrase it if generated behavior, boundary handling, or recovery diverges on held-out cases.
 
 ### Seed Sufficiency
 
@@ -5150,6 +5860,8 @@ Resolution cannot be directly observed. The following metrics are operational pr
 
 Higher ρ → more precise classification → more accurate mediation and placement.
 
+**v3.3 interpretation lock.** This scalar is an outcome proxy, not the terrain-generated resolution object itself. A high value can coexist with low directional diversity if the evaluation set samples only one bright direction; it can also miss low luminance on rare but contract-critical directions. Structural claims therefore require the directional reach profile, coexistence tests, and matched terrain interventions in addition to this scalar.
+
 The above instantiation uses contamination classification as a concrete and auditable discrimination task. More generally, ρ can be defined for any layer-specific discrimination task with Type I/II errors, provided the task is held fixed across comparisons. For cross-layer comparison, the discrimination task should be protocol-stable (same labels, same decision boundary, same evaluation distribution), so that changes in rho reflect capacity differences rather than task redefinition.
 
 *Buffer thickness as resolution proxy.* For opposing vector pair (A, B), define d(x,A) as the **attractor pull strength** of input x toward direction A. Buffer thickness is the proportion of inputs that fall in the non-directional zone where neither attractor dominates:
@@ -5192,9 +5904,7 @@ A natural precision-like quantity is then Π_ρ ∝ 1 / Var(p | data), where Π_
   Δρ < 0   Upper tier cannot safely absorb this output under contract c
 ```
 
-The former proxy $
-ho_{upper}-
-ho_{lower}$ is deprecated because two tiers can have different domain profiles and coordinate directions. Seed handover requires matched-contract evaluation and the U1–U3 maturity criteria, not a scalar tier comparison alone.
+The former proxy $\rho_{upper}-\rho_{lower}$ is deprecated because two tiers can have different domain profiles and coordinate directions. Seed handover requires matched-contract evaluation and the U1–U3 maturity criteria, not a scalar tier comparison alone.
 
 ### Fractal Self-Similarity
 
@@ -5475,6 +6185,21 @@ Near-zero attention    → effectively at noise floor
 This is dynamic resolution allocation — the same mechanism RBIT describes as the upper layer's Tier 3 capacity. The model continuously re-allocates resolution budget across the input space, concentrating it where structural complexity demands it.
 
 Multi-head attention extends this further: each head resolves a *different dimension* of the input space (syntactic, positional, semantic, long-range dependency). A single agent is therefore not a uniform resolver — it is a **parallel bundle of resolution-stratified sub-perspectives**, each operating on the same input at different resolution types simultaneously.
+
+### Foveated Resolution Composition — Eye-Inspired Structural Analogy
+
+The eye analogy clarifies why uniform maximum resolution is neither necessary nor affordable. Broad peripheral channels maintain event and hazard coverage; narrow high-detail inspection is moved to selected regions; distinct feature pathways preserve color, luminance, edge, motion, and depth information; memory and downstream integration assemble a temporally extended scene. In RBIT terms, this corresponds to:
+
+```
+Persistent low-cost breadth floor
+  + movable high-depth focus
+  + feature/scope specialists
+  + salience router
+  + reconstruction and continuity audit
+  = foveated resolution composition
+```
+
+The analogy also exposes failure modes: attentional tunneling removes the breadth floor; unstable switching misses events between glimpses; a faulty salience router repeatedly focuses the wrong region; feature-channel homogenization destroys independent colors; synthesis fills temporal gaps with prior-driven continuity. These are testable architecture failures, not claims of biological identity.
 
 ### Known Failure Modes as Resolution Distribution Failures
 
@@ -5834,7 +6559,7 @@ RBIT is the foundation from which the following derive:
 | **RT-3 v1.0 (Observer)** | Observer diversity V = resolution diversity across observational dimensions; buffer B = RBIT buffer layer resource for high-resolution observation; scope duality S = RBIT wide/narrow resolution switching; Coordination–Cancellation Paradox = high resolution diversity cancels without mediated aggregation |
 | **RT-4 v1.0 (Reversibility)** | Resolution recovery capacity generated relationally not individually; trust coefficient Tᵢⱼ = resolution-error reduction probability; reversibility phase transition R_c = critical resolution threshold below which RBIT degradation-upscaling cycle fails; Shared Vulnerability = resolution gap disclosure as collective detection resource |
 | **Affective Gain Module (AGM)** | [v1.9] Resolution integrity as anti-mode-collapse necessity — AGM stochastic weight dynamics maintain Tier 2 resolution (inter-vector differentiation) against Freeze collapse (Tier-1 only); Controlled Non-Minimization Budget ΔF_affective > 0 as quantitative lower bound on mandatory residual resolution floor; AGM collapse typology (Freeze/Runaway) = RBIT failure signature taxonomy — Freeze = resolution gap Δρ ≈ 0 convergence without growth (Stability Saturation), Runaway = Δρ < 0 sustained (Theorem 1 activation); ECC–Contamination Boundary dual description (ECC threshold Θ_T and Contamination Boundary N are measurement-unit translations of the same irreversibility condition); s(t) sensitivity as operational ρ proxy — discordance (s ↓ while ρ high) detects Freeze Collapse onset; F_RBIT–AGM six-metric concordance (τ₁/₂ ↔ f₂, IDI ↔ f₁, CAC ↔ f₄, RLB ↔ f₃, NFFR ↔ f₅, IS ↔ f₁f₂); Clean System Paradox as resolution atrophy mechanism under S → 0 governance (R component decay ordering F→V→T→D); Boundary Agent as structural prevention of Clean System Paradox; North Star Architecture as Map-Terrain navigation hierarchy; Circular Closure as dimensional compression enabling bounded Map complexity |
-| **Environment Design Theory (EDT)** | [v2.0] Gain-Curvature Equivalence (GCET §52): AGM T_eff ↔ EDT terrain curvature U(x) are dual representations of the same governance primitive — RBIT resolution gap Δρ is the shared observable that both modify; Historical Terminal-Convergence bridge [SUPERSEDED by RCA v3.0]: T_eff = 0 implies Π = 0 only inside the declared terrain model and may yield an apparent Δρ ≈ 0 Freeze signature; no direct equality to the canonical resolution gap is claimed; Unification Operator Γ: AGM×EDT → Governance-State maps to F_RBIT health vector + S_norm as shared measurement layer; Zero Friction Pathology = Clean System Paradox terrain-level expression (both: anomalous reduction of error signals → coordinate system distortion, not optimization); Optimal Friction Band (F_min, F_max) = operational resolution window (Δρ ∈ 0, Δρ_max); Retention Spectrum Type 1/2/3 mapped to D/V+F/T R-component hierarchy — cultivation priority Type1→Type2→Type3 = D→VF→T build sequence; n_eff Compression Theorem (EDT §36.4): circular closure changes scaling from O(n²) to O(n^{4/3}) at K*∝n²/³ — Map complexity scaling law improvement, not just reduction; Premature Coupling Catastrophe (EDT §36.3.1) = RBIT mutual contamination formal condition requiring R_self > Φ_expected AND Δρ > 0 before circles connect; Affective Terrain Coupled Evolution (EDT §51.1): ATCT dynamics show curvature decays at rate γ_U without absorption events → formal derivation of self-purification atrophy under S → 0; atrophy ordering F→V→T→D corresponds to γ_U hierarchy; T_eff as terrain permeability Π = exp(-ΔU/T_eff): Permeability-Friction Isomorphism — friction is multi-agent macroscopic expression of single-agent T_eff; Type IV Failure / Thermal Freezing (T_eff < T_min) = RBIT Silent Criticality with frozen classification — false negative for standard diagnostics, requires explicit v_class tracking; ECC-Terrain Phase Equivalence (EDT §51.4): Λ(t) = 0 ↔ p_terrain = p_c = same irreversibility from different observation levels; Terrain Memory Palimpsest = RBIT resolution history encoding — inherited negative heritage produces apparent ρ_high + v_class = 0 diagnostic pattern; Buffer Lightness (EDT §33.5) maps to f₃ component: Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight) — lightness decay accelerates T atrophy; Desertification Hysteresis: E_restore > E_lost → prevention exponentially cheaper than cure; same asymmetry applies to resolution recovery vs. resolution maintenance |
+| **Environment Design Theory (EDT)** | [v2.0] Gain-Curvature bridge (GCET §52): AGM T_eff and EDT terrain curvature U(x) can be calibrated as alternative model-class controls of traversal and barrier geometry; v3.3 treats directional reach and terrain deformation—not Δρ identity—as the shared comparison layer; Historical Terminal-Convergence bridge [SUPERSEDED by RCA v3.0]: T_eff = 0 implies Π = 0 only inside the declared terrain model and may yield an apparent Δρ ≈ 0 Freeze signature; no direct equality to the canonical resolution gap is claimed; Unification Operator Γ: AGM×EDT → Governance-State maps to F_RBIT health vector + S_norm as shared measurement layer; Zero Friction Pathology = Clean System Paradox terrain-level expression (both: anomalous reduction of error signals → coordinate system distortion, not optimization); Optimal Friction Band (F_min, F_max) = operational resolution window (Δρ ∈ 0, Δρ_max); Retention Spectrum Type 1/2/3 mapped to D/V+F/T R-component hierarchy — cultivation priority Type1→Type2→Type3 = D→VF→T build sequence; n_eff Compression Theorem (EDT §36.4): circular closure changes scaling from O(n²) to O(n^{4/3}) at K*∝n²/³ — Map complexity scaling law improvement, not just reduction; Premature Coupling Catastrophe (EDT §36.3.1) = RBIT mutual contamination formal condition requiring R_self > Φ_expected AND Δρ > 0 before circles connect; Affective Terrain Coupled Evolution (EDT §51.1): ATCT dynamics show curvature decays at rate γ_U without absorption events → formal derivation of self-purification atrophy under S → 0; atrophy ordering F→V→T→D corresponds to γ_U hierarchy; T_eff as terrain permeability Π = exp(-ΔU/T_eff): Permeability-Friction Isomorphism — friction is multi-agent macroscopic expression of single-agent T_eff; Type IV Failure / Thermal Freezing (T_eff < T_min) = RBIT Silent Criticality with frozen classification — false negative for standard diagnostics, requires explicit v_class tracking; ECC-Terrain Phase Equivalence (EDT §51.4): Λ(t) = 0 ↔ p_terrain = p_c = same irreversibility from different observation levels; Terrain Memory Palimpsest = RBIT resolution history encoding — inherited negative heritage produces apparent ρ_high + v_class = 0 diagnostic pattern; Buffer Lightness (EDT §33.5) maps to f₃ component: Lightness = 1/(Identity_rigidity + Positional_attachment + Historical_weight) — lightness decay accelerates T atrophy; Desertification Hysteresis: E_restore > E_lost → prevention exponentially cheaper than cure; same asymmetry applies to resolution recovery vs. resolution maintenance |
 
 | **From Call Centers to Neurons (FCC)** | [v2.1] ODE Regime Scalar as Resolution Gap Projection: Φ = β_s·n²/(C·T·d) is the mean-field ODE derivation of Δρ — not metaphor but formal reduction (Φ > 1 ↔ Δρ < 0; Φ ≈ 1 ↔ Silent Criticality; Φ < 1 ↔ Δρ > 0); ρ̇ equation formally derives resolution growth/degradation dynamics from first principles; Correction Efficiency η_corr = |Δρ_correction|/|Δρ_degradation| = contamination tier threshold (η_corr > 1 = Tier i; ≈ 1 = Tier ii; < 1 = Tier iii requiring external reference); Lock Budget Inequality (1+L_C)(1+L_d) ≤ ζ⁻⁴ as ODE-derived proof of R = D·F·V·T multiplicative structure; Silent Criticality formal conditions A/B/C: (A) T-compensation masking; (B) ρ̇ < 0 hidden; (C) T-saturation → Φ spike transition; τ_silent formula → v_class = 0 duration prediction; logarithmic capacity protection bound: 10× capacity → ln(10)×2.3 additional time only; SCC_min transition as deepest early-warning (deeper than any fᵢ indicator); Φ̂ Observable Proxy: multi-agent AI (msg_rate²/compute·entropy·T), organizational (n_projects·n_deps²/bandwidth·IDI·ambiguity), neural (rate²·connectivity/metabolic·receptor·neuromod); Hysteresis ratio u⁻/u⁺ = [1/((1+L_C)(1+L_d))]^{1/4}: formal ODE proof of prevention superiority; Attention Amplification F(A_g,A_ℓ,ω): f₃ primary target (buffer thinning), local-to-global propagation cascade (A_ℓ → ω → k), τ_silent shortening under attention; 4:1 positive-to-negative feedback loop structural asymmetry: Rest Mode is metastable not stable — governance actively prevents 4 positive loops; DDD three-stage protocol: S1-S3 (Defocus/Attention Loop), U1-U2 (Decouple/Lock Loop), R1-R2 (Diversity/Integrity Loop reversal); DDD formal Lyapunov proof: dV/dt < 0 throughout active intervention; E2 completion criterion = v_class > 0 (not just Φ < 1); Information Geometry: Fisher information I_F as v_class detection threshold (highest lead time ~4τ_silent); geodesic drift = minimum-observability degradation path; v_class and PRR are drift-resistant indicators; Staged Alarm System S1-S4 with RBIT v_class monitoring; Structural Damage Ratchet: S accumulation → v_class_max permanent degradation; repair failure at S_fail → N → 0 (Contamination Boundary); damage-modified Lock Budget L_C(S), L_d(S) → irrecoverable hysteresis; Revival Trajectories: Case A (metastable/PRR fragile) vs. Case C (genuine/PRR robust); Case B (Storm exhaustion); dual-axis evaluation rule (event-count AND wall-clock); Mixed-Mode Collapse ODE extension: domain-level F_RBIT required; simultaneous Freeze+Runaway requires contradictory DDD with processing isolation; Contamination Modes 1/2/3 → f₄/f₁f₂/f₃ component correspondence |
 
@@ -7671,7 +8396,7 @@ Failed withdrawal = resolution dependency map:
 ---
 
 
-## Canonical Resolution Cause Benchmark Suite — B0–B10 (v3.0)
+## Canonical Resolution Cause and Composition Benchmark Suite — B0–B13 (v3.4)
 
 ### BENCH-0. General Protocol Lock
 
@@ -7689,9 +8414,9 @@ Every benchmark run must freeze:
 
 Every claimed cause must be tested with an intervention or matched counterfactual. Observational correlation alone remains `[DIAGNOSTIC]`, not `[CAUSAL]`.
 
-### B0 — Measurement Lock: B0-R + B0-F
+### B0 — Measurement Lock: B0-R + B0-G + B0-F
 
-B0 is split into two independent gates.
+B0 is split into three independent gates. B0-R tests the six semantic axes, B0-G tests their terrain geometry, and B0-F tests the five-component health vector.
 
 #### B0-R — Six-axis resolution measurement
 
@@ -7716,6 +8441,55 @@ $$
 **Provisional engineering pass.** Test–retest ICC \(\ge0.8\) or rank stability \(\ge0.9\); at least 90% monotone targeted difficulty pairs; target-axis effect at least twice the largest off-axis effect; gap-sign/risk-rank stability under doubled windows and small label noise; null/sham stability.
 
 **Kill.** If the score changes mainly with input mix, evaluator framing, coverage, or irrelevant-axis interventions rather than the declared capacity axis, that axis is not identified.
+
+#### B0-G — Terrain geometry and chromatic–luminance identification [NEW v3.3]
+
+**Question.** Does the effective-terrain representation explain resolution changes, and can chromatic composition be separated from luminance/reach within each semantic axis?
+
+**Object lock.** Freeze receiver/model, raw input family, contract, random-seed policy, and evaluator. Declare:
+
+- direction families \(\mathcal V_k=\{h_{k,1},\ldots,h_{k,m_k}\}\);
+- recoverability threshold \(p_{\mathrm{rec}}^*\);
+- activity-radius probe scale;
+- coexistence test matrix;
+- critical direction subset;
+- terrain variables to intervene on and variables held fixed.
+
+**Minimum intervention set.** Use a factorial design with at least:
+
+1. **chromatic intervention:** add or separate a direction while holding per-direction probe strength approximately fixed;
+2. **luminance intervention:** increase stable reach on existing directions without adding direction families;
+3. **coexistence intervention:** alter whether directions can be jointly active without collision while preserving their isolated scores;
+4. **terrain intervention:** change curvature, feedback delay, routing accessibility, rollback, or barrier structure while holding raw input and receiver fixed;
+5. **sham intervention:** preserve the effective terrain and traversal budget.
+
+**Primary observables.**
+\(\boldsymbol\ell_k\),
+\(\mathcal C_k\),
+\(\mathcal L_k^{(q)}\),
+\(K_k^{\mathrm{coex}}\),
+minimum critical-direction reach, anisotropy, return probability, and task-specific scalar \(\rho_k\).
+
+**Identification requirements.**
+
+- chromatic interventions change \(\mathcal C_k\) and effective rank more than lower-tail reach;
+- luminance interventions change \(\mathcal L_k\) and \(\boldsymbol\ell_k\) more than effective rank;
+- coexistence interventions alter joint-load performance even when isolated direction scores are matched;
+- terrain interventions change directional reach in the predicted directions;
+- a model using terrain geometry predicts held-out intervention outcomes better than a direct additive cause model;
+- the interaction of chromatic composition and luminance is positive on tasks that require both.
+
+**Terrain-mediation test.** Estimate direct and mediated effects under randomized or matched interventions. Support for the v3.3 candidate requires the apparent direct effects of network, gain, buffer, history, or prior interventions on resolution to be substantially explained by changes in the measured effective-terrain object or traversal budget. Observational mediation alone is insufficient.
+
+**Kill conditions.** Reject or revise the geometric candidate if any of the following persist under matched protocols:
+
+- chromatic and luminance measures cannot be selectively manipulated;
+- simultaneous-direction performance is predicted fully by isolated scores, making coexistence unnecessary;
+- scalar accuracy predicts held-out failures as well as the full directional profile;
+- matched effective terrain and budget leave stable unexplained differences in reach;
+- the terrain-mediated model does not outperform the cheaper RCA-C1/C2 alternatives on intervention prescription.
+
+**Current status.** Definition and benchmark design: `FROZEN v3.3`. Synthetic and real-substrate validation: `OPEN`.
 
 #### B0-F — Five-component health-vector selectivity
 
@@ -7772,6 +8546,7 @@ Held-out nearest-centroid intervention identification was \(0.313\pm0.033\) for 
 
 #### B0 items retained as PENDING
 
+- `[PENDING — B0-G]` run the terrain-geometry factorial bench; identify chromatic composition, luminance/reach, coexistence, and mediation on synthetic and real substrates;
 - `[PENDING — REAL SUBSTRATE]` run B0-R on actual agent/model versions and held-out task families;
 - `[PENDING — INDEPENDENT DEMAND ORACLE]` estimate \(r(x,c,t)\) without reusing receiver errors or the same evaluator used for \(f_1\);
 - `[PENDING — CONSTRUCT VALIDITY]` show that \(f_1\)–\(f_5\) respond selectively under real interventions rather than shared log transformations;
@@ -7781,7 +8556,7 @@ Held-out nearest-centroid intervention identification was \(0.313\pm0.033\) for 
 - `[PENDING — UNCERTAINTY]` pre-register bootstrap/Bayesian intervals and missing-log sensitivity;
 - `[PENDING — MODEL SELECTION]` compare \(M_1,M_3,M_5\) using real held-out intervention attribution and prescription, not synthetic class labels.
 
-**Current B0 status.** Synthetic implementation gate: `PASS`. Real-substrate measurement validity: `OPEN`. Causal interpretation: `OPEN`.
+**Current B0 status.** B0-R/B0-F synthetic implementation gate: `PASS`. B0-G geometry gate: `DEFINED / NOT RUN`. Real-substrate measurement validity: `OPEN`. Causal interpretation: `OPEN`.
 
 ### B1 — Intrinsic Capacity Isolation
 
@@ -7948,6 +8723,57 @@ $$
 
 **Questions.** Does affect spread without informational contamination? Does terrain shock propagate without affective synchronization? Do recovery and information networks need the same topology? Does mediation reduce spread while delaying recovery?
 
+### B11 — Spectrum–Depth Allocation and Dynamic-Zoom Bench
+
+Compare under matched total compute, memory, latency, audit, and recovery budgets:
+
+1. uniform broad/shallow allocation;
+2. fixed narrow/deep allocation;
+3. static multi-scope allocation;
+4. dynamic foveated/zoom allocation.
+
+Use episodes with changing salience and hidden contract-critical directions. Report breadth \(W\), lower-tail depth \(D^{(q)}\), critical-direction miss rate, switching cost, delayed-event loss, recovery, and total contract value.
+
+**Support.** Dynamic zoom should improve held-out value or safety-adjusted fidelity over fixed allocations while preserving minimum breadth floors. Static specialization should trace a reproducible terrain-conditioned Pareto frontier.
+
+**Kill.** If breadth and depth do not trade under matched budgets, if the inferred frontier is unstable under probe basis changes, or if dynamic zoom adds no value beyond a fixed policy after switching/audit costs, the v3.4 allocation candidate is revised or rejected.
+
+### B12 — Pre-Transfer Terrain Reconstruction and Verification Bench
+
+Create sender–receiver pairs with controlled heterogeneity in schema, priors, retained dimensions, authority, recovery, and terrain drift. Compare:
+
+1. direct full transfer;
+2. sender-only calibrated degradation;
+3. terrain acquisition without verification;
+4. PTRV with teach-back, held-out probes, external reference, progressive disclosure, and rollback;
+5. oracle transport map where available.
+
+Measure \(e_{\mathrm{sem}},e_{\mathrm{act}},e_{\mathrm{safe}},e_{\mathrm{prov}},e_{\mathrm{cyc}},e_{\mathrm{ext}},p_{\mathrm{rec}},u_E\), downstream transfer, delayed drift, and irreversible-error cost.
+
+**Support.** PTRV must reduce held-out semantic/action/safety loss and improve recovery relative to no-handshake baselines, especially as sender–receiver terrain distance increases. Its predicted uncertainty must calibrate actual failure probability.
+
+**Adversarial audit.** Include shared wrong frames, probe memorization, paraphrase-with-wrong-action, dynamic drift after calibration, and verification-channel corruption. Low cycle error alone must not pass these cases.
+
+**Kill.** If PTRV does not improve matched-budget outcomes, if acquisition probes cannot predict reconstruction errors, or if its confidence is systematically miscalibrated, the protocol is not justified as a general transfer requirement.
+
+### B13 — Scoped Specialization and Resolution Composition Bench
+
+Compare under matched end-to-end budgets and data access:
+
+1. one generalist;
+2. independent specialists with naive averaging;
+3. all-to-all specialist exchange;
+4. sparse routing without mediation;
+5. full Resolution Composition Architecture: scoped specialists, sparse routing, verified transport, diverse audit, mediated synthesis, and rollback.
+
+Use tasks requiring both broad coverage and deep local reasoning, including scope holes, overlapping responsibilities, rare critical directions, correlated blind spots, and conflicting specialist outputs.
+
+**Outputs.** System coverage, local depth, critical-direction recall, router accuracy, transport loss, synthesis loss, disagreement localization, provenance retention, latency, resource cost, recovery, and external-reference performance.
+
+**Support.** The full architecture should outperform the monolith and naive ensembles on a Pareto basis: greater breadth at matched depth or greater depth at matched breadth, after routing/audit/synthesis costs. Diverse overlap should detect failures that homogeneous redundancy misses.
+
+**Kill.** If specialist gains disappear after composition costs, if mediation erases useful disagreement, if naive aggregation performs equally well, or if the generalist dominates across matched conditions, system-level trade-off bypass is unsupported for that domain.
+
 ### Common Output Registry
 
 Every benchmark should export, when applicable:
@@ -7958,7 +8784,10 @@ Every benchmark should export, when applicable:
 4. AGM variables $s(t),a(e_t),H(t),\Lambda(t),\tau_{1/2}$;
 5. network path, queue, isolation, contamination, audit, and recovery observables;
 6. transfer, intent preservation, rollback, and external-reference performance;
-7. intervention metadata and object locks.
+7. intervention metadata and object locks;
+8. breadth–depth allocation, scope cover, critical-direction floors, and switching cost;
+9. receiver-terrain estimate, uncertainty calibration, transport-map version, PTRV gate results, and reconstruction errors;
+10. projection, transport, fill, routing, synthesis, drift, and interaction-loss estimates where identifiable.
 
 ### Model Selection Rule
 
@@ -7983,8 +8812,10 @@ A model is not promoted because it explains all observed trajectories post hoc. 
 3. **Interaction model selection:** B5.
 4. **Architecture and causal order:** B3 → B6.
 5. **Memory and reference integrity:** B8 → B9.
-6. **Developmental claim:** B7.
-7. **Heavy multi-agent extension:** B10 and RCA-C3 field fitting.
+6. **Breadth–depth allocation:** B11.
+7. **Transfer integrity:** B12.
+8. **Developmental claim:** B7.
+9. **Heavy multi-agent composition:** B10 → B13 and RCA-C3 field fitting.
 
 ### Current Status
 
@@ -7993,6 +8824,8 @@ A model is not promoted because it explains all observed trajectories post hoc. 
 - RCA-C3: `[DEFINED — MULTI-AGENT EXTENSION; IDENTIFIABILITY OPEN]`.
 - B0: `[SYNTHETIC PIPELINE SANITY PASS; REAL-SUBSTRATE CONSTRUCT/CAUSAL VALIDITY OPEN]`.
 - B1–B10: `[PROTOCOL SPECIFIED; EXECUTION OPEN]`.
+- B11–B13: `[DEFINED v3.4; EXECUTION OPEN]`.
+- PTRV and Resolution Composition Architecture: `[CANONICAL CANDIDATES; NOT EMPIRICALLY SELECTED]`.
 
 ---
 
@@ -8176,6 +9009,13 @@ The following items remain open after the easy reader-safety patch:
 
 1. **T1 escape certificate identification.** A7 supplies a mathematically adequate drift object, but RBIT still lacks a substrate-independent method for constructing \(V,D^*,\eta,b\) and validating that basin exit means intent replacement.
 2. **Vector-resolution identifiability.** The six resolution axes are a candidate coordinate system. Factor separation, invariance, and aggregation have not been established.
+2a. **Terrain mediation completeness.** The effective-terrain object may omit latent actuator, representational, or institutional variables; matching a misspecified terrain does not establish causal sufficiency.
+2b. **Chromatic–luminance identifiability.** Direction count, coexistence, reach, confidence, and task difficulty can be statistically entangled. B0-G must show selective interventions before the decomposition is treated as measured.
+2c. **Local geometry scope.** Ellipsoid, metric, and exponential-map notation are local candidates. Discrete or non-smooth systems require graph, automaton, or hybrid reachable-set definitions.
+2d. **Spectrum–depth frontier identifiability.** Breadth, depth, switching, coexistence, and audit costs may be confounded. B11 must recover a stable frontier under alternative direction bases and matched budgets.
+2e. **Composition sufficiency.** Scoped specialists can create scope holes, correlated blind spots, routing errors, and destructive synthesis. Local expert quality does not identify system resolution; B13 must compare against monolithic and naive-ensemble baselines after all composition costs.
+2f. **Receiver-terrain estimation and observer back-action.** Probes may change the receiver, reveal the target, or produce performative compliance. PTRV requires held-out, low-impact, uncertainty-calibrated probes and an explicit distinction between terrain reconstruction and terrain modification.
+2g. **Verification non-circularity.** Teach-back and cycle consistency can pass under shared wrong frames. External references, action tests, recovery tests, and diverse reconstruction are required where SCM is plausible.
 3. **Demand estimator circularity.** Estimating \(\mathbf r(x,c,t)\) may require the same high-resolution oracle whose absence motivates escalation.
 4. **F_RBIT component validity.** v3.2 defines independent candidate measurement equations and the synthetic B0-F implementation/selectivity gate passes. Real-substrate construct validity, uncertainty intervals, independent demand estimation, external-reference resistance, longitudinal prediction, and cross-domain invariance remain open. \(f_3/B_{\mathrm{cap}}\) has been namespace-corrected, but historical extensions still require full line-by-line migration.
 5. **Affect versus response bias.** AGP gain can change decision thresholds without changing perception. B4 must prove discrimination change rather than only output change.
@@ -8186,11 +9026,49 @@ The following items remain open after the easy reader-safety patch:
 10. **Queueing and authority costs.** Expected-loss routing needs a formal queueing/authority model to quantify over-escalation and under-escalation jointly.
 
 
+
+### v3.3 Terrain-Generated Resolution — Contribution Registry
+
+- **TG-RBIT-1 — Terrain-Mediation Principle:** organizes supply-side causes through an effective terrain object rather than an unstructured list of scalar effects.
+- **TG-RBIT-2 — Recoverable Reachable Set:** distinguishes structurally possible, accessible, and recoverably usable state spaces.
+- **TG-RBIT-3 — Directional Activity Radius:** defines resolution strength as a profile \(\ell(\hat v)\) rather than a single global radius.
+- **TG-RBIT-4 — Chromatic Composition:** treats independent directions and their joint coexistence as a measurable object, not merely a direction count.
+- **TG-RBIT-5 — Luminance/Reach:** measures usable directional strength with lower-tail and contract-critical summaries.
+- **TG-RBIT-6 — Non-Compensatory Scalarization Lock:** prohibits bright-direction surplus from hiding dark contract-critical directions.
+- **TG-RBIT-7 — Directional Supply–Demand Gap:** places the six-axis gap above a more primitive pointwise reach and coexistence gap.
+- **TG-RBIT-8 — B0-G Benchmark:** supplies selective interventions, mediation tests, kill conditions, and falsification criteria.
+
+**Epistemic status.** TG-RBIT-1 through TG-RBIT-8 are formal definitions, candidate architecture, and benchmark commitments. They are not empirical validation of the ontology and do not promote GGT/EDT correspondences to exact equivalences.
+
+### v3.4 Resolution Composition and Terrain Handshake — Contribution Registry
+
+- **RC-RBIT-1 — Spectrum–Depth Allocation Frontier:** formalizes wide/shallow versus narrow/deep as a terrain-conditioned Pareto problem with coexistence, switching, audit, and critical-direction floors.
+- **RC-RBIT-2 — Dynamic-Zoom Policy:** preserves broad surveillance while reallocating high-depth resolution toward risk, value, novelty, uncertainty, and disagreement.
+- **RC-RBIT-3 — Resolution Composition Architecture:** unifies scope partition, specialization, sparse routing, local deep processing, controlled filtering, diverse cross-validation, and hierarchical synthesis.
+- **RC-RBIT-4 — System Resolution Composition Functional:** rejects additive/average expert scoring and includes scope, transport, audit, synthesis, and recovery.
+- **RC-RBIT-5 — Foveated Resolution Analogy:** identifies persistent breadth, movable depth, separated channels, and temporal integration as a candidate motif rather than biological proof.
+- **RC-RBIT-6 — Receiver-Terrain Model:** introduces an uncertainty-aware model of retained dimensions, reconstruction, priors, admissible actions, and recovery.
+- **RC-RBIT-7 — PTRV Protocol:** requires contract lock, low-risk acquisition, teach-back, transport calibration, multi-dimensional verification, progressive disclosure, and rollback.
+- **RC-RBIT-8 — Information-Loss Accounting:** separates projection, transport, fill, routing, synthesis, drift, and interaction losses.
+- **RC-RBIT-9 — Receiver-Conditioned Degradation and Seed Transfer:** prohibits treating sender-only simplification as calibrated transfer.
+- **RC-RBIT-10 — B11–B13 Benchmark Ladder:** tests the allocation frontier, verified terrain handshake, and system-level composition against cheaper alternatives.
+
+**Epistemic status.** RC-RBIT-1 through RC-RBIT-10 are candidate architecture and test commitments. The document does not claim that every transfer requires an expensive handshake, that a receiver terrain is fully observable, or that specialization always dominates a generalist. Protocol intensity is risk-, reversibility-, novelty-, and terrain-distance-dependent.
+
 ## Open Problems
 
 | # | Problem | Status |
 |---|---------|--------|
 | 1 | Full structural resolution measurement | Partially resolved (operational proxy ρ defined) |
+| OP-TERRAIN-MEDIATION | **Effective-terrain sufficiency and causal mediation** — What is the minimal terrain object that makes directional reach conditionally invariant across agents and episodes? Which variables belong in the metric, barrier landscape, admissible-transition set, recovery kernel, or traversal budget? Required test: randomized interventions comparing direct-cause and terrain-mediated models on held-out prescription. | Open — introduced v3.3 |
+| OP-CHROMA-LUMA | **Chromatic composition × luminance/reach identification** — How should independent direction families, joint coexistence, lower-tail reach, and anisotropy be estimated without circularly using the same task errors that define scalar ρ? Is effective rank of a coexistence kernel stable across probe bases? | Open — introduced v3.3 |
+| OP-DIR-GAP | **Directional demand oracle and non-compensatory gap aggregation** — How can required reach \(\ell^{\mathrm{req}}(\hat v)\) and required color combinations be estimated independently of the receiver? Which aggregation preserves safety-critical dark directions without becoming too conservative? | Open — introduced v3.3 |
+| OP-SPECTRUM-DEPTH | **Spectrum–depth frontier identification** — What direction basis, cost model, and intervention design recover a stable breadth–depth Pareto frontier? How should switching, coexistence, audit, and critical-direction floors be priced? | Open — introduced v3.4 |
+| OP-DYNAMIC-ZOOM | **Safe dynamic-zoom policy** — How should a system move high-depth resolution without losing peripheral coverage, missing short-lived events, or being captured by a faulty salience router? | Open — introduced v3.4 |
+| OP-RES-COMPOSE | **System resolution composition law** — Under what conditions do scoped specialists plus mediation produce broad/deep system resolution after routing, translation, audit, synthesis, latency, and recovery costs? Is there a subadditive or lower-bound theorem for useful composition? | Open — introduced v3.4 |
+| OP-TERRAIN-HANDSHAKE | **Receiver-terrain acquisition and verification** — What minimal probes identify retained distinctions, reconstruction priors, action semantics, and recovery without materially changing the receiver? How should PTRV intensity scale with terrain distance, risk, and reversibility? | Open — introduced v3.4 |
+| OP-LOSS-ACCOUNT | **Information-loss decomposition and identifiability** — Can projection, transport, fill, route, synthesis, drift, and interaction losses be separately estimated, or only bounded? Which held-out interventions distinguish them? | Open — introduced v3.4 |
+| OP-VERIFY-EXTERNAL | **Non-circular reconstruction verification** — Which external references remain trustworthy when sender and receiver share data, objectives, tools, and priors? How many structurally diverse reconstruction paths are sufficient? | Open — introduced v3.4 |
 | OP-ρ-decomp | **ρ_p / ρ_c decomposition operational identification** — The perception-control decomposition (ρ_p = perceptual dimensionality, ρ_c = control dimensionality) is formally introduced in §Resolution Capacity Decomposition. The current conjecture maps C and d primarily to ρ_c (governance action space), and v_class + branching ratio R primarily to ρ_p (representational fidelity). However, the exact identification protocol — how to estimate ρ_p and ρ_c independently from observable F_RBIT proxies without circularity — remains open. Key subproblems: (i) Can ρ_p be estimated independently of ρ_c from classification trajectory data alone? (ii) Does the ODE ρ̇ equation need to be extended to a coupled (ρ_p, ρ_c) system, or does scalar ρ = min(ρ_p, ρ_c) remain sufficient for all current RBIT theorems? (iii) Is there an observable signature that distinguishes Case 1 (perception collapse, Φ > ρ_p) from Case 2 (control gap, Φ > ρ_c) without already knowing ρ_p and ρ_c separately? | Open — introduced v2.6 |
 
 | 2 | Resolution gap calibration — how does a sender determine correct degradation level? | Open |
@@ -8308,10 +9186,31 @@ RBIT generates specific predictions that, if empirically violated, would require
 
 **Criterion 1 — Resolution gap polarity must predict compression direction.**
 
-If negative resolution gaps (Δρ < 0, i.e., f₂ > 0) do not produce receiver-controlled compression more frequently than sender-controlled compression, the central claim that gap polarity determines compression control is falsified. *Operationally: f₂ rising must predict compression direction shift with >50% base-rate improvement over unpredicted compression direction.*
+If negative resolution gaps (Δρ < 0, i.e., f₂ > 0) do not produce unplanned receiver-controlled compression more frequently than verified upstream-controlled compression, the central claim that gap polarity predicts compression-control failure is falsified. *Operationally: f₂ rising must predict compression direction shift with >50% base-rate improvement over unpredicted compression direction.*
 
 **Criterion 2 — Calibrated degradation must outperform full delivery in immature-layer absorption.**
-In controlled experiments where an immature layer receives identical information at full resolution vs. calibrated degradation, degradation must produce higher post-absorption resolution (measured via ρ) over a maturation window. If full delivery consistently equals or exceeds calibrated degradation, the degradation-as-design claim is falsified.
+In controlled experiments where an immature layer receives identical information at full resolution vs. calibrated degradation, degradation must produce higher post-absorption resolution (measured via \(\rho\)) over a maturation window. If full delivery consistently equals or exceeds calibrated degradation, the degradation-as-design claim is falsified.
+
+**Criterion 2A — Terrain mediation must add intervention value.**
+Under randomized or matched interventions on network, gain, buffer, history, or prior/reference variables, the measured effective-terrain object should mediate a material fraction of the change in the directional reach profile and improve held-out intervention prescription over a direct additive model. If terrain measurements add no predictive or prescriptive value, the v3.3 terrain-mediation candidate is rejected for that system class.
+
+**Criterion 2B — Chromatic composition and luminance must be jointly necessary.**
+On tasks requiring several directions simultaneously, a chromatic-only intervention and a luminance-only intervention should each leave a distinct bottleneck, while the joint intervention should outperform both beyond additive noise. If one factor fully substitutes for the other, or if simultaneous-direction performance is completely predicted by isolated accuracy, the chromatic–luminance decomposition is unsupported.
+
+**Criterion 2C — Directional gaps must reveal failures hidden by scalar means.**
+A negative reach margin on a declared contract-critical direction should predict error, unsafe compression, escalation, or recovery failure even when mean/scalar \(\Delta\rho\) remains positive. If directional profiles do not improve held-out failure prediction or intervention choice over the scalar gap, the directional extension is unnecessary and should be removed.
+
+**Criterion 2D — The breadth–depth frontier must be budget- and terrain-sensitive.**
+Under matched budgets, interventions that expand stable breadth should change the achievable depth profile or composition costs in a reproducible terrain-dependent way. If no trade-off or frontier can be recovered, or if it changes arbitrarily with the chosen probe basis, RCA-2E is unsupported.
+
+**Criterion 2E — Verified terrain acquisition must reduce transfer loss.**
+For heterogeneous sender–receiver pairs, PTRV should reduce held-out semantic, action, safety, provenance, or recovery error relative to direct transfer and sender-only calibration after accounting for probe and latency cost. If it provides no matched-budget benefit or its uncertainty does not predict failure, the handshake requirement is unsupported.
+
+**Criterion 2F — Composition must beat cheaper alternatives after full cost accounting.**
+On tasks requiring broad coverage and deep local reasoning, scoped specialization plus sparse routing, verified transport, diverse audit, and mediated synthesis must improve the breadth–depth–fidelity–recovery Pareto frontier over a matched generalist or naive ensemble. If gains disappear after routing/audit/synthesis costs, the system-level trade-off bypass claim is rejected for that domain.
+
+**Criterion 2G — Cycle consistency cannot be accepted as sufficient verification.**
+Constructed shared-frame, probe-memorization, and paraphrase-with-wrong-action cases should pass a pure cycle test but fail the full PTRV gate. If cycle consistency alone performs as well as held-out action, recovery, diverse, and external-reference verification, the added verification structure is unnecessary.
 
 **Criterion 3 — Fractal propagation predictions (from VST §1.5.1).**
 Three specific predictions must hold:
@@ -8476,16 +9375,15 @@ F18 — Boundary Agent removal must accelerate Clean System Paradox:
   necessity argument for Boundary Agent is unsupported.
   (Derived from AGM §5.2.0.1 Clean System Paradox and RBIT §Seed Sufficiency.)
 
-F19 — Gain-Curvature Duality must produce equivalent Δρ outcomes via both routes:
-  Any governance intervention that increases Δρ via AGM route (T_eff modulation)
-  must produce equivalent change in system stability signature as the same Δρ
-  increase achieved via EDT route (terrain curvature injection).
-  If the two routes produce detectably different F_RBIT signatures for equivalent
-  Δρ change, the duality claim (GCET Theorem 52.1) is violated — the governance
-  primitive is NOT dual-representable but representation-dependent.
-  Operationally: AGM path vs. EDT path to same Δρ target must produce concordant
-  F_RBIT component profiles within measurement uncertainty.
-  (Derived from GCET §52.1-52.3 and RBIT Unification Operator Γ.)
+F19 — Gain–curvature bridge must survive terrain-object calibration:
+  AGM gain modulation and EDT curvature intervention may be treated as dual routes
+  only when they produce matched changes in the declared effective-terrain object,
+  directional reach profile, coexistence kernel, and recovery topology.
+  Equal scalar Δρ or equal stationary density is insufficient.
+  Falsification: after object-locked calibration, the two routes cannot be mapped
+  onto one another even approximately, or they require incompatible interventions
+  to obtain the same directional-reach change.
+  (v3.3 correction of the former equivalent-Δρ-outcome criterion.)
 
 F20 — Retention-Type Priority violation must produce detectable collapse pattern:
   Systems that cultivate Type 3 (energetic/T) before Type 1 (structural/D) should
@@ -8563,7 +9461,8 @@ or longitudinal system monitoring with sufficient temporal resolution
 to distinguish sequential vs. simultaneous component decay.
 
 F19-F24 testability: F19 requires dual-pathway governance experiments
-(same Δρ target reached via AGM and EDT routes, F_RBIT signatures compared).
+(matched effective-terrain deformation and directional-reach targets under
+AGM and EDT routes, with coexistence and recovery topology compared).
 F20-F21 require controlled organizational architecture experiments.
 F22 is testable in multi-agent simulation with measurable v_class.
 F23 requires longitudinal ρ tracking through organizational transitions.
@@ -9300,8 +10199,9 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 | README Section | Contents | Status |
 |----------------|----------|--------|
 | Canonical Resolution Causal Architecture | Supply/demand split; six-axis resolution vector; relational effective capacity; RCA-C1 additive baseline, RCA-C2 staged canonical candidate, RCA-C3 multiplex extension; fast/slow affect paths and network object locks | New v3.0 |
-| Canonical Cause Benchmark Suite B0–B10 | Measurement lock, intrinsic capacity, terrain swap, network intervention, affective gain clamp, factorial interactions, path order, longitudinal upscaling, affective legacy, SCM external reference, and propagation benches | New v3.0 |
+| Canonical Cause Benchmark Suite B0–B10 | B0-R semantic-axis lock, B0-G terrain/chromatic–luminance geometry lock, B0-F health-vector selectivity; intrinsic capacity, terrain swap, network intervention, affective gain, factorial interactions, path order, longitudinal upscaling, external reference, and propagation benches | Updated v3.3 |
 | Unified Audit and Namespace Lock | Deduplicated user copies; U1 polarity repair; RCA symbol lock; f₃/B_cap separation; T1 A7 dependency; cross-theory bridge downgrade; resolution-proxy normalization | New v3.1 |
+| Terrain-Generated Resolution Geometry | effective-terrain mediation principle; recoverable reachable set; directional activity radius; chromatic composition × luminance/reach; directional gap; B0-G identification gate; new falsification and open problems | New v3.3 |
 | F_RBIT Measurement + B0 Cheap Bench | component-specific candidate measurement equations; B0-R/B0-F split; synthetic intervention-response and M1/M3/M5 model-competition sanity pass; real-substrate validity pending | New v3.2 |
 | Physical Basis | Restructured: combinatorial + governance arguments primary; Landauer as supporting motivation | Updated v1.1 |
 | Substrate Principle (D0) | Geometry alignment as substrate interpretation; contamination = geometry mismatch projection | New v1.1 |
@@ -9336,7 +10236,7 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 | n_eff Compression Theorem — Formal Scaling | EDT §36.4 formal stress equation with K circles; K*∝n^{2/3} optimal derivation; S∝n^{4/3} vs S∝n² scaling comparison; Map complexity consequence; scaling failure mode | New v2.0 |
 | Premature Coupling Catastrophe — RBIT Coupling Condition | EDT §36.3.1 mutual contamination formal condition; RBIT coupling readiness requirements (R_self > Φ, Δρ > 0, v_class > 0, all fᵢ bounded); five-step coupling protocol in RBIT terms | New v2.0 |
 | Affective Terrain Coupling in RBIT Terms | ATCT §51.1.1 formal dynamics; curvature decay at rate γ_U → atrophy ordering derivation; γ_U hierarchy (F>>V>T>>D); emotion-as-designer corollary for resolution capacity maintenance | New v2.0 |
-| T_eff as Terrain Permeability — RBIT Operational Bridge | Π=exp(-ΔU/T_eff); high/optimal/low/zero T_eff states mapped to RBIT Δρ regimes; Permeability-Friction Isomorphism; Type IV Failure (Thermal Freezing) as RBIT false-negative — v_class tracking required | New v2.0 |
+| T_eff as Terrain Permeability — RBIT Operational Bridge | Π=exp(-ΔU/T_eff) retained as a model-class traversal/reach bridge; direct mapping to Δρ regimes superseded by v3.3 chromatic–luminance geometry; Type IV thermal-freezing remains a directional-reach warning requiring v_class and perturbation tests | Updated v3.3 |
 | Terrain Memory as Resolution Palimpsest | U(x,t) = weighted sum of prior events → RBIT resolution history encoding; palimpsest disruption signature (ρ drop without S increase); Organizational Terrain Heritage Theorem; negative heritage diagnostic (ρ_high + v_class=0) | New v2.0 |
 | Falsification F19-F24 | EDT integration predictions: GCET dual-route equivalence, retention-priority violation, n_eff compression scaling, Thermal Freezing false-negative, terrain memory disruption signature, desertification hysteresis asymmetry | New v2.0 |
 | Open Problems 36-45 | Γ-inversion computational complexity, γ_U measurement protocol, optimal friction function derivation, retention-type cultivation under constraint, K* calibration with dependent α_between, terrain heritage disambiguation, premature coupling failure mode discrimination, Buffer Lightness → f₃ quantitative relationship, adversarial terrain diagnostic robustness, resolution measurement across GCET dual representations | New v2.0 |
@@ -11638,6 +12538,8 @@ RBIT governance design implication:
 | Polarity and Routing Cleanup | Canonical $\Delta\rho=\rho^{eff}-r$ restored globally; zero gap no longer implies upscaling; over-escalation no longer labeled safe; legacy tier proxy and DFG Hook corrected | New v3.0 |
 | Unified Audit | Deduplicated byte-identical user copies; U1 sign repair; RCA symbol namespace; $f_3/B_{cap}$ separation; T1 A7 dependency; bridge-equivalence downgrade; balanced resolution proxy | New v3.1 |
 | F_RBIT Measurement and B0 Cheap Bench | baseline/critical normalization; independent candidate formulas for $f_1$–$f_5$; B0-R/B0-F protocol; reproducible synthetic pipeline pass with strict non-empirical scope and pending ledger | New v3.2 |
+| Terrain-Generated Resolution Geometry | effective terrain, recoverable reachable set, directional activity radius, chromatic–luminance decomposition, non-compensatory directional gap, B0-G | New v3.3 |
+| Resolution Composition and Terrain Handshake | spectrum–depth Pareto frontier; dynamic zoom; scoped specialization, sparse routing, filtering and mediated synthesis; foveated analogy; receiver-terrain model; PTRV; information-loss accounting; receiver-conditioned degradation/seed transfer; I8–I9; B11–B13 | New v3.4 |
 
 ---
 
@@ -11649,7 +12551,7 @@ RBIT governance design implication:
 ## DFG Integration Hook
 
 **Master document:** `README_DFG_Unified_Theory_v4_0.md`
-**Version cross-reference:** Master v4.0 ↔ RBIT v3.2-B0cheapbench (master-side synchronization pending)
+**Version cross-reference:** Master v4.0 ↔ RBIT v3.4-resolutioncomposition (master-side synchronization pending)
 
 ### Primary Contribution to Master Equations
 
