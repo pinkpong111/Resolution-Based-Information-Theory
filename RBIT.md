@@ -4,6 +4,12 @@
 
 > *Draft · July 2026 · Internal Working Document — v3.5-mutualmemory-cleanmap*
 >
+> *v3.5-e1 editorial audit patch (July 2026): (1) stale v2.8 draft dateline removed; (2) §29 heading and the local v2.5 ledger line corrected (F77–F100) → (F77–F92) to match §29 contents and the canonical top-of-file v2.5 log; stale v2.8 document footer updated to v3.5; (3) Open Problems master table repaired — broken table block rejoined and legacy numbered rows made contiguous (no content changes); (4) MM-3 patch-schema fields renamed with patch subscript $\cdot_m$ ($o_m,\dots,a_m$) restoring the v3.1 symbol namespace lock, with an explicit non-inheritance note; (5) the tentative-overlay operator $\oplus$ in MM-1 explicitly defined and separated from committed assimilation $\mathsf U_i$; (6) MM-10 gate ↔ CMCP-step candidate correspondence table added; (7) MM-11 routing criterion placed under a declared-aggregation lock and a non-compensatory critical-direction floor, aligning it with the MM-1 vector-valued patch-evaluation principle. Items 1–7 change no theorem statements or empirical-status claims. Additionally, a substantive prior-work positioning subsection MM-15 (with matching References entries and registry item MM-RBIT-11) was added, relating the v3.5 memory architecture to complementary learning systems, continual learning, distributed-data/provenance systems, and contemporary LLM-agent memory, and isolating RBIT's distinct contribution; MM-15 is a candidate positioning that asserts no equivalence and leaves the MM-14 open questions open.*
+>
+> *v3.5-e2 substantive audit patch (July 2026): (1) MM-4 completed into an actual state machine — canonical candidate transition relation with triggers, authorities, and tempo; forbidden transitions (no LOCAL→VERIFIED skip, no QUARANTINED→VERIFIED rehabilitation without re-candidacy, no silent CONFLICT resolution, supersession-only deletion); asymmetric hysteresis lock imported from Classification Dynamics (promotion slow/multi-gate, demotion fast/single-signal) with over-escalation cost caveat and appeal path; (2) MTRL-6 candidate linearized reconciliation dynamics added — delayed two-timescale gain model, oscillation bound γ_eff·τ_loop ≲ π/2 with dead-band hysteresis, contamination amplification bound A_c<1, and B15 measurement hooks; explicitly a candidate, not a theorem; (3) MM-16 adversarial memory threat model added — capability classes A0–A4, seven canonical attack patterns mapped to answering gates, scope-splitting registered as an open gap, A4 bounded by the MM-8 self-certification refusal; F-MM5 adversarial containment falsification and B16-ADV bench arm added; (4) MTRL star topology declared an explicit design decision with mediated-only peer exchange; (5) MM-10 gate semantics locked to binary certification with graded scores demoted to diagnostics (min-aggregation if a graded summary is needed); (6) MM-12 homogenization warning signs given candidate operational proxies feeding MM-11's Homogenization term; (7) F-MM decision-procedure lock added (pre-declared K, δ, m/K, statistical criterion); (8) MM-14 measurement-dependency note added (Δρ(·;m) inherits pending B0 status); (9) OP-MTRL-STABILITY status updated; contribution registry extended MM-RBIT-12–14. All additions are candidate-status and change no empirical claims.*
+>
+> *v3.5-e3 substantive audit patch (July 2026): anchor independence in MM-8 given a formal candidate definition — lineage closure Cl(·) on the CMCP-2 provenance graph; independence defined relative to contamination class (C1–C3), with per-class anchor coverage required for certification; effective anchor count taken after quotienting by shared class-relevant ancestry (anchor-side analogue of MTRL-2's correlated-confirmation discount); anchor capture (independence decay into Cl(S)) and rotation cadence declared a security requirement; audit regress explicitly terminated at a contract-declared external authority rather than resolved internally. Registry MM-RBIT-15; OP-CLEAN-ANCHOR status updated — anchor count per class, rotation cadence, and Cl-recomputation cost remain open.*
+>
 > *v3.5-mutualmemory-cleanmap: Resolution-Indexed Long-Term Memory + Mutual Terrain Reconciliation + Clean Map Construction — (1) long-term memory is formalized as a terrain-update operator rather than a passive archive; episodic, semantic, procedural, constraint, provenance, and rollback memories are mapped to landmarks, edges, paths, boundaries, evidence lineage, and return routes; (2) the value and danger of a memory patch are defined by its directional-resolution change, coverage change, contamination risk, and loss of diversity; (3) upper and lower agents are modeled as mutually incomplete maps, yielding a bidirectional Mutual Terrain Reconciliation Loop rather than one-way teacher-to-student injection; (4) lower-to-upper transmission carries scoped terrain differentials with provenance and uncertainty, while upper-to-lower transmission carries role-projected global patches that require local validation before assimilation; (5) Clean Map Construction is defined as production of an evidence-separated, independently anchored, cross-perspective verified, versioned, uncertainty-preserving, and rollback-capable map—not an error-free or consensus-only map; (6) map content is separated from the narrow correction core, at least one independent clean anchor is required for certifiable purification, evidence is selectively immutable while interpretation remains revisable, and local plasticity is separated from global integrity; (7) committed patches use explicit lifecycle states {LOCAL, CANDIDATE, VERIFIED, CONFLICT, UNKNOWN, STALE, QUARANTINED, REVOKED}; (8) memory synchronization is asynchronous, processing-isolated, scope-limited, and resistant to homogenization; (9) interfaces I10–I12, benchmarks B14–B16, contribution registry, open problems, and falsification gates are added. These are canonical candidate definitions and protocols; superiority over simpler memory systems remains empirically open.*
 >
 > *v3.4-resolutioncomposition: Spectrum–Depth Allocation + Resolution Composition + Verified Terrain Handshake — (1) the breadth–depth trade-off is formalized as a terrain-conditioned Pareto frontier under a declared resolution budget; (2) a foveated/dynamic-zoom policy distinguishes broad low-cost surveillance from narrow high-depth inspection; (3) the Resolution Composition Architecture partitions the required spectrum into scoped specialists, selectively routes inputs, performs local deep processing, preserves contract-relevant information through controlled projection, and synthesizes outputs through mediated cross-validation; (4) system-wide breadth-and-depth is treated as a composition result, not a property of one generalist; (5) a receiver-terrain model and sender-to-receiver transport map are introduced; (6) the Pre-Transfer Terrain Reconstruction and Verification protocol requires low-risk probes, receiver reconstruction/teach-back, cycle and external-reference checks, progressive disclosure, rollback, and post-transfer drift monitoring; (7) total information loss is decomposed into projection, transport, fill, routing, synthesis, and drift terms with interaction residuals; (8) degradation and seed transfer are now receiver-conditioned rather than sender-assumed; (9) NAT interfaces I8–I9, benchmarks B11–B13, audit items, contribution registry, open problems, and falsification gates are added. All new architectural claims remain candidate definitions/protocols until intervention benchmarks pass.*
@@ -21,8 +27,6 @@
 > **Historical-ledger status lock.** Version summaries below preserve the wording of prior integration passes for provenance. They are not live theorem statements. When a historical “iff”, “exact equivalence”, sphere-optimality, or direct cross-theory identity conflicts with the v3.1 object locks, the current RBIT Core and RCA definitions govern.
 >
 > *v2.9-DFGmaster: DFG Master Theory v4.4 + VST v3.6-NAT-theory + AGM v2.8-THM + NAT v2.7-DFGmaster Full Integration Pass — (1) Deltaρ/E-layer translation: Deltaρ >= 0 = Omega -> 0 AND lambda_V <= 0; C_A approx 1 = S[V] approx S_c AND lambda_V approx 0; spectral gap >= lambda_min* = lambda_V <= 0 => Omega bounded; formal translation table registered in §25.4-ext; (2) D-S[V]-lambda_V-Omega cascade: master N.11 cascade formally bridged to RBIT — D up => S_D[V] up => lambda_V up => Omega up; Deltaρ language = L2/L3 (lambda_V, Omega) slice of N.11 cascade; RBIT contamination accumulation Omega = L3 of cross-scale cascade; (3) Five-Theory Criticality Equivalence: Four-Theory Equivalence extended to Five-Theory by adding RBIT Deltaρ >= 0 as fifth condition: Pi_eff = 1 iff Pi_G = 1 iff chi_TBG = theta iff C_A = 1 iff Deltaρ >= 0 (all five = single governance criticality in five languages); (4) VE-RBIT bridge: VE_sphere 5-way condition {C_A approx 1, D <= D_max^VE, S_D[V] <= S_c, lambda_V <= 0, Omega <= Omega_c} — RBIT supplies Omega condition (Omega <= Omega_c = contamination bounded; Omega = N.9 proxy); (5) New IC extensions: IC-I7 (Cascade Layer Correspondence: RBIT L3 Omega iff master N.11 L3 contamination); (6) New Open Problems: OP-RBIT-CASCADE-1 (Omega ODE calibration), OP-RBIT-ELAYER-1 (Deltaρ/E-layer translation empirical test), OP-RBIT-VE-1 (RBIT role in VE_sphere 5-way condition); (7) New cross-theory correspondences: Deltaρ >= 0 iff Omega -> 0 AND lambda_V <= 0; RBIT Theorem 1 activation (sustained Deltaρ < 0) iff lambda_V > 0 AND Omega accumulating; F_RBIT equilibrium (Rest Mode) iff VCZ regime (all five conditions simultaneously); Omega slow variable iff contamination accumulation at resolution degradation timescale*
-
-> *Draft · March 11, 2026 · Internal Working Document — v2.8-RTseries*
 
 ---
 
@@ -8264,6 +8268,8 @@ $$
 \rho_i(\hat v\mid \mathcal M_i^t,c,t).
 $$
 
+Here $\oplus$ denotes a **tentative, uncommitted overlay** of $m$ on $\mathcal M_i^t$, used only to evaluate the patch's terrain effect (in sandbox, shadow, or replay); it does not by itself constitute assimilation. Committed assimilation occurs only through the update operator $\mathsf U_i$, subject to the lifecycle states (MM-4) and local validation gates (MTRL-4). The distinction $\oplus\neq\mathsf U_i$ is the operator-level form of the archive/assimilation separation declared in MM-0.
+
 A patch may:
 
 - open a new direction;
@@ -8300,20 +8306,22 @@ This mapping is functional, not identity. A database entry becomes a terrain fea
 Every patch eligible for persistent assimilation SHOULD carry at least
 
 $$
-p=(o,f,s,\pi,u,z,v,r,a),
+p=(o_m,f_m,s_m,\pi_m,u_m,z_m,v_m,r_m,a_m),
 $$
 
 with:
 
-- $o$: observation or generated claim;
-- $f$: coordinate frame / ontology / representation convention;
-- $s$: validity scope and exclusions;
-- $\pi$: provenance and independence graph;
-- $u$: uncertainty and disagreement structure;
-- $z$: lifecycle status;
-- $v$: version, timestamp, and dependency set;
-- $r$: rollback, supersession, and recovery pointer;
-- $a$: authority and permitted action impact.
+- $o_m$: observation or generated claim;
+- $f_m$: coordinate frame / ontology / representation convention;
+- $s_m$: validity scope and exclusions;
+- $\pi_m$: provenance and independence graph;
+- $u_m$: uncertainty and disagreement structure;
+- $z_m$: lifecycle status;
+- $v_m$: version, timestamp, and dependency set;
+- $r_m$: rollback, supersession, and recovery pointer;
+- $a_m$: authority and permitted action impact.
+
+*Namespace lock (v3.1 §RCA-10 compliance).* The subscript $m$ marks patch-schema fields. Unsubscripted $f$, $s$, $v$, $a$, and $\pi$ remain reserved for the health-vector components $f_1$–$f_5$, AGM sensitivity $s(t)$, classification velocity $v_{\mathrm{class}}$, the affective state vector $\mathbf a$, and the prior/reference frame $\Pi$ respectively; patch fields never inherit theorems stated for those objects.
 
 A patch without a declared frame or scope is not globally portable. A patch without provenance cannot support independent purification. A patch without rollback cannot safely modify high-impact terrain.
 
@@ -8331,6 +8339,27 @@ Canonical candidate states are:
 - `REVOKED` — invalidated patch retained for lineage and rollback, not active use.
 
 The state machine is not a truth oracle. `VERIFIED` means verified under a declared domain, observer set, time window, and contract. Conflict and unknown states are first-class map content and must not be silently converted into consensus.
+
+**Canonical candidate transition relation.** A state set without a transition relation is a label set, not a state machine. The candidate legal transitions, triggers, and authorities are:
+
+| Transition | Trigger | Authority | Tempo |
+|---|---|---|---|
+| `LOCAL → CANDIDATE` | scope, frame, and schema fields complete; proposal for broader use | originating agent | normal |
+| `CANDIDATE → VERIFIED` | declared evidence + external-reference + action/recovery tests pass (CMCP-5, CMCP-8) | $I_{\mathrm{core}}$ with $A_{\mathrm{clean}}$ participation | **slow (multi-gate)** |
+| `CANDIDATE → UNKNOWN` | evidence insufficient at evaluation | evaluator | normal |
+| `CANDIDATE / VERIFIED → CONFLICT` | incompatible validated observation detected | automatic on detection | fast |
+| `VERIFIED → STALE` | freshness, dependency, or environment-assumption expiry; drift trigger (CMCP-9) | automatic | fast |
+| `STALE → CANDIDATE` | revalidation initiated under current conditions | maintaining agent | normal |
+| `CONFLICT → VERIFIED` | conflict resolved by frame/scope/depth disambiguation or new evidence, with recorded resolution (CMCP-4) | mediator + $I_{\mathrm{core}}$ | slow |
+| `CONFLICT → REVOKED` | one side invalidated by declared tests | $I_{\mathrm{core}}$ | normal |
+| `any → QUARANTINED` | credible contamination suspicion or unsafe action impact | any authorized monitor, **single signal suffices** | **fast** |
+| `QUARANTINED → CANDIDATE` | cleared by audit against $A_{\mathrm{clean}}$ | $I_{\mathrm{core}}$ with clean-anchor sign-off | slow |
+| `QUARANTINED → REVOKED` | contamination confirmed | $I_{\mathrm{core}}$ | normal |
+| `any → REVOKED` | invalidation; lineage and rollback pointers retained | $I_{\mathrm{core}}$ | normal |
+
+Forbidden transitions: `LOCAL → VERIFIED` directly (no promotion without the candidate stage); `QUARANTINED → VERIFIED` directly (no rehabilitation without re-candidacy); `CONFLICT → VERIFIED` without a recorded resolution (silent consensus conversion); and deletion of any state (supersession only — `REVOKED` is terminal for active use, and new evidence bearing on a revoked claim enters as a **new patch** with a lineage edge to the revoked one, never as resurrection in place).
+
+**Hysteresis lock (imported from Classification Dynamics).** Promotion and demotion are deliberately asymmetric, reusing the type-transition hysteresis principle $\tau_{\mathrm{upscale}}/\tau_{\mathrm{degrade}}\gg 1$: promotion toward `VERIFIED` requires multiple independent confirmations and a minimum dwell time; demotion to `STALE`/`CONFLICT`/`QUARANTINED` may fire on a single credible signal. This prevents oscillatory churn (patches cycling between states on noise) while keeping contamination response fast. The asymmetry is not free: over-triggering of quarantine carries availability, queue, and auditor-fatigue costs, consistent with the v3.0 reclassification of over-escalation as asymmetric but non-safe; quarantine therefore requires a declared appeal/re-audit path and a rate limit rather than an unconditional hair trigger.
 
 ### MM-5. Mutual Incompleteness Principle
 
@@ -8371,6 +8400,8 @@ P_{G\to i}
 \to
 \text{global revision}.
 $$
+
+*Topology note (explicit design decision, v3.5-e2).* As stated, MTRL is a star topology: lower agents reconcile with the upper map, not directly with each other. This is deliberate, not incidental. Direct peer-to-peer patch exchange multiplies the contamination surface as $O(n^2)$ unmediated channels, bypasses the fusion layer's conflict preservation, and reproduces the premature-coupling failure mode (mutual contamination between immature maps) at the memory layer. Peer exchange is therefore permitted only in the mediated form: a peer-relevant differential is routed through fusion and re-projected, so that provenance, conflict, and scope survive the hop. Whether a bounded, contract-limited direct peer channel can outperform mediated routing for high-frequency local coordination is left open (extends OP-MTRL-STABILITY); if introduced, it must carry the full patch schema and rate limits of MTRL-5.
 
 #### MTRL-1 — Lower-to-upper terrain differential
 
@@ -8453,6 +8484,30 @@ MTRL must not become continuous cross-agent influence. Updates are:
 
 This preserves specialization and prevents a transient local error or dominant upper frame from instantly contaminating the network.
 
+#### MTRL-6 — Candidate reconciliation dynamics and stability condition [CANDIDATE — LINEARIZED]
+
+MTRL is a delayed bidirectional feedback loop and therefore carries the two generic risks of such loops: oscillation (patch churn between local and global maps) and positive-feedback contamination amplification. The following minimal candidate model makes OP-MTRL-STABILITY concrete without claiming a theorem.
+
+Let $x_G$ be a scalar projection of the global map on a declared coordinate, $x_i$ the corresponding local projections, $\tau_{\uparrow}$ the effective lower-to-upper delay (observation, differential assembly, fusion queue), and $\tau_{\downarrow}$ the upper-to-lower delay (projection, local validation dwell). A linearized candidate reads
+
+$$
+\dot x_G = \gamma_G \sum_i w_i\,[\,x_i(t-\tau_{\uparrow})-x_G\,],
+\qquad
+\dot x_i = \gamma_L\,\alpha_i\,[\,P(x_G(t-\tau_{\downarrow}))-x_i\,]+\eta_i(t),
+$$
+
+where $\gamma_G,\gamma_L$ are fusion/assimilation gains, $\alpha_i\in[0,1]$ the local acceptance rate (MTRL-4), $P$ the role projection, and $\eta_i$ fresh local evidence.
+
+Two candidate operating conditions follow:
+
+1. **Oscillation bound.** For the round trip with effective loop gain $\gamma_{\mathrm{eff}}\sim\gamma_G\gamma_L\bar\alpha$ and loop delay $\tau_{\mathrm{loop}}=\tau_{\uparrow}+\tau_{\downarrow}+\text{validation dwell}$, delayed-feedback analysis gives the familiar heuristic stability region $\gamma_{\mathrm{eff}}\,\tau_{\mathrm{loop}}\lesssim\pi/2$; validation thresholds should additionally include a dead band $\delta>0$ (a patch smaller than $\delta$ is not re-uploaded), providing hysteresis against chattering. High-gain, low-latency synchronization — the naive "share everything instantly" design — sits **outside** this region, which is the dynamical restatement of MTRL-5's rate-limiting requirement.
+
+2. **Contamination amplification bound.** If a contaminated component survives the filters with per-pass probability $p_c$, its per-round-trip amplification is $A_c\sim\gamma_G\gamma_L\,p_c$. $A_c<1$ (geometric decay) must hold for the loop to be self-damping; $A_c\ge 1$ produces geometric contamination growth regardless of how good individual filters look in isolation. CMCP gates act by reducing $p_c$; MTRL-5 rate limits act by reducing the effective $\gamma$'s.
+
+*Measurement hook (B15).* The model adds two cheap observables to B15: the sign-alternation rate of validation residuals $\varepsilon_i^{\downarrow}$ (oscillation signature) and the round-trip growth factor of an injected marked patch (direct $A_c$ estimate).
+
+*Status lock.* This is a linearized, scalar-projection, continuous-time candidate. Real MTRL updates are discrete, asynchronous, and state-gated (MM-4); the model is offered as the simplest object that makes gains, delays, and thresholds jointly measurable, not as a proof of stability. Event-based or hybrid analysis remains open under OP-MTRL-STABILITY.
+
 ### MM-7. Clean Map Definition
 
 A **clean map** is not a map with zero error, zero contamination, or total consensus. It is a map whose epistemic commitments remain inspectable and reversible:
@@ -8480,6 +8535,16 @@ A_{\mathrm{clean}}\neq\varnothing,
 $$
 
 where $A_{\mathrm{clean}}$ is an independently maintained evaluator, protected baseline, trusted checkpoint, human authorization layer, independently trained verifier, tamper-evident lineage record, or replacement implementation.
+
+**Anchor independence — lineage-closure definition [CANDIDATE — v3.5-e3].** "Independently maintained" is not a vibe; it is a graph property on the CMCP-2 provenance and independence graph. Let $G_\Pi=(N,E)$ be that graph, with nodes for data sources, model checkpoints, prompts/templates, mediators, evaluators, and authorities, and directed edges recording the dependence types CMCP-2 already tracks (shared data, common model ancestry, shared prompts, mediator influence, temporal derivation). For any node set $X$, define the **lineage closure** $\mathrm{Cl}(X)$ as the smallest superset of $X$ closed under ancestor edges — everything $X$ was built from, trained on, prompted with, or mediated by.
+
+Full disjointness $\mathrm{Cl}(a)\cap\mathrm{Cl}(S)=\varnothing$ is unachievable (every artifact shares deep common ancestry), so independence is defined **relative to a declared contamination class**, reusing the C1–C3 hierarchy:
+
+> An anchor $a$ is independent of system $S$ with respect to contamination class $C_k$ iff no node in $\mathrm{Cl}(a)\cap\mathrm{Cl}(S)$ is a possible carrier of $C_k$.
+
+Concretely: a C3-independent anchor (update-generator corruption) must share no update-generator or model-ancestry nodes with $S$; a C2-independent anchor (frame distortion) must share no frame, prompt, or mediator lineage; C1 independence (positional error) is the weakest and shared distant data ancestry may be acceptable. The certifiability requirement in MM-8 is then sharpened: $A_{\mathrm{clean}}$ must contain, **for each contamination class the certificate covers, at least one anchor independent with respect to that class**. C3 anchors are the scarcest and the ones Sybil-style attacks (MM-16, A2) target by hiding shared lineage; forging independence is an attack on $G_\Pi$ itself, which is why the graph must be tamper-evident (CMCP-6).
+
+Three consequences follow. **(i) Effective anchor count.** Anchors are counted after quotienting by shared class-relevant ancestry: two evaluators fine-tuned from the same base model are one C3-anchor, not two. This is the anchor-side instance of MTRL-2's correlated-confirmation discount. **(ii) Anchor capture and rotation.** Independence decays: an evaluator that repeatedly consumes $S$'s outputs, or is tuned on them, migrates into $\mathrm{Cl}(S)$ over time. $\mathrm{Cl}$ must therefore be recomputed on a declared cadence, and anchors whose class-relevant overlap has grown must be rotated out — anchor maintenance is a security process, not bookkeeping. **(iii) Regress termination.** Independence claims about an anchor are themselves evidence with provenance, so the audit chain cannot ground itself; it terminates at a declared external authority (human authorization layer, institutional root) that is **trusted by contract declaration, not proven from inside** — the anchor-level instance of CMCP-0's rule that there is no context-free clean map.
 
 If the correction core is corrupted or every clean anchor is unavailable, the correct state is:
 
@@ -8576,6 +8641,23 @@ $$
 
 The multiplicative form encodes non-compensation: perfect provenance cannot replace a clean anchor; agreement cannot replace external validation; high predictive performance cannot replace rollback for irreversible updates. Operational implementations may use graded scores, but a critical zero must not be hidden by averaging.
 
+*Gate semantics lock (v3.5-e2).* At certification time each $G_k\in\{0,1\}$: the certificate is a conjunction, and the product form above is its indicator representation. Graded scores $g_k\in[0,1]$ are permitted only as **diagnostics** attached to each gate, never as certificate inputs — a product (or average) of graded scores conflates one failed gate with many mediocre ones and makes any scalar threshold uninterpretable. If a graded operational summary is wanted alongside the certificate, $\min_k g_k$ is the aggregation consistent with non-compensation.
+
+*Gate ↔ protocol correspondence (candidate).* Each gate anchors to a declared protocol step or structural requirement; no gate is free-floating:
+
+| Gate | Anchoring requirement |
+|---|---|
+| $G_{\mathrm{core}}$ | MM-8: $I_{\mathrm{core}}$ functionally intact |
+| $G_{\mathrm{anchor}}$ | MM-8: $A_{\mathrm{clean}}\neq\varnothing$, independence per CMCP-2 graph |
+| $G_{\mathrm{provenance}}$ | CMCP-2: lineage recorded, correlation-discounted evidence |
+| $G_{\mathrm{scope}}$ | CMCP-0: domain/observer/authority lock declared; patch $s_m$ fields present |
+| $G_{\mathrm{diversity}}$ | CMCP-3 + CMCP-4: cross-perspective collection with conflict buffer |
+| $G_{\mathrm{external}}$ | CMCP-5: external-reference and perturbation verification |
+| $G_{\mathrm{action}}$ | CMCP-0 authority envelope + patch $a_m$ action-impact audit |
+| $G_{\mathrm{recovery}}$ | MM-1 $R$ component + patch $r_m$: return routes and repair paths tested |
+| $G_{\mathrm{version}}$ | CMCP-6 + CMCP-8: tamper-evident history, versioned promotion |
+| $G_{\mathrm{rollback}}$ | CMCP-8 + CMCP-9: reversibility exercised, drift monitoring armed |
+
 ### MM-11. Memory Distribution Rule
 
 A patch should be routed not to every agent but to agents for which it has expected positive contract-relative value:
@@ -8595,6 +8677,8 @@ $$
 \right\}.
 $$
 
+Two locks govern this criterion. **(i) Declared-aggregation lock.** $\mathbb E[\Delta\rho_i(m)]$ is a scalar aggregation of the vector-valued patch effect defined in MM-1 and may be used only after declaring the aggregation rule, under the same non-compensatory scalarization constraint that governs all resolution scalarization in this document. **(ii) Critical-direction floor.** The scalar criterion is subordinate to a vector-valued eligibility gate: a patch is ineligible for routing to agent $i$ — regardless of expected aggregate value — if it produces $\Delta\rho_i(\hat v;m)<0$ on any declared contract-critical direction $\hat v$, or opens reach along a prohibited direction in $B_i$. Expected aggregate benefit may not purchase a safety-critical loss.
+
 Global broadcast is justified only for genuinely global boundaries, shared coordinates, critical recovery instructions, or widely verified terrain changes. Role-specific maps should remain different when their tasks and evidence differ.
 
 ### MM-12. Homogenization and Map-Monoculture Failure
@@ -8610,6 +8694,8 @@ Shared memory can increase consistency while reducing coverage. Warning signs in
 - local terrain facts being overwritten by global priors.
 
 A clean map architecture preserves **translation compatibility without representational identity**.
+
+*Candidate operational proxies (v3.5-e2).* The warning signs above become measurable as: (i) cross-agent representation-similarity drift (e.g. CKA or equivalent similarity indices rising toward 1 across role-distinct agents); (ii) cross-agent correlation of reconstruction errors on held-out probes (the direct metric for "identical reconstruction errors"); (iii) routing-entropy decline without matched external performance gain; and (iv) decay rate of newly created `CONFLICT` states per source. These are the quantities $\mathsf{Homogenization}_i(m)$ in MM-11 should be estimated from; B15/B16 diversity observables refer to this list.
 
 ### MM-13. Relationship to PTRV and Resolution Composition
 
@@ -8640,6 +8726,56 @@ The memory-to-terrain mapping, MTRL, and CMCP are canonical candidate architectu
 - that a map certified in one regime remains clean after drift.
 
 These claims require B14–B16 and real-system validation.
+
+*Measurement-dependency note (v3.5-e2).* The operational terrain effect $\Delta\rho_i(\hat v;m)$ of MM-1 inherits the measurement status of $\rho$ itself: until B0 real-substrate construct validity is established, patch terrain-effects are operationalized only on synthetic or simulated observables, and every MM/MTRL/CMCP claim quantified through $\Delta\rho(\cdot;m)$ carries that two-layer dependency (candidate definition on top of pending measurement).
+
+### MM-15. Relationship to Memory Consolidation, Continual Learning, and Distributed-Data Systems
+
+The v3.5 memory architecture has strong structural parallels to several established literatures. Making these explicit is a positioning requirement, not a claim of derivation: the parallels below motivate the design and bound its novelty, and RBIT's distinct contribution is stated at the end.
+
+**Complementary Learning Systems (CLS).** The Mutual Incompleteness Principle (MM-5) and the Mutual Terrain Reconciliation Loop (MM-6) are structurally close to CLS theory (McClelland, McNaughton & O'Reilly, 1995; Kumaran, Hassabis & McClelland, 2016), in which a fast, sparse, instance-specific system (hippocampus) and a slow, overlapping, structure-extracting system (neocortex) reconcile bidirectionally rather than by one-way transfer. The RBIT correspondence is direct: the lower/local map plays the fast-specific role, the upper/global map the slow-structural role, and CLS interleaved replay corresponds to MTRL's staged, non-collapsing fusion. RBIT does **not** claim biological realism; it borrows the two-system reconciliation topology and re-expresses it in resolution-gap and terrain terms.
+
+**Systems consolidation and reconsolidation.** The patch lifecycle `LOCAL → CANDIDATE → VERIFIED`, with re-testing on drift (CMCP-9), parallels systems consolidation (gradual stabilization of memory into structured stores) and reconsolidation (re-labilization of a retrieved memory before re-storage). The lifecycle's insistence that `VERIFIED` is contract- and window-relative echoes the reconsolidation finding that consolidation is not a one-time terminal event.
+
+**Stability–plasticity dilemma and continual learning.** CMCP-7 (local plasticity / global integrity partition) is a governance restatement of the stability–plasticity dilemma (Grossberg) and of the catastrophic-forgetting problem (McCloskey & Cohen, 1989). Continual-learning methods that protect consolidated parameters against overwrite — e.g. elastic weight consolidation (Kirkpatrick et al., 2017) — are, in RBIT terms, mechanisms that raise the update cost of high-integrity global terrain while leaving local terrain plastic. RBIT's addition is that the partition is made an explicit, auditable map property with declared authority and retention timescales, rather than an implicit regularization penalty.
+
+**Memory taxonomy.** The MM-2 mapping (episodic / semantic / procedural / policy) reuses the classical taxonomy of Tulving (episodic vs. semantic) and the procedural/declarative distinction; MM-2's contribution is not the taxonomy but the requirement that each type earn terrain status only through held-out change in retrieval, decision, action, or recovery.
+
+**Distributed systems and provenance.** The refusal to force consensus and the first-class retention of `CONFLICT`/`UNKNOWN` states (MM-4) parallel conflict-free replicated data types (CRDTs; Shapiro et al., 2011) and the independence requirements of Byzantine-fault-tolerant consensus; the selective-immutability / revisable-interpretation split (CMCP-6) parallels append-only, tamper-evident logs and distributed version control; and the provenance/independence graph (CMCP-2) is an instance of data-lineage tracking (W3C PROV). MTRL-2's rule that agreeing-but-correlated sources do not provide independent confirmation is the standard Sybil/correlation caveat from that literature.
+
+**Contemporary LLM-agent memory.** Externalized long-term memory for LLM agents — paged/virtual context, retrieval-augmented generation, reflective episodic stores, and production memory layers (e.g. Mem0; and the broader agent-memory surveys of 2025–2026) — provides the applied setting MM-1 targets. Most such systems optimize retrieval relevance and storage scale; RBIT's MM-0 archive/retrieval/assimilation distinction is precisely the axis those systems tend to leave implicit.
+
+**RBIT's distinct contribution relative to all of the above.** None of these literatures supplies (i) a **contract-relative, vector-valued** patch evaluation in which a patch's value is a directional resolution change under a declared task/safety/authority/recovery contract; (ii) a **non-compensatory** admission gate (MM-10, MM-11) in which safety-critical directional loss cannot be bought by aggregate benefit; (iii) an explicit **contamination/purification** frame with a narrow correction core and independent clean anchor (MM-8); or (iv) **operational falsification conditions** for the reconciliation loop and clean-map certificate (F-MM1–F-MM4, B14–B16). These four are the claimed v3.5 contributions; the reconciliation topology, lifecycle, and conflict-preservation ideas are adapted, not original.
+
+*Status.* This positioning is a candidate mapping. It does not assert equivalence with CLS, CRDTs, or any continual-learning method, and the empirical superiority questions in MM-14 remain open.
+
+### MM-16. Adversarial Memory Threat Model [CANDIDATE]
+
+The MM/MTRL/CMCP architecture as stated above assumes fallible but non-strategic participants. Persistent shared memory is, however, a high-value attack surface: a single accepted patch can influence every future episode of every receiving agent. This section registers the candidate threat model; it extends, and is bound by, the AGP adversarial-governance integration (§27) and the ML-security references already cited for training-time poisoning.
+
+**Attacker capability classes.**
+
+| Class | Capability | Primary target |
+|---|---|---|
+| A0 | observe only — infers map content and validation thresholds from probe responses | reconnaissance for A1–A2; PTRV/probe leakage |
+| A1 | patch injection — controls one or more lower agents' differentials $\Delta_i^{\uparrow}$ | global fusion (MTRL-2) |
+| A2 | provenance forgery / Sybil — fabricates apparently independent sources, prompts, or lineages | independence graph (CMCP-2), evidence counting |
+| A3 | mediator or router compromise — controls fusion weights, routing, or projection $P_{G\to i}$ | MTRL-2/MTRL-3, memory distribution (MM-11) |
+| A4 | anchor compromise — corrupts or captures elements of $A_{\mathrm{clean}}$ or $I_{\mathrm{core}}$ | certification itself (MM-8) |
+
+**Canonical attack patterns and the gates that answer them.**
+
+1. **Poisoned differential** (A1): a crafted $\Delta_i^{\uparrow}$ passing schema checks but installing a wrong frame, false landmark, or invalid path. Answered by CMCP-5 external-reference/perturbation verification and MTRL-4 local validation before assimilation; residual risk when the poisoned direction is outside all validators' probe sets.
+2. **Gradual drift injection** (A1, "boiling frog"): a sequence of individually sub-threshold patches whose cumulative terrain effect is large. Single-patch gates are structurally blind to this; the answer is cumulative drift monitoring (CMCP-9) over patch *sequences* per source, with the same logic as Silent Criticality and T-compensation masking — per-step indicators can remain green while the integrated trajectory degrades.
+3. **Correlated false consensus / Sybil confirmation** (A2): many "independent" agreements sharing hidden lineage. Answered by CMCP-2 correlation-discounted evidence counting and MTRL-2's rule that shared data/model/prompt lineage voids independent confirmation; this is the adversarial case of the same rule.
+4. **Conflict flooding** (A1–A2, denial of service): mass generation of `CONFLICT` states to saturate the CMCP-4 mediation buffer and delay legitimate promotion. Answered by MTRL-5 rate limits and per-source conflict budgets; note this is the memory-layer instance of the v3.0 over-escalation cost structure (queue, delay, auditor fatigue).
+5. **Quarantine evasion by scope-splitting** (A1): partitioning a harmful patch into several individually in-scope fragments that recombine into an out-of-scope effect after assimilation. Answered partially by post-assimilation drift monitoring (CMCP-9); compositional patch-interaction auditing is an open gap.
+6. **Homogenization attack** (A3): using fusion weights or broadcast authority to overwrite local terrain facts with a global prior, collapsing diversity — the deliberate induction of MM-12 map monoculture. Answered by MM-11 routing locks and local acceptance authority (MTRL-4); a compromised upper layer pushing globally is the architecture's strongest argument for local validation being mandatory rather than polite.
+7. **Rollback poisoning** (A1–A3): corrupting checkpoints, return routes $R_i$, or supersession pointers so that recovery restores a contaminated state. Answered by CMCP-6 tamper-evident evidence lineage and restoration testing (MM-2 checkpoint audit); rollback targets must themselves carry provenance.
+
+**Boundary of self-defense.** Against A4, self-certification is undefined by construction: MM-8 already declares that with $I_{\mathrm{core}}$ corrupted or $A_{\mathrm{clean}}=\varnothing$ the only correct output is `CLEAN-MAP SELF-CERTIFICATION NOT AVAILABLE`, followed by external reconstruction. The threat model does not change this; it clarifies that A4 is the attack class whose *goal* is to keep the system self-certifying while contaminated, which is why anchor independence (CMCP-2 lineage-closure sense) and anchor rotation are security requirements, not bookkeeping.
+
+*Status.* Candidate threat registry. No detection-rate, containment, or cost claims are made prior to the B16 adversarial arm; the scope-splitting and compositional-interaction gap is registered as open.
 
 ## Measurement Interface
 
@@ -9248,6 +9384,8 @@ Use tasks requiring both broad coverage and deep local reasoning, including scop
 
 **Conditions.** Inject C1 positional error, C2 frame distortion, C3 update-generator corruption, provenance forgery, correlated false consensus, stale evidence, policy lock-in, and rollback failure.
 
+**Adversarial arm (B16-ADV, v3.5-e2).** Repeat the injection conditions under strategic attackers per the MM-16 capability classes: A1 poisoned differentials and gradual sub-threshold drift sequences, A2 Sybil confirmation with hidden shared lineage, conflict flooding against the mediation buffer, scope-split patch recombination, and rollback poisoning. Attacker budget and knowledge (black-box vs. gate-aware) must be declared. This arm supplies the evidence base for F-MM5.
+
 **Ablations.** Remove one CMCP gate at a time; compare consensus-only, immutable-everything, mutable-everything, single-verifier, internal-only, and full CMCP architectures.
 
 **Measures.** Detection delay, false certification, localization, blast radius, recovery cost, retained plasticity, clean-anchor availability, conflict visibility, and post-recovery recurrence.
@@ -9555,6 +9693,11 @@ The following items remain open after the easy reader-safety patch:
 - **MM-RBIT-8 — Memory Distribution Rule:** routes patches by expected directional-resolution benefit minus contamination, homogenization, and update costs.
 - **MM-RBIT-9 — Map-Monoculture Failure:** identifies shared-memory consistency as a possible cause of coverage and observability collapse.
 - **MM-RBIT-10 — Benchmarks B14–B16:** creates causal tests for memory effects, mutual reconciliation, and clean-map architecture.
+- **MM-RBIT-11 — Prior-work positioning (MM-15):** maps the reconciliation topology, patch lifecycle, plasticity partition, memory taxonomy, and conflict-preservation ideas to complementary learning systems, continual learning, distributed-data/provenance systems, and contemporary LLM-agent memory; isolates RBIT's distinct contribution as contract-relative vector-valued patch evaluation, non-compensatory admission gating, an explicit contamination/purification frame, and operational falsification conditions.
+- **MM-RBIT-12 — Lifecycle Transition Relation (MM-4, v3.5-e2):** completes the patch state machine with legal transitions, authorities, forbidden transitions, supersession-only deletion, and an asymmetric promotion/demotion hysteresis lock reusing τ_upscale/τ_degrade ≫ 1.
+- **MM-RBIT-13 — Reconciliation Dynamics Candidate (MTRL-6, v3.5-e2):** linearized delayed-feedback model making MTRL gains, delays, dead bands, oscillation onset, and contamination amplification A_c jointly measurable in B15.
+- **MM-RBIT-14 — Adversarial Memory Threat Model (MM-16, F-MM5, B16-ADV, v3.5-e2):** capability classes A0–A4, canonical attack patterns with answering gates, mediated-only peer topology, and an adversarial falsification gate for the clean-map architecture.
+- **MM-RBIT-15 — Lineage-Closure Anchor Independence (MM-8, v3.5-e3):** class-relative (C1–C3) graph definition of anchor independence on the CMCP-2 provenance graph, effective anchor counting by ancestry quotient, anchor capture/rotation requirement, and explicit regress termination at a contract-declared external authority.
 
 ## Open Problems
 
@@ -9562,13 +9705,12 @@ The following items remain open after the easy reader-safety patch:
 |---|---------|--------|
 | OP-MEM-TERRAIN | **Memory-to-terrain identification** — Which persistent behavioral changes are caused by memory content rather than retrieval priming, context length, or policy changes? | Open — introduced v3.5 |
 | OP-PATCH-GRAIN | **Optimal terrain-patch granularity** — When should episodes be retained, summarized, promoted to rules, or converted into executable skills? | Open — introduced v3.5 |
-| OP-MTRL-STABILITY | **Mutual reconciliation stability** — What delays, gains, and validation thresholds prevent local↔global memory oscillation or positive-feedback contamination? | Open — introduced v3.5 |
-| OP-CLEAN-ANCHOR | **Clean-anchor diversity and replacement** — How many independent anchors are required, how is correlation audited, and how are anchors refreshed without circular validation? | Open — introduced v3.5 |
+| OP-MTRL-STABILITY | **Mutual reconciliation stability** — What delays, gains, and validation thresholds prevent local↔global memory oscillation or positive-feedback contamination? | Open — introduced v3.5; candidate linearized model with oscillation and contamination-amplification bounds added as MTRL-6 (v3.5-e2); event-based/asynchronous analysis and peer-channel extension remain open |
+| OP-CLEAN-ANCHOR | **Clean-anchor diversity and replacement** — How many independent anchors are required, how is correlation audited, and how are anchors refreshed without circular validation? | Open — introduced v3.5; candidate lineage-closure definition of class-relative anchor independence, effective anchor counting, and capture/rotation requirement added in MM-8 (v3.5-e3); required anchor count per class, rotation cadence, and Cl-recomputation cost remain open |
 | OP-CLEAN-CERT | **Clean-map certifiability** — Can a graded certificate predict future contamination and rollback success across regime drift? | Open — introduced v3.5 |
 | OP-MAP-MONOCULTURE | **Shared-memory homogenization threshold** — When does common-map consistency begin reducing specialist coverage and independent observability? | Open — introduced v3.5 |
 | OP-EVIDENCE-INTERP | **Evidence–interpretation separation** — What data structures preserve immutable evidence lineage while allowing revisable, branching interpretations at scale? | Open — introduced v3.5 |
 | OP-LOCAL-GLOBAL | **Local plasticity/global integrity partition** — How should update authority and retention timescales vary by zone, depth, and contamination class? | Open — introduced v3.5 |
-| 1 | Full structural resolution measurement | Partially resolved (operational proxy ρ defined) |
 | OP-TERRAIN-MEDIATION | **Effective-terrain sufficiency and causal mediation** — What is the minimal terrain object that makes directional reach conditionally invariant across agents and episodes? Which variables belong in the metric, barrier landscape, admissible-transition set, recovery kernel, or traversal budget? Required test: randomized interventions comparing direct-cause and terrain-mediated models on held-out prescription. | Open — introduced v3.3 |
 | OP-CHROMA-LUMA | **Chromatic composition × luminance/reach identification** — How should independent direction families, joint coexistence, lower-tail reach, and anisotropy be estimated without circularly using the same task errors that define scalar ρ? Is effective rank of a coexistence kernel stable across probe bases? | Open — introduced v3.3 |
 | OP-DIR-GAP | **Directional demand oracle and non-compensatory gap aggregation** — How can required reach \(\ell^{\mathrm{req}}(\hat v)\) and required color combinations be estimated independently of the receiver? Which aggregation preserves safety-critical dark directions without becoming too conservative? | Open — introduced v3.3 |
@@ -9579,7 +9721,7 @@ The following items remain open after the easy reader-safety patch:
 | OP-LOSS-ACCOUNT | **Information-loss decomposition and identifiability** — Can projection, transport, fill, route, synthesis, drift, and interaction losses be separately estimated, or only bounded? Which held-out interventions distinguish them? | Open — introduced v3.4 |
 | OP-VERIFY-EXTERNAL | **Non-circular reconstruction verification** — Which external references remain trustworthy when sender and receiver share data, objectives, tools, and priors? How many structurally diverse reconstruction paths are sufficient? | Open — introduced v3.4 |
 | OP-ρ-decomp | **ρ_p / ρ_c decomposition operational identification** — The perception-control decomposition (ρ_p = perceptual dimensionality, ρ_c = control dimensionality) is formally introduced in §Resolution Capacity Decomposition. The current conjecture maps C and d primarily to ρ_c (governance action space), and v_class + branching ratio R primarily to ρ_p (representational fidelity). However, the exact identification protocol — how to estimate ρ_p and ρ_c independently from observable F_RBIT proxies without circularity — remains open. Key subproblems: (i) Can ρ_p be estimated independently of ρ_c from classification trajectory data alone? (ii) Does the ODE ρ̇ equation need to be extended to a coupled (ρ_p, ρ_c) system, or does scalar ρ = min(ρ_p, ρ_c) remain sufficient for all current RBIT theorems? (iii) Is there an observable signature that distinguishes Case 1 (perception collapse, Φ > ρ_p) from Case 2 (control gap, Φ > ρ_c) without already knowing ρ_p and ρ_c separately? | Open — introduced v2.6 |
-
+| 1 | Full structural resolution measurement | Partially resolved (operational proxy ρ defined) |
 | 2 | Resolution gap calibration — how does a sender determine correct degradation level? | Open |
 | 3 | Upscaling detection — observable signals for layer maturity readiness | **Partially resolved** — U1–U3 operational criteria defined (§Upscaling); exact N_up calibration and Δρ significance threshold remain open |
 | 4 | Cycle failure mode boundaries — formal definition of over-degradation boundary | Open |
@@ -9705,6 +9847,14 @@ If internal consensus and confidence reliably certify C2/C3-clean maps without i
 ### F-MM4 — Conflict Preservation Falsification
 
 If retaining explicit `CONFLICT` and `UNKNOWN` states provides no detection or recovery advantage over immediate fusion, the non-collapsing map registry is unnecessary.
+
+### F-MM5 — Adversarial Containment Falsification
+
+If, under declared A1–A2 attacks (poisoned differentials, gradual drift injection, Sybil confirmation, conflict flooding per MM-16), a full CMCP/MTRL architecture does not outperform a consensus-only or unfiltered shared-memory baseline on detection delay, false-clean certification rate, and contamination blast radius at matched cost, then the threat-model-driven gates (independence discounting, per-source drift monitoring, rate limits, quarantine) are unsupported as security mechanisms and survive only as bookkeeping.
+
+### Decision-Procedure Lock for F-MM Criteria
+
+F-MM1–F-MM5 use comparative predicates ("consistently matches", "no advantage"). To keep them decidable, each F-MM evaluation MUST pre-declare, before execution: the benchmark instance set ($K$ instances from B14–B16), the performance margin $\delta$ below which two architectures count as matching, the fraction of instances $m/K$ required for "consistently", and the statistical criterion (paired test and significance level, or pre-registered estimation with intervals). A falsification verdict claimed without these pre-declarations is not admissible against the architecture, and a survival verdict claimed without them is not admissible for it.
 
 RBIT generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection.
 
@@ -10476,6 +10626,38 @@ Koh, P. W., & Liang, P. (2017). *Understanding black-box predictions via influen
 Cohen, J., Rosenfeld, E., & Kolter, J. Z. (2019). *Certified adversarial robustness via randomized smoothing.* ICML 2019.
 — Certified defense radius r provides formal lower bound on perturbation tolerance; cited for immunity capacity correspondence in Recovery Theory.
 
+**Memory Consolidation and Learning Systems**
+
+McClelland, J. L., McNaughton, B. L., & O'Reilly, R. C. (1995). *Why there are complementary learning systems in the hippocampus and neocortex: insights from the successes and failures of connectionist models of learning and memory.* Psychological Review, 102(3), 419–457.
+— Original CLS theory; cited in MM-15 for the fast-specific / slow-structural two-system reconciliation topology underlying the Mutual Incompleteness Principle and MTRL.
+
+Kumaran, D., Hassabis, D., & McClelland, J. L. (2016). *What learning systems do intelligent agents need? Complementary learning systems theory updated.* Trends in Cognitive Sciences, 20(7), 512–534.
+— Updated CLS account emphasizing interleaved replay and generalization; cited in MM-15 for the bidirectional reconciliation correspondence.
+
+Tulving, E. (1985). *How many memory systems are there?* American Psychologist, 40(4), 385–398.
+— Episodic vs. semantic distinction; cited in MM-2/MM-15 for the memory taxonomy mapped to terrain features.
+
+**Continual Learning and Catastrophic Forgetting**
+
+McCloskey, M., & Cohen, N. J. (1989). *Catastrophic interference in connectionist networks: the sequential learning problem.* Psychology of Learning and Motivation, 24, 109–165.
+— Catastrophic forgetting; cited in MM-15 as the failure mode the local-plasticity/global-integrity partition (CMCP-7) governs.
+
+Kirkpatrick, J., Pascanu, R., Rabinowitz, N., et al. (2017). *Overcoming catastrophic forgetting in neural networks.* PNAS, 114(13), 3521–3526.
+— Elastic weight consolidation; cited in MM-15 as a mechanism that raises update cost of consolidated (high-integrity) structure, paralleling the CMCP-7 partition. Note: RBIT makes the partition explicit and auditable rather than an implicit regularizer.
+
+**Distributed Systems, Consensus, and Provenance**
+
+Shapiro, M., Preguiça, N., Baquero, C., & Zawirski, M. (2011). *Conflict-free replicated data types.* In Stabilization, Safety, and Security of Distributed Systems (SSS 2011), LNCS 6976, 386–400.
+— CRDTs; cited in MM-15 for conflict-preserving merge without forced consensus, paralleling first-class CONFLICT/UNKNOWN states.
+
+Moreau, L., & Groth, P. (2013). *PROV-Overview: An Overview of the PROV Family of Documents.* W3C Working Group Note.
+— Provenance data model; cited in MM-15/CMCP-2 for the provenance and independence graph and correlation-discounted evidence counting.
+
+**LLM-Agent Long-Term Memory**
+
+Chhikara, P., Khant, D., Aryan, S., et al. (2025). *Mem0: Building production-ready AI agents with scalable long-term memory.* arXiv:2504.19413.
+— Production long-term memory layer for LLM agents; cited in MM-15 as representative of the applied setting MM-1 targets. Note: such systems optimize retrieval relevance and scale, leaving the archive/retrieval/assimilation distinction (MM-0) largely implicit.
+
 
 ---
 
@@ -10798,7 +10980,7 @@ Steady state              →   Rest Mode (all fᵢ bounded, non-monotone)
 ## v2.5 Integration Pass: GGT v4.0 · AGP v2.4+ · NAT v2.2 · FGS §36AA–§36AF
 
 > *v2.6-EDTseries2: EDT §45-§50 (Terrain Phase Transition Theory → first-order desertification hysteresis/nucleation/metastability in F_RBIT; second-order maturation → M_RBIT order parameter; critical exponents → RBIT observable scaling laws; universality classes I/II/III → measurement protocol adjustments; τ_silent=τ₀·exp(SCC_min/T_eff) unification), Terrain Information Geometry (Fisher metric DDD natural gradient correction; Cramér-Rao → fourth E1 false-completion mechanism; geodesic path → minimal-disturbance DDD), Temporal Stratification (four strata → f₁-f₅ update cycle hierarchy; temporal boundary layer TB1-TB4 crisis mechanisms; adiabatic breakdown warning; chronotopic W_chrono DDD window), Governance Energy Economics (EROTI formally derives DDD Stage 1→4 priority; E_min fifth false-completion mechanism; maintenance dominance → trap diagnosis), Emergence Topology (β₀/β₁/β₂ Betti → topological EW-T1/T2/T3 preceding conventional EW; sheaf H¹≠0 → boundary-localized f₂; persistent homology → DDD Protected Core), EDT §51-§54 (ATCT non-adiabatic correction: GCET valid only at stationarity; affective events → f₁ via terrain curvature pathway; emotional legacy → extended resolution palimpsest with affective component; heritage asymmetry → r_positive,min quantitative formula; collective memory n_cascade scaling → group DDD n_cascade-efficiency; emotional succession ↔ RBIT maturation phase mapping), Attractor Grammar (NF1 Resonance Capture/NF2 Grammar Incompleteness/NF3 Attractor Proliferation Overflow → distinct F_RBIT signatures; C_G_min/C_G^* bounds → over-complexity signature f₄+f₅↑ with f₁,f₂ normal), Emotional Ecology (contagion c*=1/(λ₁-λ₂) → collective F_RBIT phase; hub ecology ↔ NAT sphere topology reconciliation), FCC §19.5 (κ(t)=f₂·f₃·M_RBIT unified scale-invariant control parameter; critical manifold moving threshold; three criticality paths Path1 visible/Path2 semi-visible/Path3 invisible; triangular (Φ,L,q) → three-timescale RBIT loop), FCC §19.6 (Fractal Governance Necessity formal proof: k* structural necessity; T_collapse≤(κ_c-κ₀)/δ finite bound; L_min≳logχ₀; multi-level F_RBIT monitoring), FCC §30 (Phase Boundary Revival Taxonomy: Case A/B/C with F_RBIT signatures; Conley index topological necessity; Fisher-KPP c_min propagation; hub-last cascade ordering; revival dilemma optimal coupling; Kramers stochastic inevitability), VST §19.8-19.9 (F_RBIT evolution ODE dF/dt=G-L; storm onset=equilibrium destabilization; critical slowing-down as earliest warning), VST §21.5-21.6 (I5 maturity gradient attenuation; I6 C_RBIT>C_NAT>C_interface priority; full cross-theory convergence); Novel Contributions NC-EDT2-RBIT-1 to NC-EDT2-RBIT-20; Falsification F93-F113; Open Problems 122-145*
-> *v2.5-GGTseries: GGT v4.0 (§75 BGC Universal Adaptive Criticality + §82 CTGPSR Micro-Dynamical Substrate + §83 CTGPSRB Buffer Governance Order Parameter) — Deep Integration Pass — BGC–RBIT Resolution Architecture (Buffer-Gate-Cascade layered structure as multi-tier resolution substrate; Universal Critical Master Equation dX/dt = Φ(X)·G(X;Θ(X))+η as resolution gap dynamics at governance level; Structural Stability Constant κ = α/β as Δρ-regime indicator; Transition Structural Constant derivation; BGC four-layer formal correspondence to RBIT three-tier model), CTGPSR Five-State Resolution Dynamics (C/T/G/P/R state vector as resolution-substrate variables; CTGPSR governing ODE system GGT-82.1–82.5 full RBIT-variable mapping; Loop Instability Theorem Π>1 ↔ Δρ<0 formal identification; Critical Transition Theorem Π_eff≈1 ↔ Silent Criticality; Storm-Transition Theorem coupled C↓/P↑/R↓ as RBIT triple-failure signature; Recovery-Renormalization Theorem C_new*≠C_old* as resolution substrate structural memory; Unified Critical Manifold Theorem (K,τ,θ_v,R*)=H(Π_eff) as F_RBIT observables co-variation proof), CTGPSR Cross-Theory Correspondence in RBIT Terms (CTGPSR–GCF Correspondence Π_eff=Π_G at base point with storm/recovery correction factor; CTGPSR–VST Correspondence storm field V=|∇T| as VST storm intensity micro-origin; CTGPSR–RT Correspondence recovery equation GGT-82.5 as RT dynamics embedding; Four-Theory Criticality Equivalence Π_eff=1 ↔ Π_G=1 ↔ χ_TBG=θ ↔ C_A=1 as single governance criticality condition in four languages), CTGPSRB Buffer Governance Variable as Hidden Resolution Order Parameter (three-buffer architecture G/P/R at timescales τ_G<τ_P<τ_R embedded in CTGPSR; Buffer Governance Variable B(t)=w_g·G+w_p·P+w_r·R as weighted resolution-capacity scalar; Dual Ontology Resolution — projection vs. autonomous variable; B as governance order parameter with second-order phase transition β_gov=1; Buffer Renormalization Theorem mapping criticality triplet T_0→T_B; Thirteen-Way M_crit Equivalence extending to E13: B=B_c; Buffer Self-Regulation Non-Monotone Storm Response; Governance Universality Theorem; Five-Regime Classification); AGP v2.4+ RBIT Extended Integration (Adversarial Governance–RBIT formal bridge: Self-Defeating Optimizer as f₁-collapse under self-referential correction; Four Robustness Layers as F_RBIT portfolio maintenance protocol; Formal Robustness Theorem P(evasion)≤exp(−ΔV/T_eff) in RBIT resolution terms; Projection Replacement Axiom A2 as emotional template filling formalized; Processing Isolation as emotional architecture principle; τ₁–τ₃ regime switching as emotional self-regulation architecture; v_class as developmental leading indicator; Degradation–Upscaling Cycle as maturation engine; Test 1/2/3 seed sufficiency mapped to emotional maturation milestones); FGS §36AA–§36AF Deep Integration (Buffer Capstone Theorem — M→0 induces collapse regardless of upper/lower layer strength; Capstone Erosion Paradox P↑⇒Ṁ↓⇒M↓⇒p_C↑ as RBIT f₃ self-destruction pathway; Alarm Gate multi-criterion structure with FAR scaling; Operational Invisibility at Optimum ∂z/∂M→0 as f₃ measurement paradox formalization; Observer-Controller Dilemma C_control∼O(n²) → gardener strategy; Gardener Resolution environment design as O(1)+O(n) vs O(n²) cost structure; Scale-Invariant Constants as low-cost upper-layer observables; Fractal Seed Architecture (N*,R,B) as governance generative program; Governance Seed fractal self-similarity d_f∈(1,2); Branch Governor Assignment as distributed capstone deployment; Dual Reference Dynamics local-global North Star tension; Buffer Ecology three-phase evolution; Governance Maturation Trajectory four-phase upper-layer evolution; Gardener Meta-Strategy as f₃ complement); NAT v2.2 Extensions (Finite-Temperature Phase Transition T_c = ⟨ΔU⟩/ln(ν₀/r*) as minimum governance controllability temperature; Governance Impossibility Theorem T_eff=0 → zero behavioral change → DDD protocol failure; Affective SOC Uniqueness six-constraint proof; Multifractal Affective Dynamics collapse mode prediction via spectrum width; Adversarial Affective Dynamics self-defeat cascade; Plasticity Hierarchy as resolution update rate constraints); Novel Contributions NC-GGT-RBIT-1 to NC-GGT-RBIT-12; Falsification F77-F100; Open Problems 102-121*
+> *v2.5-GGTseries: GGT v4.0 (§75 BGC Universal Adaptive Criticality + §82 CTGPSR Micro-Dynamical Substrate + §83 CTGPSRB Buffer Governance Order Parameter) — Deep Integration Pass — BGC–RBIT Resolution Architecture (Buffer-Gate-Cascade layered structure as multi-tier resolution substrate; Universal Critical Master Equation dX/dt = Φ(X)·G(X;Θ(X))+η as resolution gap dynamics at governance level; Structural Stability Constant κ = α/β as Δρ-regime indicator; Transition Structural Constant derivation; BGC four-layer formal correspondence to RBIT three-tier model), CTGPSR Five-State Resolution Dynamics (C/T/G/P/R state vector as resolution-substrate variables; CTGPSR governing ODE system GGT-82.1–82.5 full RBIT-variable mapping; Loop Instability Theorem Π>1 ↔ Δρ<0 formal identification; Critical Transition Theorem Π_eff≈1 ↔ Silent Criticality; Storm-Transition Theorem coupled C↓/P↑/R↓ as RBIT triple-failure signature; Recovery-Renormalization Theorem C_new*≠C_old* as resolution substrate structural memory; Unified Critical Manifold Theorem (K,τ,θ_v,R*)=H(Π_eff) as F_RBIT observables co-variation proof), CTGPSR Cross-Theory Correspondence in RBIT Terms (CTGPSR–GCF Correspondence Π_eff=Π_G at base point with storm/recovery correction factor; CTGPSR–VST Correspondence storm field V=|∇T| as VST storm intensity micro-origin; CTGPSR–RT Correspondence recovery equation GGT-82.5 as RT dynamics embedding; Four-Theory Criticality Equivalence Π_eff=1 ↔ Π_G=1 ↔ χ_TBG=θ ↔ C_A=1 as single governance criticality condition in four languages), CTGPSRB Buffer Governance Variable as Hidden Resolution Order Parameter (three-buffer architecture G/P/R at timescales τ_G<τ_P<τ_R embedded in CTGPSR; Buffer Governance Variable B(t)=w_g·G+w_p·P+w_r·R as weighted resolution-capacity scalar; Dual Ontology Resolution — projection vs. autonomous variable; B as governance order parameter with second-order phase transition β_gov=1; Buffer Renormalization Theorem mapping criticality triplet T_0→T_B; Thirteen-Way M_crit Equivalence extending to E13: B=B_c; Buffer Self-Regulation Non-Monotone Storm Response; Governance Universality Theorem; Five-Regime Classification); AGP v2.4+ RBIT Extended Integration (Adversarial Governance–RBIT formal bridge: Self-Defeating Optimizer as f₁-collapse under self-referential correction; Four Robustness Layers as F_RBIT portfolio maintenance protocol; Formal Robustness Theorem P(evasion)≤exp(−ΔV/T_eff) in RBIT resolution terms; Projection Replacement Axiom A2 as emotional template filling formalized; Processing Isolation as emotional architecture principle; τ₁–τ₃ regime switching as emotional self-regulation architecture; v_class as developmental leading indicator; Degradation–Upscaling Cycle as maturation engine; Test 1/2/3 seed sufficiency mapped to emotional maturation milestones); FGS §36AA–§36AF Deep Integration (Buffer Capstone Theorem — M→0 induces collapse regardless of upper/lower layer strength; Capstone Erosion Paradox P↑⇒Ṁ↓⇒M↓⇒p_C↑ as RBIT f₃ self-destruction pathway; Alarm Gate multi-criterion structure with FAR scaling; Operational Invisibility at Optimum ∂z/∂M→0 as f₃ measurement paradox formalization; Observer-Controller Dilemma C_control∼O(n²) → gardener strategy; Gardener Resolution environment design as O(1)+O(n) vs O(n²) cost structure; Scale-Invariant Constants as low-cost upper-layer observables; Fractal Seed Architecture (N*,R,B) as governance generative program; Governance Seed fractal self-similarity d_f∈(1,2); Branch Governor Assignment as distributed capstone deployment; Dual Reference Dynamics local-global North Star tension; Buffer Ecology three-phase evolution; Governance Maturation Trajectory four-phase upper-layer evolution; Gardener Meta-Strategy as f₃ complement); NAT v2.2 Extensions (Finite-Temperature Phase Transition T_c = ⟨ΔU⟩/ln(ν₀/r*) as minimum governance controllability temperature; Governance Impossibility Theorem T_eff=0 → zero behavioral change → DDD protocol failure; Affective SOC Uniqueness six-constraint proof; Multifractal Affective Dynamics collapse mode prediction via spectrum width; Adversarial Affective Dynamics self-defeat cascade; Plasticity Hierarchy as resolution update rate constraints); Novel Contributions NC-GGT-RBIT-1 to NC-GGT-RBIT-12; Falsification F77-F92 [e1: corrected from F77-F100 to match §29 contents and the canonical v2.5 log]; Open Problems 102-121*
 
 ---
 
@@ -11490,7 +11672,7 @@ RBIT operational implication:
 
 ---
 
-### Section 29 — Extended Falsification (F77–F100)
+### Section 29 — Extended Falsification (F77–F92)
 
 **F77 [GGT-RBIT] Triple-Failure Simultaneous Onset.** CTGPSR Storm-Transition Theorem predicts that storm onset is always accompanied by simultaneous Ċ<0, Ṗ>>0, Ṙ<0. Prediction: the correlation matrix of (C-decline, P-spike, R-depletion) transitions from low-correlation to near-1 correlation at storm onset. Falsification: if any storm event produces large V without this triple simultaneous movement, the CTGPSR–RBIT correspondence breaks down.
 
@@ -13070,8 +13252,8 @@ RBIT governance design implication:
 
 ---
 
-*Timestamped: March 11, 2026*
-*DFG Framework · Resolution-Based Information Theory v2.8-RTseries*
+*Timestamped: July 2026*
+*DFG Framework · Resolution-Based Information Theory v3.5-mutualmemory-cleanmap*
 
 ---
 
