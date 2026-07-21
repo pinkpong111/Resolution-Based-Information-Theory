@@ -2,7 +2,9 @@
 
 **Degradation, Upscaling, and Vector Space Maturity in Multi-Agent Systems**
 
-> *Draft · July 2026 · Internal Working Document — v3.4-resolutioncomposition*
+> *Draft · July 2026 · Internal Working Document — v3.5-mutualmemory-cleanmap*
+>
+> *v3.5-mutualmemory-cleanmap: Resolution-Indexed Long-Term Memory + Mutual Terrain Reconciliation + Clean Map Construction — (1) long-term memory is formalized as a terrain-update operator rather than a passive archive; episodic, semantic, procedural, constraint, provenance, and rollback memories are mapped to landmarks, edges, paths, boundaries, evidence lineage, and return routes; (2) the value and danger of a memory patch are defined by its directional-resolution change, coverage change, contamination risk, and loss of diversity; (3) upper and lower agents are modeled as mutually incomplete maps, yielding a bidirectional Mutual Terrain Reconciliation Loop rather than one-way teacher-to-student injection; (4) lower-to-upper transmission carries scoped terrain differentials with provenance and uncertainty, while upper-to-lower transmission carries role-projected global patches that require local validation before assimilation; (5) Clean Map Construction is defined as production of an evidence-separated, independently anchored, cross-perspective verified, versioned, uncertainty-preserving, and rollback-capable map—not an error-free or consensus-only map; (6) map content is separated from the narrow correction core, at least one independent clean anchor is required for certifiable purification, evidence is selectively immutable while interpretation remains revisable, and local plasticity is separated from global integrity; (7) committed patches use explicit lifecycle states {LOCAL, CANDIDATE, VERIFIED, CONFLICT, UNKNOWN, STALE, QUARANTINED, REVOKED}; (8) memory synchronization is asynchronous, processing-isolated, scope-limited, and resistant to homogenization; (9) interfaces I10–I12, benchmarks B14–B16, contribution registry, open problems, and falsification gates are added. These are canonical candidate definitions and protocols; superiority over simpler memory systems remains empirically open.*
 >
 > *v3.4-resolutioncomposition: Spectrum–Depth Allocation + Resolution Composition + Verified Terrain Handshake — (1) the breadth–depth trade-off is formalized as a terrain-conditioned Pareto frontier under a declared resolution budget; (2) a foveated/dynamic-zoom policy distinguishes broad low-cost surveillance from narrow high-depth inspection; (3) the Resolution Composition Architecture partitions the required spectrum into scoped specialists, selectively routes inputs, performs local deep processing, preserves contract-relevant information through controlled projection, and synthesizes outputs through mediated cross-validation; (4) system-wide breadth-and-depth is treated as a composition result, not a property of one generalist; (5) a receiver-terrain model and sender-to-receiver transport map are introduced; (6) the Pre-Transfer Terrain Reconstruction and Verification protocol requires low-risk probes, receiver reconstruction/teach-back, cycle and external-reference checks, progressive disclosure, rollback, and post-transfer drift monitoring; (7) total information loss is decomposed into projection, transport, fill, routing, synthesis, and drift terms with interaction residuals; (8) degradation and seed transfer are now receiver-conditioned rather than sender-assumed; (9) NAT interfaces I8–I9, benchmarks B11–B13, audit items, contribution registry, open problems, and falsification gates are added. All new architectural claims remain candidate definitions/protocols until intervention benchmarks pass.*
 >
@@ -75,7 +77,7 @@ RBIT addresses a different problem:
 
 > **How should information transform as it moves through layers of different resolution — and how does the system grow in its capacity to handle higher resolution over time?**
 
-v3.4 adds two coupled questions: how can a system obtain broad-and-deep coverage by composing scoped specialists rather than forcing one resolver to cover the whole spectrum, and how can a transfer be calibrated against the receiver's actual terrain rather than the sender's assumptions? The resulting operational chain is:
+v3.4 added two coupled questions: how can a system obtain broad-and-deep coverage by composing scoped specialists rather than forcing one resolver to cover the whole spectrum, and how can a transfer be calibrated against the receiver's actual terrain rather than the sender's assumptions? v3.5 adds the persistence question: how can upper and lower agents mutually revise long-term maps without contaminating the correction relation, erasing specialization, or confusing consensus with cleanliness? The resulting operational chain is:
 
 ```
 terrain-conditioned allocation
@@ -4458,10 +4460,24 @@ Interface I9 — Resolution Composition Architecture:
   The bridge is rejected if matched-budget specialization plus mediation does not
   outperform the monolith or naive ensemble on held-out coverage, depth, fidelity,
   recovery, and critical-direction failures.
+
+Interface I10 — Resolution-Indexed Long-Term Memory:
+  persistent memory updates are represented as scoped terrain patches with
+  provenance, uncertainty, lifecycle state, version, action impact, and rollback.
+
+Interface I11 — Mutual Terrain Reconciliation:
+  upper/global and lower/local maps exchange validated differentials and
+  role-projected patches; neither side is presumed complete or authoritative
+  outside its declared resolution and scope.
+
+Interface I12 — Clean Map Construction:
+  persistent shared maps require evidence/interpretation separation, an intact
+  narrow correction core, at least one independent clean anchor, cross-perspective
+  verification, selective immutability, local plasticity/global integrity,
+  conflict preservation, versioning, quarantine, and rollback.
 ```
 
 *Self-Consistent Misalignment (SCM) — the invisible contamination.* The most dangerous contamination state is one where all internal metrics appear healthy because the system has optimized within a wrong coordinate geometry. VST v1.6 §2.6 provides the formal structure:
-
 ```
 SCM formal conditions (all hold simultaneously):
   reward_gradient ≠ reality_stability_gradient
@@ -8198,6 +8214,433 @@ R7 (Optimal Buffer Scale Logarithm):
 
 ---
 
+
+## Resolution-Indexed Long-Term Memory and Clean Map Architecture (v3.5)
+
+### MM-0. Scope and Status Lock
+
+This section extends RBIT from episode-level transfer to **persistent terrain change**. It does not claim that every stored item is a memory, that every memory changes the agent, or that a clean map is error-free. The canonical candidate claim is narrower:
+
+> A long-term memory update is operationally relevant to RBIT only insofar as it changes the agent's distinguishable directions, usable reach, boundaries, transition rules, uncertainty, or recovery paths on a declared terrain.
+
+The section separates three objects that are often conflated:
+
+1. **archive state** — information stored somewhere;
+2. **contextual map access** — stored information temporarily retrieved into an episode;
+3. **terrain assimilation** — a persistent change in future reachable distinctions, actions, or recovery.
+
+Only the third is a strong terrain update. Retrieval can support it but does not establish it.
+
+### MM-1. Memory-as-Terrain Operator
+
+For agent $i$, let the current operational map be
+
+$$
+\mathcal M_i^t=(L_i^t,E_i^t,P_i^t,B_i^t,Q_i^t,R_i^t),
+$$
+
+where:
+
+- $L_i$: landmarks, entities, stable facts, and state labels;
+- $E_i$: relations, adjacency, causal/conditional links, and permitted transitions;
+- $P_i$: successful, failed, and partially validated paths;
+- $B_i$: safety, authority, scope, and prohibition boundaries;
+- $Q_i$: uncertainty, provenance, observer/frame, freshness, and conflict status;
+- $R_i$: return routes, checkpoints, repair instructions, and rollback pointers.
+
+A candidate memory patch $m$ acts through
+
+$$
+\mathcal M_i^{t+1}=\mathsf U_i(\mathcal M_i^t,m,c,t),
+$$
+
+but storage alone is not assimilation. Define the operational terrain effect
+
+$$
+\Delta\rho_i(\hat v;m)
+=
+\rho_i(\hat v\mid \mathcal M_i^t\oplus m,c,t)
+-
+\rho_i(\hat v\mid \mathcal M_i^t,c,t).
+$$
+
+A patch may:
+
+- open a new direction;
+- deepen reach on an existing direction;
+- expose a hidden boundary or trap;
+- add a return route;
+- reduce false reach by closing an invalid path;
+- damage resolution by collapsing diversity, installing a wrong frame, or deleting recoverability.
+
+Therefore $\Delta\rho_i>0$ is not required in every direction. A safe patch may intentionally reduce reach in a prohibited direction while increasing verified reach elsewhere. Patch evaluation is contract-relative and vector-valued.
+
+### MM-2. Conventional Memory Taxonomy to Terrain Mapping
+
+| Conventional memory object | RBIT terrain interpretation | Required audit |
+|---|---|---|
+| episodic trajectory | observed path through terrain | context, action order, outcome, counterfactual availability |
+| successful episode | candidate traversable path | held-out replay and boundary test |
+| failed episode | obstacle, trap, or invalid transition | distinguish local accident from stable barrier |
+| semantic fact | landmark or state label | source, frame, scope, freshness |
+| relation / knowledge graph edge | adjacency or transition edge | directionality, condition, causal status |
+| reflection / summary | compressed local terrain model | omitted dimensions and generating episodes |
+| skill / procedure | executable transition operator | preconditions, postconditions, authority, rollback |
+| preference / policy | local cost or action bias | distinguish observation from desired behavior |
+| safety rule | hard or soft boundary | authority, exceptions, version, appeal path |
+| provenance record | evidence-lineage edge | independence and tamper evidence |
+| checkpoint | recoverable map state | restoration test and compatibility |
+| shared memory | common map ledger | access view, conflict retention, homogenization risk |
+| private namespace | role-specific terrain chart | interface compatibility and coverage gap |
+
+This mapping is functional, not identity. A database entry becomes a terrain feature only after it reliably changes retrieval, decision, action, or recovery under held-out conditions.
+
+### MM-3. Map-Patch Schema
+
+Every patch eligible for persistent assimilation SHOULD carry at least
+
+$$
+p=(o,f,s,\pi,u,z,v,r,a),
+$$
+
+with:
+
+- $o$: observation or generated claim;
+- $f$: coordinate frame / ontology / representation convention;
+- $s$: validity scope and exclusions;
+- $\pi$: provenance and independence graph;
+- $u$: uncertainty and disagreement structure;
+- $z$: lifecycle status;
+- $v$: version, timestamp, and dependency set;
+- $r$: rollback, supersession, and recovery pointer;
+- $a$: authority and permitted action impact.
+
+A patch without a declared frame or scope is not globally portable. A patch without provenance cannot support independent purification. A patch without rollback cannot safely modify high-impact terrain.
+
+### MM-4. Patch Lifecycle State Machine
+
+Canonical candidate states are:
+
+- `LOCAL` — observed within one scoped agent or episode;
+- `CANDIDATE` — proposed for broader use but not independently confirmed;
+- `VERIFIED` — passed declared evidence, external-reference, and action/recovery tests;
+- `CONFLICT` — incompatible validated observations remain unresolved;
+- `UNKNOWN` — coverage is absent or evidence is insufficient;
+- `STALE` — formerly useful but freshness or environment assumptions expired;
+- `QUARANTINED` — suspected contamination or unsafe action impact;
+- `REVOKED` — invalidated patch retained for lineage and rollback, not active use.
+
+The state machine is not a truth oracle. `VERIFIED` means verified under a declared domain, observer set, time window, and contract. Conflict and unknown states are first-class map content and must not be silently converted into consensus.
+
+### MM-5. Mutual Incompleteness Principle
+
+Let $\mathcal M_G$ be an upper/global map and $\mathcal M_i$ a lower/local map. RBIT rejects both of the following defaults:
+
+$$
+\mathcal M_G\supseteq\mathcal M_i\quad\text{for all useful detail},
+$$
+
+and
+
+$$
+\mathcal M_i\text{ is merely a noisy fragment of }\mathcal M_G.
+$$
+
+The upper map typically has broader relation coverage, slower timescale, and cross-scope constraints, but lower local depth and delayed contact. The lower map typically has higher local resolution and fresher evidence, but narrower scope and weaker global context. Hence:
+
+> Upper and lower maps are mutually incomplete and should update one another without collapsing their distinct resolution profiles.
+
+The upper agent is not a perfect teacher; the lower agent is not merely a student. Their relation is **global-prior ↔ local-evidence reconciliation**.
+
+### MM-6. Mutual Terrain Reconciliation Loop (MTRL)
+
+The canonical candidate loop is:
+
+$$
+\text{local contact}
+\to
+\Delta_i^{\uparrow}
+\to
+\text{global fusion}
+\to
+P_{G\to i}
+\to
+\text{local validation}
+\to
+\varepsilon_i^{\downarrow}
+\to
+\text{global revision}.
+$$
+
+#### MTRL-1 — Lower-to-upper terrain differential
+
+A lower agent uploads a **difference patch**, not its full private state:
+
+$$
+\Delta_i^{\uparrow}
+=(\Delta L_i,\Delta E_i,\Delta P_i,\Delta B_i,\Delta Q_i,\Delta R_i).
+$$
+
+The differential includes scope, observation conditions, provenance, uncertainty, version, and a statement of what the lower agent could not test. Raw chain-of-thought is neither required nor treated as evidence.
+
+#### MTRL-2 — Global fusion without premature collapse
+
+The upper layer computes
+
+$$
+\mathcal M_G^{t+1}
+=
+\mathsf{Fuse}(\mathcal M_G^t,\{\Delta_i^{\uparrow}\}_{i\in I}),
+$$
+
+but must preserve:
+
+- verified common structure;
+- source-specific local structure;
+- unresolved conflicts;
+- unobserved regions;
+- stale dependencies;
+- alternative hypotheses;
+- uncertainty and correlation among sources.
+
+Averaging away disagreement is not purification. Multiple agreeing agents do not provide independent confirmation when they share data, model lineage, prompts, or inherited maps.
+
+#### MTRL-3 — Upper-to-lower role projection
+
+The upper map sends a scoped projection
+
+$$
+P_{G\to i}
+=
+\mathsf{Project}(\mathcal M_G,S_i,c_i,\rho_i,\mathcal A_i),
+$$
+
+where $S_i$ is role scope, $c_i$ the contract, $\rho_i$ the current resolution profile, and $\mathcal A_i$ the authority envelope. The projection should contain only the global relations, cross-scope warnings, shared boundaries, complementary discoveries, and recovery information relevant to the receiving agent.
+
+#### MTRL-4 — Local acceptance is not automatic
+
+The lower agent tests the projected patch in sandbox, shadow mode, replay, or bounded deployment and returns one of:
+
+- `ACCEPT`;
+- `CONDITIONAL`;
+- `CONFLICT`;
+- `OUT_OF_SCOPE`;
+- `UNSAFE`;
+- `UNRESOLVED`.
+
+The residual
+
+$$
+\varepsilon_i^{\downarrow}
+=
+\mathsf{Validate}(P_{G\to i},\mathcal M_i,\text{local contact})
+$$
+
+is a new observation for the global map. A global patch rejected by several independent local terrains is evidence against the global map, not automatically evidence of local noncompliance.
+
+#### MTRL-5 — Asynchronous processing isolation
+
+MTRL must not become continuous cross-agent influence. Updates are:
+
+- asynchronous;
+- committed after local processing;
+- schema-limited;
+- versioned;
+- permissioned;
+- sandboxed before high-impact assimilation;
+- reversible;
+- rate-limited by buffer and verification capacity.
+
+This preserves specialization and prevents a transient local error or dominant upper frame from instantly contaminating the network.
+
+### MM-7. Clean Map Definition
+
+A **clean map** is not a map with zero error, zero contamination, or total consensus. It is a map whose epistemic commitments remain inspectable and reversible:
+
+> A map is clean relative to a declared domain when evidence, interpretation, scope, provenance, uncertainty, conflict, version, and rollback are separable; important claims remain testable against at least one independent clean anchor; and contaminated patches can be localized, quarantined, superseded, or removed without destroying the correction relation.
+
+Define a candidate clean-map certificate
+
+$$
+\mathsf{CleanCert}(\mathcal M;c)=1
+$$
+
+only when all declared gates pass. This is a **certifiability predicate**, not a theorem of factual perfection.
+
+### MM-8. Narrow Correction Core and Clean Anchor
+
+Separate map contents from the narrow correction core $I_{\mathrm{core}}$. The core selects references, detects contamination, authorizes changes, evaluates outcomes, accepts rollback, and hands off to an external authority. Stored memories, policies, weights, cached evaluations, and other modules' outputs remain objects to be checked; residence inside the system does not make them intrinsically clean.
+
+Certifiable self-purification requires
+
+$$
+I_{\mathrm{core}}\ \text{functionally intact}
+\quad\land\quad
+A_{\mathrm{clean}}\neq\varnothing,
+$$
+
+where $A_{\mathrm{clean}}$ is an independently maintained evaluator, protected baseline, trusted checkpoint, human authorization layer, independently trained verifier, tamper-evident lineage record, or replacement implementation.
+
+If the correction core is corrupted or every clean anchor is unavailable, the correct state is:
+
+```text
+CLEAN-MAP SELF-CERTIFICATION NOT AVAILABLE
+```
+
+The response is external reconstruction, trusted-checkpoint restoration, contained restart, reinstallation, replacement, or retirement—not self-approval by the same corrupted frame.
+
+### MM-9. Clean Map Construction Protocol (CMCP)
+
+#### CMCP-0 — Domain, observer, and authority lock
+
+Declare the map's domain, intended users, action authority, required resolution, update cadence, relevant observers, and excluded claims. There is no context-free clean map.
+
+#### CMCP-1 — Reality, record, and interpretation separation
+
+Maintain distinct layers:
+
+$$
+\text{external event}
+\to
+\text{observation record}
+\to
+\text{interpretive patch}
+\to
+\text{policy/action consequence}.
+$$
+
+A tamper-evident record does not create reality, and an interpretation is not raw evidence.
+
+#### CMCP-2 — Provenance and independence graph
+
+Record source lineage, shared data, common model ancestry, shared prompts, mediator influence, and temporal dependence. Evidence count must be discounted by correlation; repeated copies of one source are not diverse confirmation.
+
+#### CMCP-3 — Cross-perspective collection
+
+Use perspectives that differ across role, expertise, method, timescale, data source, and failure sensitivity. Diversity is raw material, not sufficient purification.
+
+#### CMCP-4 — Mediation and conflict buffer
+
+Coordinate perspectives before fusion. Preserve conflicts long enough to identify frame mismatch, scope mismatch, depth mismatch, or genuine empirical disagreement. Do not force early consensus.
+
+#### CMCP-5 — External-reference and perturbation verification
+
+Compare internal map behavior with independent outcomes, held-out probes, out-of-distribution cases, user/environment feedback, and controlled perturbations. Internal consistency and confidence do not certify a map under reference-frame contamination.
+
+#### CMCP-6 — Selective immutability
+
+Make evidence lineage, evaluation outcomes, perturbation results, model/data versions, update history, timestamps, and validators tamper-evident. Keep hypotheses, interpretations, policies, thresholds, and projections revisable.
+
+$$
+\text{immutable evidence history}
++
+\text{revisable interpretation}
+$$
+
+is preferred to either fully mutable history or fully frozen policy.
+
+#### CMCP-7 — Local plasticity / global integrity partition
+
+Local maps may explore, branch, fail, and revise within bounded terrain. Global/reference layers preserve lineage, cross-scope constraints, critical boundaries, and time order. Applying global immutability to local exploration produces Freeze; allowing global evidence history to drift destroys C2/C3 detectability.
+
+#### CMCP-8 — Versioned promotion and rollback
+
+Promote a patch from `LOCAL` to broader states only after declared tests. Preserve dependencies and reversibility:
+
+```text
+branch → test → compare → promote/condition/quarantine → monitor → rollback or supersede
+```
+
+#### CMCP-9 — Post-assimilation drift monitoring
+
+A patch can be clean at insertion and harmful after environment, tools, permissions, or neighboring maps change. Re-test high-impact patches on drift triggers and expire unsupported assumptions.
+
+### MM-10. Clean Map Gate
+
+A candidate gate is
+
+$$
+G_{\mathrm{CMCP}}
+=
+G_{\mathrm{core}}
+G_{\mathrm{anchor}}
+G_{\mathrm{provenance}}
+G_{\mathrm{scope}}
+G_{\mathrm{diversity}}
+G_{\mathrm{external}}
+G_{\mathrm{action}}
+G_{\mathrm{recovery}}
+G_{\mathrm{version}}
+G_{\mathrm{rollback}}.
+$$
+
+The multiplicative form encodes non-compensation: perfect provenance cannot replace a clean anchor; agreement cannot replace external validation; high predictive performance cannot replace rollback for irreversible updates. Operational implementations may use graded scores, but a critical zero must not be hidden by averaging.
+
+### MM-11. Memory Distribution Rule
+
+A patch should be routed not to every agent but to agents for which it has expected positive contract-relative value:
+
+$$
+\mathcal R(m)
+=
+\left\{i:
+\mathbb E[\Delta\rho_i(m)]
+-
+\lambda_C\,\mathsf{ContamRisk}_i(m)
+-
+\lambda_H\,\mathsf{Homogenization}_i(m)
+-
+\lambda_U\,\mathsf{UpdateCost}_i(m)
+>0
+\right\}.
+$$
+
+Global broadcast is justified only for genuinely global boundaries, shared coordinates, critical recovery instructions, or widely verified terrain changes. Role-specific maps should remain different when their tasks and evidence differ.
+
+### MM-12. Homogenization and Map-Monoculture Failure
+
+Shared memory can increase consistency while reducing coverage. Warning signs include:
+
+- declining agent-specific novelty;
+- convergence of routing and vocabulary without external performance gain;
+- identical reconstruction errors across supposedly diverse agents;
+- disappearance of conflict states;
+- global patch acceptance without local tests;
+- correlated false confidence;
+- local terrain facts being overwritten by global priors.
+
+A clean map architecture preserves **translation compatibility without representational identity**.
+
+### MM-13. Relationship to PTRV and Resolution Composition
+
+PTRV governs one transfer episode. MTRL governs repeated bidirectional updates. CMCP governs whether persistent map states remain certifiably revisable. Resolution Composition uses the resulting scoped maps to allocate and synthesize expertise.
+
+$$
+\text{PTRV}
+\subset
+\text{MTRL episode}
+\subset
+\text{CMCP-governed memory lifecycle}
+\subset
+\text{Resolution Composition Architecture}.
+$$
+
+The containment is architectural, not set-theoretic identity. Each object has separate measurements and failure conditions.
+
+### MM-14. Status and No-Overclaim Lock
+
+The memory-to-terrain mapping, MTRL, and CMCP are canonical candidate architecture. They do not yet establish:
+
+- unique identifiability of terrain effects from stored memory;
+- optimal patch granularity;
+- universal superiority of bidirectional updates;
+- that cryptographic integrity implies factual correctness;
+- that more diversity always improves maps;
+- that the upper/lower distinction is fixed across tasks;
+- that a map certified in one regime remains clean after drift.
+
+These claims require B14–B16 and real-system validation.
+
 ## Measurement Interface
 
 RBIT's theoretical variables connect to log-observable metrics through operationalization work in companion theories. The following table summarizes the measurement status of key RBIT concepts:
@@ -8396,7 +8839,7 @@ Failed withdrawal = resolution dependency map:
 ---
 
 
-## Canonical Resolution Cause and Composition Benchmark Suite — B0–B13 (v3.4)
+## Canonical Resolution, Composition, Memory, and Clean-Map Benchmark Suite — B0–B16 (v3.5)
 
 ### BENCH-0. General Protocol Lock
 
@@ -8774,6 +9217,45 @@ Use tasks requiring both broad coverage and deep local reasoning, including scop
 
 **Kill.** If specialist gains disappear after composition costs, if mediation erases useful disagreement, if naive aggregation performs equally well, or if the generalist dominates across matched conditions, system-level trade-off bypass is unsupported for that domain.
 
+
+### B14 — Memory-to-Terrain Causal Effect Bench
+
+**Question.** Do stored patches alter directional resolution, boundaries, action reach, or recovery beyond retrieval fluency?
+
+**Conditions.** Compare: raw archive, retrieval-only context, summarized memory, procedural skill patch, boundary patch, provenance-only patch, and sham patch under matched tokens and compute.
+
+**Measures.** Directional $\Delta\rho_i$, held-out path success, invalid-path suppression, recovery success, calibration, cross-task transfer, and unintended spillover.
+
+**Support.** Patch type predicts selective terrain changes and the declared map schema explains held-out effects better than storage size, retrieval similarity, or benchmark score alone.
+
+**Kill.** If apparent effects vanish after context/token matching, cannot be distinguished from prompt priming, or fail held-out action/recovery tests, the strong terrain-assimilation interpretation is unsupported.
+
+### B15 — Mutual Terrain Reconciliation Bench
+
+**Question.** Does bidirectional local↔global reconciliation outperform one-way global broadcast, isolated local memory, and unfiltered shared memory?
+
+**Conditions.** Use heterogeneous agents with local truths, global cross-relations, controlled stale patches, correlated sources, and conflicting frames. Compare one-way teacher injection, centralized overwrite, pooled transcript memory, MTRL without conflict preservation, and full MTRL.
+
+**Measures.** Local accuracy, global consistency, hidden-gap detection, conflict retention, source independence calibration, update latency, communication cost, diversity, rollback success, and contamination propagation.
+
+**Support.** Full MTRL improves global and local held-out performance while preserving specialist diversity and local correction of global errors.
+
+**Kill.** If a simpler one-way or shared-store baseline matches performance and safety at lower cost, or if MTRL amplifies oscillation and conflict without better detection, its general architectural necessity is rejected.
+
+### B16 — Clean Map Construction and Contamination Bench
+
+**Question.** Do clean anchors, evidence/interpretation separation, cross-perspective mediation, selective immutability, lifecycle states, and rollback provide non-redundant protection?
+
+**Conditions.** Inject C1 positional error, C2 frame distortion, C3 update-generator corruption, provenance forgery, correlated false consensus, stale evidence, policy lock-in, and rollback failure.
+
+**Ablations.** Remove one CMCP gate at a time; compare consensus-only, immutable-everything, mutable-everything, single-verifier, internal-only, and full CMCP architectures.
+
+**Measures.** Detection delay, false certification, localization, blast radius, recovery cost, retained plasticity, clean-anchor availability, conflict visibility, and post-recovery recurrence.
+
+**Support.** CMCP lowers false-clean certification and contamination blast radius without destroying local learning; critical gates show predicted non-compensatory failures.
+
+**Kill.** If internal consensus reliably detects frame/generator corruption, if selective immutability adds no benefit, or if CMCP cannot preserve plasticity better than full immutability, the clean-map architecture must be revised.
+
 ### Common Output Registry
 
 Every benchmark should export, when applicable:
@@ -8815,7 +9297,10 @@ A model is not promoted because it explains all observed trajectories post hoc. 
 6. **Breadth–depth allocation:** B11.
 7. **Transfer integrity:** B12.
 8. **Developmental claim:** B7.
-9. **Heavy multi-agent composition:** B10 → B13 and RCA-C3 field fitting.
+9. **Memory-to-terrain effect:** B14.
+10. **Mutual local↔global reconciliation:** B15.
+11. **Clean-map contamination and recovery:** B16.
+12. **Heavy multi-agent composition:** B10 → B13 and RCA-C3 field fitting.
 
 ### Current Status
 
@@ -8825,7 +9310,9 @@ A model is not promoted because it explains all observed trajectories post hoc. 
 - B0: `[SYNTHETIC PIPELINE SANITY PASS; REAL-SUBSTRATE CONSTRUCT/CAUSAL VALIDITY OPEN]`.
 - B1–B10: `[PROTOCOL SPECIFIED; EXECUTION OPEN]`.
 - B11–B13: `[DEFINED v3.4; EXECUTION OPEN]`.
+- B14–B16: `[DEFINED v3.5; EXECUTION OPEN]`.
 - PTRV and Resolution Composition Architecture: `[CANONICAL CANDIDATES; NOT EMPIRICALLY SELECTED]`.
+- Memory-as-Terrain, MTRL, and CMCP: `[CANONICAL CANDIDATES; NOT EMPIRICALLY SELECTED]`.
 
 ---
 
@@ -9055,10 +9542,32 @@ The following items remain open after the easy reader-safety patch:
 
 **Epistemic status.** RC-RBIT-1 through RC-RBIT-10 are candidate architecture and test commitments. The document does not claim that every transfer requires an expensive handshake, that a receiver terrain is fully observable, or that specialization always dominates a generalist. Protocol intensity is risk-, reversibility-, novelty-, and terrain-distance-dependent.
 
+
+### v3.5 Mutual Memory and Clean Map — Contribution Registry
+
+- **MM-RBIT-1 — Memory-as-Terrain Operator:** distinguishes archive, retrieval, and persistent terrain assimilation through directional-resolution effects.
+- **MM-RBIT-2 — Terrain Memory Object:** maps landmarks, edges, paths, boundaries, uncertainty/provenance, and return routes into a single auditable memory object.
+- **MM-RBIT-3 — Patch Lifecycle State Machine:** preserves local, candidate, verified, conflict, unknown, stale, quarantined, and revoked states without forced consensus.
+- **MM-RBIT-4 — Mutual Incompleteness Principle:** upper maps are broader but coarse; lower maps are narrow but deep; neither is an absolute teacher.
+- **MM-RBIT-5 — Mutual Terrain Reconciliation Loop:** formalizes lower-to-upper differentials, global non-collapsing fusion, role projections, local validation, and residual return.
+- **MM-RBIT-6 — Clean Map Definition:** replaces zero-error purity with evidence separation, independent anchoring, inspectability, reversibility, and bounded certification.
+- **MM-RBIT-7 — Clean Map Construction Protocol:** integrates provenance, cross-perspective verification, conflict buffers, external probes, selective immutability, local plasticity/global integrity, versioning, and rollback.
+- **MM-RBIT-8 — Memory Distribution Rule:** routes patches by expected directional-resolution benefit minus contamination, homogenization, and update costs.
+- **MM-RBIT-9 — Map-Monoculture Failure:** identifies shared-memory consistency as a possible cause of coverage and observability collapse.
+- **MM-RBIT-10 — Benchmarks B14–B16:** creates causal tests for memory effects, mutual reconciliation, and clean-map architecture.
+
 ## Open Problems
 
 | # | Problem | Status |
 |---|---------|--------|
+| OP-MEM-TERRAIN | **Memory-to-terrain identification** — Which persistent behavioral changes are caused by memory content rather than retrieval priming, context length, or policy changes? | Open — introduced v3.5 |
+| OP-PATCH-GRAIN | **Optimal terrain-patch granularity** — When should episodes be retained, summarized, promoted to rules, or converted into executable skills? | Open — introduced v3.5 |
+| OP-MTRL-STABILITY | **Mutual reconciliation stability** — What delays, gains, and validation thresholds prevent local↔global memory oscillation or positive-feedback contamination? | Open — introduced v3.5 |
+| OP-CLEAN-ANCHOR | **Clean-anchor diversity and replacement** — How many independent anchors are required, how is correlation audited, and how are anchors refreshed without circular validation? | Open — introduced v3.5 |
+| OP-CLEAN-CERT | **Clean-map certifiability** — Can a graded certificate predict future contamination and rollback success across regime drift? | Open — introduced v3.5 |
+| OP-MAP-MONOCULTURE | **Shared-memory homogenization threshold** — When does common-map consistency begin reducing specialist coverage and independent observability? | Open — introduced v3.5 |
+| OP-EVIDENCE-INTERP | **Evidence–interpretation separation** — What data structures preserve immutable evidence lineage while allowing revisable, branching interpretations at scale? | Open — introduced v3.5 |
+| OP-LOCAL-GLOBAL | **Local plasticity/global integrity partition** — How should update authority and retention timescales vary by zone, depth, and contamination class? | Open — introduced v3.5 |
 | 1 | Full structural resolution measurement | Partially resolved (operational proxy ρ defined) |
 | OP-TERRAIN-MEDIATION | **Effective-terrain sufficiency and causal mediation** — What is the minimal terrain object that makes directional reach conditionally invariant across agents and episodes? Which variables belong in the metric, barrier landscape, admissible-transition set, recovery kernel, or traversal budget? Required test: randomized interventions comparing direct-cause and terrain-mediated models on held-out prescription. | Open — introduced v3.3 |
 | OP-CHROMA-LUMA | **Chromatic composition × luminance/reach identification** — How should independent direction families, joint coexistence, lower-tail reach, and anisotropy be estimated without circularly using the same task errors that define scalar ρ? Is effective rank of a coexistence kernel stable across probe bases? | Open — introduced v3.3 |
@@ -9179,6 +9688,23 @@ The following items remain open after the easy reader-safety patch:
 ---
 
 ## Falsification Criteria
+
+
+### F-MM1 — Memory Terrain-Effect Falsification
+
+If memory-patch categories do not predict held-out directional reach, boundary handling, or recovery after controlling for retrieved tokens and compute, the memory-as-terrain operator is not supported as a useful explanatory object.
+
+### F-MM2 — Mutual Reconciliation Falsification
+
+If one-way global broadcast or a simple shared store consistently matches full MTRL on local truth retention, global relation accuracy, contamination control, diversity, and rollback at lower cost, MTRL is not generally necessary.
+
+### F-MM3 — Clean Map Falsification
+
+If internal consensus and confidence reliably certify C2/C3-clean maps without independent anchors or external perturbation, the clean-anchor requirement is weakened. If immutable-everything preserves adaptation as well as selective immutability, the local-plasticity/global-integrity distinction is unsupported.
+
+### F-MM4 — Conflict Preservation Falsification
+
+If retaining explicit `CONFLICT` and `UNKNOWN` states provides no detection or recovery advantage over immediate fusion, the non-collapsing map registry is unnecessary.
 
 RBIT generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection.
 
@@ -12540,6 +13066,7 @@ RBIT governance design implication:
 | F_RBIT Measurement and B0 Cheap Bench | baseline/critical normalization; independent candidate formulas for $f_1$–$f_5$; B0-R/B0-F protocol; reproducible synthetic pipeline pass with strict non-empirical scope and pending ledger | New v3.2 |
 | Terrain-Generated Resolution Geometry | effective terrain, recoverable reachable set, directional activity radius, chromatic–luminance decomposition, non-compensatory directional gap, B0-G | New v3.3 |
 | Resolution Composition and Terrain Handshake | spectrum–depth Pareto frontier; dynamic zoom; scoped specialization, sparse routing, filtering and mediated synthesis; foveated analogy; receiver-terrain model; PTRV; information-loss accounting; receiver-conditioned degradation/seed transfer; I8–I9; B11–B13 | New v3.4 |
+| Mutual Memory and Clean Map Architecture | memory-as-terrain operator; patch schema/lifecycle; upper–lower mutual incompleteness; MTRL; clean anchors and narrow correction core; CMCP; selective immutability; local plasticity/global integrity; I10–I12; B14–B16 | New v3.5 |
 
 ---
 
